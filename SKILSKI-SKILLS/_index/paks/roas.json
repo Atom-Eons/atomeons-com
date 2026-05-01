@@ -1,0 +1,84 @@
+{
+  "slug": "roas",
+  "label": "ROAS Pak",
+  "blurb": "Media Buying, AdTech & E-commerce Growth. Customer Acquisition Cost (CAC) reduction and ad budget efficiency.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "media-buying-adtech-e-commerce-growth"
+  ],
+  "skills": [
+    {
+      "slug": "utm-tracking-auditor",
+      "label": "Utm Tracking Auditor",
+      "method": "Scans all live ad URLs to ensure UTM parameters (source, medium, campaign) are perfectly formatted before the ad goes live.",
+      "trigger_examples": [
+        "saves analytics tracking from human typos"
+      ]
+    },
+    {
+      "slug": "search-term-exclusion-scrubber",
+      "label": "Search Term Exclusion Scrubber",
+      "method": "Scans broad-match search terms daily; auto-adds negative keywords (like \"free\" or \"jobs\") that are bleeding ad spend.",
+      "trigger_examples": [
+        "plugs ppc budget leaks instantly"
+      ]
+    },
+    {
+      "slug": "roas-bid-modifier",
+      "label": "Roas Bid Modifier",
+      "method": "Connects Shopify LTV (Life Time Value) data to Google Ads; automatically lowers bids on keywords that drive cheap clicks but high return/refund rates.",
+      "trigger_examples": [
+        "stops brands from buying unprofitable revenue"
+      ]
+    },
+    {
+      "slug": "ad-fatigue-creative-swapper",
+      "label": "Ad Fatigue Creative Swapper",
+      "method": "Detects when an ad's Click-Through Rate (CTR) drops by 20% over 3 days, automatically pausing it and swapping in a fresh creative asset.",
+      "trigger_examples": [
+        "fights banner blindness automatically"
+      ]
+    },
+    {
+      "slug": "cross-channel-budget-shifter",
+      "label": "Cross Channel Budget Shifter",
+      "method": "Analyzes real-time CPA (Cost Per Acquisition); automatically shifts $10k from a failing TikTok campaign to a winning Pinterest campaign on a Saturday night.",
+      "trigger_examples": [
+        "algorithmic media buying"
+      ]
+    },
+    {
+      "slug": "meta-catalog-rejection-fixer",
+      "label": "Meta Catalog Rejection Fixer",
+      "method": "Identifies products suspended by Facebook for \"policy violations,\" rewrites the XML feed description to remove flagged trigger words, and resubmits.",
+      "trigger_examples": [
+        "keeps profitable e-commerce ads running"
+      ]
+    },
+    {
+      "slug": "ltv-to-cac-cohort-analyzer",
+      "label": "Ltv To Cac Cohort Analyzer",
+      "method": "Groups customers by the month they were acquired, tracking how much they spend over 12 months vs. what it cost to acquire them.",
+      "trigger_examples": [
+        "the most important metric for dtc (direct-to-consumer) brands"
+      ]
+    },
+    {
+      "slug": "affiliate-fraud-click-detector",
+      "label": "Affiliate Fraud Click Detector",
+      "method": "Analyzes referral IP addresses and conversion time-stamps; flags affiliates using botnets to steal commission payouts.",
+      "trigger_examples": [
+        "protects marketing budgets from theft"
+      ]
+    },
+    {
+      "slug": "google-merchant-suspension-appealer",
+      "label": "Google Merchant Suspension Appealer",
+      "method": "Audits website for missing GTINs or shipping policies, fixes the data feed, and submits the exact required appeal to Google.",
+      "trigger_examples": [
+        "resurrects dead google shopping channels"
+      ]
+    }
+  ]
+}

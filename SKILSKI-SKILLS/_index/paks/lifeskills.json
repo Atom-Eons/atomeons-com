@@ -1,0 +1,83 @@
+{
+  "slug": "lifeskills",
+  "label": "Lifeskills",
+  "blurb": "The free always-on essentials. The 12 Skilskis that quietly handle the unglamorous mechanics of work + life — receipts, inboxes, calendars, meetings, formatting, translation. Burned-in defaults; no setup.",
+  "mode": "parallel",
+  "tier": "free",
+  "always_on": true,
+  "phase_provenance": ["admin-comm", "hr-recruiting-internal-it", "edtech-corporate-training-certification"],
+  "skills": [
+    {
+      "slug": "receipt-to-ledger",
+      "label": "Receipt to Ledger",
+      "method": "OCRs mobile photos of receipts, extracts tax info, maps to a chart of accounts.",
+      "trigger_examples": ["log this receipt", "expense this", "save my receipt", "categorize this expense"]
+    },
+    {
+      "slug": "inbox-triage-routing",
+      "label": "Inbox Triage & Routing",
+      "method": "Scans incoming email, tags by urgency, surfaces high-priority threads.",
+      "trigger_examples": ["triage my inbox", "what's important in email", "prioritize my emails"]
+    },
+    {
+      "slug": "calendar-tetris-negotiator",
+      "label": "Calendar Tetris Negotiator",
+      "method": "Reads email threads, cross-references calendars, proposes meeting slots.",
+      "trigger_examples": ["find a time", "schedule a meeting", "when am I free", "book a slot"]
+    },
+    {
+      "slug": "meeting-action-item-extractor",
+      "label": "Meeting Action Items",
+      "method": "Parses transcripts, extracts assigned tasks with owner + deadline.",
+      "trigger_examples": ["action items from meeting", "what did we agree to", "summarize this transcript"]
+    },
+    {
+      "slug": "generic-document-formatter",
+      "label": "Document Formatter",
+      "method": "Takes raw text, applies clean Word/Google Doc structure, fixes inconsistent styling.",
+      "trigger_examples": ["format this document", "clean up this draft", "make this look proper"]
+    },
+    {
+      "slug": "translation-localization-sync",
+      "label": "Translate & Reply",
+      "method": "Detects foreign emails, translates accurately preserving business intent, drafts reply in source language.",
+      "trigger_examples": ["translate this email", "reply in spanish", "what does this say"]
+    },
+    {
+      "slug": "pdf-form-autofiller",
+      "label": "PDF Form Autofiller",
+      "method": "Extracts structured data from a profile/CRM and maps it to rigid government/vendor PDFs.",
+      "trigger_examples": ["fill out this form", "complete the PDF", "I need to submit this paperwork"]
+    },
+    {
+      "slug": "benefits-faq-resolver",
+      "label": "Benefits FAQ",
+      "method": "Reads long benefit/insurance/HR PDFs and answers plain-English questions.",
+      "trigger_examples": ["does my plan cover", "what's my deductible", "explain my benefits"]
+    },
+    {
+      "slug": "travel-itinerary-booker",
+      "label": "Travel Itinerary Drafter",
+      "method": "Reads stated preferences, drafts an itinerary, formats it into the user's calendar.",
+      "trigger_examples": ["plan my trip to", "draft my itinerary", "book my travel"]
+    },
+    {
+      "slug": "vendor-invoice-approver",
+      "label": "Vendor Invoice Approver",
+      "method": "Compares incoming PDF invoices against original POs and receiving logs to flag mismatches.",
+      "trigger_examples": ["check this invoice", "approve this bill", "is this right to pay"]
+    },
+    {
+      "slug": "syllabus-to-calendar-mapper",
+      "label": "Syllabus to Calendar",
+      "method": "Reads class syllabi or training plans and emits a calendar with assignments + due dates.",
+      "trigger_examples": ["import this syllabus", "set up my class schedule", "track my coursework"]
+    },
+    {
+      "slug": "time-tracking-aggregator",
+      "label": "Time Tracking Aggregator",
+      "method": "Scans the user's commits, sent emails, and calendar to auto-fill end-of-week timesheets.",
+      "trigger_examples": ["fill my timesheet", "track my hours", "where did my week go"]
+    }
+  ]
+}

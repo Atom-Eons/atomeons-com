@@ -1,0 +1,84 @@
+{
+  "slug": "nerve-center",
+  "label": "Nerve Center Pak",
+  "blurb": "DevOps, SRE & Core Cloud Infrastructure. Uptime, security, and infrastructure elasticity.",
+  "mode": "parallel",
+  "tier": "elite",
+  "phase_provenance": [
+    "devops-sre-core-cloud-infrastructure"
+  ],
+  "skills": [
+    {
+      "slug": "github-actions-runner-scaler",
+      "label": "Github Actions Runner Scaler",
+      "method": "Monitors the CI/CD queue length; dynamically spins up cheap AWS Spot Instances to run tests, and kills them when the queue empties.",
+      "trigger_examples": [
+        "slashes github build minutes costs by 60%"
+      ]
+    },
+    {
+      "slug": "postgres-vacuum-scheduler",
+      "label": "Postgres Vacuum Scheduler",
+      "method": "Analyzes database dead tuple bloat; automatically schedules and executes `VACUUM ANALYZE` during the lowest traffic hour of the week.",
+      "trigger_examples": [
+        "keeps relational databases blazing fast without dba intervention"
+      ]
+    },
+    {
+      "slug": "nginx-rate-limit-tuner",
+      "label": "Nginx Rate Limit Tuner",
+      "method": "Analyzes normal web traffic baselines vs. scraper bots, dynamically generating optimal Nginx/HAProxy `limit_req` zones to drop bots without hurting users.",
+      "trigger_examples": [
+        "application-layer ddos protection"
+      ]
+    },
+    {
+      "slug": "helm-chart-version-bumper",
+      "label": "Helm Chart Version Bumper",
+      "method": "Detects a new Docker image tag in the registry, updates the Kubernetes Helm `values.yaml`, and triggers the ArgoCD deployment sync.",
+      "trigger_examples": [
+        "fully automates gitops delivery"
+      ]
+    },
+    {
+      "slug": "datadog-monitor-terraform-sync",
+      "label": "Datadog Monitor Terraform Sync",
+      "method": "Detects when an engineer manually creates an alert in the Datadog UI, automatically exporting it into Terraform code and opening a PR.",
+      "trigger_examples": [
+        "enforces strictly version-controlled observability"
+      ]
+    },
+    {
+      "slug": "redis-memory-eviction-analyzer",
+      "label": "Redis Memory Eviction Analyzer",
+      "method": "Monitors Redis cache. If `OOM command not allowed` errors spike, it analyzes key TTLs and suggests better eviction policies (like `allkeys-lru`).",
+      "trigger_examples": [
+        "fixes cache crashes before the database falls over"
+      ]
+    },
+    {
+      "slug": "iam-cross-account-auditor",
+      "label": "Iam Cross Account Auditor",
+      "method": "Maps AWS IAM trust relationships, flagging any external vendor accounts that have lingering read/write access to production S3 buckets.",
+      "trigger_examples": [
+        "secures the cloud supply chain"
+      ]
+    },
+    {
+      "slug": "ssl-pinning-cert-updater",
+      "label": "Ssl Pinning Cert Updater",
+      "method": "Automatically updates the hardcoded SSL certificate hashes inside iOS/Android app code 30 days before the server cert expires.",
+      "trigger_examples": [
+        "prevents millions of mobile apps from suddenly failing to connect"
+      ]
+    },
+    {
+      "slug": "aws-transit-gateway-router",
+      "label": "Aws Transit Gateway Router",
+      "method": "Automatically writes the routing tables to connect a newly spun-up VPC to the central corporate network without exposing it to the public internet.",
+      "trigger_examples": [
+        "automates complex cloud networking"
+      ]
+    }
+  ]
+}

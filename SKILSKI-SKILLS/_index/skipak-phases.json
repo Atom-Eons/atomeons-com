@@ -1,0 +1,422 @@
+[
+  {
+    "phase_number": 1,
+    "label": "(Admin & Comm)",
+    "tier_label": null,
+    "slug": "admin-comm",
+    "target": "100M+ Users",
+    "value_blurb": "Replaces virtual assistants and rote office work. Saving 5 hours a week is",
+    "skill_count": 9,
+    "pricing_band": "$20–$50/mo per seat"
+  },
+  {
+    "phase_number": 2,
+    "label": "CRM, Sales & Marketing Operations",
+    "tier_label": null,
+    "slug": "crm-sales-marketing-operations",
+    "target": "30M - 50M Users",
+    "value_blurb": "Direct revenue generation and data hygiene.",
+    "skill_count": 9,
+    "pricing_band": "$100–$300/mo per seat"
+  },
+  {
+    "phase_number": 3,
+    "label": "E-Commerce, Support & Logistics",
+    "tier_label": null,
+    "slug": "e-commerce-support-logistics",
+    "target": "20M - 40M Users",
+    "value_blurb": "Customer retention and operational efficiency.",
+    "skill_count": 9,
+    "pricing_band": "$200–$500/mo"
+  },
+  {
+    "phase_number": 4,
+    "label": "Financial, Legal & Compliance",
+    "tier_label": null,
+    "slug": "financial-legal-compliance",
+    "target": "5M - 15M Users",
+    "value_blurb": "Risk mitigation and professional services automation.",
+    "skill_count": 9,
+    "pricing_band": "$500–$2000+/mo"
+  },
+  {
+    "phase_number": 5,
+    "label": "Developer & IT Operations",
+    "tier_label": "Smart",
+    "slug": "developer-it-operations",
+    "target": "15M - 30M Users",
+    "value_blurb": "Engineering velocity and uptime.",
+    "skill_count": 9,
+    "pricing_band": "$1000+/mo per team"
+  },
+  {
+    "phase_number": 6,
+    "label": "Data Science, Architecture & Niche Engineering",
+    "tier_label": "Genius",
+    "slug": "data-science-architecture-niche-engineering",
+    "target": "1M - 5M Users",
+    "value_blurb": "Deep enterprise infrastructure.",
+    "skill_count": 9,
+    "pricing_band": "$5000+/mo in saved consulting fees"
+  },
+  {
+    "phase_number": 7,
+    "label": "HR, Recruiting & Internal IT",
+    "tier_label": "Corporate Glue",
+    "slug": "hr-recruiting-internal-it",
+    "target": "20M - 50M Users",
+    "value_blurb": "Eliminates the operational drag of managing humans and their tech access.",
+    "skill_count": 9,
+    "pricing_band": "$100–$250/mo per seat"
+  },
+  {
+    "phase_number": 8,
+    "label": "Operations, Real Estate & Supply Chain",
+    "tier_label": "Physical World",
+    "slug": "operations-real-estate-supply-chain",
+    "target": "10M - 30M Users",
+    "value_blurb": "Margin protection and logistics optimization.",
+    "skill_count": 9,
+    "pricing_band": "$500–$1,000/mo"
+  },
+  {
+    "phase_number": 9,
+    "label": "Creative Ops, Agency & Media Automation",
+    "tier_label": "Scale",
+    "slug": "creative-ops-agency-media-automation",
+    "target": "5M - 15M Users",
+    "value_blurb": "Content velocity and agency margin expansion.",
+    "skill_count": 9,
+    "pricing_band": "$200–$800/mo"
+  },
+  {
+    "phase_number": 10,
+    "label": "Advanced Financial Ops & Procurement",
+    "tier_label": "Cashflow",
+    "slug": "advanced-financial-ops-procurement",
+    "target": "2M - 8M Users",
+    "value_blurb": "Working capital optimization and audit defense.",
+    "skill_count": 9,
+    "pricing_band": "$1,000–$5,000/mo"
+  },
+  {
+    "phase_number": 11,
+    "label": "Cybersecurity, InfoSec & Systems Engineering",
+    "tier_label": "Fortress",
+    "slug": "cybersecurity-infosec-systems-engineering",
+    "target": "500k - 3M Users",
+    "value_blurb": "Breach prevention and enterprise uptime.",
+    "skill_count": 9,
+    "pricing_band": "$5,000–$20,000+/mo"
+  },
+  {
+    "phase_number": 12,
+    "label": "Healthcare Administration & Medical Billing",
+    "tier_label": "Provider",
+    "slug": "healthcare-administration-medical-billing",
+    "target": "15M - 40M Users",
+    "value_blurb": "Cuts clinical overhead and fights insurance companies.",
+    "skill_count": 9,
+    "pricing_band": "$500–$2,000/mo per clinic"
+  },
+  {
+    "phase_number": 13,
+    "label": "Local Services, Trades & Construction",
+    "tier_label": "Hard Hat",
+    "slug": "local-services-trades-construction",
+    "target": "20M - 50M Users",
+    "value_blurb": "Bidding speed and field-to-office sync.",
+    "skill_count": 9,
+    "pricing_band": "$300–$1,000/mo per contracting business"
+  },
+  {
+    "phase_number": 14,
+    "label": "EdTech, Corporate Training & Certification",
+    "tier_label": "Compliance",
+    "slug": "edtech-corporate-training-certification",
+    "target": "10M - 30M Users",
+    "value_blurb": "Course creation velocity and risk mitigation.",
+    "skill_count": 9,
+    "pricing_band": "$200–$800/mo"
+  },
+  {
+    "phase_number": 15,
+    "label": "Deep Legal Ops & Litigation Support",
+    "tier_label": "Billable Hour",
+    "slug": "deep-legal-ops-litigation-support",
+    "target": "2M - 5M Users",
+    "value_blurb": "Extreme labor replacement for law firms and in-house counsel.",
+    "skill_count": 9,
+    "pricing_band": "$2,000–$10,000/mo"
+  },
+  {
+    "phase_number": 16,
+    "label": "Specialized Engineering, QA & ML Ops",
+    "tier_label": "Infrastructure",
+    "slug": "specialized-engineering-qa-ml-ops",
+    "target": "1M - 4M Users",
+    "value_blurb": "Software stability and advanced data ops.",
+    "skill_count": 9,
+    "pricing_band": "$5,000–$15,000/mo in saved engineering time"
+  },
+  {
+    "phase_number": 17,
+    "label": "Banking, Wealth Management & Fintech",
+    "tier_label": "Capital",
+    "slug": "banking-wealth-management-fintech",
+    "target": "5M - 20M Users",
+    "value_blurb": "Regulatory compliance and asset scaling.",
+    "skill_count": 9,
+    "pricing_band": "$1,000–$10,000/mo in saved back-office labor"
+  },
+  {
+    "phase_number": 18,
+    "label": "Manufacturing, IoT & Factory Operations",
+    "tier_label": "Industrial",
+    "slug": "manufacturing-iot-factory-operations",
+    "target": "10M - 30M Users",
+    "value_blurb": "Uptime, yield optimization, and supply chain resilience.",
+    "skill_count": 9,
+    "pricing_band": "$2,000–$15,000/mo per facility"
+  },
+  {
+    "phase_number": 19,
+    "label": "E-commerce Logistics, 3PL & Warehousing",
+    "tier_label": "Fulfillment",
+    "slug": "e-commerce-logistics-3pl-warehousing",
+    "target": "15M - 40M Users",
+    "value_blurb": "Pick/pack efficiency and margin protection.",
+    "skill_count": 9,
+    "pricing_band": "$500–$5,000/mo"
+  },
+  {
+    "phase_number": 20,
+    "label": "Event Management, Hospitality & Travel Ops",
+    "tier_label": "Experience",
+    "slug": "event-management-hospitality-travel-ops",
+    "target": "20M - 50M Users",
+    "value_blurb": "Revenue maximization and complex coordination.",
+    "skill_count": 9,
+    "pricing_band": "$300–$1,500/mo"
+  },
+  {
+    "phase_number": 21,
+    "label": "RevOps, Advanced Sales & Procurement",
+    "tier_label": "Deep Revenue",
+    "slug": "revops-advanced-sales-procurement",
+    "target": "10M - 25M Users",
+    "value_blurb": "Margin extraction and deal velocity.",
+    "skill_count": 9,
+    "pricing_band": "$1,000–$5,000/mo"
+  },
+  {
+    "phase_number": 22,
+    "label": "Deep FinOps, Data Engineering & Cyber",
+    "tier_label": "Smartest",
+    "slug": "deep-finops-data-engineering-cyber",
+    "target": "1M - 5M Users",
+    "value_blurb": "Extreme cloud cost reduction and proactive threat hunting.",
+    "skill_count": 9,
+    "pricing_band": "$10,000+/mo in saved consulting fees"
+  },
+  {
+    "phase_number": 23,
+    "label": "Local Retail, Franchise Ops & Brick-and-Mortar",
+    "tier_label": "Main Street",
+    "slug": "local-retail-franchise-ops-brick-and-mortar",
+    "target": "15M - 40M Users",
+    "value_blurb": "Margin protection and compliance across distributed physical locations.",
+    "skill_count": 9,
+    "pricing_band": "$200–$1,000/mo per store"
+  },
+  {
+    "phase_number": 24,
+    "label": "Real Estate, Title & Property Management",
+    "tier_label": "Asset",
+    "slug": "real-estate-title-property-management",
+    "target": "10M - 30M Users",
+    "value_blurb": "Legal liability reduction and cash-flow velocity.",
+    "skill_count": 9,
+    "pricing_band": "$500–$2,500/mo"
+  },
+  {
+    "phase_number": 25,
+    "label": "Media Buying, AdTech & E-commerce Growth",
+    "tier_label": "ROAS",
+    "slug": "media-buying-adtech-e-commerce-growth",
+    "target": "5M - 20M Users",
+    "value_blurb": "Customer Acquisition Cost (CAC) reduction and ad budget efficiency.",
+    "skill_count": 9,
+    "pricing_band": "$1,000–$10,000/mo"
+  },
+  {
+    "phase_number": 26,
+    "label": "MedTech, Pharmacy & Specialized Healthcare",
+    "tier_label": "Clinical",
+    "slug": "medtech-pharmacy-specialized-healthcare",
+    "target": "2M - 10M Users",
+    "value_blurb": "Extreme regulatory compliance and medical billing defense.",
+    "skill_count": 9,
+    "pricing_band": "$2,000–$15,000/mo"
+  },
+  {
+    "phase_number": 27,
+    "label": "DevOps, SRE & Core Cloud Infrastructure",
+    "tier_label": "Nerve Center",
+    "slug": "devops-sre-core-cloud-infrastructure",
+    "target": "500k - 5M Users",
+    "value_blurb": "Uptime, security, and infrastructure elasticity.",
+    "skill_count": 9,
+    "pricing_band": "$5,000–$25,000/mo in engineering salary offset"
+  },
+  {
+    "phase_number": 33,
+    "label": "Personal Care, Wellness & Salon Ops",
+    "tier_label": "Appointment",
+    "slug": "personal-care-wellness-salon-ops",
+    "target": "15M - 30M Users (Hairdressers, massage therapists, fitness coaches, dog groomers)",
+    "value_blurb": "Minimizes no-shows and automates client relationships.",
+    "skill_count": 10,
+    "pricing_band": "$100–$400/mo"
+  },
+  {
+    "phase_number": 34,
+    "label": "Restaurant Front-of-House, Catering & Food Trucks",
+    "tier_label": "Hospitality",
+    "slug": "restaurant-front-of-house-catering-food-trucks",
+    "target": "20M - 40M Users (Waitstaff, bakers, caterers, food truck owners)",
+    "value_blurb": "Table turns, waste reduction, and event prep.",
+    "skill_count": 10,
+    "pricing_band": "$300–$800/mo"
+  },
+  {
+    "phase_number": 35,
+    "label": "K-12 Education, Tutoring & Childcare",
+    "tier_label": "Classroom",
+    "slug": "k-12-education-tutoring-childcare",
+    "target": "15M - 30M Users (Teachers, daycare owners, private tutors)",
+    "value_blurb": "Parent communication, grading rote work, and lesson planning.",
+    "skill_count": 10,
+    "pricing_band": "$50–$200/mo (paid by districts or parents)"
+  },
+  {
+    "phase_number": 36,
+    "label": "Specialty Trades, Landscaping & Home Services",
+    "tier_label": "Curb Appeal",
+    "slug": "specialty-trades-landscaping-home-services",
+    "target": "10M - 25M Users (Landscapers, house cleaners, painters, pest control)",
+    "value_blurb": "Route density, upselling, and proof of work.",
+    "skill_count": 10,
+    "pricing_band": "$200–$600/mo"
+  },
+  {
+    "phase_number": 37,
+    "label": "Clerical, Legal Support & Local Office Admin",
+    "tier_label": "Front Desk",
+    "slug": "clerical-legal-support-local-office-admin",
+    "target": "20M - 40M Users (Receptionists, notary publics, paralegals, dental front office)",
+    "value_blurb": "Document routing, signature chasing, and gatekeeping.",
+    "skill_count": 10,
+    "pricing_band": "$300–$1,000/mo"
+  },
+  {
+    "phase_number": 38,
+    "label": "Automotive Repair, Dealerships & Mobile Mechanics",
+    "tier_label": "Grease & Gears",
+    "slug": "automotive-repair-dealerships-mobile-mechanics",
+    "target": "15M - 35M Users",
+    "value_blurb": "Bay-turnover speed, parts arbitrage, and upselling transparency.",
+    "skill_count": 10,
+    "pricing_band": "$500–$2,000/mo per garage"
+  },
+  {
+    "phase_number": 39,
+    "label": "Local Government, Non-Profits & Civil Services",
+    "tier_label": "Civic",
+    "slug": "local-government-non-profits-civil-services",
+    "target": "10M - 20M Users",
+    "value_blurb": "Bureaucracy automation, grant tracking, and citizen communication.",
+    "skill_count": 10,
+    "pricing_band": "$1,000–$5,000/mo (paid by municipalities)"
+  },
+  {
+    "phase_number": 40,
+    "label": "Farming, Agriculture & Rural Small Business",
+    "tier_label": "Harvest",
+    "slug": "farming-agriculture-rural-small-business",
+    "target": "5M - 15M Users",
+    "value_blurb": "Yield logistics, equipment uptime, and direct-to-consumer sales.",
+    "skill_count": 10,
+    "pricing_band": "$200–$1,500/mo"
+  },
+  {
+    "phase_number": 41,
+    "label": "Gig Economy, Creators & Solopreneurs",
+    "tier_label": "Hustle",
+    "slug": "gig-economy-creators-solopreneurs",
+    "target": "30M - 60M Users",
+    "value_blurb": "Micro-logistics, tax shielding, and platform arbitrage.",
+    "skill_count": 10,
+    "pricing_band": "$20–$100/mo"
+  },
+  {
+    "phase_number": 42,
+    "label": "Senior Care, Assisted Living & Mobility Services",
+    "tier_label": "Caregiver",
+    "slug": "senior-care-assisted-living-mobility-services",
+    "target": "10M - 25M Users",
+    "value_blurb": "Medicaid compliance, family updates, and staff burnout reduction.",
+    "skill_count": 10,
+    "pricing_band": "$500–$3,000/mo"
+  },
+  {
+    "phase_number": 43,
+    "label": "Local Entertainment, Nightlife & Tourism",
+    "tier_label": "Ticket",
+    "slug": "local-entertainment-nightlife-tourism",
+    "target": "10M - 20M Users",
+    "value_blurb": "Fraud prevention, VIP management, and yield optimization.",
+    "skill_count": 10,
+    "pricing_band": "$300–$1,500/mo"
+  },
+  {
+    "phase_number": 44,
+    "label": "Specialty Retail, Thrift & Pawn Shops",
+    "tier_label": "Merchants",
+    "slug": "specialty-retail-thrift-pawn-shops",
+    "target": "15M - 35M Users",
+    "value_blurb": "Inventory sourcing, dynamic pricing, and authentication.",
+    "skill_count": 10,
+    "pricing_band": "$200–$1,000/mo"
+  },
+  {
+    "phase_number": 45,
+    "label": "Moving, Storage & Junk Removal",
+    "tier_label": "Relocation",
+    "slug": "moving-storage-junk-removal",
+    "target": "5M - 15M Users",
+    "value_blurb": "Fleet optimization, dispute resolution, and asset recovery.",
+    "skill_count": 10,
+    "pricing_band": "$400–$1,500/mo"
+  },
+  {
+    "phase_number": 46,
+    "label": "Fitness Studios, Dojos & Dance Academies",
+    "tier_label": "Studio",
+    "slug": "fitness-studios-dojos-dance-academies",
+    "target": "10M - 20M Users",
+    "value_blurb": "Retention, class balancing, and instructor payroll.",
+    "skill_count": 10,
+    "pricing_band": "$150–$500/mo"
+  },
+  {
+    "phase_number": 47,
+    "label": "Microbreweries, Wineries & Specialty Food",
+    "tier_label": "Artisan",
+    "slug": "microbreweries-wineries-specialty-food",
+    "target": "2M - 8M Users",
+    "value_blurb": "Fermentation tracking, excise tax, and inventory rotation.",
+    "skill_count": 10,
+    "pricing_band": "$300–$1,200/mo"
+  }
+]

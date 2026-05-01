@@ -1,0 +1,84 @@
+{
+  "slug": "main-street",
+  "label": "Main Street Pak",
+  "blurb": "Local Retail, Franchise Ops & Brick-and-Mortar. Margin protection and compliance across distributed physical locations.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "local-retail-franchise-ops-brick-and-mortar"
+  ],
+  "skills": [
+    {
+      "slug": "shift-callout-coverage-router",
+      "label": "Shift Callout Coverage Router",
+      "method": "When a barista texts \"I'm sick,\" instantly texts all available, non-overtime staff to cover, updating the schedule when someone accepts.",
+      "trigger_examples": [
+        "replaces 2 hours of manager panic-texting"
+      ]
+    },
+    {
+      "slug": "pos-cash-drawer-reconciler",
+      "label": "Pos Cash Drawer Reconciler",
+      "method": "Compares end-of-day physical cash counts against Square/Toast transaction logs, flagging discrepancies \\>$5.",
+      "trigger_examples": [
+        "stops internal theft and accounting headaches"
+      ]
+    },
+    {
+      "slug": "health-inspector-checklist-auto",
+      "label": "Health Inspector Checklist Auto",
+      "method": "Pings IoT fridge thermometers and digital cleaning logs to auto-generate the daily food safety compliance sheet.",
+      "trigger_examples": [
+        "prevents health department shutdowns"
+      ]
+    },
+    {
+      "slug": "foot-traffic-to-roster-sync",
+      "label": "Foot Traffic To Roster Sync",
+      "method": "Correlates door-counter camera data with the weather forecast to automatically adjust next week's staffing levels.",
+      "trigger_examples": [
+        "prevents overstaffing on rainy tuesdays"
+      ]
+    },
+    {
+      "slug": "multi-location-review-replier",
+      "label": "Multi Location Review Replier",
+      "method": "Reads Google/Yelp reviews for 500 store locations, generating hyper-local, brand-approved responses to both 5-star and 1-star feedback.",
+      "trigger_examples": [
+        "maintains local seo and customer loyalty at scale"
+      ]
+    },
+    {
+      "slug": "perishable-markdown-pricer",
+      "label": "Perishable Markdown Pricer",
+      "method": "Scans grocery inventory expiration dates; automatically updates digital shelf tags to discount ground beef by 30% 24 hours before it spoils.",
+      "trigger_examples": [
+        "slashes food waste shrink"
+      ]
+    },
+    {
+      "slug": "loss-prevention-anomaly-flag",
+      "label": "Loss Prevention Anomaly Flag",
+      "method": "Scans POS logs for cashiers who have an unusually high number of \"voided transactions\" or \"no-sale\" drawer opens.",
+      "trigger_examples": [
+        "identifies employee sweetheart-ing/theft"
+      ]
+    },
+    {
+      "slug": "franchise-royalty-auditor",
+      "label": "Franchise Royalty Auditor",
+      "method": "Pulls daily gross sales from individual franchisee POS systems, subtracts excluded items, and calculates the 6% corporate royalty cut.",
+      "trigger_examples": [
+        "automates corporate franchise revenue collection"
+      ]
+    },
+    {
+      "slug": "music-licensing-compliance",
+      "label": "Music Licensing Compliance",
+      "method": "Audits the store's Spotify/Pandora feeds to ensure commercial ASCAP/BMI licenses are active, blocking consumer accounts.",
+      "trigger_examples": [
+        "prevents $30,000 copyright lawsuits"
+      ]
+    }
+  ]
+}

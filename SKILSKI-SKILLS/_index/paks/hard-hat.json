@@ -1,0 +1,84 @@
+{
+  "slug": "hard-hat",
+  "label": "Hard Hat Pak",
+  "blurb": "Local Services, Trades & Construction. Bidding speed and field-to-office sync.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "local-services-trades-construction"
+  ],
+  "skills": [
+    {
+      "slug": "field-service-triage-dispatcher",
+      "label": "Field Service Triage Dispatcher",
+      "method": "Takes a homeowner's text (\"my AC is leaking water\"), categorizes it as a clogged condensate line, and books the nearest tech.",
+      "trigger_examples": [
+        "automates the hvac/plumbing dispatch desk"
+      ]
+    },
+    {
+      "slug": "change-order-generator",
+      "label": "Change Order Generator",
+      "method": "Takes a text from a foreman (\"client wants the cabinets painted blue now\"), calculates the labor/material delta, and emails the client for an e-signature.",
+      "trigger_examples": [
+        "stops contractors from doing free work"
+      ]
+    },
+    {
+      "slug": "blueprint-takeoff-estimator",
+      "label": "Blueprint Takeoff Estimator",
+      "method": "Scans architectural PDFs, counts doors, windows, and linear feet of drywall, populates the quoting spreadsheet.",
+      "trigger_examples": [
+        "turns a 3-day manual estimation job into 10 minutes"
+      ]
+    },
+    {
+      "slug": "punch-list-photo-sorter",
+      "label": "Punch List Photo Sorter",
+      "method": "Takes 100 messy photos uploaded by a foreman, categorizes them by room and trade, and formats them into a clean PDF report for the client.",
+      "trigger_examples": [
+        "streamlines the final payout process"
+      ]
+    },
+    {
+      "slug": "material-price-escalation-alert",
+      "label": "Material Price Escalation Alert",
+      "method": "Scrapes Home Depot/local supplier APIs daily for lumber and copper prices, alerting sales to update outstanding quotes.",
+      "trigger_examples": [
+        "protects profit margins from sudden inflation"
+      ]
+    },
+    {
+      "slug": "municipal-permit-autofiller",
+      "label": "Municipal Permit Autofiller",
+      "method": "Takes job specs and maps them onto the wildly different, archaic PDF permit applications of 500 different counties.",
+      "trigger_examples": [
+        "unblocks construction starts"
+      ]
+    },
+    {
+      "slug": "weather-delay-schedule-shifter",
+      "label": "Weather Delay Schedule Shifter",
+      "method": "Monitors local forecasts; if heavy rain is predicted, automatically pushes the concrete pouring crew back a day and texts the client.",
+      "trigger_examples": [
+        "automates project management logistics"
+      ]
+    },
+    {
+      "slug": "subcontractor-lien-waiver-tracker",
+      "label": "Subcontractor Lien Waiver Tracker",
+      "method": "Emails plumbers/electricians requesting signed lien waivers, holds their payout in escrow until the document is received and verified.",
+      "trigger_examples": [
+        "protects general contractors from legal nightmares"
+      ]
+    },
+    {
+      "slug": "equipment-rental-return-nag",
+      "label": "Equipment Rental Return Nag",
+      "method": "Tracks when a scissor lift was rented from Sunbelt, checks the job schedule, and schedules the pickup the day it's no longer needed.",
+      "trigger_examples": [
+        "stops contractors from bleeding cash on unused rentals"
+      ]
+    }
+  ]
+}

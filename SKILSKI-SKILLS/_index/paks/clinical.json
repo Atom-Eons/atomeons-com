@@ -1,0 +1,84 @@
+{
+  "slug": "clinical",
+  "label": "Clinical Pak",
+  "blurb": "MedTech, Pharmacy & Specialized Healthcare. Extreme regulatory compliance and medical billing defense.",
+  "mode": "parallel",
+  "tier": "elite",
+  "phase_provenance": [
+    "medtech-pharmacy-specialized-healthcare"
+  ],
+  "skills": [
+    {
+      "slug": "veterinary-vaccine-reminder",
+      "label": "Veterinary Vaccine Reminder",
+      "method": "Reads the clinic management system, texting pet owners 30 days before a Rabies/Bordetella shot expires with a one-click booking link.",
+      "trigger_examples": [
+        "drives recurring revenue for vet clinics"
+      ]
+    },
+    {
+      "slug": "lab-specimen-chain-of-custody",
+      "label": "Lab Specimen Chain Of Custody",
+      "method": "Generates barcode labels and digital manifests tracking a blood vial from the phlebotomist's chair to the Quest Diagnostics centrifuge.",
+      "trigger_examples": [
+        "prevents lost samples and misdiagnoses"
+      ]
+    },
+    {
+      "slug": "dental-xray-claim-attachment",
+      "label": "Dental Xray Claim Attachment",
+      "method": "Automatically pulls the specific bitewing X-ray from the imaging software and attaches it to the exact tooth code on the NEA FastAttach insurance claim.",
+      "trigger_examples": [
+        "stops dental claim rejections"
+      ]
+    },
+    {
+      "slug": "optical-rx-to-lens-spec",
+      "label": "Optical Rx To Lens Spec",
+      "method": "Translates an optometrist's raw prescription (Sphere, Cylinder, Axis) into the exact manufacturing specs required for the lens-grinding lab.",
+      "trigger_examples": [
+        "automates retail optical fulfillment"
+      ]
+    },
+    {
+      "slug": "controlled-substance-log-auditor",
+      "label": "Controlled Substance Log Auditor",
+      "method": "Cross-references the digital safe logs (Pyxis/Omnicell) with patient administration records to flag missing Oxycodone/Fentanyl.",
+      "trigger_examples": [
+        "prevents dea raids and hospital drug diversion"
+      ]
+    },
+    {
+      "slug": "home-health-mileage-router",
+      "label": "Home Health Mileage Router",
+      "method": "Calculates the optimal driving route for visiting nurses, separating billable clinical time from reimbursable driving mileage for payroll.",
+      "trigger_examples": [
+        "optimizes grueling home-health logistics"
+      ]
+    },
+    {
+      "slug": "medicare-hcc-coder",
+      "label": "Medicare Hcc Coder",
+      "method": "Scans a geriatric patient's history to suggest Hierarchical Condition Category (HCC) codes, ensuring the clinic gets paid for treating high-risk patients.",
+      "trigger_examples": [
+        "maximizes medicare advantage reimbursements legally"
+      ]
+    },
+    {
+      "slug": "pbm-rebate-reconciler",
+      "label": "Pbm Rebate Reconciler",
+      "method": "Audits Pharmacy Benefit Manager (PBM) contracts against dispensed prescriptions to ensure the pharmacy actually received their promised drug rebates.",
+      "trigger_examples": [
+        "closes million-dollar pharmacy accounting black holes"
+      ]
+    },
+    {
+      "slug": "medical-device-udi-tracker",
+      "label": "Medical Device Udi Tracker",
+      "method": "Scans the Unique Device Identifier (UDI) barcode on a pacemaker before surgery, auto-logging it into the FDA database and the patient EHR.",
+      "trigger_examples": [
+        "ensures traceability for medical device recalls"
+      ]
+    }
+  ]
+}

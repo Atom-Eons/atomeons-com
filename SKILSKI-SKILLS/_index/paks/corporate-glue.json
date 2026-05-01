@@ -1,0 +1,84 @@
+{
+  "slug": "corporate-glue",
+  "label": "Corporate Glue Pak",
+  "blurb": "HR, Recruiting & Internal IT. Eliminates the operational drag of managing humans and their tech access.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "hr-recruiting-internal-it"
+  ],
+  "skills": [
+    {
+      "slug": "benefits-faq-resolver",
+      "label": "Benefits Faq Resolver",
+      "method": "Searches 100-page corporate insurance PDFs to answer \"does my plan cover invisalign?\"",
+      "trigger_examples": [
+        "saves hr reps 10 hours a week answering the same questions"
+      ]
+    },
+    {
+      "slug": "resume-to-structured-profile",
+      "label": "Resume To Structured Profile",
+      "method": "Parses wildly different PDF formats, extracts skills/timeline, and outputs clean JSON for the ATS.",
+      "trigger_examples": [
+        "eliminates manual data entry for recruiters"
+      ]
+    },
+    {
+      "slug": "interview-panel-coordinator",
+      "label": "Interview Panel Coordinator",
+      "method": "Cross-references 4 executives' calendars with the candidate's availability to find a 60-minute window.",
+      "trigger_examples": [
+        "solves the hardest logistical problem in hiring"
+      ]
+    },
+    {
+      "slug": "employee-onboarding-provisioner",
+      "label": "Employee Onboarding Provisioner",
+      "method": "Reads HR system triggers, provisions Google Workspace, Slack, Jira, and assigns security groups.",
+      "trigger_examples": [
+        "replaces the day-one it helpdesk scramble"
+      ]
+    },
+    {
+      "slug": "pto-accrual-auditor",
+      "label": "Pto Accrual Auditor",
+      "method": "Reconciles Slack out-of-office messages with the official Gusto/Workday PTO balances.",
+      "trigger_examples": [
+        "prevents employees from secretly taking unlogged vacation"
+      ]
+    },
+    {
+      "slug": "performance-review-aggregator",
+      "label": "Performance Review Aggregator",
+      "method": "Synthesizes raw 360-degree peer feedback into a neutral, constructive summary for the manager.",
+      "trigger_examples": [
+        "unblocks managers during review season"
+      ]
+    },
+    {
+      "slug": "offboarding-access-revoker",
+      "label": "Offboarding Access Revoker",
+      "method": "One-click de-provisioning of 50+ SaaS apps the moment an employee is terminated.",
+      "trigger_examples": [
+        "closes massive corporate security holes instantly"
+      ]
+    },
+    {
+      "slug": "it-hardware-procurement",
+      "label": "It Hardware Procurement",
+      "method": "Triggers when a dev signs an offer, auto-orders a MacBook via CDW API, ships to their home address.",
+      "trigger_examples": [
+        "zero-touch hardware logistics"
+      ]
+    },
+    {
+      "slug": "job-description-bias-scrubber",
+      "label": "Job Description Bias Scrubber",
+      "method": "Scans job drafts, removes excessively gendered or ageist language, aligns with legal standards.",
+      "trigger_examples": [
+        "reduces hiring liability and widens candidate pools"
+      ]
+    }
+  ]
+}

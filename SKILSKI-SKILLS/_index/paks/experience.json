@@ -1,0 +1,84 @@
+{
+  "slug": "experience",
+  "label": "Experience Pak",
+  "blurb": "Event Management, Hospitality & Travel Ops. Revenue maximization and complex coordination.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "event-management-hospitality-travel-ops"
+  ],
+  "skills": [
+    {
+      "slug": "flight-delay-reaccommodation",
+      "label": "Flight Delay Reaccommodation",
+      "method": "The moment a flight is canceled, instantly runs an algorithm to re-book 150 stranded passengers on alternative routes based on loyalty status.",
+      "trigger_examples": [
+        "replaces the 4-hour customer service line at the gate"
+      ]
+    },
+    {
+      "slug": "restaurant-table-turn-optimizer",
+      "label": "Restaurant Table Turn Optimizer",
+      "method": "Analyzes POS data to predict exactly when a table will leave, dynamically quoting accurate wait times to walk-ins.",
+      "trigger_examples": [
+        "seats 10% more covers per night"
+      ]
+    },
+    {
+      "slug": "event-badge-printing-sync",
+      "label": "Event Badge Printing Sync",
+      "method": "Syncs late ticket sales with on-site printers, deduplicating names, and formatting QR codes for instant check-in.",
+      "trigger_examples": [
+        "eliminates the registration desk bottleneck"
+      ]
+    },
+    {
+      "slug": "speaker-presentation-chaser",
+      "label": "Speaker Presentation Chaser",
+      "method": "Pings conference speakers relentlessly until they upload their slide decks, then automatically checks the aspect ratio and fonts.",
+      "trigger_examples": [
+        "saves event organizers from the day-of-show av panic"
+      ]
+    },
+    {
+      "slug": "hotel-yield-dynamic-pricer",
+      "label": "Hotel Yield Dynamic Pricer",
+      "method": "Adjusts room rates hourly based on local event API data (e.g., Taylor Swift tour), competitor scraping, and historical occupancy.",
+      "trigger_examples": [
+        "maximizes revpar (revenue per available room)"
+      ]
+    },
+    {
+      "slug": "banquet-event-order-generator",
+      "label": "Banquet Event Order Generator",
+      "method": "Translates a client's messy email requests into a strict BEO (Banquet Event Order) for the kitchen, AV, and setup teams.",
+      "trigger_examples": [
+        "prevents event day disasters and missed catering requests"
+      ]
+    },
+    {
+      "slug": "food-waste-predictor",
+      "label": "Food Waste Predictor",
+      "method": "Analyzes hotel breakfast consumption against guest demographics to prep the exact right amount of eggs and bacon.",
+      "trigger_examples": [
+        "slashes f\\&b (food & beverage) waste margins"
+      ]
+    },
+    {
+      "slug": "vip-guest-preference-tracker",
+      "label": "Vip Guest Preference Tracker",
+      "method": "Scrapes past stay data across global properties to ensure a high-roller's room is pre-stocked with their exact preferred brand of water and pillow type.",
+      "trigger_examples": [
+        "drives extreme customer loyalty"
+      ]
+    },
+    {
+      "slug": "group-block-attrition-alert",
+      "label": "Group Block Attrition Alert",
+      "method": "Warns hotel sales managers if a wedding block is not filling up 30 days out, triggering the release of rooms back to the public.",
+      "trigger_examples": [
+        "prevents empty rooms"
+      ]
+    }
+  ]
+}

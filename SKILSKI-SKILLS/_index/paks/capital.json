@@ -1,0 +1,84 @@
+{
+  "slug": "capital",
+  "label": "Capital Pak",
+  "blurb": "Banking, Wealth Management & Fintech. Regulatory compliance and asset scaling.",
+  "mode": "parallel",
+  "tier": "elite",
+  "phase_provenance": [
+    "banking-wealth-management-fintech"
+  ],
+  "skills": [
+    {
+      "slug": "chargeback-evidence-assembler",
+      "label": "Chargeback Evidence Assembler",
+      "method": "Pulls AVS matches, shipping tracking, and customer communication logs into a single PDF to fight fraudulent credit card disputes.",
+      "trigger_examples": [
+        "wins back thousands in stolen revenue for merchants"
+      ]
+    },
+    {
+      "slug": "corporate-card-receipt-chaser",
+      "label": "Corporate Card Receipt Chaser",
+      "method": "Pings employees via Slack exactly 2 hours after a card swipe \\>$75, demanding a photo of the receipt before they lose it.",
+      "trigger_examples": [
+        "closes the month-end accounting gap"
+      ]
+    },
+    {
+      "slug": "kyc-aml-document-verifier",
+      "label": "Kyc Aml Document Verifier",
+      "method": "Cross-references uploaded IDs against global PEP (Politically Exposed Persons) databases, checking for image manipulation/deepfakes.",
+      "trigger_examples": [
+        "speeds up user onboarding while preventing federal fines"
+      ]
+    },
+    {
+      "slug": "portfolio-rebalancing-trigger",
+      "label": "Portfolio Rebalancing Trigger",
+      "method": "Monitors wealth accounts; if equity/bond splits drift \\>5% from the target due to market movement, it auto-generates the required trades.",
+      "trigger_examples": [
+        "automates fiduciary asset management"
+      ]
+    },
+    {
+      "slug": "crypto-wallet-fifo-tax-calculator",
+      "label": "Crypto Wallet Fifo Tax Calculator",
+      "method": "Traces 10,000 micro-transactions across Ethereum and Solana to calculate precise First-In-First-Out capital gains for the IRS.",
+      "trigger_examples": [
+        "solves an impossible accounting nightmare"
+      ]
+    },
+    {
+      "slug": "mortgage-dti-calculator",
+      "label": "Mortgage Dti Calculator",
+      "method": "Extracts data from W2s, paystubs, and Plaid bank feeds to automatically calculate Debt-to-Income ratios for loan origination.",
+      "trigger_examples": [
+        "replaces 5 hours of manual mortgage underwriting per file"
+      ]
+    },
+    {
+      "slug": "merchant-cash-advance-underwriter",
+      "label": "Merchant Cash Advance Underwriter",
+      "method": "Analyzes 6 months of Stripe/Square daily transaction volumes to calculate maximum safe lending limits and repayment terms.",
+      "trigger_examples": [
+        "instant, algorithmic smb lending"
+      ]
+    },
+    {
+      "slug": "wire-transfer-anomaly-blocker",
+      "label": "Wire Transfer Anomaly Blocker",
+      "method": "Flags outgoing wires that match CEO fraud patterns (e.g., sudden Friday afternoon requests to new offshore accounts).",
+      "trigger_examples": [
+        "prevents irreversible multi-million dollar business email compromise losses"
+      ]
+    },
+    {
+      "slug": "municipal-bond-prospectus-parser",
+      "label": "Municipal Bond Prospectus Parser",
+      "method": "Reads 300-page bond offerings, extracting call dates, yields, and municipal tax risks into a clean database.",
+      "trigger_examples": [
+        "allows fixed-income traders to act faster"
+      ]
+    }
+  ]
+}

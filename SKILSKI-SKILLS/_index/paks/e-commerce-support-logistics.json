@@ -1,0 +1,84 @@
+{
+  "slug": "e-commerce-support-logistics",
+  "label": "E-Commerce, Support & Logistics Pak",
+  "blurb": "E-Commerce, Support & Logistics. Customer retention and operational efficiency.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "e-commerce-support-logistics"
+  ],
+  "skills": [
+    {
+      "slug": "support-ticket-categorizer",
+      "label": "Support Ticket Categorizer",
+      "method": "NLP analysis of incoming Zendesk tickets, routes to Tier 1, 2, or Billing.",
+      "trigger_examples": [
+        "drops first response time by 80%"
+      ]
+    },
+    {
+      "slug": "angry-customer-de-escalator",
+      "label": "Angry Customer De Escalator",
+      "method": "Detects profanity/caps lock, drafts an empathetic, policy-compliant apology for human review.",
+      "trigger_examples": [
+        "prevents viral pr disasters"
+      ]
+    },
+    {
+      "slug": "abandoned-cart-deal-maker",
+      "label": "Abandoned Cart Deal Maker",
+      "method": "Emails cart-abandoners with a dynamically generated, expiring discount code.",
+      "trigger_examples": [
+        "recovers 5-10% of lost gross merchandise value"
+      ]
+    },
+    {
+      "slug": "product-description-optimizer",
+      "label": "Product Description Optimizer",
+      "method": "Rewrites generic manufacturer SKU descriptions into brand-voice, SEO-rich copy.",
+      "trigger_examples": [
+        "boosts organic marketplace traffic"
+      ]
+    },
+    {
+      "slug": "return-rma-processor",
+      "label": "Return Rma Processor",
+      "method": "Validates order window, checks return policy, generates Shopify refund and shipping label.",
+      "trigger_examples": [
+        "fully automates the most hated e-comm task"
+      ]
+    },
+    {
+      "slug": "fraudulent-order-flag",
+      "label": "Fraudulent Order Flag",
+      "method": "Cross-references IP address distance from billing zip code and cart size anomalies.",
+      "trigger_examples": [
+        "stops chargebacks before shipping"
+      ]
+    },
+    {
+      "slug": "inventory-reorder-predictor",
+      "label": "Inventory Reorder Predictor",
+      "method": "Analyzes current stock, lead time, and seasonal sales velocity to trigger POs.",
+      "trigger_examples": [
+        "prevents costly stockouts"
+      ]
+    },
+    {
+      "slug": "review-sentiment-aggregator",
+      "label": "Review Sentiment Aggregator",
+      "method": "Scrapes Amazon reviews, clusters complaints (e.g., \"zipper breaks\"), sends report to product team.",
+      "trigger_examples": [
+        "free, instant qa feedback loop"
+      ]
+    },
+    {
+      "slug": "supplier-delay-negotiator",
+      "label": "Supplier Delay Negotiator",
+      "method": "Reads factory emails, detects delays, auto-emails downstream wholesale buyers to warn them.",
+      "trigger_examples": [
+        "protects b2b relationships"
+      ]
+    }
+  ]
+}

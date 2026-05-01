@@ -1,0 +1,92 @@
+{
+  "slug": "front-desk",
+  "label": "Front Desk Pak",
+  "blurb": "Clerical, Legal Support & Local Office Admin. Document routing, signature chasing, and gatekeeping.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "clerical-legal-support-local-office-admin"
+  ],
+  "skills": [
+    {
+      "slug": "voicemail-to-text-triage",
+      "label": "Voicemail To Text Triage",
+      "method": "Transcribes incoming office voicemails; flags messages containing words like \"urgent,\" \"sue,\" or \"cancel\" for the boss, archiving the rest.",
+      "trigger_examples": [
+        "protects the business owner's attention"
+      ]
+    },
+    {
+      "slug": "office-supply-inventory-reorder",
+      "label": "Office Supply Inventory Reorder",
+      "method": "Connects to an Amazon Business account; when the office manager clicks \"Low Toner\" on a dashboard, it instantly places the reorder.",
+      "trigger_examples": [
+        "eliminates rote office management chores"
+      ]
+    },
+    {
+      "slug": "mail-sorting-and-scanning-router",
+      "label": "Mail Sorting And Scanning Router",
+      "method": "Scans daily physical office mail, uses NLP to identify if it's an invoice, a legal notice, or junk, and emails it to the correct department.",
+      "trigger_examples": [
+        "digitizes the analog mailroom"
+      ]
+    },
+    {
+      "slug": "appointment-cancellation-filler",
+      "label": "Appointment Cancellation Filler",
+      "method": "When a patient cancels a 9 AM cleaning at 8 AM, the system instantly texts the top 5 people on the waitlist offering the spot.",
+      "trigger_examples": [
+        "recovers lost daily revenue instantly"
+      ]
+    },
+    {
+      "slug": "vendor-w9-collector",
+      "label": "Vendor W9 Collector",
+      "method": "Automatically emails the window washer or local handyman requesting their W-9 tax ID, halting their invoice payment until they upload it.",
+      "trigger_examples": [
+        "saves the bookkeeper from tax-season nightmares"
+      ]
+    },
+    {
+      "slug": "medical-record-fax-confirmer",
+      "label": "Medical Record Fax Confirmer",
+      "method": "Sends a digital fax to a specialist, then automatically calls/pings their office 24 hours later to confirm the 50-page document was actually received.",
+      "trigger_examples": [
+        "closes the loop on archaic healthcare communication"
+      ]
+    },
+    {
+      "slug": "dental-insurance-verification-bot",
+      "label": "Dental Insurance Verification Bot",
+      "method": "Logs into the Delta Dental portal via API/RPA, verifies the patient's remaining annual maximum, and calculates their copay before they walk in the door.",
+      "trigger_examples": [
+        "prevents patients from getting hit with surprise bills"
+      ]
+    },
+    {
+      "slug": "court-date-reminder-texter",
+      "label": "Court Date Reminder Texter",
+      "method": "Pulls from the firm's calendar and texts clients 48 hours, 24 hours, and 2 hours before their hearing with the exact courthouse address and room number.",
+      "trigger_examples": [
+        "stops clients from missing court and getting bench warrants"
+      ]
+    },
+    {
+      "slug": "client-intake-conflict-checker",
+      "label": "Client Intake Conflict Checker",
+      "method": "Scans a local law firm's entire historical database to ensure they haven't previously represented the husband of a new wife calling for a divorce.",
+      "trigger_examples": [
+        "automates mandatory legal ethics checks"
+      ]
+    },
+    {
+      "slug": "notary-journal-entry-logger",
+      "label": "Notary Journal Entry Logger",
+      "method": "Uses OCR to scan a driver's license, pulling the name, ID number, and expiration date directly into the digital state notary journal.",
+      "trigger_examples": [
+        "speeds up signings and prevents state audit failures"
+      ]
+    }
+  ]
+}

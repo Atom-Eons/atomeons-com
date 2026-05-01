@@ -1,0 +1,92 @@
+{
+  "slug": "civic",
+  "label": "Civic Pak",
+  "blurb": "Local Government, Non-Profits & Civil Services. Bureaucracy automation, grant tracking, and citizen communication.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "local-government-non-profits-civil-services"
+  ],
+  "skills": [
+    {
+      "slug": "municipal-snow-emergency-broadcaster",
+      "label": "Municipal Snow Emergency Broadcaster",
+      "method": "One click from the mayor updates the town website, triggers a robocall, emails the school district, and posts to Facebook that street parking is banned for plows.",
+      "trigger_examples": [
+        "seamless emergency communication"
+      ]
+    },
+    {
+      "slug": "volunteer-schedule-hole-filler",
+      "label": "Volunteer Schedule Hole Filler",
+      "method": "Identifies that only 2 people are signed up for the Saturday soup kitchen shift; automatically blasts a text to past volunteers who usually work weekends.",
+      "trigger_examples": [
+        "ensures non-profits actually have the manpower to operate"
+      ]
+    },
+    {
+      "slug": "building-permit-zoning-prechecker",
+      "label": "Building Permit Zoning Prechecker",
+      "method": "Checks a homeowner's submitted shed dimensions against the specific setback laws for their neighborhood zone, instantly rejecting it with exactly what needs to be fixed.",
+      "trigger_examples": [
+        "cuts permit approval wait times from 3 weeks to 3 minutes"
+      ]
+    },
+    {
+      "slug": "pothole-311-ticket-router",
+      "label": "Pothole 311 Ticket Router",
+      "method": "Takes a citizen's tweeted photo of a pothole, extracts the geotag, categorizes severity, and adds it to the Department of Public Works daily asphalt route.",
+      "trigger_examples": [
+        "turns angry citizen complaints into actionable civic data"
+      ]
+    },
+    {
+      "slug": "library-overdue-fine-waiver",
+      "label": "Library Overdue Fine Waiver",
+      "method": "Checks if a child's library card is blocked due to a $5 fine, automatically applying an \"amnesty credit\" so they can check out books for a school project.",
+      "trigger_examples": [
+        "removes bureaucratic friction for community services"
+      ]
+    },
+    {
+      "slug": "park-pavilion-double-booking-solver",
+      "label": "Park Pavilion Double Booking Solver",
+      "method": "Reconciles the town's messy physical ledger with the online booking portal to ensure two families don't show up for the same BBQ shelter on Saturday.",
+      "trigger_examples": [
+        "stops weekend municipal pr disasters"
+      ]
+    },
+    {
+      "slug": "animal-shelter-foster-matcher",
+      "label": "Animal Shelter Foster Matcher",
+      "method": "Cross-references a new aggressive-but-sweet pitbull against the database of foster homes, finding the one house that explicitly has \"no cats and a 6-foot fence.\"",
+      "trigger_examples": [
+        "prevents dangerous and heartbreaking animal returns"
+      ]
+    },
+    {
+      "slug": "grant-fund-depletion-tracker",
+      "label": "Grant Fund Depletion Tracker",
+      "method": "Tags every $50 receipt from a youth program strictly to the $10,000 state grant that funded it, creating an instant audit-proof ledger.",
+      "trigger_examples": [
+        "ensures charities don't accidentally misappropriate restricted funds"
+      ]
+    },
+    {
+      "slug": "food-bank-inventory-expiration-alert",
+      "label": "Food Bank Inventory Expiration Alert",
+      "method": "Scans incoming pallet manifests, alerting volunteers to push the dairy and bread to the front of the line before it spoils.",
+      "trigger_examples": [
+        "maximizes the impact of donated perishable goods"
+      ]
+    },
+    {
+      "slug": "foia-request-pii-redactor",
+      "label": "Foia Request Pii Redactor",
+      "method": "Scans town council emails requested under the Freedom of Information Act, automatically blacking out employee social security numbers and personal addresses before public release.",
+      "trigger_examples": [
+        "keeps small towns compliant without hiring expensive paralegals"
+      ]
+    }
+  ]
+}

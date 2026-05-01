@@ -1,0 +1,90 @@
+{
+  "slug": "grease-gears",
+  "label": "Grease & Gears Pak",
+  "blurb": "Automotive Repair, Dealerships & Mobile Mechanics. Bay-turnover speed, parts arbitrage, and upselling transparency.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "automotive-repair-dealerships-mobile-mechanics"
+  ],
+  "skills": [
+    {
+      "slug": "tire-tread-depth-upsell-generator",
+      "label": "Tire Tread Depth Upsell Generator",
+      "method": "Takes the mechanic's 4/32-inch tread measurement, texts the customer a photo of the bald tire alongside a 3-tiered quote (Good, Better, Best) for replacements.",
+      "trigger_examples": [
+        "closes tire sales while the car is still on the lift"
+      ]
+    },
+    {
+      "slug": "obd2-to-plain-english-translator",
+      "label": "Obd2 To Plain English Translator",
+      "method": "Ingests the raw P0420 code from the diagnostic scanner and generates a simple text to the customer explaining what a catalytic converter does and why it costs $800 to fix.",
+      "trigger_examples": []
+    },
+    {
+      "slug": "oem-to-aftermarket-parts-matcher",
+      "label": "Oem To Aftermarket Parts Matcher",
+      "method": "Scrapes NAPA, AutoZone, and O'Reilly APIs to find the cheapest, fastest-delivered exact-fit aftermarket alternator for a specific VIN.",
+      "trigger_examples": [
+        "saves service advisors 20 minutes on hold with local parts desks"
+      ]
+    },
+    {
+      "slug": "fleet-maintenance-mileage-predictor",
+      "label": "Fleet Maintenance Mileage Predictor",
+      "method": "Tracks daily usage of local plumbing/HVAC vans, automatically scheduling an oil change and tire rotation for a Saturday morning so the van doesn't miss billable weekday hours.",
+      "trigger_examples": [
+        "keeps commercial fleets on the road making money"
+      ]
+    },
+    {
+      "slug": "dealership-lease-expiration-nag",
+      "label": "Dealership Lease Expiration Nag",
+      "method": "Checks the CRM for customers whose 36-month leases are expiring in 90 days, sending a personalized offer on the newest model of their exact car.",
+      "trigger_examples": [
+        "automates the most lucrative dealership retention channel"
+      ]
+    },
+    {
+      "slug": "mobile-detailer-weather-rescheduler",
+      "label": "Mobile Detailer Weather Rescheduler",
+      "method": "Monitors local radar; if rain is predicted for a 2 PM outdoor ceramic coating appointment, it automatically texts the client to reschedule to a sunny day.",
+      "trigger_examples": [
+        "prevents ruined work and wasted trips"
+      ]
+    },
+    {
+      "slug": "body-shop-supplement-filer",
+      "label": "Body Shop Supplement Filer",
+      "method": "Takes photos of hidden damage found after the bumper is removed, automatically drafting the supplement request and submitting it to Geico/State Farm for approval.",
+      "trigger_examples": [
+        "unblocks stalled collision repair jobs"
+      ]
+    },
+    {
+      "slug": "tow-truck-dispatch-triage",
+      "label": "Tow Truck Dispatch Triage",
+      "method": "Parses distressed texts (\"My car died on I-95 South\"), drops a GPS pin, categorizes as a flatbed vs. hook requirement, and routes the nearest available driver.",
+      "trigger_examples": [
+        "automates chaotic 24/7 dispatch boards"
+      ]
+    },
+    {
+      "slug": "warranty-claim-labor-time-biller",
+      "label": "Warranty Claim Labor Time Biller",
+      "method": "Cross-references the mechanic's actual punched hours against the manufacturer's strict \"book time\" to maximize the warranty reimbursement claim submitted to Ford/Toyota.",
+      "trigger_examples": [
+        "plugs massive revenue leaks in dealership service centers"
+      ]
+    },
+    {
+      "slug": "junkyard-inventory-cross-reference",
+      "label": "Junkyard Inventory Cross Reference",
+      "method": "Catalogs an incoming wrecked 2015 Honda Civic, mapping every salvageable part to the Hollander Interchange manual, and auto-listing them on eBay Motors.",
+      "trigger_examples": [
+        "turns scrap metal into highly organized e-commerce inventory"
+      ]
+    }
+  ]
+}

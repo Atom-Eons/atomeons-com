@@ -1,0 +1,84 @@
+{
+  "slug": "financial-legal-compliance",
+  "label": "Financial, Legal & Compliance Pak",
+  "blurb": "Financial, Legal & Compliance. Risk mitigation and professional services automation.",
+  "mode": "sequential_pipe",
+  "tier": "elite",
+  "phase_provenance": [
+    "financial-legal-compliance"
+  ],
+  "skills": [
+    {
+      "slug": "tax-deduction-categorizer",
+      "label": "Tax Deduction Categorizer",
+      "method": "Analyzes corporate credit card feeds, flags meals/entertainment vs. software based on IRS rules.",
+      "trigger_examples": [
+        "maximizes legal write-offs"
+      ]
+    },
+    {
+      "slug": "bank-reconciliation-matcher",
+      "label": "Bank Reconciliation Matcher",
+      "method": "Compares raw Plaid bank feeds to Xero/QuickBooks ledgers, matching by amount and date fuzziness.",
+      "trigger_examples": [
+        "automates month-end accounting close"
+      ]
+    },
+    {
+      "slug": "contract-renewal-monitor",
+      "label": "Contract Renewal Monitor",
+      "method": "Extracts auto-renew dates and 30-day notice periods from 100s of PDFs, creates calendar alerts.",
+      "trigger_examples": [
+        "stops companies from being locked into bad saas deals"
+      ]
+    },
+    {
+      "slug": "nda-redliner",
+      "label": "Nda Redliner",
+      "method": "Scans third-party NDAs, flags non-standard clauses (e.g., unlimited liability), suggests standard edits.",
+      "trigger_examples": [
+        "cuts legal review time from days to minutes"
+      ]
+    },
+    {
+      "slug": "vendor-w9-chaser",
+      "label": "Vendor W9 Chaser",
+      "method": "Identifies contractors paid \\>$600, emails them requesting W-9s, halts payment until received.",
+      "trigger_examples": [
+        "ensures clean 1099 tax filings"
+      ]
+    },
+    {
+      "slug": "payroll-anomaly-detector",
+      "label": "Payroll Anomaly Detector",
+      "method": "Scans bi-weekly payroll runs, flags sudden overtime spikes or unauthorized bonuses.",
+      "trigger_examples": [
+        "catches payroll theft/errors before money leaves"
+      ]
+    },
+    {
+      "slug": "gdpr-data-deletion-sweep",
+      "label": "Gdpr Data Deletion Sweep",
+      "method": "Takes a user email, queries 5 databases via API, deletes records, generates proof log.",
+      "trigger_examples": [
+        "prevents €20m regulatory fines"
+      ]
+    },
+    {
+      "slug": "soc2-evidence-collector",
+      "label": "Soc2 Evidence Collector",
+      "method": "Takes screenshots of AWS/GitHub configs daily, files them in compliance folders.",
+      "trigger_examples": [
+        "turns a $50k audit headache into a background task"
+      ]
+    },
+    {
+      "slug": "cap-table-updater",
+      "label": "Cap Table Updater",
+      "method": "Reads signed option grants, updates Carta/spreadsheet with new vesting schedules.",
+      "trigger_examples": [
+        "prevents equity lawsuits during acquisitions"
+      ]
+    }
+  ]
+}

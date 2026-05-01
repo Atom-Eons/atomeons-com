@@ -1,0 +1,84 @@
+{
+  "slug": "fortress",
+  "label": "Fortress Pak",
+  "blurb": "Cybersecurity, InfoSec & Systems Engineering. Breach prevention and enterprise uptime.",
+  "mode": "parallel",
+  "tier": "elite",
+  "phase_provenance": [
+    "cybersecurity-infosec-systems-engineering"
+  ],
+  "skills": [
+    {
+      "slug": "ssl-certificate-rotator",
+      "label": "Ssl Certificate Rotator",
+      "method": "Detects expiring certs 30 days out, provisions new ones via Let's Encrypt, updates load balancers gracefully.",
+      "trigger_examples": [
+        "prevents embarrassing \"your connection is not private\" outages"
+      ]
+    },
+    {
+      "slug": "secrets-in-code-remediator",
+      "label": "Secrets In Code Remediator",
+      "method": "Detects hardcoded API keys in git, revokes them at the provider, rewrites commit history to wipe them.",
+      "trigger_examples": [
+        "automated disaster recovery for leaked keys"
+      ]
+    },
+    {
+      "slug": "data-exfiltration-monitor",
+      "label": "Data Exfiltration Monitor",
+      "method": "Alerts security if an employee suddenly downloads 5GB of data from Salesforce to an unauthorized personal device.",
+      "trigger_examples": [
+        "stops insider threats and ip theft"
+      ]
+    },
+    {
+      "slug": "iam-least-privilege-enforcer",
+      "label": "Iam Least Privilege Enforcer",
+      "method": "Scans AWS IAM roles, identifies permissions unused in 90 days, auto-generates Terraform to revoke them.",
+      "trigger_examples": [
+        "closes the \\#1 cloud security vulnerability"
+      ]
+    },
+    {
+      "slug": "phishing-incident-triage",
+      "label": "Phishing Incident Triage",
+      "method": "Analyzes employee-reported emails, extracts headers/URLs, detonates payload in a sandbox, blocks IP.",
+      "trigger_examples": [
+        "replaces tier 1 security operations center (soc) analysts"
+      ]
+    },
+    {
+      "slug": "vulnerability-sla-tracker",
+      "label": "Vulnerability Sla Tracker",
+      "method": "Pings engineering managers via Slack if a critical CVE patch is approaching the mandated 14-day compliance limit.",
+      "trigger_examples": [
+        "enforces infosec policy automatically"
+      ]
+    },
+    {
+      "slug": "ddos-traffic-analyzer",
+      "label": "Ddos Traffic Analyzer",
+      "method": "Analyzes Nginx access logs during a spike, generates Cloudflare WAF rules to block the specific botnet fingerprint.",
+      "trigger_examples": [
+        "keeps revenue-generating apps online during attacks"
+      ]
+    },
+    {
+      "slug": "firewall-rule-cleaner",
+      "label": "Firewall Rule Cleaner",
+      "method": "Finds overlapping or obsolete IP block rules in Palo Alto networks and suggests safe removal.",
+      "trigger_examples": [
+        "prevents firewall bloat and latency"
+      ]
+    },
+    {
+      "slug": "penetration-test-report-parser",
+      "label": "Penetration Test Report Parser",
+      "method": "Turns a 200-page PDF from a security firm into actionable, prioritized Jira tickets for developers.",
+      "trigger_examples": [
+        "bridges the gap between auditors and engineers"
+      ]
+    }
+  ]
+}

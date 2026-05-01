@@ -1,0 +1,92 @@
+{
+  "slug": "merchants",
+  "label": "Merchants Pak",
+  "blurb": "Specialty Retail, Thrift & Pawn Shops. Inventory sourcing, dynamic pricing, and authentication.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "specialty-retail-thrift-pawn-shops"
+  ],
+  "skills": [
+    {
+      "slug": "consignment-payout-reconciler",
+      "label": "Consignment Payout Reconciler",
+      "method": "When a vintage jacket sells, automatically calculates the 60/40 split and pushes the funds to the original owner via Venmo/ACH, emailing a receipt.",
+      "trigger_examples": [
+        "automates the hardest part of consignment accounting"
+      ]
+    },
+    {
+      "slug": "dry-cleaner-stain-liability-waiver",
+      "label": "Dry Cleaner Stain Liability Waiver",
+      "method": "Generates an instant SMS waiver when a customer drops off a $2,000 silk dress with a red wine stain, requiring them to acknowledge the risk of fabric damage before cleaning starts.",
+      "trigger_examples": [
+        "prevents small businesses from replacing expensive wardrobes"
+      ]
+    },
+    {
+      "slug": "thrift-store-color-tag-rotator",
+      "label": "Thrift Store Color Tag Rotator",
+      "method": "Tells volunteer staff exactly which colored tags (e.g., \"pull all yellow tags\") have been on the floor for \\>4 weeks and need to be salvaged to rag-buyers today.",
+      "trigger_examples": [
+        "keeps thrift store floors fresh and turning over"
+      ]
+    },
+    {
+      "slug": "bicycle-shop-tuneup-nudge",
+      "label": "Bicycle Shop Tuneup Nudge",
+      "method": "Texts buyers exactly 6 months after buying a mountain bike, reminding them to bring it in for the free gear-cable tension adjustment.",
+      "trigger_examples": [
+        "drives foot traffic back into the store for high-margin accessory upsells"
+      ]
+    },
+    {
+      "slug": "tailor-alteration-ticket-router",
+      "label": "Tailor Alteration Ticket Router",
+      "method": "Translates the front-desk notes (\"hem 2 inches, take in waist, keep original stitching\") into the back-room seamstress's native language.",
+      "trigger_examples": [
+        "prevents ruined garments due to language barriers"
+      ]
+    },
+    {
+      "slug": "florist-stem-yield-calculator",
+      "label": "Florist Stem Yield Calculator",
+      "method": "Takes 5 upcoming wedding mood boards, calculates exactly how many white hydrangeas and eucalyptus stems are needed, and generates the wholesale Dutch auction order.",
+      "trigger_examples": [
+        "stops florists from bleeding margin on dead flowers"
+      ]
+    },
+    {
+      "slug": "jeweler-scrap-gold-calculator",
+      "label": "Jeweler Scrap Gold Calculator",
+      "method": "Multiplies the gram weight by the specific karat purity against the live spot price of gold, subtracting the refiner's melt-fee margin to give a cash offer.",
+      "trigger_examples": [
+        "high-stakes, real-time retail math"
+      ]
+    },
+    {
+      "slug": "pawn-shop-ebay-comp-puller",
+      "label": "Pawn Shop Ebay Comp Puller",
+      "method": "Takes a photo of a Makita drill or a vintage guitar, instantly scraping \"Completed/Sold\" eBay listings to tell the pawnbroker exactly how much cash to offer.",
+      "trigger_examples": [
+        "prevents pawnbrokers from overpaying for dead inventory"
+      ]
+    },
+    {
+      "slug": "record-store-discogs-pricer",
+      "label": "Record Store Discogs Pricer",
+      "method": "Scans vinyl barcodes or matrix runout numbers to auto-print price tags based on the median historical value on the Discogs marketplace.",
+      "trigger_examples": [
+        "turns junior clerks into expert music appraisers"
+      ]
+    },
+    {
+      "slug": "comic-shop-pull-list-manager",
+      "label": "Comic Shop Pull List Manager",
+      "method": "Cross-references the weekly Diamond distributor shipment against loyal customers' subscription lists, automatically boxing their comics and texting them to pick up.",
+      "trigger_examples": [
+        "secures guaranteed weekly recurring revenue"
+      ]
+    }
+  ]
+}

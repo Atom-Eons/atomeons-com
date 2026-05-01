@@ -1,0 +1,84 @@
+{
+  "slug": "billable-hour",
+  "label": "Billable Hour Pak",
+  "blurb": "Deep Legal Ops & Litigation Support. Extreme labor replacement for law firms and in-house counsel.",
+  "mode": "sequential_pipe",
+  "tier": "pro",
+  "phase_provenance": [
+    "deep-legal-ops-litigation-support"
+  ],
+  "skills": [
+    {
+      "slug": "corporate-minutes-formatter",
+      "label": "Corporate Minutes Formatter",
+      "method": "Takes the messy transcript of a board meeting and formats it into legally binding, auditable corporate minutes.",
+      "trigger_examples": [
+        "keeps corporate veil intact"
+      ]
+    },
+    {
+      "slug": "contract-deviation-analyzer",
+      "label": "Contract Deviation Analyzer",
+      "method": "Compares a returned redlined contract against the company's \"standard playbook,\" highlighting only the risks that cross the legal department's boundaries.",
+      "trigger_examples": [
+        "unblocks sales without waiting for a lawyer"
+      ]
+    },
+    {
+      "slug": "trademark-watch-alert",
+      "label": "Trademark Watch Alert",
+      "method": "Scans global USPTO and WIPO filings daily, alerts counsel if a competitor registers a confusingly similar logo or name.",
+      "trigger_examples": [
+        "automated ip protection"
+      ]
+    },
+    {
+      "slug": "subpoena-pii-redactor",
+      "label": "Subpoena Pii Redactor",
+      "method": "Uses NLP to find and black out Social Security numbers, bank accounts, and minor names across thousands of PDF pages before opposing counsel gets them.",
+      "trigger_examples": [
+        "prevents catastrophic data leaks during discovery"
+      ]
+    },
+    {
+      "slug": "ediscovery-deduplicator",
+      "label": "Ediscovery Deduplicator",
+      "method": "Scans 50,000 gigabytes of corporate emails, groups identical email chains, and flags messages containing specific subpoena keywords.",
+      "trigger_examples": [
+        "replaces army of junior paralegals in litigation"
+      ]
+    },
+    {
+      "slug": "legal-hold-issuer",
+      "label": "Legal Hold Issuer",
+      "method": "Automates the process of freezing data deletion policies across AWS, Google Workspace, and Slack the moment a lawsuit is threatened.",
+      "trigger_examples": [
+        "prevents \"spoliation of evidence\" sanctions"
+      ]
+    },
+    {
+      "slug": "deposition-transcript-summarizer",
+      "label": "Deposition Transcript Summarizer",
+      "method": "Reads a 400-page court transcript, extracts contradictions, and builds a timeline of the witness's statements.",
+      "trigger_examples": [
+        "prepares lead counsel for trial overnight"
+      ]
+    },
+    {
+      "slug": "case-law-citation-validator",
+      "label": "Case Law Citation Validator",
+      "method": "Checks a drafted legal brief to ensure all cited cases are still \"good law\" and haven't been overturned by a higher court recently (Shepardizing).",
+      "trigger_examples": [
+        "prevents lawyers from looking foolish in front of a judge"
+      ]
+    },
+    {
+      "slug": "patent-prior-art-search",
+      "label": "Patent Prior Art Search",
+      "method": "Takes an engineer's rough idea and queries global patent databases and academic journals to see if the invention already exists.",
+      "trigger_examples": [
+        "saves $10k in wasted filing fees"
+      ]
+    }
+  ]
+}

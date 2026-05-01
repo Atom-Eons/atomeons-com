@@ -1,0 +1,92 @@
+{
+  "slug": "artisan",
+  "label": "Artisan Pak",
+  "blurb": "Microbreweries, Wineries & Specialty Food. Fermentation tracking, excise tax, and inventory rotation.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "microbreweries-wineries-specialty-food"
+  ],
+  "skills": [
+    {
+      "slug": "food-packaging-nutrition-label-gen",
+      "label": "Food Packaging Nutrition Label Gen",
+      "method": "Takes a baker's raw recipe and generates FDA-compliant nutrition facts, calorie counts, and bolded allergen warnings (NUTS/DAIRY) for the sticker printer.",
+      "trigger_examples": [
+        "keeps small food brands legal for grocery store shelves"
+      ]
+    },
+    {
+      "slug": "csa-meat-share-inventory-balancer",
+      "label": "Csa Meat Share Inventory Balancer",
+      "method": "Ensures every farm subscriber gets an mathematically equal value of premium cuts (ribeye) vs. filler (stew meat) in their monthly box.",
+      "trigger_examples": [
+        "solves complex agricultural subscription logistics"
+      ]
+    },
+    {
+      "slug": "butcher-yield-carcass-calculator",
+      "label": "Butcher Yield Carcass Calculator",
+      "method": "Calculates the exact profit margin of a whole cow based on the final cut weights of premium steaks vs. ground beef, adjusting retail prices to ensure a profit.",
+      "trigger_examples": [
+        "automates complex whole-animal butchery math"
+      ]
+    },
+    {
+      "slug": "taproom-keg-kick-predictor",
+      "label": "Taproom Keg Kick Predictor",
+      "method": "Analyzes Friday night pour rates to tell the bartender to bring a backup keg of IPA from the cold room before the current one blows mid-rush.",
+      "trigger_examples": [
+        "keeps the bar lines moving and revenue flowing"
+      ]
+    },
+    {
+      "slug": "coffee-roaster-bean-blend-ratio",
+      "label": "Coffee Roaster Bean Blend Ratio",
+      "method": "Adjusts the ratio of Colombian to Ethiopian beans to maintain a consistent flavor profile for the \"House Blend\" as seasonal agricultural harvests change.",
+      "trigger_examples": [
+        "maintains artisan product consistency"
+      ]
+    },
+    {
+      "slug": "keg-deposit-loss-tracker",
+      "label": "Keg Deposit Loss Tracker",
+      "method": "Tracks which local bars have been holding onto empty stainless steel kegs for \\>60 days, automatically adding the $50 keg deposit charge to their next invoice.",
+      "trigger_examples": [
+        "recovers massive capital tied up in brewery cooperage"
+      ]
+    },
+    {
+      "slug": "brewery-excise-tax-calculator",
+      "label": "Brewery Excise Tax Calculator",
+      "method": "Calculates federal TTB (Alcohol and Tobacco Tax and Trade Bureau) barrelage taxes based on the exact gallons packaged into kegs and cans.",
+      "trigger_examples": [
+        "automates highly punitive federal alcohol compliance"
+      ]
+    },
+    {
+      "slug": "wine-barrel-topping-schedule",
+      "label": "Wine Barrel Topping Schedule",
+      "method": "Reminds the cellar master exactly when to \"top off\" oak barrels with extra wine to eliminate the headspace (ullage) caused by evaporation.",
+      "trigger_examples": [
+        "prevents thousands of dollars of wine from turning into vinegar"
+      ]
+    },
+    {
+      "slug": "distillery-proof-adjustment-math",
+      "label": "Distillery Proof Adjustment Math",
+      "method": "Calculates exactly how many gallons of distilled water to add to a batch of barrel-strength bourbon to \"proof it down\" to exactly 80.0 proof for bottling.",
+      "trigger_examples": [
+        "crucial compliance for liquor labeling"
+      ]
+    },
+    {
+      "slug": "cheese-cave-humidity-alerter",
+      "label": "Cheese Cave Humidity Alerter",
+      "method": "Monitors the aging room IoT sensors; alerts the cheesemaker if conditions drift into a zone that will cause unwanted/dangerous mold growth on the brie.",
+      "trigger_examples": [
+        "protects 6 months of aging product"
+      ]
+    }
+  ]
+}

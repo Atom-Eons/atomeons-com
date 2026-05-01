@@ -1,0 +1,84 @@
+{
+  "slug": "physical-world",
+  "label": "Physical World Pak",
+  "blurb": "Operations, Real Estate & Supply Chain. Margin protection and logistics optimization.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "operations-real-estate-supply-chain"
+  ],
+  "skills": [
+    {
+      "slug": "dispatch-route-optimizer",
+      "label": "Dispatch Route Optimizer",
+      "method": "Calculates the fastest daily routes for 10 HVAC vans based on live traffic and job priority.",
+      "trigger_examples": [
+        "saves thousands in gas and maximizes billable calls"
+      ]
+    },
+    {
+      "slug": "inventory-sku-matcher",
+      "label": "Inventory Sku Matcher",
+      "method": "Normalizes messy vendor SKUs (e.g., \"Blk Shirt\" vs \"Shirt-Black\") into the master ERP system.",
+      "trigger_examples": [
+        "prevents duplicate inventory ordering"
+      ]
+    },
+    {
+      "slug": "tenant-maintenance-triage",
+      "label": "Tenant Maintenance Triage",
+      "method": "Classifies tenant portal complaints (\"pipe burst\" \\= P0, \"paint chipped\" \\= P3), routes to correct vendor.",
+      "trigger_examples": [
+        "24/7 emergency property management"
+      ]
+    },
+    {
+      "slug": "bill-of-lading-digitizer",
+      "label": "Bill Of Lading Digitizer",
+      "method": "OCRs crumpled, handwritten warehouse dock receipts and injects the data into the WMS.",
+      "trigger_examples": [
+        "bridges the gap between analog trucking and digital tracking"
+      ]
+    },
+    {
+      "slug": "freight-bill-auditor",
+      "label": "Freight Bill Auditor",
+      "method": "Compares actual FedEx/UPS invoices against the negotiated corporate rate card.",
+      "trigger_examples": [
+        "automatically catches and disputes carrier overcharges"
+      ]
+    },
+    {
+      "slug": "hoa-violation-drafter",
+      "label": "Hoa Violation Drafter",
+      "method": "Takes a photo of an overgrown lawn, matches it to the bylaws, drafts a compliant warning letter.",
+      "trigger_examples": [
+        "automates neighborhood management admin"
+      ]
+    },
+    {
+      "slug": "lease-agreement-extractor",
+      "label": "Lease Agreement Extractor",
+      "method": "Pulls base rent, escalations, and CAM charges from 50-page commercial leases into a database.",
+      "trigger_examples": [
+        "turns weeks of paralegal reading into seconds"
+      ]
+    },
+    {
+      "slug": "customs-declaration-generator",
+      "label": "Customs Declaration Generator",
+      "method": "Automatically classifies products into exact Harmonized System (HS) tariff codes for international shipping.",
+      "trigger_examples": [
+        "stops border blockages and fines"
+      ]
+    },
+    {
+      "slug": "zoning-code-analyzer",
+      "label": "Zoning Code Analyzer",
+      "method": "Scrapes municipal PDFs to verify if a parcel of land allows for commercial/industrial use.",
+      "trigger_examples": [
+        "accelerates real estate due diligence"
+      ]
+    }
+  ]
+}

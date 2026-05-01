@@ -1,0 +1,92 @@
+{
+  "slug": "hustle",
+  "label": "Hustle Pak",
+  "blurb": "Gig Economy, Creators & Solopreneurs. Micro-logistics, tax shielding, and platform arbitrage.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "gig-economy-creators-solopreneurs"
+  ],
+  "skills": [
+    {
+      "slug": "estimated-tax-safe-harbor-setter",
+      "label": "Estimated Tax Safe Harbor Setter",
+      "method": "Scans incoming freelance 1099 payments on Stripe/PayPal, automatically moving 25% into a separate high-yield savings account to cover quarterly IRS payments.",
+      "trigger_examples": [
+        "prevents freelancers from going bankrupt in april"
+      ]
+    },
+    {
+      "slug": "multi-app-mileage-deduction-tracker",
+      "label": "Multi App Mileage Deduction Tracker",
+      "method": "Pulls location data to calculate exactly how many miles an Uber/Doordash driver drove with a passenger vs. deadheading, generating the IRS standard mileage deduction log.",
+      "trigger_examples": [
+        "saves gig workers thousands in taxes"
+      ]
+    },
+    {
+      "slug": "freelance-scope-creep-flag",
+      "label": "Freelance Scope Creep Flag",
+      "method": "Analyzes a client email asking for \"just one more quick change,\" drafting a polite reply that notes the request exceeds the contract and offers a price for the add-on.",
+      "trigger_examples": [
+        "protects solo graphic designers/writers from working for free"
+      ]
+    },
+    {
+      "slug": "etsy-shipping-label-batcher",
+      "label": "Etsy Shipping Label Batcher",
+      "method": "Takes 40 weekend orders, checks box sizes, buys the cheapest USPS/UPS labels in bulk, and prints them in the exact order the items sit on the packing table.",
+      "trigger_examples": [
+        "gives solo crafters their sundays back"
+      ]
+    },
+    {
+      "slug": "food-delivery-multi-app-arbitrage",
+      "label": "Food Delivery Multi App Arbitrage",
+      "method": "Analyzes incoming pings from UberEats, Grubhub, and Doordash simultaneously, accepting the highest dollar-per-mile run and auto-pausing the other apps.",
+      "trigger_examples": [
+        "maximizes gig worker hourly rates"
+      ]
+    },
+    {
+      "slug": "airbnb-cleaner-turnover-sync",
+      "label": "Airbnb Cleaner Turnover Sync",
+      "method": "The second a guest checks out, it texts the local cleaning crew the door code and the specific chores required (e.g., \"wash sheets, check for pet hair\").",
+      "trigger_examples": [
+        "automates short-term rental logistics"
+      ]
+    },
+    {
+      "slug": "craft-fair-sales-tax-locator",
+      "label": "Craft Fair Sales Tax Locator",
+      "method": "Uses GPS to determine exactly which county/city a weekend market is in, automatically applying the correct 7.25% or 8.5% sales tax rate to the mobile Point of Sale terminal.",
+      "trigger_examples": [
+        "prevents accidental tax fraud for traveling vendors"
+      ]
+    },
+    {
+      "slug": "podcast-guest-prep-sheet",
+      "label": "Podcast Guest Prep Sheet",
+      "method": "Scrapes a scheduled guest's recent book, tweets, and articles, generating a 1-page summary and 5 unique interview questions for the host.",
+      "trigger_examples": [
+        "elevates the quality of independent media"
+      ]
+    },
+    {
+      "slug": "youtube-sponsor-ad-read-injector",
+      "label": "Youtube Sponsor Ad Read Injector",
+      "method": "Scans the finished video timeline, finds a natural 60-second lull, and inserts the pre-recorded Manscaped/BetterHelp ad read, updating the timestamps for the description.",
+      "trigger_examples": [
+        "automates creator monetization"
+      ]
+    },
+    {
+      "slug": "mobile-dj-playlist-bpm-matcher",
+      "label": "Mobile Dj Playlist Bpm Matcher",
+      "method": "Analyzes a bride's Spotify request list, automatically grouping songs by Beats Per Minute (BPM) and key so the DJ has a mathematically perfect transition roadmap.",
+      "trigger_examples": [
+        "makes amateur djs sound like club professionals"
+      ]
+    }
+  ]
+}

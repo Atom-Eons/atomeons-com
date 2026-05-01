@@ -1,0 +1,84 @@
+{
+  "slug": "deep-revenue",
+  "label": "Deep Revenue Pak",
+  "blurb": "RevOps, Advanced Sales & Procurement. Margin extraction and deal velocity.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "revops-advanced-sales-procurement"
+  ],
+  "skills": [
+    {
+      "slug": "sales-tax-nexus-monitor",
+      "label": "Sales Tax Nexus Monitor",
+      "method": "Tracks shipping/billing addresses across states; alerts finance the exact moment the company crosses the threshold to collect local sales tax in Ohio.",
+      "trigger_examples": [
+        "prevents crippling state tax audits"
+      ]
+    },
+    {
+      "slug": "contract-uplift-executor",
+      "label": "Contract Uplift Executor",
+      "method": "Triggers on contract anniversary dates, automatically applying the 5% CPI (inflation) price increase and emailing the client the updated invoice.",
+      "trigger_examples": [
+        "enforces contractual revenue bumps that humans forget to do"
+      ]
+    },
+    {
+      "slug": "cpq-discount-approval-router",
+      "label": "Cpq Discount Approval Router",
+      "method": "Intercepts quotes with \\>20% discounts, checks the rep's win rate and the client's logo value, and routes to the VP of Sales with a summary.",
+      "trigger_examples": [
+        "protects margins without slowing down deal momentum"
+      ]
+    },
+    {
+      "slug": "commission-clawback-reconciler",
+      "label": "Commission Clawback Reconciler",
+      "method": "Tracks customer churn dates against sales rep payout schedules, automatically deducting clawbacks from their next payroll run.",
+      "trigger_examples": [
+        "stops finance from bleeding cash on canceled deals"
+      ]
+    },
+    {
+      "slug": "procurement-tail-spend-consolidator",
+      "label": "Procurement Tail Spend Consolidator",
+      "method": "Identifies 50 different employees buying office supplies from 50 different sites, forces all future purchases through one negotiated Amazon Business portal.",
+      "trigger_examples": [
+        "recovers 5-10% of unmanaged corporate spend"
+      ]
+    },
+    {
+      "slug": "software-license-true-up",
+      "label": "Software License True Up",
+      "method": "Compares a client's contracted 100 seats against their actual 120 active logins, generating the invoice for the overage.",
+      "trigger_examples": [
+        "captures unbilled revenue automatically"
+      ]
+    },
+    {
+      "slug": "partner-deal-registration-conflict",
+      "label": "Partner Deal Registration Conflict",
+      "method": "Checks channel partner leads against the internal CRM to prevent two different agencies from claiming commission on the same buyer.",
+      "trigger_examples": [
+        "solves the biggest headache in channel sales"
+      ]
+    },
+    {
+      "slug": "rfp-win-loss-analyzer",
+      "label": "Rfp Win Loss Analyzer",
+      "method": "NLP analysis of lost RFP feedback to identify pricing, feature gaps, or competitor mentions, updating the sales enablement wiki automatically.",
+      "trigger_examples": [
+        "systematically increases enterprise win rates"
+      ]
+    },
+    {
+      "slug": "territory-carving-balancer",
+      "label": "Territory Carving Balancer",
+      "method": "Re-draws sales territories based on account density, ARR potential, and rep quota capacity so no one gets an unfair patch.",
+      "trigger_examples": [
+        "prevents sales team mutinies"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "slug": "harvest",
+  "label": "Harvest Pak",
+  "blurb": "Farming, Agriculture & Rural Small Business. Yield logistics, equipment uptime, and direct-to-consumer sales.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "farming-agriculture-rural-small-business"
+  ],
+  "skills": [
+    {
+      "slug": "ag-exemption-tax-tagger",
+      "label": "Ag Exemption Tax Tagger",
+      "method": "Scans hardware store and feed mill receipts, tagging items that qualify for agricultural sales-tax exemptions for the CPA.",
+      "trigger_examples": [
+        "ensures farmers don't overpay the irs"
+      ]
+    },
+    {
+      "slug": "farmers-market-permit-renewer",
+      "label": "Farmers Market Permit Renewer",
+      "method": "Tracks the expiration dates of the farm's scale certifications, health department permits, and liability insurance, auto-generating the renewal paperwork.",
+      "trigger_examples": [
+        "keeps the farm legally allowed to sell at weekend markets"
+      ]
+    },
+    {
+      "slug": "tractor-pto-maintenance-logger",
+      "label": "Tractor Pto Maintenance Logger",
+      "method": "Logs the hours the Power Take-Off (PTO) shaft has been running from the John Deere app, scheduling a greasing and belt check before harvest season.",
+      "trigger_examples": [
+        "prevents catastrophic equipment failure when time is money"
+      ]
+    },
+    {
+      "slug": "farm-stand-honor-box-reconciler",
+      "label": "Farm Stand Honor Box Reconciler",
+      "method": "Compares the Venmo/cash collected at an unstaffed roadside vegetable stand against the missing inventory to track local theft/shrinkage rates.",
+      "trigger_examples": [
+        "digitizes the oldest retail model on earth"
+      ]
+    },
+    {
+      "slug": "fertilizer-spread-rate-calculator",
+      "label": "Fertilizer Spread Rate Calculator",
+      "method": "Takes the soil test results (N-P-K) and the acreage, calculating the exact spreader calibration setting needed to avoid burning the crops or wasting expensive chemicals.",
+      "trigger_examples": [
+        "precision agriculture for family farms"
+      ]
+    },
+    {
+      "slug": "csa-box-harvest-balancer",
+      "label": "Csa Box Harvest Balancer",
+      "method": "Takes the list of 50 subscribed families, calculates the exact pounds of tomatoes/kale available this week, and generates the packing list for each Community Supported Agriculture box.",
+      "trigger_examples": [
+        "automates farm-to-table logistics"
+      ]
+    },
+    {
+      "slug": "greenhouse-frost-alarm-escalator",
+      "label": "Greenhouse Frost Alarm Escalator",
+      "method": "Monitors greenhouse IoT thermometers; if the heater fails and temps drop to 34°F at 2 AM, it triggers an alarm that overrides the farmer's phone's \"Do Not Disturb\" mode.",
+      "trigger_examples": [
+        "saves tens of thousands of dollars in frozen seedlings"
+      ]
+    },
+    {
+      "slug": "livestock-auction-price-scraper",
+      "label": "Livestock Auction Price Scraper",
+      "method": "Scrapes regional sale barn reports daily, texting the rancher the current price per hundredweight (cwt) for feeder steers so they know exactly when to sell.",
+      "trigger_examples": [
+        "maximizes agricultural profit margins"
+      ]
+    },
+    {
+      "slug": "feed-silo-depletion-predictor",
+      "label": "Feed Silo Depletion Predictor",
+      "method": "Calculates the daily consumption rate of 500 pigs, automatically calling the local feed mill to deliver another 3 tons two days before the silo goes empty.",
+      "trigger_examples": [
+        "prevents animal starvation and emergency delivery fees"
+      ]
+    },
+    {
+      "slug": "equine-farrier-schedule-router",
+      "label": "Equine Farrier Schedule Router",
+      "method": "Tracks the 6-week horseshoeing cycle for 40 horses across 5 different boarding barns, generating a geographic driving route for the blacksmith.",
+      "trigger_examples": [
+        "maximizes a rural tradesman's billable hours"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+[
+  {
+    "phase": 1,
+    "slug": "admin-comm",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\admin-comm.json"
+  },
+  {
+    "phase": 2,
+    "slug": "crm-sales-marketing-operations",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\crm-sales-marketing-operations.json"
+  },
+  {
+    "phase": 3,
+    "slug": "e-commerce-support-logistics",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\e-commerce-support-logistics.json"
+  },
+  {
+    "phase": 4,
+    "slug": "financial-legal-compliance",
+    "tier": "elite",
+    "mode": "sequential_pipe",
+    "members": 9,
+    "file": "_index\\paks\\financial-legal-compliance.json"
+  },
+  {
+    "phase": 5,
+    "slug": "smart",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\smart.json"
+  },
+  {
+    "phase": 6,
+    "slug": "genius",
+    "tier": "elite",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\genius.json"
+  },
+  {
+    "phase": 7,
+    "slug": "corporate-glue",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\corporate-glue.json"
+  },
+  {
+    "phase": 8,
+    "slug": "physical-world",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\physical-world.json"
+  },
+  {
+    "phase": 9,
+    "slug": "scale",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\scale.json"
+  },
+  {
+    "phase": 10,
+    "slug": "cashflow",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\cashflow.json"
+  },
+  {
+    "phase": 11,
+    "slug": "fortress",
+    "tier": "elite",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\fortress.json"
+  },
+  {
+    "phase": 12,
+    "slug": "provider",
+    "tier": "pro",
+    "mode": "sequential_pipe",
+    "members": 9,
+    "file": "_index\\paks\\provider.json"
+  },
+  {
+    "phase": 13,
+    "slug": "hard-hat",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\hard-hat.json"
+  },
+  {
+    "phase": 14,
+    "slug": "compliance",
+    "tier": "pro",
+    "mode": "sequential_pipe",
+    "members": 9,
+    "file": "_index\\paks\\compliance.json"
+  },
+  {
+    "phase": 15,
+    "slug": "billable-hour",
+    "tier": "pro",
+    "mode": "sequential_pipe",
+    "members": 9,
+    "file": "_index\\paks\\billable-hour.json"
+  },
+  {
+    "phase": 16,
+    "slug": "infrastructure",
+    "tier": "elite",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\infrastructure.json"
+  },
+  {
+    "phase": 17,
+    "slug": "capital",
+    "tier": "elite",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\capital.json"
+  },
+  {
+    "phase": 18,
+    "slug": "industrial",
+    "tier": "elite",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\industrial.json"
+  },
+  {
+    "phase": 19,
+    "slug": "fulfillment",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\fulfillment.json"
+  },
+  {
+    "phase": 20,
+    "slug": "experience",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\experience.json"
+  },
+  {
+    "phase": 21,
+    "slug": "deep-revenue",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\deep-revenue.json"
+  },
+  {
+    "phase": 22,
+    "slug": "smartest",
+    "tier": "elite",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\smartest.json"
+  },
+  {
+    "phase": 23,
+    "slug": "main-street",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\main-street.json"
+  },
+  {
+    "phase": 24,
+    "slug": "asset",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\asset.json"
+  },
+  {
+    "phase": 25,
+    "slug": "roas",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\roas.json"
+  },
+  {
+    "phase": 26,
+    "slug": "clinical",
+    "tier": "elite",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\clinical.json"
+  },
+  {
+    "phase": 27,
+    "slug": "nerve-center",
+    "tier": "elite",
+    "mode": "parallel",
+    "members": 9,
+    "file": "_index\\paks\\nerve-center.json"
+  },
+  {
+    "phase": 33,
+    "slug": "appointment",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\appointment.json"
+  },
+  {
+    "phase": 34,
+    "slug": "hospitality",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\hospitality.json"
+  },
+  {
+    "phase": 35,
+    "slug": "classroom",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\classroom.json"
+  },
+  {
+    "phase": 36,
+    "slug": "curb-appeal",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\curb-appeal.json"
+  },
+  {
+    "phase": 37,
+    "slug": "front-desk",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\front-desk.json"
+  },
+  {
+    "phase": 38,
+    "slug": "grease-gears",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\grease-gears.json"
+  },
+  {
+    "phase": 39,
+    "slug": "civic",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\civic.json"
+  },
+  {
+    "phase": 40,
+    "slug": "harvest",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\harvest.json"
+  },
+  {
+    "phase": 41,
+    "slug": "hustle",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\hustle.json"
+  },
+  {
+    "phase": 42,
+    "slug": "caregiver",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\caregiver.json"
+  },
+  {
+    "phase": 43,
+    "slug": "ticket",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\ticket.json"
+  },
+  {
+    "phase": 44,
+    "slug": "merchants",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\merchants.json"
+  },
+  {
+    "phase": 45,
+    "slug": "relocation",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\relocation.json"
+  },
+  {
+    "phase": 46,
+    "slug": "studio",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\studio.json"
+  },
+  {
+    "phase": 47,
+    "slug": "artisan",
+    "tier": "pro",
+    "mode": "parallel",
+    "members": 10,
+    "file": "_index\\paks\\artisan.json"
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "slug": "appointment",
+  "label": "Appointment Pak",
+  "blurb": "Personal Care, Wellness & Salon Ops. Minimizes no-shows and automates client relationships.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "personal-care-wellness-salon-ops"
+  ],
+  "skills": [
+    {
+      "slug": "fitness-client-checkin-nag",
+      "label": "Fitness Client Checkin Nag",
+      "method": "Identifies personal training clients who haven't logged a workout or visited the gym in 14 days, sending a personalized \"checking in on your goals\" SMS.",
+      "trigger_examples": [
+        "prevents membership churn"
+      ]
+    },
+    {
+      "slug": "client-birthday-promo-sender",
+      "label": "Client Birthday Promo Sender",
+      "method": "Scans the booking software daily, texting clients a \"15% off a blowout\" coupon exactly 7 days before their birthday.",
+      "trigger_examples": [
+        "drives guaranteed recurring local revenue"
+      ]
+    },
+    {
+      "slug": "no-show-fee-collector",
+      "label": "No Show Fee Collector",
+      "method": "When an appointment is marked \"missed,\" automatically drafts a polite but firm text and charges the 50% cancellation fee via Stripe.",
+      "trigger_examples": [
+        "protects independent contractors from lost hourly wages"
+      ]
+    },
+    {
+      "slug": "yoga-class-waitlist-promoter",
+      "label": "Yoga Class Waitlist Promoter",
+      "method": "When a student cancels their 6 AM spot at 10 PM, instantly texts the first person on the waitlist with a \"Reply Y to claim\" trigger.",
+      "trigger_examples": [
+        "keeps classes at 100% capacity"
+      ]
+    },
+    {
+      "slug": "local-cross-promo-matcher",
+      "label": "Local Cross Promo Matcher",
+      "method": "Identifies clients booking \"bridal hair\" and automatically emails them a referral discount for a partnered local makeup artist or florist.",
+      "trigger_examples": [
+        "builds local b2b lead generation networks"
+      ]
+    },
+    {
+      "slug": "salon-formula-history-tracker",
+      "label": "Salon Formula History Tracker",
+      "method": "Transcribes a stylist's voice memo (\"Jane got 2 parts 6N, 1 part 7A, 20 volume\") and logs it perfectly into the client's file for their next root touch-up.",
+      "trigger_examples": [
+        "replaces messy index cards and guarantees consistent results"
+      ]
+    },
+    {
+      "slug": "spa-inventory-backbar-tracker",
+      "label": "Spa Inventory Backbar Tracker",
+      "method": "Deducts ounces of shampoo/lotion based on the day's completed service menu, alerting the owner to order more backbar supplies before they run out.",
+      "trigger_examples": [
+        "stops estheticians from running to the store mid-shift"
+      ]
+    },
+    {
+      "slug": "pet-vaccine-record-verifier",
+      "label": "Pet Vaccine Record Verifier",
+      "method": "Parses uploaded PDF vet records to ensure Rabies and Bordetella are up-to-date before confirming a dog grooming or boarding appointment.",
+      "trigger_examples": [
+        "automates kennel health compliance"
+      ]
+    },
+    {
+      "slug": "booth-renter-commission-splitter",
+      "label": "Booth Renter Commission Splitter",
+      "method": "Calculates daily salon product sales, splitting the revenue between the house and the independent stylist based on their specific contract tier.",
+      "trigger_examples": [
+        "automates painful weekly salon math"
+      ]
+    },
+    {
+      "slug": "massage-intake-form-parser",
+      "label": "Massage Intake Form Parser",
+      "method": "Scans new client digital intake forms, flagging contraindications (e.g., \"pregnant\" or \"recent surgery\") in red for the therapist before they enter the room.",
+      "trigger_examples": [
+        "reduces liability and ensures client safety"
+      ]
+    }
+  ]
+}

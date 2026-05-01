@@ -1,0 +1,84 @@
+{
+  "slug": "asset",
+  "label": "Asset Pak",
+  "blurb": "Real Estate, Title & Property Management. Legal liability reduction and cash-flow velocity.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "real-estate-title-property-management"
+  ],
+  "skills": [
+    {
+      "slug": "hoa-ccr-violation-matcher",
+      "label": "Hoa Ccr Violation Matcher",
+      "method": "Compares inspector photos of houses against the 200-page Covenants, Conditions, and Restrictions document to validate fines.",
+      "trigger_examples": [
+        "automates homeowner association enforcement"
+      ]
+    },
+    {
+      "slug": "move-out-deposit-deduction",
+      "label": "Move Out Deposit Deduction",
+      "method": "Compares move-in inspection photos with move-out photos, generating a compliant invoice for carpet cleaning to deduct from escrow.",
+      "trigger_examples": [
+        "streamlines unit turnover"
+      ]
+    },
+    {
+      "slug": "utility-bill-submeter-biller",
+      "label": "Utility Bill Submeter Biller",
+      "method": "Takes one massive master utility bill, reads the digital sub-meters for 100 apartments, and invoices each tenant individually.",
+      "trigger_examples": [
+        "recovers utility costs for landlords"
+      ]
+    },
+    {
+      "slug": "eviction-notice-compliance",
+      "label": "Eviction Notice Compliance",
+      "method": "Checks tenant ledger for days past due, state-specific grace periods, and generates the legally perfect 3-day \"Pay or Quit\" notice.",
+      "trigger_examples": [
+        "prevents judges from throwing out evictions due to clerical errors"
+      ]
+    },
+    {
+      "slug": "commercial-cam-reconciler",
+      "label": "Commercial Cam Reconciler",
+      "method": "Calculates Common Area Maintenance (CAM) charges (snow plowing, lobby cleaning) and bills them back to tenants based on their exact square-footage pro-rata share.",
+      "trigger_examples": [
+        "automates complex commercial real estate billing"
+      ]
+    },
+    {
+      "slug": "property-tax-appeal-compiler",
+      "label": "Property Tax Appeal Compiler",
+      "method": "Scrapes recent lower-priced neighborhood comps to build an automated appeal package to fight the county tax assessor's valuation.",
+      "trigger_examples": [
+        "saves property owners thousands in annual taxes"
+      ]
+    },
+    {
+      "slug": "escrow-disbursement-calculator",
+      "label": "Escrow Disbursement Calculator",
+      "method": "Reads the final closing disclosure (CD), calculating exact wire transfer amounts for realtors, tax authorities, and the seller.",
+      "trigger_examples": [
+        "ensures pennies balance on multi-million dollar transactions"
+      ]
+    },
+    {
+      "slug": "rent-roll-digitizer",
+      "label": "Rent Roll Digitizer",
+      "method": "Extracts lease start/end dates, base rents, and tenant names from 50 PDFs to generate a master Excel rent roll for a bank loan.",
+      "trigger_examples": [
+        "accelerates commercial refinancing"
+      ]
+    },
+    {
+      "slug": "title-search-defect-scanner",
+      "label": "Title Search Defect Scanner",
+      "method": "OCRs 100 years of county deed records, flagging unreleased mortgages, mechanic's liens, or easement boundary disputes.",
+      "trigger_examples": [
+        "replaces hours of manual title examiner reading"
+      ]
+    }
+  ]
+}

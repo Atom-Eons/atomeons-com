@@ -1,0 +1,92 @@
+{
+  "slug": "curb-appeal",
+  "label": "Curb Appeal Pak",
+  "blurb": "Specialty Trades, Landscaping & Home Services. Route density, upselling, and proof of work.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "specialty-trades-landscaping-home-services"
+  ],
+  "skills": [
+    {
+      "slug": "service-warranty-expiration-upsell",
+      "label": "Service Warranty Expiration Upsell",
+      "method": "Identifies clients whose 1-year roof-wash or gutter-cleaning warranty is expiring this month, texting them a 10% discount to rebook.",
+      "trigger_examples": [
+        "drives automated recurring revenue for tradesmen"
+      ]
+    },
+    {
+      "slug": "before-after-social-poster",
+      "label": "Before After Social Poster",
+      "method": "Stitches a muddy driveway photo with the clean driveway photo, adds the power-washing company's logo, and posts it to local Facebook groups.",
+      "trigger_examples": [
+        "automates blue-collar marketing"
+      ]
+    },
+    {
+      "slug": "lawn-mowing-route-densifier",
+      "label": "Lawn Mowing Route Densifier",
+      "method": "Groups weekly mowing appointments geographically, ensuring the crew doesn't drive across town twice in the same day.",
+      "trigger_examples": [
+        "saves hundreds in gas and unlocks time for 2 extra jobs a day"
+      ]
+    },
+    {
+      "slug": "house-cleaning-walkthrough-quoter",
+      "label": "House Cleaning Walkthrough Quoter",
+      "method": "Takes inputs (2000 sqft, 2 dogs, hardwood floors) and instantly generates an accurate initial deep-clean bid and recurring bi-weekly price.",
+      "trigger_examples": [
+        "converts leads instantly while the cleaner is on the phone"
+      ]
+    },
+    {
+      "slug": "hoa-approval-document-packager",
+      "label": "Hoa Approval Document Packager",
+      "method": "Packages a fencing contractor's specs, boundary lines, and material choices into the exact PDF format the neighborhood HOA demands for approval.",
+      "trigger_examples": [
+        "unblocks stalled construction jobs"
+      ]
+    },
+    {
+      "slug": "painter-paint-gallon-estimator",
+      "label": "Painter Paint Gallon Estimator",
+      "method": "Calculates exact gallons needed by analyzing total wall square footage, subtracting windows/doors, and factoring in the porosity of the surface.",
+      "trigger_examples": [
+        "stops painters from over-buying expensive materials"
+      ]
+    },
+    {
+      "slug": "pool-cleaning-chemical-balancer",
+      "label": "Pool Cleaning Chemical Balancer",
+      "method": "Takes the raw numbers from a test strip (pH, alkalinity, cyanuric acid) and tells the pool boy exactly how many pounds of shock to add.",
+      "trigger_examples": [
+        "turns junior laborers into expert pool chemists"
+      ]
+    },
+    {
+      "slug": "pest-control-chemical-usage-logger",
+      "label": "Pest Control Chemical Usage Logger",
+      "method": "Calculates and logs the exact ounces of pesticide sprayed at a specific address to comply with state Department of Agriculture regulations.",
+      "trigger_examples": [
+        "automates strict environmental compliance"
+      ]
+    },
+    {
+      "slug": "irrigation-weather-delay-notifier",
+      "label": "Irrigation Weather Delay Notifier",
+      "method": "Automatically texts homeowners to reschedule their sprinkler winterization blow-out if an early freeze makes the ground too hard to work.",
+      "trigger_examples": [
+        "proactive customer service"
+      ]
+    },
+    {
+      "slug": "snow-plow-trigger-dispatcher",
+      "label": "Snow Plow Trigger Dispatcher",
+      "method": "Wakes up contracted drivers with an automated call the exact moment the local weather API registers 2 inches of snow accumulation.",
+      "trigger_examples": [
+        "replaces 3 am manual alarm clocks and weather-watching"
+      ]
+    }
+  ]
+}

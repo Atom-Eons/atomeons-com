@@ -1,0 +1,84 @@
+{
+  "slug": "compliance",
+  "label": "Compliance Pak",
+  "blurb": "EdTech, Corporate Training & Certification. Course creation velocity and risk mitigation.",
+  "mode": "sequential_pipe",
+  "tier": "pro",
+  "phase_provenance": [
+    "edtech-corporate-training-certification"
+  ],
+  "skills": [
+    {
+      "slug": "syllabus-to-calendar-mapper",
+      "label": "Syllabus To Calendar Mapper",
+      "method": "Reads a 16-week course syllabus, extracts reading assignments and exam dates, and creates downloadable calendar invites for students.",
+      "trigger_examples": [
+        "reduces \"when is this due\" emails by 90%"
+      ]
+    },
+    {
+      "slug": "flashcard-deck-extractor",
+      "label": "Flashcard Deck Extractor",
+      "method": "Parses an hour-long lecture transcript and generates 50 spaced-repetition Anki/Quizlet flashcards covering the core concepts.",
+      "trigger_examples": [
+        "instant study material generation"
+      ]
+    },
+    {
+      "slug": "compliance-certification-nag",
+      "label": "Compliance Certification Nag",
+      "method": "Checks database for expiring CPR/Forklift/Cybersecurity certs, locks employee out of specific Slack channels until the video is watched.",
+      "trigger_examples": [
+        "zero-touch corporate compliance"
+      ]
+    },
+    {
+      "slug": "rubric-based-grader",
+      "label": "Rubric Based Grader",
+      "method": "Compares 500 submitted short-answer essays against a strict scoring rubric, assigning grades and leaving personalized constructive feedback.",
+      "trigger_examples": [
+        "saves teachers and corporate trainers hundreds of hours"
+      ]
+    },
+    {
+      "slug": "accessibility-transcript-sync",
+      "label": "Accessibility Transcript Sync",
+      "method": "Takes training videos, generates 99% accurate subtitles, translates them into 5 languages, and writes image alt-text.",
+      "trigger_examples": [
+        "ensures ada/section 508 compliance instantly"
+      ]
+    },
+    {
+      "slug": "plagiarism-inversion-checker",
+      "label": "Plagiarism Inversion Checker",
+      "method": "Not just checking if a student copied Wikipedia, but checking if their writing style suddenly shifted to match a known LLM output.",
+      "trigger_examples": [
+        "maintains academic integrity"
+      ]
+    },
+    {
+      "slug": "scorm-course-generator",
+      "label": "Scorm Course Generator",
+      "method": "Takes a raw corporate handbook PDF and converts it into a clickable, quiz-gated SCORM package for the LMS (Learning Management System).",
+      "trigger_examples": [
+        "replaces expensive instructional design agencies"
+      ]
+    },
+    {
+      "slug": "interactive-roleplay-simulator",
+      "label": "Interactive Roleplay Simulator",
+      "method": "Acts as an angry customer or a strict auditor via chat, forcing the trainee to navigate the scenario perfectly to \"pass\" the module.",
+      "trigger_examples": [
+        "scales experiential learning without human actors"
+      ]
+    },
+    {
+      "slug": "training-grant-roi-calculator",
+      "label": "Training Grant Roi Calculator",
+      "method": "Tracks employee training completion against their subsequent sales numbers or error rates to prove the ROI of the HR budget.",
+      "trigger_examples": [
+        "justifies the l\\&d department's existence"
+      ]
+    }
+  ]
+}

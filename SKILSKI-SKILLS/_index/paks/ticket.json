@@ -1,0 +1,92 @@
+{
+  "slug": "ticket",
+  "label": "Ticket Pak",
+  "blurb": "Local Entertainment, Nightlife & Tourism. Fraud prevention, VIP management, and yield optimization.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "local-entertainment-nightlife-tourism"
+  ],
+  "skills": [
+    {
+      "slug": "tour-guide-weather-pivot",
+      "label": "Tour Guide Weather Pivot",
+      "method": "Monitors radar; if sudden rain hits during a historical walking tour, it automatically reroutes the guide to partnered indoor museums/cafes and buys the tickets.",
+      "trigger_examples": [
+        "turns bad weather refunds into 5-star reviews"
+      ]
+    },
+    {
+      "slug": "arcade-ticket-payout-balancer",
+      "label": "Arcade Ticket Payout Balancer",
+      "method": "Adjusts claw machine grip strength and jackpot payout rates dynamically based on the current inventory cost of the plush toys in the back room.",
+      "trigger_examples": [
+        "protects family entertainment center profit margins"
+      ]
+    },
+    {
+      "slug": "axe-throwing-waiver-chaser",
+      "label": "Axe Throwing Waiver Chaser",
+      "method": "Texts corporate groups the liability waiver 2 hours before their booking, barring entry to the lane until the digital signature is received.",
+      "trigger_examples": [
+        "prevents front-desk bottlenecks and catastrophic liability"
+      ]
+    },
+    {
+      "slug": "bouncer-id-scan-aggregator",
+      "label": "Bouncer Id Scan Aggregator",
+      "method": "Scans licenses at the door, building a shared local network to instantly flag serial troublemakers or sophisticated fake IDs to neighboring bars.",
+      "trigger_examples": [
+        "protects liquor licenses from sting operations"
+      ]
+    },
+    {
+      "slug": "escape-room-reset-checklist",
+      "label": "Escape Room Reset Checklist",
+      "method": "Generates an interactive, room-specific checklist for game masters to ensure every padlock is reset and hidden clue is replaced perfectly in 3 minutes.",
+      "trigger_examples": [
+        "prevents ruined games for the next group"
+      ]
+    },
+    {
+      "slug": "charter-boat-manifest-logger",
+      "label": "Charter Boat Manifest Logger",
+      "method": "Digitizes passenger waivers and generates the exact timestamped headcount manifest required by the Coast Guard before the boat leaves the dock.",
+      "trigger_examples": [
+        "keeps boat captains legally compliant"
+      ]
+    },
+    {
+      "slug": "nightclub-promoter-commission-calc",
+      "label": "Nightclub Promoter Commission Calc",
+      "method": "Matches guestlist door scans to specific promoters, automatically calculating their cut of the door fee for an instant end-of-night Venmo payout.",
+      "trigger_examples": [
+        "solves shady, cash-based nightlife accounting"
+      ]
+    },
+    {
+      "slug": "museum-exhibit-traffic-heatmap",
+      "label": "Museum Exhibit Traffic Heatmap",
+      "method": "Analyzes security camera footfall to determine which paintings people stare at the longest, advising where to place the high-margin gift shop kiosk.",
+      "trigger_examples": [
+        "optimizes non-profit revenue per square foot"
+      ]
+    },
+    {
+      "slug": "vip-table-minimum-tracker",
+      "label": "Vip Table Minimum Tracker",
+      "method": "Pings waitstaff's Apple Watches when a VIP bottle service table is $50 away from hitting their $1,000 minimum spend, prompting an upsell.",
+      "trigger_examples": [
+        "maximizes high-margin nightclub revenue"
+      ]
+    },
+    {
+      "slug": "haunted-house-actor-rotation",
+      "label": "Haunted House Actor Rotation",
+      "method": "Schedules 15-minute breaks for scare-actors in heavy masks to prevent dehydration and vocal cord blowout during peak October weekends.",
+      "trigger_examples": [
+        "osha compliance and worker retention for seasonal gigs"
+      ]
+    }
+  ]
+}

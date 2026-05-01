@@ -1,0 +1,84 @@
+{
+  "slug": "genius",
+  "label": "Genius Pak",
+  "blurb": "Data Science, Architecture & Niche Engineering. Deep enterprise infrastructure.",
+  "mode": "parallel",
+  "tier": "elite",
+  "phase_provenance": [
+    "data-science-architecture-niche-engineering"
+  ],
+  "skills": [
+    {
+      "slug": "pandas-etl-cleaner",
+      "label": "Pandas Etl Cleaner",
+      "method": "Detects anomalies in massive CSVs (mixed date formats, nulls), writes Python script to standardize.",
+      "trigger_examples": [
+        "skips the 80% of data science that is just cleaning data"
+      ]
+    },
+    {
+      "slug": "sql-query-optimizer",
+      "label": "Sql Query Optimizer",
+      "method": "Runs `EXPLAIN ANALYZE`, identifies missing indexes, rewrites nested JOINs for speed.",
+      "trigger_examples": [
+        "drops dashboard load times from 30s to 1s"
+      ]
+    },
+    {
+      "slug": "grafana-dashboard-generator",
+      "label": "Grafana Dashboard Generator",
+      "method": "Reads a list of required KPIs, outputs the exact JSON model to spin up a Grafana UI.",
+      "trigger_examples": [
+        "instant observability for new microservices"
+      ]
+    },
+    {
+      "slug": "ab-test-statistical-significance",
+      "label": "Ab Test Statistical Significance",
+      "method": "Pulls analytics data, calculates p-values and confidence intervals, declares a winner.",
+      "trigger_examples": [
+        "stops product managers from acting on false data"
+      ]
+    },
+    {
+      "slug": "web-scraper-anti-bot-evader",
+      "label": "Web Scraper Anti Bot Evader",
+      "method": "Automatically rotates proxies and alters headless browser user-agents when blocked.",
+      "trigger_examples": [
+        "keeps competitive intelligence feeds alive"
+      ]
+    },
+    {
+      "slug": "pci-compliance-redactor",
+      "label": "Pci Compliance Redactor",
+      "method": "Scans raw server logs via regex/NLP, strips out accidentally logged credit card numbers before storage.",
+      "trigger_examples": [
+        "prevents catastrophic security breaches"
+      ]
+    },
+    {
+      "slug": "monolith-to-microservice-mapper",
+      "label": "Monolith To Microservice Mapper",
+      "method": "Analyzes codebase call graphs, suggests bounded contexts where the monolith can be safely split.",
+      "trigger_examples": [
+        "the hardest part of enterprise software modernization"
+      ]
+    },
+    {
+      "slug": "iot-telemetry-compressor",
+      "label": "Iot Telemetry Compressor",
+      "method": "Rewrites edge-device C++ code to batch and compress MQTT payloads.",
+      "trigger_examples": [
+        "saves millions in cellular iot data costs"
+      ]
+    },
+    {
+      "slug": "ml-model-drift-detector",
+      "label": "Ml Model Drift Detector",
+      "method": "Compares new inference inputs against original training data distributions, alerts if accuracy is decaying.",
+      "trigger_examples": [
+        "prevents ai models from silently going crazy in production"
+      ]
+    }
+  ]
+}

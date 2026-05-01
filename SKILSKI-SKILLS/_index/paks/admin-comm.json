@@ -1,0 +1,84 @@
+{
+  "slug": "admin-comm",
+  "label": "(Admin & Comm) Pak",
+  "blurb": "(Admin & Comm). Replaces virtual assistants and rote office work. Saving 5 hours a week is",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "admin-comm"
+  ],
+  "skills": [
+    {
+      "slug": "receipt-to-ledger",
+      "label": "Receipt To Ledger",
+      "method": "OCRs mobile photos, extracts tax info, maps to QuickBooks chart of accounts.",
+      "trigger_examples": [
+        "eliminates manual expense entry"
+      ]
+    },
+    {
+      "slug": "inbox-triage-routing",
+      "label": "Inbox Triage Routing",
+      "method": "Scans incoming email, tags by urgency, routes to specific Slack channels/users.",
+      "trigger_examples": [
+        "prevents missed high-value client emails"
+      ]
+    },
+    {
+      "slug": "calendar-tetris-negotiator",
+      "label": "Calendar Tetris Negotiator",
+      "method": "Reads email threads, cross-references internal calendars, proposes/books slots via API.",
+      "trigger_examples": [
+        "kills the \"when are you free\" ping-pong"
+      ]
+    },
+    {
+      "slug": "generic-document-formatter",
+      "label": "Generic Document Formatter",
+      "method": "Takes raw text, applies corporate Word/Google Doc templates, fixes brand fonts.",
+      "trigger_examples": [
+        "ends formatting nightmares"
+      ]
+    },
+    {
+      "slug": "meeting-action-item-extractor",
+      "label": "Meeting Action Item Extractor",
+      "method": "Parses transcript, extracts assigned tasks, auto-creates Jira/Asana tickets.",
+      "trigger_examples": [
+        "enforces meeting accountability automatically"
+      ]
+    },
+    {
+      "slug": "translation-localization-sync",
+      "label": "Translation Localization Sync",
+      "method": "Detects foreign emails, translates accurately preserving business intent, drafts reply.",
+      "trigger_examples": [
+        "opens global comms without bilingual staff"
+      ]
+    },
+    {
+      "slug": "vendor-invoice-approver",
+      "label": "Vendor Invoice Approver",
+      "method": "Compares incoming PDF invoices against original POs and receiving logs.",
+      "trigger_examples": [
+        "prevents accidental double-payments"
+      ]
+    },
+    {
+      "slug": "travel-itinerary-booker",
+      "label": "Travel Itinerary Booker",
+      "method": "Reads preferred airlines/times, books via corporate portal API, formats calendar.",
+      "trigger_examples": [
+        "saves 2 hours per business trip"
+      ]
+    },
+    {
+      "slug": "time-tracking-aggregator",
+      "label": "Time Tracking Aggregator",
+      "method": "Scans user's git commits, sent emails, and calendar to auto-fill Friday timesheets.",
+      "trigger_examples": [
+        "saves billable hours lost to tracking"
+      ]
+    }
+  ]
+}

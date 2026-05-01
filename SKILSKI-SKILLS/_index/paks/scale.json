@@ -1,0 +1,84 @@
+{
+  "slug": "scale",
+  "label": "Scale Pak",
+  "blurb": "Creative Ops, Agency & Media Automation. Content velocity and agency margin expansion.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "creative-ops-agency-media-automation"
+  ],
+  "skills": [
+    {
+      "slug": "watermark-applier-and-renderer",
+      "label": "Watermark Applier And Renderer",
+      "method": "Batch processes 100 images to apply agency watermarks, crop to 4 ratios, and compress for web.",
+      "trigger_examples": [
+        "rote graphic design automation"
+      ]
+    },
+    {
+      "slug": "creative-brief-generator",
+      "label": "Creative Brief Generator",
+      "method": "Turns a messy 30-message client Slack thread into a structured 1-page PDF brief for the design team.",
+      "trigger_examples": [
+        "stops scope creep and misalignment"
+      ]
+    },
+    {
+      "slug": "podcast-show-notes-writer",
+      "label": "Podcast Show Notes Writer",
+      "method": "Takes raw audio transcript, generates timestamps, a viral summary, and guest social links.",
+      "trigger_examples": [
+        "turns a 1-hour post-production chore into a 1-minute task"
+      ]
+    },
+    {
+      "slug": "seo-content-gap-analyzer",
+      "label": "Seo Content Gap Analyzer",
+      "method": "Compares your blog to top 3 competitors, generates a list of missing H2 headers and keywords.",
+      "trigger_examples": [
+        "automates content strategy consulting"
+      ]
+    },
+    {
+      "slug": "brand-guideline-enforcer",
+      "label": "Brand Guideline Enforcer",
+      "method": "Scans Figma files to ensure exact hex codes, padding, and font weights match the corporate design system.",
+      "trigger_examples": [
+        "eliminates pedantic design qa rounds"
+      ]
+    },
+    {
+      "slug": "video-b-roll-sourcer",
+      "label": "Video B Roll Sourcer",
+      "method": "Reads a script/timeline, searches Getty/Shutterstock APIs, returns 5 watermarked clip options perfectly timed.",
+      "trigger_examples": [
+        "saves video editors hours of stock hunting"
+      ]
+    },
+    {
+      "slug": "influencer-roi-calculator",
+      "label": "Influencer Roi Calculator",
+      "method": "Scrapes promo code usage from Shopify and correlates it with affiliate payout tiers.",
+      "trigger_examples": [
+        "automates creator economy accounting"
+      ]
+    },
+    {
+      "slug": "localization-subtitle-adjuster",
+      "label": "Localization Subtitle Adjuster",
+      "method": "Adjusts translated SRT files so text fits on screen without forcing the viewer to read impossibly fast.",
+      "trigger_examples": [
+        "pro-grade video localization at scale"
+      ]
+    },
+    {
+      "slug": "ad-compliance-checker",
+      "label": "Ad Compliance Checker",
+      "method": "Checks pharma/finance ad copy against FDA/SEC required disclaimer rules before publishing.",
+      "trigger_examples": [
+        "prevents catastrophic regulatory fines for agencies"
+      ]
+    }
+  ]
+}

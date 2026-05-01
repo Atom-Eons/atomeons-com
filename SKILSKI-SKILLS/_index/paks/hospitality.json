@@ -1,0 +1,92 @@
+{
+  "slug": "hospitality",
+  "label": "Hospitality Pak",
+  "blurb": "Restaurant Front-of-House, Catering & Food Trucks. Table turns, waste reduction, and event prep.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "restaurant-front-of-house-catering-food-trucks"
+  ],
+  "skills": [
+    {
+      "slug": "tip-pool-distributor",
+      "label": "Tip Pool Distributor",
+      "method": "Takes the night's total credit card tips and splits them between bartenders, bussers, and waitstaff based on hours worked and specific role percentages.",
+      "trigger_examples": [
+        "solves the most toxic, argument-inducing part of restaurant management"
+      ]
+    },
+    {
+      "slug": "allergy-menu-crosschecker",
+      "label": "Allergy Menu Crosschecker",
+      "method": "Waitress types \"Celiac \\+ Dairy Free\"; the agent cross-references the ingredient database and spits out the 3 safe meals the guest can eat.",
+      "trigger_examples": [
+        "prevents anaphylaxis and saves the kitchen from 20 questions"
+      ]
+    },
+    {
+      "slug": "hostess-wait-time-estimator",
+      "label": "Hostess Wait Time Estimator",
+      "method": "Predicts accurate wait times by looking at how many tables have just ordered dessert or paid their check, rather than just counting heads.",
+      "trigger_examples": [
+        "stops customers from walking out due to bad wait estimates"
+      ]
+    },
+    {
+      "slug": "health-code-temp-logger",
+      "label": "Health Code Temp Logger",
+      "method": "Sends a push notification to line cooks every 4 hours requiring them to log the walk-in fridge temperature, escalating to the manager if ignored.",
+      "trigger_examples": [
+        "digitizes health department compliance"
+      ]
+    },
+    {
+      "slug": "liquor-pour-cost-auditor",
+      "label": "Liquor Pour Cost Auditor",
+      "method": "Compares the weight of empty liquor bottles at the end of the night against the POS system's recorded drink sales to identify over-pouring or theft.",
+      "trigger_examples": [
+        "protects razor-thin bar margins"
+      ]
+    },
+    {
+      "slug": "bakery-custom-cake-quoter",
+      "label": "Bakery Custom Cake Quoter",
+      "method": "Translates a customer's Pinterest photo and text request (\"3 tiers, fondant, feeds 40\") into an accurate price quote based on hourly labor and ingredient costs.",
+      "trigger_examples": [
+        "stops bakers from undercharging for their time"
+      ]
+    },
+    {
+      "slug": "catering-portion-multiplier",
+      "label": "Catering Portion Multiplier",
+      "method": "Takes a family recipe meant for 8 people and mathematically scales the ingredients to feed a 150-person wedding, adjusting for yield loss.",
+      "trigger_examples": [
+        "saves chefs from disastrous catering miscalculations"
+      ]
+    },
+    {
+      "slug": "wholesale-ingredient-price-shopper",
+      "label": "Wholesale Ingredient Price Shopper",
+      "method": "Scans weekly invoices from Sysco and US Foods, highlighting which purveyor is currently cheaper for bulk chicken breasts or fryer oil.",
+      "trigger_examples": [
+        "automates local supply chain arbitrage"
+      ]
+    },
+    {
+      "slug": "food-truck-location-broadcaster",
+      "label": "Food Truck Location Broadcaster",
+      "method": "One text from the owner (\"Parked at 4th and Main until 2\") updates Google My Business, Twitter, Instagram stories, and the local website simultaneously.",
+      "trigger_examples": [
+        "drives foot traffic without manual social media management"
+      ]
+    },
+    {
+      "slug": "wedding-tasting-feedback-logger",
+      "label": "Wedding Tasting Feedback Logger",
+      "method": "Records the bride and groom's feedback during a tasting (\"less salt on the steak, more garlic in the potatoes\") and updates the final Banquet Event Order.",
+      "trigger_examples": [
+        "ensures the most important meal is perfect"
+      ]
+    }
+  ]
+}

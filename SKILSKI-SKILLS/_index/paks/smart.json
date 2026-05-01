@@ -1,0 +1,84 @@
+{
+  "slug": "smart",
+  "label": "Smart Pak",
+  "blurb": "Developer & IT Operations. Engineering velocity and uptime.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "developer-it-operations"
+  ],
+  "skills": [
+    {
+      "slug": "pr-summary-and-impact",
+      "label": "Pr Summary And Impact",
+      "method": "Reads Git diff, writes plain-English summary, lists files impacted, flags breaking API changes.",
+      "trigger_examples": [
+        "makes code review 3x faster"
+      ]
+    },
+    {
+      "slug": "dependency-vuln-patcher",
+      "label": "Dependency Vuln Patcher",
+      "method": "Reads Dependabot alerts, checks breaking changes in package changelogs, opens fixed PR.",
+      "trigger_examples": [
+        "keeps software secure without burning dev hours"
+      ]
+    },
+    {
+      "slug": "unit-test-edge-case",
+      "label": "Unit Test Edge Case",
+      "method": "Reads a function, generates Jest/PyTest suites specifically targeting nulls, negatives, and overflows.",
+      "trigger_examples": [
+        "pushes code coverage to 90%+ instantly"
+      ]
+    },
+    {
+      "slug": "legacy-code-documenter",
+      "label": "Legacy Code Documenter",
+      "method": "Reads undocumented 10-year-old Python/Java, generates JSDoc/Sphinx comments for every function.",
+      "trigger_examples": [
+        "unblocks teams stuck maintaining old code"
+      ]
+    },
+    {
+      "slug": "react-component-isolator",
+      "label": "React Component Isolator",
+      "method": "Takes spaghetti UI code, extracts cleanly scoped React components with defined prop interfaces.",
+      "trigger_examples": [
+        "eliminates ui technical debt"
+      ]
+    },
+    {
+      "slug": "dockerfile-optimizer",
+      "label": "Dockerfile Optimizer",
+      "method": "Analyzes build context, rewrites to multi-stage builds, removes unused apt packages.",
+      "trigger_examples": [
+        "shrinks image sizes, cutting aws bandwidth costs"
+      ]
+    },
+    {
+      "slug": "db-migration-generator",
+      "label": "Db Migration Generator",
+      "method": "Compares Prisma/Django schema changes, writes the exact SQL UP/DOWN migration scripts.",
+      "trigger_examples": [
+        "prevents production database drops"
+      ]
+    },
+    {
+      "slug": "openapi-spec-generator",
+      "label": "Openapi Spec Generator",
+      "method": "Scans backend routing files (Express/FastAPI), generates perfectly formatted Swagger/OpenAPI JSON.",
+      "trigger_examples": [
+        "keeps frontend and backend teams perfectly synced"
+      ]
+    },
+    {
+      "slug": "aws-cost-anomaly-killer",
+      "label": "Aws Cost Anomaly Killer",
+      "method": "Monitors CloudWatch, detects if a Lambda function is stuck in an infinite loop, halts execution.",
+      "trigger_examples": [
+        "prevents $40,000 weekend cloud bill surprises"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "infrastructure",
+  "label": "Infrastructure Pak",
+  "blurb": "Specialized Engineering, QA & ML Ops. Software stability and advanced data ops.",
+  "mode": "parallel",
+  "tier": "elite",
+  "phase_provenance": [
+    "specialized-engineering-qa-ml-ops"
+  ],
+  "skills": [
+    {
+      "slug": "api-breaking-change-detector",
+      "label": "Api Breaking Change Detector",
+      "method": "Compares the new API code against the old OpenAPI spec before deployment. If a required field is removed, it blocks the merge.",
+      "trigger_examples": [
+        "prevents backend devs from breaking mobile apps"
+      ]
+    },
+    {
+      "slug": "flaky-test-quarantiner",
+      "label": "Flaky Test Quarantiner",
+      "method": "Identifies unit tests that pass 90% of the time but fail randomly due to race conditions. Mutes them, flags them for review, and allows the CI/CD pipeline to continue.",
+      "trigger_examples": [
+        "stops developers from ignoring the build pipeline"
+      ]
+    },
+    {
+      "slug": "web-accessibility-dom-fixer",
+      "label": "Web Accessibility Dom Fixer",
+      "method": "Scans the React DOM, automatically adds missing `aria-labels`, contrast fixes, and keyboard navigation tab-indexes, then submits a PR.",
+      "trigger_examples": [
+        "instant ada tech compliance"
+      ]
+    },
+    {
+      "slug": "load-test-script-generator",
+      "label": "Load Test Script Generator",
+      "method": "Translates a user journey (login -\\> add to cart -\\> checkout) into a complex Artillery/JMeter script to simulate 10,000 concurrent users.",
+      "trigger_examples": [
+        "replaces specialized qa engineers"
+      ]
+    },
+    {
+      "slug": "infrastructure-as-code-drifter",
+      "label": "Infrastructure As Code Drifter",
+      "method": "Detects if a developer manually clicked a button in the AWS console to change a firewall, and automatically writes the Terraform code to match it (or reverts it).",
+      "trigger_examples": [
+        "enforces iac discipline"
+      ]
+    },
+    {
+      "slug": "chaos-engineering-monkey",
+      "label": "Chaos Engineering Monkey",
+      "method": "Randomly terminates non-critical pods in Kubernetes during staging to ensure the system's failover architecture actually works.",
+      "trigger_examples": [
+        "proves system resilience before black friday"
+      ]
+    },
+    {
+      "slug": "database-index-fragmentation-resolver",
+      "label": "Database Index Fragmentation Resolver",
+      "method": "Monitors SQL/Postgres indexes; if fragmentation hits 30%, it automatically schedules and runs an `INDEX REBUILD` during off-peak hours.",
+      "trigger_examples": [
+        "keeps massive databases running smoothly without dbas"
+      ]
+    },
+    {
+      "slug": "data-warehouse-cost-optimizer",
+      "label": "Data Warehouse Cost Optimizer",
+      "method": "Scans Snowflake/BigQuery usage. If a massive table is queried once a month, it rewrites the architecture to move it to cheap cold storage.",
+      "trigger_examples": [
+        "slashes enterprise data bills by 30%"
+      ]
+    },
+    {
+      "slug": "ml-feature-store-populator",
+      "label": "Ml Feature Store Populator",
+      "method": "Writes the complex ETL pipelines required to take raw application data and transform it into clean features for machine learning models.",
+      "trigger_examples": [
+        "unblocks data scientists who are terrible at data engineering"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "slug": "classroom",
+  "label": "Classroom Pak",
+  "blurb": "K-12 Education, Tutoring & Childcare. Parent communication, grading rote work, and lesson planning.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "k-12-education-tutoring-childcare"
+  ],
+  "skills": [
+    {
+      "slug": "parent-teacher-conference-summarizer",
+      "label": "Parent Teacher Conference Summarizer",
+      "method": "Takes the teacher's bullet points and drafts a warm, professional email to the parents summarizing the student's progress and agreed-upon next steps.",
+      "trigger_examples": [
+        "saves teachers 5 hours of administrative typing a week"
+      ]
+    },
+    {
+      "slug": "substitute-teacher-binder-builder",
+      "label": "Substitute Teacher Binder Builder",
+      "method": "Formats the teacher's rough lesson plan, class roster, and behavioral notes into a clean, easy-to-read printable PDF for the substitute.",
+      "trigger_examples": [
+        "allows sick teachers to actually rest instead of writing plans at 4 am"
+      ]
+    },
+    {
+      "slug": "student-behavior-incident-formatter",
+      "label": "Student Behavior Incident Formatter",
+      "method": "Translates a teacher's frustrated, emotional note into a neutral, objective, and legally sound incident report for the principal's office.",
+      "trigger_examples": [
+        "protects teachers and schools from administrative pushback"
+      ]
+    },
+    {
+      "slug": "math-worksheet-generator",
+      "label": "Math Worksheet Generator",
+      "method": "Generates 30 unique, printable math problems aligned with specific Common Core standards, complete with an answer key for the teacher.",
+      "trigger_examples": [
+        "endless, free curriculum generation"
+      ]
+    },
+    {
+      "slug": "field-trip-permission-chaser",
+      "label": "Field Trip Permission Chaser",
+      "method": "Cross-references the digital class roster, sending automated SMS reminders only to the parents who haven't signed the zoo field trip form.",
+      "trigger_examples": [
+        "stops teachers from having to play debt-collector"
+      ]
+    },
+    {
+      "slug": "supply-list-amazon-cart-builder",
+      "label": "Supply List Amazon Cart Builder",
+      "method": "Turns a teacher's classroom wishlist (crayons, tissues, markers) into a one-click Amazon affiliate cart to email to the PTA.",
+      "trigger_examples": [
+        "increases classroom funding and parent participation"
+      ]
+    },
+    {
+      "slug": "reading-level-text-adapter",
+      "label": "Reading Level Text Adapter",
+      "method": "Takes a current event news article and rewrites it to a 3rd-grade Lexile reading level so younger students can participate in current events.",
+      "trigger_examples": [
+        "differentiates instruction for diverse learners instantly"
+      ]
+    },
+    {
+      "slug": "daycare-daily-photo-captioner",
+      "label": "Daycare Daily Photo Captioner",
+      "method": "Takes a photo uploaded by a daycare worker and generates a cheerful caption (\"Tommy loved the sensory bin today\\!\") to send to anxious parents.",
+      "trigger_examples": [
+        "builds extreme trust with high-paying daycare clients"
+      ]
+    },
+    {
+      "slug": "iep-goal-progress-tracker",
+      "label": "Iep Goal Progress Tracker",
+      "method": "Extracts daily behavioral/academic observations from the teacher's notes and formats them into the state-mandated Individualized Education Program (IEP) reporting format.",
+      "trigger_examples": [
+        "reduces special education paperwork burnout"
+      ]
+    },
+    {
+      "slug": "tutor-invoice-generator",
+      "label": "Tutor Invoice Generator",
+      "method": "Tracks hours logged per student, generating a weekly Stripe/Venmo invoice sent directly to the parents with a summary of what was covered.",
+      "trigger_examples": [
+        "professionalizes freelance tutoring operations"
+      ]
+    }
+  ]
+}

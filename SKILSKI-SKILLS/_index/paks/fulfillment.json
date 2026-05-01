@@ -1,0 +1,84 @@
+{
+  "slug": "fulfillment",
+  "label": "Fulfillment Pak",
+  "blurb": "E-commerce Logistics, 3PL & Warehousing. Pick/pack efficiency and margin protection.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "e-commerce-logistics-3pl-warehousing"
+  ],
+  "skills": [
+    {
+      "slug": "dim-weight-fee-auditor",
+      "label": "Dim Weight Fee Auditor",
+      "method": "Compares actual package dimensions in the WMS to carrier invoices to catch erroneous dimensional weight charges.",
+      "trigger_examples": [
+        "recovers massive, hidden shipping overcharges"
+      ]
+    },
+    {
+      "slug": "warehouse-slotting-optimizer",
+      "label": "Warehouse Slotting Optimizer",
+      "method": "Analyzes picking velocity and clusters frequently bought-together items in adjacent bins at waist-height.",
+      "trigger_examples": [
+        "cuts picker walk-time and fatigue by 30%"
+      ]
+    },
+    {
+      "slug": "stale-inventory-liquidator",
+      "label": "Stale Inventory Liquidator",
+      "method": "Identifies SKUs collecting dust for \\>180 days and automatically lists them on discount clearance APIs or B2B liquidation boards.",
+      "trigger_examples": [
+        "turns dead inventory back into working capital"
+      ]
+    },
+    {
+      "slug": "split-shipment-cost-analyzer",
+      "label": "Split Shipment Cost Analyzer",
+      "method": "Calculates if it is cheaper to ship a customer two boxes from two different warehouses, or wait 3 days to consolidate them into one box.",
+      "trigger_examples": [
+        "perfects the speed vs. cost logistics tradeoff"
+      ]
+    },
+    {
+      "slug": "return-to-vendor-rma-chaser",
+      "label": "Return To Vendor Rma Chaser",
+      "method": "Automatically compiles unsellable, damaged goods, generates the RTV paperwork, and bills the manufacturer for the credit.",
+      "trigger_examples": [
+        "recovers sunk costs sitting in the \"damage cage.\""
+      ]
+    },
+    {
+      "slug": "cross-docking-coordinator",
+      "label": "Cross Docking Coordinator",
+      "method": "Identifies incoming backordered goods and routes them directly from the receiving dock to the shipping dock, bypassing storage entirely.",
+      "trigger_examples": [
+        "fulfills late orders instantly while saving warehouse labor"
+      ]
+    },
+    {
+      "slug": "freight-claim-evidence-collector",
+      "label": "Freight Claim Evidence Collector",
+      "method": "Automatically pulls dock camera footage of a pallet being loaded intact to prove a freight carrier damaged it in transit.",
+      "trigger_examples": [
+        "wins ltl freight damage claims automatically"
+      ]
+    },
+    {
+      "slug": "seasonal-temp-labor-forecaster",
+      "label": "Seasonal Temp Labor Forecaster",
+      "method": "Analyzes marketing promo schedules and historical BFCM (Black Friday) data to project exactly how many temp workers to hire per shift.",
+      "trigger_examples": [
+        "prevents over-staffing and under-delivering"
+      ]
+    },
+    {
+      "slug": "kitting-and-assembly-biller",
+      "label": "Kitting And Assembly Biller",
+      "method": "Tracks the exact seconds it takes a 3PL worker to build a custom subscription box, accurately billing the brand for the labor.",
+      "trigger_examples": [
+        "stops 3pls from losing money on complex pack-outs"
+      ]
+    }
+  ]
+}

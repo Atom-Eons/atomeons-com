@@ -1,0 +1,92 @@
+{
+  "slug": "caregiver",
+  "label": "Caregiver Pak",
+  "blurb": "Senior Care, Assisted Living & Mobility Services. Medicaid compliance, family updates, and staff burnout reduction.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "senior-care-assisted-living-mobility-services"
+  ],
+  "skills": [
+    {
+      "slug": "daily-family-reassurance-text",
+      "label": "Daily Family Reassurance Text",
+      "method": "Takes the chaotic daily notes from nurses (\"Mildred ate half her sandwich, watched Jeopardy\") and crafts a warm, reassuring text to the anxious daughter.",
+      "trigger_examples": [
+        "cuts nursing home phone calls from family members by 80%"
+      ]
+    },
+    {
+      "slug": "memory-care-music-playlist-generator",
+      "label": "Memory Care Music Playlist Generator",
+      "method": "Takes the patient's birth year, calculates what was popular when they were 15-25 years old, and generates a Spotify playlist to help soothe dementia agitation.",
+      "trigger_examples": [
+        "scalable, personalized empathetic care"
+      ]
+    },
+    {
+      "slug": "home-health-aide-clock-in-geofence",
+      "label": "Home Health Aide Clock In Geofence",
+      "method": "Forces visiting aides to clock in via an app only when their GPS registers they are physically inside the senior's house.",
+      "trigger_examples": [
+        "prevents payroll fraud and ensures elders aren't abandoned"
+      ]
+    },
+    {
+      "slug": "fall-risk-assessment-logger",
+      "label": "Fall Risk Assessment Logger",
+      "method": "Prompts night-shift staff to log a patient's mobility state, automatically updating their chart if they have shifted from \"requires walker\" to \"requires two-person lift.\"",
+      "trigger_examples": [
+        "prevents catastrophic facility injuries and lawsuits"
+      ]
+    },
+    {
+      "slug": "caregiver-burnout-shift-rotation",
+      "label": "Caregiver Burnout Shift Rotation",
+      "method": "Analyzes staff schedules to ensure no nurse is assigned the \"heavy lift\" wing or the most combative dementia patients for more than 3 days in a row.",
+      "trigger_examples": [
+        "slashes brutal healthcare turnover rates"
+      ]
+    },
+    {
+      "slug": "dietary-restriction-tray-checker",
+      "label": "Dietary Restriction Tray Checker",
+      "method": "Cross-references the kitchen's meal line against patient charts, flashing red if a tray with regular juice is routed to a diabetic resident.",
+      "trigger_examples": [
+        "life-saving institutional food safety"
+      ]
+    },
+    {
+      "slug": "wheelchair-van-medicaid-router",
+      "label": "Wheelchair Van Medicaid Router",
+      "method": "Calculates the daily route for non-emergency medical transport (NEMT) vans, generating the exact time-stamped logs required to bill Medicaid for the mileage.",
+      "trigger_examples": [
+        "automates complex state healthcare logistics"
+      ]
+    },
+    {
+      "slug": "adult-daycare-ratio-compliance",
+      "label": "Adult Daycare Ratio Compliance",
+      "method": "Monitors daily check-ins; if the ratio of seniors to staff exceeds state mandates (e.g., 8:1), it instantly triggers a text to an on-call backup worker.",
+      "trigger_examples": [
+        "maintains strict operational compliance"
+      ]
+    },
+    {
+      "slug": "medicaid-bed-hold-biller",
+      "label": "Medicaid Bed Hold Biller",
+      "method": "Tracks when a nursing home resident is temporarily sent to the hospital, automatically billing the state for the \"bed hold\" days so the facility doesn't lose the room revenue.",
+      "trigger_examples": [
+        "captures lost administrative revenue"
+      ]
+    },
+    {
+      "slug": "hospice-pharmacy-comfort-kit-order",
+      "label": "Hospice Pharmacy Comfort Kit Order",
+      "method": "Automatically faxes the local pharmacy to deliver the standard \"comfort kit\" (morphine, lorazepam) the moment a physician changes a patient's status to end-of-life care.",
+      "trigger_examples": [
+        "removes administrative friction during critical, sensitive moments"
+      ]
+    }
+  ]
+}

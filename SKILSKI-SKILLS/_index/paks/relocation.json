@@ -1,0 +1,92 @@
+{
+  "slug": "relocation",
+  "label": "Relocation Pak",
+  "blurb": "Moving, Storage & Junk Removal. Fleet optimization, dispute resolution, and asset recovery.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "moving-storage-junk-removal"
+  ],
+  "skills": [
+    {
+      "slug": "junk-removal-dump-fee-calculator",
+      "label": "Junk Removal Dump Fee Calculator",
+      "method": "Estimates landfill tipping fees based on a photo analysis of the junk pile (wood vs. heavy concrete), ensuring the quote covers the disposal cost.",
+      "trigger_examples": [
+        "protects margins on heavy hauling jobs"
+      ]
+    },
+    {
+      "slug": "moving-crew-tip-splitter",
+      "label": "Moving Crew Tip Splitter",
+      "method": "Divides the customer's cash tip fairly based on whether the crew had 2, 3, or 4 guys, and who acted as the lead driver vs. the lumper.",
+      "trigger_examples": [
+        "keeps blue-collar crews happy"
+      ]
+    },
+    {
+      "slug": "moving-truck-cubic-feet-estimator",
+      "label": "Moving Truck Cubic Feet Estimator",
+      "method": "Translates a customer's vague web form (\"3 bed house, big couch\") into an exact cubic-feet estimate, selecting the right box-truck size and crew count.",
+      "trigger_examples": [
+        "prevents moving day disasters where the truck is too small"
+      ]
+    },
+    {
+      "slug": "packing-box-inventory-predictor",
+      "label": "Packing Box Inventory Predictor",
+      "method": "Calculates exactly how many rolls of tape, wardrobe boxes, and dish-pack inserts a specific house will require, ensuring the crew brings enough supplies.",
+      "trigger_examples": [
+        "stops the crew from running to home depot mid-job"
+      ]
+    },
+    {
+      "slug": "furniture-damage-claim-deflector",
+      "label": "Furniture Damage Claim Deflector",
+      "method": "Prompts the crew to take timestamped photos of pre-existing scratches on expensive TVs/dressers before wrapping them, requiring a customer e-signature.",
+      "trigger_examples": [
+        "saves moving companies thousands in false damage claims"
+      ]
+    },
+    {
+      "slug": "self-storage-auction-legal-notice",
+      "label": "Self Storage Auction Legal Notice",
+      "method": "Auto-generates the state-specific certified mail notices and newspaper classified ads required before a facility can legally auction off a delinquent unit.",
+      "trigger_examples": [
+        "automates strict lien-law compliance"
+      ]
+    },
+    {
+      "slug": "stair-carry-heavy-item-surcharge",
+      "label": "Stair Carry Heavy Item Surcharge",
+      "method": "Auto-adds hazard pay and extra crew costs to the invoice when the customer notes a piano or gun safe needs to go up a 3rd-floor walkup.",
+      "trigger_examples": [
+        "protects workers' backs and company margins"
+      ]
+    },
+    {
+      "slug": "dumpster-rental-overage-biller",
+      "label": "Dumpster Rental Overage Biller",
+      "method": "Automatically bills the contractor's credit card on file if the landfill receipt shows the roll-off dumpster exceeded the 2-ton weight limit.",
+      "trigger_examples": [
+        "captures lost revenue from heavy debris"
+      ]
+    },
+    {
+      "slug": "interstate-moving-weight-ticket-logger",
+      "label": "Interstate Moving Weight Ticket Logger",
+      "method": "Logs DOT weigh-station tickets (empty truck vs. full truck) to accurately and legally bill cross-country clients by the pound.",
+      "trigger_examples": [
+        "highway logistics compliance"
+      ]
+    },
+    {
+      "slug": "storage-unit-climate-control-monitor",
+      "label": "Storage Unit Climate Control Monitor",
+      "method": "Alerts management immediately if the HVAC fails in the premium wine/art storage sector, dispatching emergency repair before inventory is ruined.",
+      "trigger_examples": [
+        "protects high-value client assets"
+      ]
+    }
+  ]
+}

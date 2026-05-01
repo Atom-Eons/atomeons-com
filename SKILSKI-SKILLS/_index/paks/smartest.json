@@ -1,0 +1,84 @@
+{
+  "slug": "smartest",
+  "label": "Smartest Pak",
+  "blurb": "Deep FinOps, Data Engineering & Cyber. Extreme cloud cost reduction and proactive threat hunting.",
+  "mode": "parallel",
+  "tier": "elite",
+  "phase_provenance": [
+    "deep-finops-data-engineering-cyber"
+  ],
+  "skills": [
+    {
+      "slug": "active-directory-ghost-hunter",
+      "label": "Active Directory Ghost Hunter",
+      "method": "Cross-references Active Directory accounts against HR termination lists, disabling rogue administrator accounts left behind by IT.",
+      "trigger_examples": [
+        "plugs massive internal security holes"
+      ]
+    },
+    {
+      "slug": "third-party-api-circuit-breaker",
+      "label": "Third Party Api Circuit Breaker",
+      "method": "Monitors external APIs (e.g., Twilio, Stripe). If latency spikes or 500 errors occur, it halts requests and fails over to a backup provider to prevent cascading system failure.",
+      "trigger_examples": [
+        "keeps apps online when dependencies die"
+      ]
+    },
+    {
+      "slug": "s3-lifecycle-policy-generator",
+      "label": "S3 Lifecycle Policy Generator",
+      "method": "Scans AWS S3 buckets for files un-accessed in 90 days, generating the Terraform code to move them to Glacier Deep Archive.",
+      "trigger_examples": [
+        "automates massive cloud storage savings"
+      ]
+    },
+    {
+      "slug": "cdn-cache-hit-optimizer",
+      "label": "Cdn Cache Hit Optimizer",
+      "method": "Analyzes Cloudflare/Fastly logs to find dynamically generated pages that could actually be statically cached, rewriting the caching headers.",
+      "trigger_examples": [
+        "drops server load and speeds up global load times"
+      ]
+    },
+    {
+      "slug": "k8s-rightsizing-advisor",
+      "label": "K8s Rightsizing Advisor",
+      "method": "Analyzes historical CPU/Memory usage of Kubernetes pods, rewriting the YAML resource limits to stop developers from over-provisioning.",
+      "trigger_examples": [
+        "maximizes container density and reduces node costs"
+      ]
+    },
+    {
+      "slug": "pii-data-masking-proxy",
+      "label": "Pii Data Masking Proxy",
+      "method": "Sits between production databases and developer environments, dynamically hashing emails and SSNs so developers can test safely with real data structures.",
+      "trigger_examples": [
+        "solves the dev vs. sec data access war"
+      ]
+    },
+    {
+      "slug": "snowflake-zombie-query-killer",
+      "label": "Snowflake Zombie Query Killer",
+      "method": "Identifies automated BI dashboard queries running on empty datasets or returning unused data, and permanently pauses the warehouse compute.",
+      "trigger_examples": [
+        "slashes cloud data warehouse bills by 20%"
+      ]
+    },
+    {
+      "slug": "kafka-consumer-lag-autoscaler",
+      "label": "Kafka Consumer Lag Autoscaler",
+      "method": "Monitors streaming data queues. If messages pile up faster than they are processed, it automatically spins up more consumer pods, scaling down when empty.",
+      "trigger_examples": [
+        "ensures real-time data actually stays real-time"
+      ]
+    },
+    {
+      "slug": "zero-day-iocs-sweeper",
+      "label": "Zero Day Iocs Sweeper",
+      "method": "Ingests new Indicators of Compromise (IoCs) from CISA, retroactively scans 30 days of SIEM logs to see if the network was already breached.",
+      "trigger_examples": [
+        "instant, retroactive threat hunting"
+      ]
+    }
+  ]
+}

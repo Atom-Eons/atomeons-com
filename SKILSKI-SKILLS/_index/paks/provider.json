@@ -1,0 +1,84 @@
+{
+  "slug": "provider",
+  "label": "Provider Pak",
+  "blurb": "Healthcare Administration & Medical Billing. Cuts clinical overhead and fights insurance companies.",
+  "mode": "sequential_pipe",
+  "tier": "pro",
+  "phase_provenance": [
+    "healthcare-administration-medical-billing"
+  ],
+  "skills": [
+    {
+      "slug": "patient-intake-ocr-mapper",
+      "label": "Patient Intake Ocr Mapper",
+      "method": "Scans messy, handwritten clipboard intake forms and perfectly maps allergies and family history into Epic/Cerner.",
+      "trigger_examples": [
+        "replaces front-desk manual data entry"
+      ]
+    },
+    {
+      "slug": "prior-authorization-compiler",
+      "label": "Prior Authorization Compiler",
+      "method": "Reads physician's EHR notes, extracts ICD-10 codes, and auto-fills the exact 15-page PDF required by Cigna/Aetna.",
+      "trigger_examples": [
+        "eliminates the \\#1 cause of delayed patient care and administrative burnout"
+      ]
+    },
+    {
+      "slug": "telehealth-transcript-to-soap",
+      "label": "Telehealth Transcript To Soap",
+      "method": "Listens to a Zoom telehealth call, formats the conversation into a compliant SOAP (Subjective, Objective, Assessment, Plan) note.",
+      "trigger_examples": [
+        "doctors stop typing while talking to patients"
+      ]
+    },
+    {
+      "slug": "prescription-refill-triage",
+      "label": "Prescription Refill Triage",
+      "method": "Checks pharmacy refill requests against the patient's last visit date and lab results, approving standard meds or flagging for doctor review.",
+      "trigger_examples": [
+        "saves physicians 1-2 hours of rote clicking daily"
+      ]
+    },
+    {
+      "slug": "physician-schedule-tetris",
+      "label": "Physician Schedule Tetris",
+      "method": "Groups 15-minute follow-ups and 45-minute procedures optimally to prevent doctor downtime while minimizing waiting room delays.",
+      "trigger_examples": [
+        "increases billable patient throughput by 10%"
+      ]
+    },
+    {
+      "slug": "referral-loop-closer",
+      "label": "Referral Loop Closer",
+      "method": "Tracks outbound specialist referrals, pings the specialist's office API/email weekly until the consultation notes are received back.",
+      "trigger_examples": [
+        "stops patients from falling through the cracks"
+      ]
+    },
+    {
+      "slug": "claim-denial-appeal-drafter",
+      "label": "Claim Denial Appeal Drafter",
+      "method": "Parses 835 remittance files to find why a claim was denied, cross-references medical guidelines, drafts the appeal letter.",
+      "trigger_examples": [
+        "recovers thousands in lost revenue per doctor per month"
+      ]
+    },
+    {
+      "slug": "hipaa-release-validator",
+      "label": "Hipaa Release Validator",
+      "method": "Scans incoming requests for medical records, verifies signature matching and expiration dates before authorizing the fax.",
+      "trigger_examples": [
+        "prevents massive hipaa violation fines"
+      ]
+    },
+    {
+      "slug": "clinical-trial-criteria-matcher",
+      "label": "Clinical Trial Criteria Matcher",
+      "method": "Scans a hospital's entire patient database against the inclusion/exclusion criteria of a new drug trial.",
+      "trigger_examples": [
+        "fills lucrative clinical trials 5x faster"
+      ]
+    }
+  ]
+}

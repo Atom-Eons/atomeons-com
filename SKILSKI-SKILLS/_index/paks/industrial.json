@@ -1,0 +1,84 @@
+{
+  "slug": "industrial",
+  "label": "Industrial Pak",
+  "blurb": "Manufacturing, IoT & Factory Operations. Uptime, yield optimization, and supply chain resilience.",
+  "mode": "parallel",
+  "tier": "elite",
+  "phase_provenance": [
+    "manufacturing-iot-factory-operations"
+  ],
+  "skills": [
+    {
+      "slug": "hazardous-material-sds-updater",
+      "label": "Hazardous Material Sds Updater",
+      "method": "Scans incoming chemical shipments, updates the digital Safety Data Sheet (SDS) binder, and prints OSHA-compliant warning labels.",
+      "trigger_examples": [
+        "bulletproofs the facility against safety audits"
+      ]
+    },
+    {
+      "slug": "qa-defect-vision-classifier",
+      "label": "Qa Defect Vision Classifier",
+      "method": "Continuously updates localized computer vision models using daily photos of rejected parts on the assembly line.",
+      "trigger_examples": [
+        "automates and scales visual quality assurance"
+      ]
+    },
+    {
+      "slug": "predictive-maintenance-scheduler",
+      "label": "Predictive Maintenance Scheduler",
+      "method": "Ingests vibration and heat telemetry from CNC machines, scheduling maintenance 48 hours before predicted bearing failure.",
+      "trigger_examples": [
+        "prevents $100k/hr unexpected factory line downtime"
+      ]
+    },
+    {
+      "slug": "tooling-lifecycle-tracker",
+      "label": "Tooling Lifecycle Tracker",
+      "method": "Counts how many times an injection mold or drill bit has been used, automatically ordering a replacement before the mold degrades.",
+      "trigger_examples": [
+        "prevents out-of-spec manufacturing runs"
+      ]
+    },
+    {
+      "slug": "scrap-rate-root-cause-analyzer",
+      "label": "Scrap Rate Root Cause Analyzer",
+      "method": "Correlates a sudden spike in defective parts with environmental data (e.g., factory humidity) or a specific supplier's recent batch.",
+      "trigger_examples": [
+        "solves manufacturing mysteries before they burn cash"
+      ]
+    },
+    {
+      "slug": "bill-of-materials-cost-optimizer",
+      "label": "Bill Of Materials Cost Optimizer",
+      "method": "Analyzes BOMs against global spot prices for raw materials, suggesting cheaper substitute components that meet the same engineering specs.",
+      "trigger_examples": [
+        "protects hardware profit margins instantly"
+      ]
+    },
+    {
+      "slug": "energy-peak-shaving-throttle",
+      "label": "Energy Peak Shaving Throttle",
+      "method": "Briefly powers down non-essential heavy machinery during utility peak pricing hours to avoid massive demand charges.",
+      "trigger_examples": [
+        "slashes industrial electricity bills by 20%"
+      ]
+    },
+    {
+      "slug": "oee-dashboard-generator",
+      "label": "Oee Dashboard Generator",
+      "method": "Pulls SCADA system data to calculate and display Overall Equipment Effectiveness (Availability x Performance x Quality) in real-time.",
+      "trigger_examples": [
+        "gives plant managers a single source of truth"
+      ]
+    },
+    {
+      "slug": "just-in-time-pallet-router",
+      "label": "Just In Time Pallet Router",
+      "method": "Directs autonomous forklifts to move raw materials from the dock to the exact assembly station exactly 10 minutes before they are needed.",
+      "trigger_examples": [
+        "eliminates floor clutter and waiting time"
+      ]
+    }
+  ]
+}

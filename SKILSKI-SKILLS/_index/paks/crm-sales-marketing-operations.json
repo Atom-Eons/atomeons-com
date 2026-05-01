@@ -1,0 +1,84 @@
+{
+  "slug": "crm-sales-marketing-operations",
+  "label": "CRM, Sales & Marketing Operations Pak",
+  "blurb": "CRM, Sales & Marketing Operations. Direct revenue generation and data hygiene.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "crm-sales-marketing-operations"
+  ],
+  "skills": [
+    {
+      "slug": "crm-duplicate-merger",
+      "label": "Crm Duplicate Merger",
+      "method": "Fuzzy matches Salesforce/HubSpot records, flags conflicts, merges data safely.",
+      "trigger_examples": [
+        "cures poisoned crm data that ruins campaigns"
+      ]
+    },
+    {
+      "slug": "social-media-repurposer",
+      "label": "Social Media Repurposer",
+      "method": "Takes a 2000-word blog, chops into a 5-tweet thread, a LinkedIn post, and an Instagram caption.",
+      "trigger_examples": [
+        "10x content output for marketing teams"
+      ]
+    },
+    {
+      "slug": "lead-enrichment-scraper",
+      "label": "Lead Enrichment Scraper",
+      "method": "Takes an email, scrapes LinkedIn/Clearbit, updates CRM with title and company size.",
+      "trigger_examples": [
+        "empowers sales reps with instant context"
+      ]
+    },
+    {
+      "slug": "seo-meta-tag-generator",
+      "label": "Seo Meta Tag Generator",
+      "method": "Reads blog content, generates optimal length meta titles/descriptions based on keyword density.",
+      "trigger_examples": [
+        "automates baseline technical seo"
+      ]
+    },
+    {
+      "slug": "cold-outreach-personalizer",
+      "label": "Cold Outreach Personalizer",
+      "method": "Reads prospect's recent company news, drafts 3 unique, non-spammy opening lines.",
+      "trigger_examples": [
+        "increases cold email conversion by 40%"
+      ]
+    },
+    {
+      "slug": "sales-objection-handler",
+      "label": "Sales Objection Handler",
+      "method": "Listens to Gong/Zoom transcripts, identifies prospect hesitation, feeds rep battle-cards.",
+      "trigger_examples": [
+        "saves dying deals in real-time"
+      ]
+    },
+    {
+      "slug": "churn-risk-flag",
+      "label": "Churn Risk Flag",
+      "method": "Analyzes support ticket sentiment \\+ login frequency, alerts Account Manager.",
+      "trigger_examples": [
+        "saves recurring revenue before the cancellation hits"
+      ]
+    },
+    {
+      "slug": "rfp-questionnaire-filler",
+      "label": "Rfp Questionnaire Filler",
+      "method": "Parses 100-page Request For Proposal PDFs, matches questions to past winning answers.",
+      "trigger_examples": [
+        "turns a 2-week sales task into 2 hours"
+      ]
+    },
+    {
+      "slug": "competitor-price-monitor",
+      "label": "Competitor Price Monitor",
+      "method": "Scrapes competitor pricing pages daily, alerts Slack if they drop prices.",
+      "trigger_examples": [
+        "prevents being undercut blindly"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "cashflow",
+  "label": "Cashflow Pak",
+  "blurb": "Advanced Financial Ops & Procurement. Working capital optimization and audit defense.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "advanced-financial-ops-procurement"
+  ],
+  "skills": [
+    {
+      "slug": "expense-policy-violator-flag",
+      "label": "Expense Policy Violator Flag",
+      "method": "Rejects $400 steak dinners that violate the $75 per diem rule, auto-notifies employee to amend.",
+      "trigger_examples": [
+        "enforces corporate budgets without humans playing bad cop"
+      ]
+    },
+    {
+      "slug": "dunning-campaign-manager",
+      "label": "Dunning Campaign Manager",
+      "method": "Sends escalating but polite payment reminders for invoices 30, 60, and 90 days past due.",
+      "trigger_examples": [
+        "drops days sales outstanding (dso) automatically"
+      ]
+    },
+    {
+      "slug": "invoice-discrepancy-negotiator",
+      "label": "Invoice Discrepancy Negotiator",
+      "method": "Drafts emails to vendors when line items or quantities don't match the original Purchase Order.",
+      "trigger_examples": [
+        "protects cash flow from vendor errors"
+      ]
+    },
+    {
+      "slug": "saas-spend-auditor",
+      "label": "Saas Spend Auditor",
+      "method": "Cross-references Okta active logins with Expensify/Brex to find unused, recurring software seats.",
+      "trigger_examples": [
+        "instantly cuts 10-20% of shadow it spend"
+      ]
+    },
+    {
+      "slug": "procurement-rfq-scorer",
+      "label": "Procurement Rfq Scorer",
+      "method": "Extracts pricing, SLAs, and terms from 10 different vendor bids and builds a side-by-side comparison matrix.",
+      "trigger_examples": [
+        "automates the rfp evaluation process"
+      ]
+    },
+    {
+      "slug": "cash-flow-forecaster",
+      "label": "Cash Flow Forecaster",
+      "method": "Pulls AR/AP from NetSuite to project bank balances 30, 60, and 90 days out based on payment history.",
+      "trigger_examples": [
+        "replaces the cfo's messiest excel sheet"
+      ]
+    },
+    {
+      "slug": "grant-compliance-tracker",
+      "label": "Grant Compliance Tracker",
+      "method": "Tags expenses to specific non-profit/academic grant codes to ensure strict fund accounting.",
+      "trigger_examples": [
+        "prevents organizations from losing federal funding"
+      ]
+    },
+    {
+      "slug": "currency-fx-hedger",
+      "label": "Currency Fx Hedger",
+      "method": "Alerts the finance team when Euro/USD deviations exceed 5%, suggesting forward contracts.",
+      "trigger_examples": [
+        "protects international margins"
+      ]
+    },
+    {
+      "slug": "transfer-pricing-documenter",
+      "label": "Transfer Pricing Documenter",
+      "method": "Generates intercompany transaction logs to comply with complex international tax law.",
+      "trigger_examples": [
+        "saves hundreds of billable hours from big 4 accounting firms"
+      ]
+    }
+  ]
+}

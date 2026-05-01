@@ -1,0 +1,92 @@
+{
+  "slug": "studio",
+  "label": "Studio Pak",
+  "blurb": "Fitness Studios, Dojos & Dance Academies. Retention, class balancing, and instructor payroll.",
+  "mode": "parallel",
+  "tier": "pro",
+  "phase_provenance": [
+    "fitness-studios-dojos-dance-academies"
+  ],
+  "skills": [
+    {
+      "slug": "drop-in-pass-conversion-nudge",
+      "label": "Drop In Pass Conversion Nudge",
+      "method": "Texts a user who bought 3 expensive drop-in passes with a math breakdown showing how an unlimited monthly membership is cheaper, including a sign-up link.",
+      "trigger_examples": [
+        "drives automated recurring revenue conversions"
+      ]
+    },
+    {
+      "slug": "personal-trainer-macro-adjuster",
+      "label": "Personal Trainer Macro Adjuster",
+      "method": "Calculates a client's new protein/carb goals based on their weekly weigh-in and muscle-mass scan, texting them the updated meal plan.",
+      "trigger_examples": [
+        "scales a personal trainer's coaching capacity"
+      ]
+    },
+    {
+      "slug": "gymnastics-liability-waiver-annual-refresh",
+      "label": "Gymnastics Liability Waiver Annual Refresh",
+      "method": "Forces parents to re-sign medical releases and emergency contact forms digitally at the start of the fall semester before the child can step on the mat.",
+      "trigger_examples": [
+        "bulletproof liability protection"
+      ]
+    },
+    {
+      "slug": "crossfit-wod-whiteboard-publisher",
+      "label": "Crossfit Wod Whiteboard Publisher",
+      "method": "Posts tomorrow's Workout of the Day (WOD) to the gym's website, member app, and Instagram stories automatically at 8 PM.",
+      "trigger_examples": [
+        "automates daily community marketing"
+      ]
+    },
+    {
+      "slug": "pilates-reformer-waitlist-roulette",
+      "label": "Pilates Reformer Waitlist Roulette",
+      "method": "Handles the complex shuffling and SMS notifications when a prime 6 AM reformer spot opens up at 10 PM the night before.",
+      "trigger_examples": [
+        "keeps high-ticket boutique classes at 100% capacity"
+      ]
+    },
+    {
+      "slug": "martial-arts-belt-promotion-tracker",
+      "label": "Martial Arts Belt Promotion Tracker",
+      "method": "Flags students who have attended the required 40 classes and mastered the curriculum checklist, notifying the sensei they are ready to test for their blue belt.",
+      "trigger_examples": [
+        "automates student progression and retention"
+      ]
+    },
+    {
+      "slug": "yoga-instructor-headcount-bonus",
+      "label": "Yoga Instructor Headcount Bonus",
+      "method": "Automatically adds a $2 bonus to the teacher's payroll for every student that attends over the 15-person baseline.",
+      "trigger_examples": [
+        "incentivizes teachers to promote their own classes"
+      ]
+    },
+    {
+      "slug": "spin-class-bike-maintenance-log",
+      "label": "Spin Class Bike Maintenance Log",
+      "method": "Tracks which specific bikes have \"wobbly pedals\" reported by users, takes them out of the booking app, and schedules the mechanic.",
+      "trigger_examples": [
+        "prevents injuries and bad reviews"
+      ]
+    },
+    {
+      "slug": "dance-recital-costume-order-batcher",
+      "label": "Dance Recital Costume Order Batcher",
+      "method": "Compiles 200 student sizes, chases down parents for payments, and generates the massive wholesale order to Capezio/Weissman.",
+      "trigger_examples": [
+        "saves studio owners weeks of administrative hell"
+      ]
+    },
+    {
+      "slug": "swimming-pool-lane-allocator",
+      "label": "Swimming Pool Lane Allocator",
+      "method": "Balances adult lap-swim reservations against the high school swim team practice schedule and toddler lessons.",
+      "trigger_examples": [
+        "maximizes aquatic facility utilization"
+      ]
+    }
+  ]
+}
