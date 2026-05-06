@@ -1,0 +1,777 @@
+{
+  "sector": "small-business-barber",
+  "wikiSource": "C:\\AtomEons\\products\\skill.ski\\nextapp\\data\\skilski-wiki\\sectors\\small-business-barber.md",
+  "wikiSha256_16": "85978ab7edc4f5e3",
+  "generatedAt": "2026-05-06T04:48:07.622Z",
+  "totalSkills": 100,
+  "totalBytes": 260609,
+  "totalKB": 254.5,
+  "byCategory": {
+    "customer-forms": 10,
+    "marketing": 6,
+    "marketing-sms": 7,
+    "business-legal": 5,
+    "tax": 22,
+    "retirement": 1,
+    "health-insurance": 1,
+    "insurance": 7,
+    "business-ops": 5,
+    "shop-ops": 9,
+    "compliance": 8,
+    "marketing-email": 4,
+    "marketing-seo": 7,
+    "marketing-social": 3,
+    "pricing": 5
+  },
+  "skilset": {
+    "slug": "barber-skilset",
+    "display_name": "Barber Shop SkilSet",
+    "description": "Full operational + compliance + marketing + tax stack for barber shops, booth renters, and shop owners. Six SkiPaks. 100 Skilskis.",
+    "skipakCount": 6,
+    "skillsTotal": 100
+  },
+  "skipaks": {
+    "barber-customer-ops-pak": {
+      "display_name": "Customer Ops Pak",
+      "skill_count": 16
+    },
+    "barber-booth-renter-pak": {
+      "display_name": "Booth Renter Pak",
+      "skill_count": 14
+    },
+    "barber-shop-compliance-pak": {
+      "display_name": "Shop Compliance Pak",
+      "skill_count": 17
+    },
+    "barber-marketing-pak": {
+      "display_name": "Marketing Pak",
+      "skill_count": 21
+    },
+    "barber-tax-money-pak": {
+      "display_name": "Tax + Money Pak",
+      "skill_count": 22
+    },
+    "barber-pricing-pak": {
+      "display_name": "Pricing + Operations Pak",
+      "skill_count": 10
+    }
+  },
+  "pricing_model": {
+    "note": "No per-skill or per-Pak pricing. Consumed via platform Pro $99/mo (3 active Paks) or Elite $4,999/mo membership.",
+    "platform_tiers": {
+      "pro": {
+        "price_per_month_usd": 99,
+        "active_paks": 3,
+        "source": "project locked tier"
+      },
+      "elite": {
+        "price_per_month_usd": 4999,
+        "active_paks": 3,
+        "addable": true,
+        "source": "project locked tier"
+      }
+    }
+  },
+  "slugs": [
+    {
+      "slug": "barber-new-client-intake-form",
+      "bytes": 2656,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-allergy-consultation-script",
+      "bytes": 2732,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-photo-video-release-template",
+      "bytes": 2600,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-no-show-policy-template",
+      "bytes": 2573,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-cancellation-policy-with-deposit",
+      "bytes": 2649,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-walk-in-vs-appointment-script",
+      "bytes": 2572,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-redo-guarantee-7-day-policy",
+      "bytes": 2478,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-redo-guarantee-14-day-policy",
+      "bytes": 2419,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-redo-guarantee-30-day-policy",
+      "bytes": 2419,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-customer-complaint-private-resolution-script",
+      "bytes": 2688,
+      "category": "customer-forms",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-google-review-response-positive-template",
+      "bytes": 2626,
+      "category": "marketing",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-google-review-response-negative-template",
+      "bytes": 2641,
+      "category": "marketing",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-yelp-response-template-positive",
+      "bytes": 2477,
+      "category": "marketing",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-yelp-response-template-negative",
+      "bytes": 2549,
+      "category": "marketing",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-customer-birthday-text-template",
+      "bytes": 2605,
+      "category": "marketing-sms",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-booth-rental-agreement-template-fixed-rent",
+      "bytes": 2803,
+      "category": "business-legal",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-booth-rental-agreement-template-percentage",
+      "bytes": 2797,
+      "category": "business-legal",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-booth-rental-agreement-template-hybrid",
+      "bytes": 2593,
+      "category": "business-legal",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-w9-collection-from-shop-letter",
+      "bytes": 2627,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-renter-quarterly-estimated-tax-1040es",
+      "bytes": 2705,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-renter-schedule-c-deduction-checklist",
+      "bytes": 2700,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-renter-mileage-log-template",
+      "bytes": 2576,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-renter-home-office-deduction-screening",
+      "bytes": 2706,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-renter-self-employment-tax-calculator",
+      "bytes": 2732,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-renter-sep-ira-setup-vs-solo401k",
+      "bytes": 2689,
+      "category": "retirement",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-renter-aca-marketplace-enrollment-helper",
+      "bytes": 2720,
+      "category": "health-insurance",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-renter-disability-insurance-shopping-guide",
+      "bytes": 2692,
+      "category": "insurance",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-renter-business-checking-account-setup",
+      "bytes": 2668,
+      "category": "business-ops",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-renter-square-vs-stripe-cost-comparison",
+      "bytes": 2682,
+      "category": "business-ops",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-renter-1099-nec-receipt-checker",
+      "bytes": 2645,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-shop-llc-formation-ca",
+      "bytes": 2690,
+      "category": "shop-ops",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-llc-formation-tx",
+      "bytes": 2641,
+      "category": "shop-ops",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-llc-formation-ny",
+      "bytes": 2710,
+      "category": "shop-ops",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-llc-formation-fl",
+      "bytes": 2537,
+      "category": "shop-ops",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-llc-formation-il",
+      "bytes": 2485,
+      "category": "shop-ops",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-2553-s-corp-election",
+      "bytes": 2734,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-shop-quarterly-941-prep",
+      "bytes": 2592,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-shop-annual-940-prep",
+      "bytes": 2564,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-shop-w2-w3-year-end",
+      "bytes": 2423,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-shop-1099-nec-bulk-issuance-to-renters",
+      "bytes": 2599,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-shop-employee-handbook-template",
+      "bytes": 2688,
+      "category": "shop-ops",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-w2-vs-1099-classification-checker",
+      "bytes": 2638,
+      "category": "shop-ops",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-workers-comp-shopping-guide-ca",
+      "bytes": 2616,
+      "category": "insurance",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-shop-state-ui-registration-ca",
+      "bytes": 2527,
+      "category": "shop-ops",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-bloodborne-pathogens-exposure-control-plan",
+      "bytes": 2753,
+      "category": "compliance",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-sms-tcpa-compliant-opt-in-form",
+      "bytes": 2645,
+      "category": "marketing-sms",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-sms-stop-help-keyword-handler",
+      "bytes": 2630,
+      "category": "marketing-sms",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-sms-30-day-reactivation-campaign",
+      "bytes": 2571,
+      "category": "marketing-sms",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-sms-60-day-reactivation-campaign",
+      "bytes": 2509,
+      "category": "marketing-sms",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-sms-90-day-reactivation-campaign",
+      "bytes": 2518,
+      "category": "marketing-sms",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-sms-birthday-campaign-with-discount",
+      "bytes": 2555,
+      "category": "marketing-sms",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-email-newsletter-template-monthly",
+      "bytes": 2570,
+      "category": "marketing-email",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-email-welcome-sequence-new-client",
+      "bytes": 2609,
+      "category": "marketing-email",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-email-vip-loyalty-club-invite",
+      "bytes": 2552,
+      "category": "marketing-email",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-email-referral-rewards-template",
+      "bytes": 2530,
+      "category": "marketing-email",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-google-business-profile-setup-checklist",
+      "bytes": 2705,
+      "category": "marketing-seo",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-google-business-profile-monthly-post-template",
+      "bytes": 2592,
+      "category": "marketing-seo",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-yelp-listing-claim-and-optimize",
+      "bytes": 2541,
+      "category": "marketing-seo",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-booksy-listing-optimize",
+      "bytes": 2457,
+      "category": "marketing-seo",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-vagaro-listing-optimize",
+      "bytes": 2358,
+      "category": "marketing-seo",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-square-appointments-listing-optimize",
+      "bytes": 2440,
+      "category": "marketing-seo",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-instagram-reels-content-calendar-30-day",
+      "bytes": 2615,
+      "category": "marketing-social",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-tiktok-content-calendar-30-day",
+      "bytes": 2525,
+      "category": "marketing-social",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-facebook-page-setup-and-post-cadence",
+      "bytes": 2537,
+      "category": "marketing-social",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-local-citations-naps-consistency-checker",
+      "bytes": 2641,
+      "category": "marketing-seo",
+      "tier": "pro",
+      "skipak": "barber-marketing-pak"
+    },
+    {
+      "slug": "barber-services-menu-pricing-template",
+      "bytes": 2550,
+      "category": "pricing",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-price-increase-customer-notice-letter",
+      "bytes": 2641,
+      "category": "pricing",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-tip-handling-cash-vs-credit-policy",
+      "bytes": 2615,
+      "category": "pricing",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-tip-pooling-agreement-multi-barber-shop",
+      "bytes": 2611,
+      "category": "business-legal",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-gift-card-sales-policy-with-state-escheat",
+      "bytes": 2664,
+      "category": "pricing",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-loyalty-punch-card-program-design",
+      "bytes": 2588,
+      "category": "marketing",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-referral-rewards-program-design",
+      "bytes": 2558,
+      "category": "marketing",
+      "tier": "pro",
+      "skipak": "barber-customer-ops-pak"
+    },
+    {
+      "slug": "barber-pos-square-vs-clover-vs-toast-comparison",
+      "bytes": 2594,
+      "category": "business-ops",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-end-of-day-deposit-and-change-fund-procedure",
+      "bytes": 2631,
+      "category": "business-ops",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-daily-revenue-report-spreadsheet-template",
+      "bytes": 2581,
+      "category": "business-ops",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-sole-prop-vs-llc-vs-s-corp-decision-tree",
+      "bytes": 2594,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-form-4868-extension-self-employed",
+      "bytes": 2574,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-form-9465-installment-agreement-self-employed-back-tax",
+      "bytes": 2730,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-form-8829-home-office-deduction",
+      "bytes": 2546,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-section-199a-qbi-sstb-phase-out-analysis",
+      "bytes": 2661,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-section-179-equipment-expense-vs-depreciation",
+      "bytes": 2700,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-form-1099-nec-issuance",
+      "bytes": 2547,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-saver-credit-low-income-retirement",
+      "bytes": 2598,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-eitc-self-employment-eligibility",
+      "bytes": 2606,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-form-2106-unreimbursed-employee-expense-state",
+      "bytes": 2689,
+      "category": "tax",
+      "tier": "pro",
+      "skipak": "barber-tax-money-pak"
+    },
+    {
+      "slug": "barber-general-liability-insurance-shopping-guide",
+      "bytes": 2625,
+      "category": "insurance",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-professional-liability-malpractice-insurance",
+      "bytes": 2698,
+      "category": "insurance",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-bop-bundle-insurance-shopping-guide",
+      "bytes": 2581,
+      "category": "insurance",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-disability-income-insurance",
+      "bytes": 2543,
+      "category": "insurance",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-life-insurance-business-owner",
+      "bytes": 2523,
+      "category": "insurance",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    },
+    {
+      "slug": "barber-state-license-renewal-ca",
+      "bytes": 2559,
+      "category": "compliance",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-apprentice-program-setup-tx",
+      "bytes": 2560,
+      "category": "compliance",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-mobile-barber-state-license-rules-fl",
+      "bytes": 2600,
+      "category": "compliance",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-license-application-state",
+      "bytes": 2609,
+      "category": "compliance",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-license-suspension-defense-letter-template",
+      "bytes": 2640,
+      "category": "compliance",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-children-haircut-policy-and-pricing",
+      "bytes": 2573,
+      "category": "pricing",
+      "tier": "pro",
+      "skipak": "barber-pricing-pak"
+    },
+    {
+      "slug": "barber-walk-in-protocol-busy-day",
+      "bytes": 2571,
+      "category": "shop-ops",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-emergency-cleanup-blood-exposure-incident",
+      "bytes": 2616,
+      "category": "compliance",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-product-retail-sales-tax-permit-state-aware",
+      "bytes": 2626,
+      "category": "compliance",
+      "tier": "pro",
+      "skipak": "barber-shop-compliance-pak"
+    },
+    {
+      "slug": "barber-shop-lease-negotiation-checklist-cam-signage-after-hours",
+      "bytes": 2691,
+      "category": "business-legal",
+      "tier": "pro",
+      "skipak": "barber-booth-renter-pak"
+    }
+  ]
+}
