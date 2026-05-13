@@ -3,221 +3,209 @@ import { BuyButton } from "./_components/BuyButton";
 
 export default function Home() {
   return (
-    <main className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-10">
-      <header className="flex items-center justify-between border-b border-[#204538] pb-6">
-        <div className="flex items-center gap-3">
-          <span className="text-4xl font-black leading-none text-[#ff7a18]">
-            Æ
-          </span>
+    <main className="relative z-10">
+      {/* HERO */}
+      <section className="mx-auto w-full max-w-6xl px-6 pt-16 pb-20 md:pt-24 md:pb-28">
+        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr] md:items-center">
           <div>
-            <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
-              AtomEons
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 text-xs uppercase tracking-widest text-[#a7b8ad]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#75ff92]" />
+              ÆoNs Research Lab · est. 2026 · Marco Island
             </p>
-            <h1 className="text-lg font-semibold tracking-tight">ORANGEBOX</h1>
-          </div>
-        </div>
-        <nav className="hidden items-center gap-5 text-sm text-[#a7b8ad] md:flex">
-          <a href="#what-it-is">What it is</a>
-          <a href="#what-it-does">What it does</a>
-          <a href="#requires">Requires</a>
-          <a href="#buy">Buy</a>
-        </nav>
-      </header>
-
-      <section className="grid gap-10 pt-14 md:grid-cols-[1.6fr_1fr] md:items-center">
-        <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 text-xs text-[#75ff92]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#75ff92]" />
-            Live · v1 prototype · single ZIP
-          </p>
-          <h2 className="text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-            ORANGEBOX is <span className="text-[#ff7a18]">now live</span>.
-          </h2>
-          <p className="mt-5 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
-            A private command cockpit built for one operator to run large,
-            complex projects through AI departments, worker systems, and proof
-            gates — without drowning in context or developer noise.
-          </p>
-          <p className="mt-3 max-w-xl text-base text-[#f7f0e4]">
-            It is not another chat interface. It is a real execution surface.
-          </p>
-
-          <div
-            id="buy"
-            className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center"
-          >
-            <BuyButton />
-            <p className="text-xs text-[#a7b8ad]">
-              $49 USD · one-time · no support · instant download
+            <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-tight md:text-7xl">
+              Build like a{" "}
+              <span className="text-[#ff7a18]">serious laboratory</span>.
+            </h1>
+            <p className="mt-6 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
+              AtomEons makes private execution surfaces for one operator
+              running serious AI-assisted projects. Anti-sprawl. Premium
+              coherence. Truth over theater. Real receipts.
             </p>
-          </div>
-        </div>
-
-        <aside className="rounded-xl border border-[#204538] bg-[#071915] p-5 shadow-[0_0_40px_rgba(89,217,255,0.05)]">
-          <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
-            Inside the box
-          </p>
-          <ul className="mt-3 space-y-2 text-sm text-[#f7f0e4]">
-            <li>
-              <span className="text-[#ff7a18]">·</span> Runnable cockpit (Node
-              server + frontend)
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> 92 server endpoints
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> 12 MCP tools for Claude
-              Code
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> 17 department routing
-              lanes
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> Tauri desktop wrapper
-              (optional)
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> Full Opus system manual
-              + system index
-            </li>
-          </ul>
-          <p className="mt-4 border-t border-[#204538] pt-4 text-xs text-[#a7b8ad]">
-            ORANGEBOX runs locally on{" "}
-            <span className="font-mono text-[#75ff92]">127.0.0.1:8787</span>.
-            Your project state stays on your disk. No cloud sync.
-          </p>
-        </aside>
-      </section>
-
-      <section id="what-it-is" className="mt-20 border-t border-[#204538] pt-10">
-        <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
-          What it is
-        </p>
-        <h3 className="mt-2 max-w-3xl text-2xl font-bold tracking-tight md:text-3xl">
-          The operating system layer between you and your AI workforce.
-        </h3>
-        <p className="mt-4 max-w-3xl text-[#a7b8ad]">
-          Built for people running serious projects who want maximum leverage
-          without losing control or clarity. Single-file prototype ready.
-          Modular production version in progress.
-        </p>
-      </section>
-
-      <section id="what-it-does" className="mt-16">
-        <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
-          What it actually does
-        </p>
-        <div className="mt-6 grid gap-5 md:grid-cols-2">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className="rounded-xl border border-[#204538] bg-[#071915] p-5 transition-colors hover:border-[#ff7a18]/40"
-            >
-              <p className="text-sm font-semibold text-[#ff7a18]">{f.tag}</p>
-              <h4 className="mt-1 text-base font-semibold text-[#f7f0e4]">
-                {f.title}
-              </h4>
-              <p className="mt-2 text-sm text-[#a7b8ad]">{f.body}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link
+                href="/orangebox"
+                className="rounded-md border border-[#204538] bg-[#071915] px-5 py-2.5 text-sm font-semibold text-[#f7f0e4] transition-colors hover:border-[#ff7a18]/60"
+              >
+                See ORANGEBOX →
+              </Link>
+              <Link
+                href="/about"
+                className="rounded-md px-5 py-2.5 text-sm text-[#a7b8ad] transition-colors hover:text-[#f7f0e4]"
+              >
+                About the lab
+              </Link>
             </div>
-          ))}
+          </div>
+
+          <aside className="relative">
+            <div className="rounded-2xl border border-[#204538] bg-gradient-to-br from-[#071915] to-[#0a211b] p-6 shadow-[0_0_60px_rgba(255,122,24,0.05)]">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
+                Currently shipping
+              </p>
+              <h2 className="mt-3 text-3xl font-black tracking-tight text-[#ff7a18]">
+                ORANGEBOX
+              </h2>
+              <p className="mt-2 text-sm text-[#f7f0e4]">
+                Private command cockpit for one operator.
+              </p>
+              <p className="mt-3 text-xs text-[#a7b8ad]">
+                Single ZIP · Node 18+ · runs on{" "}
+                <span className="font-mono text-[#75ff92]">
+                  127.0.0.1:8787
+                </span>
+              </p>
+              <div className="mt-5 border-t border-[#204538] pt-5">
+                <p className="text-xs text-[#a7b8ad]">v1 prototype</p>
+                <p className="mt-1 text-2xl font-bold tracking-tight text-[#f7f0e4]">
+                  $49 <span className="text-sm font-normal text-[#a7b8ad]">one-time</span>
+                </p>
+                <div className="mt-4">
+                  <BuyButton />
+                </div>
+                <p className="mt-2 text-[11px] text-[#a7b8ad]">
+                  No support. You figure it out.
+                </p>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section id="requires" className="mt-16 grid gap-6 md:grid-cols-2">
-        <div className="rounded-xl border border-[#204538] bg-[#071915] p-5">
-          <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
-            Requires
+      {/* DOCTRINE */}
+      <section className="border-t border-[#204538] bg-[#04100d]/60">
+        <div className="mx-auto w-full max-w-6xl px-6 py-20">
+          <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
+            Doctrine
           </p>
-          <ul className="mt-3 space-y-2 text-sm text-[#f7f0e4]">
-            <li>· Node.js 18 or newer</li>
-            <li>· A modern browser (Chrome, Edge, Firefox, Safari)</li>
-            <li>· Windows, macOS, or Linux</li>
-            <li>
-              · Optional: a second machine for{" "}
-              <span className="font-mono text-[#75ff92]">Codexa</span> workers
-            </li>
-            <li>· Optional: Tauri toolchain to build the desktop app</li>
-          </ul>
+          <h2 className="mt-2 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+            Five rules. They run the lab.
+          </h2>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                className="rounded-xl border border-[#204538] bg-[#071915] p-5"
+              >
+                <p className="text-sm font-semibold text-[#ff7a18]">
+                  {p.tag}
+                </p>
+                <h3 className="mt-1 text-base font-semibold text-[#f7f0e4]">
+                  {p.title}
+                </h3>
+                <p className="mt-2 text-sm text-[#a7b8ad]">{p.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="rounded-xl border border-[#5a2222] bg-[#1a0a0c] p-5">
-          <p className="text-xs uppercase tracking-widest text-[#ff4f5e]">
-            No support
+      </section>
+
+      {/* SHIP */}
+      <section>
+        <div className="mx-auto w-full max-w-6xl px-6 py-20">
+          <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
+            What we ship
           </p>
-          <p className="mt-3 text-sm text-[#f7f0e4]">
-            $49 one time, you figure it out. The full Opus system manual is
-            inside the box. No tickets, no DMs, no replies. If you want
-            hand-holding, this is not for you.
-          </p>
-          <p className="mt-3 text-sm text-[#a7b8ad]">
-            Refunds within 14 days if the file fails to download. See{" "}
-            <Link href="/legal/refund" className="underline">
-              refund policy
+          <h2 className="mt-2 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+            One product, real, finished enough to charge for.
+          </h2>
+          <div className="mt-10 grid gap-6">
+            <Link
+              href="/orangebox"
+              className="group block rounded-2xl border border-[#204538] bg-[#071915] p-8 transition-colors hover:border-[#ff7a18]/40"
+            >
+              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
+                    Active
+                  </p>
+                  <h3 className="mt-2 text-2xl font-black tracking-tight text-[#ff7a18] md:text-3xl">
+                    ORANGEBOX
+                  </h3>
+                  <p className="mt-2 max-w-xl text-[#f7f0e4]">
+                    Private command cockpit for one operator. Vision Rail,
+                    Party Line, Codexa worker rail, receipts, MCP tools for
+                    Claude Code. Single-file prototype. Node 18+.
+                  </p>
+                  <p className="mt-4 text-sm text-[#a7b8ad]">
+                    $49 USD · one-time · no support →{" "}
+                    <span className="text-[#ff7a18] underline-offset-4 group-hover:underline">
+                      learn more
+                    </span>
+                  </p>
+                </div>
+                <span className="text-3xl font-black text-[#a7b8ad] transition-colors group-hover:text-[#ff7a18]">
+                  →
+                </span>
+              </div>
             </Link>
-            .
+
+            <div className="rounded-2xl border border-dashed border-[#204538] bg-transparent p-8">
+              <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
+                    In progress
+                  </p>
+                  <h3 className="mt-2 text-xl font-bold tracking-tight text-[#a7b8ad]">
+                    Modular ORANGEBOX production version
+                  </h3>
+                  <p className="mt-2 max-w-xl text-sm text-[#a7b8ad]">
+                    Resilient luxury architecture. Trinity layout. Local-first
+                    vault. Ghost workers. Adaptive throttling. Time scrubber.
+                  </p>
+                </div>
+                <span className="text-xs text-[#a7b8ad]">soon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-[#204538] bg-[#0a211b]">
+        <div className="mx-auto w-full max-w-6xl px-6 py-16 text-center">
+          <h2 className="text-balance text-3xl font-bold tracking-tight md:text-4xl">
+            Want maximum leverage without losing control?
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-[#a7b8ad]">
+            Buy the cockpit. Run it on your own machine. Read the manual that
+            ships inside the box. Ship.
+          </p>
+          <div className="mt-7 flex justify-center">
+            <BuyButton />
+          </div>
+          <p className="mt-3 text-xs text-[#a7b8ad]">
+            $49 USD · one-time · no support · instant download
           </p>
         </div>
       </section>
-
-      <section className="mt-20 rounded-2xl border border-[#204538] bg-[#0a211b] p-8 text-center">
-        <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
-          Ship with the cockpit, not without it.
-        </h3>
-        <p className="mx-auto mt-3 max-w-xl text-[#a7b8ad]">
-          One operator. Real execution surface. Everything proof-backed.
-        </p>
-        <div className="mt-6 flex justify-center">
-          <BuyButton />
-        </div>
-        <p className="mt-3 text-xs text-[#a7b8ad]">
-          $49 USD · one-time · no support
-        </p>
-      </section>
-
-      <footer className="mt-24 flex flex-col gap-4 border-t border-[#204538] pt-8 text-xs text-[#a7b8ad] md:flex-row md:items-center md:justify-between">
-        <p>
-          AtomEons Systems Laboratory · Marco Island, FL ·{" "}
-          <a href="mailto:a.mccree@gmail.com">a.mccree@gmail.com</a>
-        </p>
-        <nav className="flex flex-wrap gap-4">
-          <Link href="/legal/terms">Terms</Link>
-          <Link href="/legal/privacy">Privacy</Link>
-          <Link href="/legal/refund">Refunds</Link>
-        </nav>
-      </footer>
     </main>
   );
 }
 
-const features: { tag: string; title: string; body: string }[] = [
+const pillars: { tag: string; title: string; body: string }[] = [
   {
-    tag: "Vision Rail",
-    title: "Live mission board",
-    body: "Project spine, DAG nodes, current node, blockers, progress, and next action — all in one rail. Your project's truth lives on disk; the cockpit reads it.",
+    tag: "01",
+    title: "One organism, many lenses",
+    body: "AtomEons is treated as a single coherent system, not a pile of disconnected apps. Every surface respects the others.",
   },
   {
-    tag: "Party Line",
-    title: "Structured department updates",
-    body: "Every department posts short status, evidence, blockers, and next action. Confidence and receipt paths included. No raw transcript dump.",
+    tag: "02",
+    title: "Truth over theater",
+    body: "We separate observed, inferred, speculative, and desired states. Claims need receipts. Memory notes are not proof.",
   },
   {
-    tag: "Smart Model Routing",
-    title: "Triad lanes, not random agents",
-    body: "STRATEGY, ENGINEERING, and EXPERIENCE triad heads route work to the right brain. Frontier, local, or Codexa worker — picked deliberately.",
+    tag: "03",
+    title: "Anti-sprawl",
+    body: "Reject everything-app drift. One major objective at a time. Bounded execution beats swarm theater.",
   },
   {
-    tag: "Receipts & Proof",
-    title: "Verified, not vibes",
-    body: "Every meaningful action writes a receipt: result, evidence, blockers, next action, files touched, commands run, proof paths, rollback note.",
+    tag: "04",
+    title: "Premium coherence",
+    body: "Calm. Legible. Confident. Cockpit-grade surfaces, not developer noise. Proof is a first-class object.",
   },
   {
-    tag: "Codexa Worker Rail",
-    title: "Heavy work off the cockpit",
-    body: "Long builds, tests, screenshots, indexing, benchmarks run on a separate worker rail. The cockpit stays responsive.",
-  },
-  {
-    tag: "Command Surface",
-    title: "Natural-language operator chat",
-    body: "Type intent. ORANGEBOX turns it into project contracts, spine, DAG actions, and routed department work. The chat is the steering wheel.",
+    tag: "05",
+    title: "Full effort, every time",
+    body: "Every output earns its place. No coasting on the quiet stuff, no padding on the loud stuff. Mom is watching.",
   },
 ];

@@ -1,24 +1,29 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Header } from "./_components/Header";
+import { Footer } from "./_components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
-  title: "ORANGEBOX — Private Command Cockpit | AtomEons",
+  title: {
+    default: "AtomEons — Build like a serious laboratory",
+    template: "%s | AtomEons",
+  },
   description:
-    "ORANGEBOX is a private, local-first command cockpit for one operator running large projects through AI departments, worker rails, and proof gates. $49 one-time download.",
+    "AtomEons Systems Laboratory builds private, local-first execution surfaces for one operator running serious AI-assisted projects. Anti-sprawl, premium coherence, real receipts.",
   openGraph: {
-    title: "ORANGEBOX — Private Command Cockpit",
+    title: "AtomEons — Build like a serious laboratory",
     description:
-      "Local-first cockpit. Vision Rail, Party Line, Codexa workers, receipts. $49 one-time. No support.",
+      "Private execution surfaces for serious operators. ORANGEBOX prototype $49 one-time download.",
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ORANGEBOX — Private Command Cockpit",
+    title: "AtomEons — Build like a serious laboratory",
     description:
-      "Local-first cockpit for one operator. $49 one-time. No support.",
+      "Private execution surfaces for serious operators. ORANGEBOX prototype $49.",
   },
   robots: { index: true, follow: true },
 };
@@ -31,7 +36,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-[#04100d] text-[#f7f0e4]">
-        {children}
+        <Header />
+        <div className="flex-1">{children}</div>
+        <Footer />
       </body>
     </html>
   );

@@ -1,10 +1,15 @@
-# atomeons.com → ORANGEBOX storefront — Operator handoff
+# atomeons.com — full AE brand website + ORANGEBOX store — Operator handoff
 
 Status: **build green, deploy-ready**. You finish auth-gated steps below.
 
 ## What's already done
 - Next.js 16 + Tailwind v4 + Stripe SDK installed (build passes)
-- 10 routes implemented: landing, buy, cancel, success, terms, privacy, refund, /api/{checkout,webhook,download}
+- 12 routes implemented:
+  - Brand pages: `/` (AE home), `/orangebox` (product + buy), `/about` (lab + doctrine)
+  - Legal: `/legal/{terms,privacy,refund}`
+  - Transactional: `/success`, `/cancel`
+  - API: `/api/{checkout,webhook,download}`
+- Shared `<Header>` + `<Footer>` on every page via root layout
 - Product ZIP built: `product-build/orangebox-v1.zip` (302 KB)
 - SHA-256: `6352368baf4235e2e3ab703dae8f9165cb2a35dced910110e97b4280e4ef7a8e`
 

@@ -1,6 +1,6 @@
-# atomeons.com — ORANGEBOX storefront
+# atomeons.com — AE brand website + ORANGEBOX store
 
-Next.js 16 + Stripe Checkout. Sells the ORANGEBOX prototype as a $49 one-time download.
+Next.js 16 + Stripe Checkout. Brand site for AtomEons / ÆoNs Research Lab, plus a complete e-commerce surface for the ORANGEBOX prototype ($49 one-time download).
 
 ## Stack
 - Next.js 16 (App Router) + React 19 + Tailwind v4
@@ -32,10 +32,19 @@ pnpm dev
 ```
 
 ## Routes
-- `GET /` — landing page
+**Brand**
+- `GET /` — AE brand home (hero, doctrine, what-we-ship, CTA)
+- `GET /orangebox` — full ORANGEBOX product page + buy flow
+- `GET /about` — Atom + ÆoNs Research Lab + doctrine
+
+**Store**
 - `POST /api/checkout` — creates Stripe Checkout Session, returns `{url}`
 - `POST /api/webhook` — Stripe webhook; mints token, sends email
 - `GET /api/download?t=<token>` — verifies HMAC, redirects to blob URL
 - `GET /success?session_id=...` — post-purchase confirmation
 - `GET /cancel` — Stripe cancel return
-- `GET /legal/{terms,privacy,refund}` — legal pages
+
+**Legal**
+- `GET /legal/{terms,privacy,refund}`
+
+Shared `<Header>` + `<Footer>` on every page via root layout.
