@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #04100d;
+  --color-fg: #f7f0e4;
+  --color-muted: #a7b8ad;
+  --color-line: #204538;
+  --color-card: #071915;
+  --color-card2: #0a211b;
+  --color-orange: #ff7a18;
+  --color-amber: #ffc46b;
+  --color-green: #75ff92;
+  --color-red: #ff4f5e;
+  --color-blue: #59d9ff;
+  --color-trace: #1b8b75;
+  --color-solder: #c7f8df;
+  --color-ink: #06110e;
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-mono:
+    ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
+html,
+body {
+  background: #04100d;
+  color: #f7f0e4;
+  font-family: var(--font-sans);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(89, 217, 255, 0.10), transparent 26%),
+    radial-gradient(circle at 88% 0%, rgba(255, 122, 24, 0.10), transparent 28%),
+    linear-gradient(90deg, rgba(27, 139, 117, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(27, 139, 117, 0.14) 1px, transparent 1px),
+    #04100d;
+  background-size: auto, auto, 42px 42px, 42px 42px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 18%,
+      rgba(89, 217, 255, 0.12) 18% 18.2%,
+      transparent 18.2% 64%,
+      rgba(255, 196, 107, 0.12) 64% 64.2%,
+      transparent 64.2%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 18px,
+      rgba(117, 255, 146, 0.05) 18px 19px,
+      transparent 19px 58px
+    );
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+a {
+  color: #ff7a18;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background: rgba(255, 122, 24, 0.3);
+  color: #f7f0e4;
+}
