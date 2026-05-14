@@ -101,6 +101,46 @@ export default function OrangeBox() {
         </aside>
       </section>
 
+      {/* COCKPIT SCREENSHOT — real product UI, captured on operator machine */}
+      <section className="mt-16">
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
+              ::actual cockpit
+            </p>
+            <h2 className="mt-1 text-2xl font-bold tracking-tight md:text-3xl">
+              Here&apos;s what you&apos;re buying.
+            </h2>
+            <p className="mt-2 max-w-xl text-sm text-[#a7b8ad]">
+              Real screenshot from the operator&apos;s running cockpit.
+              Not a marketing render. Not a wireframe. The actual UI you
+              get when you run{" "}
+              <span className="font-mono text-[#75ff92]">npm run start</span>.
+            </p>
+          </div>
+          <p className="font-mono text-[10px] uppercase tracking-widest text-[#1b8b75]">
+            captured 2026-05-13 · 127.0.0.1:8787
+          </p>
+        </div>
+        {/* Use plain <img> intentionally — the screenshot is already
+            optimized at source size and we want zero Next/Image client JS
+            on the product page */}
+        <div className="overflow-hidden rounded-xl border border-[#204538] bg-[#04100d] shadow-[0_0_60px_rgba(255,122,24,0.12)]">
+          <img
+            src="/screens/cockpit-live.png"
+            alt="ORANGEBOX cockpit running locally — Command, Codexa Bridge, project rail, and live party-line feed visible"
+            width={1600}
+            height={1000}
+            loading="lazy"
+            decoding="async"
+            className="block h-auto w-full"
+          />
+        </div>
+        <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
+          ::evidence orangebox-command-chat-hub-live2-20260513.png
+        </p>
+      </section>
+
       {/* PREREQS — Mirrors fix: disclose what you need before this works */}
       <section className="mt-12 rounded-xl border border-[#204538] bg-[#071915]/60 p-6">
         <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
