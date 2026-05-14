@@ -57,7 +57,7 @@ export default function OrangeBox() {
           >
             <BuyButton />
             <p className="text-xs text-[#a7b8ad]">
-              $49 USD · one-time · no support · instant download
+              $49 USD · one-time · no support · download on payment confirmed
             </p>
           </div>
         </div>

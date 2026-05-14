@@ -15,6 +15,20 @@ type Release = {
 
 const RELEASES: Release[] = [
   {
+    v: "v7",
+    date: "2026-05-14",
+    headline: "Checkmate + design panel approval pass",
+    bullets: [
+      "Stylized-spelling redirects: /orangeb0x, /blueb0x, /bluebox → /orangebox via middleware (308 permanent)",
+      "Mirrors fix: SystemLog header strip explicitly labeled ::sample (was reading as live system status)",
+      "Mirrors fix: /success removed false 'single-purchase' claim, changed 'Sent to' → 'Confirmed for', added explicit 'this is the only place this link appears' microcopy",
+      "Mirrors fix: 'instant download' copy changed to 'download on payment confirmed' across home + /orangebox",
+      "UX fix: home hero card primary CTA changed from BuyButton to 'See ORANGEBOX →' so cold visitors qualify before purchasing",
+      "UX polish: removed dead isMft branch in SystemLog (no MFT frames remain post-v6)",
+      "UX polish: cleaned dangerouslySetInnerHTML on changelog bullets (use plain text)",
+    ],
+  },
+  {
     v: "v6",
     date: "2026-05-14",
     headline: "Comprehensive upgrade pass",
@@ -25,7 +39,7 @@ const RELEASES: Release[] = [
       "Sharper /success and /cancel pages matching brand tone",
       "/changelog page (this one)",
       "Sticky buy bar on /orangebox after scroll past hero",
-      "&quot;Is this for you&quot; qualification block reduces wrong-fit support burden",
+      "Is-this-for-you qualification block reduces wrong-fit support burden",
       "JSON-LD structured data for richer search appearance",
       "Removed manifesto layer from public site (preserved internally for the lab)",
     ],
@@ -144,7 +158,7 @@ export default function Changelog() {
               {r.bullets.map((b, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-[#ff7a18]">·</span>
-                  <span dangerouslySetInnerHTML={{ __html: b }} />
+                  <span>{b}</span>
                 </li>
               ))}
             </ul>

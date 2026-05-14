@@ -23,30 +23,21 @@ export function SystemLog({ intervalMs = 4200 }: { intervalMs?: number }) {
   }, [intervalMs]);
 
   const frame = FRAMES[i];
-  const isMft = frame.tag === "MFT";
 
   return (
     <div
       className="border-b border-[#204538] bg-[#04100d]/95 backdrop-blur-sm"
       role="status"
       aria-live="polite"
+      aria-label="ORANGEBOX cockpit status sample"
     >
       <div className="mx-auto flex w-full max-w-6xl items-center gap-3 px-6 py-1.5 font-mono text-[10px] tracking-tight">
-        <span
-          className={`shrink-0 rounded-sm px-1.5 py-0.5 text-[9px] font-bold ${
-            isMft
-              ? "bg-[#1a0a0c] text-[#ff4f5e]"
-              : "bg-[#0a211b] text-[#75ff92]"
-          }`}
-        >
+        <span className="shrink-0 rounded-sm bg-[#0a211b] px-1.5 py-0.5 text-[9px] font-bold text-[#75ff92]">
           {frame.tag}
         </span>
-        <span
-          className={`truncate ${
-            isMft ? "italic text-[#ffc46b]" : "text-[#a7b8ad]"
-          }`}
-        >
-          {frame.text}
+        <span className="truncate text-[#a7b8ad]">{frame.text}</span>
+        <span className="ml-auto shrink-0 font-mono text-[9px] uppercase tracking-widest text-[#1b8b75]">
+          ::sample
         </span>
       </div>
     </div>

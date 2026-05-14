@@ -79,11 +79,14 @@ export default function Home() {
                 <p className="text-2xl font-bold tracking-tight text-[#f7f0e4]">
                   $49 <span className="text-sm font-normal text-[#a7b8ad]">one-time</span>
                 </p>
-                <div className="mt-4">
-                  <BuyButton />
-                </div>
+                <Link
+                  href="/orangebox"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b]"
+                >
+                  See ORANGEBOX →
+                </Link>
                 <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
-                  No support. You figure it out.
+                  Read the prereqs · then buy.
                 </p>
               </div>
             </div>
@@ -158,7 +161,7 @@ export default function Home() {
             <BuyButton />
           </div>
           <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
-            $49 USD · one-time · no support · instant download
+            $49 USD · one-time · no support · download on payment confirmed
           </p>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getStripe } from "@/lib/stripe";
 import { mintDownloadToken } from "@/lib/token";
+import { XAdsConversion } from "../_components/XAdsConversion";
 
 export const dynamic = "force-dynamic";
 
@@ -61,6 +62,13 @@ export default async function Success({
   return (
     <main className="relative z-10 mx-auto w-full max-w-2xl px-6 pt-16 pb-24">
       {resolved.state === "ok" ? (
+        <>
+          <XAdsConversion
+            sessionId={session_id ?? ""}
+            value={49}
+            currency="USD"
+            email={resolved.email}
+          />
         <div className="rounded-xl border border-[#75ff92]/50 bg-[#0a211b] p-8">
           <p className="text-xs uppercase tracking-widest text-[#75ff92]">
             Payment verified · download ready
@@ -69,8 +77,8 @@ export default async function Success({
             Welcome to ORANGEBOX.
           </h1>
           <p className="mt-4 text-[#a7b8ad]">
-            Your purchase is confirmed. The download link below is signed,
-            single-purchase, and valid for 30 days. Save the ZIP now.
+            Your purchase is confirmed. The download link below is signed
+            and valid for 30 days. Save the ZIP now.
           </p>
 
           <a
@@ -80,17 +88,19 @@ export default async function Success({
             ↓ Download orangebox-v1.zip
           </a>
 
-          <div className="mt-6 rounded-lg border border-[#204538] bg-[#04100d] p-4">
-            <p className="text-[10px] uppercase tracking-widest text-[#a7b8ad]">
-              Bookmark this URL
+          <div className="mt-6 rounded-lg border border-[#5a3210] bg-[#1a0f00] p-4">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ffc46b]">
+              ::important
             </p>
-            <p className="mt-1 break-all font-mono text-xs text-[#75ff92]">
-              {resolved.downloadUrl}
+            <p className="mt-1 text-sm text-[#f7f0e4]">
+              This page is the only place this link appears right now.
+              Bookmark it before you close the tab. (Email delivery is
+              optional and depends on operator setup.)
             </p>
           </div>
 
           <p className="mt-5 text-xs text-[#a7b8ad]">
-            Sent to:{" "}
+            Confirmed for:{" "}
             <span className="font-mono text-[#f7f0e4]">{resolved.email}</span>
           </p>
           {session_id ? (
@@ -100,6 +110,7 @@ export default async function Success({
             </p>
           ) : null}
         </div>
+        </>
       ) : null}
 
       {resolved.state === "pending" ? (
