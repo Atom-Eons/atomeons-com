@@ -1,13 +1,12 @@
 import Link from "next/link";
+import { AtomMark } from "./AtomMark";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-[#204538] bg-[#04100d]/85 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="group flex items-center gap-3">
-          <span className="text-3xl font-black leading-none text-[#ff7a18] transition-transform group-hover:-translate-y-px">
-            Æ
-          </span>
+          <AtomMark size={36} speed={9} />
           <div>
             <p className="text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
               ÆoNs Research Lab

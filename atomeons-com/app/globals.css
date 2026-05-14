@@ -76,3 +76,38 @@ a:hover {
   background: rgba(255, 122, 24, 0.3);
   color: #f7f0e4;
 }
+
+@keyframes atom-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes atom-spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 24, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 122, 24, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 24, 0);
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="atom-spin"] {
+    animation: none !important;
+  }
+  .pulse-ring {
+    animation: none !important;
+  }
+}

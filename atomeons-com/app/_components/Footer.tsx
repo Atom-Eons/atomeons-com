@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AtomMark } from "./AtomMark";
 
 export function Footer() {
   return (
@@ -6,9 +7,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-black leading-none text-[#ff7a18]">
-              Æ
-            </span>
+            <AtomMark size={32} speed={11} />
             <div>
               <p className="text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
                 ÆoNs Research Lab

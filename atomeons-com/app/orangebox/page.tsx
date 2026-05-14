@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BuyButton } from "../_components/BuyButton";
+import { CockpitTicker } from "../_components/CockpitTicker";
 
 export const metadata = {
   title: "ORANGEBOX — Private Command Cockpit",
@@ -17,9 +18,9 @@ export default function OrangeBox() {
 
       <section className="grid gap-10 pt-8 md:grid-cols-[1.6fr_1fr] md:items-center">
         <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 text-xs text-[#75ff92]">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 font-mono text-[11px] text-[#75ff92]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#75ff92]" />
-            Live · v1 prototype · single ZIP
+            92 endpoints · 17 lanes · 12 MCP tools
           </p>
           <h1 className="text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
             ORANGEBOX is <span className="text-[#ff7a18]">now live</span>.
@@ -33,9 +34,13 @@ export default function OrangeBox() {
             It is not another chat interface. It is a real execution surface.
           </p>
 
+          <div className="mt-6">
+            <CockpitTicker />
+          </div>
+
           <div
             id="buy"
-            className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center"
+            className="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center"
           >
             <BuyButton />
             <p className="text-xs text-[#a7b8ad]">
@@ -44,7 +49,7 @@ export default function OrangeBox() {
           </div>
         </div>
 
-        <aside className="rounded-xl border border-[#204538] bg-[#071915] p-5 shadow-[0_0_40px_rgba(89,217,255,0.05)]">
+        <aside className="rounded-xl border border-[#204538] bg-[#071915] p-5 shadow-[0_0_60px_rgba(255,122,24,0.12)]">
           <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
             Inside the box
           </p>
@@ -81,17 +86,80 @@ export default function OrangeBox() {
         </aside>
       </section>
 
+      {/* PREREQS — Mirrors fix: disclose what you need before this works */}
+      <section className="mt-12 rounded-xl border border-[#204538] bg-[#071915]/60 p-6">
+        <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
+          What you need before this works
+        </p>
+        <h2 className="mt-2 text-xl font-bold tracking-tight md:text-2xl">
+          Read this before you buy.
+        </h2>
+        <div className="mt-5 grid gap-6 md:grid-cols-2">
+          <div>
+            <p className="text-[10px] uppercase tracking-widest text-[#75ff92]">
+              Required
+            </p>
+            <ul className="mt-2 space-y-1.5 text-sm text-[#f7f0e4]">
+              <li>· Node.js 18 or newer (`node --version`)</li>
+              <li>· A modern browser (Chrome, Edge, Firefox, Safari)</li>
+              <li>· Windows, macOS, or Linux</li>
+              <li>
+                ·{" "}
+                <span className="text-[#ffc46b]">
+                  A Claude or GPT API key
+                </span>{" "}
+                if you want the Command Surface to actually route work to a
+                frontier model. Without it the cockpit boots, the UI works,
+                department routing fails honestly with FAILED indicators (not
+                fake green).
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-[10px] uppercase tracking-widest text-[#a7b8ad]">
+              Optional (advanced)
+            </p>
+            <ul className="mt-2 space-y-1.5 text-sm text-[#a7b8ad]">
+              <li>
+                · <span className="text-[#f7f0e4]">Ollama</span> running locally
+                with the specific 4-bit quantized models if you want the
+                STRATEGY / ENGINEERING / EXPERIENCE triad lanes (
+                <span className="font-mono text-[11px]">llama3.3:70b</span>,{" "}
+                <span className="font-mono text-[11px]">qwen2.5-coder:32b</span>
+                )
+              </li>
+              <li>
+                · <span className="text-[#f7f0e4]">A second machine</span> on
+                your LAN for the{" "}
+                <span className="font-mono text-[#75ff92]">Codexa</span> worker
+                rail (heavy build/test/scan offload)
+              </li>
+              <li>
+                · <span className="text-[#f7f0e4]">Tauri toolchain</span> if
+                you want to build the desktop wrapper instead of using the
+                browser
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p className="mt-5 border-t border-[#204538] pt-4 text-xs text-[#a7b8ad]">
+          The cockpit, frontend, MCP tools, project DAG, party-line, and
+          receipts work standalone. The triad lanes and Codexa worker rail
+          require the optional dependencies above.
+        </p>
+      </section>
+
       <section className="mt-20 border-t border-[#204538] pt-10">
         <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
           What it is
         </p>
         <h2 className="mt-2 max-w-3xl text-2xl font-bold tracking-tight md:text-3xl">
-          The operating system layer between you and your AI workforce.
+          One thread. The whole project. No rebuild when the model forgets.
         </h2>
         <p className="mt-4 max-w-3xl text-[#a7b8ad]">
           Built for people running serious projects who want maximum leverage
-          without losing control or clarity. Single-file prototype ready.
-          Modular production version in progress.
+          without losing control or clarity. Single ZIP. Modular production
+          version being built in the same cockpit it will replace.
         </p>
       </section>
 
@@ -115,47 +183,30 @@ export default function OrangeBox() {
         </div>
       </section>
 
-      <section className="mt-16 grid gap-6 md:grid-cols-2">
-        <div className="rounded-xl border border-[#204538] bg-[#071915] p-5">
-          <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
-            Requires
-          </p>
-          <ul className="mt-3 space-y-2 text-sm text-[#f7f0e4]">
-            <li>· Node.js 18 or newer</li>
-            <li>· A modern browser (Chrome, Edge, Firefox, Safari)</li>
-            <li>· Windows, macOS, or Linux</li>
-            <li>
-              · Optional: a second machine for{" "}
-              <span className="font-mono text-[#75ff92]">Codexa</span> workers
-            </li>
-            <li>· Optional: Tauri toolchain to build the desktop app</li>
-          </ul>
-        </div>
-        <div className="rounded-xl border border-[#5a2222] bg-[#1a0a0c] p-5">
-          <p className="text-xs uppercase tracking-widest text-[#ff4f5e]">
-            No support
-          </p>
-          <p className="mt-3 text-sm text-[#f7f0e4]">
-            $49 one time, you figure it out. The full Opus system manual is
-            inside the box. No tickets, no DMs, no replies. If you want
-            hand-holding, this is not for you.
-          </p>
-          <p className="mt-3 text-sm text-[#a7b8ad]">
-            Refunds within 14 days if the file fails to download. See{" "}
-            <Link href="/legal/refund" className="underline">
-              refund policy
-            </Link>
-            .
-          </p>
-        </div>
+      <section className="mt-16 rounded-xl border border-[#5a2222] bg-[#1a0a0c] p-5">
+        <p className="text-xs uppercase tracking-widest text-[#ff4f5e]">
+          No support
+        </p>
+        <p className="mt-3 text-sm text-[#f7f0e4]">
+          $49 one time, you figure it out. The full Opus system manual is
+          inside the box. No tickets, no DMs, no replies. If you want
+          hand-holding, this is not for you.
+        </p>
+        <p className="mt-3 text-sm text-[#a7b8ad]">
+          Refunds within 14 days if the file fails to download. See{" "}
+          <Link href="/legal/refund" className="underline">
+            refund policy
+          </Link>
+          .
+        </p>
       </section>
 
       <section className="mt-20 rounded-2xl border border-[#204538] bg-[#0a211b] p-8 text-center">
         <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-          Ship with the cockpit, not without it.
+          The manual is inside the box. Everything else is on you.
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-[#a7b8ad]">
-          One operator. Real execution surface. Everything proof-backed.
+          One operator. Real execution surface. Receipts, not vibes.
         </p>
         <div className="mt-6 flex justify-center">
           <BuyButton />

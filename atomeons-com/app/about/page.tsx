@@ -15,13 +15,21 @@ export default function About() {
       <h1 className="mt-2 text-4xl font-black tracking-tight md:text-5xl">
         About AtomEons.
       </h1>
+
       <p className="mt-6 text-lg text-[#a7b8ad]">
         AtomEons Systems Laboratory is the solo lab of{" "}
         <span className="text-[#f7f0e4]">Atom McCree</span> — independent
         founder and researcher operating out of Marco Island, Florida.
       </p>
+
       <p className="mt-3 text-lg text-[#a7b8ad]">
-        The lab builds private, local-first execution surfaces for one
+        Every AI tool I tried put the operator inside the model&apos;s
+        context. I wanted the operator outside it, with a real cockpit. So I
+        built one.
+      </p>
+
+      <p className="mt-3 text-lg text-[#a7b8ad]">
+        The lab now ships private, local-first execution surfaces for one
         operator running serious AI-assisted projects.
       </p>
 
@@ -32,7 +40,7 @@ export default function About() {
           What we make
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-          Cockpits, not chatbots.
+          One execution surface. Built for the lab, not the market.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
           Most AI tooling is either a chat box or a developer dashboard.
@@ -41,12 +49,11 @@ export default function About() {
           drowned in context, terminal noise, and unverified claims.
         </p>
         <p className="mt-3 text-[#a7b8ad]">
-          AtomEons builds the layer above. A real execution surface: one
-          mission thread per project, structured department status, real
-          receipts, model lane routing, worker rails, proof gates. The
-          operator sees what is happening, what is verified, what is
-          blocked, and what to do next — without losing control or
-          clarity.
+          AtomEons builds the layer above. One mission thread per project.
+          Structured department status. Real receipts. Model lane routing.
+          Worker rails. Proof gates. The operator sees what is happening,
+          what is verified, what is blocked, and what to do next — without
+          losing control or clarity.
         </p>
       </section>
 
@@ -57,57 +64,64 @@ export default function About() {
           Doctrine
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-          The rules the lab actually runs by.
+          Five rules. They run the lab.
         </h2>
-        <ul className="mt-6 space-y-5 text-[#f7f0e4]">
-          <li>
-            <p className="text-base font-semibold text-[#ff7a18]">
-              One organism, many lenses.
-            </p>
-            <p className="mt-1 text-sm text-[#a7b8ad]">
-              AtomEons is one system, not a pile of unrelated apps. Every
-              surface respects every other. Rooms are views over shared
-              primitives.
-            </p>
-          </li>
-          <li>
-            <p className="text-base font-semibold text-[#ff7a18]">
-              Truth over elegant fiction.
-            </p>
-            <p className="mt-1 text-sm text-[#a7b8ad]">
-              Observed, inferred, speculative, and desired are kept
-              distinct. A claim is not verified unless there is a receipt,
-              proof artifact, deterministic check, or explicit operator
-              decision. No fake green.
+        <ul className="mt-6 space-y-3 text-[#f7f0e4]">
+          <li className="flex gap-3">
+            <span className="font-mono text-sm text-[#a7b8ad]">01</span>
+            <p>
+              <span className="font-semibold text-[#ff7a18]">
+                One organism, many lenses.
+              </span>{" "}
+              <span className="text-[#a7b8ad]">
+                Every surface respects every other.
+              </span>
             </p>
           </li>
-          <li>
-            <p className="text-base font-semibold text-[#ff7a18]">
-              Anti-sprawl.
-            </p>
-            <p className="mt-1 text-sm text-[#a7b8ad]">
-              Reject everything-app drift. One major objective at a time.
-              Bounded execution beats swarm theater. Smaller, calmer,
-              sharper.
-            </p>
-          </li>
-          <li>
-            <p className="text-base font-semibold text-[#ff7a18]">
-              Premium coherence.
-            </p>
-            <p className="mt-1 text-sm text-[#a7b8ad]">
-              Calm. Legible. Confident. The cockpit is an instrument
-              panel, not a transcript dump. Proof is a first-class object.
+          <li className="flex gap-3">
+            <span className="font-mono text-sm text-[#a7b8ad]">02</span>
+            <p>
+              <span className="font-semibold text-[#ff7a18]">
+                Truth over elegant fiction.
+              </span>{" "}
+              <span className="text-[#a7b8ad]">
+                Claims need receipts. No fake green.
+              </span>
             </p>
           </li>
-          <li>
-            <p className="text-base font-semibold text-[#ff7a18]">
-              Full effort, every time.
+          <li className="flex gap-3">
+            <span className="font-mono text-sm text-[#a7b8ad]">03</span>
+            <p>
+              <span className="font-semibold text-[#ff7a18]">
+                Anti-sprawl.
+              </span>{" "}
+              <span className="text-[#a7b8ad]">
+                One major objective at a time. Bounded execution beats
+                swarm theater.
+              </span>
             </p>
-            <p className="mt-1 text-sm text-[#a7b8ad]">
-              Every response, every line of code, every commit message
-              earns its place. No coasting on the quiet stuff. No
-              shortcuts hidden behind good prose.
+          </li>
+          <li className="flex gap-3">
+            <span className="font-mono text-sm text-[#a7b8ad]">04</span>
+            <p>
+              <span className="font-semibold text-[#ff7a18]">
+                Premium coherence.
+              </span>{" "}
+              <span className="text-[#a7b8ad]">
+                The cockpit is an instrument panel, not a transcript dump.
+              </span>
+            </p>
+          </li>
+          <li className="flex gap-3">
+            <span className="font-mono text-sm text-[#a7b8ad]">05</span>
+            <p>
+              <span className="font-semibold text-[#ff7a18]">
+                Full effort, every time.
+              </span>{" "}
+              <span className="text-[#a7b8ad]">
+                Every output earns its place. No coasting on the quiet
+                stuff.
+              </span>
             </p>
           </li>
         </ul>
@@ -152,7 +166,8 @@ export default function About() {
           Contact
         </p>
         <p className="mt-3 text-[#f7f0e4]">
-          For business: <a href="mailto:a.mccree@gmail.com">a.mccree@gmail.com</a>
+          For business:{" "}
+          <a href="mailto:a.mccree@gmail.com">a.mccree@gmail.com</a>
         </p>
         <p className="mt-1 text-sm text-[#a7b8ad]">
           AtomEons does not run a support desk. The lab ships, then ships

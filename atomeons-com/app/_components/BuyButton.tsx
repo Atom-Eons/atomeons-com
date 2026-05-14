@@ -30,7 +30,7 @@ export function BuyButton() {
       <button
         onClick={buy}
         disabled={loading}
-        className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b] disabled:cursor-not-allowed disabled:opacity-60"
+        className="pulse-ring inline-flex items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {loading ? "Opening checkout…" : "Buy ORANGEBOX · $49"}
       </button>
