@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "AtomEons — Build like a serious laboratory";
+export const alt = "AtomEons — Ship real projects through AI";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -71,7 +71,7 @@ export default function OG() {
                 color: "#a7b8ad",
               }}
             >
-              ÆoNs Research Lab
+              Software · Books · Apps · LLMs
             </p>
             <p
               style={{
@@ -97,7 +97,8 @@ export default function OG() {
             maxWidth: 980,
           }}
         >
-          Build like a <span style={{ color: "#ff7a18" }}>serious laboratory</span>.
+          Built in one day on{" "}
+          <span style={{ color: "#ff7a18" }}>ORANGEBOX</span>.
         </p>
 
         <div

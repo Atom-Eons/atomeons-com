@@ -13,7 +13,7 @@ export function Header() {
           </span>
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
-              ÆoNs Research Lab
+              Ship real projects through AI
             </p>
             <p className="text-sm font-semibold tracking-tight text-[#f7f0e4]">
               AtomEons

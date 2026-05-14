@@ -5,10 +5,14 @@ import { ProofRail } from "./_components/ProofRail";
 import { RefusalStrip } from "./_components/RefusalStrip";
 import { SpotlightBg } from "./_components/SpotlightBg";
 import { CockpitMiniPanel } from "./_components/CockpitMiniPanel";
+import { BuiltOnOrangebox } from "./_components/BuiltOnOrangebox";
 
 export default function Home() {
   return (
     <main className="relative z-10">
+      {/* RECURSIVE PROOF — really large, dominates above the fold */}
+      <BuiltOnOrangebox />
+
       {/* HERO — wrapped in cursor-following spotlight */}
       <SpotlightBg>
         <section className="mx-auto w-full max-w-6xl px-6 pt-12 pb-20 md:pt-20 md:pb-28">
@@ -22,13 +26,14 @@ export default function Home() {
                 keeps both true.
               </p>
               <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.02] tracking-tight md:text-7xl">
-                Build like a{" "}
-                <span className="text-[#ff7a18]">serious laboratory</span>.
+                Ship real projects{" "}
+                <span className="text-[#ff7a18]">through AI</span>.
                 <span className="blink-cursor" aria-hidden />
               </h1>
               <p className="mt-6 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
-                A solo lab in Marco Island. One thing at a time. Real
-                artifacts, real receipts.
+                Software. Books. Apps. LLMs. ORANGEBOX is the operator
+                cockpit for the people who actually build the things — not
+                the people who write blog posts about building things.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
@@ -41,7 +46,7 @@ export default function Home() {
                   href="/about"
                   className="rounded-md px-5 py-2.5 text-sm text-[#a7b8ad] transition-colors hover:text-[#f7f0e4]"
                 >
-                  About the lab
+                  About
                 </Link>
               </div>
             </div>

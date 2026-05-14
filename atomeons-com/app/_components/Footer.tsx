@@ -10,7 +10,7 @@ export function Footer() {
             <AtomMark size={32} speed={999} />
             <div>
               <p className="text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
-                ÆoNs Research Lab
+                Software · Books · Apps · LLMs
               </p>
               <p className="text-sm font-semibold tracking-tight text-[#f7f0e4]">
                 AtomEons

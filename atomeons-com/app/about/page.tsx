@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "About — ÆoNs Research Lab",
+  title: "About — AtomEons",
   description:
-    "AtomEons Systems Laboratory is the solo lab of Atom McCree in Marco Island, Florida — building private, local-first execution surfaces for serious AI-assisted projects.",
+    "AtomEons is Atom McCree, building command surfaces for operators shipping real projects through AI — software, books, apps, LLMs. Marco Island, Florida.",
 };
 
 type Doctrine = { num: string; serial: string; title: string; body: string };
@@ -44,8 +44,8 @@ const DOCTRINE: Doctrine[] = [
 export default function About() {
   return (
     <main className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-16 pb-24">
-      <p className="text-xs uppercase tracking-[0.18em] text-[#a7b8ad]">
-        ÆoNs Research Lab
+      <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#a7b8ad]">
+        Software · Books · Apps · LLMs
       </p>
       <h1 className="mt-2 text-4xl font-black tracking-tight md:text-5xl">
         About AtomEons.
@@ -53,8 +53,9 @@ export default function About() {
 
       <p className="mt-6 text-lg text-[#a7b8ad]">
         I&apos;m{" "}
-        <span className="text-[#f7f0e4]">Atom McCree</span>. I run AtomEons
-        out of Marco Island, Florida.
+        <span className="text-[#f7f0e4]">Atom McCree</span>. I build
+        command surfaces for operators who actually ship things — software,
+        books, apps, LLMs.
       </p>
 
       <p className="mt-3 text-lg text-[#a7b8ad]">
@@ -64,7 +65,7 @@ export default function About() {
       </p>
 
       <p className="mt-3 text-lg text-[#a7b8ad]">
-        I ship private, local-first execution surfaces for operators who
+        I ship private, local-first command surfaces for builders who
         refuse to lose the thread.
       </p>
 
@@ -75,7 +76,7 @@ export default function About() {
           What we make
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-          One execution surface. Built for the lab, not the market.
+          A cockpit for the people who actually build the things.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
           Most AI tooling is a chatbox or a dashboard. Neither survives
@@ -99,7 +100,7 @@ export default function About() {
           Doctrine
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-          Five rules. They run the lab.
+          Five rules. They run the build.
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {DOCTRINE.map((d) => (
@@ -174,9 +175,8 @@ export default function About() {
           <a href="mailto:a.mccree@gmail.com">a.mccree@gmail.com</a>
         </p>
         <p className="mt-1 text-sm text-[#a7b8ad]">
-          AtomEons does not run a support desk. The lab ships, then ships
-          again. Read the manual that comes inside ORANGEBOX before
-          asking.
+          AtomEons does not run a support desk. I ship, then ship again.
+          Read the manual that comes inside ORANGEBOX before asking.
         </p>
         <p className="mt-3 text-sm text-[#f7f0e4]">
           If you have a real question about what ORANGEBOX does or does

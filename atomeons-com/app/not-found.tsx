@@ -51,7 +51,7 @@ export default function NotFound() {
           href="/about"
           className="rounded-md border border-[#204538] bg-transparent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-[#a7b8ad] hover:text-[#f7f0e4]"
         >
-          About the lab
+          About
         </Link>
       </div>
     </main>
