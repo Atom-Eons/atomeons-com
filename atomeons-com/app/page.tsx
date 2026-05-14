@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { BuyButton } from "./_components/BuyButton";
 import { AtomMark } from "./_components/AtomMark";
-import { ManifestoCycle } from "./_components/ManifestoCycle";
 
 export default function Home() {
   return (
@@ -42,10 +41,10 @@ export default function Home() {
                 See ORANGEBOX →
               </Link>
               <Link
-                href="/manifesto"
-                className="rounded-md border border-[#5a2222] bg-transparent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-[#ff4f5e] transition-colors hover:bg-[#1a0a0c]"
+                href="/changelog"
+                className="rounded-md border border-[#204538] bg-transparent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-[#a7b8ad] transition-colors hover:text-[#f7f0e4]"
               >
-                Read the manifesto
+                Changelog
               </Link>
               <Link
                 href="/about"
@@ -89,26 +88,6 @@ export default function Home() {
               </div>
             </div>
           </aside>
-        </div>
-      </section>
-
-      {/* ASCII DIVIDER */}
-      <div aria-hidden className="mx-auto w-full max-w-6xl overflow-hidden px-6">
-        <pre className="ascii-rule">
-{`──[ MFT.manifesto ]──────────────────────────────────────────────────────────`}
-        </pre>
-      </div>
-
-      {/* MANIFESTO CYCLE */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-16">
-        <ManifestoCycle />
-        <div className="mt-6">
-          <Link
-            href="/manifesto"
-            className="font-mono text-[11px] uppercase tracking-widest text-[#ff4f5e] hover:underline"
-          >
-            → read all 20 tenets
-          </Link>
         </div>
       </section>
 

@@ -33,10 +33,10 @@ export function Header() {
             ORANGEBOX
           </Link>
           <Link
-            href="/manifesto"
-            className="rounded-md px-3 py-1.5 text-[#a7b8ad] transition-colors hover:bg-[#071915] hover:text-[#ff4f5e]"
+            href="/changelog"
+            className="rounded-md px-3 py-1.5 text-[#a7b8ad] transition-colors hover:bg-[#071915] hover:text-[#f7f0e4]"
           >
-            Manifesto
+            Changelog
           </Link>
           <Link
             href="/about"

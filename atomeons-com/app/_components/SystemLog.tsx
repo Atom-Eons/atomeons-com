@@ -5,13 +5,11 @@ import { useEffect, useState } from "react";
 const FRAMES: { tag: string; text: string }[] = [
   { tag: "SYS", text: "cockpit:127.0.0.1:8787 · ready · all lanes nominal" },
   { tag: "SYS", text: "no team. no roadmap. no support. one operator." },
-  { tag: "MFT", text: "the misfit is outside because they can still see the system" },
   { tag: "SYS", text: "stripe:live · webhook:checkout.session.completed · verified" },
-  { tag: "MFT", text: "we do not rebel for noise. we rebel against false structure." },
   { tag: "SYS", text: "product:zip · download:hmac-signed · 30-day token" },
-  { tag: "MFT", text: "a real command loop beats a thousand imaginary features." },
   { tag: "SYS", text: "party-line:project · receipts:on-disk · verified" },
-  { tag: "MFT", text: "sovereignty first. meaning second. beauty third. expansion last." },
+  { tag: "SYS", text: "review-engines:bound · checkmate:pre-ship-only" },
+  { tag: "SYS", text: "human:final-stop-authority · no:fake-green" },
 ];
 
 export function SystemLog({ intervalMs = 4200 }: { intervalMs?: number }) {

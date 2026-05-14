@@ -4,6 +4,7 @@ import { CockpitTicker } from "../_components/CockpitTicker";
 import { InstallCommand } from "../_components/InstallCommand";
 import { BuildReceipts } from "../_components/BuildReceipts";
 import { ScrollReveal } from "../_components/ScrollReveal";
+import { StickyBuyBar } from "../_components/StickyBuyBar";
 
 export const metadata = {
   title: "ORANGEBOX — Private Command Cockpit",
@@ -23,7 +24,7 @@ export default function OrangeBox() {
         <div>
           <div className="mb-4 flex flex-wrap gap-2">
             <span className="rebel-pill" style={{ color: "#ff4f5e", borderColor: "rgba(255,79,94,0.5)", background: "rgba(255,79,94,0.06)" }}>
-              ▲ MISFIT BETA
+              ▲ PROTOTYPE BETA
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 font-mono text-[11px] text-[#75ff92]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#75ff92]" />
@@ -199,6 +200,36 @@ export default function OrangeBox() {
         <BuildReceipts />
       </ScrollReveal>
 
+      {/* Qualification block — shrinks support burden by sharpening buyer match */}
+      <ScrollReveal>
+        <section className="mt-16 grid gap-6 md:grid-cols-2">
+          <div className="rounded-xl border border-[#75ff92]/40 bg-[#0a211b] p-5">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#75ff92]">
+              ::buy this if
+            </p>
+            <ul className="mt-3 space-y-1.5 text-sm text-[#f7f0e4]">
+              <li>· You actually run serious projects with AI workers</li>
+              <li>· You can install Node and read a manual</li>
+              <li>· You want one operator surface, not 22 random agents</li>
+              <li>· You believe receipts &gt; vibes</li>
+              <li>· You like instruments, not chatbots</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-[#5a2222] bg-[#1a0a0c] p-5">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff4f5e]">
+              ::do not buy this if
+            </p>
+            <ul className="mt-3 space-y-1.5 text-sm text-[#f7f0e4]">
+              <li>· You want a SaaS dashboard with login</li>
+              <li>· You want managed support or onboarding</li>
+              <li>· You expect a cloud sync and team workspace</li>
+              <li>· You expect production-ready, not v1 prototype</li>
+              <li>· You are evaluating for a buying committee</li>
+            </ul>
+          </div>
+        </section>
+      </ScrollReveal>
+
       <section className="mt-16 rounded-xl border border-[#5a2222] bg-[#1a0a0c] p-5">
         <p className="text-xs uppercase tracking-widest text-[#ff4f5e]">
           No support
@@ -231,6 +262,8 @@ export default function OrangeBox() {
           $49 USD · one-time · no support
         </p>
       </section>
+
+      <StickyBuyBar />
     </main>
   );
 }

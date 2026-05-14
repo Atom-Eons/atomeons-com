@@ -35,9 +35,7 @@ export function Footer() {
               <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="/manifesto" className="text-[#ff4f5e]">
-                Misfit Manifesto
-              </Link>
+              <Link href="/changelog">Changelog</Link>
             </li>
           </ul>
         </div>
@@ -83,7 +81,13 @@ export function Footer() {
             © 2026 AtomEons Systems Laboratory · Atom McCree · Marco Island,
             FL
           </p>
-          <p>
+          <p className="flex items-center gap-3">
+            <Link
+              href="/changelog"
+              className="rounded border border-[#204538] bg-[#071915] px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-[#75ff92] hover:border-[#ff7a18]/50"
+            >
+              v6
+            </Link>
             <a href="mailto:a.mccree@gmail.com">a.mccree@gmail.com</a>
           </p>
         </div>
