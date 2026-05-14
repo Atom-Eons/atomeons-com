@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AtomMark } from "./AtomMark";
 import { SystemLog } from "./SystemLog";
+import { NavLink } from "./NavLink";
 
 export function Header() {
   return (
@@ -19,31 +20,11 @@ export function Header() {
             </p>
           </div>
         </Link>
-        <nav className="flex items-center gap-1 text-sm md:gap-2">
-          <Link
-            href="/"
-            className="rounded-md px-3 py-1.5 text-[#a7b8ad] transition-colors hover:bg-[#071915] hover:text-[#f7f0e4]"
-          >
-            Home
-          </Link>
-          <Link
-            href="/orangebox"
-            className="rounded-md px-3 py-1.5 text-[#a7b8ad] transition-colors hover:bg-[#071915] hover:text-[#f7f0e4]"
-          >
-            ORANGEBOX
-          </Link>
-          <Link
-            href="/changelog"
-            className="rounded-md px-3 py-1.5 text-[#a7b8ad] transition-colors hover:bg-[#071915] hover:text-[#f7f0e4]"
-          >
-            Changelog
-          </Link>
-          <Link
-            href="/about"
-            className="rounded-md px-3 py-1.5 text-[#a7b8ad] transition-colors hover:bg-[#071915] hover:text-[#f7f0e4]"
-          >
-            About
-          </Link>
+        <nav className="flex items-center gap-1 md:gap-2">
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/orangebox">ORANGEBOX</NavLink>
+          <NavLink href="/changelog">Changelog</NavLink>
+          <NavLink href="/about">About</NavLink>
           <Link
             href="/orangebox#buy"
             className="ml-2 rounded-md border border-[#ff7a18] bg-[#ff7a18] px-3 py-1.5 text-sm font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b]"

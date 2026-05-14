@@ -5,6 +5,7 @@ import { InstallCommand } from "../_components/InstallCommand";
 import { BuildReceipts } from "../_components/BuildReceipts";
 import { ScrollReveal } from "../_components/ScrollReveal";
 import { StickyBuyBar } from "../_components/StickyBuyBar";
+import { CountUp } from "../_components/CountUp";
 
 export const metadata = {
   title: "ORANGEBOX — Private Command Cockpit",
@@ -28,7 +29,7 @@ export default function OrangeBox() {
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 font-mono text-[11px] text-[#75ff92]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#75ff92]" />
-              92 endpoints · 17 lanes · 12 MCP tools
+              <CountUp to={92} /> endpoints · <CountUp to={17} /> lanes · <CountUp to={12} /> MCP tools
             </span>
           </div>
           <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
@@ -200,31 +201,53 @@ export default function OrangeBox() {
         <BuildReceipts />
       </ScrollReveal>
 
-      {/* Qualification block — shrinks support burden by sharpening buyer match */}
+      {/* Qualification block — expandable per-row for self-qualification */}
       <ScrollReveal>
         <section className="mt-16 grid gap-6 md:grid-cols-2">
           <div className="rounded-xl border border-[#75ff92]/40 bg-[#0a211b] p-5">
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#75ff92]">
               ::buy this if
             </p>
-            <ul className="mt-3 space-y-1.5 text-sm text-[#f7f0e4]">
-              <li>· You actually run serious projects with AI workers</li>
-              <li>· You can install Node and read a manual</li>
-              <li>· You want one operator surface, not 22 random agents</li>
-              <li>· You believe receipts &gt; vibes</li>
-              <li>· You like instruments, not chatbots</li>
+            <ul className="mt-3 space-y-1">
+              {[
+                ["You actually run serious projects with AI workers", "Multiple models, multiple machines, real artifacts moving daily."],
+                ["You can install Node and read a manual", "If npm install reads as a foreign language, this isn't for you."],
+                ["You want one operator surface, not 22 random agents", "Triad lanes, named departments, deliberate routing."],
+                ["You believe receipts > vibes", "Every action writes a receipt. You can audit your own session."],
+                ["You like instruments, not chatbots", "Vision Rail, Party Line, Receipts Library — cockpit grade."],
+              ].map(([head, body], i) => (
+                <li key={i} className="rounded border border-transparent transition-colors hover:bg-[#04100d]/40">
+                  <details className="group">
+                    <summary className="cursor-pointer list-none px-2 py-1.5 text-sm text-[#f7f0e4] marker:hidden">
+                      <span className="text-[#75ff92]">·</span> {head}
+                    </summary>
+                    <p className="px-5 pb-2 text-xs text-[#a7b8ad]">{body}</p>
+                  </details>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="rounded-xl border border-[#5a2222] bg-[#1a0a0c] p-5">
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff4f5e]">
               ::do not buy this if
             </p>
-            <ul className="mt-3 space-y-1.5 text-sm text-[#f7f0e4]">
-              <li>· You want a SaaS dashboard with login</li>
-              <li>· You want managed support or onboarding</li>
-              <li>· You expect a cloud sync and team workspace</li>
-              <li>· You expect production-ready, not v1 prototype</li>
-              <li>· You are evaluating for a buying committee</li>
+            <ul className="mt-3 space-y-1">
+              {[
+                ["You want a SaaS dashboard with login", "There is no account, no cloud sync, no team workspace."],
+                ["You want managed support or onboarding", "No tickets, no DMs, no replies. The manual is the support."],
+                ["You expect a cloud sync and team workspace", "Local-first. Your project state is on your disk."],
+                ["You expect production-ready, not v1 prototype", "PROTOTYPE BETA pill exists for a reason."],
+                ["You are evaluating for a buying committee", "$49 one-time. There is nothing to evaluate at scale."],
+              ].map(([head, body], i) => (
+                <li key={i} className="rounded border border-transparent transition-colors hover:bg-[#04100d]/40">
+                  <details className="group">
+                    <summary className="cursor-pointer list-none px-2 py-1.5 text-sm text-[#f7f0e4] marker:hidden">
+                      <span className="text-[#ff4f5e]">·</span> {head}
+                    </summary>
+                    <p className="px-5 pb-2 text-xs text-[#a7b8ad]">{body}</p>
+                  </details>
+                </li>
+              ))}
             </ul>
           </div>
         </section>

@@ -15,6 +15,23 @@ type Release = {
 
 const RELEASES: Release[] = [
   {
+    v: "v8",
+    date: "2026-05-14",
+    headline: "Design team redesign — Linear + Vercel + Stripe + Anthropic + Cosmos paradigms",
+    bullets: [
+      "SpotlightBg: cursor-following radial halo on home hero (Vercel pattern)",
+      "ProofRail: infinite horizontal marquee of terse proof facts (Cosmos pattern)",
+      "CountUp: animated number reveal on stats (Linear pattern)",
+      "CockpitTicker: typewriter character-by-character reveal (Anthropic Artifacts pattern)",
+      "BuildReceipts: staggered fade-up entrance on each card (Stripe pattern)",
+      "InstallCommand: 3-line numbered split with per-line + copy-all (Osmo pattern)",
+      "Header: active-route indicator with orange underline (Lando Norris pattern)",
+      "Qualification block: details/summary expandable rows (Linear pattern)",
+      "Cuts: home SHIP section duplicate + 2nd EOF divider",
+      "All animations honor prefers-reduced-motion",
+    ],
+  },
+  {
     v: "v7",
     date: "2026-05-14",
     headline: "Checkmate + design panel approval pass",

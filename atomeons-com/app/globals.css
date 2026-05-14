@@ -257,6 +257,27 @@ a:hover {
   animation: mesh-drift 4s linear infinite;
 }
 
+/* ProofRail — slow infinite horizontal marquee */
+@keyframes proof-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.proof-rail-track {
+  animation: proof-marquee 60s linear infinite;
+  width: max-content;
+}
+
+/* BuildReceipts — staggered fade-up per card */
+@keyframes receipt-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.receipt-row {
+  opacity: 0;
+  animation: receipt-in 540ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+
 /* ASCII section divider */
 .ascii-rule {
   font-family: var(--font-mono);
@@ -279,11 +300,14 @@ a:hover {
   .blink-cursor,
   .boot-bar,
   .mesh-gradient,
-  .vercel-glow:hover::before {
+  .vercel-glow:hover::before,
+  .proof-rail-track,
+  .receipt-row {
     animation: none !important;
   }
   .boot-bar { display: none; }
   .mesh-gradient {
     background: linear-gradient(135deg, #071915 0%, #0a211b 100%);
   }
+  .receipt-row { opacity: 1; transform: none; }
 }

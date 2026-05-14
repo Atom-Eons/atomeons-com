@@ -15,15 +15,48 @@ const FRAMES: string[] = [
   "REVIEW_ENGINES: ORANGE · MIRRORS · LIPS · MISFITS · CHECKMATE",
 ];
 
-export function CockpitTicker({ intervalMs = 3200 }: { intervalMs?: number }) {
-  const [i, setI] = useState(0);
+const FRAME_INTERVAL = 3600;
+const TYPE_SPEED = 18;
+const REVEAL_CAP = 50;
 
+export function CockpitTicker() {
+  const [i, setI] = useState(0);
+  const [shown, setShown] = useState("");
+
+  // Cycle frames
   useEffect(() => {
     const t = setInterval(() => {
-      setI((prev) => (prev + 1) % FRAMES.length);
-    }, intervalMs);
+      setI((p) => (p + 1) % FRAMES.length);
+    }, FRAME_INTERVAL);
     return () => clearInterval(t);
-  }, [intervalMs]);
+  }, []);
+
+  // Typewriter reveal on each frame change
+  useEffect(() => {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const frame = FRAMES[i];
+    if (reduced) {
+      setShown(frame);
+      return;
+    }
+    setShown("");
+    let pos = 0;
+    const id = setInterval(() => {
+      pos += 1;
+      if (pos > REVEAL_CAP) {
+        setShown(frame);
+        clearInterval(id);
+        return;
+      }
+      setShown(frame.slice(0, pos));
+      if (pos >= frame.length) {
+        clearInterval(id);
+      }
+    }, TYPE_SPEED);
+    return () => clearInterval(id);
+  }, [i]);
+
+  const typing = shown.length < FRAMES[i].length;
 
   return (
     <div
@@ -41,8 +74,15 @@ export function CockpitTicker({ intervalMs = 3200 }: { intervalMs?: number }) {
         </span>
       </div>
       <div className="flex items-center gap-3 px-3 py-2 font-mono text-[11px] tracking-tight text-[#75ff92]">
-        <span className="inline-block h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-[#75ff92]" />
-        <span className="truncate">{FRAMES[i]}</span>
+        <span
+          className={`inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-[#75ff92] ${
+            typing ? "animate-pulse" : ""
+          }`}
+        />
+        <span className="truncate">
+          {shown}
+          {typing ? <span className="ml-px text-[#ff7a18]">▋</span> : null}
+        </span>
       </div>
     </div>
   );

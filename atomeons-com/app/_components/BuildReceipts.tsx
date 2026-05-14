@@ -59,10 +59,11 @@ export function BuildReceipts() {
       </div>
 
       <ol className="mt-6 space-y-3">
-        {PARTY_LINE.map((entry) => (
+        {PARTY_LINE.map((entry, idx) => (
           <li
             key={entry.id}
-            className={`rounded-lg border bg-[#071915]/70 p-4 transition-colors hover:bg-[#071915] ${
+            style={{ ["--i" as string]: idx } as React.CSSProperties}
+            className={`receipt-row rounded-lg border bg-[#071915]/70 p-4 transition-colors hover:bg-[#071915] ${
               STATUS_COLOR[entry.status] ?? "border-[#204538]"
             }`}
           >
