@@ -42,7 +42,7 @@ export function StickyBuyBar() {
       <div className="mx-auto grid w-full max-w-6xl grid-cols-[1fr_auto] items-center gap-3 px-4 py-3 sm:px-6">
         <div className="min-w-0">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
-            ::orangebox v1
+            ::orangebox v1.4.0 · shop ready
           </p>
           <p className="text-sm text-[#f7f0e4]">
             <span className="font-bold text-[#ff7a18]">$49</span>
