@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "AtomEons — Ship real projects through AI";
+export const alt = "AtomEons — An AI builder for all";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

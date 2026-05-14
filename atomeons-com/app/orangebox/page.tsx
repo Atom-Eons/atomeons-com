@@ -192,48 +192,6 @@ export default function OrangeBox() {
         </section>
       </ScrollReveal>
 
-      {/* ─── REFERENCE BARS ───────────────────────────────────────── */}
-      <ScrollReveal>
-        <section className="mt-16">
-          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
-            ::reference bars cleared
-          </p>
-          <h2 className="mt-2 max-w-3xl text-2xl font-bold tracking-tight md:text-3xl">
-            10 of 25 best-software-2026 benchmarks. In one cockpit.
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm text-[#a7b8ad]">
-            Each benchmark is a piece of UX or system design that other
-            best-in-class software is famous for. We rebuilt them in vanilla
-            ESM, into one cockpit, with no monthly fee.
-          </p>
-          <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              { app: "Linear", what: "Cmd+K palette · spring micro-interactions" },
-              { app: "Cron / Notion Calendar", what: "Keyboard-only navigation paradigm" },
-              { app: "Warp", what: "Block-based command output with structured fields" },
-              { app: "Cursor", what: "Predictive next-action bar (live data, no LLM call)" },
-              { app: "Krea.ai", what: "Sub-100ms real-time SSE feedback loop" },
-              { app: "Magnific", what: "High-fidelity state-color discipline" },
-              { app: "Zed", what: "RAF-coalesced render scheduler · viewport virtualization" },
-              { app: "Arc", what: "Per-view 'Boosts' customization" },
-              { app: "Family", what: "Premium tactile feel · glow tokens · glass surfaces" },
-              { app: "Spline / Muse", what: "Orbital first-run experience" },
-            ].map((b) => (
-              <div
-                key={b.app}
-                className="rounded-lg border border-[#204538] bg-[#071915] p-3"
-              >
-                <p className="text-sm font-bold text-[#ff7a18]">{b.app}</p>
-                <p className="mt-1 text-xs text-[#a7b8ad]">{b.what}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 font-mono text-[10px] uppercase tracking-widest text-[#1b8b75]">
-            ::v1.5 candidates — Raycast tray · Screen Studio cinematic proof · full Muse spatial canvas
-          </p>
-        </section>
-      </ScrollReveal>
-
       {/* ─── PREREQS / COMPATIBILITY ──────────────────────────────── */}
       <section className="mt-16 rounded-xl border border-[#204538] bg-[#071915]/60 p-6">
         <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
