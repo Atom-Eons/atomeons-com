@@ -46,12 +46,6 @@ export default function Home() {
                   See ORANGEBOX →
                 </Link>
                 <Link
-                  href="/changelog"
-                  className="rounded-md border border-[#204538] bg-transparent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-[#a7b8ad] transition-colors hover:text-[#f7f0e4]"
-                >
-                  Changelog
-                </Link>
-                <Link
                   href="/about"
                   className="rounded-md px-5 py-2.5 text-sm text-[#a7b8ad] transition-colors hover:text-[#f7f0e4]"
                 >

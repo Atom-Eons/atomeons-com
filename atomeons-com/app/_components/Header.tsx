@@ -25,7 +25,6 @@ export function Header() {
         <nav className="hidden items-center gap-1 md:flex md:gap-2">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/orangebox">ORANGEBOX</NavLink>
-          <NavLink href="/changelog">Changelog</NavLink>
           <NavLink href="/about">About</NavLink>
           <Link
             href="/orangebox#buy"

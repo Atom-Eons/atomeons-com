@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 const ITEMS: { href: string; label: string }[] = [
   { href: "/", label: "Home" },
   { href: "/orangebox", label: "ORANGEBOX" },
-  { href: "/changelog", label: "Changelog" },
   { href: "/about", label: "About" },
 ];
 

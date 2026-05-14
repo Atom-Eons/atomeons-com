@@ -103,22 +103,23 @@ a:hover {
   animation: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-/* CRT scanline overlay — global, subtle */
+/* CRT scanline overlay — global, subtle.
+   Sits BELOW interactive content (z-1) so dark text on bright buttons
+   does not get crushed by mix-blend overlay (v10 fix). */
 .scanlines::after {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 50;
+  z-index: 1;
   pointer-events: none;
   background:
     repeating-linear-gradient(
       0deg,
       rgba(0, 0, 0, 0) 0,
       rgba(0, 0, 0, 0) 2px,
-      rgba(255, 122, 24, 0.025) 2px,
-      rgba(255, 122, 24, 0.025) 3px
+      rgba(255, 122, 24, 0.04) 2px,
+      rgba(255, 122, 24, 0.04) 3px
     );
-  mix-blend-mode: overlay;
 }
 
 /* Hairline screen flicker */
