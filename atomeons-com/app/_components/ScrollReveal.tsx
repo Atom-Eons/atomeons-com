@@ -10,24 +10,31 @@ type Props = {
 };
 
 /**
- * Wrap a section to fade-up when it enters the viewport. Honors
- * prefers-reduced-motion: shows the content immediately with no
- * animation when the user has motion-reduce on.
+ * Wraps a section to fade-up when it enters the viewport.
+ *
+ * Default state is VISIBLE (opacity 1, no translate). The reveal
+ * animation only fires if the element starts BELOW the viewport at
+ * mount time AND the user has motion enabled. This means crawlers,
+ * screenshot tools, JS-disabled visitors, and reduced-motion users
+ * all see the content immediately. Animation is enhancement, not gate.
  */
 export function ScrollReveal({ children, delay = 0, className = "" }: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [shown, setShown] = useState(false);
-  const [reduced, setReduced] = useState(false);
+  // Default: shown immediately. Animation will only run if we explicitly
+  // detect below-fold + motion-allowed at mount and toggle to "hidden first".
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+  const [shown, setShown] = useState(true);
 
   useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(mq.matches);
-    if (mq.matches) {
-      setShown(true);
-      return;
-    }
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) return;
     const el = ref.current;
     if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const belowFold = rect.top > window.innerHeight;
+    if (!belowFold) return; // already in/above viewport — leave shown:true
+    setShouldAnimate(true);
+    setShown(false);
     const obs = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
@@ -49,11 +56,11 @@ export function ScrollReveal({ children, delay = 0, className = "" }: Props) {
       ref={ref}
       className={className}
       style={{
-        opacity: shown || reduced ? 1 : 0,
-        transform: shown || reduced ? "translateY(0)" : "translateY(16px)",
-        transition: reduced
-          ? "none"
-          : "opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1)",
+        opacity: shown ? 1 : 0,
+        transform: shown ? "translateY(0)" : "translateY(16px)",
+        transition: shouldAnimate
+          ? "opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1)"
+          : "none",
       }}
     >
       {children}

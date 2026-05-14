@@ -83,7 +83,8 @@ export default async function Success({
 
           <a
             href={resolved.downloadUrl}
-            className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b]"
+            className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-bold text-black transition-colors hover:bg-[#ffc46b]"
+            style={{ color: "#000", WebkitTextFillColor: "#000" }}
           >
             ↓ Download orangebox-v1.zip
           </a>

@@ -6,6 +6,41 @@ export const metadata = {
     "AtomEons Systems Laboratory is the solo lab of Atom McCree in Marco Island, Florida — building private, local-first execution surfaces for serious AI-assisted projects.",
 };
 
+type Doctrine = { num: string; serial: string; title: string; body: string };
+
+const DOCTRINE: Doctrine[] = [
+  {
+    num: "01",
+    serial: "PILLAR-01-2026",
+    title: "One organism, many lenses",
+    body: "AtomEons is treated as one coherent system, not a pile of unrelated apps. Every surface respects every other.",
+  },
+  {
+    num: "02",
+    serial: "PILLAR-02-2026",
+    title: "Truth over elegant fiction",
+    body: "Observed, inferred, speculative, and desired are kept distinct. Claims need receipts. No fake green.",
+  },
+  {
+    num: "03",
+    serial: "PILLAR-03-2026",
+    title: "Anti-sprawl",
+    body: "Reject everything-app drift. One major objective at a time. Bounded execution beats swarm theater.",
+  },
+  {
+    num: "04",
+    serial: "PILLAR-04-2026",
+    title: "Premium coherence",
+    body: "Calm. Legible. Confident. The cockpit is an instrument panel, not a transcript dump.",
+  },
+  {
+    num: "05",
+    serial: "PILLAR-05-2026",
+    title: "Full effort, every time",
+    body: "Every output earns its place. No coasting on the quiet stuff. No padding on the loud stuff.",
+  },
+];
+
 export default function About() {
   return (
     <main className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-16 pb-24">
@@ -67,65 +102,33 @@ export default function About() {
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
           Five rules. They run the lab.
         </h2>
-        <ul className="mt-6 space-y-3 text-[#f7f0e4]">
-          <li className="flex gap-3">
-            <span className="font-mono text-sm text-[#a7b8ad]">01</span>
-            <p>
-              <span className="font-semibold text-[#ff7a18]">
-                One organism, many lenses.
-              </span>{" "}
-              <span className="text-[#a7b8ad]">
-                Every surface respects every other.
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {DOCTRINE.map((d) => (
+            <div
+              key={d.serial}
+              className="group relative overflow-hidden rounded-xl border border-[#204538] bg-[#071915] p-5 transition-colors hover:border-[#ff7a18]/40"
+            >
+              <span
+                aria-hidden
+                className="pointer-events-none absolute -right-3 -top-6 select-none font-mono text-[80px] font-black leading-none text-[#0a211b] transition-colors group-hover:text-[#1a3026]"
+              >
+                {d.num}
               </span>
-            </p>
-          </li>
-          <li className="flex gap-3">
-            <span className="font-mono text-sm text-[#a7b8ad]">02</span>
-            <p>
-              <span className="font-semibold text-[#ff7a18]">
-                Truth over elegant fiction.
-              </span>{" "}
-              <span className="text-[#a7b8ad]">
-                Claims need receipts. No fake green.
-              </span>
-            </p>
-          </li>
-          <li className="flex gap-3">
-            <span className="font-mono text-sm text-[#a7b8ad]">03</span>
-            <p>
-              <span className="font-semibold text-[#ff7a18]">
-                Anti-sprawl.
-              </span>{" "}
-              <span className="text-[#a7b8ad]">
-                One major objective at a time. Bounded execution beats
-                swarm theater.
-              </span>
-            </p>
-          </li>
-          <li className="flex gap-3">
-            <span className="font-mono text-sm text-[#a7b8ad]">04</span>
-            <p>
-              <span className="font-semibold text-[#ff7a18]">
-                Premium coherence.
-              </span>{" "}
-              <span className="text-[#a7b8ad]">
-                The cockpit is an instrument panel, not a transcript dump.
-              </span>
-            </p>
-          </li>
-          <li className="flex gap-3">
-            <span className="font-mono text-sm text-[#a7b8ad]">05</span>
-            <p>
-              <span className="font-semibold text-[#ff7a18]">
-                Full effort, every time.
-              </span>{" "}
-              <span className="text-[#a7b8ad]">
-                Every output earns its place. No coasting on the quiet
-                stuff.
-              </span>
-            </p>
-          </li>
-        </ul>
+              <div className="relative">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
+                  {d.serial}
+                </p>
+                <h3 className="mt-2 text-lg font-bold text-[#ff7a18]">
+                  {d.title}
+                </h3>
+                <p className="mt-2 text-sm text-[#a7b8ad]">{d.body}</p>
+                <p className="mt-3 font-mono text-[9px] uppercase tracking-widest text-[#1b8b75]">
+                  ::filed 2026-05 · marco island
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <hr className="my-12 border-[#204538]" />
@@ -147,7 +150,8 @@ export default function About() {
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="/orangebox"
-            className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-4 py-2 text-sm font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b]"
+            className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
+            style={{ color: "#000", WebkitTextFillColor: "#000" }}
           >
             See ORANGEBOX →
           </Link>
@@ -177,7 +181,7 @@ export default function About() {
         </p>
         <p className="mt-3 text-sm text-[#f7f0e4]">
           If you have a real question about what ORANGEBOX does or does
-          not do, send it.
+          not do, send it. I read every email. I do not promise to reply.
         </p>
       </section>
     </main>

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  --color-danger: #ff4f5e;
   --color-bg: #04100d;
   --color-fg: #f7f0e4;
   --color-muted: #a7b8ad;
@@ -75,6 +76,27 @@ a:hover {
 ::selection {
   background: rgba(255, 122, 24, 0.3);
   color: #f7f0e4;
+}
+
+/* Tap-to-pulse mobile equivalent of cursor spotlight (no-hover devices) */
+@keyframes tap-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 122, 24, 0.45); }
+  70% { box-shadow: 0 0 0 14px rgba(255, 122, 24, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 122, 24, 0); }
+}
+@media (hover: none) {
+  a:active,
+  button:active {
+    animation: tap-pulse 600ms ease-out;
+  }
+}
+
+/* Light mode refusal — the cockpit is dark only, on-brand humor */
+@media (prefers-color-scheme: light) {
+  html, body {
+    background: #04100d !important;
+    color: #f7f0e4 !important;
+  }
 }
 
 @keyframes atom-spin {
@@ -259,6 +281,42 @@ a:hover {
 }
 
 /* ProofRail — slow infinite horizontal marquee */
+/* AtomBoot — one-shot grand entrance overlay */
+@keyframes atom-boot-fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes atom-boot-shrink {
+  0% { transform: scale(1); filter: drop-shadow(0 0 60px rgba(255, 122, 24, 0.6)); }
+  100% { transform: scale(0.18) translateY(-46vh) translateX(-44vw); filter: drop-shadow(0 0 8px rgba(255, 122, 24, 0.3)); }
+}
+.atom-boot-overlay {
+  animation: atom-boot-fade 1400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.atom-boot-mark {
+  animation: atom-boot-shrink 1400ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+.atom-boot-label {
+  animation: atom-boot-fade 900ms ease-out forwards;
+}
+
+/* DAG mini-graph node pulse for CockpitMiniPanel */
+@keyframes dag-node-pulse {
+  0%, 100% {
+    fill: #ff7a18;
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    fill: #ffc46b;
+    filter: drop-shadow(0 0 4px rgba(255, 122, 24, 0.7));
+  }
+}
+.dag-node-active {
+  animation: dag-node-pulse 1800ms ease-in-out infinite;
+}
+
 @keyframes proof-marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }

@@ -26,13 +26,18 @@ export default function NotFound() {
       </p>
 
       <p className="mt-6 max-w-xl text-pretty text-[#a7b8ad]">
-        Try a route that exists.
+        Try a route that exists. Most likely you wanted{" "}
+        <Link href="/orangebox" className="text-[#ff7a18] underline-offset-4 hover:underline">
+          /orangebox
+        </Link>
+        .
       </p>
 
       <div className="mt-10 flex flex-wrap gap-3">
         <Link
           href="/"
-          className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-5 py-2.5 text-sm font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b]"
+          className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-5 py-2.5 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
+          style={{ color: "#000", WebkitTextFillColor: "#000" }}
         >
           Back to home
         </Link>

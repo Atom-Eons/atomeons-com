@@ -4,6 +4,7 @@ import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { MadeWithOrangebox } from "./_components/MadeWithOrangebox";
 import { XAdsPixel } from "./_components/XAdsPixel";
+import { AtomBoot } from "./_components/AtomBoot";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
@@ -65,6 +66,7 @@ export default function RootLayout({
           }}
         />
         <XAdsPixel />
+        <AtomBoot />
         <div className="boot-bar" aria-hidden />
         <MadeWithOrangebox />
         <Header />

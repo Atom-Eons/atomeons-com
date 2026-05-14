@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <AtomMark size={32} speed={11} />
+            <AtomMark size={32} speed={36} />
             <div>
               <p className="text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
                 ÆoNs Research Lab
@@ -74,13 +74,18 @@ export function Footer() {
 
       <div className="border-t border-[#204538]">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-start gap-2 px-6 py-5 text-xs text-[#a7b8ad] md:flex-row md:items-center md:justify-between">
-          <p>
-            © 2026 AtomEons Systems Laboratory · Atom McCree · Marco Island,
-            FL
-          </p>
+          <div className="space-y-1">
+            <p>
+              © 2026 AtomEons Systems Laboratory · Atom McCree · Marco
+              Island, FL
+            </p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#1b8b75]">
+              one operator · one cockpit · last shipped 2026-05-14
+            </p>
+          </div>
           <p className="flex items-center gap-3">
             <span className="rounded border border-[#204538] bg-[#071915] px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-[#75ff92]">
-              v10
+              v11
             </span>
             <a href="mailto:a.mccree@gmail.com">a.mccree@gmail.com</a>
           </p>

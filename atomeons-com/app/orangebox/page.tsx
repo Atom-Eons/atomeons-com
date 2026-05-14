@@ -184,13 +184,29 @@ export default function OrangeBox() {
         <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
           What it actually does
         </p>
-        <div className="mt-6 grid gap-5 md:grid-cols-2">
-          {features.map((f) => (
+        {/* Bento layout: hero feature 2x size + 5 small below */}
+        <div className="mt-6 grid gap-5 md:grid-cols-3">
+          {/* Hero feature card spans 2 columns */}
+          <div className="rounded-xl border border-[#ff7a18]/40 bg-gradient-to-br from-[#0a211b] to-[#071915] p-6 transition-colors hover:border-[#ff7a18]/70 md:col-span-2 md:row-span-2">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
+              {features[0].tag}
+            </p>
+            <h3 className="mt-2 text-2xl font-bold text-[#f7f0e4] md:text-3xl">
+              {features[0].title}
+            </h3>
+            <p className="mt-4 text-base text-[#a7b8ad]">{features[0].body}</p>
+            <p className="mt-6 font-mono text-[10px] uppercase tracking-widest text-[#75ff92]">
+              ::headline feature
+            </p>
+          </div>
+          {features.slice(1).map((f) => (
             <div
               key={f.title}
               className="rounded-xl border border-[#204538] bg-[#071915] p-5 transition-colors hover:border-[#ff7a18]/40"
             >
-              <p className="text-sm font-semibold text-[#ff7a18]">{f.tag}</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
+                {f.tag}
+              </p>
               <h3 className="mt-1 text-base font-semibold text-[#f7f0e4]">
                 {f.title}
               </h3>

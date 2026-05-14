@@ -85,6 +85,28 @@ export function CockpitMiniPanel() {
         </div>
       </div>
 
+      {/* DAG MINI-GRAPH */}
+      <div className="border-t border-[#204538] bg-[#04100d]/60 px-3 py-2">
+        <p className="mb-1 font-mono text-[9px] uppercase tracking-[0.18em] text-[#a7b8ad]">
+          ::routing graph
+        </p>
+        <svg viewBox="0 0 320 36" width="100%" height="36" aria-hidden>
+          <line x1="20" y1="18" x2="80" y2="18" stroke="#1b8b75" strokeWidth="1" />
+          <line x1="80" y1="18" x2="160" y2="18" stroke="#1b8b75" strokeWidth="1" />
+          <line x1="160" y1="18" x2="240" y2="18" stroke="#1b8b75" strokeWidth="1" />
+          <line x1="160" y1="18" x2="240" y2="6" stroke="#1b8b75" strokeWidth="1" />
+          <line x1="160" y1="18" x2="240" y2="30" stroke="#1b8b75" strokeWidth="1" />
+          <line x1="240" y1="18" x2="300" y2="18" stroke="#1b8b75" strokeWidth="1" />
+          <circle cx="20" cy="18" r="4" fill="#75ff92" />
+          <circle cx="80" cy="18" r="4" fill="#59d9ff" />
+          <circle cx="160" cy="18" r="5" className="dag-node-active" />
+          <circle cx="240" cy="6" r="3" fill="#1b8b75" />
+          <circle cx="240" cy="18" r="4" fill="#ffc46b" />
+          <circle cx="240" cy="30" r="3" fill="#1b8b75" />
+          <circle cx="300" cy="18" r="4" fill="#75ff92" />
+        </svg>
+      </div>
+
       {/* PARTY-LINE FEED */}
       <div className="border-t border-[#204538] bg-[#071915]/60 px-3 py-2">
         <p className="mb-1 font-mono text-[9px] uppercase tracking-[0.18em] text-[#a7b8ad]">

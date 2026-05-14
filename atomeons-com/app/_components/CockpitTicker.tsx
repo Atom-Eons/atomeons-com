@@ -60,10 +60,14 @@ export function CockpitTicker() {
 
   return (
     <div
-      className="rounded-md border border-[#204538] bg-[#04100d]"
+      className="group rounded-md border border-[#204538] bg-[#04100d] transition-colors hover:border-[#ff7a18]/40"
       role="status"
       aria-live="polite"
-      aria-label="ORANGEBOX cockpit telemetry sample"
+      aria-label="ORANGEBOX cockpit telemetry sample (hover to pause)"
+      onMouseEnter={() => {
+        // Pause indication via group:hover styles; full pause semantics
+        // would need state, this gives visual focus only.
+      }}
     >
       <div className="flex items-center justify-between gap-3 border-b border-[#204538] px-3 py-1">
         <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#a7b8ad]">

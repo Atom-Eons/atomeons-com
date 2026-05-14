@@ -15,6 +15,9 @@ const REDIRECTS: Record<string, string> = {
   "/blueb0x": "/orangebox",
   "/bluebox": "/orangebox",
   "/blue-b0x": "/orangebox",
+  "/install": "/orangebox#install",
+  "/buy": "/orangebox#buy",
+  "/download": "/orangebox#install",
 };
 
 export function proxy(req: NextRequest) {

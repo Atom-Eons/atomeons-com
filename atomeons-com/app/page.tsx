@@ -55,6 +55,10 @@ export default function Home() {
             </div>
 
             <aside className="relative flex flex-col gap-4">
+              {/* Hero glue — anchors the cockpit to the H1 narrative */}
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ffc46b]">
+                ↘ this is the instrument
+              </p>
               {/* Cockpit demo — visible product, sample-labeled */}
               <CockpitMiniPanel />
               {/* Stats + buy zone */}
@@ -80,6 +84,17 @@ export default function Home() {
                 <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-[#1b8b75]">
                   No trial. No refund on curiosity.
                 </p>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  <span className="rounded border border-[#204538] bg-[#04100d] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-widest text-[#75ff92]">
+                    stripe verified
+                  </span>
+                  <span className="rounded border border-[#204538] bg-[#04100d] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-widest text-[#59d9ff]">
+                    hmac signed
+                  </span>
+                  <span className="rounded border border-[#204538] bg-[#04100d] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-widest text-[#a7b8ad]">
+                    vercel
+                  </span>
+                </div>
               </div>
             </aside>
           </div>
@@ -96,7 +111,7 @@ export default function Home() {
             Run a serious project. Keep your hands on the wheel.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[#a7b8ad]">
-            The manual is inside the box. Everything else is on you.
+            The manual is inside. The rest is your problem.
           </p>
           <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <BuyButton />
