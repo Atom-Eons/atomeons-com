@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { BuyButton } from "../_components/BuyButton";
 import { CockpitTicker } from "../_components/CockpitTicker";
+import { InstallCommand } from "../_components/InstallCommand";
+import { BuildReceipts } from "../_components/BuildReceipts";
+import { ScrollReveal } from "../_components/ScrollReveal";
 
 export const metadata = {
   title: "ORANGEBOX — Private Command Cockpit",
@@ -41,6 +44,10 @@ export default function OrangeBox() {
 
           <div className="mt-6">
             <CockpitTicker />
+          </div>
+
+          <div className="mt-4">
+            <InstallCommand />
           </div>
 
           <div
@@ -187,6 +194,10 @@ export default function OrangeBox() {
           ))}
         </div>
       </section>
+
+      <ScrollReveal>
+        <BuildReceipts />
+      </ScrollReveal>
 
       <section className="mt-16 rounded-xl border border-[#5a2222] bg-[#1a0a0c] p-5">
         <p className="text-xs uppercase tracking-widest text-[#ff4f5e]">

@@ -63,7 +63,7 @@ export default function Home() {
             >
               <AtomMark size={280} speed={14} />
             </div>
-            <div className="relative rounded-2xl border border-[#204538] bg-gradient-to-br from-[#071915] to-[#0a211b] p-6 shadow-[0_0_60px_rgba(255,122,24,0.18)]">
+            <div className="vercel-glow mesh-gradient relative rounded-2xl border border-[#204538] p-6 shadow-[0_0_60px_rgba(255,122,24,0.22)]">
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
                 ::currently shipping
               </p>
@@ -128,7 +128,7 @@ export default function Home() {
           <div className="mt-10 grid gap-6">
             <Link
               href="/orangebox"
-              className="group block rounded-2xl border border-[#204538] bg-[#071915] p-8 transition-colors hover:border-[#ff7a18]/40"
+              className="vercel-glow group block rounded-2xl border border-[#204538] bg-[#071915] p-8 transition-colors hover:border-[#ff7a18]/40"
             >
               <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
                 <div>

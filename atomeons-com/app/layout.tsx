@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
+import { MadeWithOrangebox } from "./_components/MadeWithOrangebox";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased">
       <body className="scanlines screen-flicker min-h-full flex flex-col bg-[#04100d] text-[#f7f0e4]">
         <div className="boot-bar" aria-hidden />
+        <MadeWithOrangebox />
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />
