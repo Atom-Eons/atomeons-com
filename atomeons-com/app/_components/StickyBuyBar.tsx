@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { BuyButton } from "./BuyButton";
+import { SESSION_KEYS } from "@/lib/constants";
 
 /**
  * Bottom-pinned buy bar that appears once the user scrolls past
@@ -13,7 +14,7 @@ export function StickyBuyBar() {
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem("orangebox-stickybar-dismissed") === "1") {
+    if (sessionStorage.getItem(SESSION_KEYS.STICKYBAR_DISMISSED) === "1") {
       setDismissed(true);
       return;
     }
@@ -52,7 +53,7 @@ export function StickyBuyBar() {
           <BuyButton />
           <button
             onClick={() => {
-              sessionStorage.setItem("orangebox-stickybar-dismissed", "1");
+              sessionStorage.setItem(SESSION_KEYS.STICKYBAR_DISMISSED, "1");
               setDismissed(true);
             }}
             aria-label="Dismiss buy bar"

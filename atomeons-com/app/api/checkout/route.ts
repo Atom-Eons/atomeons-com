@@ -11,10 +11,11 @@ export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   try {
-    const origin =
-      req.headers.get("origin") ??
-      process.env.NEXT_PUBLIC_SITE_URL ??
-      "https://atomeons.com";
+    // SECURITY: hardcoded from env, never trust the request Origin header.
+    // Trusting Origin allows a crafted POST to redirect Stripe success_url to
+    // an attacker domain and leak the session_id.
+    const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atomeons.com";
+    void req; // keep req in signature; do not read Origin from it.
 
     const session = await getStripe().checkout.sessions.create({
       mode: "payment",

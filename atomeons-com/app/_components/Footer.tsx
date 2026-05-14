@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <AtomMark size={32} speed={36} />
+            <AtomMark size={32} speed={999} />
             <div>
               <p className="text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
                 ÆoNs Research Lab
@@ -18,8 +18,8 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-4 max-w-sm text-xs text-[#a7b8ad]">
-            One organism, many lenses. Anti-sprawl, premium coherence, truth
-            over theater. Built by one operator in Marco Island, FL.
+            One operator. One cockpit. Ships when it&apos;s ready, not when
+            the calendar says so.
           </p>
         </div>
 

@@ -7,7 +7,7 @@ import { sendDownloadEmail } from "@/lib/email";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const TOKEN_TTL_SECONDS = 60 * 60 * 24 * 30; // 30 days
+import { TOKEN_TTL_SECONDS } from "@/lib/constants";
 
 export async function POST(req: Request) {
   const sig = req.headers.get("stripe-signature");

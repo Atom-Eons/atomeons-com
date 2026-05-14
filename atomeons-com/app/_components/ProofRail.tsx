@@ -1,26 +1,26 @@
 /**
- * Infinitely-looping horizontal marquee of terse proof facts.
- * Pure CSS scroll, duplicated content for seamless wrap.
- * Disabled by prefers-reduced-motion via globals.css.
+ * Operator-to-buyer statements rail.
+ *
+ * v12: rewrote from "live system status" claims (which were hardcoded
+ * strings reading as live telemetry) to plain operator statements that
+ * are true of the product flow. Marquee scrolls slow; pure CSS.
  */
-const PROOF: string[] = [
-  "stripe live · cs_live_ checkout · webhook verified",
-  "hmac signed download token · 30-day ttl",
-  "single zip · node 18+ · runs on 127.0.0.1",
+const STATEMENTS: string[] = [
+  "no refund on curiosity — prereqs ship before the buy button",
+  "the manual is inside the box · you figure it out",
+  "stripe checkout · payment verified before download token mints",
+  "the cockpit was built through the cockpit it replaces",
   "no team · no roadmap · no support · one operator",
-  "92 endpoints · 17 lanes · 12 MCP tools",
-  "shipped through orangebox · proof-tracked",
-  "instrument panel · not a chatbox",
-  "pre-ship checkmate gate · no fake green",
+  "instrument panel · not a chatbox · not a dashboard",
 ];
 
 export function ProofRail() {
-  const items = [...PROOF, ...PROOF]; // duplicated for seamless wrap
+  const items = [...STATEMENTS, ...STATEMENTS]; // duplicated for seamless loop
   return (
     <div
       className="proof-rail relative overflow-hidden border-y border-[#204538] bg-[#04100d]"
       role="status"
-      aria-label="ORANGEBOX proof rail"
+      aria-label="ORANGEBOX operator statements"
     >
       <div className="proof-rail-track flex gap-12 whitespace-nowrap py-2">
         {items.map((p, i) => (

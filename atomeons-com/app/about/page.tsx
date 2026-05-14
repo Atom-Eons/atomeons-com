@@ -52,20 +52,20 @@ export default function About() {
       </h1>
 
       <p className="mt-6 text-lg text-[#a7b8ad]">
-        AtomEons Systems Laboratory is the solo lab of{" "}
-        <span className="text-[#f7f0e4]">Atom McCree</span> — independent
-        founder and researcher operating out of Marco Island, Florida.
+        I&apos;m{" "}
+        <span className="text-[#f7f0e4]">Atom McCree</span>. I run AtomEons
+        out of Marco Island, Florida.
       </p>
 
       <p className="mt-3 text-lg text-[#a7b8ad]">
         Every AI tool I tried put the operator inside the model&apos;s
-        context. I wanted the operator outside it, with a real cockpit. So I
-        built one.
+        context. I wanted the operator outside it, with a real cockpit. So
+        I built one.
       </p>
 
       <p className="mt-3 text-lg text-[#a7b8ad]">
-        The lab now ships private, local-first execution surfaces for one
-        operator running serious AI-assisted projects.
+        I ship private, local-first execution surfaces for operators who
+        refuse to lose the thread.
       </p>
 
       <hr className="my-12 border-[#204538]" />
@@ -78,11 +78,10 @@ export default function About() {
           One execution surface. Built for the lab, not the market.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
-          Most AI tooling is either a chatbox or a dashboard built for the
-          demo, not the work. Neither is enough for someone actually running
-          a serious project across many AI workers, models, and machines.
-          The operator gets drowned in context, terminal noise, and
-          unverified claims.
+          Most AI tooling is a chatbox or a dashboard. Neither survives
+          contact with a real project across many AI workers, models, and
+          machines. The operator gets drowned in context, terminal noise,
+          and unverified claims.
         </p>
         <p className="mt-3 text-[#a7b8ad]">
           AtomEons builds the layer above. One mission thread per project.

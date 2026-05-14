@@ -379,7 +379,10 @@ a:hover {
   .mesh-gradient,
   .vercel-glow:hover::before,
   .proof-rail-track,
-  .receipt-row {
+  .receipt-row,
+  .dag-node-active,
+  .cockpit-lane-fill,
+  .cockpit-feed-fade {
     animation: none !important;
   }
   .boot-bar { display: none; }

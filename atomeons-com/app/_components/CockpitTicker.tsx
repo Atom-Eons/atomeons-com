@@ -70,8 +70,11 @@ export function CockpitTicker() {
       }}
     >
       <div className="flex items-center justify-between gap-3 border-b border-[#204538] px-3 py-1">
-        <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#a7b8ad]">
+        <span className="inline-flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.18em] text-[#a7b8ad]">
           ::sample cockpit telemetry
+          <span className="rounded-sm border border-[#ffc46b]/40 bg-[#1a1308] px-1 py-0.5 text-[8px] font-bold text-[#ffc46b]">
+            SAMPLE
+          </span>
         </span>
         <span className="font-mono text-[9px] uppercase tracking-widest text-[#1b8b75]">
           frame {i + 1}/{FRAMES.length}

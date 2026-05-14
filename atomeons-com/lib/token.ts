@@ -1,6 +1,14 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 
-const SECRET = process.env.DOWNLOAD_TOKEN_SECRET ?? "dev-only-do-not-use";
+function getSecret(): string {
+  const s = process.env.DOWNLOAD_TOKEN_SECRET;
+  if (!s) {
+    throw new Error(
+      "DOWNLOAD_TOKEN_SECRET is not set. Refusing to sign tokens with a known fallback. Set it in Vercel env.",
+    );
+  }
+  return s;
+}
 
 export type DownloadClaim = {
   email: string;
@@ -23,7 +31,7 @@ function b64urlDecode(s: string): Buffer {
 }
 
 function sign(payload: string): string {
-  return b64urlEncode(createHmac("sha256", SECRET).update(payload).digest());
+  return b64urlEncode(createHmac("sha256", getSecret()).update(payload).digest());
 }
 
 export function mintDownloadToken(claim: DownloadClaim): string {

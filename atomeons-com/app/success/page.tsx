@@ -5,7 +5,7 @@ import { XAdsConversion } from "../_components/XAdsConversion";
 
 export const dynamic = "force-dynamic";
 
-const TOKEN_TTL_SECONDS = 60 * 60 * 24 * 30; // 30 days
+import { TOKEN_TTL_SECONDS } from "@/lib/constants";
 
 type Resolved = {
   state: "ok" | "pending" | "error" | "no-session";
@@ -94,9 +94,8 @@ export default async function Success({
               ::important
             </p>
             <p className="mt-1 text-sm text-[#f7f0e4]">
-              This page is the only place this link appears right now.
-              Bookmark it before you close the tab. (Email delivery is
-              optional and depends on operator setup.)
+              This page is the only place this link appears. Bookmark it
+              before you close the tab. There is no email fallback.
             </p>
           </div>
 

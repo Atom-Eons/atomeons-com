@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="scanlines screen-flicker min-h-full flex flex-col bg-[#04100d] text-[#f7f0e4]">
+      <body className="scanlines min-h-full flex flex-col bg-[#04100d] text-[#f7f0e4]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -70,7 +70,7 @@ export default function RootLayout({
         <div className="boot-bar" aria-hidden />
         <MadeWithOrangebox />
         <Header />
-        <div className="flex-1">{children}</div>
+        <div className="screen-flicker flex-1">{children}</div>
         <Footer />
       </body>
     </html>

@@ -5,7 +5,6 @@ import { InstallCommand } from "../_components/InstallCommand";
 import { BuildReceipts } from "../_components/BuildReceipts";
 import { ScrollReveal } from "../_components/ScrollReveal";
 import { StickyBuyBar } from "../_components/StickyBuyBar";
-import { CountUp } from "../_components/CountUp";
 
 export const metadata = {
   title: "ORANGEBOX — Private Command Cockpit",
@@ -27,9 +26,8 @@ export default function OrangeBox() {
             <span className="rebel-pill" style={{ color: "#ff4f5e", borderColor: "rgba(255,79,94,0.5)", background: "rgba(255,79,94,0.06)" }}>
               ▲ PROTOTYPE BETA
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 font-mono text-[11px] text-[#75ff92]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#75ff92]" />
-              <CountUp to={92} /> endpoints · <CountUp to={17} /> lanes · <CountUp to={12} /> MCP tools
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 font-mono text-[11px] text-[#a7b8ad]">
+              92 endpoints · 17 lanes · 12 MCP tools
             </span>
           </div>
           <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
@@ -164,6 +162,11 @@ export default function OrangeBox() {
           receipts work standalone. The triad lanes and Codexa worker rail
           require the optional dependencies above.
         </p>
+        <p className="mt-3 rounded-md border border-[#5a3210] bg-[#1a0f00] p-3 text-xs text-[#ffc46b]">
+          ::delivery — Your download link appears on the success page after
+          payment. Save it before you close the tab. Email delivery is a
+          backup, not a guarantee. There is no resend endpoint.
+        </p>
       </section>
 
       <section className="mt-20 border-t border-[#204538] pt-10">
@@ -174,9 +177,13 @@ export default function OrangeBox() {
           One thread. The whole project. No rebuild when the model forgets.
         </h2>
         <p className="mt-4 max-w-3xl text-[#a7b8ad]">
-          Built for operators who need real leverage and refuse to lose the
-          thread. Single ZIP. Modular production version being built in the
-          same cockpit it will replace.
+          For operators who refuse to lose the thread. Single ZIP. Modular
+          production version being built in the same cockpit it will
+          replace.
+        </p>
+        <p className="mt-3 max-w-3xl text-sm text-[#f7f0e4]">
+          I run this cockpit every day. ORANGEBOX v1 was built inside the
+          cockpit it replaced.
         </p>
       </section>
 

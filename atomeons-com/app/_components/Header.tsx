@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { AtomMark } from "./AtomMark";
-import { SystemLog } from "./SystemLog";
 import { NavLink } from "./NavLink";
 import { MobileNav } from "./MobileNav";
 
@@ -37,7 +36,6 @@ export function Header() {
         {/* Mobile hamburger */}
         <MobileNav />
       </div>
-      <SystemLog />
     </header>
   );
 }

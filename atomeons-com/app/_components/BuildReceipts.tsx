@@ -106,8 +106,8 @@ export function BuildReceipts() {
       </ol>
 
       <p className="mt-6 border-t border-[#204538] pt-4 text-xs text-[#a7b8ad]">
-        Every meaningful action in your project gets one of these. The
-        cockpit writes its own audit trail by default. That is the point.
+        Every meaningful action in your project gets one of these. No
+        audit trail is a red flag. This one is default-on.
       </p>
     </section>
   );

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { BuyButton } from "./_components/BuyButton";
 import { AtomMark } from "./_components/AtomMark";
-import { CountUp } from "./_components/CountUp";
 import { ProofRail } from "./_components/ProofRail";
+import { RefusalStrip } from "./_components/RefusalStrip";
 import { SpotlightBg } from "./_components/SpotlightBg";
 import { CockpitMiniPanel } from "./_components/CockpitMiniPanel";
 
@@ -14,19 +14,12 @@ export default function Home() {
         <section className="mx-auto w-full max-w-6xl px-6 pt-12 pb-20 md:pt-20 md:pb-28">
           <div className="grid gap-12 md:grid-cols-[1.5fr_1fr] md:items-center">
             <div>
-              {/* outlaw signature pills */}
-              <div className="mb-6 flex flex-wrap gap-2">
-                <span className="rebel-pill">▲ Not a startup</span>
-                <span className="rebel-pill">▲ No team</span>
-                <span className="rebel-pill">▲ No roadmap</span>
-                <span className="rebel-pill">▲ One operator</span>
-              </div>
-
               <p className="mb-3 font-mono text-xs text-[#75ff92]">
                 <span className="text-[#1b8b75]">$</span> atomeons --boot
               </p>
               <p className="mb-3 text-sm text-[#a7b8ad]">
-                Solo lab. One product. Shipping.
+                The model does not run your project. You do. The cockpit
+                keeps both true.
               </p>
               <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.02] tracking-tight md:text-7xl">
                 Build like a{" "}
@@ -34,9 +27,8 @@ export default function Home() {
                 <span className="blink-cursor" aria-hidden />
               </h1>
               <p className="mt-6 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
-                AtomEons is a solo lab in Marco Island building one thing at a
-                time. No teams. No roadmap theater. Real artifacts, real
-                receipts, one operator.
+                A solo lab in Marco Island. One thing at a time. Real
+                artifacts, real receipts.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
@@ -67,8 +59,8 @@ export default function Home() {
                   <p className="text-2xl font-bold tracking-tight text-[#f7f0e4]">
                     $49 <span className="text-sm font-normal text-[#a7b8ad]">one-time</span>
                   </p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#75ff92]">
-                    <CountUp to={92} />/<CountUp to={17} />/<CountUp to={12} />
+                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
+                    92 endpoints · 17 lanes · 12 mcp tools
                   </p>
                 </div>
                 <Link
@@ -86,7 +78,7 @@ export default function Home() {
                 </p>
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   <span className="rounded border border-[#204538] bg-[#04100d] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-widest text-[#75ff92]">
-                    stripe verified
+                    stripe checkout
                   </span>
                   <span className="rounded border border-[#204538] bg-[#04100d] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-widest text-[#59d9ff]">
                     hmac signed
@@ -100,6 +92,9 @@ export default function Home() {
           </div>
         </section>
       </SpotlightBg>
+
+      {/* REFUSAL STRIP — what this product refuses to do (Misfits, v12) */}
+      <RefusalStrip />
 
       {/* PROOF RAIL — infinite marquee bridging hero and CTA */}
       <ProofRail />

@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { AtomMark } from "./AtomMark";
+import { SESSION_KEYS } from "@/lib/constants";
 
-const BOOT_KEY = "atomeons-boot-played";
+const BOOT_KEY = SESSION_KEYS.BOOT_PLAYED;
 
 /**
  * One-shot grand-entrance: huge AtomMark renders center-screen on
@@ -12,9 +14,16 @@ const BOOT_KEY = "atomeons-boot-played";
  * navigation. Skipped entirely under prefers-reduced-motion.
  */
 export function AtomBoot() {
+  const pathname = usePathname();
   const [phase, setPhase] = useState<"idle" | "play" | "done">("idle");
 
   useEffect(() => {
+    // v12 — only fire on the home page (UX panel: blocks /success direct
+    // hits with a 1.4s gate which is unacceptable on the post-purchase path)
+    if (pathname !== "/") {
+      setPhase("done");
+      return;
+    }
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) {
       setPhase("done");
@@ -28,7 +37,7 @@ export function AtomBoot() {
     setPhase("play");
     const t = setTimeout(() => setPhase("done"), 1400);
     return () => clearTimeout(t);
-  }, []);
+  }, [pathname]);
 
   if (phase === "done" || phase === "idle") return null;
 

@@ -23,8 +23,8 @@ export default function Cancel() {
           No charge made.
         </h1>
         <p className="mt-4 text-[#a7b8ad]">
-          You backed out of Stripe checkout. No card was charged. The
-          cockpit will be here when you come back.
+          You backed out of Stripe checkout. No charge. Nothing was
+          touched.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
