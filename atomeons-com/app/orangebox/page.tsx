@@ -23,15 +23,16 @@ export default function OrangeBox() {
       <section className="grid gap-10 pt-8 md:grid-cols-[1.6fr_1fr] md:items-center">
         <div>
           <div className="mb-4 flex flex-wrap gap-2">
-            <span className="rebel-pill" style={{ color: "#ff4f5e", borderColor: "rgba(255,79,94,0.5)", background: "rgba(255,79,94,0.06)" }}>
-              ▲ PROTOTYPE BETA
+            <span className="rebel-pill" style={{ color: "#75ff92", borderColor: "rgba(117,255,146,0.5)", background: "rgba(117,255,146,0.06)" }}>
+              ▲ v1.4.0 · SHOP READY · GREEN
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 font-mono text-[11px] text-[#a7b8ad]">
               92 endpoints · 17 lanes · 12 MCP tools
             </span>
           </div>
           <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-            ORANGEBOX is <span className="text-[#ff7a18]">now live</span>.
+            ORANGEBOX OS{" "}
+            <span className="text-[#ff7a18]">v1.4.0</span> ships.
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
             A private command cockpit built for one operator to run large,
@@ -85,6 +86,10 @@ export default function OrangeBox() {
               lanes
             </li>
             <li>
+              <span className="text-[#ff7a18]">·</span> Codexa-local lane (per
+              v1.4.0 disclosure)
+            </li>
+            <li>
               <span className="text-[#ff7a18]">·</span> Tauri desktop wrapper
               (optional)
             </li>
@@ -98,47 +103,41 @@ export default function OrangeBox() {
             <span className="font-mono text-[#75ff92]">127.0.0.1:8787</span>.
             Your project state stays on your disk. No cloud sync.
           </p>
-        </aside>
-      </section>
-
-      {/* COCKPIT SCREENSHOT — real product UI, captured on operator machine */}
-      <section className="mt-16">
-        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
-              ::actual cockpit
+          <div className="mt-4 space-y-1.5 border-t border-[#204538] pt-4 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
+            <p>
+              <span className="text-[#1b8b75]">file:</span>{" "}
+              <span className="text-[#75ff92]">
+                ORANGEBOX-OS-AIO-v1.4.0.zip
+              </span>
             </p>
-            <h2 className="mt-1 text-2xl font-bold tracking-tight md:text-3xl">
-              Here&apos;s what you&apos;re buying.
-            </h2>
-            <p className="mt-2 max-w-xl text-sm text-[#a7b8ad]">
-              Real screenshot from the operator&apos;s running cockpit.
-              Not a marketing render. Not a wireframe. The actual UI you
-              get when you run{" "}
-              <span className="font-mono text-[#75ff92]">npm run start</span>.
+            <p>
+              <span className="text-[#1b8b75]">size:</span>{" "}
+              <span className="text-[#f7f0e4]">24.81 MB</span>
+            </p>
+            <p>
+              <span className="text-[#1b8b75]">sha-256:</span>{" "}
+              <span className="break-all text-[#f7f0e4]">
+                f244b973cb61dd47c85a5ce05a01c764785c746a6d56f5a5d20745310acb4f3e
+              </span>
+            </p>
+            <p>
+              <span className="text-[#1b8b75]">disclosure:</span>{" "}
+              <span className="text-[#f7f0e4]">
+                ATOM-ORANGEBOX-V1-4-CODEXA-LOCAL-2026-0514
+              </span>
+            </p>
+            <p>
+              <a
+                href="https://github.com/AtomEons/orangebox-os/releases/tag/v1.4.0"
+                className="text-[#ff7a18] hover:underline"
+                target="_blank"
+                rel="noopener"
+              >
+                ↗ verify on github (v1.4.0 release)
+              </a>
             </p>
           </div>
-          <p className="font-mono text-[10px] uppercase tracking-widest text-[#1b8b75]">
-            captured 2026-05-13 · 127.0.0.1:8787
-          </p>
-        </div>
-        {/* Use plain <img> intentionally — the screenshot is already
-            optimized at source size and we want zero Next/Image client JS
-            on the product page */}
-        <div className="overflow-hidden rounded-xl border border-[#204538] bg-[#04100d] shadow-[0_0_60px_rgba(255,122,24,0.12)]">
-          <img
-            src="/screens/cockpit-live.png"
-            alt="ORANGEBOX cockpit running locally — Command, Codexa Bridge, project rail, and live party-line feed visible"
-            width={1600}
-            height={1000}
-            loading="lazy"
-            decoding="async"
-            className="block h-auto w-full"
-          />
-        </div>
-        <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
-          ::evidence orangebox-command-chat-hub-live2-20260513.png
-        </p>
+        </aside>
       </section>
 
       {/* PREREQS — Mirrors fix: disclose what you need before this works */}

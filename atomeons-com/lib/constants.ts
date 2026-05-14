@@ -15,10 +15,16 @@ export const SESSION_KEYS = {
 
 export const PRODUCT = {
   NAME: "ORANGEBOX",
-  VERSION: "v1-prototype",
-  ZIP_FILENAME: "orangebox-v1.zip",
+  VERSION: "v1.4.0",
+  ZIP_FILENAME: "ORANGEBOX-OS-AIO-v1.4.0.zip",
+  ZIP_SHA256:
+    "f244b973cb61dd47c85a5ce05a01c764785c746a6d56f5a5d20745310acb4f3e",
+  ZIP_SIZE_BYTES: 26016312,
+  GITHUB_RELEASE_URL:
+    "https://github.com/AtomEons/orangebox-os/releases/tag/v1.4.0",
+  DISCLOSURE_ID: "ATOM-ORANGEBOX-V1-4-CODEXA-LOCAL-2026-0514",
   DESCRIPTION:
-    "Private command cockpit. Single-file prototype. Node 18+. No support.",
+    "ORANGEBOX OS All-In-One v1.4.0. Local-first command cockpit for one operator. Node 18+. No support.",
   PRICE_USD: 49,
   PRICE_USD_CENTS: 4900,
 } as const;

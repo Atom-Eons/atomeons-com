@@ -50,7 +50,8 @@ export async function GET(req: Request) {
     status: 200,
     headers: {
       "Content-Type": "application/zip",
-      "Content-Disposition": 'attachment; filename="orangebox-v1.zip"',
+      "Content-Disposition":
+        'attachment; filename="ORANGEBOX-OS-AIO-v1.4.0.zip"',
       "Cache-Control": "private, no-store, max-age=0",
       "X-Content-Type-Options": "nosniff",
     },

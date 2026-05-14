@@ -15,6 +15,6 @@ export function getStripe(): Stripe {
 }
 
 export const PRICE_USD_CENTS = 4900;
-export const PRODUCT_NAME = "ORANGEBOX";
+export const PRODUCT_NAME = "ORANGEBOX OS v1.4.0";
 export const PRODUCT_DESCRIPTION =
-  "Private command cockpit. Single-file prototype. Node 18+. No support.";
+  "ORANGEBOX OS All-In-One v1.4.0. Local-first command cockpit for one operator. Node 18+. No support.";

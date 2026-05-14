@@ -3,9 +3,9 @@
 import { useState } from "react";
 
 const LINES: string[] = [
-  "unzip orangebox-v1.zip",
-  "cd orangebox-v1 && npm install",
-  "npm run start",
+  "unzip ORANGEBOX-OS-AIO-v1.4.0.zip",
+  "cd ORANGEBOX-OS-AIO-v1.4.0",
+  "open README.md   # follow the manual inside",
 ];
 const ALL = LINES.join("\n");
 
@@ -37,7 +37,7 @@ export function InstallCommand() {
     <div className="rounded-lg border border-[#204538] bg-[#04100d]">
       <div className="flex items-center justify-between border-b border-[#204538] px-3 py-2">
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
-          ::three-line install · paste in your shell
+          ::3-line install · paste in your shell
         </p>
         <button
           onClick={copyAll}
@@ -82,7 +82,7 @@ export function InstallCommand() {
         ))}
       </ol>
       <p className="border-t border-[#204538] px-3 py-2 font-mono text-[10px] tracking-tight text-[#a7b8ad]">
-        then open{" "}
+        cockpit binds to{" "}
         <span className="text-[#75ff92]">http://127.0.0.1:8787/</span>
       </p>
     </div>
