@@ -69,7 +69,8 @@ export default function Home() {
                 </div>
                 <Link
                   href="/orangebox"
-                  className="relative z-10 mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b]"
+                  className="relative z-10 mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-bold text-black transition-colors hover:bg-[#ffc46b]"
+                  style={{ color: "#000", WebkitTextFillColor: "#000" }}
                 >
                   See ORANGEBOX →
                 </Link>

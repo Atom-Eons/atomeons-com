@@ -28,7 +28,8 @@ export function Header() {
           <NavLink href="/about">About</NavLink>
           <Link
             href="/orangebox#buy"
-            className="ml-2 rounded-md border border-[#ff7a18] bg-[#ff7a18] px-3 py-1.5 text-sm font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b]"
+            className="ml-2 rounded-md border border-[#ff7a18] bg-[#ff7a18] px-3 py-1.5 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
+            style={{ color: "#000", WebkitTextFillColor: "#000" }}
           >
             Buy
           </Link>
