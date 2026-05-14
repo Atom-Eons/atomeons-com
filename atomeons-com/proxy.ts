@@ -17,7 +17,7 @@ const REDIRECTS: Record<string, string> = {
   "/blue-b0x": "/orangebox",
 };
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const lower = req.nextUrl.pathname.toLowerCase();
   const dest = REDIRECTS[lower];
   if (!dest) return NextResponse.next();
