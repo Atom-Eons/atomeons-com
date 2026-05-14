@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AtomMark } from "./AtomMark";
 import { SystemLog } from "./SystemLog";
 import { NavLink } from "./NavLink";
+import { MobileNav } from "./MobileNav";
 
 export function Header() {
   return (
@@ -20,7 +21,8 @@ export function Header() {
             </p>
           </div>
         </Link>
-        <nav className="flex items-center gap-1 md:gap-2">
+        {/* Desktop nav */}
+        <nav className="hidden items-center gap-1 md:flex md:gap-2">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/orangebox">ORANGEBOX</NavLink>
           <NavLink href="/changelog">Changelog</NavLink>
@@ -32,6 +34,8 @@ export function Header() {
             Buy
           </Link>
         </nav>
+        {/* Mobile hamburger */}
+        <MobileNav />
       </div>
       <SystemLog />
     </header>

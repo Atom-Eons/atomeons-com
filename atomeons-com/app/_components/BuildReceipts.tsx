@@ -39,8 +39,11 @@ export function BuildReceipts() {
     >
       <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-[#204538] pb-4">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
+          <p className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
             ::sample build receipts
+            <span className="rounded-sm border border-[#ffc46b]/40 bg-[#1a1308] px-1.5 py-0.5 text-[9px] font-bold text-[#ffc46b]">
+              SAMPLE DATA
+            </span>
           </p>
           <h2 className="mt-1 text-2xl font-bold tracking-tight md:text-3xl">
             What every ORANGEBOX project leaves behind.
@@ -85,8 +88,13 @@ export function BuildReceipts() {
               >
                 {entry.status}
               </span>
-              <span className="ml-auto text-[#1b8b75]">
-                {relTime(entry.generatedAt)}
+              <span className="ml-auto flex items-center gap-2">
+                <span className="rounded-sm border border-[#ffc46b]/30 px-1 py-0.5 text-[9px] font-bold text-[#ffc46b]/80">
+                  SAMPLE
+                </span>
+                <span className="text-[#1b8b75]">
+                  {relTime(entry.generatedAt)}
+                </span>
               </span>
             </div>
             <p className="mt-3 text-sm text-[#f7f0e4]">{entry.text}</p>

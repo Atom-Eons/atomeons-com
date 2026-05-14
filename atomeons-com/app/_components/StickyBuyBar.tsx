@@ -5,8 +5,8 @@ import { BuyButton } from "./BuyButton";
 
 /**
  * Bottom-pinned buy bar that appears once the user scrolls past
- * a sentinel element (typically the in-page #buy zone). Dismissible.
- * Hides on scroll-up to reduce nag.
+ * the in-page #buy zone. Dismissible. Mobile-safe: 44px tap targets,
+ * grid layout that does not push to two rows on 375px, safe-area pad.
  */
 export function StickyBuyBar() {
   const [visible, setVisible] = useState(false);
@@ -22,7 +22,6 @@ export function StickyBuyBar() {
     const obs = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
-          // Show the sticky bar only AFTER the in-hero buy zone has scrolled out of view.
           setVisible(!e.isIntersecting);
         }
       },
@@ -35,9 +34,12 @@ export function StickyBuyBar() {
   if (dismissed || !visible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#204538] bg-[#04100d]/95 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-3">
-        <div className="flex items-baseline gap-3">
+    <div
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-[#204538] bg-[#04100d]/95 backdrop-blur-md"
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+    >
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-[1fr_auto] items-center gap-3 px-4 py-3 sm:px-6">
+        <div className="min-w-0">
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
             ::orangebox v1
           </p>
@@ -54,7 +56,7 @@ export function StickyBuyBar() {
               setDismissed(true);
             }}
             aria-label="Dismiss buy bar"
-            className="rounded border border-[#204538] bg-[#071915] px-2 py-1.5 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad] hover:text-[#f7f0e4]"
+            className="flex h-11 w-11 items-center justify-center rounded border border-[#204538] bg-[#071915] font-mono text-sm text-[#a7b8ad] hover:text-[#f7f0e4]"
           >
             ✕
           </button>

@@ -43,6 +43,9 @@ export default function OrangeBox() {
           <p className="mt-3 max-w-xl text-base text-[#f7f0e4]">
             It is not another chat interface. It is a real execution surface.
           </p>
+          <p className="mt-2 max-w-xl text-base font-semibold text-[#ffc46b]">
+            You are the pilot. The cockpit does not move without your hand on it.
+          </p>
 
           <div className="mt-6">
             <CockpitTicker />
@@ -171,9 +174,9 @@ export default function OrangeBox() {
           One thread. The whole project. No rebuild when the model forgets.
         </h2>
         <p className="mt-4 max-w-3xl text-[#a7b8ad]">
-          Built for people running serious projects who want maximum leverage
-          without losing control or clarity. Single ZIP. Modular production
-          version being built in the same cockpit it will replace.
+          Built for operators who need real leverage and refuse to lose the
+          thread. Single ZIP. Modular production version being built in the
+          same cockpit it will replace.
         </p>
       </section>
 
@@ -271,9 +274,23 @@ export default function OrangeBox() {
         </p>
       </section>
 
-      <section className="mt-20 rounded-2xl border border-[#204538] bg-[#0a211b] p-8 text-center">
+      {/* Cockpit Contract — credo block */}
+      <section className="mt-20 rounded-2xl border border-[#5a3210] bg-[#1a0f00] p-6 md:p-8">
+        <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ffc46b]">
+          ::the cockpit contract
+        </p>
+        <p className="mt-4 max-w-3xl text-pretty text-[#f7f0e4] md:text-lg">
+          ORANGEBOX does not manage you. It does not nudge you, notify you,
+          or protect you from a bad decision. It routes work, writes
+          receipts, and keeps state. What you build in it is yours. What
+          you break is yours. The cockpit is an instrument, not a
+          babysitter. If you want the instrument, buy it.
+        </p>
+      </section>
+
+      <section className="mt-12 rounded-2xl border border-[#204538] bg-[#0a211b] p-8 text-center">
         <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-          The manual is inside the box. Everything else is on you.
+          The manual is inside. The rest is your problem.
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-[#a7b8ad]">
           One operator. Real execution surface. Receipts, not vibes.
@@ -303,8 +320,8 @@ const features: { tag: string; title: string; body: string }[] = [
     body: "Every department posts short status, evidence, blockers, and next action. Confidence and receipt paths included. No raw transcript dump.",
   },
   {
-    tag: "Smart Model Routing",
-    title: "Triad lanes, not random agents",
+    tag: "Triad Routing",
+    title: "Three lanes, not random agents",
     body: "STRATEGY, ENGINEERING, and EXPERIENCE triad heads route work to the right brain. Frontier, local, or Codexa worker — picked deliberately.",
   },
   {
@@ -319,7 +336,7 @@ const features: { tag: string; title: string; body: string }[] = [
   },
   {
     tag: "Command Surface",
-    title: "Natural-language operator chat",
-    body: "Type intent. ORANGEBOX turns it into project contracts, spine, DAG actions, and routed department work. The chat is the steering wheel.",
+    title: "The chat is the steering wheel",
+    body: "Type your intent. ORANGEBOX turns it into project contracts, spine, DAG actions, and routed department work. No prompt engineering. Cockpit reads operator language.",
   },
 ];

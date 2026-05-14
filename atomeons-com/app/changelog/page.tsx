@@ -15,6 +15,21 @@ type Release = {
 
 const RELEASES: Release[] = [
   {
+    v: "v9",
+    date: "2026-05-14",
+    headline: "Deeper design pass + Mirrors honesty block fixed",
+    bullets: [
+      "CockpitMiniPanel: inline SVG sample of cockpit UI with animated triad lane bars + rotating party-line feed (signature visible-product move)",
+      "MobileNav: hamburger + full-width dropdown panel with 44px tap targets, body-scroll lock, route-change auto-close",
+      "StickyBuyBar mobile fix: grid layout (no more 2-row push at 375px), 44px dismiss tap target, iOS safe-area pad",
+      "Mirrors fix: per-card SAMPLE label on every BuildReceipts entry (was: only in section header — buyer reading individual cards saw VERIFIED badges with no caveat)",
+      "LIPS swaps: 'maximum leverage' phrase killed; 'Smart Model Routing' renamed to 'Triad Routing'; 'Natural-language operator chat' replaced with 'The chat is the steering wheel'",
+      "LIPS additions: 'You are the pilot' line on /orangebox; 'No trial. No refund on curiosity.' on home; contact-close line on /about",
+      "LIPS new surface: 'The Cockpit Contract' credo block on /orangebox before final CTA",
+      "Closing CTA copy tightened: 'The manual is inside. The rest is your problem.'",
+    ],
+  },
+  {
     v: "v8",
     date: "2026-05-14",
     headline: "Design team redesign — Linear + Vercel + Stripe + Anthropic + Cosmos paradigms",

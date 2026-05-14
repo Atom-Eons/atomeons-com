@@ -43,10 +43,11 @@ export default function About() {
           One execution surface. Built for the lab, not the market.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
-          Most AI tooling is either a chat box or a developer dashboard.
-          Neither is enough for someone actually running a serious project
-          across many AI workers, models, and machines. The operator gets
-          drowned in context, terminal noise, and unverified claims.
+          Most AI tooling is either a chatbox or a dashboard built for the
+          demo, not the work. Neither is enough for someone actually running
+          a serious project across many AI workers, models, and machines.
+          The operator gets drowned in context, terminal noise, and
+          unverified claims.
         </p>
         <p className="mt-3 text-[#a7b8ad]">
           AtomEons builds the layer above. One mission thread per project.
@@ -173,6 +174,10 @@ export default function About() {
           AtomEons does not run a support desk. The lab ships, then ships
           again. Read the manual that comes inside ORANGEBOX before
           asking.
+        </p>
+        <p className="mt-3 text-sm text-[#f7f0e4]">
+          If you have a real question about what ORANGEBOX does or does
+          not do, send it.
         </p>
       </section>
     </main>

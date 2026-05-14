@@ -278,6 +278,24 @@ a:hover {
   animation-delay: calc(var(--i, 0) * 60ms);
 }
 
+/* CockpitMiniPanel — lane fill animation + feed fade */
+@keyframes cockpit-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.cockpit-lane-fill {
+  transform-origin: left;
+  animation: cockpit-fill 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cockpit-feed-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.cockpit-feed-fade {
+  animation: cockpit-feed-fade 360ms ease-out both;
+}
+
 /* ASCII section divider */
 .ascii-rule {
   font-family: var(--font-mono);

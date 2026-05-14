@@ -4,6 +4,7 @@ import { AtomMark } from "./_components/AtomMark";
 import { CountUp } from "./_components/CountUp";
 import { ProofRail } from "./_components/ProofRail";
 import { SpotlightBg } from "./_components/SpotlightBg";
+import { CockpitMiniPanel } from "./_components/CockpitMiniPanel";
 
 export default function Home() {
   return (
@@ -59,42 +60,31 @@ export default function Home() {
               </div>
             </div>
 
-            <aside className="relative">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -right-12 -top-16 opacity-30 blur-[1px]"
-              >
-                <AtomMark size={280} speed={14} />
-              </div>
-              <div className="vercel-glow mesh-gradient relative rounded-2xl border border-[#204538] p-6 shadow-[0_0_60px_rgba(255,122,24,0.22)]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
-                  ::currently shipping
-                </p>
-                <h2 className="mt-3 text-3xl font-black tracking-tight text-[#ff7a18]">
-                  ORANGEBOX
-                </h2>
-                <p className="mt-2 text-sm text-[#f7f0e4]">
-                  Private command cockpit for one operator.
-                </p>
-                <p className="mt-3 font-mono text-[11px] text-[#75ff92]">
-                  <CountUp to={92} /> endpoints ·{" "}
-                  <CountUp to={17} /> lanes ·{" "}
-                  <CountUp to={12} /> MCP tools
-                </p>
-                <div className="relative z-10 mt-5 border-t border-[#204538] pt-5">
+            <aside className="relative flex flex-col gap-4">
+              {/* Cockpit demo — visible product, sample-labeled */}
+              <CockpitMiniPanel />
+              {/* Stats + buy zone */}
+              <div className="vercel-glow mesh-gradient relative rounded-xl border border-[#204538] p-5 shadow-[0_0_60px_rgba(255,122,24,0.22)]">
+                <div className="flex items-baseline justify-between gap-3">
                   <p className="text-2xl font-bold tracking-tight text-[#f7f0e4]">
                     $49 <span className="text-sm font-normal text-[#a7b8ad]">one-time</span>
                   </p>
-                  <Link
-                    href="/orangebox"
-                    className="relative z-10 mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b]"
-                  >
-                    See ORANGEBOX →
-                  </Link>
-                  <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
-                    Read the prereqs · then buy.
+                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#75ff92]">
+                    <CountUp to={92} />/<CountUp to={17} />/<CountUp to={12} />
                   </p>
                 </div>
+                <Link
+                  href="/orangebox"
+                  className="relative z-10 mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-semibold text-[#06110e] transition-colors hover:bg-[#ffc46b]"
+                >
+                  See ORANGEBOX →
+                </Link>
+                <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
+                  Read the prereqs · then buy.
+                </p>
+                <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-[#1b8b75]">
+                  No trial. No refund on curiosity.
+                </p>
               </div>
             </aside>
           </div>
