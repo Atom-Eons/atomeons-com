@@ -23,8 +23,9 @@ export const PRODUCT = {
   GITHUB_RELEASE_URL:
     "https://github.com/AtomEons/orangebox-os/releases/tag/v1.4.0",
   DISCLOSURE_ID: "ATOM-ORANGEBOX-V1-4-CODEXA-LOCAL-2026-0514",
+  TAGLINE: "An AI builder for all.",
   DESCRIPTION:
-    "ORANGEBOX OS All-In-One v1.4.0. Local-first command cockpit for one operator. Node 18+. No support.",
+    "ORANGEBOX Command v1.4.0 — the private AI operations cockpit. Windows 10/11 + Node.js 20+. $49 once, forever. No subscription.",
   PRICE_USD: 49,
   PRICE_USD_CENTS: 4900,
 } as const;

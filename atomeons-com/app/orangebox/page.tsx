@@ -7,9 +7,9 @@ import { ScrollReveal } from "../_components/ScrollReveal";
 import { StickyBuyBar } from "../_components/StickyBuyBar";
 
 export const metadata = {
-  title: "ORANGEBOX — Private Command Cockpit",
+  title: "ORANGEBOX Command v1.4.0 — An AI builder for all",
   description:
-    "ORANGEBOX is a private, local-first command cockpit for one operator running large projects through AI departments, worker systems, and proof gates. $49 one-time download.",
+    "ORANGEBOX Command — the private AI operations cockpit for solo operators. 15 departments, 15 skills, 27 guardrails, Codexa Local. $49 once, forever. Local-first, no telemetry, no subscription.",
 };
 
 export default function OrangeBox() {
@@ -17,98 +17,96 @@ export default function OrangeBox() {
     <main className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-10">
       <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
         <Link href="/">AtomEons</Link>{" "}
-        <span className="text-[#204538]">/</span> ORANGEBOX
+        <span className="text-[#204538]">/</span> ORANGEBOX Command v1.4.0
       </p>
 
+      {/* ─── HERO ─────────────────────────────────────────────────── */}
       <section className="grid gap-10 pt-8 md:grid-cols-[1.6fr_1fr] md:items-center">
         <div>
           <div className="mb-4 flex flex-wrap gap-2">
-            <span className="rebel-pill" style={{ color: "#75ff92", borderColor: "rgba(117,255,146,0.5)", background: "rgba(117,255,146,0.06)" }}>
+            <span
+              className="rebel-pill"
+              style={{
+                color: "#75ff92",
+                borderColor: "rgba(117,255,146,0.5)",
+                background: "rgba(117,255,146,0.06)",
+              }}
+            >
               ▲ v1.4.0 · SHOP READY · GREEN
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 font-mono text-[11px] text-[#a7b8ad]">
-              92 endpoints · 17 lanes · 12 MCP tools
+              15 depts · 15 skills · 60+ MCP tools · 92 endpoints
             </span>
           </div>
+          <p className="mb-2 font-mono text-xs uppercase tracking-[0.18em] text-[#ff7a18]">
+            ORANGEBOX Command · v1.4.0 — Codexa Local + Audit Roll-up
+          </p>
           <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-            ORANGEBOX OS{" "}
-            <span className="text-[#ff7a18]">v1.4.0</span> ships.
+            An AI builder{" "}
+            <span className="text-[#ff7a18]">for all</span>.
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
-            A private command cockpit built for one operator to run large,
-            complex projects through AI departments, worker systems, and proof
-            gates — without drowning in context or developer noise.
+            The private AI operations cockpit. Turn operator intent into
+            project spine, DAG nodes, department work packets, Codexa
+            worker jobs, review gates, receipts, and visual proof —
+            without forcing the browser or the model to hold the whole
+            project in active memory.
           </p>
-          <p className="mt-3 max-w-xl text-base text-[#f7f0e4]">
-            It is not another chat interface. It is a real execution surface.
+          <p className="mt-3 max-w-xl text-base font-semibold text-[#f7f0e4]">
+            Command, not chat. Receipts, not promises. Yours, not theirs.
           </p>
-          <p className="mt-2 max-w-xl text-base font-semibold text-[#ffc46b]">
+          <p className="mt-2 max-w-xl text-base text-[#ffc46b]">
             You are the pilot. The cockpit does not move without your hand on it.
           </p>
 
           <div className="mt-6">
             <CockpitTicker />
           </div>
-
           <div className="mt-4">
             <InstallCommand />
           </div>
-
           <div
             id="buy"
             className="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center"
           >
             <BuyButton />
             <p className="text-xs text-[#a7b8ad]">
-              $49 USD · one-time · no support · download on payment confirmed
+              $49 USD · one-time · forever · download on payment confirmed
             </p>
           </div>
+          <p className="mt-3 max-w-xl text-xs text-[#75ff92]">
+            ▲ Anti-SaaS commitment locked in LICENSE §4A: ORANGEBOX will
+            NEVER move to monthly billing. If we ever try, every existing
+            buyer keeps their license free in perpetuity.
+          </p>
         </div>
 
         <aside className="rounded-xl border border-[#204538] bg-[#071915] p-5 shadow-[0_0_60px_rgba(255,122,24,0.12)]">
-          <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
-            Inside the box
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
+            ::inside the box
           </p>
-          <ul className="mt-3 space-y-2 text-sm text-[#f7f0e4]">
-            <li>
-              <span className="text-[#ff7a18]">·</span> Runnable cockpit (Node
-              server + frontend)
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> 92 server endpoints
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> 12 MCP tools for Claude
-              Code
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> 17 department routing
-              lanes
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> Codexa-local lane (per
-              v1.4.0 disclosure)
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> Tauri desktop wrapper
-              (optional)
-            </li>
-            <li>
-              <span className="text-[#ff7a18]">·</span> Full Opus system manual
-              + system index
-            </li>
+          <ul className="mt-3 space-y-1.5 text-sm text-[#f7f0e4]">
+            <li><span className="text-[#ff7a18]">·</span> ORANGEBOX Command desktop app (Tauri 2.x · MSI + NSIS)</li>
+            <li><span className="text-[#ff7a18]">·</span> AE0–AE14 doctrine — 15 departments + 6 review engines</li>
+            <li><span className="text-[#ff7a18]">·</span> ÆoNs Skill Suite V1.4 — 15 skills · 230/230 tests pass</li>
+            <li><span className="text-[#ff7a18]">·</span> 4-layer memory model + knowledge engine</li>
+            <li><span className="text-[#ff7a18]">·</span> 27 Constitutional Guardrails</li>
+            <li><span className="text-[#ff7a18]">·</span> 9-stage Gate Chain (Gate 0 = LBCE)</li>
+            <li><span className="text-[#ff7a18]">·</span> Triad model lanes (STRATEGY · ENGINEERING · EXPERIENCE)</li>
+            <li><span className="text-[#ff7a18]">·</span> 60+ MCP tools for Claude Code / Claude Desktop</li>
+            <li className="text-[#75ff92]"><span className="text-[#75ff92]">+</span> NEW v1.4: <strong>Codexa Local</strong> — heavy work runs on your cockpit machine, no second computer needed</li>
+            <li><span className="text-[#ff7a18]">·</span> Codexa Remote (advanced) — pilot a second machine on your LAN</li>
+            <li><span className="text-[#ff7a18]">·</span> Mission-graph DAG runner + project spine</li>
+            <li><span className="text-[#ff7a18]">·</span> Party-line shared status bus (JSONL)</li>
+            <li><span className="text-[#ff7a18]">·</span> Receipt + proof artifact rails</li>
+            <li><span className="text-[#ff7a18]">·</span> Day-0 demo project (orangebox-onboarding)</li>
+            <li><span className="text-[#ff7a18]">·</span> Operator manual + Quickstart + 4 setup guides (MCP/Ollama/n8n)</li>
+            <li><span className="text-[#ff7a18]">·</span> Full source code (inspection + personal modification)</li>
           </ul>
-          <p className="mt-4 border-t border-[#204538] pt-4 text-xs text-[#a7b8ad]">
-            ORANGEBOX runs locally on{" "}
-            <span className="font-mono text-[#75ff92]">127.0.0.1:8787</span>.
-            Your project state stays on your disk. No cloud sync.
-          </p>
           <div className="mt-4 space-y-1.5 border-t border-[#204538] pt-4 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
             <p>
               <span className="text-[#1b8b75]">file:</span>{" "}
-              <span className="text-[#75ff92]">
-                ORANGEBOX-OS-AIO-v1.4.0.zip
-              </span>
+              <span className="text-[#75ff92]">ORANGEBOX-OS-AIO-v1.4.0.zip</span>
             </p>
             <p>
               <span className="text-[#1b8b75]">size:</span>{" "}
@@ -133,20 +131,116 @@ export default function OrangeBox() {
                 target="_blank"
                 rel="noopener"
               >
-                ↗ verify on github (v1.4.0 release)
+                ↗ verify on github (v1.4.0 release · private)
               </a>
             </p>
           </div>
         </aside>
       </section>
 
-      {/* PREREQS — Mirrors fix: disclose what you need before this works */}
-      <section className="mt-12 rounded-xl border border-[#204538] bg-[#071915]/60 p-6">
+      {/* ─── COMPARISON LADDER ────────────────────────────────────── */}
+      <ScrollReveal>
+        <section className="mt-16 rounded-xl border border-[#204538] bg-[#04100d] p-6 md:p-8">
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
+            ::what $49 buys you
+          </p>
+          <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
+            One price. Compare it to the alternatives.
+          </h2>
+          <div className="mt-6 overflow-x-auto">
+            <table className="w-full min-w-[640px] text-sm">
+              <thead>
+                <tr className="border-b border-[#204538] text-left">
+                  <th className="py-2 pr-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">Alternative</th>
+                  <th className="py-2 pr-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">Annual cost</th>
+                  <th className="py-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">What you get</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-[#204538]/40">
+                  <td className="py-3 pr-4 text-[#f7f0e4]">Hire a part-time PM (10h/wk @ $100/h)</td>
+                  <td className="py-3 pr-4 font-mono text-[#a7b8ad]">~$52,000</td>
+                  <td className="py-3 text-[#a7b8ad]">Human time · doctrine is theirs · leaves with the operator</td>
+                </tr>
+                <tr className="border-b border-[#204538]/40">
+                  <td className="py-3 pr-4 text-[#f7f0e4]">Notion + Linear + Slack + Loom + Cal</td>
+                  <td className="py-3 pr-4 font-mono text-[#a7b8ad]">~$2,400</td>
+                  <td className="py-3 text-[#a7b8ad]">Surface theater · no mission graph · no receipt law</td>
+                </tr>
+                <tr className="border-b border-[#204538]/40">
+                  <td className="py-3 pr-4 text-[#f7f0e4]">ChatGPT Team + Claude Pro</td>
+                  <td className="py-3 pr-4 font-mono text-[#a7b8ad]">~$1,000</td>
+                  <td className="py-3 text-[#a7b8ad]">Chat with no project memory · no department routing</td>
+                </tr>
+                <tr className="border-b border-[#204538]/40">
+                  <td className="py-3 pr-4 text-[#f7f0e4]">Custom AI cockpit (consulting build)</td>
+                  <td className="py-3 pr-4 font-mono text-[#a7b8ad]">$40K–$120K</td>
+                  <td className="py-3 text-[#a7b8ad]">6–9 months · doctrine is yours to invent</td>
+                </tr>
+                <tr className="bg-[#0a211b]">
+                  <td className="py-3 pr-4 font-bold text-[#ff7a18]">ORANGEBOX Command</td>
+                  <td className="py-3 pr-4 font-mono font-bold text-[#75ff92]">$49 once</td>
+                  <td className="py-3 font-semibold text-[#f7f0e4]">Cockpit + 15 depts + 15 skills + worker pack + 27 guardrails</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 max-w-3xl text-sm text-[#a7b8ad]">
+            One project where you don&apos;t re-discover what &quot;done&quot;
+            meant three weeks ago pays for ORANGEBOX. Once.
+          </p>
+        </section>
+      </ScrollReveal>
+
+      {/* ─── REFERENCE BARS ───────────────────────────────────────── */}
+      <ScrollReveal>
+        <section className="mt-16">
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
+            ::reference bars cleared
+          </p>
+          <h2 className="mt-2 max-w-3xl text-2xl font-bold tracking-tight md:text-3xl">
+            10 of 25 best-software-2026 benchmarks. In one cockpit.
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm text-[#a7b8ad]">
+            Each benchmark is a piece of UX or system design that other
+            best-in-class software is famous for. We rebuilt them in vanilla
+            ESM, into one cockpit, with no monthly fee.
+          </p>
+          <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { app: "Linear", what: "Cmd+K palette · spring micro-interactions" },
+              { app: "Cron / Notion Calendar", what: "Keyboard-only navigation paradigm" },
+              { app: "Warp", what: "Block-based command output with structured fields" },
+              { app: "Cursor", what: "Predictive next-action bar (live data, no LLM call)" },
+              { app: "Krea.ai", what: "Sub-100ms real-time SSE feedback loop" },
+              { app: "Magnific", what: "High-fidelity state-color discipline" },
+              { app: "Zed", what: "RAF-coalesced render scheduler · viewport virtualization" },
+              { app: "Arc", what: "Per-view 'Boosts' customization" },
+              { app: "Family", what: "Premium tactile feel · glow tokens · glass surfaces" },
+              { app: "Spline / Muse", what: "Orbital first-run experience" },
+            ].map((b) => (
+              <div
+                key={b.app}
+                className="rounded-lg border border-[#204538] bg-[#071915] p-3"
+              >
+                <p className="text-sm font-bold text-[#ff7a18]">{b.app}</p>
+                <p className="mt-1 text-xs text-[#a7b8ad]">{b.what}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 font-mono text-[10px] uppercase tracking-widest text-[#1b8b75]">
+            ::v1.5 candidates — Raycast tray · Screen Studio cinematic proof · full Muse spatial canvas
+          </p>
+        </section>
+      </ScrollReveal>
+
+      {/* ─── PREREQS / COMPATIBILITY ──────────────────────────────── */}
+      <section className="mt-16 rounded-xl border border-[#204538] bg-[#071915]/60 p-6">
         <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
-          What you need before this works
+          ::compatibility
         </p>
         <h2 className="mt-2 text-xl font-bold tracking-tight md:text-2xl">
-          Read this before you buy.
+          Will this work on your computer?
         </h2>
         <div className="mt-5 grid gap-6 md:grid-cols-2">
           <div>
@@ -154,19 +248,11 @@ export default function OrangeBox() {
               Required
             </p>
             <ul className="mt-2 space-y-1.5 text-sm text-[#f7f0e4]">
-              <li>· Node.js 18 or newer (`node --version`)</li>
-              <li>· A modern browser (Chrome, Edge, Firefox, Safari)</li>
-              <li>· Windows, macOS, or Linux</li>
-              <li>
-                ·{" "}
-                <span className="text-[#ffc46b]">
-                  A Claude or GPT API key
-                </span>{" "}
-                if you want the Command Surface to actually route work to a
-                frontier model. Without it the cockpit boots, the UI works,
-                department routing fails honestly with FAILED indicators (not
-                fake green).
-              </li>
+              <li>· Windows 10 or Windows 11 (x64)</li>
+              <li>· Node.js 20+ (free download · linked in installer)</li>
+              <li>· 4 GB RAM minimum (8 GB recommended)</li>
+              <li>· 200 MB free disk space</li>
+              <li>· One-time internet for Node.js download</li>
             </ul>
           </div>
           <div>
@@ -175,64 +261,56 @@ export default function OrangeBox() {
             </p>
             <ul className="mt-2 space-y-1.5 text-sm text-[#a7b8ad]">
               <li>
-                · <span className="text-[#f7f0e4]">Ollama</span> running locally
-                with the specific 4-bit quantized models if you want the
-                STRATEGY / ENGINEERING / EXPERIENCE triad lanes (
-                <span className="font-mono text-[11px]">llama3.3:70b</span>,{" "}
-                <span className="font-mono text-[11px]">qwen2.5-coder:32b</span>
-                )
+                · <span className="text-[#f7f0e4]">A Claude or GPT API key</span> — for the Command Surface to route work to a frontier model. The cockpit boots and the UI works without it; routed actions report FAILED honestly (not fake green).
               </li>
               <li>
-                · <span className="text-[#f7f0e4]">A second machine</span> on
-                your LAN for the{" "}
-                <span className="font-mono text-[#75ff92]">Codexa</span> worker
-                rail (heavy build/test/scan offload)
+                · <span className="text-[#f7f0e4]">Ollama</span> with quantized local models (4–40 GB each, free) for the STRATEGY / ENGINEERING / EXPERIENCE triad lanes.
               </li>
               <li>
-                · <span className="text-[#f7f0e4]">Tauri toolchain</span> if
-                you want to build the desktop wrapper instead of using the
-                browser
+                · <span className="text-[#f7f0e4]">Codexa Remote</span> — a second machine on your LAN if you want to offload heavy work. <span className="text-[#75ff92]">v1.4 default is Codexa Local — single machine works.</span>
+              </li>
+              <li>
+                · <span className="text-[#f7f0e4]">n8n</span> for cross-app automation hooks.
               </li>
             </ul>
           </div>
         </div>
         <p className="mt-5 border-t border-[#204538] pt-4 text-xs text-[#a7b8ad]">
-          The cockpit, frontend, MCP tools, project DAG, party-line, and
-          receipts work standalone. The triad lanes and Codexa worker rail
-          require the optional dependencies above.
+          <strong className="text-[#f7f0e4]">macOS / Linux</strong> on the v1.5 roadmap. <strong className="text-[#f7f0e4]">ARM64</strong> not yet. <strong className="text-[#f7f0e4]">Win 7/8</strong> not supported.
         </p>
         <p className="mt-3 rounded-md border border-[#5a3210] bg-[#1a0f00] p-3 text-xs text-[#ffc46b]">
-          ::delivery — Your download link appears on the success page after
-          payment. Save it before you close the tab. Email delivery is a
-          backup, not a guarantee. There is no resend endpoint.
+          ::heads-up — Installer is unsigned (code-signing certificate is v1.5 work). Windows SmartScreen will warn &quot;unknown publisher&quot; — click <strong>More info</strong> → <strong>Run anyway</strong>. This is normal.
+        </p>
+        <p className="mt-3 rounded-md border border-[#5a3210] bg-[#1a0f00] p-3 text-xs text-[#ffc46b]">
+          ::delivery — Your download link appears on the success page after payment. Save it before you close the tab. Email delivery is a backup, not a guarantee.
         </p>
       </section>
 
+      {/* ─── WHAT IT IS ───────────────────────────────────────────── */}
       <section className="mt-20 border-t border-[#204538] pt-10">
         <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
-          What it is
+          ::what it is
         </p>
         <h2 className="mt-2 max-w-3xl text-2xl font-bold tracking-tight md:text-3xl">
           One thread. The whole project. No rebuild when the model forgets.
         </h2>
         <p className="mt-4 max-w-3xl text-[#a7b8ad]">
           For operators who refuse to lose the thread. Single ZIP. Modular
-          production version being built in the same cockpit it will
-          replace.
+          production cockpit. Two years of internal development at AtomEons.
+          230/230 peer-review tests passing.
         </p>
         <p className="mt-3 max-w-3xl text-sm text-[#f7f0e4]">
-          I run this cockpit every day. ORANGEBOX v1 was built inside the
-          cockpit it replaced.
+          I run this cockpit every day. ORANGEBOX v1.4.0 was built inside
+          the cockpit it replaced.
         </p>
       </section>
 
-      <section className="mt-16">
+      {/* ─── FEATURE BENTO ────────────────────────────────────────── */}
+      <section className="mt-12">
         <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
-          What it actually does
+          ::what it actually does
         </p>
-        {/* Bento layout: hero feature 2x size + 5 small below */}
         <div className="mt-6 grid gap-5 md:grid-cols-3">
-          {/* Hero feature card spans 2 columns */}
           <div className="rounded-xl border border-[#ff7a18]/40 bg-gradient-to-br from-[#0a211b] to-[#071915] p-6 transition-colors hover:border-[#ff7a18]/70 md:col-span-2 md:row-span-2">
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
               {features[0].tag}
@@ -262,11 +340,50 @@ export default function OrangeBox() {
         </div>
       </section>
 
+      {/* ─── TRUST SIGNALS ────────────────────────────────────────── */}
+      <section className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {[
+          {
+            title: "Local-first",
+            body: "No telemetry, no analytics, no phone-home. Your project state lives in %APPDATA%. The cockpit cannot transmit your data even if AtomEons wanted to.",
+          },
+          {
+            title: "Source included",
+            body: "Full source tree alongside the binaries. Inspect freely. Modify for personal use.",
+          },
+          {
+            title: "Material Failure Guarantee",
+            body: "Full refund within 30 days if it doesn't install/launch on clean Windows 10/11 + Node.js 20+. License §8.",
+          },
+          {
+            title: "Workflow-Fit Refund",
+            body: "Within 30 days, full refund if it doesn't fit your workflow. No questions. License §8A.",
+          },
+          {
+            title: "SHA-256 verified",
+            body: "Every artifact stamped. Verify against the receipt before installation.",
+          },
+          {
+            title: "Built by one operator",
+            body: "Atom McCree, AtomEons Systems Laboratory, Marco Island, FL. Two years of internal use before anyone else touched it.",
+          },
+        ].map((t) => (
+          <div
+            key={t.title}
+            className="rounded-xl border border-[#204538] bg-[#071915] p-5"
+          >
+            <p className="text-sm font-bold text-[#75ff92]">▲ {t.title}</p>
+            <p className="mt-2 text-sm text-[#a7b8ad]">{t.body}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* ─── BUILD RECEIPTS (cockpit demo) ────────────────────────── */}
       <ScrollReveal>
         <BuildReceipts />
       </ScrollReveal>
 
-      {/* Qualification block — expandable per-row for self-qualification */}
+      {/* ─── QUALIFICATION ────────────────────────────────────────── */}
       <ScrollReveal>
         <section className="mt-16 grid gap-6 md:grid-cols-2">
           <div className="rounded-xl border border-[#75ff92]/40 bg-[#0a211b] p-5">
@@ -275,11 +392,11 @@ export default function OrangeBox() {
             </p>
             <ul className="mt-3 space-y-1">
               {[
-                ["You actually run serious projects with AI workers", "Multiple models, multiple machines, real artifacts moving daily."],
-                ["You can install Node and read a manual", "If npm install reads as a foreign language, this isn't for you."],
-                ["You want one operator surface, not 22 random agents", "Triad lanes, named departments, deliberate routing."],
-                ["You believe receipts > vibes", "Every action writes a receipt. You can audit your own session."],
-                ["You like instruments, not chatbots", "Vision Rail, Party Line, Receipts Library — cockpit grade."],
+                ["You're a solo founder running multi-disciplinary work alone", "Multiple models, multiple machines, real artifacts moving daily."],
+                ["You're a PM or tech lead who needs a private cockpit", "Not another SaaS dashboard. Not another seat to license."],
+                ["You're a researcher or lab lead who wants receipt-backed work", "Every meaningful action gets a receipt. Default-on."],
+                ["You're an indie consultant billing high-leverage hours", "Stop losing the thread between client sessions."],
+                ["You believe receipts > vibes", "No fake green. Every claim has a path."],
               ].map(([head, body], i) => (
                 <li key={i} className="rounded border border-transparent transition-colors hover:bg-[#04100d]/40">
                   <details className="group">
@@ -298,11 +415,12 @@ export default function OrangeBox() {
             </p>
             <ul className="mt-3 space-y-1">
               {[
-                ["You want a SaaS dashboard with login", "There is no account, no cloud sync, no team workspace."],
-                ["You want managed support or onboarding", "No tickets, no DMs, no replies. The manual is the support."],
-                ["You expect a cloud sync and team workspace", "Local-first. Your project state is on your disk."],
-                ["You expect production-ready, not v1 prototype", "PROTOTYPE BETA pill exists for a reason."],
-                ["You are evaluating for a buying committee", "$49 one-time. There is nothing to evaluate at scale."],
+                ["You want a generic chat-app clone", "ChatGPT and Claude already do that. This is different shape."],
+                ["You want a SaaS dashboard with cloud sync", "Local-first by design. Your data does not leave your machine."],
+                ["You want managed support or onboarding", "30 days direct founder support. After that, the manual is the support."],
+                ["You expect a magic AI button", "This is a cockpit. The operator commands. The model executes."],
+                ["You're on macOS / Linux / ARM64 today", "Windows 10/11 x64 only. Other platforms on v1.5 roadmap."],
+                ["You're evaluating for a buying committee", "$49 one-time. There is nothing to evaluate at scale."],
               ].map(([head, body], i) => (
                 <li key={i} className="rounded border border-transparent transition-colors hover:bg-[#04100d]/40">
                   <details className="group">
@@ -318,50 +436,51 @@ export default function OrangeBox() {
         </section>
       </ScrollReveal>
 
-      <section className="mt-16 rounded-xl border border-[#5a2222] bg-[#1a0a0c] p-5">
-        <p className="text-xs uppercase tracking-widest text-[#ff4f5e]">
-          No support
-        </p>
-        <p className="mt-3 text-sm text-[#f7f0e4]">
-          $49 one time, you figure it out. The full Opus system manual is
-          inside the box. No tickets, no DMs, no replies. If you want
-          hand-holding, this is not for you.
-        </p>
-        <p className="mt-3 text-sm text-[#a7b8ad]">
-          Refunds within 14 days if the file fails to download. See{" "}
-          <Link href="/legal/refund" className="underline">
-            refund policy
-          </Link>
-          .
-        </p>
-      </section>
-
-      {/* Cockpit Contract — credo block */}
+      {/* ─── COCKPIT CONTRACT ─────────────────────────────────────── */}
       <section className="mt-20 rounded-2xl border border-[#5a3210] bg-[#1a0f00] p-6 md:p-8">
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ffc46b]">
           ::the cockpit contract
         </p>
         <p className="mt-4 max-w-3xl text-pretty text-[#f7f0e4] md:text-lg">
-          ORANGEBOX does not manage you. It does not nudge you, notify you,
-          or protect you from a bad decision. It routes work, writes
+          ORANGEBOX does not manage you. It does not nudge you, notify
+          you, or protect you from a bad decision. It routes work, writes
           receipts, and keeps state. What you build in it is yours. What
           you break is yours. The cockpit is an instrument, not a
           babysitter. If you want the instrument, buy it.
         </p>
       </section>
 
+      {/* ─── NO SUPPORT ───────────────────────────────────────────── */}
+      <section className="mt-12 rounded-xl border border-[#5a2222] bg-[#1a0a0c] p-5">
+        <p className="text-xs uppercase tracking-widest text-[#ff4f5e]">
+          ::no support
+        </p>
+        <p className="mt-3 text-sm text-[#f7f0e4]">
+          $49 one time, you figure it out. 30 days direct founder support
+          included. The full Opus system manual is inside the box.
+        </p>
+        <p className="mt-3 text-sm text-[#a7b8ad]">
+          Refunds within 14 days if the file fails to download. See{" "}
+          <Link href="/legal/refund" className="underline">
+            refund policy
+          </Link>{" "}
+          and the Material Failure Guarantee inside the LICENSE.
+        </p>
+      </section>
+
+      {/* ─── CLOSING CTA ──────────────────────────────────────────── */}
       <section className="mt-12 rounded-2xl border border-[#204538] bg-[#0a211b] p-8 text-center">
         <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
           The manual is inside. The rest is your problem.
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-[#a7b8ad]">
-          One operator. Real execution surface. Receipts, not vibes.
+          One operator. Real execution surface. Everything proof-backed.
         </p>
         <div className="mt-6 flex justify-center">
           <BuyButton />
         </div>
         <p className="mt-3 text-xs text-[#a7b8ad]">
-          $49 USD · one-time · no support
+          $49 USD · one-time · forever · no subscription, ever
         </p>
       </section>
 
@@ -372,9 +491,14 @@ export default function OrangeBox() {
 
 const features: { tag: string; title: string; body: string }[] = [
   {
+    tag: "Codexa Local · NEW v1.4",
+    title: "Heavy work runs on your machine",
+    body: "v1.4 default — heavy execution stays on the cockpit machine. No second computer needed. The right answer for almost every $49 buyer. Switch to Codexa Remote later if you want a dedicated worker box on your LAN.",
+  },
+  {
     tag: "Vision Rail",
     title: "Live mission board",
-    body: "Project spine, DAG nodes, current node, blockers, progress, and next action — all in one rail. Your project's truth lives on disk; the cockpit reads it.",
+    body: "Project spine, DAG nodes, current node, blockers, progress, next action — all in one rail. Truth lives on disk; the cockpit reads it.",
   },
   {
     tag: "Party Line",
@@ -384,7 +508,7 @@ const features: { tag: string; title: string; body: string }[] = [
   {
     tag: "Triad Routing",
     title: "Three lanes, not random agents",
-    body: "STRATEGY, ENGINEERING, and EXPERIENCE triad heads route work to the right brain. Frontier, local, or Codexa worker — picked deliberately.",
+    body: "STRATEGY · ENGINEERING · EXPERIENCE triad heads route work to the right brain. Frontier, local, or Codexa worker — picked deliberately.",
   },
   {
     tag: "Receipts & Proof",
@@ -392,13 +516,8 @@ const features: { tag: string; title: string; body: string }[] = [
     body: "Every meaningful action writes a receipt: result, evidence, blockers, next action, files touched, commands run, proof paths, rollback note.",
   },
   {
-    tag: "Codexa Worker Rail",
-    title: "Heavy work off the cockpit",
-    body: "Long builds, tests, screenshots, indexing, benchmarks run on a separate worker rail. The cockpit stays responsive.",
-  },
-  {
     tag: "Command Surface",
     title: "The chat is the steering wheel",
-    body: "Type your intent. ORANGEBOX turns it into project contracts, spine, DAG actions, and routed department work. No prompt engineering. Cockpit reads operator language.",
+    body: "Type your intent. ORANGEBOX turns it into project contracts, spine, DAG actions, and routed department work. No prompt engineering.",
   },
 ];

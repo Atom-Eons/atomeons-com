@@ -9,24 +9,24 @@ import { AtomBoot } from "./_components/AtomBoot";
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
   title: {
-    default: "AtomEons — Ship real projects through AI",
+    default: "AtomEons — An AI builder for all",
     template: "%s | AtomEons",
   },
   description:
-    "AtomEons builds command surfaces for operators shipping real projects through AI — software, books, apps, LLMs. ORANGEBOX prototype: $49 one-time. This site was built in one day on ORANGEBOX.",
+    "ORANGEBOX Command v1.4.0 — the private AI operations cockpit. 15 departments, 15 skills, Codexa Local. $49 once, forever. Local-first, no telemetry, no subscription. This site was built in one day on ORANGEBOX.",
   openGraph: {
-    title: "AtomEons — Ship real projects through AI",
+    title: "AtomEons — An AI builder for all",
     description:
-      "Command surfaces for operators shipping software, books, apps, LLMs. ORANGEBOX prototype $49 one-time. Built in one day on ORANGEBOX.",
+      "ORANGEBOX Command v1.4.0 · the private AI operations cockpit · $49 once, forever · local-first · no telemetry · built in one day on ORANGEBOX.",
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AtomEons — Ship real projects through AI",
+    title: "AtomEons — An AI builder for all",
     description:
-      "Command surfaces for operators shipping software, books, apps, LLMs. ORANGEBOX $49.",
+      "ORANGEBOX Command v1.4.0 · $49 once, forever · the private AI operations cockpit.",
   },
   robots: { index: true, follow: true },
 };

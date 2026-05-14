@@ -24,7 +24,8 @@ export function BuiltOnOrangebox() {
           <p className="max-w-2xl text-pretty text-base text-[#a7b8ad] md:text-lg">
             Brand site, product page, Stripe live checkout, HMAC download
             tokens, edge OG image, X Ads pixel, sitemap, redirects, mobile
-            nav, 5 unit tests — one operator, one cockpit, one day.
+            nav, 5 unit tests — one operator, one cockpit, one day. The
+            cockpit is what we sell.
           </p>
           <div className="flex justify-start md:justify-end">
             <Link

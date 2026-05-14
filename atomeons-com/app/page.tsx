@@ -26,14 +26,17 @@ export default function Home() {
                 keeps both true.
               </p>
               <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.02] tracking-tight md:text-7xl">
-                Ship real projects{" "}
-                <span className="text-[#ff7a18]">through AI</span>.
+                An AI builder{" "}
+                <span className="text-[#ff7a18]">for all</span>.
                 <span className="blink-cursor" aria-hidden />
               </h1>
               <p className="mt-6 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
-                Software. Books. Apps. LLMs. ORANGEBOX is the operator
-                cockpit for the people who actually build the things — not
-                the people who write blog posts about building things.
+                ORANGEBOX Command — the private AI operations cockpit.
+                Software, books, apps, LLMs. Command, not chat. Receipts,
+                not promises. Yours, not theirs.
+              </p>
+              <p className="mt-3 max-w-xl text-base font-semibold text-[#75ff92]">
+                $49 once, forever. No subscription, ever.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
@@ -65,7 +68,7 @@ export default function Home() {
                     $49 <span className="text-sm font-normal text-[#a7b8ad]">one-time</span>
                   </p>
                   <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
-                    92 endpoints · 17 lanes · 12 mcp tools
+                    15 depts · 15 skills · 60+ mcp tools
                   </p>
                 </div>
                 <Link

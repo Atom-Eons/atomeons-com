@@ -15,6 +15,6 @@ export function getStripe(): Stripe {
 }
 
 export const PRICE_USD_CENTS = 4900;
-export const PRODUCT_NAME = "ORANGEBOX OS v1.4.0";
+export const PRODUCT_NAME = "ORANGEBOX Command v1.4.0";
 export const PRODUCT_DESCRIPTION =
-  "ORANGEBOX OS All-In-One v1.4.0. Local-first command cockpit for one operator. Node 18+. No support.";
+  "ORANGEBOX Command v1.4.0 — the private AI operations cockpit. Windows 10/11 + Node.js 20+. $49 once, forever. No subscription.";
