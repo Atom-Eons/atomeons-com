@@ -9,15 +9,31 @@ import type { NextRequest } from "next/server";
  * link the operator scribbles ends up at the right place.
  */
 const REDIRECTS: Record<string, string> = {
+  // canonical product spelling variants
   "/orangeb0x": "/orangebox",
   "/0rangebox": "/orangebox",
   "/0rangeb0x": "/orangebox",
+  "/0b0x": "/orangebox",
+  "/obox": "/orangebox",
+  "/o-box": "/orangebox",
+  "/orange": "/orangebox",
+  "/oranged": "/orangebox",
+  "/orangbox": "/orangebox",
+  "/orabgebox": "/orangebox",
+  // legacy BLUEB0X naming (the v1.3 audit flagged these as stale)
   "/blueb0x": "/orangebox",
   "/bluebox": "/orangebox",
   "/blue-b0x": "/orangebox",
+  // intent shortcuts
   "/install": "/orangebox#install",
   "/buy": "/orangebox#buy",
   "/download": "/orangebox#install",
+  "/cockpit": "/orangebox",
+  "/product": "/orangebox",
+  // Dotted versions (e.g. /v1.4.0) are excluded by the proxy matcher
+  // (treats . as an asset extension). Use undotted variants instead.
+  "/v14": "/orangebox",
+  "/v140": "/orangebox",
 };
 
 export function proxy(req: NextRequest) {

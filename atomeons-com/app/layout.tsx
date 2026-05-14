@@ -4,6 +4,7 @@ import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { MadeWithOrangebox } from "./_components/MadeWithOrangebox";
 import { XAdsPixel } from "./_components/XAdsPixel";
+import { Analytics } from "@vercel/analytics/next";
 import { AtomBoot } from "./_components/AtomBoot";
 
 export const metadata: Metadata = {
@@ -72,6 +73,7 @@ export default function RootLayout({
         <Header />
         <div className="screen-flicker flex-1">{children}</div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
