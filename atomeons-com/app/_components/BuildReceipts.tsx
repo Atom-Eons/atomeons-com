@@ -40,25 +40,21 @@ export function BuildReceipts() {
       <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-[#204538] pb-4">
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
-            ::live build receipts (snapshot)
+            ::sample build receipts
           </p>
           <h2 className="mt-1 text-2xl font-bold tracking-tight md:text-3xl">
-            This site is the demo.
+            What every ORANGEBOX project leaves behind.
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-[#a7b8ad]">
-            Real party-line entries from the ORANGEBOX cockpit that
-            coordinated the build of <span className="font-mono text-[#75ff92]">atomeons.com</span>.
-            Every receipt below is a real event written to{" "}
-            <span className="font-mono text-[10px] text-[#ffc46b]">
-              C:\AtomEons\aeskills\orangebox\party-line\atomeons-com\messages.jsonl
-            </span>{" "}
-            by the operator&apos;s running cockpit during this build session.
-            Snapshot frozen at build time:{" "}
-            <span className="font-mono text-[#75ff92]">{SNAPSHOT_AT}</span>.
+            Illustrative party-line entries showing the shape and voice
+            of receipts an ORANGEBOX cockpit writes while coordinating
+            a real project. Format spec is in the Opus system manual
+            section 11 (Party Line) inside the product ZIP. These are
+            samples — not customer telemetry.
           </p>
         </div>
         <p className="font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
-          {PARTY_LINE.length} entries · project:atomeons-com
+          {PARTY_LINE.length} samples · project:myproject
         </p>
       </div>
 
@@ -101,9 +97,8 @@ export function BuildReceipts() {
       </ol>
 
       <p className="mt-6 border-t border-[#204538] pt-4 text-xs text-[#a7b8ad]">
-        These receipts are point-in-time. They came from the cockpit you
-        are about to buy. The product writes its own audit trail. That is
-        the point of ORANGEBOX.
+        Every meaningful action in your project gets one of these. The
+        cockpit writes its own audit trail by default. That is the point.
       </p>
     </section>
   );

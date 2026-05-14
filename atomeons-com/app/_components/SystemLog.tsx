@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 
 const FRAMES: { tag: string; text: string }[] = [
-  { tag: "SYS", text: "build:bab866a · region:iad1 · 13 routes · ok" },
+  { tag: "SYS", text: "cockpit:127.0.0.1:8787 · ready · all lanes nominal" },
   { tag: "SYS", text: "no team. no roadmap. no support. one operator." },
   { tag: "MFT", text: "the misfit is outside because they can still see the system" },
-  { tag: "SYS", text: "alias:atomeons.com · stripe:live · webhook:we_1TWn6r5..." },
+  { tag: "SYS", text: "stripe:live · webhook:checkout.session.completed · verified" },
   { tag: "MFT", text: "we do not rebel for noise. we rebel against false structure." },
-  { tag: "SYS", text: "blob:store_eGTja1mgRhdqqa3l · product:303KB · sha:c7434744..." },
+  { tag: "SYS", text: "product:zip · download:hmac-signed · 30-day token" },
   { tag: "MFT", text: "a real command loop beats a thousand imaginary features." },
-  { tag: "SYS", text: "obox:127.0.0.1:8787 · party-line:atomeons-com · verified" },
+  { tag: "SYS", text: "party-line:project · receipts:on-disk · verified" },
   { tag: "MFT", text: "sovereignty first. meaning second. beauty third. expansion last." },
 ];
 

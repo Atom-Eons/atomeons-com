@@ -19,7 +19,7 @@ export function MadeWithOrangebox() {
         <span className="text-[#1b8b75]">·</span>
         <span className="hidden sm:inline">solo operator</span>
         <span className="hidden text-[#1b8b75] sm:inline">·</span>
-        <span className="text-[#75ff92]">read the build receipts</span>
+        <span className="text-[#75ff92]">see what it ships</span>
         <span className="text-[#1b8b75]">·</span>
         <span className="text-[#ff7a18] underline-offset-4 group-hover:underline">
           $49 →

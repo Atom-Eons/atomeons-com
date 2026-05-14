@@ -1,12 +1,13 @@
 /**
- * Real party-line entries from THIS site's build session, snapshot-frozen
- * at build time. Source of truth: the OBOX party-line file at
- * C:/AtomEons/aeskills/orangebox/party-line/atomeons-com/messages.jsonl
- * which Atom's running ORANGEBOX cockpit appended to during the build of
- * atomeons.com.
+ * Sample build receipts — what every ORANGEBOX project produces.
  *
- * This is NOT a mock. These are the real receipts of the cockpit
- * coordinating the build of the very page you're reading them on.
+ * These are illustrative entries showing the shape and voice of
+ * party-line messages an ORANGEBOX cockpit writes while coordinating
+ * a real project. They are NOT real telemetry from any specific
+ * customer or operator.
+ *
+ * Cockpit format spec lives in the Opus system manual section 11
+ * (Party Line) inside the product ZIP.
  */
 
 export type PartyLineEntry = {
@@ -24,103 +25,103 @@ export const SNAPSHOT_AT = "2026-05-14T01:32:04Z";
 
 export const PARTY_LINE: PartyLineEntry[] = [
   {
-    id: "2026-05-14T01-32-04-747Z-74a7f398",
-    generatedAt: "2026-05-14T01:32:04.747Z",
-    project: "atomeons-com",
+    id: "sample-01",
+    generatedAt: "2026-05-14T01:32:04.000Z",
+    project: "myproject",
     from: "AE3",
-    kind: "design-uplift-v3",
+    kind: "design-uplift",
     status: "VERIFIED",
-    text: "v3 hacker/misfit uplift PASSED Checkmate. Surfaced MISFIT_MANIFESTO_RECOVERED.md (20 tenets) verbatim — no fake rebellion. New /manifesto zine, SystemLog strip, ManifestoCycle, CRT scanlines, RGB-split glitch, blink cursor, boot-bar, outlaw pills, MISFIT BETA red pill, ASCII dividers. All animations honor prefers-reduced-motion. Store flow unchanged.",
-    evidence: "https://atomeons.com",
+    text: "Design pass complete. Hero refactored, 6 new components shipped, mesh-gradient surface live, scroll-reveal motion-safe. LIPS swapped 5 H2s. All animations honor prefers-reduced-motion. Build green.",
+    evidence: "./project/proof/design-uplift-snapshot.png",
   },
   {
-    id: "2026-05-14T01-10-32-928Z-1c7129c7",
-    generatedAt: "2026-05-14T01:10:32.928Z",
-    project: "atomeons-com",
+    id: "sample-02",
+    generatedAt: "2026-05-14T01:10:32.000Z",
+    project: "myproject",
     from: "AE7",
     kind: "checkmate-passed",
     status: "VERIFIED",
-    text: "v2 design uplift PASSED Checkmate. Multi-team review (ux-product-reviewer, lips, orange-judge, mirrors) synthesized. 4 new components (AtomMark animated SVG, CockpitTicker, opengraph-image edge route, pulse-ring CSS). Mirrors prereqs disclosure block added to /orangebox. Live smoke 12/12 pass.",
-    evidence: "https://atomeons.com",
+    text: "Multi-team review (UX + LIPS + Orange + Mirrors) synthesized. 12/12 acceptance criteria pass. No claim ships without receipt; no fake green; no decorative panels.",
+    evidence: "./project/receipts/checkmate-passed.md",
   },
   {
-    id: "2026-05-14T00-46-46-378Z-LIPS",
-    generatedAt: "2026-05-14T00:46:46.378Z",
-    project: "atomeons-com",
+    id: "sample-03",
+    generatedAt: "2026-05-14T00:46:46.000Z",
+    project: "myproject",
     from: "LIPS",
     kind: "review-engine",
     status: "REVIEWED",
-    text: "Taste language is present; needs visual proof to earn authority. Show the watcher verdicts as premium cards, not raw text.",
-    evidence: "review-engines/atomeons-com/runs/2026-05-14T00-46-46-310Z",
+    text: "Voice diagnosis: copy slipping into generic AI-tool register. 5 concrete swaps proposed: hero subhead, CTA H2, product H2, about H2, closing CTA H2. Each tighter, more specific, more confident.",
+    evidence: "./project/review-engines/runs/lips-pass.md",
   },
   {
-    id: "2026-05-14T00-46-46-371Z-MISFITS",
-    generatedAt: "2026-05-14T00:46:46.371Z",
-    project: "atomeons-com",
-    from: "MISFITS",
-    kind: "review-engine",
-    status: "REVIEWED",
-    text: "The high-upside move is a watcher party line that critiques the DAG before work scales. Add watcher cards to Opus awareness.",
-    evidence: "review-engines/atomeons-com/runs/2026-05-14T00-46-46-310Z",
-  },
-  {
-    id: "2026-05-14T00-46-46-360Z-MIRRORS",
-    generatedAt: "2026-05-14T00:46:46.360Z",
-    project: "atomeons-com",
+    id: "sample-04",
+    generatedAt: "2026-05-14T00:46:46.000Z",
+    project: "myproject",
     from: "MIRRORS",
     kind: "review-engine",
     status: "REVIEWED",
-    text: "Some reality contact is present. Attach paths and mark assumptions before calling it complete.",
-    evidence: "review-engines/atomeons-com/runs/2026-05-14T00-46-46-310Z",
+    text: "Theater debt detected: site claims 'truth over theater' while hiding three product preconditions from the buy page. Single hard fix proposed. Assumptions now labeled and on-page.",
+    evidence: "./project/review-engines/runs/mirrors-pass.md",
   },
   {
-    id: "2026-05-14T00-32-23-082Z-63eb062e",
-    generatedAt: "2026-05-14T00:32:23.082Z",
-    project: "atomeons-com",
+    id: "sample-05",
+    generatedAt: "2026-05-14T00:46:46.000Z",
+    project: "myproject",
+    from: "ORANGE",
+    kind: "review-engine",
+    status: "REVIEWED",
+    text: "Ruling: cut three sections that don't earn their place (doctrine repeat on home, in-progress card, standalone Requires box). Top 3 additions ranked by impact-per-build-minute.",
+    evidence: "./project/review-engines/runs/orange-pass.md",
+  },
+  {
+    id: "sample-06",
+    generatedAt: "2026-05-14T00:32:23.000Z",
+    project: "myproject",
     from: "AE5",
     kind: "store-live",
     status: "VERIFIED",
-    text: "STORE OPEN FOR BUSINESS. /api/checkout returns real cs_live_ Stripe session URLs. Webhook registered (we_1TWn6r5VctoYPUK39qwwtCwl) listening for checkout.session.completed. /success page does server-side Stripe lookup + mints HMAC token inline. 6/7 env vars set. Anyone can buy ORANGEBOX right now for real $49.",
-    evidence: "https://atomeons.com",
+    text: "Checkout endpoint returns valid live-mode session URLs. Webhook auto-registered for checkout.session.completed. Success page does server-side session verify + mints signed download token inline.",
+    evidence: "./project/receipts/store-smoke.md",
   },
   {
-    id: "2026-05-14T00-12-13-044Z-882c20d9",
-    generatedAt: "2026-05-14T00:12:13.044Z",
-    project: "atomeons-com",
+    id: "sample-07",
+    generatedAt: "2026-05-14T00:12:13.000Z",
+    project: "myproject",
     from: "AE8",
     kind: "deploy-live",
     status: "VERIFIED",
-    text: "atomeons.com is LIVE. Public deploy serving brand site. dpl_GWGcaYVjjk8qAS74L9HyjiLT9cNC READY production. Root cause of earlier 404s: project Framework Preset was Other, deploying public/ instead of .next/. Fixed by adding vercel.json with framework: nextjs.",
-    evidence: "https://atomeons.com",
+    text: "Production deploy READY. Build 14s. Routes 12. Cache cold. Custom domain alias attached. DNS resolved. Smoke green across all routes; API endpoints return graceful errors when env unset.",
+    evidence: "./project/proof/deploy-smoke.json",
   },
   {
-    id: "2026-05-13T23-43-58-677Z-504ce466",
-    generatedAt: "2026-05-13T23:43:58.677Z",
-    project: "atomeons-com",
+    id: "sample-08",
+    generatedAt: "2026-05-13T23:43:58.000Z",
+    project: "myproject",
     from: "AE6",
     kind: "implementation-complete",
     status: "VERIFIED",
-    text: "Brand-site expansion complete. 12 routes compile (was 10): added / (AE brand home), /orangebox (full product page), /about, shared Header + Footer on every page via root layout. pnpm build PASS. Local prod-server smoke 12/12.",
-    evidence: "atomeons-com/HANDOFF.md",
+    text: "Brand-site expansion complete. 12 routes compile. Shared header + footer wired via root layout. Local prod-server smoke 12/12 OK including proper missing-token JSON on /api/download.",
+    evidence: "./project/proof/build-smoke.txt",
   },
   {
-    id: "2026-05-13T23-30-22-361Z-6c21b89a",
-    generatedAt: "2026-05-13T23:30:22.361Z",
-    project: "atomeons-com",
+    id: "sample-09",
+    generatedAt: "2026-05-13T23:30:22.000Z",
+    project: "myproject",
     from: "AE0",
     kind: "scope-expanded",
     status: "VERIFIED",
-    text: "Operator confirmed sole ownership of atomeons.com to BOLDLEAKEY Opus session. Lane expanded from single-page ORANGEBOX storefront to full AE brand website + complete store. Other Opus AE-website coordination concern dropped.",
-    evidence: "atomeons-com/HANDOFF.md",
+    text: "Operator confirmed lane scope. Single-page storefront promoted to full brand site + complete store. Anti-collision: not touching adjacent lanes; all writes confined to assigned worktree.",
+    evidence: "./project/HANDOFF.md",
   },
   {
-    id: "2026-05-13T23-00-25-044Z-dd9ec377",
-    generatedAt: "2026-05-13T23:00:25.044Z",
-    project: "atomeons-com",
+    id: "sample-10",
+    generatedAt: "2026-05-13T23:00:25.000Z",
+    project: "myproject",
     from: "AE6",
-    kind: "opus-session-coordination",
+    kind: "session-coordination",
     status: "VERIFIED",
-    text: "Opus session BOLDLEAKEY online via Claude Code MCP. Lane: atomeons.com $49 ORANGEBOX storefront. Built: Next.js 16 + Stripe Checkout + HMAC-token download flow. NOT working on orangebox-command/src/ UI (Resilient Luxury Opus owns that). NOT touching skil.ski catalog (Opus 0MAX47 owns that).",
-    evidence: "atomeons-com/HANDOFF.md",
+    text: "Opus session online via Claude Code MCP. Lane: storefront build. Stack: Next.js + Stripe Checkout + HMAC-token download flow. Worktree branched. Awaits operator-gated deploy steps.",
+    evidence: "./project/HANDOFF.md",
   },
 ];
