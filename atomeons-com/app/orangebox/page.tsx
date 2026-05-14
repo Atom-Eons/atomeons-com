@@ -11,18 +11,23 @@ export const metadata = {
 export default function OrangeBox() {
   return (
     <main className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-10">
-      <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
+      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
         <Link href="/">AtomEons</Link>{" "}
         <span className="text-[#204538]">/</span> ORANGEBOX
       </p>
 
       <section className="grid gap-10 pt-8 md:grid-cols-[1.6fr_1fr] md:items-center">
         <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 font-mono text-[11px] text-[#75ff92]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#75ff92]" />
-            92 endpoints · 17 lanes · 12 MCP tools
-          </p>
-          <h1 className="text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
+          <div className="mb-4 flex flex-wrap gap-2">
+            <span className="rebel-pill" style={{ color: "#ff4f5e", borderColor: "rgba(255,79,94,0.5)", background: "rgba(255,79,94,0.06)" }}>
+              ▲ MISFIT BETA
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 font-mono text-[11px] text-[#75ff92]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#75ff92]" />
+              92 endpoints · 17 lanes · 12 MCP tools
+            </span>
+          </div>
+          <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
             ORANGEBOX is <span className="text-[#ff7a18]">now live</span>.
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">

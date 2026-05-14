@@ -1,24 +1,33 @@
 import Link from "next/link";
 import { BuyButton } from "./_components/BuyButton";
 import { AtomMark } from "./_components/AtomMark";
+import { ManifestoCycle } from "./_components/ManifestoCycle";
 
 export default function Home() {
   return (
     <main className="relative z-10">
       {/* HERO */}
-      <section className="mx-auto w-full max-w-6xl px-6 pt-16 pb-20 md:pt-24 md:pb-28">
+      <section className="mx-auto w-full max-w-6xl px-6 pt-12 pb-20 md:pt-20 md:pb-28">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr] md:items-center">
           <div>
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#204538] bg-[#071915] px-3 py-1 text-xs uppercase tracking-widest text-[#a7b8ad]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#75ff92]" />
-              ÆoNs Research Lab · Marco Island · est. 2026
+            {/* outlaw signature pills */}
+            <div className="mb-6 flex flex-wrap gap-2">
+              <span className="rebel-pill">▲ Not a startup</span>
+              <span className="rebel-pill">▲ No team</span>
+              <span className="rebel-pill">▲ No roadmap</span>
+              <span className="rebel-pill">▲ One operator</span>
+            </div>
+
+            <p className="mb-3 font-mono text-xs text-[#75ff92]">
+              <span className="text-[#1b8b75]">$</span> atomeons --boot
             </p>
             <p className="mb-3 text-sm text-[#a7b8ad]">
               Solo lab. One product. Shipping.
             </p>
-            <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-tight md:text-7xl">
+            <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.02] tracking-tight md:text-7xl">
               Build like a{" "}
               <span className="text-[#ff7a18]">serious laboratory</span>.
+              <span className="blink-cursor" aria-hidden />
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
               AtomEons is a solo lab in Marco Island building one thing at a
@@ -33,6 +42,12 @@ export default function Home() {
                 See ORANGEBOX →
               </Link>
               <Link
+                href="/manifesto"
+                className="rounded-md border border-[#5a2222] bg-transparent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-[#ff4f5e] transition-colors hover:bg-[#1a0a0c]"
+              >
+                Read the manifesto
+              </Link>
+              <Link
                 href="/about"
                 className="rounded-md px-5 py-2.5 text-sm text-[#a7b8ad] transition-colors hover:text-[#f7f0e4]"
               >
@@ -42,7 +57,6 @@ export default function Home() {
           </div>
 
           <aside className="relative">
-            {/* Large faint atom behind the card */}
             <div
               aria-hidden
               className="pointer-events-none absolute -right-12 -top-16 opacity-30 blur-[1px]"
@@ -50,8 +64,8 @@ export default function Home() {
               <AtomMark size={280} speed={14} />
             </div>
             <div className="relative rounded-2xl border border-[#204538] bg-gradient-to-br from-[#071915] to-[#0a211b] p-6 shadow-[0_0_60px_rgba(255,122,24,0.18)]">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
-                Currently shipping
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
+                ::currently shipping
               </p>
               <h2 className="mt-3 text-3xl font-black tracking-tight text-[#ff7a18]">
                 ORANGEBOX
@@ -69,7 +83,7 @@ export default function Home() {
                 <div className="mt-4">
                   <BuyButton />
                 </div>
-                <p className="mt-2 text-[11px] text-[#a7b8ad]">
+                <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
                   No support. You figure it out.
                 </p>
               </div>
@@ -78,12 +92,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ASCII DIVIDER */}
+      <div aria-hidden className="mx-auto w-full max-w-6xl overflow-hidden px-6">
+        <pre className="ascii-rule">
+{`──[ MFT.manifesto ]──────────────────────────────────────────────────────────`}
+        </pre>
+      </div>
+
+      {/* MANIFESTO CYCLE */}
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+        <ManifestoCycle />
+        <div className="mt-6">
+          <Link
+            href="/manifesto"
+            className="font-mono text-[11px] uppercase tracking-widest text-[#ff4f5e] hover:underline"
+          >
+            → read all 20 tenets
+          </Link>
+        </div>
+      </section>
+
+      {/* ASCII DIVIDER */}
+      <div aria-hidden className="mx-auto w-full max-w-6xl overflow-hidden px-6">
+        <pre className="ascii-rule">
+{`──[ what we ship ]───────────────────────────────────────────────────────────`}
+        </pre>
+      </div>
+
       {/* SHIP */}
-      <section className="border-t border-[#204538]">
-        <div className="mx-auto w-full max-w-6xl px-6 py-20">
-          <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
-            What we ship
-          </p>
+      <section>
+        <div className="mx-auto w-full max-w-6xl px-6 py-16">
           <h2 className="mt-2 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
             One product, real, finished enough to charge for.
           </h2>
@@ -94,8 +132,8 @@ export default function Home() {
             >
               <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
-                    Active
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
+                    ::active
                   </p>
                   <h3 className="mt-2 text-2xl font-black tracking-tight text-[#ff7a18] md:text-3xl">
                     ORANGEBOX
@@ -105,10 +143,10 @@ export default function Home() {
                     Party Line, Codexa worker rail, receipts, MCP tools for
                     Claude Code. Single ZIP. Node 18+.
                   </p>
-                  <p className="mt-4 text-sm text-[#a7b8ad]">
+                  <p className="mt-4 font-mono text-xs uppercase tracking-widest text-[#a7b8ad]">
                     $49 USD · one-time · no support →{" "}
                     <span className="text-[#ff7a18] underline-offset-4 group-hover:underline">
-                      learn more
+                      enter
                     </span>
                   </p>
                 </div>
@@ -120,6 +158,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ASCII DIVIDER */}
+      <div aria-hidden className="mx-auto w-full max-w-6xl overflow-hidden px-6">
+        <pre className="ascii-rule">
+{`──[ EOF ]────────────────────────────────────────────────────────────────────`}
+        </pre>
+      </div>
 
       {/* CTA */}
       <section className="border-t border-[#204538] bg-[#0a211b]">
@@ -133,7 +178,7 @@ export default function Home() {
           <div className="mt-7 flex justify-center">
             <BuyButton />
           </div>
-          <p className="mt-3 text-xs text-[#a7b8ad]">
+          <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-[#a7b8ad]">
             $49 USD · one-time · no support · instant download
           </p>
         </div>

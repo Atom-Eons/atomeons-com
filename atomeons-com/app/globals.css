@@ -103,11 +103,138 @@ a:hover {
   animation: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
+/* CRT scanline overlay — global, subtle */
+.scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(255, 122, 24, 0.025) 2px,
+      rgba(255, 122, 24, 0.025) 3px
+    );
+  mix-blend-mode: overlay;
+}
+
+/* Hairline screen flicker */
+@keyframes screen-flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.92; }
+  98% { opacity: 1; }
+  99% { opacity: 0.96; }
+}
+.screen-flicker {
+  animation: screen-flicker 8s linear infinite;
+}
+
+/* RGB-split glitch — apply on hover via .glitch-hover, or always with .glitch */
+@keyframes glitch-shift {
+  0%, 92%, 100% {
+    text-shadow:
+      0 0 0 transparent;
+  }
+  93% {
+    text-shadow:
+      -2px 0 0 rgba(89, 217, 255, 0.85),
+      2px 0 0 rgba(255, 79, 94, 0.85);
+  }
+  94% {
+    text-shadow:
+      2px 0 0 rgba(89, 217, 255, 0.85),
+      -2px 0 0 rgba(255, 79, 94, 0.85);
+  }
+  95% {
+    text-shadow:
+      -1px 0 0 rgba(89, 217, 255, 0.6),
+      1px 0 0 rgba(255, 79, 94, 0.6);
+  }
+}
+.glitch {
+  animation: glitch-shift 6s steps(1, end) infinite;
+}
+.glitch-hover:hover {
+  animation: glitch-shift 1.2s steps(1, end) infinite;
+}
+
+/* Terminal cursor */
+@keyframes blink-cursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.blink-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  width: 0.55ch;
+  height: 1em;
+  vertical-align: -0.1em;
+  background: #ff7a18;
+  animation: blink-cursor 1s steps(2, end) infinite;
+}
+
+/* One-shot loading bar at very top of page on first paint */
+@keyframes boot-bar {
+  0% { transform: scaleX(0); opacity: 1; }
+  90% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+.boot-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: 2px;
+  background: linear-gradient(90deg, #ff7a18, #ffc46b, #75ff92, #59d9ff);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  animation: boot-bar 1.4s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+  pointer-events: none;
+}
+
+/* Outlaw pill — terminal-square chip with hard edges */
+.rebel-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffc46b;
+  background: rgba(255, 122, 24, 0.06);
+  border: 1px solid rgba(255, 122, 24, 0.4);
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+/* ASCII section divider */
+.ascii-rule {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #1b8b75;
+  white-space: pre;
+  overflow-x: hidden;
+  user-select: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   [style*="atom-spin"] {
     animation: none !important;
   }
-  .pulse-ring {
+  .pulse-ring,
+  .screen-flicker,
+  .glitch,
+  .glitch-hover:hover,
+  .blink-cursor,
+  .boot-bar {
     animation: none !important;
   }
+  .boot-bar { display: none; }
 }

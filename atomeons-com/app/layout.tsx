@@ -35,7 +35,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-[#04100d] text-[#f7f0e4]">
+      <body className="scanlines screen-flicker min-h-full flex flex-col bg-[#04100d] text-[#f7f0e4]">
+        <div className="boot-bar" aria-hidden />
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

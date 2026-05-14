@@ -1,14 +1,17 @@
 import Link from "next/link";
 import { AtomMark } from "./AtomMark";
+import { SystemLog } from "./SystemLog";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-30 border-b border-[#204538] bg-[#04100d]/85 backdrop-blur-md">
+    <header className="sticky top-0 z-30 border-b border-[#204538] bg-[#04100d]/90 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="group flex items-center gap-3">
-          <AtomMark size={36} speed={9} />
+          <span className="glitch-hover">
+            <AtomMark size={36} speed={9} />
+          </span>
           <div>
-            <p className="text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
               ÆoNs Research Lab
             </p>
             <p className="text-sm font-semibold tracking-tight text-[#f7f0e4]">
@@ -30,6 +33,12 @@ export function Header() {
             ORANGEBOX
           </Link>
           <Link
+            href="/manifesto"
+            className="rounded-md px-3 py-1.5 text-[#a7b8ad] transition-colors hover:bg-[#071915] hover:text-[#ff4f5e]"
+          >
+            Manifesto
+          </Link>
+          <Link
             href="/about"
             className="rounded-md px-3 py-1.5 text-[#a7b8ad] transition-colors hover:bg-[#071915] hover:text-[#f7f0e4]"
           >
@@ -43,6 +52,7 @@ export function Header() {
           </Link>
         </nav>
       </div>
+      <SystemLog />
     </header>
   );
 }

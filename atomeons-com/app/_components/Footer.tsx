@@ -24,7 +24,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
             Lab
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#f7f0e4]">
@@ -33,6 +33,11 @@ export function Footer() {
             </li>
             <li>
               <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/manifesto" className="text-[#ff4f5e]">
+                Misfit Manifesto
+              </Link>
             </li>
           </ul>
         </div>
