@@ -4,6 +4,12 @@
   "buildCommand": "next build",
   "installCommand": "pnpm install --frozen-lockfile",
   "outputDirectory": ".next",
+  "crons": [
+    {
+      "path": "/api/heartbeat",
+      "schedule": "*/30 * * * *"
+    }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
