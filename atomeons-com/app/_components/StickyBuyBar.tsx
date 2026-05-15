@@ -46,7 +46,7 @@ export function StickyBuyBar() {
           </p>
           <p className="text-sm text-[#f7f0e4]">
             <span className="font-bold text-[#ff7a18]">$49</span>
-            <span className="text-[#a7b8ad]"> · one-time · no support</span>
+            <span className="text-[#a7b8ad]"> · one-time · 30-day support</span>
           </p>
         </div>
         <div className="flex items-center gap-2">

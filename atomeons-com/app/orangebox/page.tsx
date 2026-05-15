@@ -74,15 +74,14 @@ export default function OrangeBox() {
             ORANGEBOX Command · v1.4.0 — Codexa Local + Audit Roll-up
           </p>
           <h1 className="glitch-hover text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-            An AI builder{" "}
-            <span className="text-[#ff7a18]">for all</span>.
+            The AI cockpit for{" "}
+            <span className="text-[#ff7a18]">Claude Code operators</span>.
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
-            The private AI operations cockpit. Turn operator intent into
-            project spine, DAG nodes, department work packets, Codexa
-            worker jobs, review gates, receipts, and visual proof —
-            without forcing the browser or the model to hold the whole
-            project in active memory.
+            ORANGEBOX Command pairs with Claude Code via 60+ MCP tools to give
+            your projects real memory, mission-graph routing, 15-department
+            structure, and receipt-backed gates. Local-first. Zero telemetry.
+            $49 once, forever.
           </p>
           <p className="mt-3 max-w-xl text-base font-semibold text-[#f7f0e4]">
             Command, not chat. Receipts, not promises. Yours, not theirs.
@@ -268,12 +267,17 @@ export default function OrangeBox() {
         <p className="mt-5 border-t border-[#204538] pt-4 text-xs text-[#a7b8ad]">
           <strong className="text-[#f7f0e4]">macOS / Linux</strong> on the v1.5 roadmap. <strong className="text-[#f7f0e4]">ARM64</strong> not yet. <strong className="text-[#f7f0e4]">Win 7/8</strong> not supported.
         </p>
-        <p className="mt-3 rounded-md border border-[#5a3210] bg-[#1a0f00] p-3 text-xs text-[#ffc46b]">
-          ::heads-up — Installer is unsigned (code-signing certificate is v1.5 work). Windows SmartScreen will warn &quot;unknown publisher&quot; — click <strong>More info</strong> → <strong>Run anyway</strong>. This is normal.
-        </p>
-        <p className="mt-3 rounded-md border border-[#5a3210] bg-[#1a0f00] p-3 text-xs text-[#ffc46b]">
-          ::delivery — Your download link appears on the success page after payment. Save it before you close the tab. Email delivery is a backup, not a guarantee.
-        </p>
+        <details className="mt-3 rounded-md border border-[#204538] bg-[#04100d] p-3 text-xs text-[#a7b8ad]">
+          <summary className="cursor-pointer font-mono uppercase tracking-widest text-[#a7b8ad] hover:text-[#f7f0e4]">
+            ::install &amp; delivery notes (read after purchase)
+          </summary>
+          <p className="mt-3 text-[#ffc46b]">
+            <strong>SmartScreen:</strong> Installer is unsigned (code-signing certificate is v1.5 work). Windows SmartScreen will warn &quot;unknown publisher&quot; — click <strong>More info</strong> → <strong>Run anyway</strong>. This is normal for indie software.
+          </p>
+          <p className="mt-3 text-[#ffc46b]">
+            <strong>Download:</strong> Your download link appears on the success page after payment. Save it before you close the tab. Email delivery is a backup, not a guarantee.
+          </p>
+        </details>
       </section>
 
       {/* ─── WHAT IT IS ───────────────────────────────────────────── */}

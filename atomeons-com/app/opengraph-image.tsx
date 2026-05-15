@@ -113,7 +113,7 @@ export default function OG() {
           <p
             style={{
               margin: "16px 0 0",
-              fontSize: 96,
+              fontSize: 88,
               fontWeight: 900,
               lineHeight: 0.98,
               letterSpacing: -3,
@@ -121,8 +121,8 @@ export default function OG() {
               maxWidth: 1080,
             }}
           >
-            An AI builder{" "}
-            <span style={{ color: "#ff7a18" }}>for all</span>.
+            The AI cockpit for{" "}
+            <span style={{ color: "#ff7a18" }}>Claude Code</span>.
           </p>
           <p
             style={{
@@ -134,7 +134,7 @@ export default function OG() {
               fontWeight: 500,
             }}
           >
-            Command, not chat. Receipts, not promises. Yours, not theirs.
+            $49 once, forever. Local-first. 60+ MCP tools. 30-day refund.
           </p>
         </div>
 
