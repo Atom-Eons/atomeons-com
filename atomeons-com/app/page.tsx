@@ -6,6 +6,7 @@ import { RefusalStrip } from "./_components/RefusalStrip";
 import { SpotlightBg } from "./_components/SpotlightBg";
 import { CockpitMiniPanel } from "./_components/CockpitMiniPanel";
 import { BuiltOnOrangebox } from "./_components/BuiltOnOrangebox";
+import { SalesCounter } from "./_components/SalesCounter";
 
 export default function Home() {
   return (
@@ -38,7 +39,10 @@ export default function Home() {
               <p className="mt-3 max-w-xl text-base font-semibold text-[#75ff92]">
                 $49 once, forever. No subscription, ever.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-5">
+                <SalesCounter />
+              </div>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
                 <BuyButton />
                 <Link
                   href="/orangebox"
