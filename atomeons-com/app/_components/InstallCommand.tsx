@@ -1,8 +1,8 @@
 /**
- * Windows install steps. v1.4.0 ships as a Tauri MSI + NSIS .exe
+ * Windows install steps. v1.5.0 ships as a Tauri MSI + NSIS .exe
  * installer — no terminal, no npm. Three steps, ~10 minutes total.
  *
- * Source of truth: 1-INSTALL.txt inside ORANGEBOX-OS-AIO-v1.4.0.zip
+ * Source of truth: 1-INSTALL.txt inside ORANGEBOX-OS-AIO-v1.5.0.zip
  */
 export function InstallCommand() {
   const steps = [

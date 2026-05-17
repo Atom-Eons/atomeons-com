@@ -23,7 +23,7 @@ const FAQS: QA[] = [
     a: "No. $49 USD once, forever. The anti-SaaS commitment is locked in LICENSE §4A — if AtomEons ever attempts to move to monthly billing, every existing buyer keeps their license free in perpetuity.",
   },
   {
-    q: "What's inside the v1.4.0 zip?",
+    q: "What's inside the v1.5.0 zip?",
     a: "ORANGEBOX Command desktop app (Tauri 2.x · MSI + NSIS installers), AE0–AE14 doctrine (15 departments + 6 review engines), ÆoNs Skill Suite V1.4 (15 skills · 230/230 tests pass), 4-layer memory model + knowledge engine, 27 Constitutional Guardrails, 9-stage Gate Chain, Triad model lanes, 60+ MCP server tools, Codexa Local + Codexa Remote workers, mission-graph DAG runner, party-line shared status bus, receipt + proof artifact rails, day-0 demo project, full operator manual + quickstart + setup guides for MCP / Ollama / n8n / custom subdomain, plus full source code.",
   },
   {

@@ -1,0 +1,4 @@
+
+# Campaign secrets
+CAMPAIGN/scripts/.env.local
+CAMPAIGN/scripts/.env

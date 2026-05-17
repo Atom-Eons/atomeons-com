@@ -11,24 +11,24 @@ import { AtomBoot } from "./_components/AtomBoot";
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
   title: {
-    default: "AtomEons — An AI builder for all",
+    default: "ORANGEBOX v1.5.0 — the AI cockpit you actually own.",
     template: "%s | AtomEons",
   },
   description:
-    "ORANGEBOX Command v1.4.0 — the private AI operations cockpit. 15 departments, 15 skills, Codexa Local. $49 once, forever. Local-first, no telemetry, no subscription. This site was built in one day on ORANGEBOX.",
+    "ORANGEBOX Command v1.5.0 — the AI cockpit you actually own. 60+ MCP tools. Mission-graph memory that survives every context reset. Swap claude / gpt / gemini / ollama mid-session. Local-first. Zero telemetry. $49 once, forever.",
   openGraph: {
-    title: "AtomEons — An AI builder for all",
+    title: "ORANGEBOX v1.5.0 — the AI cockpit you actually own.",
     description:
-      "ORANGEBOX Command v1.4.0 · the private AI operations cockpit · $49 once, forever · local-first · no telemetry · built in one day on ORANGEBOX.",
+      "60+ MCP tools · mission-graph memory · swap-lane router · local-first · zero telemetry · $49 once, forever.",
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AtomEons — An AI builder for all",
+    title: "ORANGEBOX v1.5.0 — the AI cockpit you actually own.",
     description:
-      "ORANGEBOX Command v1.4.0 · $49 once, forever · the private AI operations cockpit.",
+      "60+ MCP tools · mission-graph memory · swap-lane router · local-first · $49 once, forever.",
   },
   robots: { index: true, follow: true },
 };
@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="scanlines min-h-full flex flex-col bg-[#04100d] text-[#f7f0e4]">
+      <body className="min-h-full flex flex-col bg-black text-[#F2F4F5]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

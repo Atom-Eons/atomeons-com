@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "AtomEons — An AI builder for all";
+export const alt = "ORANGEBOX Command v1.5.0 — the AI cockpit you actually own.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -15,8 +15,8 @@ export default function OG() {
           display: "flex",
           flexDirection: "column",
           background:
-            "radial-gradient(circle at 8% 10%, rgba(89, 217, 255, 0.18), transparent 30%), radial-gradient(circle at 92% 0%, rgba(255, 122, 24, 0.30), transparent 35%), radial-gradient(circle at 50% 100%, rgba(117, 255, 146, 0.10), transparent 50%), #04100d",
-          color: "#f7f0e4",
+            "radial-gradient(70% 55% at 70% 40%, rgba(34,240,213,0.22) 0%, transparent 60%), radial-gradient(50% 40% at 10% 90%, rgba(255,122,26,0.18) 0%, transparent 65%), #000000",
+          color: "#F2F4F5",
           padding: 64,
           fontFamily:
             '"Helvetica", "Arial", -apple-system, BlinkMacSystemFont, sans-serif',
@@ -29,144 +29,108 @@ export default function OG() {
             alignItems: "center",
             justifyContent: "space-between",
             width: "100%",
-            paddingBottom: 12,
-            borderBottom: "1px solid rgba(32, 69, 56, 0.6)",
+            paddingBottom: 14,
+            borderBottom: "1px solid #1A2225",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
             <svg width="48" height="48" viewBox="-50 -50 100 100">
-              <ellipse
-                cx="0"
-                cy="0"
-                rx="42"
-                ry="14"
-                fill="none"
-                stroke="#ff7a18"
-                strokeWidth="2.5"
-                opacity="0.95"
-              />
-              <ellipse
-                cx="0"
-                cy="0"
-                rx="42"
-                ry="14"
-                fill="none"
-                stroke="#ffc46b"
-                strokeWidth="2"
-                opacity="0.7"
-                transform="rotate(60)"
-              />
-              <ellipse
-                cx="0"
-                cy="0"
-                rx="42"
-                ry="14"
-                fill="none"
-                stroke="#59d9ff"
-                strokeWidth="1.5"
-                opacity="0.55"
-                transform="rotate(120)"
-              />
-              <circle cx="0" cy="0" r="9" fill="#ff7a18" />
-              <circle cx="0" cy="0" r="4" fill="#ffc46b" />
+              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#FF7A1A" strokeWidth="2.5" opacity="0.95" />
+              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#22F0D5" strokeWidth="2" opacity="0.75" transform="rotate(60)" />
+              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#22F0D5" strokeWidth="1.5" opacity="0.5" transform="rotate(120)" />
+              <circle cx="0" cy="0" r="9" fill="#FF7A1A" />
+              <circle cx="0" cy="0" r="4" fill="#FFA45A" />
             </svg>
             <p
               style={{
                 margin: 0,
                 fontSize: 22,
-                fontWeight: 800,
+                fontWeight: 700,
                 letterSpacing: -0.5,
-                color: "#f7f0e4",
+                color: "#F2F4F5",
               }}
             >
-              AtomEons
+              ATOMEONS
             </p>
           </div>
           <p
             style={{
               margin: 0,
-              fontSize: 12,
-              letterSpacing: 4,
+              fontSize: 11,
+              letterSpacing: 5,
               textTransform: "uppercase",
-              color: "#75ff92",
+              color: "#22F0D5",
               fontFamily: "monospace",
             }}
           >
-            ::v1.4.0 · SHOP READY · GREEN
+            ▲ v1.5.0 · LIVE TONIGHT
           </p>
         </div>
 
         {/* HEADLINE */}
-        <div style={{ display: "flex", flexDirection: "column", marginTop: 28 }}>
+        <div style={{ display: "flex", flexDirection: "column", marginTop: 36 }}>
           <p
             style={{
               margin: 0,
-              fontSize: 18,
-              letterSpacing: 4,
+              fontSize: 16,
+              letterSpacing: 5,
               textTransform: "uppercase",
-              color: "#ff7a18",
+              color: "#22F0D5",
               fontFamily: "monospace",
             }}
           >
-            ORANGEBOX Command · the private AI operations cockpit
-          </p>
-          <p
-            style={{
-              margin: "16px 0 0",
-              fontSize: 88,
-              fontWeight: 900,
-              lineHeight: 0.98,
-              letterSpacing: -3,
-              color: "#f7f0e4",
-              maxWidth: 1080,
-            }}
-          >
-            The AI cockpit for{" "}
-            <span style={{ color: "#ff7a18" }}>Claude Code</span>.
+            ORANGEBOX Command · the AI cockpit you actually own
           </p>
           <p
             style={{
               margin: "20px 0 0",
-              fontSize: 28,
-              lineHeight: 1.25,
-              color: "#a7b8ad",
-              maxWidth: 980,
+              fontSize: 96,
               fontWeight: 500,
+              lineHeight: 0.95,
+              letterSpacing: -3.5,
+              color: "#F2F4F5",
+              maxWidth: 1080,
             }}
           >
-            $49 once, forever. Local-first. 60+ MCP tools. 30-day refund.
+            The AI cockpit
+            <br />
+            <span style={{ color: "#22F0D5" }}>you actually own.</span>
+          </p>
+          <p
+            style={{
+              margin: "24px 0 0",
+              fontSize: 26,
+              lineHeight: 1.3,
+              color: "#9BA5A7",
+              maxWidth: 980,
+              fontWeight: 400,
+            }}
+          >
+            60+ MCP tools. Mission-graph memory. Swap claude / gpt / gemini / ollama mid-session.
           </p>
         </div>
 
-        {/* COCKPIT SUGGESTION — three lane bars */}
-        <div
-          style={{
-            display: "flex",
-            gap: 20,
-            marginTop: 36,
-            width: "100%",
-          }}
-        >
+        {/* lane bars (bio-cyan + orange gradient) */}
+        <div style={{ display: "flex", gap: 20, marginTop: 40, width: "100%" }}>
           {[
-            { label: "VISION_RAIL", value: 0.94, color: "#75ff92" },
-            { label: "PARTY_LINE", value: 0.72, color: "#59d9ff" },
-            { label: "TRIAD_LANES", value: 0.87, color: "#ff7a18" },
+            { label: "VISION_RAIL", value: 0.94 },
+            { label: "PARTY_LINE", value: 0.72 },
+            { label: "TRIAD_LANES", value: 0.87 },
           ].map((lane) => (
-            <div
-              key={lane.label}
-              style={{ display: "flex", flexDirection: "column", flex: 1, gap: 6 }}
-            >
+            <div key={lane.label} style={{ display: "flex", flexDirection: "column", flex: 1, gap: 6 }}>
               <div
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
                   fontFamily: "monospace",
                   fontSize: 13,
-                  color: "#a7b8ad",
+                  color: "#6B7779",
+                  letterSpacing: 1.5,
+                  textTransform: "uppercase",
                 }}
               >
                 <span>{lane.label}</span>
-                <span style={{ color: lane.color }}>
+                <span style={{ color: "#F2F4F5" }}>
                   {Math.round(lane.value * 100)}%
                 </span>
               </div>
@@ -174,7 +138,7 @@ export default function OG() {
                 style={{
                   display: "flex",
                   height: 6,
-                  background: "#0a211b",
+                  background: "#1A2225",
                   borderRadius: 3,
                   overflow: "hidden",
                 }}
@@ -183,8 +147,7 @@ export default function OG() {
                   style={{
                     display: "flex",
                     width: `${lane.value * 100}%`,
-                    background: lane.color,
-                    opacity: 0.9,
+                    background: "linear-gradient(90deg, #FF7A1A 0%, #22F0D5 100%)",
                   }}
                 />
               </div>
@@ -192,7 +155,7 @@ export default function OG() {
           ))}
         </div>
 
-        {/* BOTTOM STRIP — price + url + tagline */}
+        {/* BOTTOM STRIP */}
         <div
           style={{
             display: "flex",
@@ -201,27 +164,27 @@ export default function OG() {
             width: "100%",
             marginTop: "auto",
             paddingTop: 24,
-            borderTop: "1px solid rgba(32, 69, 56, 0.6)",
+            borderTop: "1px solid #1A2225",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             <p
               style={{
                 margin: 0,
-                fontSize: 12,
-                letterSpacing: 3,
+                fontSize: 11,
+                letterSpacing: 4,
                 textTransform: "uppercase",
-                color: "#1b8b75",
+                color: "#6B7779",
                 fontFamily: "monospace",
               }}
             >
-              ::built in one day on ORANGEBOX
+              ::local-first · zero telemetry · 30-day refund
             </p>
             <p
               style={{
                 margin: 0,
                 fontSize: 18,
-                color: "#75ff92",
+                color: "#22F0D5",
                 fontFamily: "monospace",
               }}
             >
@@ -233,17 +196,18 @@ export default function OG() {
               display: "flex",
               alignItems: "baseline",
               gap: 12,
-              padding: "14px 22px",
-              background: "#ff7a18",
-              borderRadius: 10,
+              padding: "16px 24px",
+              background: "#FF7A1A",
+              borderRadius: 12,
+              boxShadow: "0 0 40px rgba(255,122,26,0.5)",
             }}
           >
             <p
               style={{
                 margin: 0,
-                fontSize: 44,
-                fontWeight: 900,
-                color: "#06110e",
+                fontSize: 48,
+                fontWeight: 700,
+                color: "#000",
                 lineHeight: 1,
               }}
             >
@@ -253,9 +217,9 @@ export default function OG() {
               style={{
                 margin: 0,
                 fontSize: 14,
-                color: "#06110e",
+                color: "#000",
                 textTransform: "uppercase",
-                letterSpacing: 2,
+                letterSpacing: 2.5,
                 fontWeight: 700,
               }}
             >

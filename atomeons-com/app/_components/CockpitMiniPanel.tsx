@@ -52,7 +52,7 @@ export function CockpitMiniPanel() {
           </span>
         </div>
         <span className="font-mono text-[9px] uppercase tracking-widest text-[#1b8b75]">
-          orangebox v1.4.0
+          orangebox v1.5.0
         </span>
       </div>
 

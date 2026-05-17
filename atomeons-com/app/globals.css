@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
+/* V5 theme — frontier black + bio-cyan glow + ORANGEBOX orange CTA retained.
+   Existing v1.4 color tokens kept for backward-compat on legacy components. */
 @theme {
+  /* legacy v1.4 tokens — DO NOT REMOVE (still referenced across components) */
   --color-danger: #ff4f5e;
   --color-bg: #04100d;
   --color-fg: #f7f0e4;
@@ -16,11 +19,56 @@
   --color-trace: #1b8b75;
   --color-solder: #c7f8df;
   --color-ink: #06110e;
+
+  /* v5 tokens — bio-cyan + pure black + signature orange retained */
+  --color-v5-bg: #000000;
+  --color-v5-bg-elev: #0A0F11;
+  --color-v5-fg: #F2F4F5;
+  --color-v5-fg-muted: #6B7779;
+  --color-v5-cyan: #22F0D5;
+  --color-v5-cyan-dim: #0FB39E;
+  --color-v5-orange: #FF7A1A;
+  --color-v5-orange-hot: #FFA45A;
+  --color-v5-border: #1A2225;
+
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, sans-serif;
   --font-mono:
     ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* v5 utility helpers — opt-in via classes, won't break existing surfaces */
+.v5-bg { background: #000; }
+.v5-fg { color: #F2F4F5; }
+.v5-cyan { color: #22F0D5; }
+.v5-glow-cyan { box-shadow: 0 0 40px rgba(34,240,213,0.35); }
+.v5-glow-orange { box-shadow: 0 0 40px rgba(255,122,26,0.40); }
+.v5-border { border-color: #1A2225; }
+
+/* v5 animations */
+@keyframes v5slidein {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes v5pulse {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+
+@keyframes v5scan {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.v5-scanline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(34,240,213,0.12), transparent);
+  animation: v5scan 4s ease-in-out infinite;
+  pointer-events: none;
 }
 
 html,

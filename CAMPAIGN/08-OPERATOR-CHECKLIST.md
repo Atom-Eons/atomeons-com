@@ -26,6 +26,12 @@ The new OG card now shows "The AI cockpit for Claude Code" + "$49 once, forever.
 Verify at https://atomeons.com/orangebox/opengraph-image
 Use this image when Claude posts to FB/IG/Reddit.
 
+### 4b. Midjourney Personalization (5 min, one-time)
+Midjourney now requires "Personalization" before generating. Visit
+https://www.midjourney.com/personalize and pick your top images for ~5 min.
+Without this, all `/imagine` prompts are blocked by a popup. After this is
+done, Claude can generate visual assets for FB/IG posts.
+
 ## P1 — High leverage (within 24h)
 
 ### 4. Atom McCree FB page first launch post

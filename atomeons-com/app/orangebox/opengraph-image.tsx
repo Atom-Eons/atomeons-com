@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "ORANGEBOX Command v1.4.0 — $49 once, forever";
+export const alt = "ORANGEBOX Command v1.5.0 — $49 once, forever";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -15,124 +15,133 @@ export default function OG() {
           display: "flex",
           flexDirection: "column",
           background:
-            "radial-gradient(circle at 0% 0%, rgba(255, 122, 24, 0.40), transparent 50%), radial-gradient(circle at 100% 100%, rgba(89, 217, 255, 0.18), transparent 50%), #04100d",
-          color: "#f7f0e4",
-          padding: 72,
+            "radial-gradient(70% 55% at 70% 40%, rgba(34,240,213,0.22) 0%, transparent 60%), radial-gradient(50% 40% at 10% 90%, rgba(255,122,26,0.18) 0%, transparent 65%), #000000",
+          color: "#F2F4F5",
+          padding: 64,
           fontFamily:
             '"Helvetica", "Arial", -apple-system, BlinkMacSystemFont, sans-serif',
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <svg width="44" height="44" viewBox="-50 -50 100 100">
-            <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#ff7a18" strokeWidth="2.5" />
-            <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#ffc46b" strokeWidth="2" opacity="0.7" transform="rotate(60)" />
-            <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#59d9ff" strokeWidth="1.5" opacity="0.55" transform="rotate(120)" />
-            <circle cx="0" cy="0" r="9" fill="#ff7a18" />
-            <circle cx="0" cy="0" r="4" fill="#ffc46b" />
-          </svg>
-          <p style={{ margin: 0, fontSize: 14, letterSpacing: 4, textTransform: "uppercase", color: "#75ff92", fontFamily: "monospace" }}>
-            ▲ v1.4.0 · SHOP READY · GREEN
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            paddingBottom: 14,
+            borderBottom: "1px solid #1A2225",
+          }}
+        >
+          <p
+            style={{
+              margin: 0,
+              fontFamily: "monospace",
+              fontSize: 12,
+              letterSpacing: 4,
+              textTransform: "uppercase",
+              color: "#22F0D5",
+            }}
+          >
+            ATOMEONS · MARCO ISLAND · LIVE
+          </p>
+          <p
+            style={{
+              margin: 0,
+              fontFamily: "monospace",
+              fontSize: 12,
+              letterSpacing: 4,
+              textTransform: "uppercase",
+              color: "#FF7A1A",
+            }}
+          >
+            ▲ v1.5.0 · LAUNCH
           </p>
         </div>
 
-        <p
-          style={{
-            margin: "32px 0 0",
-            fontSize: 116,
-            fontWeight: 900,
-            lineHeight: 0.95,
-            letterSpacing: -4,
-            color: "#f7f0e4",
-            maxWidth: 1080,
-          }}
-        >
-          ORANGEBOX
-        </p>
-        <p
-          style={{
-            margin: "8px 0 0",
-            fontSize: 56,
-            fontWeight: 700,
-            lineHeight: 1,
-            letterSpacing: -1,
-            color: "#ff7a18",
-          }}
-        >
-          Command Cockpit
-        </p>
-        <p
-          style={{
-            margin: "20px 0 0",
-            fontSize: 24,
-            lineHeight: 1.3,
-            color: "#a7b8ad",
-            maxWidth: 980,
-          }}
-        >
-          15 departments · 15 skills · 60+ MCP tools · Codexa Local · 27 guardrails. Local-first. No telemetry. No subscription, ever.
-        </p>
+        <div style={{ display: "flex", flexDirection: "column", marginTop: 40 }}>
+          <p
+            style={{
+              margin: 0,
+              fontFamily: "monospace",
+              fontSize: 16,
+              letterSpacing: 5,
+              textTransform: "uppercase",
+              color: "#FF7A1A",
+            }}
+          >
+            ORANGEBOX Command · v1.5.0
+          </p>
+          <p
+            style={{
+              margin: "20px 0 0",
+              fontSize: 102,
+              fontWeight: 500,
+              lineHeight: 0.94,
+              letterSpacing: -3.5,
+              color: "#F2F4F5",
+              maxWidth: 1080,
+            }}
+          >
+            Faster.
+            <br />
+            Smarter.
+            <br />
+            <span style={{ color: "#22F0D5" }}>Cached.</span>
+          </p>
+          <p
+            style={{
+              margin: "26px 0 0",
+              fontSize: 26,
+              lineHeight: 1.3,
+              color: "#9BA5A7",
+              maxWidth: 980,
+              fontWeight: 400,
+            }}
+          >
+            The AI cockpit for Claude Code · 60+ MCP tools · mission-graph memory · local-first.
+          </p>
+        </div>
 
         <div
           style={{
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "space-between",
-            width: "100%",
             marginTop: "auto",
+            paddingTop: 24,
+            borderTop: "1px solid #1A2225",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-            <p
-              style={{
-                margin: 0,
-                fontSize: 14,
-                letterSpacing: 3,
-                textTransform: "uppercase",
-                color: "#1b8b75",
-                fontFamily: "monospace",
-              }}
-            >
-              the private AI operations cockpit
-            </p>
-            <p
-              style={{
-                margin: 0,
-                fontSize: 18,
-                color: "#75ff92",
-                fontFamily: "monospace",
-              }}
-            >
-              atomeons.com/orangebox
-            </p>
-          </div>
+          <p
+            style={{
+              margin: 0,
+              fontSize: 20,
+              color: "#22F0D5",
+              fontFamily: "monospace",
+            }}
+          >
+            atomeons.com/orangebox
+          </p>
           <div
             style={{
               display: "flex",
               alignItems: "baseline",
-              gap: 14,
-              padding: "16px 26px",
-              background: "#ff7a18",
+              gap: 12,
+              padding: "16px 24px",
+              background: "#FF7A1A",
               borderRadius: 12,
+              boxShadow: "0 0 40px rgba(255,122,26,0.55)",
             }}
           >
-            <p
-              style={{
-                margin: 0,
-                fontSize: 56,
-                fontWeight: 900,
-                color: "#06110e",
-                lineHeight: 1,
-              }}
-            >
+            <p style={{ margin: 0, fontSize: 48, fontWeight: 700, color: "#000", lineHeight: 1 }}>
               $49
             </p>
             <p
               style={{
                 margin: 0,
-                fontSize: 16,
-                color: "#06110e",
+                fontSize: 14,
+                color: "#000",
                 textTransform: "uppercase",
-                letterSpacing: 2,
+                letterSpacing: 2.5,
                 fontWeight: 700,
               }}
             >
