@@ -1,3 +1,10 @@
+// HARD GATE: this module exposes the service-role Supabase client.
+// `server-only` makes Next.js refuse to bundle this into any client
+// component at build time. The service-role key bypasses RLS — if it
+// ever leaks into the browser bundle the whole project's gate is broken.
+// All 7 current importers (cron route, founders-view server pages, /now,
+// LatestFromLab, RSS) are server-side. Do not change that.
+import "server-only";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 /**

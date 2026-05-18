@@ -145,7 +145,7 @@ export default async function NowPage() {
             indie-web /now page
           </a>{" "}
           — the convention Derek Sivers proposed for solo operators to say
-          publicly what they&apos;re actually working on. Updated whenever
+          publicly what they&apos;re working on. Updated whenever
           something changes worth saying. No theater. No roadmap. Just where
           the lab is, right now.
         </p>

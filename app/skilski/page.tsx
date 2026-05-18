@@ -194,7 +194,7 @@ export default function Skilski() {
             ::13 sectors
           </p>
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
-            Skills indexed where work actually happens.
+            Skills indexed where the work happens.
           </h2>
           <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-[#1A2225] md:grid-cols-5">
             {SECTORS.map(([name, count]) => (

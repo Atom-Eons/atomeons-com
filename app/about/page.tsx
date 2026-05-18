@@ -52,10 +52,9 @@ export default function About() {
       </h1>
 
       <p className="mt-6 text-lg text-[#a7b8ad]">
-        I&apos;m{" "}
-        <span className="text-[#f7f0e4]">Atom McCree</span>. I build
-        command surfaces for operators who actually ship things — software,
-        books, apps, LLMs.
+        <span className="text-[#f7f0e4]">Atom McCree</span>. AtomEons Systems
+        Laboratory, Marco Island, FL. One operator. One cockpit. Built it
+        because nothing else held the thread.
       </p>
 
       <p className="mt-3 text-lg text-[#a7b8ad]">
@@ -73,10 +72,10 @@ export default function About() {
 
       <section>
         <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
-          What we make
+          What the lab ships
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-          A cockpit for the people who actually build the things.
+          The cockpit for operators who ship.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
           Most AI tooling is a chatbox or a dashboard. Neither survives

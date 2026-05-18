@@ -33,8 +33,10 @@ const TAIL: { href: string; label: string }[] = [
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(true);
-  const [researchOpen, setResearchOpen] = useState(true);
+  // Sections default CLOSED so the most direct links (Founder's View, Press,
+  // Account) are visible without scroll on a 390px phone. Tap to expand.
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [researchOpen, setResearchOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {

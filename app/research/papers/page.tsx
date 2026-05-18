@@ -46,7 +46,7 @@ export default function ResearchPapersPage() {
           <span className="text-[#F2F4F5]">academic</span> one matches the
           paper&apos;s own abstract — falsifiable, peer-ready, formal. The{" "}
           <span className="text-[#22F0D5]">kid / grandma</span> one strips
-          the jargon and tells you what the paper is actually saying in two
+          the jargon and tells you what the paper is saying in two
           sentences. Click any card for both.
         </p>
 

@@ -148,7 +148,7 @@ export default function OrangeBox() {
                 downloadUrl:
                   "https://github.com/AtomEons/orangebox-os/releases/tag/v6.0.0",
                 description:
-                  "ORANGEBOX Command v6.0.0 — the local-first AI cockpit you actually own. 11 lanes, 60+ MCP tools, 15 departments. Multi-model debate (Claude + GPT + Gemini), live 𝕏 feed via Hermes, compounding lattice memory, receipts on every action. BYO keys, zero markup on tokens.",
+                  "ORANGEBOX Command v6.0.0 — the local-first AI cockpit you own. 11 lanes, 60+ MCP tools, 15 departments. Multi-model debate (Claude + GPT + Gemini), live 𝕏 feed via Hermes, compounding lattice memory, receipts on every action. BYO keys, zero markup on tokens.",
                 offers: {
                   "@type": "Offer",
                   price: "1",

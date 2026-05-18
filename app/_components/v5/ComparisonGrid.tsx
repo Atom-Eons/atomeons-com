@@ -41,7 +41,7 @@ export function ComparisonGrid() {
             One price.
             <br />
             <span className="text-[#6B7779]">
-              Compare it to the alternatives.
+              The alternatives are below.
             </span>
           </h2>
         </div>
@@ -51,7 +51,7 @@ export function ComparisonGrid() {
           <div className="hidden border-b border-[#1A2225] px-6 py-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779] md:grid md:grid-cols-[1.4fr_140px_2fr] md:gap-4 md:px-8">
             <span>alternative</span>
             <span className="text-right">cost</span>
-            <span>what you actually get</span>
+            <span>what you get</span>
           </div>
 
           {ROWS.map((r) => (
@@ -95,8 +95,7 @@ export function ComparisonGrid() {
         </div>
 
         <p className="mt-8 max-w-2xl text-sm text-[#6B7779]">
-          One project where you don't re-discover what "done" meant three weeks
-          ago pays for ORANGEBOX. Once.
+          One recovered thread pays for ORANGEBOX. The price is $1.
         </p>
       </div>
     </section>

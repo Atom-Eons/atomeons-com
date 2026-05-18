@@ -16,9 +16,9 @@ export function ClosingManifesto() {
           ::the manual is inside
         </p>
         <h2 className="text-balance text-4xl font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] md:text-7xl">
-          Run a serious project.
+          Serious project.
           <br />
-          <span className="text-[#FF7A1A]">Keep your hands on the wheel.</span>
+          <span className="text-[#FF7A1A]">Your hands on the wheel.</span>
         </h2>
         <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-[#9BA5A7]">
           ORANGEBOX does not manage you. It does not nudge you, notify you,

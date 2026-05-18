@@ -12,13 +12,13 @@ import { StickyBuyBar } from "./_components/StickyBuyBar";
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
   title: {
-    default: "ORANGEBOX v6.0.0 — the AI cockpit you actually own.",
+    default: "ORANGEBOX v6.0.0 — the AI cockpit you own.",
     template: "%s | AtomEons",
   },
   description:
-    "ORANGEBOX Command v6.0.0 — the AI cockpit you actually own. 60+ MCP tools. Mission-graph memory that survives every context reset. Swap claude / gpt / gemini / ollama mid-session. Local-first. Zero telemetry. $1 once, forever.",
+    "ORANGEBOX Command v6.0.0 — the AI cockpit you own. 60+ MCP tools. Mission-graph memory that survives every context reset. Swap claude / gpt / gemini / ollama mid-session. Local-first. Zero telemetry. $1 once, forever.",
   openGraph: {
-    title: "ORANGEBOX v6.0.0 — the AI cockpit you actually own.",
+    title: "ORANGEBOX v6.0.0 — the AI cockpit you own.",
     description:
       "60+ MCP tools · mission-graph memory · swap-lane router · local-first · zero telemetry · $1 once, forever.",
     url: "https://atomeons.com",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ORANGEBOX v6.0.0 — the AI cockpit you actually own.",
+    title: "ORANGEBOX v6.0.0 — the AI cockpit you own.",
     description:
       "60+ MCP tools · mission-graph memory · swap-lane router · local-first · $1 once, forever.",
   },

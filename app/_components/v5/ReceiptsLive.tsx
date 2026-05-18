@@ -76,7 +76,18 @@ export function ReceiptsLive() {
               </span>
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="relative overflow-x-auto">
+              {/* right-edge fade hints at horizontal scroll on narrow viewports */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-[#0A0F11] to-transparent sm:hidden"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute right-2 top-2 z-10 font-mono text-[9px] uppercase tracking-[0.18em] text-[#22F0D5]/70 sm:hidden"
+              >
+                ← swipe
+              </div>
             {/* column headers */}
             <div className="grid min-w-[470px] grid-cols-[80px_60px_80px_80px_60px_50px] gap-3 border-b border-[#1A2225] px-5 py-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
               <span>ts</span>

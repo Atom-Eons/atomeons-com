@@ -36,7 +36,7 @@ export function WhatsInBox() {
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
             One zip.
             <br />
-            <span className="text-[#FF7A1A]">Everything you need.</span>
+            <span className="text-[#FF7A1A]">Nothing missing.</span>
           </h2>
         </div>
 

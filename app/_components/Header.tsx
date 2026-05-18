@@ -31,7 +31,7 @@ export function Header() {
               </span>
             </span>
             <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              the cockpit you actually own
+              the cockpit you own
             </span>
           </div>
         </Link>

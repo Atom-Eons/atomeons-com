@@ -10,7 +10,7 @@ export const metadata = {
 
 const FACTS = [
   ["Product", "ORANGEBOX Command v6.0.0"],
-  ["Tagline", "The AI cockpit you actually own."],
+  ["Tagline", "The AI cockpit you own."],
   ["Launch", "May 17, 2026 — midnight ET (04:00 UTC)"],
   ["Price", "$1 once, forever — no subscription, ever"],
   ["License", "Personal · full source included · §4A anti-SaaS lock"],

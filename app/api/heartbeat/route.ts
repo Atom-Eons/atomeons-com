@@ -40,10 +40,18 @@ type HeartbeatPayload = {
 };
 
 export async function GET(req: Request) {
-  // Vercel Cron auth — strict mode if CRON_SECRET is set
+  // Vercel Cron auth — REQUIRED. If CRON_SECRET is unset the endpoint
+  // refuses to serve, because the payload below leaks live Stripe revenue
+  // and buyer counts. Never let it run unauthenticated.
   const cronSecret = process.env.CRON_SECRET;
+  if (!cronSecret) {
+    return NextResponse.json(
+      { ok: false, error: "CRON_SECRET not configured — refusing to run." },
+      { status: 503 },
+    );
+  }
   const authHeader = req.headers.get("authorization");
-  if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
+  if (authHeader !== `Bearer ${cronSecret}`) {
     return NextResponse.json({ ok: false, error: "unauthorized" }, { status: 401 });
   }
 

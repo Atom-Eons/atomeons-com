@@ -21,7 +21,7 @@ const ITEMS = [
   },
   {
     head: "Anti-SaaS clause",
-    body: "ORANGEBOX will never move to monthly billing. If we ever try, every existing buyer keeps their license free in perpetuity.",
+    body: "ORANGEBOX will never move to monthly billing. If AtomEons ever attempts it, every existing buyer keeps their license free in perpetuity. The clause ships in the binary.",
     tag: "license §4A",
   },
   {

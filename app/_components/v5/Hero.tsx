@@ -82,7 +82,7 @@ export function Hero() {
             ORANGEBOX · V6.0.0 · {V5_LIVE ? "LIVE TODAY" : "LAUNCHING TODAY"}
           </p>
 
-          <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl sm:leading-[0.98] md:text-7xl md:leading-[0.95] lg:text-8xl">
+          <h1 className="text-balance text-[2rem] font-medium leading-[1.05] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl sm:leading-[0.98] md:text-7xl md:leading-[0.95] lg:text-8xl">
             One file.{" "}
             <span className="text-[#FF7A1A]">Double-click. 2 seconds.</span>{" "}
             <span className="text-[#22F0D5]">The cockpit replaces</span>{" "}
@@ -90,14 +90,14 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-[#9BA5A7] sm:mt-8 sm:text-lg md:mt-10 md:text-xl">
-            v6.0 native binary. 4.46 MB. Rust + egui. No webview. No chromium.
-            11 lanes. 60+ MCP tools. 15 departments. Claude · GPT · Gemini ·
-            Groq LPUs · Ollama · OpenRouter (200+ models) · Hermes 𝕏 feed.
-            Local-first. Zero telemetry. No subscription, ever.
+            4.46 MB. Native binary. 11 lanes, 15 departments, 200+ models
+            behind one routing layer. Your project state never leaves your
+            machine. $1 once.{" "}
+            <span className="font-medium text-[#FF7A1A]">FOREVER.</span>
           </p>
 
           <p className="mt-4 max-w-2xl font-mono text-sm uppercase tracking-[0.18em] text-[#FF7A1A]">
-            ladder pricing · starts at $1 · every 100 sales goes up $1 · v1.x → v6.x updates free
+            ladder pricing · starts at $1 · every 100 sales goes up $1 · all updates free
           </p>
 
           {/* CTA row + #buy sentinel that StickyBuyBar watches */}
@@ -110,7 +110,7 @@ export function Hero() {
               href="/orangebox"
               className="group relative inline-flex items-center gap-2 text-base font-medium text-[#22F0D5] transition-colors hover:text-[#F2F4F5]"
             >
-              <span>see what's in the box</span>
+              <span>see what&apos;s inside</span>
               <span className="transition-transform group-hover:translate-x-1">
                 →
               </span>
@@ -138,26 +138,26 @@ export function Hero() {
           </div>
         </div>
 
-        {/* bottom rail — micro stats */}
-        <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-3 border-t border-[#1A2225] pt-6 font-mono text-[11px] uppercase tracking-[0.15em] text-[#6B7779] sm:grid-cols-5">
+        {/* bottom rail — micro stats (mobile tightens to grid-cols-2 with smaller numbers; desktop expands to 5-up) */}
+        <div className="mt-16 grid grid-cols-2 gap-x-4 gap-y-4 border-t border-[#1A2225] pt-6 font-mono text-[10px] uppercase tracking-[0.15em] text-[#6B7779] sm:gap-x-6 sm:gap-y-3 sm:text-[11px] sm:grid-cols-5">
           <div>
-            <span className="block text-2xl font-medium text-[#F2F4F5]">11</span>
+            <span className="block text-xl font-medium text-[#F2F4F5] sm:text-2xl">11</span>
             <span>lanes</span>
           </div>
           <div>
-            <span className="block text-2xl font-medium text-[#F2F4F5]">60+</span>
+            <span className="block text-xl font-medium text-[#F2F4F5] sm:text-2xl">60+</span>
             <span>MCP tools</span>
           </div>
           <div>
-            <span className="block text-2xl font-medium text-[#F2F4F5]">15</span>
+            <span className="block text-xl font-medium text-[#F2F4F5] sm:text-2xl">15</span>
             <span>departments</span>
           </div>
           <div>
-            <span className="block text-2xl font-medium text-[#F2F4F5]">27</span>
+            <span className="block text-xl font-medium text-[#F2F4F5] sm:text-2xl">27</span>
             <span>guardrails</span>
           </div>
-          <div>
-            <span className="block text-2xl font-medium text-[#F2F4F5]">0</span>
+          <div className="col-span-2 sm:col-span-1">
+            <span className="block text-xl font-medium text-[#F2F4F5] sm:text-2xl">0</span>
             <span>subscriptions</span>
           </div>
         </div>
