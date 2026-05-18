@@ -7,6 +7,7 @@ import { SkilSkiBlock } from "./_components/v2/SkilSkiBlock";
 import { FoundersViewTeaser } from "./_components/v2/FoundersViewTeaser";
 import { IntelDrop } from "./_components/v2/IntelDrop";
 import { FounderCard } from "./_components/v2/FounderCard";
+import { ReceiptsWaterfall } from "./_components/v2/ReceiptsWaterfall";
 import { DoctrineStrip } from "./_components/v5/DoctrineStrip";
 import { LabFooterCTA } from "./_components/v2/LabFooterCTA";
 
@@ -40,19 +41,23 @@ import { LabFooterCTA } from "./_components/v2/LabFooterCTA";
 export const revalidate = 300;
 
 export default function Home() {
+  // data-cockpit-section labels are read by the CockpitFrame HUD bottom-left
+  // bracket as the user scrolls. Keep labels SHORT (≤16 chars), uppercase
+  // unnecessary — the HUD upper-cases them on render.
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
-      <HeroLabManifest />
-      <OrganismRail />
-      <LatestFromLab />
-      <ResearchSnapshot />
-      <OrangeBoxBlock />
-      <SkilSkiBlock />
-      <FoundersViewTeaser />
-      <IntelDrop />
-      <FounderCard />
-      <DoctrineStrip />
-      <LabFooterCTA />
+      <div data-cockpit-section="hero"><HeroLabManifest /></div>
+      <div data-cockpit-section="four arms"><OrganismRail /></div>
+      <div data-cockpit-section="from the lab"><LatestFromLab /></div>
+      <div data-cockpit-section="research"><ResearchSnapshot /></div>
+      <div data-cockpit-section="orangebox"><OrangeBoxBlock /></div>
+      <div data-cockpit-section="skil.ski"><SkilSkiBlock /></div>
+      <div data-cockpit-section="broadcast"><FoundersViewTeaser /></div>
+      <div data-cockpit-section="intel"><IntelDrop /></div>
+      <div data-cockpit-section="operator"><FounderCard /></div>
+      <div data-cockpit-section="receipts"><ReceiptsWaterfall /></div>
+      <div data-cockpit-section="doctrine"><DoctrineStrip /></div>
+      <div data-cockpit-section="next move"><LabFooterCTA /></div>
     </main>
   );
 }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * HeroLabManifest — lab-identity hero for the v2 homepage.
  *
@@ -58,7 +60,22 @@ export function HeroLabManifest() {
           <span className="text-[#FF7A1A]">$1 LADDER</span>
         </div>
 
-        {/* no CTA buttons — OrganismRail handles navigation */}
+        {/* secondary escape CTAs — low hierarchy, mono, two actions */}
+        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+          <Link
+            href="/founders-view"
+            className="transition-colors hover:text-[#22F0D5]"
+          >
+            READ TONIGHT&apos;S LETTER →
+          </Link>
+          <span aria-hidden>·</span>
+          <Link
+            href="/orangebox"
+            className="transition-colors hover:text-[#22F0D5]"
+          >
+            BUY ORANGEBOX · $1 →
+          </Link>
+        </div>
       </div>
     </section>
   );

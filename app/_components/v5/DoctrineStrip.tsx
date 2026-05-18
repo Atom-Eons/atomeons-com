@@ -1,6 +1,7 @@
 /**
  * Doctrine bottom-strip above the footer.
- * Three sibling products from AtomEons — they click together over MCP.
+ * Two sibling products from AtomEons — they click together over MCP.
+ * Hermes is a feature lane inside ORANGEBOX, not a standalone arm.
  * Per SITE_HANDOFF_v5.md.
  */
 
@@ -14,8 +15,8 @@ export function DoctrineStrip() {
           </p>
           <p className="mt-6 text-balance text-2xl font-medium leading-snug text-[#F2F4F5] md:text-3xl">
             ORANGEBOX is the <span className="text-[#FF7A1A]">cockpit</span>.
-            Skil.Ski is the <span className="text-[#22F0D5]">marketplace</span>.
-            Hermes Agent is the <span className="text-[#FFA45A]">outer orchestration</span>.
+            Skil.Ski is the <span className="text-[#22F0D5]">marketplace</span>.{" "}
+            <span className="text-[#FFA45A]">Hermes</span> is the 𝕏 lane inside the cockpit.
           </p>
 
           <div className="mt-8 grid gap-6 border-t border-[#1A2225] pt-8 md:grid-cols-3">
@@ -42,18 +43,19 @@ export function DoctrineStrip() {
             </div>
             <div>
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFA45A]">
-                ::orchestration
+                ::hermes · inside the cockpit
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[#9BA5A7]">
-                <span className="font-medium text-[#F2F4F5]">Hermes Agent.</span>{" "}
-                MIT-licensed. Free. Runs the 𝕏 feed inside the cockpit and the
-                multi-machine worker rail outside it.
+                <span className="font-medium text-[#F2F4F5]">Hermes</span>{" "}
+                is the 𝕏 feed lane built into ORANGEBOX. MIT-licensed. Runs
+                the live algorithm rail from inside the cockpit — not a separate
+                product, not a separate install.
               </p>
             </div>
           </div>
 
           <p className="mt-10 max-w-3xl border-t border-[#1A2225] pt-6 text-sm leading-relaxed text-[#6B7779]">
-            Three sibling products from AtomEons Systems Laboratory. They click
+            Two sibling products from AtomEons Systems Laboratory. They click
             together over MCP.{" "}
             <span className="text-[#22F0D5]">
               One operator. No team. No roadmap theater.

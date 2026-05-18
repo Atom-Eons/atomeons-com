@@ -79,21 +79,11 @@ export function IntelDrop() {
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
           More drops coming.{" "}
           <Link
-            href="/intel/rss.xml"
+            href="/intel"
             className="text-[#6B7779] underline-offset-4 transition-colors hover:text-[#F2F4F5] hover:underline"
           >
-            Subscribe by RSS
-          </Link>{" "}
-          or follow{" "}
-          <a
-            href="https://x.com/AtomMccree"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#6B7779] underline-offset-4 transition-colors hover:text-[#F2F4F5] hover:underline"
-          >
-            @AtomMccree
-          </a>
-          .
+            All intel drops →
+          </Link>
         </p>
       </div>
     </section>

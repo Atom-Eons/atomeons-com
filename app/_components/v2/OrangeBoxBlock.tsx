@@ -76,8 +76,11 @@ export function OrangeBoxBlock() {
 
           {/* right: buy area */}
           <div className="flex flex-col gap-8">
-            {/* #buy sentinel — StickyBuyBar IntersectionObserver target */}
-            <div id="buy" aria-hidden className="absolute" />
+            {/* #buy sentinel — StickyBuyBar IntersectionObserver target.
+                Must be first child of this flex container, zero-height, not
+                absolute-positioned, so overflow-hidden on the section cannot
+                clip the IntersectionObserver target. */}
+            <div id="buy" aria-hidden className="block h-0 w-0 overflow-hidden" />
 
             {/* live price display */}
             <DynamicPrice variant="stacked" showUrgency className="" />

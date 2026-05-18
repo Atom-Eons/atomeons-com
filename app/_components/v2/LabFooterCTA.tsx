@@ -31,7 +31,7 @@ const TILES: FooterTile[] = [
   {
     label: "The intel",
     description: "Alpha drops · ÆoNs Intel",
-    href: "/intel/x-algorithm",
+    href: "/intel",
   },
   {
     label: "Buy ORANGEBOX",

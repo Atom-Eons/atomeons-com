@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AtomBoot } from "./_components/AtomBoot";
 import { StickyBuyBar } from "./_components/StickyBuyBar";
+import { CockpitFrame } from "./_components/v2/CockpitFrame";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
@@ -76,6 +77,7 @@ export default function RootLayout({
         <div className="screen-flicker flex-1">{children}</div>
         <Footer />
         <StickyBuyBar />
+        <CockpitFrame />
         <Analytics />
         <SpeedInsights />
       </body>

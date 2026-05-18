@@ -65,14 +65,16 @@ export function ReceiptsLive() {
               horizontal scroll on the table itself rather than breaking
               the whole page layout. */}
           <div className="relative overflow-hidden rounded-2xl border border-[#1A2225] bg-[#0A0F11] shadow-[0_0_120px_-40px_rgba(255,122,26,0.3)]">
-            {/* header */}
+            {/* header — labelled as the schema sample it is. Not "live"
+                telemetry. The actual receipts stream is a real JSONL file
+                that ORANGEBOX writes to disk per session. The data below is
+                a schema preview, not live data from this site. */}
             <div className="flex items-center justify-between border-b border-[#1A2225] px-5 py-3">
               <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B7779]">
-                /receipts · session.jsonl
+                /receipts · session.jsonl · schema sample
               </span>
-              <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]/80">
-                <span className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5]" />
-                live
+              <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
+                writes to %APPDATA%
               </span>
             </div>
 
