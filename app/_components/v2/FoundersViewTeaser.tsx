@@ -58,7 +58,7 @@ export function FoundersViewTeaser() {
                 href="/founders-view/rss.xml"
                 className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779] transition-colors hover:text-[#F2F4F5]"
               >
-                Subscribe by RSS →
+                <span className="inline-block py-2 px-3">RSS →</span>
               </Link>
             </div>
           </div>

@@ -285,7 +285,7 @@ export default function Press() {
           ::story angles · pick the one that fits your beat
         </h2>
         <p className="mb-10 text-sm text-[#6B7779]">
-          Each angle is a different lede. Same product, different narrative.
+          Same cockpit. Different story. Pick the one that fits your beat.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           {ANGLES.map((a) => (

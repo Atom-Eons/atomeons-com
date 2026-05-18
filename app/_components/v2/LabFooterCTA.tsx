@@ -19,12 +19,12 @@ type FooterTile = {
 
 const TILES: FooterTile[] = [
   {
-    label: "Read the papers",
+    label: "12 papers. CC-BY.",
     description: "12 manuscripts · CC-BY 4.0",
     href: "/research/papers",
   },
   {
-    label: "Tonight's letter",
+    label: "Tonight's broadcast. 8pm ET.",
     description: "The Founder's View · 8pm ET",
     href: "/founders-view",
   },
@@ -54,12 +54,12 @@ export function LabFooterCTA() {
           ::WHAT TO DO NEXT
         </p>
 
-        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[#1A2225] sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[#1A2225] lg:grid-cols-5">
           {TILES.map((tile, idx) => (
             <Link
               key={tile.href}
               href={tile.href}
-              className="group relative bg-[#0A0F11] px-6 py-6 transition-colors hover:bg-[#0D1518]"
+              className="group relative min-h-[64px] bg-[#0A0F11] px-5 py-5 transition-colors hover:bg-[#0D1518]"
             >
               {/* subtle top accent on hover — alternates palette */}
               <span

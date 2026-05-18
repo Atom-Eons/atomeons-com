@@ -77,7 +77,7 @@ export function IntelDrop() {
 
         {/* footer */}
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
-          More drops coming.{" "}
+          More drops in the pipe. No schedule theater.{" "}
           <Link
             href="/intel"
             className="text-[#6B7779] underline-offset-4 transition-colors hover:text-[#F2F4F5] hover:underline"

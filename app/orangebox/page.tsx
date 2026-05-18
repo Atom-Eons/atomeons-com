@@ -15,6 +15,7 @@ import { Compatibility } from "../_components/v5/Compatibility";
 import { Qualification } from "../_components/v5/Qualification";
 import { ComparisonGrid } from "../_components/v5/ComparisonGrid";
 import { DoctrineStrip } from "../_components/v5/DoctrineStrip";
+import { SilentCanvasTease } from "../_components/v5/SilentCanvasTease";
 import { ClosingManifesto } from "../_components/v5/ClosingManifesto";
 
 export const metadata = {
@@ -114,7 +115,16 @@ export default function OrangeBox() {
       {/* 13 — Doctrine strip (cockpit / marketplace / orchestration) */}
       <DoctrineStrip />
 
-      {/* 14 — Closing manifesto */}
+      {/* 14 — Silent Canvas v6.3 tease (micro-tease only per orange-judge:
+              3 lead features, "in build" framing, before ClosingManifesto).
+              IP-safe: no Relevance Controller / AE roster / cost math / etc.
+              Wrapped in data-cockpit-section so the CockpitFrame HUD
+              bottom-left bracket picks up "SILENT CANVAS" on scroll. */}
+      <div data-cockpit-section="silent canvas">
+        <SilentCanvasTease />
+      </div>
+
+      {/* 15 — Closing manifesto */}
       <ClosingManifesto />
 
       {/* SoftwareApplication + Offer + BreadcrumbList JSON-LD */}
@@ -177,8 +187,8 @@ export default function OrangeBox() {
                   "60+ MCP server tools",
                   "15 named departments (AE0–AE14)",
                   "27 Constitutional Guardrails + 9-stage Gate Chain",
-                  "Adaptive thinking + effort parameter (Opus 4.7)",
-                  "Advisor tool — Sonnet executor + Opus advisor",
+                  "Adaptive thinking + extended effort mode",
+                  "Dual-brain advisor architecture",
                   "Anthropic Memory tool auto-attached",
                   "Anthropic Files API for vault sync",
                   "Citations API on vault queries",

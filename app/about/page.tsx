@@ -52,20 +52,22 @@ export default function About() {
       </h1>
 
       <p className="mt-6 text-lg text-[#a7b8ad]">
-        <span className="text-[#f7f0e4]">Atom McCree</span>. AtomEons Systems
-        Laboratory, Marco Island, FL. One operator. One cockpit. Built it
-        because nothing else held the thread.
+        Atom McCree built AtomEons Systems Laboratory in Marco Island,
+        Florida, to solve one problem: no existing AI tool let the
+        operator stay outside the model&apos;s context while still running
+        a real project through it. The cockpit — ORANGEBOX — is what came
+        out of that gap.
       </p>
 
       <p className="mt-3 text-lg text-[#a7b8ad]">
-        Every AI tool I tried put the operator inside the model&apos;s
-        context. I wanted the operator outside it, with a real cockpit. So
-        I built one.
+        The lab also publishes twelve research manuscripts under CC-BY 4.0,
+        ranging from bioelectric oncology to a topological field theory of
+        self-modifying systems, and broadcasts a nightly editorial at 8pm
+        Eastern.
       </p>
 
       <p className="mt-3 text-lg text-[#a7b8ad]">
-        I ship private, local-first command surfaces for builders who
-        refuse to lose the thread.
+        One operator. No team. No deck. The receipts are the proof.
       </p>
 
       <hr className="my-12 border-[#204538]" />
@@ -140,11 +142,8 @@ export default function About() {
           ORANGEBOX, prototype.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
-          A private command cockpit for one operator. Single ZIP. Node
-          18+. Runs locally on{" "}
-          <span className="font-mono text-[#75ff92]">127.0.0.1:8787</span>.
-          The full Opus system manual ships inside the box. $1 one-time,
-          no support. You figure it out.
+          Native binary. 4.46 MB. One file. Double-click. 2 seconds to
+          cockpit. 11 lanes. $1 once, forever. ORANGEBOX.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
@@ -182,9 +181,9 @@ export default function About() {
           plain-language summary side by side. CC-BY 4.0.
         </p>
         <p className="mt-3 text-[#a7b8ad]">
-          There is also a nightly broadcast, <span className="text-[#FF7A1A]">The Founder&apos;s View</span>,
-          that publishes at 8pm Eastern. Anthropic Sonnet writes it.
-          No human edits before publication. Subscribe by RSS or bookmark.
+          There is also a nightly broadcast, <span className="text-[#FF7A1A]">The Founder&apos;s View</span>.
+          Publishes at 8pm Eastern. Real events. Editorial is satire.
+          No edits before publication — only retracts after, with the reason stated.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link

@@ -59,9 +59,8 @@ export function FounderCard() {
                   editorial from Marco Island, Florida.
                 </p>
                 <p>
-                  The lab refuses subscriptions, refuses black boxes, and
-                  refuses to ship anything it hasn&apos;t run itself for two
-                  months first.
+                  Nothing ships that hasn&apos;t run inside the cockpit for two
+                  months. MINIMUM.
                 </p>
               </div>
 

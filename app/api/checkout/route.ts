@@ -5,6 +5,7 @@ import {
   PRODUCT_DESCRIPTION,
 } from "@/lib/stripe";
 import { fetchCurrentPrice } from "@/lib/pricing";
+import { rateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -33,6 +34,21 @@ export const dynamic = "force-dynamic";
 export async function POST(req: Request) {
   try {
     const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atomeons.com";
+
+    // --- rate limit: 5 requests per minute per IP ---
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+    const rl = rateLimit({ key: `checkout:${ip}`, limit: 5, windowMs: 60_000 });
+    if (!rl.allowed) {
+      return NextResponse.json(
+        { error: "rate-limited", retry_after_seconds: rl.retryAfterSeconds },
+        {
+          status: 429,
+          headers: { "Retry-After": String(rl.retryAfterSeconds ?? 60) },
+        },
+      );
+    }
+
     void req;
 
     // Live price — failure-soft to $1 if Stripe count is unreachable.

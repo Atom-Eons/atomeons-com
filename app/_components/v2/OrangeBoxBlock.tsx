@@ -57,8 +57,8 @@ export function OrangeBoxBlock() {
                 Local-first. Zero telemetry. The receipts live on your disk.
               </p>
               <p className="font-mono text-sm uppercase tracking-[0.14em] text-[#FF7A1A]">
-                $1 once. Every 100 sales goes up $1. Forward buyers only.
-                FOREVER.
+                $1 once. FORWARD BUYERS LOCK THEIR PRICE. Every 100 sales,
+                up $1. Forever.
               </p>
             </div>
 

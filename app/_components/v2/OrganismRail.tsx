@@ -58,8 +58,8 @@ const ORGANISMS: OrgCard[] = [
   {
     label: "B00KMAKOR",
     name: "B00KMAKOR",
-    description: "AI publishing house.",
-    detail: "Waitlist open. Nothing ships until it's ready.",
+    description: "Books written by the cockpit. Edited by the operator. PRINTED.",
+    detail: "Nothing ships until it's ready. Waitlist: write once, leave intact.",
     href: "/b00kmakor",
     accentColor: "#6B7779",
     borderColor: "border-[#1A2225]",
@@ -76,10 +76,10 @@ export function OrganismRail() {
           ::FOUR ARMS OF THE LAB
         </p>
         <h2 className="mb-14 max-w-xl text-balance text-3xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-4xl">
-          One lab. Four distinct things.
+          ONE LAB. Four arms. Zero overlap.
         </h2>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {ORGANISMS.map((org) => (
             <Link
               key={org.label}
@@ -119,7 +119,7 @@ export function OrganismRail() {
               </p>
 
               {/* detail copy */}
-              <p className="flex-1 text-sm leading-relaxed text-[#9BA5A7]">
+              <p className="flex-1 line-clamp-2 text-sm leading-relaxed text-[#9BA5A7] md:line-clamp-none">
                 {org.detail}
               </p>
 

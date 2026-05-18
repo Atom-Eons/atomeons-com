@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AeMark } from "../../../_components/AeMark";
+import { CiteAs } from "../../../_components/research/CiteAs";
 import { PAPERS, getPaper } from "../../../_data/research-papers";
 
 export async function generateStaticParams() {
@@ -49,6 +50,88 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * Derive cluster label from slug keywords.
+ * Does not modify source data.
+ */
+function deriveCluster(slug: string): string {
+  if (/code|moon|mislabel|sun|coconut/.test(slug)) return "Light Code";
+  if (/defect|smds|topological|beyond/.test(slug)) return "Topology";
+  if (/spiral|sine/.test(slug)) return "Cognitive";
+  return "ÆoNs Research";
+}
+
+/**
+ * Build a bibtex cite string from paper metadata.
+ * The cite key is mccree2026 + slug (hyphens stripped).
+ */
+function buildBibtex(paper: ReturnType<typeof getPaper>): string {
+  if (!paper) return "";
+  const key = `mccree2026${paper.slug.replace(/-/g, "")}`;
+  return `@article{${key},
+  title        = {${paper.title}},
+  author       = {${paper.authors}},
+  year         = {2026},
+  howpublished = {\\AEoNs Research Laboratory, CC-BY 4.0},
+  url          = {https://atomeons.com/research/papers/${paper.slug}}
+}`;
+}
+
+/**
+ * Author parsing helpers.
+ * Atom McCree → expanded block with AeMark + /research/about link.
+ * Claude / GPT / Gemini → compact mono badge.
+ * Other humans → compact mono badge.
+ */
+function AuthorBlock({ authors }: { authors: string }) {
+  const names = authors.split(",").map((n) => n.trim());
+
+  return (
+    <div className="flex flex-wrap items-center gap-3">
+      {names.map((name) => {
+        const isAtom = name.toLowerCase().includes("atom mccree");
+        const isModel =
+          /claude|gpt|gemini|chatgpt/i.test(name);
+
+        if (isAtom) {
+          return (
+            <Link
+              key={name}
+              href="/research/about"
+              className="group inline-flex items-center gap-2 rounded-xl border border-[#22F0D5]/30 bg-[#04100d] px-4 py-2 transition-colors hover:border-[#22F0D5]/70"
+            >
+              <AeMark size={16} glow />
+              <span className="text-sm font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
+                {name}
+              </span>
+            </Link>
+          );
+        }
+
+        if (isModel) {
+          return (
+            <span
+              key={name}
+              className="inline-block rounded border border-[#1A2225] bg-[#0A0F11] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-[#FF7A1A]"
+            >
+              {name}
+            </span>
+          );
+        }
+
+        return (
+          <span
+            key={name}
+            className="inline-block rounded border border-[#1A2225] bg-[#0A0F11] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]"
+          >
+            {name}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
 export default async function PaperPage({
   params,
 }: {
@@ -58,8 +141,16 @@ export default async function PaperPage({
   const paper = getPaper(slug);
   if (!paper) notFound();
 
+  const idx = PAPERS.findIndex((p) => p.slug === slug);
+  const prev = idx > 0 ? PAPERS[idx - 1] : null;
+  const next = idx < PAPERS.length - 1 ? PAPERS[idx + 1] : null;
+
+  const cluster = deriveCluster(slug);
+  const bibtex = buildBibtex(paper);
+
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      {/* breadcrumb — enhanced with cluster label */}
       <div className="mx-auto w-full max-w-4xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">
@@ -69,6 +160,8 @@ export default async function PaperPage({
           <Link href="/research/papers" className="hover:text-[#22F0D5]">
             Æ Research
           </Link>{" "}
+          <span className="text-[#1A2225]">/</span>{" "}
+          <span className="text-[#22F0D5]">{cluster}</span>{" "}
           <span className="text-[#1A2225]">/</span> {paper.slug}
         </p>
       </div>
@@ -81,9 +174,11 @@ export default async function PaperPage({
         <h1 className="text-balance text-3xl font-medium leading-tight tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
           {paper.title}
         </h1>
-        <p className="mt-4 font-mono text-xs uppercase tracking-[0.18em] text-[#6B7779]">
-          {paper.authors}
-        </p>
+
+        {/* author block */}
+        <div className="mt-5">
+          <AuthorBlock authors={paper.authors} />
+        </div>
 
         {/* meta */}
         <div className="mt-8 grid gap-3 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 font-mono text-[11px] uppercase tracking-[0.18em] text-[#6B7779] md:grid-cols-4">
@@ -150,8 +245,13 @@ export default async function PaperPage({
           </div>
         </section>
 
+        {/* CITE AS */}
+        <section className="mt-10">
+          <CiteAs bibtex={bibtex} />
+        </section>
+
         {/* CTA — READ THE PDF */}
-        <section className="mt-12 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10">
+        <section className="mt-10 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10">
           <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
             ::full pdf
           </p>
@@ -169,7 +269,42 @@ export default async function PaperPage({
           </a>
         </section>
 
-        <p className="mt-10 text-xs text-[#6B7779]">
+        {/* PREV / NEXT NAV */}
+        <nav className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {prev ? (
+            <Link
+              href={`/research/papers/${prev.slug}`}
+              className="group flex flex-col gap-1 rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/40 hover:bg-[#0D1518]"
+            >
+              <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#6B7779] transition-colors group-hover:text-[#22F0D5]">
+                ← previous paper
+              </span>
+              <span className="mt-1 text-sm font-medium text-[#F2F4F5] leading-snug line-clamp-2">
+                {prev.title}
+              </span>
+            </Link>
+          ) : (
+            /* placeholder so next stays right-aligned */
+            <div />
+          )}
+
+          {next ? (
+            <Link
+              href={`/research/papers/${next.slug}`}
+              className="group flex flex-col items-end gap-1 rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 text-right transition-colors hover:border-[#22F0D5]/40 hover:bg-[#0D1518]"
+            >
+              <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#6B7779] transition-colors group-hover:text-[#22F0D5]">
+                next paper →
+              </span>
+              <span className="mt-1 text-sm font-medium text-[#F2F4F5] leading-snug line-clamp-2">
+                {next.title}
+              </span>
+            </Link>
+          ) : null}
+        </nav>
+
+        {/* back to catalog */}
+        <p className="mt-8 text-xs text-[#6B7779]">
           <Link
             href="/research/papers"
             className="text-[#22F0D5] hover:text-[#FFA45A]"

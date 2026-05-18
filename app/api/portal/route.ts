@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getStripe } from "@/lib/stripe";
+import { rateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -23,6 +24,21 @@ export const dynamic = "force-dynamic";
 export async function POST(req: Request) {
   try {
     const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atomeons.com";
+
+    // --- rate limit: 5 requests per minute per IP ---
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+    const rl = rateLimit({ key: `portal:${ip}`, limit: 5, windowMs: 60_000 });
+    if (!rl.allowed) {
+      return NextResponse.json(
+        { error: "rate-limited", retry_after_seconds: rl.retryAfterSeconds },
+        {
+          status: 429,
+          headers: { "Retry-After": String(rl.retryAfterSeconds ?? 60) },
+        },
+      );
+    }
+
     const body = await req.json().catch(() => ({}));
     const emailRaw = typeof body?.email === "string" ? body.email : "";
     const email = emailRaw.trim().toLowerCase();

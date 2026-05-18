@@ -38,7 +38,7 @@ export default function Cancel() {
             href="/orangebox"
             className="rounded-md border border-[#204538] bg-[#071915] px-4 py-2 text-sm text-[#f7f0e4]"
           >
-            Read the prereqs first
+            See the full cockpit
           </Link>
           <Link
             href="/"

@@ -90,13 +90,17 @@ export default async function Success({
             ↓ Download {PRODUCT.FILENAME}
           </a>
 
-          <div className="mt-6 rounded-lg border border-[#5a3210] bg-[#1a0f00] p-4">
+          <p className="mt-4 text-base font-semibold text-[#ffc46b]">
+            There is no email fallback.
+          </p>
+
+          <div className="mt-4 rounded-lg border border-[#5a3210] bg-[#1a0f00] p-4">
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#ffc46b]">
               ::important · save this link
             </p>
             <p className="mt-1 text-sm text-[#f7f0e4]">
               This page is the only place this link appears. Bookmark it
-              before you close the tab. There is no email fallback.
+              before you close the tab.
             </p>
           </div>
 
@@ -228,9 +232,15 @@ export default async function Success({
       ) : null}
 
       <p className="mt-8 text-xs text-[#a7b8ad]">
-        No support is included with this purchase. v6.0 is a native binary —
-        one file, double-click, 2-second launch. Full operator manual ships in
-        the installer payload.
+        No support desk. The operator manual ships in the installer. Read it.
+        Email{" "}
+        <a
+          href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20order%20issue"
+          className="text-[#22F0D5] hover:underline"
+        >
+          a.mccree@gmail.com
+        </a>{" "}
+        for genuine order issues only.
       </p>
     </main>
   );

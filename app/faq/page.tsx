@@ -146,7 +146,7 @@ export default function FAQ() {
           href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20question"
           className="rounded-md border border-[#204538] bg-[#071915] px-4 py-2 text-sm text-[#f7f0e4]"
         >
-          Ask another question
+          Email a question
         </a>
       </div>
 
