@@ -1,0 +1,441 @@
+@import "tailwindcss";
+
+/* V5 theme — frontier black + bio-cyan glow + ORANGEBOX orange CTA retained.
+   Existing v1.4 color tokens kept for backward-compat on legacy components. */
+@theme {
+  /* legacy v1.4 tokens — DO NOT REMOVE (still referenced across components) */
+  --color-danger: #ff4f5e;
+  --color-bg: #04100d;
+  --color-fg: #f7f0e4;
+  --color-muted: #a7b8ad;
+  --color-line: #204538;
+  --color-card: #071915;
+  --color-card2: #0a211b;
+  --color-orange: #ff7a18;
+  --color-amber: #ffc46b;
+  --color-green: #75ff92;
+  --color-red: #ff4f5e;
+  --color-blue: #59d9ff;
+  --color-trace: #1b8b75;
+  --color-solder: #c7f8df;
+  --color-ink: #06110e;
+
+  /* v5 tokens — bio-cyan + pure black + signature orange retained */
+  --color-v5-bg: #000000;
+  --color-v5-bg-elev: #0A0F11;
+  --color-v5-fg: #F2F4F5;
+  --color-v5-fg-muted: #6B7779;
+  --color-v5-cyan: #22F0D5;
+  --color-v5-cyan-dim: #0FB39E;
+  --color-v5-orange: #FF7A1A;
+  --color-v5-orange-hot: #FFA45A;
+  --color-v5-border: #1A2225;
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-mono:
+    ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* v5 utility helpers — opt-in via classes, won't break existing surfaces */
+.v5-bg { background: #000; }
+.v5-fg { color: #F2F4F5; }
+.v5-cyan { color: #22F0D5; }
+.v5-glow-cyan { box-shadow: 0 0 40px rgba(34,240,213,0.35); }
+.v5-glow-orange { box-shadow: 0 0 40px rgba(255,122,26,0.40); }
+.v5-border { border-color: #1A2225; }
+
+/* v5 animations */
+@keyframes v5slidein {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes v5pulse {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+
+@keyframes v5scan {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.v5-scanline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(34,240,213,0.12), transparent);
+  animation: v5scan 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+html,
+body {
+  background: #04100d;
+  color: #f7f0e4;
+  font-family: var(--font-sans);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(89, 217, 255, 0.10), transparent 26%),
+    radial-gradient(circle at 88% 0%, rgba(255, 122, 24, 0.10), transparent 28%),
+    linear-gradient(90deg, rgba(27, 139, 117, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(27, 139, 117, 0.14) 1px, transparent 1px),
+    #04100d;
+  background-size: auto, auto, 42px 42px, 42px 42px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 18%,
+      rgba(89, 217, 255, 0.12) 18% 18.2%,
+      transparent 18.2% 64%,
+      rgba(255, 196, 107, 0.12) 64% 64.2%,
+      transparent 64.2%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 18px,
+      rgba(117, 255, 146, 0.05) 18px 19px,
+      transparent 19px 58px
+    );
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+a {
+  color: #ff7a18;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background: rgba(255, 122, 24, 0.3);
+  color: #f7f0e4;
+}
+
+/* Tap-to-pulse mobile equivalent of cursor spotlight (no-hover devices) */
+@keyframes tap-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 122, 24, 0.45); }
+  70% { box-shadow: 0 0 0 14px rgba(255, 122, 24, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 122, 24, 0); }
+}
+@media (hover: none) {
+  a:active,
+  button:active {
+    animation: tap-pulse 600ms ease-out;
+  }
+}
+
+/* Light mode refusal — the cockpit is dark only, on-brand humor */
+@media (prefers-color-scheme: light) {
+  html, body {
+    background: #04100d !important;
+    color: #f7f0e4 !important;
+  }
+}
+
+@keyframes atom-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes atom-spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 24, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 122, 24, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 24, 0);
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* CRT scanline overlay — global, subtle.
+   Sits BELOW interactive content (z-1) so dark text on bright buttons
+   does not get crushed by mix-blend overlay (v10 fix). */
+.scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(255, 122, 24, 0.04) 2px,
+      rgba(255, 122, 24, 0.04) 3px
+    );
+}
+
+/* Hairline screen flicker */
+@keyframes screen-flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.92; }
+  98% { opacity: 1; }
+  99% { opacity: 0.96; }
+}
+.screen-flicker {
+  animation: screen-flicker 8s linear infinite;
+}
+
+/* RGB-split glitch — apply on hover via .glitch-hover, or always with .glitch */
+@keyframes glitch-shift {
+  0%, 92%, 100% {
+    text-shadow:
+      0 0 0 transparent;
+  }
+  93% {
+    text-shadow:
+      -2px 0 0 rgba(89, 217, 255, 0.85),
+      2px 0 0 rgba(255, 79, 94, 0.85);
+  }
+  94% {
+    text-shadow:
+      2px 0 0 rgba(89, 217, 255, 0.85),
+      -2px 0 0 rgba(255, 79, 94, 0.85);
+  }
+  95% {
+    text-shadow:
+      -1px 0 0 rgba(89, 217, 255, 0.6),
+      1px 0 0 rgba(255, 79, 94, 0.6);
+  }
+}
+.glitch {
+  animation: glitch-shift 6s steps(1, end) infinite;
+}
+.glitch-hover:hover {
+  animation: glitch-shift 1.2s steps(1, end) infinite;
+}
+
+/* Terminal cursor */
+@keyframes blink-cursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.blink-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  width: 0.55ch;
+  height: 1em;
+  vertical-align: -0.1em;
+  background: #ff7a18;
+  animation: blink-cursor 1s steps(2, end) infinite;
+}
+
+/* One-shot loading bar at very top of page on first paint */
+@keyframes boot-bar {
+  0% { transform: scaleX(0); opacity: 1; }
+  90% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+.boot-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: 2px;
+  background: linear-gradient(90deg, #ff7a18, #ffc46b, #75ff92, #59d9ff);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  animation: boot-bar 1.4s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+  pointer-events: none;
+}
+
+/* Outlaw pill — terminal-square chip with hard edges */
+.rebel-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffc46b;
+  background: rgba(255, 122, 24, 0.06);
+  border: 1px solid rgba(255, 122, 24, 0.4);
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+/* Stripe-style mesh gradient — slow drift */
+@keyframes mesh-drift {
+  0%, 100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+  33% { background-position: 100% 50%, 0% 50%, 80% 20%; }
+  66% { background-position: 50% 100%, 50% 0%, 20% 80%; }
+}
+.mesh-gradient {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 122, 24, 0.35), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(89, 217, 255, 0.22), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(117, 255, 146, 0.18), transparent 55%),
+    linear-gradient(135deg, #071915 0%, #0a211b 100%);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+  animation: mesh-drift 22s ease-in-out infinite;
+}
+
+/* Vercel-style glow border that pulses subtly on hover */
+.vercel-glow {
+  position: relative;
+  isolation: isolate;
+}
+.vercel-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 122, 24, 0) 0%,
+    rgba(255, 122, 24, 0.6) 25%,
+    rgba(89, 217, 255, 0.5) 50%,
+    rgba(117, 255, 146, 0.5) 75%,
+    rgba(255, 122, 24, 0) 100%
+  );
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+.vercel-glow:hover::before {
+  opacity: 1;
+  animation: mesh-drift 4s linear infinite;
+}
+
+/* ProofRail — slow infinite horizontal marquee */
+/* AtomBoot — one-shot grand entrance overlay */
+@keyframes atom-boot-fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes atom-boot-shrink {
+  0% { transform: scale(1); filter: drop-shadow(0 0 60px rgba(255, 122, 24, 0.6)); }
+  100% { transform: scale(0.18) translateY(-46vh) translateX(-44vw); filter: drop-shadow(0 0 8px rgba(255, 122, 24, 0.3)); }
+}
+.atom-boot-overlay {
+  animation: atom-boot-fade 1400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.atom-boot-mark {
+  animation: atom-boot-shrink 1400ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+.atom-boot-label {
+  animation: atom-boot-fade 900ms ease-out forwards;
+}
+
+/* DAG mini-graph node pulse for CockpitMiniPanel */
+@keyframes dag-node-pulse {
+  0%, 100% {
+    fill: #ff7a18;
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    fill: #ffc46b;
+    filter: drop-shadow(0 0 4px rgba(255, 122, 24, 0.7));
+  }
+}
+.dag-node-active {
+  animation: dag-node-pulse 1800ms ease-in-out infinite;
+}
+
+@keyframes proof-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.proof-rail-track {
+  animation: proof-marquee 60s linear infinite;
+  width: max-content;
+}
+
+/* BuildReceipts — staggered fade-up per card */
+@keyframes receipt-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.receipt-row {
+  opacity: 0;
+  animation: receipt-in 540ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+
+/* CockpitMiniPanel — lane fill animation + feed fade */
+@keyframes cockpit-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.cockpit-lane-fill {
+  transform-origin: left;
+  animation: cockpit-fill 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cockpit-feed-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.cockpit-feed-fade {
+  animation: cockpit-feed-fade 360ms ease-out both;
+}
+
+/* ASCII section divider */
+.ascii-rule {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #1b8b75;
+  white-space: pre;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="atom-spin"] {
+    animation: none !important;
+  }
+  .pulse-ring,
+  .screen-flicker,
+  .glitch,
+  .glitch-hover:hover,
+  .blink-cursor,
+  .boot-bar,
+  .mesh-gradient,
+  .vercel-glow:hover::before,
+  .proof-rail-track,
+  .receipt-row,
+  .dag-node-active,
+  .cockpit-lane-fill,
+  .cockpit-feed-fade {
+    animation: none !important;
+  }
+  .boot-bar { display: none; }
+  .mesh-gradient {
+    background: linear-gradient(135deg, #071915 0%, #0a211b 100%);
+  }
+  .receipt-row { opacity: 1; transform: none; }
+}
