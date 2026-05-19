@@ -143,6 +143,10 @@ export async function tweetLetter(opts: {
  *
  * Length cap is 280 chars (X counts URLs as 23 regardless of actual
  * length). The caller is responsible for fitting under that ceiling.
+ *
+ * Note: if the parent tweet's author has restricted replies (only
+ * verified, only follows, etc.), the X API returns 403. Use
+ * tweetQuote() in that case — quote tweets bypass reply restrictions.
  */
 export async function tweetReply(opts: {
   text: string;
@@ -183,6 +187,73 @@ export async function tweetReply(opts: {
     };
   } catch (e) {
     const msg = e instanceof Error ? e.message : "reply failed";
+    return { ok: false, error: msg };
+  }
+}
+
+/**
+ * Quote-tweet an existing tweet. The quoted tweet renders inline
+ * inside the new tweet. Quote tweets bypass reply-restriction settings
+ * the parent author may have set.
+ */
+export async function tweetQuote(opts: {
+  text: string;
+  quoteTweetId: string;
+}): Promise<TweetResult> {
+  if (process.env.FOUNDERS_VIEW_TWEET_PAUSE === "true") {
+    return { ok: false, skipped: true, reason: "FOUNDERS_VIEW_TWEET_PAUSE=true" };
+  }
+  const client = getClient();
+  if (!client) {
+    return {
+      ok: false,
+      skipped: true,
+      reason: "Twitter env not configured",
+    };
+  }
+  if (!opts.text || !opts.quoteTweetId) {
+    return { ok: false, error: "text + quoteTweetId both required" };
+  }
+  try {
+    const { data } = await client.v2.tweet(opts.text, {
+      quote_tweet_id: opts.quoteTweetId,
+    });
+    const tweetId = data.id;
+    return {
+      ok: true,
+      tweet_id: tweetId,
+      tweet_url: `https://x.com/AtomMccree/status/${tweetId}`,
+      body: opts.text,
+    };
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "quote tweet failed";
+    return { ok: false, error: msg };
+  }
+}
+
+/**
+ * Delete a tweet by ID. Used for cleaning up test posts. Returns
+ * { ok: true } with empty tweet_id on success.
+ */
+export async function deleteTweet(opts: {
+  tweetId: string;
+}): Promise<TweetResult> {
+  const client = getClient();
+  if (!client) {
+    return { ok: false, skipped: true, reason: "Twitter env not configured" };
+  }
+  if (!opts.tweetId) return { ok: false, error: "tweetId required" };
+  try {
+    const { data } = await client.v2.deleteTweet(opts.tweetId);
+    if (!data.deleted) return { ok: false, error: "delete returned false" };
+    return {
+      ok: true,
+      tweet_id: opts.tweetId,
+      tweet_url: `https://x.com/AtomMccree/status/${opts.tweetId}`,
+      body: "[deleted]",
+    };
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "delete failed";
     return { ok: false, error: msg };
   }
 }
