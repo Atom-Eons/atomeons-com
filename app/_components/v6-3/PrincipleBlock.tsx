@@ -27,6 +27,14 @@ const PRINCIPLES: { eyebrow: string; line: string }[] = [
     eyebrow: "::PRINCIPLE 04",
     line: "When the model needs more, it asks. It does not guess.",
   },
+  {
+    eyebrow: "::PRINCIPLE 05",
+    line: "Every mutation is reversible. The cockpit never traps you.",
+  },
+  {
+    eyebrow: "::PRINCIPLE 06",
+    line: "The operator wins on conflict. Always. By design.",
+  },
 ];
 
 export function PrincipleBlock() {
@@ -38,7 +46,7 @@ export function PrincipleBlock() {
             ::what the rewrite is for
           </p>
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
-            Four lines.{" "}
+            Six lines.{" "}
             <span className="text-[#6B7779]">Run the build.</span>
           </h2>
         </div>

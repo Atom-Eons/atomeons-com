@@ -1,43 +1,54 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroPreview } from "../_components/v6-3/HeroPreview";
+import { TheThesis } from "../_components/v6-3/TheThesis";
 import { PrincipleBlock } from "../_components/v6-3/PrincipleBlock";
 import { NewBehaviors } from "../_components/v6-3/NewBehaviors";
+import { TheLivingLayer } from "../_components/v6-3/TheLivingLayer";
+import { TheConnections } from "../_components/v6-3/TheConnections";
+import { TheCrews } from "../_components/v6-3/TheCrews";
+import { TheReceipts } from "../_components/v6-3/TheReceipts";
 import { WhatStillStands } from "../_components/v6-3/WhatStillStands";
 import { ExistingBuyerNote } from "../_components/v6-3/ExistingBuyerNote";
+import { NotifyMeAnchor } from "../_components/v6-3/NotifyMeAnchor";
 import { ClosingManifesto } from "../_components/v5/ClosingManifesto";
 
 /**
- * /orangebox — v6.3 "Silent Canvas" PREVIEW page.
+ * /orangebox — v6.3 "Silent Canvas" full showcase.
  *
- * SALES PAUSED while the lab ships v6.3. The previous v6.0 product
- * funnel (Hero, LanesGrid, MoatsTable, SkusTable, ComparisonGrid, etc.)
- * lives on disk under app/_components/v5/ and is currently unused.
- * It will return (or be retired) when v6.3 ships.
+ * SALES PAUSED. The page leads with the CONCEPTS — paradigm shift,
+ * principles, behaviors, organism layer, substrate, crews, receipts —
+ * because the operator's instruction is to sell the rewrite by its
+ * ideas, not by its version number. Every section is concept-first.
  *
- * IP boundary holds across this page (mirrors round 2 audit):
- *   PUBLISH:  Silent Canvas name, v6.3 framing, 6 named behaviors
- *             (Solidify, Z-Axis Rewind, Pulse Ring, Living Canvas,
- *              Freeze All, Multi-Canvas Tabs), 4 publishable principles,
- *             license §4A forward-buyers lock, local-first + BYO keys.
+ * Existing v6.0 buyers continue to receive v6.3 free under license §4A.
+ * The v6.0 funnel components in app/_components/v5/ remain on disk.
+ *
+ * IP boundary (mirrors round 2 audit) holds across all 12 sections:
+ *   PUBLISH:  Silent Canvas, v6.3 framing, 6 named behaviors, 6
+ *             publishable principles, license §4A, BYO + local-first,
+ *             department NAMES (already public in llms.txt), trust
+ *             gradient CONCEPT (no thresholds), Hermes substrate,
+ *             Subscription-First Transport, Connector Fabric, n8n,
+ *             receipts JSONL schema (already public in v6.0 doctrine),
+ *             living layer feature NAMES (Breathing Canvas, Night Watch,
+ *             Organism Health HUD, Voice Latency Stopwatch).
  *   NEVER:    Relevance Controller spec, 7 state sources, 5-schema
- *             validator, AE1–AE14 roster, trust gradient tiers, phase
- *             map day counts, cost math, trilane structure, internal
- *             model assignments.
- *
- * Existing buyers still have full /api/download access via the HMAC
- * token in their original purchase email or via /account.
+ *             validator breakdown, AE# enumeration with model
+ *             assignments, trust gradient THRESHOLDS (30/100 numbers),
+ *             phase map day counts, cost math, trilane structure,
+ *             17th HSMP mutation kind, internal model assignments.
  */
 
 export const metadata: Metadata = {
   title: "ORANGEBOX v6.3 — Silent Canvas | AtomEons",
   description:
-    "ORANGEBOX v6.3 'Silent Canvas' is in build. The cockpit stopped talking. The canvas started. Sales paused while the lab ships. v6.0 buyers get v6.3 free — license §4A. Notify-me list open.",
+    "ORANGEBOX v6.3 'Silent Canvas' — the cockpit stopped talking, the canvas started. Six new behaviors, four substrate layers, fourteen departments, every action receipt-backed. Sales paused while the lab ships. v6.0 buyers get v6.3 free under license §4A. Notify-me list open.",
   alternates: { canonical: "https://atomeons.com/orangebox" },
   openGraph: {
     title: "ORANGEBOX v6.3 — Silent Canvas",
     description:
-      "The cockpit stopped talking. The canvas started. v6.3 in build · sales paused · v6.0 buyers locked free under §4A.",
+      "The cockpit stopped talking. The canvas started. Six new behaviors, four substrate layers, fourteen departments. v6.3 in build · sales paused · v6.0 buyers locked free under §4A.",
     url: "https://atomeons.com/orangebox",
     siteName: "AtomEons",
     type: "website",
@@ -69,27 +80,60 @@ export default function OrangeBoxPreview() {
         <HeroPreview />
       </div>
 
-      {/* 2 — Four publishable principles (positive doctrine, no mechanism) */}
+      {/* 2 — The thesis (what actually changes — concept first, mechanism never) */}
+      <div data-cockpit-section="thesis">
+        <TheThesis />
+      </div>
+
+      {/* 3 — Six publishable principles (positive doctrine) */}
       <div data-cockpit-section="principles">
         <PrincipleBlock />
       </div>
 
-      {/* 3 — Six new behaviors shipping in alpha.7 / v6.3 GA */}
-      <div data-cockpit-section="new behaviors">
+      {/* 4 — Six new behaviors (Solidify, Z-Axis Rewind, Pulse Ring,
+              Living Canvas, Freeze All, Multi-Canvas Tabs) */}
+      <div data-cockpit-section="behaviors">
         <NewBehaviors />
       </div>
 
-      {/* 4 — What doesn't change between v6.0 and v6.3 */}
-      <div data-cockpit-section="what stands">
+      {/* 5 — The living layer (Breathing Canvas, Night Watch, Health HUD,
+              Voice Latency Stopwatch) */}
+      <div data-cockpit-section="living layer">
+        <TheLivingLayer />
+      </div>
+
+      {/* 6 — The substrate (Hermes, Subscription-First Transport,
+              Connector Fabric, embedded n8n) */}
+      <div data-cockpit-section="substrate">
+        <TheConnections />
+      </div>
+
+      {/* 7 — Departmental crews + trust gradient + human final stop */}
+      <div data-cockpit-section="departments">
+        <TheCrews />
+      </div>
+
+      {/* 8 — Receipts doctrine + JSONL schema sample */}
+      <div data-cockpit-section="receipts">
+        <TheReceipts />
+      </div>
+
+      {/* 9 — What doesn't change between v6.0 and v6.3 */}
+      <div data-cockpit-section="invariants">
         <WhatStillStands />
       </div>
 
-      {/* 5 — Explicit message to existing v6.0 buyers (§4A) */}
+      {/* 10 — Existing v6.0 buyer §4A free-upgrade message */}
       <div data-cockpit-section="existing buyers">
         <ExistingBuyerNote />
       </div>
 
-      {/* 6 — Closing manifesto — voice still fits the preview */}
+      {/* 11 — Dedicated mid-page notify-me anchor */}
+      <div data-cockpit-section="notify me">
+        <NotifyMeAnchor />
+      </div>
+
+      {/* 12 — Closing manifesto (preserved from v6.0) */}
       <ClosingManifesto />
 
       {/* JSON-LD — Software preview state */}
@@ -117,10 +161,10 @@ export default function OrangeBoxPreview() {
                 operatingSystem: "Windows 10, Windows 11",
                 softwareVersion: "6.3.0-alpha (in build)",
                 releaseNotes:
-                  "v6.3 'Silent Canvas' — the cockpit stops narrating; the canvas shows the work. Six new behaviors: Solidify (one-command production ship), Z-Axis Rewind (visual time-travel), Pulse Ring (2.5s action feedback), Living Canvas (idle pulse + usage heatmap), Freeze All (Ctrl+. global kill), Multi-Canvas Tabs (parallel projects, one cockpit). v6.0 buyers receive v6.3 free under license §4A forward-buyers lock.",
+                  "v6.3 'Silent Canvas' — the cockpit stops narrating; the canvas shows the work. Six new behaviors: Solidify (one-command production ship), Z-Axis Rewind (visual time-travel), Pulse Ring (2.5s action feedback), Living Canvas (idle pulse + usage heatmap), Freeze All (Ctrl+. global kill), Multi-Canvas Tabs (parallel projects, one cockpit). Plus the living layer (Breathing Canvas, Night Watch, Organism Health HUD, Voice Latency Stopwatch), four substrate layers (Hermes multi-channel delivery, Subscription-First Transport, Connector Fabric, embedded n8n), fourteen departmental crews with trust-gradient promotion, and receipt-backed audit on every action. v6.0 buyers receive v6.3 free under license §4A forward-buyers lock.",
                 url: "https://atomeons.com/orangebox",
                 description:
-                  "ORANGEBOX v6.3 Silent Canvas — preview page. The cockpit stops narrating; the canvas shows the work. Local-first, native binary, BYO keys, zero markup. v6.0 buyers receive v6.3 free under license §4A.",
+                  "ORANGEBOX v6.3 Silent Canvas — full showcase. The cockpit stops narrating; the canvas shows the work. Local-first, native binary, BYO keys, zero markup. v6.0 buyers receive v6.3 free under license §4A.",
                 offers: {
                   "@type": "Offer",
                   availability: "https://schema.org/PreOrder",
@@ -152,7 +196,7 @@ export default function OrangeBoxPreview() {
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: "ORANGEBOX v6.3 Silent Canvas preview",
+                    name: "ORANGEBOX v6.3 Silent Canvas",
                     item: "https://atomeons.com/orangebox",
                   },
                 ],
