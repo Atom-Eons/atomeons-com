@@ -135,3 +135,54 @@ export async function tweetLetter(opts: {
     return { ok: false, error: msg };
   }
 }
+
+/**
+ * Post a reply to an existing tweet. Same auth, same failure-soft
+ * shape as tweetLetter — for replying under an external post (e.g.
+ * announcing the lab's take under a news-maker's announcement).
+ *
+ * Length cap is 280 chars (X counts URLs as 23 regardless of actual
+ * length). The caller is responsible for fitting under that ceiling.
+ */
+export async function tweetReply(opts: {
+  text: string;
+  inReplyToTweetId: string;
+}): Promise<TweetResult> {
+  if (process.env.FOUNDERS_VIEW_TWEET_PAUSE === "true") {
+    return {
+      ok: false,
+      skipped: true,
+      reason: "FOUNDERS_VIEW_TWEET_PAUSE=true",
+    };
+  }
+
+  const client = getClient();
+  if (!client) {
+    return {
+      ok: false,
+      skipped: true,
+      reason:
+        "Twitter env not configured (need TWITTER_API_KEY + TWITTER_API_SECRET + TWITTER_ACCESS_TOKEN + TWITTER_ACCESS_TOKEN_SECRET)",
+    };
+  }
+
+  if (!opts.text || !opts.inReplyToTweetId) {
+    return { ok: false, error: "text + inReplyToTweetId both required" };
+  }
+
+  try {
+    const { data } = await client.v2.tweet(opts.text, {
+      reply: { in_reply_to_tweet_id: opts.inReplyToTweetId },
+    });
+    const tweetId = data.id;
+    return {
+      ok: true,
+      tweet_id: tweetId,
+      tweet_url: `https://x.com/AtomMccree/status/${tweetId}`,
+      body: opts.text,
+    };
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "reply failed";
+    return { ok: false, error: msg };
+  }
+}
