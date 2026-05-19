@@ -47,3 +47,6 @@ next-env.d.ts
 
 .vercel
 .env*.local
+
+# one-shot letter payloads for /api/admin/publish-letter
+.letter-*.json
