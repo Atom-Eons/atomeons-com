@@ -1,133 +1,98 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { Hero } from "../_components/v5/Hero";
-import { LanesGrid } from "../_components/v5/LanesGrid";
-import { NativeStack } from "../_components/v5/NativeStack";
-import { MoatsTable } from "../_components/v5/MoatsTable";
-import { AlphaShipped } from "../_components/v5/AlphaShipped";
-import { CockpitVisualization } from "../_components/v5/CockpitVisualization";
-import { SwapLanes } from "../_components/v5/SwapLanes";
-import { ReceiptsLive } from "../_components/v5/ReceiptsLive";
-import { TrustGrid } from "../_components/v5/TrustGrid";
-import { SkusTable } from "../_components/v5/SkusTable";
-import { AntiSaasBlock } from "../_components/v5/AntiSaasBlock";
-import { DownloadHashes } from "../_components/v5/DownloadHashes";
-import { Compatibility } from "../_components/v5/Compatibility";
-import { Qualification } from "../_components/v5/Qualification";
-import { ComparisonGrid } from "../_components/v5/ComparisonGrid";
-import { DoctrineStrip } from "../_components/v5/DoctrineStrip";
-import { SilentCanvasTease } from "../_components/v5/SilentCanvasTease";
+import { HeroPreview } from "../_components/v6-3/HeroPreview";
+import { PrincipleBlock } from "../_components/v6-3/PrincipleBlock";
+import { NewBehaviors } from "../_components/v6-3/NewBehaviors";
+import { WhatStillStands } from "../_components/v6-3/WhatStillStands";
+import { ExistingBuyerNote } from "../_components/v6-3/ExistingBuyerNote";
 import { ClosingManifesto } from "../_components/v5/ClosingManifesto";
 
-export const metadata = {
-  title:
-    "ORANGEBOX Command v6.0.0 — the cockpit that replaces Claude Code, Cursor, and Codex",
+/**
+ * /orangebox — v6.3 "Silent Canvas" PREVIEW page.
+ *
+ * SALES PAUSED while the lab ships v6.3. The previous v6.0 product
+ * funnel (Hero, LanesGrid, MoatsTable, SkusTable, ComparisonGrid, etc.)
+ * lives on disk under app/_components/v5/ and is currently unused.
+ * It will return (or be retired) when v6.3 ships.
+ *
+ * IP boundary holds across this page (mirrors round 2 audit):
+ *   PUBLISH:  Silent Canvas name, v6.3 framing, 6 named behaviors
+ *             (Solidify, Z-Axis Rewind, Pulse Ring, Living Canvas,
+ *              Freeze All, Multi-Canvas Tabs), 4 publishable principles,
+ *             license §4A forward-buyers lock, local-first + BYO keys.
+ *   NEVER:    Relevance Controller spec, 7 state sources, 5-schema
+ *             validator, AE1–AE14 roster, trust gradient tiers, phase
+ *             map day counts, cost math, trilane structure, internal
+ *             model assignments.
+ *
+ * Existing buyers still have full /api/download access via the HMAC
+ * token in their original purchase email or via /account.
+ */
+
+export const metadata: Metadata = {
+  title: "ORANGEBOX v6.3 — Silent Canvas | AtomEons",
   description:
-    "ORANGEBOX v6.0.0 — 11 lanes · 60+ MCP tools · 15 departments. Claude · GPT · Gemini · OpenRouter (200+ models) · Hermes 𝕏 feed. Local-first. Zero telemetry. $1 once, forever. No subscription, ever.",
+    "ORANGEBOX v6.3 'Silent Canvas' is in build. The cockpit stopped talking. The canvas started. Sales paused while the lab ships. v6.0 buyers get v6.3 free — license §4A. Notify-me list open.",
   alternates: { canonical: "https://atomeons.com/orangebox" },
-  keywords: [
-    "ORANGEBOX",
-    "ORANGEBOX Command v5",
-    "Claude Code alternative",
-    "Cursor alternative",
-    "Codex alternative",
-    "AI cockpit",
-    "local-first AI cockpit",
-    "BYO keys AI tool",
-    "multi-model AI cockpit",
-    "MCP cockpit",
-    "Hermes Agent",
-    "Skil.Ski",
-    "AtomEons",
-    "AI OS",
-    "operator OS",
-  ],
   openGraph: {
-    title:
-      "ORANGEBOX Command v6.0.0 — replaces Claude Code, Cursor, and Codex",
+    title: "ORANGEBOX v6.3 — Silent Canvas",
     description:
-      "11 lanes. 60+ MCP tools. 15 departments. Claude · GPT · Gemini · OpenRouter · Hermes 𝕏 feed. Local-first. $1 once.",
+      "The cockpit stopped talking. The canvas started. v6.3 in build · sales paused · v6.0 buyers locked free under §4A.",
     url: "https://atomeons.com/orangebox",
     siteName: "AtomEons",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ORANGEBOX Command v6.0.0",
+    title: "ORANGEBOX v6.3 — Silent Canvas",
     description:
-      "The OS, not the tool. Local-first AI cockpit. $1 once. Yours forever.",
+      "The cockpit stopped talking. The canvas started. v6.3 in build · sales paused · v6.0 buyers locked free.",
   },
 };
 
-export default function OrangeBox() {
+export default function OrangeBoxPreview() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
-      {/* breadcrumb (kept minimal, top-of-page) */}
-      <div className="mx-auto w-full max-w-7xl px-6 pt-6">
+      {/* breadcrumb */}
+      <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
-          <Link href="/" className="transition-colors hover:text-[#22F0D5]">
+          <Link href="/" className="hover:text-[#22F0D5]">
             AtomEons
           </Link>{" "}
-          <span className="text-[#1A2225]">/</span> ORANGEBOX Command v6.0.0
+          <span className="text-[#1A2225]">/</span> ORANGEBOX · v6.3 Silent
+          Canvas · preview
         </p>
       </div>
 
-      {/* 1 — Hero (H1, $1 buy gate, hero render) */}
-      <Hero />
-
-      {/* 2 — What's in the box → the 11 lanes (cockpit instrument grid) */}
-      <LanesGrid />
-
-      {/* 3 — v6.0 native stack — one file, double-click, 2 seconds */}
-      <NativeStack />
-
-      {/* 4 — Cockpit visual + swap lanes (proof the multi-model debate is real) */}
-      <CockpitVisualization />
-      <SwapLanes />
-
-      {/* 5 — The 9 compound moats (incumbents structurally can't copy) */}
-      <MoatsTable />
-
-      {/* 5 — Anthropic alpha capabilities already wired */}
-      <AlphaShipped />
-
-      {/* 6 — Receipts (proof of work as portfolio) */}
-      <ReceiptsLive />
-
-      {/* 7 — Security + privacy posture */}
-      <TrustGrid />
-
-      {/* 8 — Pricing (4 SKUs, zero token markup) */}
-      <SkusTable />
-
-      {/* 9 — Compatibility + buyer qualification rails */}
-      <Compatibility />
-      <Qualification />
-
-      {/* 10 — Price ladder (alternatives compared) */}
-      <ComparisonGrid />
-
-      {/* 11 — Anti-saas posture (what ORANGEBOX is NOT) */}
-      <AntiSaasBlock />
-
-      {/* 12 — Real binary integrity hashes from BUILD_v6.0.0.json */}
-      <DownloadHashes />
-
-      {/* 13 — Doctrine strip (cockpit / marketplace / orchestration) */}
-      <DoctrineStrip />
-
-      {/* 14 — Silent Canvas v6.3 tease (micro-tease only per orange-judge:
-              3 lead features, "in build" framing, before ClosingManifesto).
-              IP-safe: no Relevance Controller / AE roster / cost math / etc.
-              Wrapped in data-cockpit-section so the CockpitFrame HUD
-              bottom-left bracket picks up "SILENT CANVAS" on scroll. */}
+      {/* 1 — Hero preview (coming-soon + notify-me CTA) */}
       <div data-cockpit-section="silent canvas">
-        <SilentCanvasTease />
+        <HeroPreview />
       </div>
 
-      {/* 15 — Closing manifesto */}
+      {/* 2 — Four publishable principles (positive doctrine, no mechanism) */}
+      <div data-cockpit-section="principles">
+        <PrincipleBlock />
+      </div>
+
+      {/* 3 — Six new behaviors shipping in alpha.7 / v6.3 GA */}
+      <div data-cockpit-section="new behaviors">
+        <NewBehaviors />
+      </div>
+
+      {/* 4 — What doesn't change between v6.0 and v6.3 */}
+      <div data-cockpit-section="what stands">
+        <WhatStillStands />
+      </div>
+
+      {/* 5 — Explicit message to existing v6.0 buyers (§4A) */}
+      <div data-cockpit-section="existing buyers">
+        <ExistingBuyerNote />
+      </div>
+
+      {/* 6 — Closing manifesto — voice still fits the preview */}
       <ClosingManifesto />
 
-      {/* SoftwareApplication + Offer + BreadcrumbList JSON-LD */}
+      {/* JSON-LD — Software preview state */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -142,8 +107,7 @@ export default function OrangeBox() {
                   "ORANGEBOX",
                   "ORANGEBOX OS",
                   "AtomEons ORANGEBOX",
-                  "ORANGEBOX Command v6",
-                  "OB0X v6",
+                  "Silent Canvas",
                 ],
                 applicationCategory: [
                   "DeveloperApplication",
@@ -151,66 +115,30 @@ export default function OrangeBox() {
                   "ProductivityApplication",
                 ],
                 operatingSystem: "Windows 10, Windows 11",
-                softwareVersion: "6.0.0",
+                softwareVersion: "6.3.0-alpha (in build)",
                 releaseNotes:
-                  "v6.0.0 — NATIVE BINARY. One file, double-click, 2-second launch. 4.46 MB Rust + egui executable. No webview. No chromium. The cockpit replaces Claude Code, Cursor, and Codex in 11 lanes (Cockpit, IDE, Terminal, Trilane, Voice, 𝕏 Feed, Vault, Receipts, Privacy, Skils, Settings). 60+ MCP tools. 15 departments. NEW 2026 stack: Groq LPUs sub-300ms quick_reply task, Ollama LOCAL_MODE air-gap swap, Groq Gemma route_dispatch pre-classifier, Agent Teams advisory (2026-04-01). Plus carried-forward Anthropic alpha: adaptive thinking, advisor tool, memory + files API, prompt caching with pre-warm, 1h vault TTL, compaction, structured outputs, multi-breakpoint cache. Local-first. Zero telemetry. $1 once, forever. v1.x–v6.x updates free.",
+                  "v6.3 'Silent Canvas' — the cockpit stops narrating; the canvas shows the work. Six new behaviors: Solidify (one-command production ship), Z-Axis Rewind (visual time-travel), Pulse Ring (2.5s action feedback), Living Canvas (idle pulse + usage heatmap), Freeze All (Ctrl+. global kill), Multi-Canvas Tabs (parallel projects, one cockpit). v6.0 buyers receive v6.3 free under license §4A forward-buyers lock.",
                 url: "https://atomeons.com/orangebox",
-                downloadUrl:
-                  "https://github.com/AtomEons/orangebox-os/releases/tag/v6.0.0",
                 description:
-                  "ORANGEBOX Command v6.0.0 — the local-first AI cockpit you own. 11 lanes, 60+ MCP tools, 15 departments. Multi-model debate (Claude + GPT + Gemini), live 𝕏 feed via Hermes, compounding lattice memory, receipts on every action. BYO keys, zero markup on tokens.",
+                  "ORANGEBOX v6.3 Silent Canvas — preview page. The cockpit stops narrating; the canvas shows the work. Local-first, native binary, BYO keys, zero markup. v6.0 buyers receive v6.3 free under license §4A.",
                 offers: {
                   "@type": "Offer",
+                  availability: "https://schema.org/PreOrder",
                   price: "1",
                   priceCurrency: "USD",
-                  availability: "https://schema.org/InStock",
                   url: "https://atomeons.com/orangebox",
                   priceValidUntil: "2030-12-31",
+                },
+                author: {
+                  "@type": "Person",
+                  name: "Atom McCree",
+                  url: "https://atomeons.com/about",
                 },
                 publisher: {
                   "@type": "Organization",
                   name: "AtomEons Systems Laboratory",
                   url: "https://atomeons.com",
-                  founder: { "@type": "Person", name: "Atom McCree" },
-                  email: "a.mccree@gmail.com",
-                  location: {
-                    "@type": "Place",
-                    name: "Marco Island, FL, USA",
-                  },
                 },
-                aggregateRating: undefined,
-                featureList: [
-                  "11 lanes: Cockpit, IDE, Terminal, Trilane, Voice, 𝕏 Feed, Vault, Receipts, Privacy, Skils, Settings",
-                  "Replaces Claude Code, Cursor, and Codex in one panel",
-                  "Multi-model orchestration (Claude + GPT + Gemini + OpenRouter 200+ models)",
-                  "Hermes Agent native 𝕏 feed (no incumbent has this)",
-                  "60+ MCP server tools",
-                  "15 named departments (AE0–AE14)",
-                  "27 Constitutional Guardrails + 9-stage Gate Chain",
-                  "Adaptive thinking + extended effort mode",
-                  "Dual-brain advisor architecture",
-                  "Anthropic Memory tool auto-attached",
-                  "Anthropic Files API for vault sync",
-                  "Citations API on vault queries",
-                  "Prompt caching with pre-warm-on-boot",
-                  "1-hour cache TTL on vault",
-                  "Compaction for long sessions (auto at 150k tokens)",
-                  "Structured outputs (JSON schema validated)",
-                  "Multi-breakpoint cache strategy",
-                  "Smart model router (10 task types × 3 budget modes)",
-                  "Background agent queue (\"do X overnight\")",
-                  "Compounding lattice memory (CLC + void + RAPTOR + RRF)",
-                  "Codexa multi-machine worker rail",
-                  "Skil.Ski marketplace via one MCP endpoint",
-                  "Local Whisper.cpp for Voice lane (audio never leaves machine)",
-                  "Air-gap mode (one-toggle disable all outbound)",
-                  "BYO keys, zero markup on tokens",
-                  "Local-first, zero telemetry, no phone-home",
-                  "Full source code included",
-                  "v1.x–v6.x updates free, no subscription",
-                ],
-                keywords:
-                  "ORANGEBOX, ORANGEBOX v5, Claude Code alternative, Cursor alternative, Codex alternative, AI cockpit, MCP cockpit, local-first AI, BYO keys, multi-model AI, Hermes Agent, Skil.Ski, AtomEons, no subscription",
               },
               {
                 "@type": "BreadcrumbList",
@@ -224,7 +152,7 @@ export default function OrangeBox() {
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: "ORANGEBOX Command v6.0.0",
+                    name: "ORANGEBOX v6.3 Silent Canvas preview",
                     item: "https://atomeons.com/orangebox",
                   },
                 ],

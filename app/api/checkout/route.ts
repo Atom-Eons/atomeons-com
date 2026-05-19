@@ -33,6 +33,23 @@ export const dynamic = "force-dynamic";
  */
 export async function POST(req: Request) {
   try {
+    // --- sales-paused kill switch (v6.3 build window) ---
+    // Same env var the client BuyButton + StickyBuyBar read. Server-side
+    // gate exists so a malicious client cannot bypass the client gate.
+    if (
+      process.env.ORANGEBOX_SALES_PAUSED === "true" ||
+      process.env.NEXT_PUBLIC_ORANGEBOX_SALES_PAUSED === "true"
+    ) {
+      return NextResponse.json(
+        {
+          error: "sales-paused",
+          message:
+            "ORANGEBOX sales are paused while v6.3 ships. Existing v6.0 buyers receive v6.3 free under license §4A. Join the notify-me list at /orangebox.",
+        },
+        { status: 503 },
+      );
+    }
+
     const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atomeons.com";
 
     // --- rate limit: 5 requests per minute per IP ---

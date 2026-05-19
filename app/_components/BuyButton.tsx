@@ -2,17 +2,23 @@
 
 import { useEffect, useState } from "react";
 import { DynamicPrice } from "./DynamicPrice";
+import { NotifyMe } from "./v6-3/NotifyMe";
 
 /**
- * V6 launch gate + dynamic ladder pricing.
+ * V6 launch gate + dynamic ladder pricing + v6.3 sales-pause gate.
  *
- * - NEXT_PUBLIC_V5_LIVE=true → checkout active.
- * - Anything else → button disabled, countdown to NEXT_PUBLIC_V5_LAUNCH_AT.
+ * Gate precedence (top wins):
+ *   - NEXT_PUBLIC_ORANGEBOX_SALES_PAUSED=true → render NotifyMe inline
+ *     (sales held while v6.3 ships)
+ *   - NEXT_PUBLIC_V5_LIVE=true → checkout active
+ *   - anything else → disabled state with countdown
  *
  * Pricing: starts at $1, +$1 per 100 sales forever (lib/pricing.ts).
  * The button label fetches live price; checkout fires at whatever price
  * Stripe quotes at session create time (the binding source of truth).
  */
+const SALES_PAUSED =
+  process.env.NEXT_PUBLIC_ORANGEBOX_SALES_PAUSED === "true";
 const V5_LIVE = process.env.NEXT_PUBLIC_V5_LIVE === "true";
 const V5_LAUNCH_AT =
   process.env.NEXT_PUBLIC_V5_LAUNCH_AT ?? "2026-05-17T04:00:00Z";
@@ -41,6 +47,26 @@ export function BuyButton() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const countdown = useCountdown(V5_LAUNCH_AT);
+
+  // ───────────────────────────────────────────────────────────────
+  // SALES PAUSED (v6.3 build window) — render notify-me inline
+  // ───────────────────────────────────────────────────────────────
+  if (SALES_PAUSED) {
+    return (
+      <div className="flex flex-col gap-3">
+        <div className="rounded-2xl border border-[#FF7A1A]/40 bg-[#1A0F08]/50 p-5">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+            ::sales paused · v6.3 in build
+          </p>
+          <p className="mt-2 text-sm text-[#F2F4F5]">
+            v6.0 buyers automatically receive v6.3 (license §4A). New buyers
+            join the notify-me list — one email when v6.3 ships.
+          </p>
+        </div>
+        <NotifyMe source="buy-button" />
+      </div>
+    );
+  }
 
   async function buy() {
     if (!V5_LIVE) return;

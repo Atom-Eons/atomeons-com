@@ -12,7 +12,14 @@ import { SESSION_KEYS } from "@/lib/constants";
  *
  * Uses BuyButtonCompact (just the button, no badge / sub-copy) — the
  * full BuyButton would push this to 300px+ tall and bury the screen.
+ *
+ * Hard-disabled while sales are paused (NEXT_PUBLIC_ORANGEBOX_SALES_PAUSED).
+ * In that window the StickyBuyBar would just confuse — the page already
+ * has a notify-me CTA. Returns null at the top of render.
  */
+const SALES_PAUSED =
+  process.env.NEXT_PUBLIC_ORANGEBOX_SALES_PAUSED === "true";
+
 export function StickyBuyBar() {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
@@ -36,6 +43,7 @@ export function StickyBuyBar() {
     return () => obs.disconnect();
   }, []);
 
+  if (SALES_PAUSED) return null;
   if (dismissed || !visible) return null;
 
   return (
