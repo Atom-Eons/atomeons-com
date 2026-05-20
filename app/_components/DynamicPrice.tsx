@@ -3,14 +3,15 @@
 import { useEffect, useState } from "react";
 
 /**
- * Live ladder-price display.
+ * Live price display — promo-aware.
  *
- * Polls /api/sales-count every 30s. Shows current price + remaining
- * buyers at this price + next tier price. Used by Hero, BuyButton,
- * SkusTable, StickyBuyBar — anywhere the price is shown.
+ * Polls /api/sales-count every 30s and renders the canonical price
+ * surface ($1 always). When `is_free_promo` is true, swaps the price
+ * for a "FREE" treatment with a countdown to when $1 resumes. Used by
+ * Hero, BuyButton, SkusTable, StickyBuyBar — anywhere the price shows.
  *
- * If the fetch fails or hasn't loaded yet, falls back to the
- * `fallbackDollars` prop (default $1) so the UI never shows nothing.
+ * Failure-soft: if the fetch fails or hasn't loaded yet, falls back to
+ * `fallbackDollars` (default $1) so the UI never shows nothing.
  */
 
 type Variant = "inline" | "stacked" | "badge" | "button-label";
@@ -18,17 +19,28 @@ type Variant = "inline" | "stacked" | "badge" | "button-label";
 type Props = {
   variant?: Variant;
   fallbackDollars?: number;
-  /** When true, ALSO renders the "N left at this price" urgency line. */
+  /** When true, renders the urgency / promo line. */
   showUrgency?: boolean;
   className?: string;
 };
 
 type LiveState = {
   price: number;
-  next: number;
-  remaining: number;
   buyers: number;
+  isFreePromo: boolean;
+  promoMsRemaining: number;
 } | null;
+
+function formatRemain(ms: number): string {
+  if (ms <= 0) return "0s";
+  const totalSec = Math.floor(ms / 1000);
+  const d = Math.floor(totalSec / 86400);
+  const h = Math.floor((totalSec % 86400) / 3600);
+  const m = Math.floor((totalSec % 3600) / 60);
+  if (d > 0) return `${d}d ${h}h`;
+  if (h > 0) return `${h}h ${m}m`;
+  return `${m}m`;
+}
 
 export function DynamicPrice({
   variant = "inline",
@@ -48,9 +60,12 @@ export function DynamicPrice({
         if (!alive) return;
         setState({
           price: j.current_price_usd ?? fallbackDollars,
-          next: j.next_price_usd ?? fallbackDollars + 1,
-          remaining: j.remaining_at_this_price ?? 100,
           buyers: j.net_buyers ?? 0,
+          isFreePromo: !!j.is_free_promo,
+          promoMsRemaining:
+            typeof j.promo_ms_remaining === "number"
+              ? j.promo_ms_remaining
+              : 0,
         });
       } catch {
         // keep fallback
@@ -65,21 +80,39 @@ export function DynamicPrice({
   }, [fallbackDollars]);
 
   const dollars = state?.price ?? fallbackDollars;
-  const next = state?.next ?? fallbackDollars + 1;
-  const remaining = state?.remaining ?? 100;
   const buyers = state?.buyers ?? 0;
+  const isFreePromo = state?.isFreePromo ?? false;
+  const promoRemain = state?.promoMsRemaining ?? 0;
+
+  // Display label adapts to promo state.
+  const priceLabel = isFreePromo ? "FREE" : `$${dollars}`;
+  const promoSubLabel = isFreePromo
+    ? `then $${dollars} · forever`
+    : `$${dollars} once · forever`;
 
   if (variant === "button-label") {
-    return <span className={className}>${dollars}</span>;
+    return <span className={className}>{priceLabel}</span>;
   }
 
   if (variant === "badge") {
     return (
       <span
-        className={`inline-flex items-center gap-2 rounded-md border border-[#22F0D5]/60 bg-black/70 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5] shadow-[0_0_24px_rgba(34,240,213,0.25)] ${className}`}
+        className={`inline-flex items-center gap-2 rounded-md border bg-black/70 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] shadow-[0_0_24px_rgba(34,240,213,0.25)] ${
+          isFreePromo
+            ? "border-[#22F0D5]/60 text-[#22F0D5]"
+            : "border-[#FF7A1A]/60 text-[#FF7A1A]"
+        } ${className}`}
       >
-        <span className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5]" />
-        ${dollars} now · ${next} after next {remaining} sales
+        <span
+          className={`inline-block size-1.5 animate-pulse rounded-full ${
+            isFreePromo ? "bg-[#22F0D5]" : "bg-[#FF7A1A]"
+          }`}
+        />
+        {isFreePromo ? (
+          <>FREE NOW · {formatRemain(promoRemain)} left · then ${dollars}</>
+        ) : (
+          <>${dollars} once · forever · no subscription</>
+        )}
       </span>
     );
   }
@@ -88,12 +121,20 @@ export function DynamicPrice({
     return (
       <div className={`flex flex-col gap-1 ${className}`}>
         <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
-          current price · {buyers} sold
+          {isFreePromo ? "launch promo · 7 free days" : `${buyers} sold`}
         </span>
-        <span className="text-3xl font-medium text-[#FF7A1A]">${dollars}</span>
+        <span
+          className={`text-3xl font-medium ${
+            isFreePromo ? "text-[#22F0D5]" : "text-[#FF7A1A]"
+          }`}
+        >
+          {priceLabel}
+        </span>
         {showUrgency ? (
           <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]">
-            ↑ ${next} after the next {remaining} sales
+            {isFreePromo
+              ? `↑ ${promoSubLabel} · ${formatRemain(promoRemain)} of FREE left`
+              : `${promoSubLabel} · forward buyers locked under §4A`}
           </span>
         ) : null}
       </div>
@@ -103,10 +144,16 @@ export function DynamicPrice({
   // inline
   return (
     <span className={`inline-flex items-baseline gap-2 ${className}`}>
-      <span className="text-[#FF7A1A]">${dollars}</span>
+      <span
+        className={isFreePromo ? "text-[#22F0D5]" : "text-[#FF7A1A]"}
+      >
+        {priceLabel}
+      </span>
       {showUrgency ? (
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]">
-          → ${next} in {remaining}
+          {isFreePromo
+            ? `· ${formatRemain(promoRemain)} left`
+            : `· once · forever`}
         </span>
       ) : null}
     </span>

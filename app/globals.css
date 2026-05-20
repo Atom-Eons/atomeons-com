@@ -31,9 +31,14 @@
   --color-v5-orange-hot: #FFA45A;
   --color-v5-border: #1A2225;
 
+  /* Inter is loaded via next/font in layout.tsx and exposed as
+     --font-inter on <html>. We chain it ahead of system fonts so the
+     HeroPillarSequence weight-axis transition has a real variable
+     font to interpolate against, with graceful fallback to system
+     sans before Inter loads. */
   --font-sans:
-    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
+    var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono:
     ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
 }

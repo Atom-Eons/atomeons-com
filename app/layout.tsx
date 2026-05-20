@@ -1,6 +1,22 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "./_components/Header";
+
+/**
+ * Inter Variable — full weight axis (100–900). Powers the
+ * `font-variation-settings: 'wght' N` transitions in
+ * HeroPillarSequence (clauses gain weight on scroll) + any other
+ * surface that benefits from a continuous weight axis. The font is
+ * self-hosted via next/font (no external CDN, no FOUT). Display
+ * swap so users see system font until Inter loads.
+ */
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  axes: ["opsz"],
+});
 import { Footer } from "./_components/Footer";
 import { MadeWithOrangebox } from "./_components/MadeWithOrangebox";
 import { XAdsPixel } from "./_components/XAdsPixel";
@@ -46,8 +62,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-black text-[#F2F4F5]">
+    <html lang="en" className={`h-full antialiased ${inter.variable}`}>
+      <body className="min-h-full flex flex-col bg-black text-[#F2F4F5] font-sans">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
