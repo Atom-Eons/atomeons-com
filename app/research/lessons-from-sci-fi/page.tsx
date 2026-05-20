@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { StillGallery } from "./StillGallery";
 
 /**
  * Lessons From Sci-Fi — long-form research surface for the AE Research arm.
@@ -600,6 +601,9 @@ export default function LessonsFromSciFi() {
           </div>
         </div>
       </section>
+
+      {/* TWELVE KEY MOMENTS — illustrated archive with credits */}
+      <StillGallery />
 
       {/* SEVEN EPOCHS — long-form chapters */}
       {EPOCHS.map((e, i) => {
