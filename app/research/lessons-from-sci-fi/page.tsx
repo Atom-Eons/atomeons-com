@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { StillGallery } from "./StillGallery";
+import { StreamingPlaylist } from "./StreamingPlaylist";
 
 /**
  * Lessons From Sci-Fi — long-form research surface for the AE Research arm.
@@ -604,6 +605,10 @@ export default function LessonsFromSciFi() {
 
       {/* TWELVE KEY MOMENTS — illustrated archive with credits */}
       <StillGallery />
+
+      {/* STREAMING PLAYLIST — where to watch each title, free options
+            flagged, JustWatch link for live availability */}
+      <StreamingPlaylist />
 
       {/* SEVEN EPOCHS — long-form chapters */}
       {EPOCHS.map((e, i) => {
