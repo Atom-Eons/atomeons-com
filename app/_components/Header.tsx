@@ -84,6 +84,11 @@ export function Header() {
                 hint: "12 manuscripts · 2026",
               },
               {
+                href: "/research/lessons-from-sci-fi",
+                label: "Lessons From Sci-Fi",
+                hint: "century-long monograph · April 2026",
+              },
+              {
                 href: "/intel/x-algorithm",
                 label: "X Algorithm Alpha",
                 hint: "the May 15 2026 xAI leak · operator extensions",

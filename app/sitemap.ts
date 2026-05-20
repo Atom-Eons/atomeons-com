@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/founders-view`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${BASE}/research/about`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/research/papers`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${BASE}/research/lessons-from-sci-fi`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/intel/x-algorithm`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     ...paperEntries,
     { url: `${BASE}/now`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
