@@ -48,7 +48,7 @@ export function Footer() {
             <li><Link href="/skilski" className="hover:text-[#22F0D5]">skil.ski</Link></li>
             <li><Link href="/b00kmakor" className="hover:text-[#22F0D5]">B00KMakor</Link></li>
             <li><Link href="/account" className="hover:text-[#22F0D5]">Your account</Link></li>
-            <li><Link href="/orangebox#buy" className="hover:text-[#22F0D5]">Get v6.0.0 · $1 →</Link></li>
+            <li><Link href="/orangebox#buy" className="hover:text-[#22F0D5]">Get ORANGEBOX · FREE 7 days →</Link></li>
           </ul>
         </div>
 
@@ -66,12 +66,23 @@ export function Footer() {
 
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-            Contact
+            Lab Status
           </p>
-          <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li><a href="mailto:a.mccree@gmail.com" className="hover:text-[#22F0D5]">a.mccree@gmail.com</a></li>
-            <li><a href="https://x.com/AtomMccree" target="_blank" rel="noopener" className="hover:text-[#22F0D5]">@AtomMccree</a></li>
+          <ul className="mt-3 space-y-2">
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">PAPERS · 12 LIVE</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">ORANGEBOX · v6.1.0</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">BROADCAST · nightly 8pm ET</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">BUILD STATUS · 60/60 GREEN</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">LICENSE · CC-BY 4.0</li>
           </ul>
+          <a
+            href="https://x.com/AtomMccree"
+            target="_blank"
+            rel="noopener"
+            className="mt-4 block text-sm text-[#F2F4F5] hover:text-[#22F0D5]"
+          >
+            @AtomMccree
+          </a>
         </div>
       </div>
 

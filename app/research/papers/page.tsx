@@ -89,7 +89,6 @@ export default function ResearchPapersPage() {
                 {p.authors}
               </p>
               <p className="mt-4 text-sm leading-relaxed text-[#9BA5A7]">
-                <span className="font-medium text-[#22F0D5]">::kid:</span>{" "}
                 {p.kid_summary}
               </p>
               <div className="mt-5 flex flex-wrap gap-1.5">

@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AtomBoot } from "./_components/AtomBoot";
 import { StickyBuyBar } from "./_components/StickyBuyBar";
-import { CockpitFrame } from "./_components/v2/CockpitFrame";
+import { LabTicker } from "./_components/v2/LabTicker";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
@@ -63,9 +63,9 @@ export default function RootLayout({
               brand: { "@type": "Brand", name: "ORANGEBOX" },
               makesOffer: {
                 "@type": "Offer",
-                name: "ORANGEBOX Command v6.0.0",
+                name: "ORANGEBOX Command v6.1.0 Agent Mode",
                 description:
-                  "Local-first AI cockpit. 11 lanes, 60+ MCP tools, 15 departments. BYO keys, zero token markup. $1 once, forever.",
+                  "Local-first native AI cockpit. Rust + egui. 11 lanes, 60+ MCP tools, multi-model routing, agent loop with 9 tools, repo indexer, tab autocomplete. BYO keys, zero token markup. $1 once — free first 7 days of launch.",
                 price: "1",
                 priceCurrency: "USD",
                 availability: "https://schema.org/InStock",
@@ -82,7 +82,7 @@ export default function RootLayout({
         <div className="screen-flicker flex-1">{children}</div>
         <Footer />
         <StickyBuyBar />
-        <CockpitFrame />
+        <LabTicker />
         <Analytics />
         <SpeedInsights />
       </body>

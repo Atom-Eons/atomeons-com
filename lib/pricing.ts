@@ -1,72 +1,100 @@
 /**
- * Dynamic pricing ladder — operator decree 2026-05-17.
+ * Pricing canon — operator decree 2026-05-20.
  *
- *   First 100 buyers   → $1
- *   Buyers 101-200     → $2
- *   Buyers 201-300     → $3
- *   ...etc forever
+ *   PRICE:  $1 once, forever. No ladder.
+ *   PROMO:  FREE first 7 days of public launch window.
  *
- * Formula: priceCents = (floor(netBuyers / 100) + 1) * 100
+ * The $1 + 100-buyer ladder from the May 17 launch decree is RETIRED.
+ * Forward buyers (the cohort that paid $1 on the ladder before 2026-05-20)
+ * are grandfathered under license §4A — no change to their entitlement.
  *
- * "Forward buyers only" — current buyers paid what they paid at session
- * creation time. Stripe sessions lock the price at create; this helper
- * just computes the right price for the NEXT session.
+ * Free-promo window:
+ *   FREE_PROMO_START_AT — ISO timestamp set in env (NEXT_PUBLIC_FREE_PROMO_START_AT).
+ *                        If unset, defaults to 2026-05-17T04:00:00Z (the public launch).
+ *   FREE_PROMO_DURATION_HOURS = 168 (7 days).
+ *
+ * During the window:
+ *   - Display: "FREE · expires in {countdown}"
+ *   - Checkout: $0 / coupon override (Stripe Coupon code `LAUNCH7` recommended;
+ *     wire via /api/checkout server-side discount until automated)
+ *
+ * After the window:
+ *   - Display: "$1 once · forever"
+ *   - Checkout: standard $1 PaymentIntent.
  */
 
 import { getStripe } from "@/lib/stripe";
 
 const PRODUCT_NAME_FILTER = "ORANGEBOX";
-const STEP = 100; // buyers per tier
-const STEP_DOLLARS = 1; // price increase per tier (dollars)
+
+/** Canonical price, in dollars. $1 forever — no ladder. */
 const BASE_DOLLARS = 1;
 
+/** ISO start of the free-7-days launch window. */
+const FREE_PROMO_START_AT_DEFAULT = "2026-05-17T04:00:00Z";
+const FREE_PROMO_DURATION_HOURS = 168; // 7 days
+
+function getPromoStart(): Date {
+  const env =
+    process.env.NEXT_PUBLIC_FREE_PROMO_START_AT ?? FREE_PROMO_START_AT_DEFAULT;
+  const d = new Date(env);
+  if (Number.isNaN(d.getTime())) return new Date(FREE_PROMO_START_AT_DEFAULT);
+  return d;
+}
+
+function getPromoEnd(): Date {
+  const start = getPromoStart();
+  return new Date(start.getTime() + FREE_PROMO_DURATION_HOURS * 3600 * 1000);
+}
+
 export type PriceState = {
-  /** Net paid buyers (succeeded - refunded). */
+  /** Net paid buyers (succeeded - refunded). Display only. */
   netBuyers: number;
-  /** Current 100-buyer tier index (0, 1, 2, ...). */
-  tier: number;
-  /** Current price in USD cents — what /api/checkout will charge a new session. */
+  /** Canonical price in USD cents — what /api/checkout will charge AFTER the promo window. */
   priceCents: number;
-  /** Current price in dollars (whole, for display). */
+  /** Canonical price in dollars (whole, for display). */
   priceDollars: number;
-  /** Next-tier price in dollars (price the NEXT 100th buyer will see). */
-  nextPriceDollars: number;
-  /** Buyers remaining at the current price before the next $1 jump. */
-  remainingAtThisPrice: number;
+  /** True when the free-7-days launch promo is active. */
+  isFreePromo: boolean;
+  /** ISO timestamp the promo ends. */
+  promoEndsAt: string;
+  /** Milliseconds remaining in the promo (0 if expired). */
+  promoMsRemaining: number;
   /** ISO timestamp the price was computed. */
   ts: string;
 };
 
 /**
- * Compute the current dynamic price purely from a net-buyer count.
- * Pure function — no Stripe calls. Used by both the route handlers and
- * any preview / SSR display path.
+ * Pure helper — same shape regardless of buyer count. $1 always. The
+ * promo flag flips based on the launch window only.
  */
 export function computePrice(netBuyers: number): PriceState {
   const safeBuyers = Math.max(0, Math.floor(netBuyers));
-  const tier = Math.floor(safeBuyers / STEP);
-  const priceDollars = BASE_DOLLARS + tier * STEP_DOLLARS;
+  const priceDollars = BASE_DOLLARS;
   const priceCents = priceDollars * 100;
-  const remainingAtThisPrice = STEP - (safeBuyers % STEP);
+  const now = Date.now();
+  const end = getPromoEnd().getTime();
+  const start = getPromoStart().getTime();
+  const isFreePromo = now >= start && now < end;
+  const promoMsRemaining = Math.max(0, end - now);
   return {
     netBuyers: safeBuyers,
-    tier,
     priceCents,
     priceDollars,
-    nextPriceDollars: priceDollars + STEP_DOLLARS,
-    remainingAtThisPrice,
+    isFreePromo,
+    promoEndsAt: new Date(end).toISOString(),
+    promoMsRemaining,
     ts: new Date().toISOString(),
   };
 }
 
 /**
  * Hit Stripe and count succeeded ORANGEBOX PaymentIntents minus refunds.
- * Same math as /api/sales-count, kept DRY here so both /api/checkout and
- * /api/sales-count share one source of truth.
+ * Used by /api/sales-count for the live buyer chip + ticker. Price math
+ * is no longer derived from this count — $1 always — but the count is
+ * surfaced as social proof.
  *
- * Failure-soft: on any Stripe error returns netBuyers=0 → price stays $1.
- * Doctrine: NEVER charge more than $1 if we can't verify the count. The
- * downside of a $1 sale is zero; the downside of overcharging is brand.
+ * Failure-soft: on any Stripe error returns 0.
  */
 export async function fetchNetBuyers(): Promise<number> {
   try {
@@ -121,8 +149,9 @@ export async function fetchCurrentPrice(): Promise<PriceState> {
 /** Public constants exported for display copy. */
 export const PRICING_CONFIG = {
   BASE_DOLLARS,
-  STEP_DOLLARS,
-  STEP,
-  /** Human-readable rule: "Every 100 sales the price goes up $1." */
-  RULE: `Every ${STEP} sales the price goes up $${STEP_DOLLARS}.`,
+  FREE_PROMO_DURATION_HOURS,
+  /** Human-readable rule for display. */
+  RULE: `$${BASE_DOLLARS} once, forever. FREE first ${
+    FREE_PROMO_DURATION_HOURS / 24
+  } days.`,
 } as const;

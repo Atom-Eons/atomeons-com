@@ -57,7 +57,7 @@ export function HeroLabManifest() {
           <span aria-hidden className="text-[#1A2225]">·</span>
           <span className="text-[#F2F4F5]">CC-BY 4.0</span>
           <span aria-hidden className="text-[#1A2225]">·</span>
-          <span className="text-[#FF7A1A]">$1 LADDER</span>
+          <span className="text-[#FF7A1A]">$1 · FREE FIRST 7 DAYS</span>
         </div>
 
         {/* secondary escape CTAs — low hierarchy, mono, two actions */}
@@ -73,7 +73,7 @@ export function HeroLabManifest() {
             href="/orangebox"
             className="transition-colors hover:text-[#22F0D5]"
           >
-            BUY ORANGEBOX · $1 →
+            GET ORANGEBOX · FREE NOW →
           </Link>
         </div>
       </div>

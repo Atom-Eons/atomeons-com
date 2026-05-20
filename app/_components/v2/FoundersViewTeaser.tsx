@@ -24,9 +24,9 @@ export function FoundersViewTeaser() {
             </p>
 
             <h2 className="mb-6 text-balance text-3xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
-              A fictional broadcast.
+              Real events.
               <br />
-              Slipped under your door.
+              Editorial satire. Nightly at 8pm ET.
             </h2>
 
             {/* 3-line doctrine */}

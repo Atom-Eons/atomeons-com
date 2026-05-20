@@ -115,7 +115,6 @@ export async function LatestFromLab() {
               {paper.title}
             </h3>
             <p className="mt-3 text-base leading-relaxed text-[#9BA5A7]">
-              <span className="font-medium text-[#22F0D5]">::kid:</span>{" "}
               {paper.kid_summary}
             </p>
             <p className="mt-6 flex flex-wrap items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">

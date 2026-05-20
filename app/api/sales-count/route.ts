@@ -6,17 +6,15 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /**
- * Public sales counter + live ladder price.
+ * Public sales counter + canonical price.
  *
- * Same Stripe count math as before, plus dynamic-pricing fields so the
- * site can render "current price = $X / next tier = $X+1 in N sales".
+ * As of 2026-05-20: $1 once forever (no ladder) + free first 7 days
+ * of the launch window. Buyer count is surfaced for social proof on
+ * the LabTicker and homepage. The ladder fields stay in the payload
+ * for back-compat with any client still reading them, but tier and
+ * remaining_at_this_price now reflect the static $1 reality.
  *
- * Cached at the edge for 60s. Reasonable: prices only jump every 100
- * sales, so a 60s stale window almost never crosses a tier boundary
- * (would need ~6 sales/minute sustained to risk it). At tier boundary
- * the worst case is one buyer briefly sees the old price; Stripe
- * session creation will still charge the new tier from the moment the
- * count crosses (the cache is on display, not on charge).
+ * Cached 60s at the edge.
  */
 
 const PRODUCT_NAME_FILTER = "ORANGEBOX";
@@ -72,16 +70,19 @@ export async function GET() {
       total_revenue_usd: totalRevenue / 100,
       refunds,
       net_buyers: netBuyers,
-      // Dynamic ladder pricing fields
+      // Canonical price ($1 forever) + free-7-days promo state
       current_price_usd: price.priceDollars,
       current_price_cents: price.priceCents,
-      tier: price.tier,
-      next_price_usd: price.nextPriceDollars,
-      remaining_at_this_price: price.remainingAtThisPrice,
-      // Legacy "goal" fields kept for SalesCounterV5 back-compat
+      is_free_promo: price.isFreePromo,
+      promo_ends_at: price.promoEndsAt,
+      promo_ms_remaining: price.promoMsRemaining,
+      // Legacy fields kept for SalesCounterV5 back-compat — now static
+      tier: 0,
+      next_price_usd: price.priceDollars,
+      remaining_at_this_price: 0,
       goal: 100,
-      remaining: price.remainingAtThisPrice,
-      progress_pct: Math.min(100, Math.round(((netBuyers % 100) / 100) * 100)),
+      remaining: Math.max(0, 100 - netBuyers),
+      progress_pct: Math.min(100, Math.round((netBuyers / 100) * 100)),
     },
     {
       status: 200,

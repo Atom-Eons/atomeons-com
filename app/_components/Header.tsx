@@ -13,7 +13,7 @@ import { MobileNav } from "./MobileNav";
  *   header carries the LAB identity, not any one product's identity.
  *   ORANGEBOX-specific version chips, taglines, and pricing live on
  *   /orangebox and below the fold of the homepage, never in the header.
- * - Top-right: LAB · ONLINE pulse + standalone Æ badge.
+ * - Top-right: standalone Æ badge only. LAB · ONLINE signal lives in LabTicker.
  * - Nav: Home · Products ▾ · Æ Research ▾ · The Founder's View · Press · Account.
  * - Cyan owns the system-status surface. Orange survives ONLY on the Products
  *   dropdown chevron and the Æ glyph fill — never on a global header chip.
@@ -29,7 +29,7 @@ export function Header() {
         {/* Brand wordmark */}
         <Link href="/" className="group flex items-center gap-3">
           <span className="glitch-hover">
-            <AtomMark size={32} speed={9} />
+            <AtomMark size={32} speed={999} />
           </span>
           <div className="flex flex-col leading-none">
             <span className="flex items-baseline gap-1.5">
@@ -55,7 +55,7 @@ export function Header() {
               {
                 href: "/orangebox",
                 label: "Æ ORANGEBOX",
-                hint: "v6.0.0 · native cockpit · $1",
+                hint: "v6.1.0 Agent Mode · FREE 7 days",
               },
               {
                 href: "/skilski",
@@ -96,15 +96,11 @@ export function Header() {
           <NavLink href="/account">Account</NavLink>
         </nav>
 
-        {/* Right rail: top-right Æ badge + LAB status chip.
-            Removed the product-specific v6.0.0 LIVE chip — the global
-            header is lab-grade, not product-grade. ORANGEBOX version
-            badges live on /orangebox and inside the cockpit. */}
+        {/* Right rail: Æ badge only.
+            LAB · ONLINE signal moved to LabTicker (site-wide bottom ticker).
+            Removing the chip here keeps the header peer-grade with
+            Anthropic / OpenAI / xAI wordmark-only headers. */}
         <div className="hidden items-center gap-2 md:flex">
-          <span className="inline-flex items-center gap-1.5 rounded-md border border-[#22F0D5]/40 bg-black px-2 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-            <span className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
-            LAB · ONLINE
-          </span>
           <span
             aria-label="ÆoNs mark"
             className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[#22F0D5]/50 bg-black/70 shadow-[0_0_18px_rgba(34,240,213,0.35)]"

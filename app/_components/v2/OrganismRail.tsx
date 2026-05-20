@@ -21,6 +21,7 @@ type OrgCard = {
   href: string;
   accentColor: string;
   borderColor: string;
+  cta: string;
   comingSoon?: boolean;
 };
 
@@ -30,30 +31,33 @@ const ORGANISMS: OrgCard[] = [
     name: "ÆoNs Research",
     description: "12 manuscripts. CC-BY 4.0. Dual-format.",
     detail:
-      "Academic + plain-English. Topological defects, solar information transfer, spiral reasoning. Open science from one operator.",
+      "Academic + plain-English summaries side by side. Topological defects, solar information transfer, spiral reasoning. Open science from one operator.",
     href: "/research/about",
     accentColor: "#22F0D5",
     borderColor: "border-[#22F0D5]/40",
+    cta: "Read the papers",
   },
   {
     label: "ORANGEBOX",
     name: "ORANGEBOX",
-    description: "The cockpit. One file. Double-click. 2 seconds.",
+    description: "The native AI cockpit. One file. Two-second launch.",
     detail:
-      "Native binary. 4.46 MB. 11 lanes. Claude + GPT + Gemini + Groq LPUs + Ollama + OpenRouter. $1 ladder. No subscription, ever.",
+      "Rust + egui. 11 lanes. Agent Mode v6.1.0 with 9 real tools. Claude + GPT + Gemini + Groq + Ollama + OpenRouter behind one router. $1 once · FREE first 7 days.",
     href: "/orangebox",
     accentColor: "#FF7A1A",
     borderColor: "border-[#FF7A1A]/40",
+    cta: "Get ORANGEBOX",
   },
   {
     label: "SKIL.SKI",
     name: "skil.ski",
-    description: "Operator-class skill registry. 200+ skills indexed.",
+    description: "Operator-class skill registry.",
     detail:
-      "Ranked, searchable, ready to drop into any cockpit. Built from real operator work, not AI demos.",
+      "Skills as files — YAML + Markdown + scoring rubric. Indexed by sector. Verified before listed. Drops into ORANGEBOX or any cockpit that reads the format.",
     href: "/skilski",
     accentColor: "#F2F4F5",
     borderColor: "border-[#F2F4F5]/20",
+    cta: "Browse the registry",
   },
   {
     label: "B00KMAKOR",
@@ -63,6 +67,7 @@ const ORGANISMS: OrgCard[] = [
     href: "/b00kmakor",
     accentColor: "#6B7779",
     borderColor: "border-[#1A2225]",
+    cta: "Join the waitlist",
     comingSoon: true,
   },
 ];
@@ -123,12 +128,12 @@ export function OrganismRail() {
                 {org.detail}
               </p>
 
-              {/* link arrow */}
+              {/* specific link affordance — each card uses its own verb */}
               <span
                 className="mt-5 inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.22em] transition-colors group-hover:text-[#F2F4F5]"
                 style={{ color: org.accentColor }}
               >
-                Enter{" "}
+                {org.cta}{" "}
                 <span className="transition-transform group-hover:translate-x-1">
                   →
                 </span>

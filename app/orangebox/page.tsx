@@ -1,70 +1,76 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { HeroPreview } from "../_components/v6-3/HeroPreview";
-import { TheThesis } from "../_components/v6-3/TheThesis";
-import { PrincipleBlock } from "../_components/v6-3/PrincipleBlock";
-import { NewBehaviors } from "../_components/v6-3/NewBehaviors";
-import { TheLanes } from "../_components/v6-3/TheLanes";
-import { TheMCPFabric } from "../_components/v6-3/TheMCPFabric";
-import { TheLivingLayer } from "../_components/v6-3/TheLivingLayer";
-import { TheBinary } from "../_components/v6-3/TheBinary";
-import { TheConnections } from "../_components/v6-3/TheConnections";
-import { TheCrews } from "../_components/v6-3/TheCrews";
-import { TheGovernance } from "../_components/v6-3/TheGovernance";
-import { TheReceipts } from "../_components/v6-3/TheReceipts";
+import { BuyButton } from "../_components/BuyButton";
+import { DynamicPrice } from "../_components/DynamicPrice";
+import { SalesCounterV5 } from "../_components/v5/SalesCounterV5";
+import { AgentModeHero } from "../_components/v6-1/AgentModeHero";
+import { LaneGrid } from "../_components/v6-1/LaneGrid";
+import { TabCompleteDemo } from "../_components/v6-1/TabCompleteDemo";
+import { RepoIndexerBlock } from "../_components/v6-1/RepoIndexerBlock";
+import { BackgroundJobsBlock } from "../_components/v6-1/BackgroundJobsBlock";
+import { ProvidersBlock } from "../_components/v6-1/ProvidersBlock";
+import { IncumbentTable } from "../_components/v6-1/IncumbentTable";
+import { ReceiptsTaxonomy } from "../_components/v6-1/ReceiptsTaxonomy";
 import { WhatStillStands } from "../_components/v6-3/WhatStillStands";
 import { ExistingBuyerNote } from "../_components/v6-3/ExistingBuyerNote";
 import { NotifyMeAnchor } from "../_components/v6-3/NotifyMeAnchor";
 
 /**
- * /orangebox — v6.3 "Silent Canvas" full showcase.
+ * /orangebox — ORANGEBOX Command v6.1.0 "Agent Mode" — product page.
  *
- * SALES PAUSED. The page leads with the CONCEPTS — paradigm shift,
- * principles, behaviors, organism layer, substrate, crews, receipts —
- * because the operator's instruction is to sell the rewrite by its
- * ideas, not by its version number. Every section is concept-first.
+ * The page is the full feature inventory of the live ship: native binary,
+ * 11+1 lanes, Agent Mode tool loop, repo indexer, tab autocomplete,
+ * background queue, multi-model providers, 20 receipt sources, honest
+ * comparison table vs Cursor/Codex/Claude Code, and the v6.3 Silent
+ * Canvas preview demoted to a single "what's next" section.
  *
- * Existing v6.0 buyers continue to receive v6.3 free under license §4A.
- * The v6.0 funnel components in app/_components/v5/ remain on disk.
+ * Pricing canon (2026-05-20): $1 once forever. FREE first 7 days of
+ * the public launch window. The $1 ladder is retired. Forward buyers
+ * grandfathered under §4A.
  *
- * IP boundary (mirrors round 2 audit) holds across all 12 sections:
- *   PUBLISH:  Silent Canvas, v6.3 framing, 6 named behaviors, 6
- *             publishable principles, license §4A, BYO + local-first,
- *             department NAMES (already public in llms.txt), trust
- *             gradient CONCEPT (no thresholds), Hermes substrate,
- *             Subscription-First Transport, Connector Fabric, n8n,
- *             receipts JSONL schema (already public in v6.0 doctrine),
- *             living layer feature NAMES (Breathing Canvas, Night Watch,
- *             Organism Health HUD, Voice Latency Stopwatch).
- *   NEVER:    Relevance Controller spec, 7 state sources, 5-schema
- *             validator breakdown, AE# enumeration with model
- *             assignments, trust gradient THRESHOLDS (30/100 numbers),
- *             phase map day counts, cost math, trilane structure,
- *             17th HSMP mutation kind, internal model assignments.
+ * Voice: premium marketing-grade (peer of anthropic.com / openai.com /
+ * x.ai / microsoft.com). Numbers and benchmarks carry the visual proof.
+ *
+ * IP boundary (mirrors round 3):
+ *   PUBLISH — 9 agent tools verbatim, repo benchmark 303/1533/6.7s,
+ *             20 receipt sources, 60/60 smoke pass, 4.98 MB binary +
+ *             sha256 prefix, Anthropic alpha wired (adaptive thinking,
+ *             advisor tool, memory tool, files API, citations API,
+ *             prompt caching, 1h cache TTL, compaction, structured
+ *             outputs), 11 lanes + Agent #12, 9 moats, 4 SKUs,
+ *             security features, anti-saas posture.
+ *   TEASE   — "11 new API endpoints" (no path list), "intelligent cache
+ *             strategy" (no multi-breakpoint detail), "smart model
+ *             router" (no 10x3 matrix), Trilane "three models, you
+ *             vote" (NEVER name GPT > Gemini > Claude authority).
+ *   NEVER   — Relevance Controller spec, AE# model assignments, trust
+ *             gradient thresholds, phase map day counts, MD5 cache key
+ *             construction, 17th HSMP mutation kind.
  */
 
 export const metadata: Metadata = {
-  title: "ORANGEBOX v6.3 — Silent Canvas | AtomEons",
+  title:
+    "ORANGEBOX v6.1.0 Agent Mode — native AI cockpit · $1 once, FREE 7 days",
   description:
-    "ORANGEBOX v6.3 'Silent Canvas' — the cockpit stopped talking, the canvas started. Six new behaviors, four substrate layers, fourteen departments, every action receipt-backed. Sales paused while the lab ships. v6.0 buyers get v6.3 free under license §4A. Notify-me list open.",
+    "ORANGEBOX Command v6.1.0 Agent Mode. The native AI cockpit with multi-turn agent loop (9 real tools), tab autocomplete, repo indexer, background job queue, 11 lanes, 60+ MCP tools, multi-model routing (Claude + GPT + Gemini + Groq + Ollama + OpenRouter), 20 receipt sources. Rust + egui, 4.98 MB binary. $1 once, forever. FREE first 7 days of launch.",
   alternates: { canonical: "https://atomeons.com/orangebox" },
   openGraph: {
-    title: "ORANGEBOX v6.3 — Silent Canvas",
+    title: "ORANGEBOX v6.1.0 Agent Mode — native AI cockpit",
     description:
-      "The cockpit stopped talking. The canvas started. Six new behaviors, four substrate layers, fourteen departments. v6.3 in build · sales paused · v6.0 buyers locked free under §4A.",
+      "Native AI cockpit. Multi-turn agent loop with 9 real tools. 11 lanes. Multi-model routing. 20 receipt sources. Rust + egui. $1 once, FREE first 7 days.",
     url: "https://atomeons.com/orangebox",
     siteName: "AtomEons",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ORANGEBOX v6.3 — Silent Canvas",
+    title: "ORANGEBOX v6.1.0 Agent Mode",
     description:
-      "The cockpit stopped talking. The canvas started. v6.3 in build · sales paused · v6.0 buyers locked free.",
+      "Native AI cockpit. 9-tool agent loop, tab autocomplete, repo indexer, 11 lanes, 20 receipt sources. $1 once · FREE 7 days.",
   },
 };
 
-export default function OrangeBoxPreview() {
+export default function OrangeBox() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
       {/* breadcrumb */}
@@ -73,98 +79,107 @@ export default function OrangeBoxPreview() {
           <Link href="/" className="hover:text-[#22F0D5]">
             AtomEons
           </Link>{" "}
-          <span className="text-[#1A2225]">/</span> ORANGEBOX · v6.3 Silent
-          Canvas · preview
+          <span className="text-[#1A2225]">/</span> ORANGEBOX · v6.1.0 Agent
+          Mode · LIVE
         </p>
       </div>
 
-      {/* 1 — Hero preview (coming-soon + notify-me CTA) */}
-      <div data-cockpit-section="silent canvas">
-        <HeroPreview />
-      </div>
+      {/* 1 — Hero: v6.1.0 Agent Mode, $1 + free 7 days, sha256 */}
+      <section className="relative isolate overflow-hidden bg-black py-24 md:py-32">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(60% 50% at 50% 40%, rgba(255,122,26,0.10) 0%, transparent 65%)",
+          }}
+        />
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6">
+          <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::ORANGEBOX COMMAND · v6.1.0 · AGENT MODE · LIVE 2026-05-17
+          </p>
+          <h1 className="text-balance text-5xl font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] md:text-7xl lg:text-8xl">
+            The native AI cockpit.
+            <br />
+            <span className="text-[#FF7A1A]">One file.</span>{" "}
+            <span className="text-[#22F0D5]">Two seconds.</span>
+          </h1>
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-[#9BA5A7] md:text-xl">
+            A Rust + egui binary. 4.98 MB. Eleven lanes. A multi-turn agent
+            loop with nine real tools. Tab autocomplete. Repo indexer.
+            Background job queue. Multi-model routing across Claude, GPT,
+            Gemini, Groq, Ollama, and OpenRouter — your keys, zero markup.
+            Sixty smoke tests passed. Twenty receipt sources written to disk.
+            Yours, not theirs.
+          </p>
 
-      {/* 2 — The thesis (what actually changes — concept first, mechanism never) */}
-      <div data-cockpit-section="thesis">
-        <TheThesis />
-      </div>
+          <div
+            id="buy"
+            className="mt-12 grid gap-8 md:grid-cols-[1fr_320px] md:items-start"
+          >
+            <div>
+              <DynamicPrice variant="stacked" showUrgency className="" />
+              <p className="mt-4 max-w-md font-mono text-[10px] uppercase tracking-[0.18em] text-[#FF7A1A]">
+                $1 once · forever. FREE first 7 days of public launch.
+                Forward buyers locked under license §4A.
+              </p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <BuyButton />
+              <SalesCounterV5 />
+              <div className="rounded-lg border border-[#1A2225] bg-[#0A0F11] px-4 py-3">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+                  ::v6.1.0 build receipt
+                </p>
+                <p className="mt-2 font-mono text-[10px] text-[#9BA5A7]">
+                  binary: 4.98 MB · zip: 35 MB · smoke 60/60
+                </p>
+                <p className="mt-1 break-all font-mono text-[10px] text-[#22F0D5]/70">
+                  sha256: 4b1c857b6c7ddf5b…0d07bf48e
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* 3 — Six publishable principles (positive doctrine) */}
-      <div data-cockpit-section="principles">
-        <PrincipleBlock />
-      </div>
+      {/* 2 — Eleven lanes + Agent #12 (NEW v6.1.0) */}
+      <LaneGrid />
 
-      {/* 4 — Six new behaviors (Solidify, Z-Axis Rewind, Pulse Ring,
-              Living Canvas, Freeze All, Multi-Canvas Tabs) */}
-      <div data-cockpit-section="behaviors">
-        <NewBehaviors />
-      </div>
+      {/* 3 — Agent Mode hero: 9 real tools + live log mock */}
+      <AgentModeHero />
 
-      {/* 5 — Eleven cockpit lanes (concrete product surface). Per
-              orange-judge: load-bearing. First concrete picture of what
-              the operator is buying after the behavior abstractions. */}
-      <div data-cockpit-section="lanes">
-        <TheLanes />
-      </div>
+      {/* 4 — Tab autocomplete (Cursor-killer) */}
+      <TabCompleteDemo />
 
-      {/* 6 — MCP fabric. The integration story. 60+ tools, categorized,
-              wired at install. Lands right after the lanes that use them. */}
-      <div data-cockpit-section="mcp fabric">
-        <TheMCPFabric />
-      </div>
+      {/* 5 — Repo indexer (Cursor's secret, made local) */}
+      <RepoIndexerBlock />
 
-      {/* 7 — The living layer (Breathing Canvas, Night Watch, Health HUD,
-              Voice Latency Stopwatch) */}
-      <div data-cockpit-section="living layer">
-        <TheLivingLayer />
-      </div>
+      {/* 6 — Background job queue (Codex-parallel) */}
+      <BackgroundJobsBlock />
 
-      {/* 8 — The native binary. Per orange-judge: load-bearing kill of
-              the "is this a webview app?" objection. Per engine-platform:
-              Rust + egui ONLY (no Tauri 2.x claim, no 4.46 MB number
-              until verified by v6.3 build receipt). */}
-      <div data-cockpit-section="binary">
-        <TheBinary />
-      </div>
+      {/* 7 — Providers supported (Anthropic + OpenAI + Google + Groq +
+              Ollama + OpenRouter + Hermes + Whisper.cpp local) */}
+      <ProvidersBlock />
 
-      {/* 9 — The substrate (Hermes, Subscription-First Transport,
-              Connector Fabric, embedded n8n) */}
-      <div data-cockpit-section="substrate">
-        <TheConnections />
-      </div>
+      {/* 8 — Honest comparison table vs Cursor / Codex / Claude Code */}
+      <IncumbentTable />
 
-      {/* 10 — Departmental crews + trust gradient + human final stop */}
-      <div data-cockpit-section="departments">
-        <TheCrews />
-      </div>
+      {/* 9 — Receipts taxonomy: 20 sources, two new in v6.1.0 */}
+      <ReceiptsTaxonomy />
 
-      {/* 11 — Governance layer. Per orange-judge: load-bearing safety
-              case for any serious buyer. 27 guardrails + 9-gate chain
-              (Gate 0 = LBCE, all public) + Human Final Stop. */}
-      <div data-cockpit-section="governance">
-        <TheGovernance />
-      </div>
+      {/* 10 — Anti-saas posture: what doesn't change (license §4A, BYO,
+              local-first). Reused from v6-3 surface. */}
+      <WhatStillStands />
 
-      {/* 12 — Receipts doctrine + JSONL schema sample */}
-      <div data-cockpit-section="receipts">
-        <TheReceipts />
-      </div>
+      {/* 11 — Existing v6.0 buyer note: §4A free-upgrade signal */}
+      <ExistingBuyerNote />
 
-      {/* 13 — What doesn't change between v6.0 and v6.3 */}
-      <div data-cockpit-section="invariants">
-        <WhatStillStands />
-      </div>
+      {/* 12 — v6.3 Silent Canvas preview · what's next (single section,
+              not the spine) */}
+      <NotifyMeAnchor />
 
-      {/* 14 — Existing v6.0 buyer §4A free-upgrade message */}
-      <div data-cockpit-section="existing buyers">
-        <ExistingBuyerNote />
-      </div>
-
-      {/* 15 — Dedicated mid-page notify-me anchor (also page close) */}
-      <div data-cockpit-section="notify me">
-        <NotifyMeAnchor />
-      </div>
-
-      {/* JSON-LD — Software preview state */}
+      {/* JSON-LD — v6.1.0 SoftwareApplication */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -179,7 +194,7 @@ export default function OrangeBoxPreview() {
                   "ORANGEBOX",
                   "ORANGEBOX OS",
                   "AtomEons ORANGEBOX",
-                  "Silent Canvas",
+                  "Agent Mode",
                 ],
                 applicationCategory: [
                   "DeveloperApplication",
@@ -187,15 +202,15 @@ export default function OrangeBoxPreview() {
                   "ProductivityApplication",
                 ],
                 operatingSystem: "Windows 10, Windows 11",
-                softwareVersion: "6.3.0-alpha (in build)",
+                softwareVersion: "6.1.0",
                 releaseNotes:
-                  "v6.3 'Silent Canvas' — the cockpit stops narrating; the canvas shows the work. Six new behaviors: Solidify (one-command production ship), Z-Axis Rewind (visual time-travel), Pulse Ring (2.5s action feedback), Living Canvas (idle pulse + usage heatmap), Freeze All (Ctrl+. global kill), Multi-Canvas Tabs (parallel projects, one cockpit). Plus the living layer (Breathing Canvas, Night Watch, Organism Health HUD, Voice Latency Stopwatch), four substrate layers (Hermes multi-channel delivery, Subscription-First Transport, Connector Fabric, embedded n8n), fourteen departmental crews with trust-gradient promotion, and receipt-backed audit on every action. v6.0 buyers receive v6.3 free under license §4A forward-buyers lock.",
+                  "v6.1.0 'Agent Mode' — multi-turn tool-using agent loop with nine real tools (read_file, write_file, edit_file, grep, glob, list_dir, run_cmd, vault_search, finish). Tab autocomplete with Haiku 4.5 (30s cache). Repo indexer (303 files / 1,533 symbols / 6.7s benchmark). Background job queue (LRU 100, cancel tokens). Twenty receipt sources. 60/60 smoke pass. 4.98 MB Rust + egui native binary, 35 MB portable zip.",
                 url: "https://atomeons.com/orangebox",
                 description:
-                  "ORANGEBOX v6.3 Silent Canvas — full showcase. The cockpit stops narrating; the canvas shows the work. Local-first, native binary, BYO keys, zero markup. v6.0 buyers receive v6.3 free under license §4A.",
+                  "ORANGEBOX Command v6.1.0 — native AI cockpit with multi-turn agent loop, tab autocomplete, repo indexer, background queue. 11 lanes, multi-model routing (Claude + GPT + Gemini + Groq + Ollama + OpenRouter), 20 receipt sources, BYO keys, zero token markup. $1 once, FREE first 7 days.",
                 offers: {
                   "@type": "Offer",
-                  availability: "https://schema.org/PreOrder",
+                  availability: "https://schema.org/InStock",
                   price: "1",
                   priceCurrency: "USD",
                   url: "https://atomeons.com/orangebox",
@@ -224,7 +239,7 @@ export default function OrangeBoxPreview() {
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: "ORANGEBOX v6.3 Silent Canvas",
+                    name: "ORANGEBOX v6.1.0 Agent Mode",
                     item: "https://atomeons.com/orangebox",
                   },
                 ],

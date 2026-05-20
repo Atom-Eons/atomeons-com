@@ -84,9 +84,8 @@ export function MobileNav() {
                   ÆoNs · Research
                 </span>
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-md border border-[#22F0D5]/40 bg-black px-2 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-                <span className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
-                LAB · ONLINE
+              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+                Marco Island · FL
               </span>
             </div>
 

@@ -120,12 +120,13 @@ export async function POST(req: Request) {
       cancel_url: `${origin}/cancel`,
       metadata: {
         product: "orangebox",
-        version: "v6.0.0",
+        version: "v6.1.0",
         price_cents: String(price.priceCents),
         price_dollars: String(price.priceDollars),
-        tier: String(price.tier),
+        is_free_promo: String(price.isFreePromo),
+        promo_ends_at: price.promoEndsAt,
         buyer_number: String(price.netBuyers + 1),
-        pricing_law: "ladder_every_100_plus_1",
+        pricing_law: "$1_forever_free_first_7_days",
       },
     });
 
