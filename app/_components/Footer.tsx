@@ -80,7 +80,7 @@ export function Footer() {
           <div className="space-y-1">
             <p>© 2026 AtomEons Systems Laboratory · Atom McCree · Marco Island, FL</p>
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              one operator · one cockpit · v6.0.0 LIVE
+              independent AI research · one operator · LAB ONLINE
             </p>
           </div>
           <p className="flex items-center gap-3">

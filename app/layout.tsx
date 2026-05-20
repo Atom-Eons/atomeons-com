@@ -13,24 +13,29 @@ import { CockpitFrame } from "./_components/v2/CockpitFrame";
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
   title: {
-    default: "ORANGEBOX v6.0.0 — the AI cockpit you own.",
+    // Site-wide default: lab-grade, not product-grade. Each route
+    // (/orangebox, /research/*, /founders-view, /intel/*, /press) sets
+    // its own title and inherits this template suffix.
+    default: "AtomEons — Independent AI Systems Laboratory.",
     template: "%s | AtomEons",
   },
   description:
-    "ORANGEBOX Command v6.0.0 — the AI cockpit you own. 60+ MCP tools. Mission-graph memory that survives every context reset. Swap claude / gpt / gemini / ollama mid-session. Local-first. Zero telemetry. $1 once, forever.",
+    "AtomEons Systems Laboratory. Marco Island, Florida. One operator. Twelve research manuscripts (CC-BY 4.0), the ORANGEBOX cockpit, a nightly broadcast at 8pm ET, live intel surfaces, the skil.ski registry. Independent research and built tools, shipped from outside the cartel.",
   openGraph: {
-    title: "ORANGEBOX v6.0.0 — the AI cockpit you own.",
+    title: "AtomEons — Independent AI Systems Laboratory.",
     description:
-      "60+ MCP tools · mission-graph memory · swap-lane router · local-first · zero telemetry · $1 once, forever.",
+      "Independent AI research and built tools. Twelve papers · the ORANGEBOX cockpit · nightly broadcast · alpha intel · skil.ski. One operator, Marco Island.",
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ORANGEBOX v6.0.0 — the AI cockpit you own.",
+    title: "AtomEons — Independent AI Systems Laboratory.",
     description:
-      "60+ MCP tools · mission-graph memory · swap-lane router · local-first · $1 once, forever.",
+      "Independent AI research + built tools. Papers, cockpit, nightly broadcast, alpha intel. One operator, Marco Island.",
+    creator: "@AtomMccree",
+    site: "@AtomMccree",
   },
   robots: { index: true, follow: true },
 };

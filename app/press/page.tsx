@@ -9,8 +9,9 @@ export const metadata = {
 };
 
 const FACTS = [
+  ["Lab", "AtomEons Systems Laboratory · Independent AI research"],
   ["Product", "ORANGEBOX Command v6.0.0"],
-  ["Tagline", "The AI cockpit you own."],
+  ["Product tagline", "Local-first AI cockpit. BYO keys. Zero markup."],
   ["Launch", "May 17, 2026 — midnight ET (04:00 UTC)"],
   ["Price", "$1 once, forever — no subscription, ever"],
   ["License", "Personal · full source included · §4A anti-SaaS lock"],
