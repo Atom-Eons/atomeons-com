@@ -7,6 +7,17 @@ export const metadata = {
   description:
     "Twelve ÆoNs Research manuscripts (April 2026). Bioelectric oncology, gut-brain mislabel hypothesis, solar information transfer, topological field theory of self-modifying systems, light code DNA version control. Each paper carries an academic abstract and a plain-language summary for non-scientists.",
   alternates: { canonical: "https://atomeons.com/research/papers" },
+  openGraph: {
+    title: "Research Papers — ÆoNs Research",
+    description:
+      "12 manuscripts · April 2026 · CC-BY 4.0 · academic + plain-language summaries side-by-side.",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Research Papers — ÆoNs Research",
+    description: "12 manuscripts · April 2026 · CC-BY 4.0",
+  },
 };
 
 const summarized = PAPERS.filter((p) => p.status === "summarized");

@@ -1,12 +1,70 @@
 import Link from "next/link";
+import { PressMediaKit } from "./PressMediaKit";
 
 export const metadata = {
-  title: "Press kit — ORANGEBOX v6.0.0",
+  title: "Press kit — AtomEons Systems Laboratory",
   description:
-    "Press kit for ORANGEBOX Command v6.0.0. Quotes, screenshots, founder bio, story angles, downloadable assets, and direct founder contact. Launched May 17, 2026. $1 once, forever — no subscription, ever.",
+    "AtomEons Systems Laboratory press kit. Coverage of the total effort: ÆoNs Research (12 papers · Lessons From Sci-Fi monograph), ORANGEBOX Command v6.0.0 ($1 desktop AI cockpit), skil.ski (skill marketplace), /intel (decoded primary-source drops), The Founder's View (nightly 8pm ET broadcast). Solo independent lab. Marco Island, FL. Quotes, story angles, downloadable assets, direct founder contact.",
   alternates: { canonical: "https://atomeons.com/press" },
   robots: { index: true, follow: true },
 };
+
+// ──────────────────────────────────────────────────────────────────
+// THE LAB IN 2026 — total-effort framing.
+// Each row is a SHIPPED surface, not a roadmap. Press leads here
+// before any single-product story.
+// ──────────────────────────────────────────────────────────────────
+
+const LAB_SURFACES = [
+  {
+    pillar: "RESEARCH",
+    name: "ÆoNs Research",
+    blurb:
+      "12 peer-ready manuscripts (April 2026). CC-BY 4.0. Bioelectric oncology, gut–brain mislabel, solar information transfer, topological field theory, light-code DNA version control. Each paper carries an academic abstract AND a kid/grandma plain-language summary.",
+    href: "/research/papers",
+    accent: "#22F0D5",
+  },
+  {
+    pillar: "RESEARCH",
+    name: "Lessons From Sci-Fi · The Monograph",
+    blurb:
+      "38-page comprehensive analytical survey of AI in film & television, 1927 → 2024. 13 chapters · 7 epochs · 5-dimension taxonomy · 6 alignment failure modes · 200+ screen texts indexed. Embedded scene clips at every inflection point. Prepared for Atom · Compiled by Claude (Anthropic) · April 2026.",
+    href: "/research/lessons-from-sci-fi/monograph",
+    accent: "#22F0D5",
+  },
+  {
+    pillar: "USE AI",
+    name: "ORANGEBOX Command v6.1.0",
+    blurb:
+      "Local-first desktop AI cockpit. Rust + egui. 11 lanes. Agent Mode with 9 real tools. Swap-lane routing across Claude / GPT / Gemini / Groq / Ollama / OpenRouter. JSONL receipts on disk. $1 once · FREE first 7 days. License §4A legally bans switching to monthly billing.",
+    href: "/orangebox",
+    accent: "#FF7A1A",
+  },
+  {
+    pillar: "MAKE MONEY",
+    name: "skil.ski",
+    blurb:
+      "Skill marketplace delivered via MCP. Verified-skill SKU. The standard-setter rubric for what a real, productionizable AI skill looks like. Built by an indie lab, sold to enterprise.",
+    href: "/skilski",
+    accent: "#F2F4F5",
+  },
+  {
+    pillar: "KNOW THE TRUTH",
+    name: "/intel — X Algorithm Alpha",
+    blurb:
+      "Decoded primary-source drops, not aggregated headlines. The May 15 2026 xAI leak with operator-grade extensions. The lab reads the actual code that ships and writes back what it means.",
+    href: "/intel/x-algorithm",
+    accent: "#F2F4F5",
+  },
+  {
+    pillar: "KNOW THE TRUTH",
+    name: "The Founder's View",
+    blurb:
+      "Nightly broadcast at 8pm ET. No-punches-pulled letter from the lab on real events. Editorial satire. Equal-opportunity indignation. Subscribe by bookmark.",
+    href: "/founders-view",
+    accent: "#FF7A1A",
+  },
+];
 
 const FACTS = [
   ["Lab", "AtomEons Systems Laboratory · Independent AI research"],
@@ -166,17 +224,20 @@ export default function Press() {
       {/* HERO */}
       <section className="mx-auto w-full max-w-6xl px-6 py-24">
         <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
-          ::electronic press kit · v6.0.0 launch
+          ::electronic press kit · the lab in 2026
         </p>
         <h1 className="text-balance text-5xl font-medium leading-[1.02] tracking-[-0.02em] md:text-7xl">
           For journalists,
           <br />
-          <span className="text-[#22F0D5]">covering ORANGEBOX.</span>
+          <span className="text-[#22F0D5]">covering the lab.</span>
         </h1>
         <p className="mt-8 max-w-3xl text-lg leading-relaxed text-[#9BA5A7]">
-          Press release, quotes, story angles, downloadable assets,
-          copy-pastable post bodies for HN / PH / DEV / Reddit, and direct
-          founder contact. All in one place. No gatekeeping.
+          AtomEons Systems Laboratory is one solo independent AI lab in
+          Marco Island, Florida — running across four pillars: ÆoNs
+          Research, the ORANGEBOX cockpit, skil.ski, and the /intel +
+          Founder&apos;s View broadcast surfaces. Press release, quotes,
+          story angles, downloadable assets, copy-pastable post bodies,
+          and direct founder contact below. No gatekeeping. No PR layer.
         </p>
 
         {/* direct contact card */}
@@ -215,6 +276,49 @@ export default function Press() {
           <p className="mt-5 border-t border-[#1A2225] pt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
             embargo: none · launch is public the moment you publish
           </p>
+        </div>
+      </section>
+
+      {/* MEDIA KIT — copy-pasteable boilerplate, pitch, bio, hero image,
+            downloadable assets row, honest coverage feed, interview
+            protocol cards. Operator directive 2026-05-21: "press page
+            go real grade all." */}
+      <PressMediaKit />
+
+      {/* TOTAL EFFORT — the lab in 2026 across all four pillars.
+            Press leads here before any single-product story. */}
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+        <h2 className="mb-2 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
+          ::the total effort · what the lab has shipped
+        </h2>
+        <p className="mb-10 max-w-3xl text-sm text-[#6B7779] md:text-base">
+          Six live surfaces across four pillars. All shipped by one
+          operator. Marco Island, FL. April–May 2026.
+        </p>
+        <div className="grid gap-4 md:grid-cols-2">
+          {LAB_SURFACES.map((s) => (
+            <Link
+              key={s.name}
+              href={s.href}
+              className="group flex flex-col rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40"
+            >
+              <p
+                className="font-mono text-[10px] uppercase tracking-[0.28em]"
+                style={{ color: s.accent }}
+              >
+                {s.pillar}
+              </p>
+              <h3 className="mt-2 text-lg font-medium text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-xl">
+                {s.name}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-[#9BA5A7]">
+                {s.blurb}
+              </p>
+              <span className="mt-5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                {s.href} →
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -386,12 +490,12 @@ export default function Press() {
             ::transparency · for fact-checkers
           </p>
           <p className="mt-3 text-sm leading-relaxed text-[#9BA5A7]">
-            AtomEons publishes a public{" "}
+            AtomEons publishes a public working journal at{" "}
             <Link
-              href="/mistakes"
+              href="/founders-view"
               className="text-[#22F0D5] hover:underline"
             >
-              mistake ledger
+              The Founder&apos;s View
             </Link>
             . Every refund, every shipped bug, every wrong call gets logged.
             Live sales counter on the home page reads from Stripe. No vanity

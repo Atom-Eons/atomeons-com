@@ -33,14 +33,7 @@ export default function NotFound() {
       </p>
 
       <p className="mt-6 max-w-xl text-pretty text-[#a7b8ad]">
-        If a real link broke us getting you here, that becomes a row on{" "}
-        <Link
-          href="/mistakes"
-          className="text-[#22F0D5] underline-offset-4 hover:underline"
-        >
-          the Mistakes Ledger
-        </Link>
-        . Email{" "}
+        If a real link broke getting you here, email{" "}
         <a
           href="mailto:a.mccree@gmail.com?subject=404%20on%20atomeons.com"
           className="text-[#22F0D5] underline-offset-4 hover:underline"

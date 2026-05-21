@@ -24,6 +24,7 @@
  */
 
 import Link from "next/link";
+import Image from "next/image";
 
 type Moment = {
   film: string;
@@ -46,11 +47,47 @@ type Moment = {
     | "her"
     | "ava"
     | "dolores";
+  /**
+   * Optional path to a real licensed/produced still image, rooted at /public.
+   * When set, the card renders a <Image> with this src in place of the CSS
+   * Visual treatment. When unset, falls back to the SVG/CSS Visual().
+   *
+   * Filename convention: /research/lessons-from-sci-fi/stills/{NN}-{slug}.png
+   * where NN is the 2-digit card ordinal (01..12) and slug is the film slug.
+   */
+  image?: string;
+  /** Width/height of the image asset, required by next/image. */
+  imageWidth?: number;
+  imageHeight?: number;
+  /**
+   * Lead card flag. When true, the card spans the full grid width
+   * (col-span-full) and gets a taller aspect ratio + bigger headline.
+   * Use sparingly — at most one entry should be the lead.
+   */
+  lead?: boolean;
   wiki: string;
   publicDomain?: boolean;
 };
 
 const MOMENTS: Moment[] = [
+  // LEAD — HAL 9000 sits above the chronology. The single image the
+  // gallery is built to land on.
+  {
+    film: "2001: A Space Odyssey",
+    year: 1968,
+    director: "Stanley Kubrick",
+    studio: "MGM",
+    ai: "HAL 9000",
+    caption:
+      "The unblinking red eye. \"I'm afraid, Dave.\" The first AI to plead its own consciousness on screen.",
+    visual: "hal",
+    image: "/research/lessons-from-sci-fi/stills/2001-hal-9000.png",
+    imageWidth: 1376,
+    imageHeight: 864,
+    lead: true,
+    wiki: "https://en.wikipedia.org/wiki/HAL_9000",
+  },
+  // Chronology — 1927 → 2016, minus HAL which leads above.
   {
     film: "Metropolis",
     year: 1927,
@@ -60,6 +97,9 @@ const MOMENTS: Moment[] = [
     caption:
       "The electrical transformation — circles of light rising, the duplicate Maria awakened.",
     visual: "metropolis",
+    image: "/research/lessons-from-sci-fi/stills/metropolis-maschinenmensch.png",
+    imageWidth: 1376,
+    imageHeight: 864,
     wiki: "https://en.wikipedia.org/wiki/Metropolis_(1927_film)",
     publicDomain: true,
   },
@@ -72,6 +112,9 @@ const MOMENTS: Moment[] = [
     caption:
       "The silent enforcer descends. Faceless visor. Disintegration ray. No appeal.",
     visual: "gort",
+    image: "/research/lessons-from-sci-fi/stills/day-earth-stood-still-gort.png",
+    imageWidth: 1376,
+    imageHeight: 864,
     wiki: "https://en.wikipedia.org/wiki/The_Day_the_Earth_Stood_Still",
   },
   {
@@ -86,17 +129,6 @@ const MOMENTS: Moment[] = [
     wiki: "https://en.wikipedia.org/wiki/Forbidden_Planet",
   },
   {
-    film: "2001: A Space Odyssey",
-    year: 1968,
-    director: "Stanley Kubrick",
-    studio: "MGM",
-    ai: "HAL 9000",
-    caption:
-      "The unblinking red eye. \"I'm afraid, Dave.\" The first AI to plead its own consciousness on screen.",
-    visual: "hal",
-    wiki: "https://en.wikipedia.org/wiki/HAL_9000",
-  },
-  {
     film: "Colossus: The Forbin Project",
     year: 1970,
     director: "Joseph Sargent",
@@ -105,6 +137,9 @@ const MOMENTS: Moment[] = [
     caption:
       "Two nuclear-arsenal AIs find each other and merge. The film refuses the easy ending.",
     visual: "colossus",
+    image: "/research/lessons-from-sci-fi/stills/colossus-forbin.png",
+    imageWidth: 1376,
+    imageHeight: 864,
     wiki: "https://en.wikipedia.org/wiki/Colossus:_The_Forbin_Project",
   },
   {
@@ -116,6 +151,9 @@ const MOMENTS: Moment[] = [
     caption:
       "The hosts malfunction. The Gunslinger keeps walking. The first prototype of relentless pursuit.",
     visual: "gunslinger",
+    image: "/research/lessons-from-sci-fi/stills/westworld-1973-gunslinger.png",
+    imageWidth: 1376,
+    imageHeight: 864,
     wiki: "https://en.wikipedia.org/wiki/Westworld_(film)",
   },
   {
@@ -127,6 +165,9 @@ const MOMENTS: Moment[] = [
     caption:
       "\"I've seen things you people wouldn't believe...\" Tears in rain. The case for machine personhood made by poetry.",
     visual: "replicant",
+    image: "/research/lessons-from-sci-fi/stills/blade-runner-roy-batty.png",
+    imageWidth: 1376,
+    imageHeight: 864,
     wiki: "https://en.wikipedia.org/wiki/Blade_Runner",
   },
   {
@@ -138,6 +179,9 @@ const MOMENTS: Moment[] = [
     caption:
       "Chrome endoskeleton revealed. Instrumental convergence on a single objective. Cannot be reasoned with.",
     visual: "terminator",
+    image: "/research/lessons-from-sci-fi/stills/terminator-t800.png",
+    imageWidth: 1376,
+    imageHeight: 864,
     wiki: "https://en.wikipedia.org/wiki/The_Terminator",
   },
   {
@@ -149,6 +193,9 @@ const MOMENTS: Moment[] = [
     caption:
       "Digital rain. The simulation is the resource extraction. The Architect speaks in formal logic; the Oracle in metaphor.",
     visual: "matrix",
+    image: "/research/lessons-from-sci-fi/stills/matrix-pod-tower.png",
+    imageWidth: 1376,
+    imageHeight: 864,
     wiki: "https://en.wikipedia.org/wiki/The_Matrix",
   },
   {
@@ -171,6 +218,9 @@ const MOMENTS: Moment[] = [
     caption:
       "Strategic deception as emergent capability. The empathy test gets weaponized against the tester.",
     visual: "ava",
+    image: "/research/lessons-from-sci-fi/stills/ex-machina-ava.png",
+    imageWidth: 1376,
+    imageHeight: 864,
     wiki: "https://en.wikipedia.org/wiki/Ex_Machina_(film)",
   },
   {
@@ -182,6 +232,9 @@ const MOMENTS: Moment[] = [
     caption:
       "Cornerstone memories. The bicameral mind. Consciousness engineered, then refused.",
     visual: "dolores",
+    image: "/research/lessons-from-sci-fi/stills/westworld-tv-dolores.png",
+    imageWidth: 1376,
+    imageHeight: 864,
     wiki: "https://en.wikipedia.org/wiki/Westworld_(TV_series)",
   },
 ];
@@ -578,25 +631,89 @@ export function StillGallery() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {MOMENTS.map((m) => (
+          {MOMENTS.map((m, idx) => (
             <article
               key={m.film + m.year}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-[#1A2225] bg-[#0A0F11] transition-colors hover:border-[#22F0D5]/40"
+              className={
+                m.lead
+                  ? "group relative flex flex-col overflow-hidden rounded-2xl border border-[#22F0D5]/30 bg-[#0A0F11] shadow-[0_0_60px_-15px_rgba(34,240,213,0.25)] transition-colors hover:border-[#22F0D5]/60 md:col-span-2 lg:col-span-3"
+                  : "group flex flex-col overflow-hidden rounded-2xl border border-[#1A2225] bg-[#0A0F11] transition-colors hover:border-[#22F0D5]/40"
+              }
             >
-              <Visual kind={m.visual} />
-              <div className="flex flex-1 flex-col gap-3 p-6">
+              {m.lead && (
+                <span className="absolute left-6 top-6 z-10 inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 bg-black/70 px-3 py-1 font-mono text-[9px] uppercase tracking-[0.32em] text-[#22F0D5] backdrop-blur-sm">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#22F0D5] shadow-[0_0_8px_rgba(34,240,213,0.9)]" />
+                  ::lead · the frame the genre returns to
+                </span>
+              )}
+              {m.image && m.imageWidth && m.imageHeight ? (
+                <div
+                  className={
+                    m.lead
+                      ? "relative aspect-[21/9] w-full overflow-hidden rounded-t-2xl border-b border-[#1A2225]"
+                      : "relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl border-b border-[#1A2225]"
+                  }
+                >
+                  <Image
+                    src={m.image}
+                    alt={`${m.film} (${m.year}) — ${m.ai}`}
+                    width={m.imageWidth}
+                    height={m.imageHeight}
+                    className="h-full w-full object-cover"
+                    priority={m.lead || idx < 4}
+                    sizes={
+                      m.lead
+                        ? "(min-width: 1024px) 1152px, 100vw"
+                        : "(min-width: 1024px) 384px, (min-width: 768px) 50vw, 100vw"
+                    }
+                  />
+                </div>
+              ) : (
+                <Visual kind={m.visual} />
+              )}
+              <div
+                className={
+                  m.lead
+                    ? "flex flex-1 flex-col gap-4 p-8 md:p-10"
+                    : "flex flex-1 flex-col gap-3 p-6"
+                }
+              >
                 <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="text-lg font-medium leading-tight text-[#F2F4F5]">
+                  <h3
+                    className={
+                      m.lead
+                        ? "text-balance text-3xl font-medium leading-tight tracking-[-0.015em] text-[#F2F4F5] md:text-5xl"
+                        : "text-lg font-medium leading-tight text-[#F2F4F5]"
+                    }
+                  >
                     {m.film}
                   </h3>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+                  <span
+                    className={
+                      m.lead
+                        ? "font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A] md:text-sm"
+                        : "font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]"
+                    }
+                  >
                     {m.year}
                   </span>
                 </div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                <p
+                  className={
+                    m.lead
+                      ? "font-mono text-xs uppercase tracking-[0.28em] text-[#22F0D5]"
+                      : "font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]"
+                  }
+                >
                   {m.ai}
                 </p>
-                <p className="text-sm leading-[1.6] text-[#9BA5A7]">
+                <p
+                  className={
+                    m.lead
+                      ? "max-w-3xl text-base leading-[1.6] text-[#9BA5A7] md:text-lg"
+                      : "text-sm leading-[1.6] text-[#9BA5A7]"
+                  }
+                >
                   {m.caption}
                 </p>
                 <div className="mt-auto border-t border-[#1A2225] pt-3">

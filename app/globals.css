@@ -78,19 +78,31 @@
 
 html,
 body {
-  background: #04100d;
+  background: #0a1a17;
   color: #f7f0e4;
   font-family: var(--font-sans);
 }
 
+/* Operator directive 2026-05-21: "too dark. needs more middly ground
+   coloration and motion of color." Base lifted from #04100d → #0a1a17,
+   bloom alphas raised, and a 40s drift added so the surface breathes
+   instead of sitting flat. Page-level `bg-black` overrides still win. */
 body {
   background:
-    radial-gradient(circle at 12% 18%, rgba(89, 217, 255, 0.10), transparent 26%),
-    radial-gradient(circle at 88% 0%, rgba(255, 122, 24, 0.10), transparent 28%),
-    linear-gradient(90deg, rgba(27, 139, 117, 0.18) 1px, transparent 1px),
-    linear-gradient(rgba(27, 139, 117, 0.14) 1px, transparent 1px),
-    #04100d;
-  background-size: auto, auto, 42px 42px, 42px 42px;
+    radial-gradient(circle at 12% 18%, rgba(89, 217, 255, 0.16), transparent 30%),
+    radial-gradient(circle at 88% 0%, rgba(255, 184, 122, 0.18), transparent 34%),
+    radial-gradient(circle at 72% 92%, rgba(117, 255, 196, 0.10), transparent 32%),
+    linear-gradient(90deg, rgba(27, 139, 117, 0.20) 1px, transparent 1px),
+    linear-gradient(rgba(27, 139, 117, 0.16) 1px, transparent 1px),
+    #0a1a17;
+  background-size: 220% 220%, 220% 220%, 220% 220%, 42px 42px, 42px 42px, 100% 100%;
+  animation: bloom-drift 40s ease-in-out infinite;
+}
+
+@keyframes bloom-drift {
+  0%, 100% { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0, 0 0, 0 0; }
+  33% { background-position: 30% 40%, 70% 20%, 80% 70%, 0 0, 0 0, 0 0; }
+  66% { background-position: 60% 20%, 30% 60%, 20% 80%, 0 0, 0 0, 0 0; }
 }
 
 body::before {
@@ -423,6 +435,7 @@ a:hover {
   [style*="atom-spin"] {
     animation: none !important;
   }
+  body,
   .pulse-ring,
   .screen-flicker,
   .glitch,

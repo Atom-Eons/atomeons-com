@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { StillGallery } from "./StillGallery";
 import { StreamingPlaylist } from "./StreamingPlaylist";
+import { CinemaClip } from "./CinemaClip";
 
 /**
  * Lessons From Sci-Fi — long-form research surface for the AE Research arm.
@@ -34,6 +35,18 @@ export const metadata = {
     type: "article",
     publishedTime: "2026-04-01T00:00:00Z",
     authors: ["Atom McCree"],
+    images: [
+      "/research/lessons-from-sci-fi/stills/2001-hal-9000.png",
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lessons From Sci-Fi — AtomEons Research",
+    description:
+      "A century of imagined machines, taxonomized. Seven epochs · 200 screen texts.",
+    images: [
+      "/research/lessons-from-sci-fi/stills/2001-hal-9000.png",
+    ],
   },
 };
 
@@ -66,6 +79,123 @@ const DIMENSIONS = [
     name: "Moral Status",
     body: "Whether the narrative grants the AI a claim to rights, dignity, suffering, or personhood — and whether human characters recognize or deny that claim.",
     accent: "#22F0D5",
+  },
+];
+
+// CLIPS — the ten scene moments the page is built to play.
+// `videoId` left null until the operator hand-verifies the canonical
+// upload. Until set, the facade falls back to a YouTube search opener
+// with `searchQuery` pre-filled.
+const CLIPS: {
+  scene: string;
+  film: string;
+  year: number;
+  duration: string;
+  posterSrc: string;
+  posterAlt: string;
+  videoId: string | null;
+  searchQuery: string;
+}[] = [
+  {
+    scene: "I'm afraid, Dave.",
+    film: "2001: A Space Odyssey",
+    year: 1968,
+    duration: "3:14",
+    posterSrc: "/research/lessons-from-sci-fi/stills/2001-hal-9000.png",
+    posterAlt: "HAL 9000 lens with astronaut in deep perspective",
+    videoId: null,
+    searchQuery: "2001 A Space Odyssey HAL 9000 deactivation Daisy scene",
+  },
+  {
+    scene: "Maschinenmensch awakens.",
+    film: "Metropolis",
+    year: 1927,
+    duration: "1:42",
+    posterSrc: "/research/lessons-from-sci-fi/stills/metropolis-maschinenmensch.png",
+    posterAlt: "Chrome humanoid with halo in art-deco cathedral",
+    videoId: null,
+    searchQuery: "Metropolis 1927 Maschinenmensch transformation false Maria",
+  },
+  {
+    scene: "Klaatu barada nikto.",
+    film: "The Day the Earth Stood Still",
+    year: 1951,
+    duration: "2:08",
+    posterSrc: "/research/lessons-from-sci-fi/stills/day-earth-stood-still-gort.png",
+    posterAlt: "Faceless chrome humanoid in white frame",
+    videoId: null,
+    searchQuery: "Day the Earth Stood Still 1951 Gort Klaatu barada nikto",
+  },
+  {
+    scene: "Two systems merge.",
+    film: "Colossus: The Forbin Project",
+    year: 1970,
+    duration: "2:45",
+    posterSrc: "/research/lessons-from-sci-fi/stills/colossus-forbin.png",
+    posterAlt: "1970s mainframe control room with green CRT screens",
+    videoId: null,
+    searchQuery: "Colossus Forbin Project 1970 contact Guardian merger scene",
+  },
+  {
+    scene: "The Gunslinger keeps walking.",
+    film: "Westworld",
+    year: 1973,
+    duration: "1:55",
+    posterSrc:
+      "/research/lessons-from-sci-fi/stills/westworld-1973-gunslinger.png",
+    posterAlt: "Black-clad android cowboy in chrome trim",
+    videoId: null,
+    searchQuery: "Westworld 1973 Gunslinger Yul Brynner pursuit scene",
+  },
+  {
+    scene: "Tears in rain.",
+    film: "Blade Runner",
+    year: 1982,
+    duration: "1:48",
+    posterSrc: "/research/lessons-from-sci-fi/stills/blade-runner-roy-batty.png",
+    posterAlt: "Dying replicant in heavy neon rain, white dove",
+    videoId: null,
+    searchQuery: "Blade Runner 1982 Roy Batty tears in rain monologue",
+  },
+  {
+    scene: "I'll be back.",
+    film: "The Terminator",
+    year: 1984,
+    duration: "2:12",
+    posterSrc: "/research/lessons-from-sci-fi/stills/terminator-t800.png",
+    posterAlt: "Chrome endoskeleton through a shattered CRT",
+    videoId: null,
+    searchQuery: "Terminator 1984 endoskeleton reveal Reese flashback",
+  },
+  {
+    scene: "Welcome to the desert of the real.",
+    film: "The Matrix",
+    year: 1999,
+    duration: "3:01",
+    posterSrc: "/research/lessons-from-sci-fi/stills/matrix-pod-tower.png",
+    posterAlt: "Vertical bio-pod tower in pink amniotic glow",
+    videoId: null,
+    searchQuery: "Matrix 1999 Neo wakes pod scene desert of the real",
+  },
+  {
+    scene: "Ava walks into sunlight.",
+    film: "Ex Machina",
+    year: 2014,
+    duration: "2:24",
+    posterSrc: "/research/lessons-from-sci-fi/stills/ex-machina-ava.png",
+    posterAlt: "Translucent humanoid figure in sunlit forest",
+    videoId: null,
+    searchQuery: "Ex Machina 2014 Ava escapes elevator ending",
+  },
+  {
+    scene: "These violent delights have violent ends.",
+    film: "Westworld (TV)",
+    year: 2016,
+    duration: "2:36",
+    posterSrc: "/research/lessons-from-sci-fi/stills/westworld-tv-dolores.png",
+    posterAlt: "Blonde woman in yellow prairie at golden hour",
+    videoId: null,
+    searchQuery: "Westworld HBO Dolores Wyatt awakening scene S1",
   },
 ];
 
@@ -606,9 +736,85 @@ export default function LessonsFromSciFi() {
       {/* TWELVE KEY MOMENTS — illustrated archive with credits */}
       <StillGallery />
 
+      {/* ─── THE TAPE — clean Vimeo-style scene player ──────────────
+            Operator directive 2026-05-21: embedded YouTube clips,
+            clean Vimeo aesthetic, "no tools but play and sound."
+            Facade pattern: posters render statically, YouTube iframe
+            only loads when a viewer hits play. Privacy preserved on
+            scroll-by. */}
+      <section className="relative bg-[#0A0F11] py-28 md:py-32">
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            the tape · ten inflection points · play to watch
+          </p>
+          <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight text-[#F2F4F5] md:text-6xl">
+            The moments,{" "}
+            <span className="bg-gradient-to-r from-[#22F0D5] via-[#7DDBC8] to-[#FFB87A] bg-clip-text text-transparent">
+              played.
+            </span>
+          </h2>
+          <p className="mt-6 max-w-2xl text-base leading-[1.7] text-[#9BA5A7] md:text-lg">
+            Each card below opens the canonical scene cited in the
+            chapter above it. Tap the play button — no YouTube branding,
+            no related-video overlay, just the moment. The iframe loads
+            only when you press play, so the page stays clean and
+            cookie-free for everyone who just reads.
+          </p>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
+            {CLIPS.map((c) => (
+              <CinemaClip key={`${c.film}-${c.year}`} {...c} />
+            ))}
+          </div>
+
+          <p className="mt-12 max-w-3xl font-mono text-[10px] uppercase tracking-[0.22em] leading-[2] text-[#6B7779]">
+            posters are original visualizations by the lab · scene
+            clips link to canonical uploads or yt-search · video frames
+            quoted under 17 U.S.C. § 107 fair-use for scholarly
+            criticism · no clip plays until you press play
+          </p>
+        </div>
+      </section>
+
       {/* STREAMING PLAYLIST — where to watch each title, free options
             flagged, JustWatch link for live availability */}
       <StreamingPlaylist />
+
+      {/* MONOGRAPH HANDOFF — the deep 38-page survey lives at /monograph */}
+      <section className="relative overflow-hidden border-y border-[#22F0D5]/30 bg-[#0A0F11] py-20 md:py-28">
+        <div className="absolute inset-0 opacity-[0.07]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/research/lessons-from-sci-fi/stills/2001-hal-9000.png"
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-black" />
+        </div>
+        <div className="relative mx-auto flex w-full max-w-6xl flex-col items-start gap-6 px-6 md:flex-row md:items-center md:justify-between md:gap-10">
+          <div className="max-w-2xl">
+            <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+              ::Read the full monograph
+            </p>
+            <h3 className="text-balance text-2xl font-medium leading-tight tracking-[-0.015em] text-[#F2F4F5] md:text-4xl">
+              The 38-page comprehensive analytical survey.
+            </h3>
+            <p className="mt-4 text-sm leading-relaxed text-[#9BA5A7] md:text-base">
+              Thirteen chapters · seven epochs · five dimensions · six
+              alignment failure modes · over two hundred screen texts.
+              Embedded scene clips at the inflection points. Prepared for
+              Atom · Compiled by Claude (Anthropic) · April 2026.
+            </p>
+          </div>
+          <a
+            href="/research/lessons-from-sci-fi/monograph"
+            className="shrink-0 rounded-full border border-[#22F0D5] bg-[#22F0D5]/15 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/30"
+          >
+            Open monograph →
+          </a>
+        </div>
+      </section>
 
       {/* SEVEN EPOCHS — long-form chapters */}
       {EPOCHS.map((e, i) => {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { AeMark } from "../../_components/AeMark";
 
 export const metadata = {
@@ -6,6 +7,24 @@ export const metadata = {
   description:
     "ÆoNs Research Laboratory / AtomEons Systems Laboratory. One independent researcher in Marco Island, FL, building unified field theories of cancer, economics, AI alignment, and astrophysics — and the cockpit that ships them.",
   alternates: { canonical: "https://atomeons.com/research/about" },
+  openGraph: {
+    title: "About — ÆoNs Research Laboratory",
+    description:
+      "One operator. One lab. One unifying field. Independent AI + frontier-science research from Marco Island, FL.",
+    type: "article",
+    images: [
+      "/research/lessons-from-sci-fi/stills/metropolis-maschinenmensch.png",
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About — ÆoNs Research Laboratory",
+    description:
+      "One operator. One lab. One unifying field. Marco Island, FL.",
+    images: [
+      "/research/lessons-from-sci-fi/stills/metropolis-maschinenmensch.png",
+    ],
+  },
 };
 
 const PILLARS = [
@@ -48,27 +67,67 @@ export default function ResearchAbout() {
         </p>
       </div>
 
-      {/* HERO */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-20 md:py-28">
-        <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
-          <AeMark size={22} glow />
-          ::ÆoNs Research Laboratory · since 2026
-        </p>
-        <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
-          One operator. <span className="text-[#22F0D5]">One lab.</span>{" "}
-          <span className="text-[#FF7A1A]">One unifying field.</span>
-        </h1>
-        <p className="mt-8 max-w-3xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
-          ÆoNs Research is the publishing arm of AtomEons Systems Laboratory —
-          a solo independent research lab run by Atom McCree out of Marco
-          Island, Florida. The thesis: cancer, financial systemic risk, AI
-          alignment failure, and the pair-instability mass gap are
-          mathematically the same kind of failure in self-modifying dynamical
-          systems. The diagnostic across all four domains is the spectral
-          entropy of the flow-weighted graph Laplacian. The invariant is the
-          topological winding number. The substrate is a sinusoidal Light
-          Code.
-        </p>
+      {/* HERO — lead image vignette (Metropolis Maschinenmensch, US PD).
+            Anchors the page visually to the research wing's flagship
+            asset set without over-using HAL (homepage already leads
+            with that frame). */}
+      <section className="relative isolate overflow-hidden">
+        <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+          <Image
+            src="/research/lessons-from-sci-fi/stills/metropolis-maschinenmensch.png"
+            alt=""
+            width={1376}
+            height={864}
+            priority
+            sizes="100vw"
+            className="h-full w-full object-cover opacity-[0.14]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-90" />
+        </div>
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-20 md:py-28">
+          <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
+            <AeMark size={22} glow />
+            ::ÆoNs Research Laboratory · since 2026
+          </p>
+          <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
+            One operator. <span className="text-[#22F0D5]">One lab.</span>{" "}
+            <span className="text-[#FF7A1A]">One unifying field.</span>
+          </h1>
+          <p className="mt-8 max-w-3xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
+            ÆoNs Research is the publishing arm of AtomEons Systems Laboratory —
+            a solo independent research lab run by Atom McCree out of Marco
+            Island, Florida. The thesis: cancer, financial systemic risk, AI
+            alignment failure, and the pair-instability mass gap are
+            mathematically the same kind of failure in self-modifying dynamical
+            systems. The diagnostic across all four domains is the spectral
+            entropy of the flow-weighted graph Laplacian. The invariant is the
+            topological winding number. The substrate is a sinusoidal Light
+            Code.
+          </p>
+
+          {/* Sub-lane chips to the rest of the research wing */}
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link
+              href="/research/papers"
+              className="rounded-full border border-[#22F0D5]/40 bg-black/60 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5] transition-colors hover:border-[#22F0D5] hover:bg-[#22F0D5]/15"
+            >
+              12 papers →
+            </Link>
+            <Link
+              href="/research/lessons-from-sci-fi"
+              className="rounded-full border border-[#1A2225] bg-black/60 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#9BA5A7] transition-colors hover:border-[#22F0D5]/60 hover:text-[#22F0D5]"
+            >
+              Lessons From Sci-Fi · gallery →
+            </Link>
+            <Link
+              href="/research/lessons-from-sci-fi/monograph"
+              className="rounded-full border border-[#1A2225] bg-black/60 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#9BA5A7] transition-colors hover:border-[#22F0D5]/60 hover:text-[#22F0D5]"
+            >
+              the 38-page monograph →
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* PILLARS */}

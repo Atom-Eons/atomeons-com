@@ -10,6 +10,18 @@ export const metadata = {
   description:
     "Live status of the lab. What's shipping, what just shipped, what broke, what's next. Following the /now page convention (Sivers). One operator, public ledger.",
   alternates: { canonical: "https://atomeons.com/now" },
+  openGraph: {
+    title: "Now — AtomEons lab status",
+    description:
+      "Live status of the lab. Shipped / shipping / broken / next. Public ledger.",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Now — AtomEons lab status",
+    description:
+      "Live status of the lab. Shipped / shipping / broken / next.",
+  },
 };
 
 /**
@@ -47,9 +59,27 @@ async function loadLetterStats() {
 
 const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = [
   {
+    date: "2026-05-20",
+    what:
+      "Lessons From Sci-Fi · The Monograph — 38-page comprehensive analytical survey of AI in film & TV (1927→2024). 13 chapters · 7 epochs · 5-dimension taxonomy · 6 alignment failure modes · 200+ texts · embedded scene clips at every inflection point.",
+    href: "/research/lessons-from-sci-fi/monograph",
+  },
+  {
+    date: "2026-05-20",
+    what:
+      "Lessons From Sci-Fi · gallery — 12 cinematic stills wired into StillGallery.tsx, HAL 9000 as LEAD card spanning full grid width. Streaming playlist with 14 services, free-first sort, JustWatch routing.",
+    href: "/research/lessons-from-sci-fi",
+  },
+  {
+    date: "2026-05-20",
+    what:
+      "Pricing canon locked — $1 once forever + FREE first 7 days of launch. Ladder-pricing model retired. License §4A bans subscription switch.",
+    href: "/faq",
+  },
+  {
     date: "2026-05-17",
     what:
-      "ORANGEBOX v6.0.0 native binary — 4.46 MB Rust + egui exe. One file, double-click, 2s launch.",
+      "ORANGEBOX v6.0.0 native binary — Rust + egui exe. One file, double-click, 2s launch.",
     href: "/orangebox",
   },
   {
@@ -79,12 +109,6 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
     date: "2026-05-17",
     what:
       "/api/download SHA-256 integrity gate — refuses to ship a mismatched binary to a paying buyer.",
-  },
-  {
-    date: "2026-05-17",
-    what:
-      "/mistakes ledger — public, dated, statused, named. Every wrong call goes here.",
-    href: "/mistakes",
   },
   {
     date: "2026-05-17",
@@ -298,14 +322,14 @@ export default async function NowPage() {
             </p>
           </Link>
           <Link
-            href="/mistakes"
+            href="/start"
             className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/50"
           >
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::mistakes ledger
+              ::start here
             </p>
             <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-              Public · dated · statused →
+              The novice on-ramp · 11 min →
             </p>
           </Link>
         </div>

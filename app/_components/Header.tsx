@@ -47,6 +47,13 @@ export function Header() {
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 md:flex md:gap-2 lg:gap-3">
           <NavLink href="/">Home</NavLink>
+          <Link
+            href="/start"
+            className="group ml-1 inline-flex items-center gap-1.5 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
+          >
+            <span className="size-1.5 rounded-full bg-[#22F0D5] shadow-[0_0_8px_rgba(34,240,213,0.8)]" />
+            start here
+          </Link>
 
           <NavDropdown
             label="Products"

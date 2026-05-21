@@ -4,6 +4,18 @@ export const metadata = {
   title: "About — AtomEons",
   description:
     "AtomEons is Atom McCree, building command surfaces for operators shipping real projects through AI — software, books, apps, LLMs. Marco Island, Florida.",
+  alternates: { canonical: "https://atomeons.com/about" },
+  openGraph: {
+    title: "About — AtomEons",
+    description:
+      "One operator. AI cockpits, frontier-science research, an indie-lab broadcast. Marco Island, FL.",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About — AtomEons",
+    description: "One operator. AI cockpits + frontier-science research.",
+  },
 };
 
 type Doctrine = { num: string; serial: string; title: string; body: string };

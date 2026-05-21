@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 /**
  * HeroPillarSequence — four-pillar variable-weight H1.
@@ -87,15 +89,43 @@ export function HeroPillarSequence() {
     <section
       className="relative isolate overflow-hidden bg-[#000] py-32 md:py-40 text-[#F2F4F5]"
     >
+      {/* Lead image — HAL 9000 lens (Æ Research's most loaded frame).
+          Sits at z-0 behind everything. Heavy dark vignette so the
+          variable-weight H1 retains AAA contrast. Wired to the
+          Lessons From Sci-Fi monograph in the bottom-right caption. */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+        <Image
+          src="/research/lessons-from-sci-fi/stills/2001-hal-9000.png"
+          alt=""
+          width={1376}
+          height={864}
+          priority
+          sizes="100vw"
+          className="h-full w-full object-cover opacity-[0.18]"
+        />
+        {/* multi-layer vignette — strong from sides and bottom, lighter
+            top so the eyebrow chip has some image behind it */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black opacity-95" />
+      </div>
+
       {/* ambient radials — matched to HeroLabManifest palette */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            "radial-gradient(55% 50% at 15% 60%, rgba(34,240,213,0.07) 0%, transparent 65%), " +
-            "radial-gradient(40% 35% at 85% 25%, rgba(255,122,26,0.06) 0%, transparent 60%)",
+            "radial-gradient(55% 50% at 15% 60%, rgba(34,240,213,0.10) 0%, transparent 65%), " +
+            "radial-gradient(40% 35% at 85% 25%, rgba(255,122,26,0.08) 0%, transparent 60%)",
         }}
+      />
+      {/* MOTION LAYER — slow 22s cyan/orange/green mesh drift over HAL's
+          vignette. Operator directive 2026-05-21: "needs more middly ground
+          coloration and motion of color." Honors prefers-reduced-motion
+          via the global rule in globals.css. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-[1] mesh-gradient opacity-25 mix-blend-screen"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6">
@@ -162,6 +192,24 @@ export function HeroPillarSequence() {
               )}
             </span>
           ))}
+        </div>
+
+        {/* Hero footer — anchor the background image to its source.
+            Points at the new monograph so the LEAD asset on the
+            homepage doubles as a discovery vector for that page. */}
+        <div className="mt-16 flex flex-col gap-3 border-t border-[#1A2225] pt-6 md:mt-20 md:flex-row md:items-center md:justify-between md:gap-6">
+          <p className="font-mono text-[9px] uppercase tracking-[0.28em] text-[#6B7779]">
+            Lead frame ·{" "}
+            <span className="text-[#22F0D5]">HAL 9000</span> ·{" "}
+            2001: A Space Odyssey (1968) · scholarly criticism, 17 U.S.C. § 107
+          </p>
+          <Link
+            href="/research/lessons-from-sci-fi/monograph"
+            className="inline-flex w-fit items-center gap-2 rounded-full border border-[#22F0D5]/40 bg-black/60 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5] backdrop-blur-sm transition-colors hover:border-[#22F0D5] hover:bg-[#22F0D5]/15"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-[#22F0D5] shadow-[0_0_6px_rgba(34,240,213,0.9)]" />
+            Open the monograph →
+          </Link>
         </div>
       </div>
 

@@ -1,22 +1,73 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "FAQ — ORANGEBOX v6.0.0 (native AI cockpit · $1 ladder)",
+  title: "FAQ — ORANGEBOX v6.1.0 Agent Mode",
   description:
-    "Answers about ORANGEBOX Command v6.0.0 — the 4.46 MB native AI cockpit. $1 once, ladder pricing, license §4A binds it. Local-first. Zero telemetry. Multi-model.",
+    "Answers about ORANGEBOX Command v6.1.0 Agent Mode — the native AI cockpit. $1 once · FREE first 7 days of public launch · license §4A binds it. Local-first. Zero telemetry. Multi-model swap-lane routing across Claude · GPT · Gemini · Groq · Ollama · OpenRouter.",
   alternates: { canonical: "https://atomeons.com/faq" },
+  openGraph: {
+    title: "ORANGEBOX FAQ",
+    description:
+      "$1 once · FREE first 7 days · local-first · multi-model · license §4A bans subscription switch.",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ORANGEBOX FAQ",
+    description:
+      "$1 once · FREE first 7 days · local-first · multi-model.",
+  },
 };
 
 type QA = { q: string; a: string };
 
+// ─── AI BASICS — novice section (operator directive 2026-05-21).
+// Lives ABOVE the ORANGEBOX questions so readers who don't know what
+// AI is yet land here first. Pairs with the /start onboarding page.
 const FAQS: QA[] = [
+  {
+    q: "I'm new to AI. Where do I start?",
+    a: "Read /start — an 11-minute, no-jargon on-ramp written for someone who has used ChatGPT under ten times. It explains what AI actually is in one paragraph, gives you six concrete tasks you can do tonight (rewrite an email, decode a medical report, plan a trip), names what AI cannot do, and lays out a 30-day on-ramp. After /start, this FAQ and the rest of the site will read very differently.",
+  },
+  {
+    q: "What is AI in one paragraph?",
+    a: "Imagine a calculator. Now imagine a calculator that doesn't just do math — it writes emails, reads thirty-page contracts, looks at photos and tells you what's in them. That's AI. The version that just exploded into your life is called a large language model. Mechanically, it is a very expensive autocomplete trained on most of the public internet, predicting one word at a time until it has written you an essay, a recipe, a workout plan. It feels like magic because the guesses are extraordinarily good. It is not actually magic. You should respect it, use it, and never quite trust it.",
+  },
+  {
+    q: "Which AI tool should I pick first — ChatGPT, Claude, or Gemini?",
+    a: "Any one of them. Pick whichever has a free tier you can sign into right now and commit to it for 30 days. Don't tab-jump between them — you're building muscle memory, not comparison-shopping. Claude (claude.ai) is warmer and tends to be more honest about its limits. ChatGPT (chatgpt.com) has the most features. Gemini (gemini.google.com) is best when you want it to search the live web. All three are free at the entry tier.",
+  },
+  {
+    q: "What can I actually do with AI tonight?",
+    a: "Open the chat box and try ONE of these: (1) paste a tough work email and ask for a firm, polite reply under 100 words; (2) upload a 30-page PDF and ask for a 1-page summary plus 3 bullets for a busy executive; (3) describe a 7-day trip you want to take with a budget and ask for a day-by-day plan with cost estimates; (4) paste a confusing medical or legal document and ask 'explain this in plain English'; (5) describe a hard conversation you need to have and ask for a script. Five minutes. You'll feel the shift on the first answer.",
+  },
+  {
+    q: "What can AI NOT do? What should I never trust it for?",
+    a: "Six honest limits. (1) It can confidently make things up — called a hallucination. Verify any citation, study, or quote before you use it. (2) It mostly does not remember you between conversations. (3) It does not reliably know what happened yesterday — training data has a cutoff. (4) It cannot take action in the real world by itself (agents are starting to; you should still be the one with the final yes/no). (5) It will not catch its own mistakes unless you push — ask 'what's wrong with this answer?' (6) Never paste passwords, social security numbers, or full credit card numbers into a chat box.",
+  },
+  {
+    q: "What is an LLM? What does that stand for?",
+    a: "Large Language Model. The engine behind ChatGPT, Claude, and Gemini. A program trained to predict the next word from a vast corpus of text. Everything else — agents, search, voice mode, image input — is built on top of an LLM at the center. When people say 'AI' in 2026, they usually mean an LLM and the products wrapped around one.",
+  },
+  {
+    q: "What is a 'prompt' and how do I write a good one?",
+    a: "A prompt is whatever you type to the AI. There is no magic syntax. Good prompts just have one quality: they are specific. Bad: 'help me with my resume.' Good: 'Here is my resume and the job description. Rewrite the work history section to emphasize the SaaS pricing experience, in the same tone as the original, under 200 words.' If the answer disappoints you, add more context, not more emphasis.",
+  },
+  {
+    q: "What is AtomEons?",
+    a: "AtomEons is an independent AI research laboratory in Marco Island, FL. One operator (Atom McCree). Four pillars: USE AI (the ORANGEBOX cockpit), MAKE MONEY (skil.ski), KNOW THE TRUTH (/intel + The Founder's View), and RESEARCH (ÆoNs Research, 12 manuscripts + the Lessons From Sci-Fi monograph). The mission is to build the cockpit that gives a human the right authority over the right machine at the right moment, and to separate signal from theater for everyone else.",
+  },
+  {
+    q: "Why is the cockpit called ORANGEBOX?",
+    a: "Because orange — the brand color — is the warning light in the cockpit that says 'pay attention.' Software that runs your life should make you pay attention to what it's doing, not what it's selling you. ORANGEBOX is the cockpit AtomEons uses to build everything else. v6.1.0 sells today for $1 once, free first 7 days of the launch window. The deeper answer is in /orangebox.",
+  },
   {
     q: "What is ORANGEBOX v6.0.0?",
     a: "ORANGEBOX Command v6.0.0 is a 4.46 MB native AI cockpit for Windows. It is one executable file — no webview, no bundled chromium, no Node install required to run. Double-click and the window appears in about 2 seconds. Inside the cockpit: 11 lanes (Cockpit, IDE, Terminal, Trilane debate, Voice, 𝕏 Feed, Vault, Receipts, Privacy, Skils, Settings), 60+ MCP tools, 15 named departments (AE0–AE14), 27 Constitutional Guardrails, multi-model routing across Claude, GPT, Gemini, Groq LPUs, Ollama, and OpenRouter (200+ models). $1 once, forever — with a license clause (§4A) that legally bans subscription switch.",
   },
   {
     q: "How is the price really $1? Where's the catch?",
-    a: "ORANGEBOX runs on a ladder. The first 100 buyers pay $1. The next 100 pay $2. The next 100 pay $3. Every subsequent batch of 100 sales adds $1 to the price, forever. Forward buyers only — your Stripe session locks the price at create-time, so you pay what you saw. There is no catch. You buy it once, you own it, you keep the binary, you keep the source. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity.",
+    a: "Pricing canon (2026-05-20): $1 USD once, forever. During the first 7 days of the public launch window, the price is $0 — FREE. After the 7-day window closes, it returns to $1. That's the whole price model. No catch. No ladder. No subscription. You buy it once (or claim it free during launch week), you own it, you keep the binary, you keep the source. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. The earlier ladder-pricing model (+$1 per 100 buyers) was retired on launch day in favor of the simpler $1 + free-first-week canon.",
   },
   {
     q: "What's inside the v6.0.0 installer?",
