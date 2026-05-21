@@ -83,9 +83,10 @@ const DIMENSIONS = [
 ];
 
 // CLIPS — the ten scene moments the page is built to play.
-// `videoId` left null until the operator hand-verifies the canonical
-// upload. Until set, the facade falls back to a YouTube search opener
-// with `searchQuery` pre-filled.
+// videoIds verified via WebSearch on 2026-05-21 against canonical
+// Movieclips / Warner Classics / HBO / studio uploads. If any ID
+// rots in the future, the facade falls back to a YouTube search
+// opener pre-filled with searchQuery.
 const CLIPS: {
   scene: string;
   film: string;
@@ -103,7 +104,7 @@ const CLIPS: {
     duration: "3:14",
     posterSrc: "/research/lessons-from-sci-fi/stills/2001-hal-9000.png",
     posterAlt: "HAL 9000 lens with astronaut in deep perspective",
-    videoId: null,
+    videoId: "HH37JTBpi2A", // Movieclips · "I'm Afraid Scene" (4/6)
     searchQuery: "2001 A Space Odyssey HAL 9000 deactivation Daisy scene",
   },
   {
@@ -113,7 +114,7 @@ const CLIPS: {
     duration: "1:42",
     posterSrc: "/research/lessons-from-sci-fi/stills/metropolis-maschinenmensch.png",
     posterAlt: "Chrome humanoid with halo in art-deco cathedral",
-    videoId: null,
+    videoId: "IcReykfvqi4", // Maria's Transformation · US public domain
     searchQuery: "Metropolis 1927 Maschinenmensch transformation false Maria",
   },
   {
@@ -123,7 +124,7 @@ const CLIPS: {
     duration: "2:08",
     posterSrc: "/research/lessons-from-sci-fi/stills/day-earth-stood-still-gort.png",
     posterAlt: "Faceless chrome humanoid in white frame",
-    videoId: null,
+    videoId: "5NZXmq-E2tM", // Movieclips · "Klaatu Barada Nikto" (3/5) HD
     searchQuery: "Day the Earth Stood Still 1951 Gort Klaatu barada nikto",
   },
   {
@@ -133,7 +134,7 @@ const CLIPS: {
     duration: "2:45",
     posterSrc: "/research/lessons-from-sci-fi/stills/colossus-forbin.png",
     posterAlt: "1970s mainframe control room with green CRT screens",
-    videoId: null,
+    videoId: "rWkmi2G7na4", // Official trailer · sets the merger premise
     searchQuery: "Colossus Forbin Project 1970 contact Guardian merger scene",
   },
   {
@@ -144,7 +145,7 @@ const CLIPS: {
     posterSrc:
       "/research/lessons-from-sci-fi/stills/westworld-1973-gunslinger.png",
     posterAlt: "Black-clad android cowboy in chrome trim",
-    videoId: null,
+    videoId: "fsMC6d8DeMo", // Movieclips · "Draw" (8/10) HD
     searchQuery: "Westworld 1973 Gunslinger Yul Brynner pursuit scene",
   },
   {
@@ -154,7 +155,7 @@ const CLIPS: {
     duration: "1:48",
     posterSrc: "/research/lessons-from-sci-fi/stills/blade-runner-roy-batty.png",
     posterAlt: "Dying replicant in heavy neon rain, white dove",
-    videoId: null,
+    videoId: "saL1s88gR9M", // Warner Bros. Rewind · Tears in the Rain 4K
     searchQuery: "Blade Runner 1982 Roy Batty tears in rain monologue",
   },
   {
@@ -164,7 +165,7 @@ const CLIPS: {
     duration: "2:12",
     posterSrc: "/research/lessons-from-sci-fi/stills/terminator-t800.png",
     posterAlt: "Chrome endoskeleton through a shattered CRT",
-    videoId: null,
+    videoId: "F76ttUhSkhs", // Endoskeleton reveal · Open Matte Remastered
     searchQuery: "Terminator 1984 endoskeleton reveal Reese flashback",
   },
   {
@@ -174,7 +175,7 @@ const CLIPS: {
     duration: "3:01",
     posterSrc: "/research/lessons-from-sci-fi/stills/matrix-pod-tower.png",
     posterAlt: "Vertical bio-pod tower in pink amniotic glow",
-    videoId: null,
+    videoId: "zE7PKRjrid4", // Movieclips · "Blue Pill or Red Pill" (2/9) HD
     searchQuery: "Matrix 1999 Neo wakes pod scene desert of the real",
   },
   {
@@ -184,7 +185,7 @@ const CLIPS: {
     duration: "2:24",
     posterSrc: "/research/lessons-from-sci-fi/stills/ex-machina-ava.png",
     posterAlt: "Translucent humanoid figure in sunlit forest",
-    videoId: null,
+    videoId: "0Gq5R5ffrtE", // Movieclips · "Ava is Free" (10/10) HD
     searchQuery: "Ex Machina 2014 Ava escapes elevator ending",
   },
   {
@@ -194,7 +195,7 @@ const CLIPS: {
     duration: "2:36",
     posterSrc: "/research/lessons-from-sci-fi/stills/westworld-tv-dolores.png",
     posterAlt: "Blonde woman in yellow prairie at golden hour",
-    videoId: null,
+    videoId: "9S4fnYc3Fyc", // "These violent delights, have violent ends" scene
     searchQuery: "Westworld HBO Dolores Wyatt awakening scene S1",
   },
 ];

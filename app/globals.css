@@ -136,6 +136,19 @@ body::after {
   to { transform: rotate(360deg); }
 }
 
+/* Inter Variable axis modulation — used on the /start hero gradient
+   word so it slowly breathes between regular and bold without ever
+   changing layout (variable fonts modulate weight in-place). */
+.hero-pulse-weight {
+  font-variation-settings: "wght" 720;
+  animation: hero-weight-breath 5.6s ease-in-out infinite;
+}
+
+@keyframes hero-weight-breath {
+  0%, 100% { font-variation-settings: "wght" 680; letter-spacing: -0.02em; }
+  50% { font-variation-settings: "wght" 820; letter-spacing: -0.025em; }
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -468,6 +481,7 @@ a:hover {
   }
   body,
   body::after,
+  .hero-pulse-weight,
   .pulse-ring,
   .screen-flicker,
   .glitch,
