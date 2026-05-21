@@ -133,30 +133,39 @@ function renderMarkdown(md: string) {
       wrapLink(url, text),
     );
 
+    // The "lead" boundary that must precede a bare URL/path so we don't
+    // partial-match inside another token. Widened on 2026-05-21 to also
+    // accept markdown emphasis markers (* _ ~) — prior version required
+    // whitespace/paren, which caused `**atomeons.com/start**` to skip
+    // the bare-URL autolinker entirely.
+    const LEAD = String.raw`(^|[\s(*_~])`;
+    const TRAIL = String.raw`(?=[.,;:!?)\]*_~]?(?:\s|\*|_|~|$))`;
+
     // 2) bare absolute URLs — http(s)://...
-    //    stop at whitespace, closing bracket, or end-of-sentence punctuation
     out = out.replace(
-      /(^|[\s(])(https?:\/\/[^\s<)\]]+?)(?=[.,;:!?)\]]?(?:\s|$))/g,
+      new RegExp(`${LEAD}(https?:\\/\\/[^\\s<)\\]]+?)${TRAIL}`, "g"),
       (_m, lead, url) => `${lead}${wrapLink(url, url)}`,
     );
 
     // 3) bare atomeons.com/<path> (any case)
     out = out.replace(
-      /(^|[\s(])(atomeons\.com\/[A-Za-z0-9/_\-#?=&]+)(?=[.,;:!?)\]]?(?:\s|$))/gi,
+      new RegExp(`${LEAD}(atomeons\\.com\\/[A-Za-z0-9/_\\-#?=&]+)${TRAIL}`, "gi"),
       (_m, lead, domainPath) => {
         const href = `https://${domainPath.toLowerCase()}`;
         return `${lead}${wrapLink(href, domainPath)}`;
       },
     );
 
-    // 4) bare internal paths to known surfaces — only after a word boundary,
-    //    only the lab's own routes, so prose like "9/10" or "1/2" never linkifies
-    const INTERNAL = "start|research|press|founders-view|orangebox|intel|now|faq|about|legal|account|skilski|b00kmakor|api/admin";
-    const internalRe = new RegExp(
-      `(^|[\\s(])(\\/(?:${INTERNAL})(?:\\/[A-Za-z0-9/_\\-]*)?)(?=[.,;:!?)\\]]?(?:\\s|$))`,
-      "g",
+    // 4) bare internal paths to known surfaces — only the lab's own routes,
+    //    so prose like "9/10" or "1/2" never linkifies
+    const INTERNAL = "start|research|press|founders-view|orangebox|intel|now|faq|about|legal|account|skilski|b00kmakor|api\\/admin";
+    out = out.replace(
+      new RegExp(
+        `${LEAD}(\\/(?:${INTERNAL})(?:\\/[A-Za-z0-9/_\\-]*)?)${TRAIL}`,
+        "g",
+      ),
+      (_m, lead, path) => `${lead}${wrapLink(path, path)}`,
     );
-    out = out.replace(internalRe, (_m, lead, path) => `${lead}${wrapLink(path, path)}`);
 
     // 5) bold / italic / code — runs after links so it can wrap the <a> safely
     return out
