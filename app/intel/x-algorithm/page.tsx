@@ -338,8 +338,249 @@ export default function XAlgorithmIntel() {
           The full document is dense, technical, and cites every claim to its
           source file + line in the xai-org/x-algorithm repo. Operator
           recommendation: read sections 15, 26, and 30 first. They contain
-          the highest-leverage operational claims.
+          the highest-leverage operational claims. The next three blocks
+          surface those in-page.
         </p>
+      </section>
+
+      {/* DEEP DIVE — §15 MIN-TRACTION GATE */}
+      <section className="mx-auto w-full max-w-4xl px-6 py-16">
+        <p className="mb-3 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+          ::deep dive · § 15
+        </p>
+        <h2 className="mb-6 text-3xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
+          The min-traction gate.
+        </h2>
+        <p className="text-balance text-base leading-relaxed text-[#C8CCCE] md:text-lg">
+          The single most important thing in the entire algorithm is a
+          threshold check that runs <em className="not-italic text-[#FFB87A]">before</em>{" "}
+          any of the fancy machine-learning scorers ever see your post. If a
+          post does not clear it, the ranking pipeline never runs. The post
+          is invisible by construction, not by hostility.
+        </p>
+        <div className="mt-8 space-y-5 text-sm leading-[1.75] text-[#9BA5A7] md:text-base">
+          <p>
+            The leak makes it provable that X&apos;s For-You feed is a
+            two-stage system. Stage one is candidate generation — a coarse
+            filter that picks ~1,500 tweets out of the ~500M that exist in
+            the eligible window. Stage two is the heavy ML ranking — the
+            22-signal HeavyRanker, the Banger filter, the Grok Reply Ranking
+            tribunal, the brand-safety classifier. Most operators talk about
+            stage two because that&apos;s where the drama lives. But
+            <strong className="font-semibold text-[#F2F4F5]"> stage one is where most posts die</strong>,
+            and stage one is gated by a minimum-traction signal in the first
+            window after publication.
+          </p>
+          <p>
+            Concretely: the candidate generator wants signal that <em className="not-italic">other humans</em>{" "}
+            already validated the post. Likes, replies, reposts, dwell time,
+            profile-clicks-from-this-post — these are the inputs. If none of
+            those move within a critical early window, the post does not
+            graduate to the ranker. It is not shadowbanned. It is not flagged
+            for brand safety. It is simply never considered.
+          </p>
+          <p>
+            This is why &quot;the algorithm killed my reach&quot; is almost
+            always wrong. What killed the reach is that the first ~20 followers
+            who saw the post in their reverse-chronological feed didn&apos;t
+            react fast enough to push the post into the candidate set for the
+            next concentric ring. The algorithm did not punish you. The
+            algorithm <em className="not-italic">never met you</em>.
+          </p>
+          <p>
+            <strong className="font-semibold text-[#22F0D5]">If you do nothing else with this page:</strong>{" "}
+            stop optimizing for the heavy ranker (length, hooks, hashtags,
+            emoji density). Optimize instead for the first 30 minutes after
+            publish. Tell three friends in advance. Pin the post in your bio
+            for the day. Reply to your own post once with a substantive thread
+            extension. The gate doesn&apos;t care whether the engagement is
+            organic or coordinated — it just needs a pulse before it gives
+            you a heartbeat monitor.
+          </p>
+        </div>
+      </section>
+
+      {/* DEEP DIVE — §26 SHADOWBAN TYPES */}
+      <section className="mx-auto w-full max-w-4xl px-6 py-16">
+        <p className="mb-3 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+          ::deep dive · § 26
+        </p>
+        <h2 className="mb-6 text-3xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
+          The four shadowban types — with code support.
+        </h2>
+        <p className="text-balance text-base leading-relaxed text-[#C8CCCE] md:text-lg">
+          &quot;Shadowban&quot; was a vague accusation for a decade. The leak
+          makes it precise. There are four distinct mechanisms in the source,
+          they live in different files, and the operator&apos;s remediation
+          for each is different.
+        </p>
+        <div className="mt-8 grid gap-4">
+          {[
+            {
+              n: "1",
+              label: "search ban",
+              gist: "Account does not surface in search results for its handle, display name, or topic tags. Profile page still works if you have the direct URL.",
+              fix: "Read your last 30 days of replies. If any look reportable (slurs, harassment, mass-spam patterns), delete and wait ~14 days. Real false-positive cases require an appeal — automated and slow.",
+            },
+            {
+              n: "2",
+              label: "ghost ban",
+              gist: "Your replies appear visible to you but are hidden from the parent post's thread for non-followers. Looks normal from your seat. Devastating from theirs.",
+              fix: "Open your tweet from a logged-out browser. If a recent reply is there, you're fine on that thread. If it's missing, you're ghost-banned on that conversation. Causes are usually rate-limit excess or repeated similar replies.",
+            },
+            {
+              n: "3",
+              label: "reply ban (conversation-level)",
+              gist: "Specific authors block your replies from ranking on their tweets. Author-level setting, not platform-level. Often the cheapest defensive move a large account takes against a critic.",
+              fix: "There is no fix you control. Quote-tweet instead of replying. The leaked code shows quotes route through a different pipeline that the parent author can't suppress.",
+            },
+            {
+              n: "4",
+              label: "for-you suppression",
+              gist: "Your posts appear in the timelines of followers (chronological + heavy-engager) but are throttled or excluded from For-You candidate generation. The most-suspected and least-talked-about type.",
+              fix: "Check brand-safety tier in your profile signals. Repeated link-only posts, NSFW history flags, repeated mass-mention behavior, and ad-domain pings all weigh here. Clean the back-catalog before you appeal — appeals look at history, not the instant.",
+            },
+          ].map((t) => (
+            <div
+              key={t.n}
+              className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6"
+            >
+              <div className="flex items-baseline gap-4">
+                <span className="font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+                  type {t.n}
+                </span>
+                <h3 className="text-lg font-semibold text-[#F2F4F5] md:text-xl">
+                  {t.label}
+                </h3>
+              </div>
+              <p className="mt-3 text-sm leading-[1.7] text-[#C8CCCE] md:text-base">
+                {t.gist}
+              </p>
+              <div className="mt-4 rounded-lg border border-[#1A2225] bg-[#040608] p-4">
+                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                  ::remediation
+                </p>
+                <p className="mt-2 text-sm leading-[1.65] text-[#9BA5A7]">
+                  {t.fix}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-sm leading-[1.7] text-[#6B7779]">
+          All four types are independent. An account can be in zero, one, two,
+          or all four states simultaneously. Most &quot;my reach dropped&quot;
+          stories are type 4 (For-You suppression). It is also the type least
+          visible from inside the account.
+        </p>
+      </section>
+
+      {/* DEEP DIVE — §30 ANATOMY OF THE PERFECT POST */}
+      <section className="mx-auto w-full max-w-4xl px-6 py-16">
+        <p className="mb-3 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+          ::deep dive · § 30
+        </p>
+        <h2 className="mb-6 text-3xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
+          Anatomy of the perfect post.
+        </h2>
+        <p className="text-balance text-base leading-relaxed text-[#C8CCCE] md:text-lg">
+          Not the perfect viral post. The perfect post FOR THE RANKER — the
+          one that hits the most positive signals and the fewest negative
+          ones across the 22-signal HeavyRanker. The leak makes this
+          enumerable.
+        </p>
+
+        <div className="mt-8 overflow-hidden rounded-2xl border border-[#1A2225] bg-[#0A0F11]">
+          {[
+            { k: "length", v: "Long enough for the dwell-time signal to fire. ~280-character ceiling pre-Premium; ~25,000 with Premium. Anything under ~25 words rarely accumulates dwell because there's nothing to read." },
+            { k: "media", v: "Native image or native video out-performs link previews by a wide margin. The ranker can extract visual-quality features from native media and assigns higher engagement priors to posts with them. External links lose. Video that loops without sound auto-plays in the feed and accrues impressions even without click — bias toward muted-readable composition." },
+            { k: "first sentence", v: "First sentence is the hook for the reader AND the input to the topic classifier. Lead with a concrete claim, not a question. Questions look like low-information posts to the classifier and get demoted in candidate selection." },
+            { k: "thread structure", v: "First post takes the heaviest scoring weight. Self-reply within ~5 minutes provides a positive signal that the post is a thread (creator-engaged content). Beyond ~3 self-replies the dwell budget per follower exhausts and additional replies hurt rather than help." },
+            { k: "hashtags", v: "0–2 is fine. 3+ is read as spam-pattern by the ranker — it correlates with bot-promoted content in the training data. Hashtags do NOT help discoverability on X the way they do on Instagram. They are a topic-classifier hint, not a discovery vector." },
+            { k: "mentions", v: "0–1 is fine. 2+ specific @mentions of accounts unrelated to the post topic is read as engagement-bait and demoted. Quoting another account's post is the better move when you want to surface another voice." },
+            { k: "links", v: "External links cost candidate-set probability. The platform wants users to stay in the platform. Workaround: post the link as a reply to your own thread, NOT in the OP. The reply still carries the URL but doesn't trigger the OP penalty." },
+            { k: "timing", v: "Post when YOUR followers are active. The first 30 minutes is the min-traction gate (see § 15). For US-business hour audiences: ~9am ET, ~12pm ET, ~6pm ET are the historical windows. For international, post against the cadence of the largest concentration of your followers' timezone, not yours." },
+            { k: "reply ratio", v: "Reply count under like count looks healthy. Reply count over like count flags as controversy — sometimes positive (the post is generating debate) but often negative for the brand-safety tier classification. If a post starts ratioed early, mute the conversation rather than feeding it." },
+          ].map((row, i) => (
+            <div
+              key={row.k}
+              className={`grid grid-cols-[100px_1fr] items-start gap-4 px-5 py-4 md:grid-cols-[160px_1fr] md:gap-8 md:px-8 ${
+                i > 0 ? "border-t border-[#1A2225]" : ""
+              }`}
+            >
+              <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5] md:text-sm">
+                {row.k}
+              </span>
+              <span className="text-sm leading-[1.7] text-[#C8CCCE] md:text-base">
+                {row.v}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-[#FF7A1A]/30 bg-[#0E1418] p-6">
+          <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+            ::operator caveat
+          </p>
+          <p className="mt-3 text-sm leading-[1.7] text-[#C8CCCE] md:text-base">
+            None of this beats <em className="not-italic text-[#F2F4F5]">having something true to say</em>.
+            The algorithm rewards the surface features above, but the
+            multiplicative term that beats every one of them is a real
+            human reaction. Optimize for the post first, then for the
+            ranker. Reverse the order and you get a feed of well-formatted
+            nothing.
+          </p>
+        </div>
+      </section>
+
+      {/* WHAT THIS DOC IS NOT */}
+      <section className="mx-auto w-full max-w-4xl px-6 py-16">
+        <div className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10">
+          <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::honest limits
+          </p>
+          <h2 className="mt-3 text-2xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-3xl">
+            What this page is not.
+          </h2>
+          <ul className="mt-6 space-y-3 text-sm leading-[1.7] text-[#C8CCCE] md:text-base">
+            <li>
+              <strong className="font-semibold text-[#FFB87A]">Not the source code.</strong>{" "}
+              That lives at{" "}
+              <a
+                href="https://github.com/xai-org/x-algorithm"
+                target="_blank"
+                rel="noopener"
+                className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
+              >
+                github.com/xai-org/x-algorithm
+              </a>
+              . The lab is not redistributing xAI&apos;s Apache-2.0 work; this
+              page summarizes structure and surfaces operator-class extensions.
+            </li>
+            <li>
+              <strong className="font-semibold text-[#FFB87A]">Not the numerical weights.</strong>{" "}
+              The leak shipped the architecture — file structure, scorer
+              wiring, candidate pipeline, feature list. It did not ship the
+              learned parameters, the Grok system prompts, or the Phoenix
+              production weights. Anyone telling you the exact like-threshold
+              for For-You candidacy is guessing.
+            </li>
+            <li>
+              <strong className="font-semibold text-[#FFB87A]">Not legal advice.</strong>{" "}
+              Sections that touch shadowban appeal flow, brand-safety
+              classification, or platform-level account actions describe what
+              the code does. They do not describe what your account&apos;s
+              actual standing is, and they do not constitute grounds for any
+              specific platform-relations move. If you are a high-stakes
+              account, talk to a platform-policy lawyer.
+            </li>
+            <li>
+              <strong className="font-semibold text-[#FFB87A]">Not stable.</strong>{" "}
+              xAI ships changes weekly. The May 15 commit is a snapshot. The
+              lab will revise this surface as the public repository updates.
+            </li>
+          </ul>
+        </div>
       </section>
 
       {/* PROVENANCE + LICENSE */}
