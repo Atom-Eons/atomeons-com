@@ -78,31 +78,62 @@
 
 html,
 body {
-  background: #0a1a17;
+  background: #0e2520;
   color: #f7f0e4;
   font-family: var(--font-sans);
 }
 
-/* Operator directive 2026-05-21: "too dark. needs more middly ground
-   coloration and motion of color." Base lifted from #04100d → #0a1a17,
-   bloom alphas raised, and a 40s drift added so the surface breathes
-   instead of sitting flat. Page-level `bg-black` overrides still win. */
+/* Operator directive 2026-05-21 (second pass): "do more color." Base
+   pushed further from #0a1a17 → #0e2520 (richer warm-teal slate),
+   blooms more visible, and a new fixed conic-gradient overlay added
+   above the body so color motion happens on TWO layers at once.
+   Page-level `bg-black` overrides still win for cinematic surfaces. */
 body {
   background:
-    radial-gradient(circle at 12% 18%, rgba(89, 217, 255, 0.16), transparent 30%),
-    radial-gradient(circle at 88% 0%, rgba(255, 184, 122, 0.18), transparent 34%),
-    radial-gradient(circle at 72% 92%, rgba(117, 255, 196, 0.10), transparent 32%),
-    linear-gradient(90deg, rgba(27, 139, 117, 0.20) 1px, transparent 1px),
-    linear-gradient(rgba(27, 139, 117, 0.16) 1px, transparent 1px),
-    #0a1a17;
-  background-size: 220% 220%, 220% 220%, 220% 220%, 42px 42px, 42px 42px, 100% 100%;
+    radial-gradient(circle at 12% 18%, rgba(89, 217, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 88% 0%, rgba(255, 184, 122, 0.24), transparent 36%),
+    radial-gradient(circle at 72% 92%, rgba(117, 255, 196, 0.16), transparent 34%),
+    radial-gradient(circle at 25% 78%, rgba(255, 122, 26, 0.10), transparent 30%),
+    linear-gradient(90deg, rgba(27, 139, 117, 0.22) 1px, transparent 1px),
+    linear-gradient(rgba(27, 139, 117, 0.18) 1px, transparent 1px),
+    #0e2520;
+  background-size: 220% 220%, 220% 220%, 220% 220%, 220% 220%, 42px 42px, 42px 42px, 100% 100%;
   animation: bloom-drift 40s ease-in-out infinite;
 }
 
+/* Rotating conic gradient layer — sits behind content, above body, on
+   ::after. Slow 80s rotation. Mixes peach-cyan-mint at low alpha so it
+   gives the page a "breathing color wheel" feel without ever fighting
+   readable text. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: -10%;
+  pointer-events: none;
+  z-index: 0;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(34, 240, 213, 0.10),
+    rgba(255, 184, 122, 0.10) 25%,
+    rgba(117, 255, 196, 0.08) 50%,
+    rgba(255, 122, 26, 0.08) 75%,
+    rgba(34, 240, 213, 0.10) 100%
+  );
+  filter: blur(80px);
+  animation: conic-rotate 80s linear infinite;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+
 @keyframes bloom-drift {
-  0%, 100% { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0, 0 0, 0 0; }
-  33% { background-position: 30% 40%, 70% 20%, 80% 70%, 0 0, 0 0, 0 0; }
-  66% { background-position: 60% 20%, 30% 60%, 20% 80%, 0 0, 0 0, 0 0; }
+  0%, 100% { background-position: 0% 0%, 100% 0%, 50% 100%, 20% 80%, 0 0, 0 0, 0 0; }
+  33% { background-position: 30% 40%, 70% 20%, 80% 70%, 60% 30%, 0 0, 0 0, 0 0; }
+  66% { background-position: 60% 20%, 30% 60%, 20% 80%, 40% 60%, 0 0, 0 0, 0 0; }
+}
+
+@keyframes conic-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 body::before {
@@ -436,6 +467,7 @@ a:hover {
     animation: none !important;
   }
   body,
+  body::after,
   .pulse-ring,
   .screen-flicker,
   .glitch,
