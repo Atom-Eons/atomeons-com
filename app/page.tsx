@@ -1,4 +1,5 @@
 import { HeroPillarSequence } from "./_components/v2/HeroPillarSequence";
+import { StartHereStrip } from "./_components/v2/StartHereStrip";
 import { OrganismRail } from "./_components/v2/OrganismRail";
 import { LatestFromLab } from "./_components/LatestFromLab";
 import { ResearchSnapshot } from "./_components/v2/ResearchSnapshot";
@@ -56,6 +57,12 @@ export default function Home() {
       <div data-cockpit-section="hero">
         <HeroPillarSequence />
       </div>
+
+      {/* 1b — Novice front door. Operator directive 2026-05-21:
+              "assume a user has no idea what ai means... we are the
+              onboard." This strip is the prominent path to /start,
+              not just the small header chip. */}
+      <StartHereStrip />
 
       {/* 2 — Four arms (the four products + research): compact card rail
               that lets the visitor see the whole lab without scrolling

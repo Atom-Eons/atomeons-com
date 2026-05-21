@@ -59,6 +59,35 @@ async function loadLetterStats() {
 
 const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = [
   {
+    date: "2026-05-21",
+    what:
+      "/start — the 11-minute AI literacy on-ramp for novices. Animated aurora hero, 6 concrete tasks for tonight with copy-paste prompts, 6 honest limits, 30-day on-ramp, 20-term plain-English glossary. Built for someone who has used ChatGPT under 10 times.",
+    href: "/start",
+  },
+  {
+    date: "2026-05-21",
+    what:
+      "/press media kit — one-sentence pitch + one-paragraph boilerplate + founder bio (all copy-to-clipboard), hero image block, 6 downloadable asset cards, honest empty-state coverage feed, interview-protocol cards.",
+    href: "/press",
+  },
+  {
+    date: "2026-05-21",
+    what:
+      "/faq — 9 novice questions added at top (LLM, prompt, first AI tool, what AI can/cannot do, what is AtomEons) before the ORANGEBOX product Q&As. Pairs with /start.",
+    href: "/faq",
+  },
+  {
+    date: "2026-05-21",
+    what:
+      "Site-wide color lift — body bg #04100d → #0a1a17 (warmer base), bloom alphas raised, third green-bloom added lower-right, 40s drift animation across body. Reduced-motion guard extended. Homepage hero gets new mesh-gradient motion layer over HAL vignette.",
+  },
+  {
+    date: "2026-05-21",
+    what:
+      "Lessons From Sci-Fi · The Tape — clean Vimeo-style scene player added between gallery and streaming playlist. 10 cards, facade pattern (zero YouTube traffic until user hits play), modestbranding + rel=0 + no annotations.",
+    href: "/research/lessons-from-sci-fi",
+  },
+  {
     date: "2026-05-20",
     what:
       "Lessons From Sci-Fi · The Monograph — 38-page comprehensive analytical survey of AI in film & TV (1927→2024). 13 chapters · 7 epochs · 5-dimension taxonomy · 6 alignment failure modes · 200+ texts · embedded scene clips at every inflection point.",

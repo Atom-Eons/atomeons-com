@@ -28,14 +28,23 @@ export function Footer() {
             Æ Research
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
+            <li>
+              <Link
+                href="/start"
+                className="inline-flex items-center gap-1.5 font-semibold text-[#22F0D5] hover:text-[#FFB87A]"
+              >
+                <span className="size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+                Start here · 11 min
+              </Link>
+            </li>
             <li><Link href="/research/about" className="hover:text-[#22F0D5]">About the lab</Link></li>
             <li><Link href="/research/papers" className="hover:text-[#22F0D5]">Research Papers</Link></li>
+            <li><Link href="/research/lessons-from-sci-fi" className="hover:text-[#22F0D5]">Lessons From Sci-Fi</Link></li>
             <li><Link href="/intel/x-algorithm" className="hover:text-[#22F0D5]">X Algorithm Alpha · 2026-05-18</Link></li>
             <li><Link href="/founders-view" className="hover:text-[#22F0D5]">The Founder&apos;s View · 8pm ET</Link></li>
             <li><Link href="/now" className="hover:text-[#22F0D5]">/now · what we&apos;re doing</Link></li>
             <li><Link href="/press" className="hover:text-[#22F0D5]">Press kit</Link></li>
             <li><Link href="/about" className="hover:text-[#22F0D5]">About Atom</Link></li>
-            <li><Link href="/mistakes" className="hover:text-[#22F0D5]">Mistakes ledger</Link></li>
           </ul>
         </div>
 
