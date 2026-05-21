@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "./_components/Header";
@@ -25,6 +25,30 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AtomBoot } from "./_components/AtomBoot";
 import { StickyBuyBar } from "./_components/StickyBuyBar";
 import { LabTicker } from "./_components/v2/LabTicker";
+
+/**
+ * Site-wide viewport configuration.
+ *
+ * MUST exist as a separate export (Next 16 split viewport out of
+ * `metadata` in v14). Without this block, mobile browsers render the
+ * page at the default ~980px desktop width and apply a zoom-to-fit
+ * transform — every responsive `md:` breakpoint silently misses,
+ * tap targets shrink under 44px, and horizontal scroll appears on
+ * any wide element.
+ *
+ * `width: device-width` enables true mobile width.
+ * `initialScale: 1` prevents zoom-out on iOS/Safari first paint.
+ * `maximumScale: 5` keeps user pinch-zoom available (accessibility).
+ * `themeColor` sets the browser chrome / Android status-bar tint to
+ *   the same `#0e2520` warm-slate the site uses as its base.
+ */
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0e2520",
+  colorScheme: "dark",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
