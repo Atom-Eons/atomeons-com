@@ -112,12 +112,54 @@ function renderMarkdown(md: string) {
     }
   }
   function inlineFormat(s: string) {
-    // Escape HTML, then re-introduce bold + italic + inline-code
+    // Escape HTML, then re-introduce links + bold + italic + inline-code.
+    // Link pass runs BEFORE bold so that bold can still wrap an <a> tag
+    // (the `**` markers are outside the inserted href).
     const esc = s
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
-    return esc
+
+    const linkClass = "text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5] transition-colors";
+
+    const wrapLink = (href: string, text: string) => {
+      const isExternal = /^https?:\/\//i.test(href) && !/^https?:\/\/atomeons\.com/i.test(href);
+      const target = isExternal ? ' target="_blank" rel="noopener noreferrer"' : "";
+      return `<a href="${href}" class="${linkClass}"${target}>${text}</a>`;
+    };
+
+    // 1) explicit markdown [text](url)
+    let out = esc.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_m, text, url) =>
+      wrapLink(url, text),
+    );
+
+    // 2) bare absolute URLs — http(s)://...
+    //    stop at whitespace, closing bracket, or end-of-sentence punctuation
+    out = out.replace(
+      /(^|[\s(])(https?:\/\/[^\s<)\]]+?)(?=[.,;:!?)\]]?(?:\s|$))/g,
+      (_m, lead, url) => `${lead}${wrapLink(url, url)}`,
+    );
+
+    // 3) bare atomeons.com/<path> (any case)
+    out = out.replace(
+      /(^|[\s(])(atomeons\.com\/[A-Za-z0-9/_\-#?=&]+)(?=[.,;:!?)\]]?(?:\s|$))/gi,
+      (_m, lead, domainPath) => {
+        const href = `https://${domainPath.toLowerCase()}`;
+        return `${lead}${wrapLink(href, domainPath)}`;
+      },
+    );
+
+    // 4) bare internal paths to known surfaces — only after a word boundary,
+    //    only the lab's own routes, so prose like "9/10" or "1/2" never linkifies
+    const INTERNAL = "start|research|press|founders-view|orangebox|intel|now|faq|about|legal|account|skilski|b00kmakor|api/admin";
+    const internalRe = new RegExp(
+      `(^|[\\s(])(\\/(?:${INTERNAL})(?:\\/[A-Za-z0-9/_\\-]*)?)(?=[.,;:!?)\\]]?(?:\\s|$))`,
+      "g",
+    );
+    out = out.replace(internalRe, (_m, lead, path) => `${lead}${wrapLink(path, path)}`);
+
+    // 5) bold / italic / code — runs after links so it can wrap the <a> safely
+    return out
       .replace(
         /\*\*(.+?)\*\*/g,
         '<strong class="text-[#FF7A1A]">$1</strong>',
