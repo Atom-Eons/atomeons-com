@@ -1,0 +1,86 @@
+name: Deploy production to Vercel
+
+# Runs on every push to main. Replaces Vercel's native GitHub
+# integration, which silently stopped triggering deploys at commit
+# 287ac8c (2026-05-20). Every commit after that landed on origin/main
+# but never built in Vercel, including five commits on 2026-05-21 that
+# carried major surface work (neural hero, cinema clip IDs, OG cards,
+# color lift v2, update-letter endpoint). This workflow guarantees that
+# never happens again — every push to main triggers a production build
+# inside GitHub Actions, with no dependency on Vercel's webhook layer.
+#
+# One-time setup (do this once, in github.com/AtomEons/atomeons-com →
+# Settings → Secrets and variables → Actions → New repository secret):
+#
+#   VERCEL_TOKEN
+#     Get from vercel.com → Account → Settings → Tokens →
+#     "Create Token" (scope: full account). Paste the token here.
+#
+#   VERCEL_ORG_ID
+#     Already known. Paste:
+#         team_oLqr0yZ7o2xly4CcB75Kl1Nf
+#     (same value as .vercel/project.json `orgId`)
+#
+#   VERCEL_PROJECT_ID
+#     Already known. Paste:
+#         prj_rJrokQneeIQYo6IigQIKwDn0QvU8
+#     (same value as .vercel/project.json `projectId`)
+#
+# After adding the three secrets, every `git push origin main` will
+# produce a fresh production deploy inside ~60-90 seconds.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Checkout HEAD
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull production env + project
+        run: |
+          vercel pull --yes --environment=production \
+            --token="${{ secrets.VERCEL_TOKEN }}"
+
+      - name: Build production artifact
+        run: |
+          vercel build --prod \
+            --token="${{ secrets.VERCEL_TOKEN }}"
+
+      - name: Deploy prebuilt artifact to production
+        id: deploy
+        run: |
+          DEPLOY_URL=$(vercel deploy --prebuilt --prod \
+            --token="${{ secrets.VERCEL_TOKEN }}")
+          echo "deploy_url=$DEPLOY_URL" >> "$GITHUB_OUTPUT"
+          echo "→ $DEPLOY_URL"
+
+      - name: Print summary
+        run: |
+          {
+            echo "## Production deploy complete"
+            echo ""
+            echo "- commit: \`${{ github.sha }}\`"
+            echo "- url:    ${{ steps.deploy.outputs.deploy_url }}"
+            echo "- alias:  https://atomeons.com"
+          } >> "$GITHUB_STEP_SUMMARY"
