@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AuroraHero } from "./AuroraHero";
 import { GlossaryCard } from "./GlossaryCard";
+import { CopyLinkButton } from "./CopyLinkButton";
 
 /**
  * /start — AI literacy on-ramp for novice readers.
@@ -323,6 +324,48 @@ export default function StartPage() {
         </div>
       </section>
 
+      {/* ─── §6½ · COMMON WORRIES (novice anxieties, answered plain) ── */}
+      <section
+        id="worries"
+        className="border-t border-[#1A2225] py-20 md:py-28"
+      >
+        <div className="mx-auto w-full max-w-4xl px-6">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A45]">
+            common worries · 3 min read
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold leading-[1.15] tracking-tight md:text-5xl">
+            The questions you&apos;re afraid to ask out loud.
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-[1.7] text-[#9BA5A7] md:text-lg">
+            Every novice walks in with the same six worries. The lab will
+            not lie to you about any of them.
+          </p>
+
+          <dl className="mt-12 space-y-4">
+            {WORRIES.map((w) => (
+              <details
+                key={w.q}
+                className="group rounded-2xl border border-[#1A2225] bg-[#0F151A] p-6 open:border-[#22F0D5]/40 open:bg-[#11181E]"
+              >
+                <summary className="flex cursor-pointer items-baseline justify-between gap-4 list-none [&::-webkit-details-marker]:hidden">
+                  <h3 className="text-base font-semibold leading-snug tracking-tight text-[#F2F4F5] md:text-lg">
+                    {w.q}
+                  </h3>
+                  <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5] transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <div className="mt-4 space-y-3 text-sm leading-[1.7] text-[#C8CCCE] md:text-base">
+                  {w.a.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              </details>
+            ))}
+          </dl>
+        </div>
+      </section>
+
       {/* ─── §7 · TONIGHT'S HOMEWORK ─────────────────────────────── */}
       <section
         id="tonight"
@@ -361,6 +404,55 @@ export default function StartPage() {
               or read the working journal first ↗
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ─── §8 · SEND IT TO ONE PERSON ─────────────────────────── */}
+      <section
+        id="send"
+        className="border-t border-[#1A2225] bg-gradient-to-b from-[#0B1014] via-[#0E1418] to-[#0B1014] py-20 md:py-28"
+      >
+        <div className="mx-auto w-full max-w-3xl px-6 text-center">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
+            the entire ask
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold leading-[1.15] tracking-tight md:text-5xl">
+            Send this to <span className="text-[#22F0D5]">one</span> person.
+          </h2>
+          <p className="mt-6 text-base leading-[1.7] text-[#C8CCCE] md:text-lg">
+            Someone in your phone right now has used ChatGPT under ten times
+            and feels like an idiot about it. They are not an idiot. They
+            were not handed the door. Send this page and walk away. The lab
+            has the rest.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="sms:?&body=If%20you%27ve%20used%20ChatGPT%20less%20than%2010%20times%20this%20is%20worth%2011%20minutes.%20No%20jargon.%20No%20upsell.%20https%3A%2F%2Fatomeons.com%2Fstart"
+              className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
+            >
+              text it →
+            </a>
+            <a
+              href="https://twitter.com/intent/tweet?text=If%20you%27ve%20used%20ChatGPT%20under%2010%20times%2C%20this%20is%20worth%2011%20minutes.%20No%20jargon.%20No%20upsell.%20%40AtomMccree%20built%20it.&url=https%3A%2F%2Fatomeons.com%2Fstart"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 rounded-full border border-[#1A2225] bg-[#0F151A] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#C8CCCE] transition-all hover:border-[#22F0D5]/40 hover:text-[#22F0D5]"
+            >
+              tweet it →
+            </a>
+            <a
+              href="mailto:?subject=AI%20without%20the%20jargon%20%E2%80%94%2011%20minutes&body=I%20found%20this%20page%20and%20thought%20of%20you.%20No%20jargon%2C%20no%20upsell.%2011%20minutes%20from%20confused%20to%20confident.%0A%0Ahttps%3A%2F%2Fatomeons.com%2Fstart"
+              className="inline-flex items-center gap-2 rounded-full border border-[#1A2225] bg-[#0F151A] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#C8CCCE] transition-all hover:border-[#22F0D5]/40 hover:text-[#22F0D5]"
+            >
+              email it →
+            </a>
+            <CopyLinkButton />
+          </div>
+
+          <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.28em] text-[#6B7779]">
+            ::no tracking · no shortener · no marketing pixel · just the link
+          </p>
         </div>
       </section>
     </main>
@@ -564,5 +656,56 @@ const GLOSSARY = [
     term: "AGI",
     short: "Artificial General Intelligence",
     body: "Hypothetical AI as smart as a human across every domain. Doesn't exist yet. Debated whether it ever will. Hype magnet.",
+  },
+] as const;
+
+const WORRIES = [
+  {
+    q: "Will AI take my job?",
+    a: [
+      "Probably it will change your job. Possibly it will eliminate it. The honest answer depends on what your job is.",
+      "Jobs that are mostly typing — drafting routine emails, writing first-draft reports, summarizing meetings, copy-pasting between systems — are getting absorbed first. Jobs that require physical presence, in-person judgment, hands on equipment, or genuine relationship work are safer for now.",
+      "The single best move you can make this month is to become the person who uses AI INSIDE your current job before the company replaces the job with someone who already does. Section 4 of this page tells you exactly how.",
+    ],
+  },
+  {
+    q: "Is it safe to use? Where does my data go?",
+    a: [
+      "By default, what you type goes to the company that runs the AI (OpenAI, Anthropic, Google) and may be reviewed by their staff and possibly used to train future models. For most personal use — recipes, travel plans, emails to your brother — this is fine.",
+      "What NOT to paste: real passwords, full credit-card numbers, social security numbers, medical IDs, anything from someone else's confidential work that you weren't authorized to share. Treat the chat box like a public coffee-shop notepad.",
+      "If you need real privacy, look for tools that say things like 'on-device,' 'local-only,' or 'zero data retention.' Apple Intelligence runs on your phone. Ollama runs models on your own laptop. The lab's own ORANGEBOX cockpit defaults to local-only mode.",
+    ],
+  },
+  {
+    q: "Do I have to pay? What does free actually get me?",
+    a: [
+      "No, you do not have to pay. The free tiers of ChatGPT, Claude, and Gemini are genuinely useful and would have looked like miracles three years ago.",
+      "What free gets you: solid chat, ability to attach photos and short PDFs, decent web search on the Gemini side, voice mode on ChatGPT and Claude apps. Limits: slower response, smaller context window, sometimes a queue at peak hours.",
+      "Pay only after you have used a tool five days a week for two weeks and felt the free limit close in on you. Then $20/mo for whichever one you actually used is a deal. Do not pay for all three.",
+    ],
+  },
+  {
+    q: "Will I look stupid using it?",
+    a: [
+      "The person who is going to feel stupid in twelve months is the person who refused to try. The person typing 'how do I use this' tonight will be the colleague everyone forwards questions to by spring.",
+      "The interface is a chat box. There is no syntax. There is no certification. You ask a question in plain English. If the answer is wrong or unclear, you say so and ask again. That's the whole skill.",
+      "If you feel stuck, paste this prompt verbatim: 'I have never used AI before. Pretend I am 12 years old and walk me through what I should ask you to do today.' Watch what happens.",
+    ],
+  },
+  {
+    q: "Will it lie to me?",
+    a: [
+      "Yes. Confidently. This is called a hallucination and it is the single most important thing to understand on this page.",
+      "AI will sometimes invent a study, a court case, a quote, a person, a URL — and present it with the same confidence as a real fact. It is not lying on purpose. It is pattern-completing, and the pattern of a real citation looks the same as the pattern of a fake one.",
+      "Rule of thumb: if it cites something you are about to USE — a legal case, a medical claim, a statistic in a presentation, a study you will quote in a board meeting — verify it yourself with a real source. For low-stakes brainstorming (vacation ideas, dinner recipes, hobby projects) the cost of a wrong detail is small and you can skip the check.",
+    ],
+  },
+  {
+    q: "What if I get dependent on it?",
+    a: [
+      "Reasonable concern. The lab's posture: AI is a power tool. A chainsaw makes you faster than an axe. It does not make you a worse forester. Same idea.",
+      "Two healthy habits. First, do the hard thinking BEFORE you open the chat box. Decide what you actually want, in your own words, and then use the AI to draft and refine. The opposite — typing 'help me think' into a blank box and watching what comes out — is where dependency starts.",
+      "Second, kids and writing. If you are a parent or teacher, the rule is: do the assignment yourself first, then ask the AI to critique it. Never let the AI write the first draft of something a child is supposed to be learning to write themselves. The skill you build is the skill you keep.",
+    ],
   },
 ] as const;
