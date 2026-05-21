@@ -87,23 +87,37 @@ if (!dryFlag && (!SUPABASE_URL || !SUPABASE_KEY)) {
 // --------------------------------------------------------------------
 // parse the markdown draft
 // --------------------------------------------------------------------
-const raw = fs.readFileSync(filePath, "utf8");
+const raw = fs.readFileSync(filePath, "utf8").replace(/\r\n/g, "\n");
 
-function getSection(text, headingPattern, terminatorPattern = /^##\s+/m) {
-  const headingRe = new RegExp(`^##\\s+${headingPattern}\\s*$`, "m");
-  const match = text.match(headingRe);
-  if (!match) return null;
-  const start = match.index + match[0].length;
-  const rest = text.slice(start);
-  const term = rest.match(terminatorPattern);
-  const body = term ? rest.slice(0, term.index) : rest;
-  return body.trim();
+/**
+ * Split the draft on `\n## ` boundaries. Each `parts[i>=1]` starts with
+ * the heading name on its first line, then the section body.
+ *
+ * This is deliberately simple — the previous implementation used a
+ * non-greedy regex with the `m` flag, which on 2026-05-21 truncated
+ * letter 29's body to 14 words because `$` under multiline mode
+ * matched end-of-LINE rather than end-of-input. Splitting on the
+ * heading boundary avoids the regex pitfall entirely.
+ */
+const _parts = raw.split(/\n##\s+/);
+
+function getSection(name) {
+  for (let i = 1; i < _parts.length; i++) {
+    const head = _parts[i].split("\n", 1)[0].trim();
+    // prefix match so "PUBLISH NOTES" matches "PUBLISH NOTES (operator)" etc.
+    if (head.toUpperCase().startsWith(name.toUpperCase())) {
+      const sectionBody = _parts[i].split("\n").slice(1).join("\n").trim();
+      // strip trailing `---` separator common in the draft format
+      return sectionBody.replace(/\n+---\s*$/, "").trim();
+    }
+  }
+  return null;
 }
 
-const rawTitle = getSection(raw, "TITLE");
-const dek = getSection(raw, "DEK");
-const body = getSection(raw, "BODY");
-const publishNotes = getSection(raw, "PUBLISH NOTES.*");
+const rawTitle = getSection("TITLE");
+const dek = getSection("DEK");
+const body = getSection("BODY");
+const publishNotes = getSection("PUBLISH NOTES");
 
 if (!rawTitle || !body) {
   console.error(
