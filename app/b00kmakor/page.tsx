@@ -48,9 +48,22 @@ const PIPELINE = [
   ["receipts", "every word, every action, every dollar logged. own your audit trail."],
 ];
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "AtomEons", item: "https://atomeons.com" },
+    { "@type": "ListItem", position: 2, name: "B00KMakor", item: "https://atomeons.com/b00kmakor" },
+  ],
+};
+
 export default function B00KMakor() {
   return (
     <main className="relative isolate flex min-h-screen flex-col bg-black text-[#F2F4F5]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* radial glow background */}
       <div
         aria-hidden

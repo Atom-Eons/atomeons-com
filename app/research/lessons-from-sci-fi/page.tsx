@@ -550,6 +550,45 @@ function mmssToIso(mmss: string): string {
   return `PT${m}M${s}S`;
 }
 
+/**
+ * Build ImageObject JSON-LD for each cinema still.
+ *
+ * Each Midjourney still on this page becomes a citable ImageObject —
+ * Google Image search + AI image search engines can surface the
+ * still as the canonical "AtomEons interpretation of {Film}'s AI"
+ * result. Pairs with the VideoObject schema below for full media
+ * coverage on each of the 10 canonical AI moments.
+ */
+const imageObjectsJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": CLIPS.map((c) => ({
+    "@type": "ImageObject",
+    name: `${c.film} (${c.year}) — AtomEons interpretation`,
+    description: `Original Midjourney v8.1 interpretation of the canonical AI moment from ${c.film} (${c.year}): ${c.scene} ${c.posterAlt}. From the AtomEons 'Lessons From Sci-Fi' monograph.`,
+    contentUrl: `https://atomeons.com${c.posterSrc}`,
+    thumbnailUrl: `https://atomeons.com${c.posterSrc}`,
+    width: 1376,
+    height: 864,
+    encodingFormat: "image/png",
+    creator: {
+      "@type": "Organization",
+      name: "AtomEons Systems Laboratory",
+      url: "https://atomeons.com",
+    },
+    creditText: "AtomEons Systems Laboratory · Midjourney v8.1 generation",
+    copyrightNotice:
+      "AtomEons original generation — CC-BY 4.0 (attribute atomeons.com)",
+    license: "https://creativecommons.org/licenses/by/4.0/",
+    acquireLicensePage:
+      "https://atomeons.com/research/lessons-from-sci-fi",
+    isPartOf: {
+      "@type": "CreativeWork",
+      name: "Lessons From Sci-Fi — AtomEons monograph",
+      url: "https://atomeons.com/research/lessons-from-sci-fi",
+    },
+  })),
+};
+
 const videoObjectsJsonLd = {
   "@context": "https://schema.org",
   "@graph": CLIPS.map((c) => {
@@ -599,6 +638,12 @@ export default function LessonsFromSciFi() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(imageObjectsJsonLd),
+        }}
       />
       <script
         type="application/ld+json"

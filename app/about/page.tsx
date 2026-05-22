@@ -53,9 +53,22 @@ const DOCTRINE: Doctrine[] = [
   },
 ];
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "AtomEons", item: "https://atomeons.com" },
+    { "@type": "ListItem", position: 2, name: "About", item: "https://atomeons.com/about" },
+  ],
+};
+
 export default function About() {
   return (
     <main className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-16 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#a7b8ad]">
         Software · Books · Apps · LLMs
       </p>

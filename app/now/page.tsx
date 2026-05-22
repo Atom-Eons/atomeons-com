@@ -164,12 +164,25 @@ const CURRENT_REALITY: string[] = [
   "Lab is solo. Atom McCree. Marco Island, FL. No team, no deck, no series-A.",
 ];
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "AtomEons", item: "https://atomeons.com" },
+    { "@type": "ListItem", position: 2, name: "Now", item: "https://atomeons.com/now" },
+  ],
+};
+
 export default async function NowPage() {
   const { total: letterCount, latest } = await loadLetterStats();
   const summarizedPapers = PAPERS.filter((p) => p.status === "summarized").length;
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="mx-auto w-full max-w-4xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">

@@ -139,9 +139,22 @@ const FAQS: QA[] = [
   },
 ];
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "AtomEons", item: "https://atomeons.com" },
+    { "@type": "ListItem", position: 2, name: "FAQ", item: "https://atomeons.com/faq" },
+  ],
+};
+
 export default function FAQ() {
   return (
     <main className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-12 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
         <Link href="/">AtomEons</Link>{" "}
         <span className="text-[#204538]">/</span> FAQ
