@@ -4,9 +4,43 @@ import { PressMediaKit } from "./PressMediaKit";
 export const metadata = {
   title: "Press kit — AtomEons Systems Laboratory",
   description:
-    "AtomEons Systems Laboratory press kit. Coverage of the total effort: ÆoNs Research (12 papers · Lessons From Sci-Fi monograph), ORANGEBOX Command v6.0.0 ($1 desktop AI cockpit), skil.ski (skill marketplace), /intel (decoded primary-source drops), The Founder's View (nightly 8pm ET broadcast). Solo independent lab. Marco Island, FL. Quotes, story angles, downloadable assets, direct founder contact.",
+    "AtomEons Systems Laboratory press kit. Total-effort coverage: ÆoNs Research (12 manuscripts · Lessons From Sci-Fi 38-page monograph), ORANGEBOX Command v6.1.0 Agent Mode ($1 desktop AI cockpit), skil.ski (skill marketplace via MCP), /intel (decoded primary-source drops · current: May 2026 xAI algorithm leak), The Founder's View (nightly 8pm ET broadcast), /ai (the comprehensive AI gateway for the 44M facing displacement). Solo independent lab. Marco Island, Florida. Founder: Atom McCree. Boilerplate, founder bio, hero asset, downloadable media pack, three interview-protocol cards, honest-empty coverage feed, direct founder contact.",
+  keywords: [
+    "AtomEons press kit",
+    "Atom McCree press",
+    "indie AI lab press",
+    "one-operator AI lab",
+    "AI startup press kit",
+    "ORANGEBOX press",
+    "ÆoNs Research press",
+    "AI lab Marco Island",
+    "44M AI displacement",
+    "AI on-ramp media kit",
+    "Founder's View broadcast",
+    "indie AI economics",
+    "post-SaaS pricing",
+    "license §4A no-subscription",
+    "CC-BY 4.0 AI research",
+  ],
   alternates: { canonical: "https://atomeons.com/press" },
+  openGraph: {
+    title: "AtomEons Press Kit — instant journalist pack",
+    description:
+      "One-sentence pitch · one-paragraph boilerplate · founder bio · hero asset · downloadable media pack · honest coverage feed · 2-hour reply SLA. Solo independent AI lab. Marco Island, FL.",
+    url: "https://atomeons.com/press",
+    type: "website",
+    locale: "en_US",
+    siteName: "AtomEons",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AtomEons Press Kit",
+    description:
+      "Instant media kit. Boilerplate, bio, assets, contact. Solo indie AI lab. Marco Island, FL. 2-hour reply SLA in waking ET hours.",
+    creator: "@AtomMccree",
+  },
   robots: { index: true, follow: true },
+  authors: [{ name: "Atom McCree", url: "https://atomeons.com/about" }],
 };
 
 // ──────────────────────────────────────────────────────────────────

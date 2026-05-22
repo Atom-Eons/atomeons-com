@@ -1024,6 +1024,27 @@ function buildArticleJsonLd() {
   };
 }
 
+function buildBreadcrumbJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "AtomEons",
+        item: "https://atomeons.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "AI — the comprehensive gateway",
+        item: "https://atomeons.com/ai",
+      },
+    ],
+  };
+}
+
 function buildHowToJsonLd() {
   // 30-60-90 day plan as a HowTo — gives AI search engines a third
   // distinct structured-data block to surface ("how to learn AI in 90
@@ -1099,6 +1120,7 @@ export default function AIPage() {
   const faqJson = buildFaqJsonLd();
   const articleJson = buildArticleJsonLd();
   const howToJson = buildHowToJsonLd();
+  const breadcrumbJson = buildBreadcrumbJsonLd();
 
   return (
     <main className="relative z-10 text-[#F2F4F5]">
@@ -1114,6 +1136,10 @@ export default function AIPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJson) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
       />
 
       {/* HERO */}

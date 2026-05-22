@@ -121,11 +121,22 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "AtomEons Systems Laboratory",
+              alternateName: ["AtomEons", "ÆoNs Research"],
               url: "https://atomeons.com",
               logo: "https://atomeons.com/icon",
               email: "a.mccree@gmail.com",
-              founder: { "@type": "Person", name: "Atom McCree" },
+              founder: {
+                "@type": "Person",
+                name: "Atom McCree",
+                url: "https://atomeons.com/about",
+                sameAs: ["https://x.com/AtomMccree"],
+              },
               location: { "@type": "Place", name: "Marco Island, FL, USA" },
+              sameAs: [
+                "https://x.com/AtomMccree",
+                "https://github.com/AtomEons",
+                "https://atomeons.com/press",
+              ],
               brand: { "@type": "Brand", name: "ORANGEBOX" },
               makesOffer: {
                 "@type": "Offer",
@@ -137,6 +148,39 @@ export default function RootLayout({
                 availability: "https://schema.org/InStock",
                 url: "https://atomeons.com/orangebox",
               },
+            }),
+          }}
+        />
+        {/* WebSite + SearchAction — tells AI search engines + Google
+            that atomeons.com has site search at /search?q={query},
+            and gives them a stable site identity to anchor against. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "AtomEons",
+              alternateName: "AtomEons Systems Laboratory",
+              url: "https://atomeons.com",
+              description:
+                "Independent AI systems laboratory. The 44M on-ramp. ORANGEBOX cockpit. ÆoNs Research. Founder's View nightly broadcast. Marco Island, Florida.",
+              inLanguage: "en-US",
+              publisher: {
+                "@type": "Organization",
+                name: "AtomEons Systems Laboratory",
+                url: "https://atomeons.com",
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate:
+                    "https://atomeons.com/search?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
+              license: "https://creativecommons.org/licenses/by/4.0/",
             }),
           }}
         />
