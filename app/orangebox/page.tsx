@@ -52,22 +52,49 @@ export const metadata: Metadata = {
   title:
     "ORANGEBOX v6.1.0 Agent Mode — native AI cockpit · $1 once, FREE 7 days",
   description:
-    "ORANGEBOX Command v6.1.0 Agent Mode. The native AI cockpit with multi-turn agent loop (9 real tools), tab autocomplete, repo indexer, background job queue, 11 lanes, 60+ MCP tools, multi-model routing (Claude + GPT + Gemini + Groq + Ollama + OpenRouter), 20 receipt sources. Rust + egui, 4.98 MB binary. $1 once, forever. FREE first 7 days of launch.",
+    "ORANGEBOX Command v6.1.0 Agent Mode. The native AI cockpit with multi-turn agent loop (9 real tools), tab autocomplete, repo indexer, background job queue, 11 lanes, 60+ MCP tools, multi-model routing (Claude + GPT + Gemini + Groq + Ollama + OpenRouter), 20 receipt sources. Rust + egui, 4.98 MB binary. $1 once, forever. FREE first 7 days of launch. License §4A legally bans subscription. Local-first. Zero telemetry. Source included.",
+  keywords: [
+    "ORANGEBOX",
+    "ORANGEBOX Command",
+    "AI cockpit",
+    "Claude Code cockpit",
+    "local-first AI",
+    "MCP tools",
+    "AI agent",
+    "Rust egui",
+    "Anthropic Claude desktop",
+    "$1 AI tool",
+    "no subscription AI",
+    "indie AI tool",
+    "AI for one operator",
+    "Windows AI cockpit",
+    "agent mode",
+    "tab autocomplete AI",
+    "repo indexer",
+    "background job queue",
+    "multi-model routing",
+    "AtomEons",
+  ],
   alternates: { canonical: "https://atomeons.com/orangebox" },
   openGraph: {
     title: "ORANGEBOX v6.1.0 Agent Mode — native AI cockpit",
     description:
-      "Native AI cockpit. Multi-turn agent loop with 9 real tools. 11 lanes. Multi-model routing. 20 receipt sources. Rust + egui. $1 once, FREE first 7 days.",
+      "Native AI cockpit. Multi-turn agent loop with 9 real tools. 11 lanes. Multi-model routing. 20 receipt sources. Rust + egui. $1 once, FREE first 7 days. License §4A bans subscription.",
     url: "https://atomeons.com/orangebox",
     siteName: "AtomEons",
     type: "website",
+    publishedTime: "2026-05-17T00:00:00Z",
+    modifiedTime: "2026-05-22T00:00:00Z",
+    authors: ["Atom McCree"],
   },
   twitter: {
     card: "summary_large_image",
     title: "ORANGEBOX v6.1.0 Agent Mode",
     description:
-      "Native AI cockpit. 9-tool agent loop, tab autocomplete, repo indexer, 11 lanes, 20 receipt sources. $1 once · FREE 7 days.",
+      "Native AI cockpit. 9-tool agent loop, tab autocomplete, repo indexer, 11 lanes, 20 receipt sources. $1 once · FREE 7 days · §4A no-saas lock.",
+    creator: "@AtomMccree",
   },
+  robots: { index: true, follow: true },
 };
 
 export default function OrangeBox() {

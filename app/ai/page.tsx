@@ -991,7 +991,7 @@ function buildArticleJsonLd() {
       "The comprehensive AI gateway for the 44 million workers facing AI displacement. Named tools, named builders, 20 revenue paths, 50+ honest FAQs.",
     url: "https://atomeons.com/ai",
     datePublished: "2026-05-21",
-    dateModified: "2026-05-21",
+    dateModified: "2026-05-22",
     author: {
       "@type": "Person",
       name: "Atom McCree",
@@ -1024,6 +1024,73 @@ function buildArticleJsonLd() {
   };
 }
 
+function buildHowToJsonLd() {
+  // 30-60-90 day plan as a HowTo — gives AI search engines a third
+  // distinct structured-data block to surface ("how to learn AI in 90
+  // days" is a high-citation query pattern).
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to go from zero AI experience to your first AI-assisted dollar in 90 days",
+    description:
+      "A step-by-step 30-60-90 day plan for someone with under-ten ChatGPT sessions to reach their first paid AI-augmented work. Free. Tool-agnostic. Honest about pacing.",
+    totalTime: "P90D",
+    estimatedCost: {
+      "@type": "MonetaryAmount",
+      currency: "USD",
+      value: "20",
+    },
+    supply: [
+      { "@type": "HowToSupply", name: "Free Claude.ai account" },
+      { "@type": "HowToSupply", name: "Free ChatGPT account" },
+      { "@type": "HowToSupply", name: "Public posting account (X / LinkedIn / Substack)" },
+    ],
+    tool: [
+      { "@type": "HowToTool", name: "Anthropic Claude" },
+      { "@type": "HowToTool", name: "ChatGPT" },
+      { "@type": "HowToTool", name: "Google Gemini (optional)" },
+    ],
+    step: [
+      {
+        "@type": "HowToSection",
+        name: "Days 1-30 — become comfortable",
+        position: 1,
+        itemListElement: PLAN_30.map((text, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          text,
+        })),
+      },
+      {
+        "@type": "HowToSection",
+        name: "Days 31-60 — go public",
+        position: 2,
+        itemListElement: PLAN_60.map((text, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          text,
+        })),
+      },
+      {
+        "@type": "HowToSection",
+        name: "Days 61-90 — first dollar",
+        position: 3,
+        itemListElement: PLAN_90.map((text, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          text,
+        })),
+      },
+    ],
+    author: {
+      "@type": "Person",
+      name: "Atom McCree",
+      url: "https://atomeons.com/about",
+    },
+    inLanguage: "en-US",
+  };
+}
+
 // ────────────────────────────────────────────────────────────────────
 // PAGE
 // ────────────────────────────────────────────────────────────────────
@@ -1031,6 +1098,7 @@ function buildArticleJsonLd() {
 export default function AIPage() {
   const faqJson = buildFaqJsonLd();
   const articleJson = buildArticleJsonLd();
+  const howToJson = buildHowToJsonLd();
 
   return (
     <main className="relative z-10 text-[#F2F4F5]">
@@ -1042,6 +1110,10 @@ export default function AIPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJson) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJson) }}
       />
 
       {/* HERO */}

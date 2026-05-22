@@ -60,24 +60,50 @@ export const metadata: Metadata = {
     template: "%s | AtomEons",
   },
   description:
-    "AtomEons Systems Laboratory. Marco Island, Florida. One operator. Twelve research manuscripts (CC-BY 4.0), the ORANGEBOX cockpit, a nightly broadcast at 8pm ET, live intel surfaces, the skil.ski registry. Independent research and built tools, shipped from outside the cartel.",
+    "AtomEons Systems Laboratory. Marco Island, Florida. Independent one-operator AI lab. Twelve research manuscripts under CC-BY 4.0. The ORANGEBOX cockpit ($1 once, license §4A bans subscription). Nightly Founder's View broadcast at 8pm ET. Decoded primary-source intel. The skil.ski skill registry. /ai — the comprehensive on-ramp for the 44 million workers facing generative AI displacement. /start — the 11-minute novice on-ramp. Independent research and built tools, shipped from outside the cartel.",
+  keywords: [
+    "AtomEons",
+    "AtomEons Systems Laboratory",
+    "Atom McCree",
+    "independent AI lab",
+    "one operator AI",
+    "ORANGEBOX",
+    "ÆoNs Research",
+    "Founder's View",
+    "AI on-ramp",
+    "AI for beginners",
+    "AI tools recommendation",
+    "AI builders to follow",
+    "make money with AI",
+    "skil.ski",
+    "B00KMakor",
+    "Lessons From Sci-Fi",
+    "Marco Island AI lab",
+    "CC-BY 4.0 research",
+    "no VC AI",
+    "no subscription AI",
+  ],
   openGraph: {
     title: "AtomEons — Independent AI Systems Laboratory.",
     description:
-      "Independent AI research and built tools. Twelve papers · the ORANGEBOX cockpit · nightly broadcast · alpha intel · skil.ski. One operator, Marco Island.",
+      "Independent AI research + built tools. Twelve papers · the ORANGEBOX cockpit · nightly broadcast · alpha intel · /ai gateway · skil.ski. One operator, Marco Island, FL.",
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "AtomEons — Independent AI Systems Laboratory.",
     description:
-      "Independent AI research + built tools. Papers, cockpit, nightly broadcast, alpha intel. One operator, Marco Island.",
+      "Independent AI research + built tools. Papers, cockpit, nightly broadcast, alpha intel, /ai gateway. One operator, Marco Island.",
     creator: "@AtomMccree",
     site: "@AtomMccree",
   },
   robots: { index: true, follow: true },
+  authors: [{ name: "Atom McCree", url: "https://atomeons.com/about" }],
+  creator: "Atom McCree",
+  publisher: "AtomEons Systems Laboratory",
 };
 
 export default function RootLayout({
