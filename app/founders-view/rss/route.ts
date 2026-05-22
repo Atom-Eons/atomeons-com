@@ -1,7 +1,14 @@
 import { publicSupabase, type FoundersViewPost } from "@/lib/supabase";
 
 export const runtime = "nodejs";
-export const revalidate = 300; // 5 min
+export const dynamic = "force-dynamic";
+// Was `revalidate = 300` until 2026-05-22; switched to force-dynamic
+// because @vercel/next v54.x cannot map ISR routes back to a lambda
+// during the serverBuild step ("Unable to find lambda for route:
+// /founders-view/rss"). force-dynamic guarantees this route always
+// renders as a true lambda. Cache-Control below still pins
+// s-maxage=300 so the CDN cache window stays 5 minutes — same
+// freshness for end users, different optimization path.
 
 /**
  * RSS 2.0 feed for The Founder's View.
