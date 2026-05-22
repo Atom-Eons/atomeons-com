@@ -25,7 +25,7 @@ import Link from "next/link";
  *   4. What is AI (compressed; /start has the long version)
  *   5. Tools we trust — named with reasoning
  *   6. Builders we read — named with reasoning
- *   7. 12 ways to make money with AI
+ *   7. 20 ways to make money with AI
  *   8. Honest limits + scams to avoid
  *   9. The big FAQ (40+ Q&A in 6 categories)
  *  10. 30-60-90 day plan
@@ -67,7 +67,7 @@ export const metadata = {
   openGraph: {
     title: "AI — the comprehensive gateway · AtomEons",
     description:
-      "Everything someone with under-ten ChatGPT sessions needs. Named tools. Named builders. 12 revenue paths. 40+ honest FAQs.",
+      "Everything someone with under-ten ChatGPT sessions needs. Named tools. Named builders. 20 revenue paths. 50+ honest FAQs.",
     url: "https://atomeons.com/ai",
     type: "article",
     publishedTime: "2026-05-21T00:00:00Z",
@@ -78,7 +78,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "AI — the comprehensive gateway · AtomEons",
     description:
-      "The on-ramp for the 44M. Named tools, named people, 12 revenue paths, 40+ honest FAQs.",
+      "The on-ramp for the 44M. Named tools, named people, 20 revenue paths, 50+ honest FAQs.",
     creator: "@AtomMccree",
   },
   robots: { index: true, follow: true },
@@ -93,7 +93,7 @@ const TOC_SECTIONS = [
   { href: "#what-is-ai", label: "What AI actually is", num: "01" },
   { href: "#tools", label: "Tools we trust", num: "02" },
   { href: "#people", label: "Builders we read", num: "03" },
-  { href: "#money", label: "12 ways to make money with AI", num: "04" },
+  { href: "#money", label: "20 ways to make money with AI", num: "04" },
   { href: "#scams", label: "Honest limits + scams to avoid", num: "05" },
   { href: "#faq", label: "The big FAQ — 40+ questions", num: "06" },
   { href: "#plan", label: "Your 30-60-90 day plan", num: "07" },
@@ -470,6 +470,71 @@ const REVENUE: RevenuePath[] = [
     realistic: "5-15 hours/week reclaimed · pays for itself in week one",
     body: "This isn't a business — it's a way to NOT BURN OUT. Therapists spend 30-50% of their week on documentation. Use Whisper to transcribe sessions (with patient consent), Claude to draft SOAP notes, then edit. Drop documentation time by 70%. Same income, fewer hours. License compliance is critical — check your state board on AI-assisted documentation before adopting.",
   },
+  // ── Added 2026-05-22 — 8 more revenue paths for additional path-finding depth.
+  {
+    num: "13",
+    title: "LinkedIn ghostwriting for executives",
+    audience: "writers, ex-marketers, ex-comms",
+    tools: ["Claude", "LinkedIn", "Calendly"],
+    realistic: "$2,000-5,000/mo per client · 2-3 clients realistic",
+    body: "Senior execs at mid-size companies want to be visible on LinkedIn but hate writing. Offer to manage their feed at $3K/mo. Three posts/week, all in their voice. You interview them once monthly for 60 min, mine the recording for opinions, draft a month of posts with Claude, edit until it sounds like the person not like AI, schedule in advance. Roughly 8 hrs/mo per client. Three clients fills a calendar.",
+  },
+  {
+    num: "14",
+    title: "AI-staged real estate photography",
+    audience: "ex-photographers, ex-stagers, designers",
+    tools: ["Midjourney", "Photoshop / Affinity", "Lightroom"],
+    realistic: "$200-800 per listing · 8-15 listings/week",
+    body: "Empty house photographs are unsellable. Traditional staging costs $2K-$5K and takes weeks. With Midjourney + Photoshop you can virtually stage interior shots in 2 hours per listing. Furniture, art, plants, warm lighting, all matched to the home's actual fixed elements. Charge $400/listing. Real-estate agents pay willingly because every week a listing sits empty costs them more than the staging.",
+  },
+  {
+    num: "15",
+    title: "AI-augmented resume + cover letter editing",
+    audience: "ex-recruiters, ex-HR, ex-career coaches",
+    tools: ["Claude", "Google Docs", "Zoom"],
+    realistic: "$150-500 per resume · 8-20 clients/week",
+    body: "Two paths. Path one: per-document editing at $250 — client sends current resume + job posting, you return ATS-optimized version + cover letter in 24 hours. Path two: full career package at $1,500 — resume + cover letter + LinkedIn profile rewrite + interview prep + 30-day follow-up. Higher conversion on the package. Path in: post weekly LinkedIn content showing before/after rewrites (anonymized).",
+  },
+  {
+    num: "16",
+    title: "Local-business SEO with AI",
+    audience: "ex-marketers, ex-agency, web designers",
+    tools: ["Claude", "Google Business Profile", "Local rank trackers"],
+    realistic: "$500-2,000/mo per client · 5-15 clients realistic",
+    body: "Plumbers, electricians, dentists, restaurants. Every local business owner knows their Google Business Profile matters; almost none of them have time to maintain it. Offer monthly: weekly review responses (Claude drafts, you edit + send), monthly post + photo, quarterly category + service updates, ranking report. $750/mo flat. Twelve clients = $9k/mo. Pure retainer business. Compounds with referrals.",
+  },
+  {
+    num: "17",
+    title: "Etsy listing optimization with AI",
+    audience: "ex-marketers, copywriters, anyone with taste",
+    tools: ["Claude", "Midjourney", "Etsy", "EverBee"],
+    realistic: "$50-300 per listing · 15-40 listings/week",
+    body: "Most Etsy sellers are makers, not marketers. Their listings have title-stuffing, blurry photos, and weak copy. Offer to redo the title (SEO-optimized), description (story-first), photos (AI-enhanced or relit), and tags. $150/listing flat. Sellers see ~30-50% more views within two weeks. Path in: reach out to sellers in one specific category (wedding stationery, dog collars, candles) — niche specialization beats generalist.",
+  },
+  {
+    num: "18",
+    title: "AI-augmented legal docs for small firms",
+    audience: "paralegals, contract managers, legal-adjacent",
+    tools: ["Claude", "Westlaw / Lexis", "MS Word"],
+    realistic: "$1,500-4,000/mo retainer · 3-6 clients realistic",
+    body: "Small law firms (1-3 attorneys) can't afford a full-time paralegal but drown in routine docs. Offer monthly retainer for: NDA review + redline (Claude drafts changes, attorney signs off), contract templating, deposition summaries, brief outlines. NOT giving legal advice — strictly drafting + research support that the attorney reviews. Verify malpractice insurance covers AI-assisted work in your state. Path in: cold-email solo + 2-attorney firms in your state.",
+  },
+  {
+    num: "19",
+    title: "AI-assisted tax season prep",
+    audience: "ex-accountants, EA, bookkeepers, tax preparers",
+    tools: ["Claude", "QuickBooks / Xero", "TaxSlayer / Drake"],
+    realistic: "$200-2,000 per return · 50-150 returns/season",
+    body: "Tax season is finite (Jan-Apr in US). AI accelerates schedule prep, K-1 wrangling, 1099 reconciliation, audit risk scoring. Solo prep at $400/return × 100 returns × 4 months = $40K. Higher with Schedule Cs / S-corp returns / multi-state. License requirements vary by state (CPA, EA, or PTIN-only). Check IRS Publication 947 before charging. Volume play, but the volume is real.",
+  },
+  {
+    num: "20",
+    title: "Podcast production with AI scripting",
+    audience: "ex-podcasters, audio engineers, indie media",
+    tools: ["Whisper", "Claude", "Descript / Reaper", "Spotify for Creators"],
+    realistic: "$1,500-5,000 per episode · 4-12 episodes/month",
+    body: "Indie podcasters hate the post-production grind. Charge $2K/episode to handle: full episode transcript (Whisper), show notes draft + edit (Claude), chapter markers, blooper reel, two shortform clips for social, three quote graphics, RSS upload, full description copy. 10-12 hours per episode of your time. Eight episodes/month = $16K/mo. Niche specialization (business podcasts, true crime, comedy) compounds your portfolio.",
+  },
 ];
 
 type FAQ = {
@@ -587,12 +652,12 @@ const FAQS: FAQ[] = [
   {
     category: "money",
     q: "What is the best AI side hustle for a non-developer?",
-    a: "Three: (1) Local-business website builds with v0 + Vercel, $2k-5k per site. (2) Substack ghostwriting at $1.5k-3k/mo per client. (3) AI-powered bookkeeping for small businesses at $500-800/mo per client. All three trade on a non-developer skill you already have (taste, writing, accounting) and use AI to multiply your output 3-5x. See the 12 revenue paths above for the full list.",
+    a: "Three: (1) Local-business website builds with v0 + Vercel, $2k-5k per site. (2) Substack ghostwriting at $1.5k-3k/mo per client. (3) AI-powered bookkeeping for small businesses at $500-800/mo per client. All three trade on a non-developer skill you already have (taste, writing, accounting) and use AI to multiply your output 3-5x. See the 20 revenue paths above for the full list.",
   },
   {
     category: "money",
     q: "Can I make money with AI without coding?",
-    a: "Yes. The path is: pick a non-coding skill you already have (writing, design, accounting, translation, video editing, customer service, project management). Add AI as a force multiplier. Sell the augmented output at a small discount to the human-only price. The skill is yours; the AI is your speed. Of the 12 revenue paths on this page, 8 require zero coding.",
+    a: "Yes. The path is: pick a non-coding skill you already have (writing, design, accounting, translation, video editing, customer service, project management). Add AI as a force multiplier. Sell the augmented output at a small discount to the human-only price. The skill is yours; the AI is your speed. Of the 20 revenue paths on this page, 8 require zero coding.",
   },
   {
     category: "future",
@@ -634,6 +699,107 @@ const FAQS: FAQ[] = [
     q: "Is AtomEons hiring?",
     a: "Not as employees. The lab is deliberately one-operator. If you want to contribute, the public surfaces accept pull requests via GitHub (atomeons-com is public). Useful contributions: documentation fixes, accessibility improvements, mobile bug reports, new MCP integrations, factual corrections to the research papers. Send via DM to @AtomMccree on X or email a.mccree@gmail.com.",
   },
+  // ── Added 2026-05-22 — 20 more questions for AI-search citation depth.
+  {
+    category: "tools",
+    q: "Claude vs ChatGPT — which one should I subscribe to first?",
+    a: "Claude Pro at $20/mo if you do any writing, coding, or document analysis. ChatGPT Plus at $20/mo if you do mostly voice mode, image generation, or want the largest ecosystem of custom GPTs. If you'll only pay for one in 2026, the lab's vote is Claude — better at the kind of work that actually pays. If you can swing both, do both for two months, then drop the one you reach for less.",
+  },
+  {
+    category: "tools",
+    q: "Cursor vs Claude Code — which IDE setup should a developer use?",
+    a: "Cursor if you want a VS Code feel with AI in the editor (Cmd+K to edit inline, Cmd+L for agent panel). Claude Code if you want a CLI agent that drives your existing editor (works with any editor — Vim, JetBrains, Sublime, VS Code). Most working developers in 2026 run BOTH — Cursor for inline edits during flow, Claude Code for multi-file refactors and feature work. Combined cost: $20/mo Cursor + $20/mo Claude Pro = $40/mo. Worth it if coding is your job.",
+  },
+  {
+    category: "tools",
+    q: "Is Perplexity worth $20/mo or is the free tier enough?",
+    a: "Free tier (5 pro searches/day) is enough for personal use. The $20/mo Pro tier unlocks unlimited pro searches + access to better models on demand. Worth it if you do research-heavy work daily (journalists, analysts, lawyers, doctors, researchers). For everyone else, the free tier is plenty.",
+  },
+  {
+    category: "tools",
+    q: "Which AI tool has the best free tier in 2026?",
+    a: "Google Gemini. The free tier includes Gemini 2.0 Flash with a 1.5-million-token context window (5x what paid Claude offers), free image generation, and free voice mode. Free integration with Gmail, Drive, Docs, Sheets. If you want the most AI horsepower for $0/month, Gemini's free tier is the answer. Trade-off: it's less careful than Claude on edge cases and less popular than ChatGPT.",
+  },
+  {
+    category: "tools",
+    q: "When should I use a local AI instead of cloud AI?",
+    a: "Three cases. First, confidentiality: medical records, attorney-client material, internal IP, personal journals. Run Ollama with llama3.3:70b or qwen2.5-coder:32b locally; data never leaves your machine. Second, cost: if you're hitting API limits daily, local inference is $0/marginal-call after the hardware. Third, learning: running a model locally teaches you what's actually happening better than any tutorial. For everything else, cloud AI is faster and more capable.",
+  },
+  {
+    category: "agents",
+    q: "What's the best way to learn coding with AI in 2026?",
+    a: "Start with Replit Agent — browser-based, no install. Build three working web apps end-to-end (a todo, a blog, a small game). When you're comfortable, install Claude Code locally. Move to Cursor when you want IDE comfort. By month six you should have shipped one real project that other people use. Don't follow tutorials. Build a thing you want to exist.",
+  },
+  {
+    category: "agents",
+    q: "How do I review AI-generated code for security issues?",
+    a: "Run it through a second AI as a critic. Specifically: paste the code to Claude and prompt 'Review this for SQL injection, XSS, CSRF, IDOR, hardcoded secrets, and unsafe deserialization. Be ruthless.' Claude is good at this. For deeper review: run npm audit, run a static analyzer (Snyk, Semgrep), run your tests. Never deploy AI-generated code to production without at least the AI-as-critic pass.",
+  },
+  {
+    category: "agents",
+    q: "What is 'vibe coding' and is it a real thing?",
+    a: "Vibe coding is shipping software where you don't fully understand the code, because the AI wrote it and you trusted the output. It's real, it's increasingly common, and it works for low-stakes throwaways (prototypes, internal scripts, weekend projects). It does not work for anything that has to be maintained, audited, secured, or scaled. If the code is going to outlive the week, READ what the AI wrote before you commit it.",
+  },
+  {
+    category: "agents",
+    q: "Should I learn TypeScript or JavaScript first?",
+    a: "TypeScript. Always. In 2026 the JavaScript-only path is essentially deprecated for new projects. TypeScript's type system catches whole classes of bugs at edit time that JavaScript only catches at runtime. AI agents (Claude Code, Cursor) work dramatically better against typed code because they can verify their refactors. Cost: ~1 week of learning curve. Benefit: years of caught bugs.",
+  },
+  {
+    category: "agents",
+    q: "What's the difference between an MCP server and a Claude Code skill?",
+    a: "An MCP server is a separate process that exposes capabilities (tools, prompts, resources) to ANY MCP-compatible client (Claude Code, Claude Desktop, Cursor, ORANGEBOX). A Claude Code skill is a markdown file with instructions that lives in your project and only Claude Code reads. Use MCP when you want to share a capability across clients (e.g., your team's database). Use a skill when you want project-local instructions for a specific repo (e.g., 'always run pnpm typecheck after edits').",
+  },
+  {
+    category: "agents",
+    q: "Can I run an AI agent overnight without supervision?",
+    a: "Yes for low-stakes work (research, scraping, generating content, running tests). No for anything that mutates production data, sends external messages, or moves money. Even for low-stakes overnight runs, set up: (1) a kill switch — a file the agent checks every iteration and stops if it exists, (2) a token budget — stop after N total tokens spent, (3) a time budget — stop after M hours. The lab's ORANGEBOX cockpit ships these as primitives.",
+  },
+  {
+    category: "agents",
+    q: "What is RAG and when do I need it?",
+    a: "RAG = Retrieval-Augmented Generation. Instead of putting your entire knowledge base into the AI's context window (slow + expensive), you store it in a vector database, embed each user query, find the top-K most relevant chunks, and pass JUST those to the AI. Use RAG when: your knowledge base is bigger than ~100K tokens, you need source citations, knowledge changes frequently, or you need to scope what the AI can see per user. Don't bother with RAG for small static docs — just paste them in.",
+  },
+  {
+    category: "privacy",
+    q: "Is it safe to paste my company's internal documents into Claude?",
+    a: "Depends on your contract with Anthropic. Free-tier Claude.ai: data is used to improve the model unless you opt out (Settings → Privacy). Claude Pro/Max: same opt-out. Claude for Work / Claude Enterprise / Claude API on a business agreement: zero training, contractually. The safest answer for confidential business material is the Enterprise plan or local Ollama. The 'pretty safe' answer is Pro with training opt-out enabled. The unsafe answer is free tier without checking the setting.",
+  },
+  {
+    category: "privacy",
+    q: "Can my employer see what I do with ChatGPT?",
+    a: "If you use a personal account on a personal device on personal network — no. If you use a work account on any device — yes (admin dashboard shows usage). If you use a personal account on a work-issued device — possibly (DLP software may capture browser content). If you use a personal account on personal device but work network — possibly (corporate proxy can log destinations). Rule of thumb: anything on a work device is auditable.",
+  },
+  {
+    category: "money",
+    q: "How do I price AI-augmented freelance work?",
+    a: "Price the OUTPUT, not the input. If a deliverable used to be 8 hours and you can now do it in 2, charge ~75% of the 8-hour rate. You are paid for the judgment, the editing, the accountability, and the speed — not the cost of the AI. A photographer with a digital camera doesn't bill the cost of the SD card. Same logic.",
+  },
+  {
+    category: "money",
+    q: "What's the highest-paying AI side hustle for a developer in 2026?",
+    a: "MCP server development for enterprise clients. Companies want their internal CRM / database / docs / APIs accessible to Claude Code. Niche skill, high demand, low supply. Senior MCP dev rates in 2026 are $200-400/hr. Most engagements are $10K-$50K projects. Two projects/year covers a year of expenses. Path in: build one MCP server publicly (against a public API), document it well, write about it. Inbound follows within 90 days.",
+  },
+  {
+    category: "money",
+    q: "Can I make six figures with AI in year one with no programming?",
+    a: "Mostly no, honestly. The realistic path to six figures in year one requires (a) a skill you already had (writing, design, accounting, sales, video), (b) consistent public posting weekly, (c) cold outreach to 20+ prospects/week, (d) 50+ weeks of sustained effort. The people you see hitting $100K in months 1-3 either had pre-existing platforms (an audience, a referral network) or are lying. The honest path is 18-24 months from zero to $100K, and you do it by building skill while building network.",
+  },
+  {
+    category: "future",
+    q: "Will AI cause mass unemployment?",
+    a: "Probably not 'mass' in the depression-era sense, but yes for specific roles in specific timelines. The pattern from prior technology shocks: jobs disappear in specific categories (data entry, basic clerical, junior copywriting, basic legal research) AND new jobs appear that didn't exist (prompt engineer, AI evaluator, MCP developer, AI policy lawyer, AI safety auditor). Net employment may stay roughly flat, but the people losing jobs are not the same people getting the new ones. That's the actual disaster — not unemployment, but displacement without retraining infrastructure.",
+  },
+  {
+    category: "future",
+    q: "Should I learn AI or learn a trade?",
+    a: "Both, if you can. The 2026-2036 jobs market favors people in skilled trades (electricians, plumbers, welders, HVAC, machinists) AND people who can use AI to multiply knowledge work. The luckiest position is having both — a trade for the income floor, AI for the income ceiling. If you have to pick one as a 20-year-old today: trade. Trades will be the last category AI can't fully replace, because welding a beam still requires a body.",
+  },
+  {
+    category: "future",
+    q: "What should I tell my kids about AI?",
+    a: "Three things. First: 'It's a calculator for reading and writing. Same way you learn math before using a calculator, you learn reading and writing before using AI.' Second: 'AI makes things up. Always verify the important parts.' Third: 'The hard skills don't go away — judgment, taste, knowing when to say no. AI makes those MORE valuable, not less.' Then let them play with it. Curiosity matters more than caution at this age.",
+  },
 ];
 
 const PLAN_30 = [
@@ -648,7 +814,7 @@ const PLAN_30 = [
 const PLAN_60 = [
   "Pick a second tool. Read the docs. Build something small that combines tool #1 and tool #2 (example: Claude + Vercel = a personal blog deployed in an evening).",
   "Subscribe to two of the people on the Builders We Read list. Read their last 10 posts. Take notes on what surprises you.",
-  "Pick ONE of the 12 revenue paths above. Do the smallest possible version. Find ONE potential client. Have ONE conversation about being paid.",
+  "Pick ONE of the 20 revenue paths above. Do the smallest possible version. Find ONE potential client. Have ONE conversation about being paid.",
   "Open a public account somewhere — X, LinkedIn, Substack, Bluesky. Post once a week about what you're learning. Real specifics. No 'I'm so excited about AI' posts.",
   "By day 60: you have a public record of using AI for real work. Strangers can see your work.",
 ];
@@ -735,7 +901,7 @@ function buildArticleJsonLd() {
     headline:
       "AI — what it is, what it can do for you, which tools to trust",
     description:
-      "The comprehensive AI gateway for the 44 million workers facing AI displacement. Named tools, named builders, 12 revenue paths, 40+ honest FAQs.",
+      "The comprehensive AI gateway for the 44 million workers facing AI displacement. Named tools, named builders, 20 revenue paths, 50+ honest FAQs.",
     url: "https://atomeons.com/ai",
     datePublished: "2026-05-21",
     dateModified: "2026-05-21",
@@ -807,7 +973,7 @@ export default function AIPage() {
           <p className="mt-8 max-w-3xl text-lg leading-[1.55] text-[#C8CCCE] md:text-xl">
             The on-ramp for forty-four million workers whose jobs are
             exposed to generative AI in the next decade. Named tools.
-            Named builders. Twelve concrete revenue paths. Forty-plus
+            Named builders. Twenty concrete revenue paths. Fifty-plus
             honest answers. No course to buy. No bootcamp. No upsell.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -821,7 +987,7 @@ export default function AIPage() {
               href="#money"
               className="inline-flex items-center gap-2 rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-6 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-[#FFB87A] transition-all hover:border-[#FFB87A] hover:bg-[#FFB87A]/20"
             >
-              12 revenue paths →
+              20 revenue paths →
             </Link>
             <Link
               href="/start"
@@ -896,7 +1062,7 @@ export default function AIPage() {
                 href="#money"
                 className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
               >
-                12 revenue paths
+                20 revenue paths
               </Link>
               . If you read three: the revenue paths, the{" "}
               <Link
@@ -1121,10 +1287,10 @@ export default function AIPage() {
       <section id="money" className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-6xl px-6 py-24 md:py-32">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
-            ::04 · 12 ways to make money with ai
+            ::04 · 20 ways to make money with ai
           </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.08] tracking-tight md:text-5xl">
-            Twelve specific revenue paths. With realistic numbers.
+            Twenty specific revenue paths. With realistic numbers.
           </h2>
           <p className="mt-6 max-w-3xl text-base leading-[1.6] text-[#9BA5A7] md:text-lg">
             None of these require &quot;giving up your day job.&quot;
@@ -1644,7 +1810,7 @@ export default function AIPage() {
                 ::if they need income now
               </p>
               <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#FFB87A]">
-                Send them the 12 revenue paths →
+                Send them the 20 revenue paths →
               </p>
             </Link>
             <Link
