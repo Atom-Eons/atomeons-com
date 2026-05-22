@@ -54,6 +54,13 @@ export function Header() {
             <span className="size-1.5 rounded-full bg-[#22F0D5] shadow-[0_0_8px_rgba(34,240,213,0.8)]" />
             start here
           </Link>
+          <Link
+            href="/ai"
+            className="group inline-flex items-center gap-1.5 rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A] transition-all hover:border-[#FFB87A] hover:bg-[#FFB87A]/20"
+          >
+            <span className="size-1.5 rounded-full bg-[#FFB87A] shadow-[0_0_8px_rgba(255,184,122,0.8)]" />
+            ai guide
+          </Link>
 
           <NavDropdown
             label="Products"
