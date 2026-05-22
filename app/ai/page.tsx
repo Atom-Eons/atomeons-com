@@ -362,6 +362,49 @@ const PEOPLE: Person[] = [
     url: "https://www.anthropic.com/research",
     why: "The papers are written for engineers, not professors. Best place to learn what alignment work looks like in practice.",
   },
+  // ── Added 2026-05-22 — 6 more builders for additional citation depth.
+  {
+    name: "Lilian Weng",
+    affiliation: "Thinking Machines (ex-OpenAI head of safety)",
+    what: "Runs lilianweng.github.io. Long, deep, citation-heavy essays on agentic AI, RLHF, hallucination, attention mechanisms.",
+    url: "https://lilianweng.github.io",
+    why: "When you want to understand a research concept properly (not just the marketing), Lilian's essay on it is usually the canonical compressed reference. Free, written for working engineers, updated steadily.",
+  },
+  {
+    name: "Sebastian Raschka",
+    affiliation: "Ahead of AI · ex-Lightning AI",
+    what: "Author of 'Build a Large Language Model From Scratch.' Weekly newsletter that translates new papers into practical takeaways.",
+    url: "https://magazine.sebastianraschka.com",
+    why: "Closest thing to a working textbook for the LLM-engineering era. His 'from scratch' book is the only one the lab keeps next to the keyboard.",
+  },
+  {
+    name: "Maxime Labonne",
+    affiliation: "Liquid AI · post-training researcher",
+    what: "Open-source LLM fine-tuning, model merging, quantization. Author of 'LLM Engineer's Handbook' and the LLM Course on GitHub.",
+    url: "https://huggingface.co/mlabonne",
+    why: "If you want to actually run / fine-tune open models (Llama, Mistral, Qwen, DeepSeek), Maxime's open-source recipes are the most reproducible in the field. Free, on GitHub, current.",
+  },
+  {
+    name: "Eugene Yan",
+    affiliation: "Amazon · applied ML scientist",
+    what: "eugeneyan.com — applied ML and LLM systems writing, with an emphasis on ship-able patterns from a production engineer.",
+    url: "https://eugeneyan.com",
+    why: "Best follow for the 'how do real teams actually ship LLM apps in production' question. His 'Patterns for Building LLM-based Systems' essay is essentially the canonical reference for that gap.",
+  },
+  {
+    name: "Nathan Lambert",
+    affiliation: "Ai2 · Interconnects newsletter",
+    what: "Interconnects (interconnects.ai) — weekly analysis of post-training, RLHF, open model releases.",
+    url: "https://www.interconnects.ai",
+    why: "If you want to understand WHY a new model release matters (not just that it exists), Nathan is the canonical post-training analyst. Open-source friendly. No hype.",
+  },
+  {
+    name: "Sayash Kapoor + Arvind Narayanan",
+    affiliation: "Princeton · 'AI Snake Oil' authors",
+    what: "Authors of 'AI Snake Oil' (2024) and the Substack of the same name. Hard, evidence-based pushback on AI hype.",
+    url: "https://www.aisnakeoil.com",
+    why: "The serious 'AI is not as good as the press release says' counterweight. Cite when someone in your life is being sold an AI grift. The book is the most useful gift you can give a non-technical relative.",
+  },
 ];
 
 type RevenuePath = {

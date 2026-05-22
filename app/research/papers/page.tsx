@@ -5,19 +5,42 @@ import { PAPERS } from "../../_data/research-papers";
 export const metadata = {
   title: "Research Papers — Æ Research",
   description:
-    "Twelve ÆoNs Research manuscripts (April 2026). Bioelectric oncology, gut-brain mislabel hypothesis, solar information transfer, topological field theory of self-modifying systems, light code DNA version control. Each paper carries an academic abstract and a plain-language summary for non-scientists.",
+    "Twelve ÆoNs Research manuscripts published April 2026 under CC-BY 4.0. Topics span bioelectric oncology, the gut-brain mislabel hypothesis, solar information transfer, the topological field theory of self-modifying systems, light code DNA version control, the universal defect framework, Coherence ToE, GlyphSpeak compression, and the Spiral-of-Thought architecture. Each paper carries an academic abstract and a plain-language summary side-by-side for non-scientists.",
+  keywords: [
+    "ÆoNs Research",
+    "AtomEons research papers",
+    "bioelectric oncology",
+    "mislabel hypothesis",
+    "topological field theory",
+    "self-modifying systems",
+    "GlyphSpeak compression",
+    "Spiral-of-Thought",
+    "Coherence ToE",
+    "light code DNA",
+    "CC-BY 4.0",
+    "independent AI research",
+    "Atom McCree",
+    "open access research",
+  ],
   alternates: { canonical: "https://atomeons.com/research/papers" },
   openGraph: {
     title: "Research Papers — ÆoNs Research",
     description:
-      "12 manuscripts · April 2026 · CC-BY 4.0 · academic + plain-language summaries side-by-side.",
+      "12 manuscripts · April 2026 · CC-BY 4.0 · academic abstracts + plain-language summaries side-by-side. Bioelectric oncology, mislabel hypothesis, topological field theory, GlyphSpeak compression, Spiral-of-Thought.",
+    url: "https://atomeons.com/research/papers",
     type: "article",
+    publishedTime: "2026-04-01T00:00:00Z",
+    modifiedTime: "2026-05-22T00:00:00Z",
+    authors: ["Atom McCree"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Research Papers — ÆoNs Research",
-    description: "12 manuscripts · April 2026 · CC-BY 4.0",
+    title: "Research Papers — ÆoNs Research · 12 manuscripts",
+    description:
+      "12 manuscripts · April 2026 · CC-BY 4.0 · independent AI research from a one-operator lab.",
+    creator: "@AtomMccree",
   },
+  robots: { index: true, follow: true },
 };
 
 const summarized = PAPERS.filter((p) => p.status === "summarized");
