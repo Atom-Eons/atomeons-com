@@ -534,6 +534,55 @@ const EPOCHS: Epoch[] = [
 // PAGE
 // ──────────────────────────────────────────────────────────────────
 
+/**
+ * Build VideoObject JSON-LD for each cinema clip.
+ *
+ * Each clip becomes a citable VideoObject — Google "video" results,
+ * Perplexity / ChatGPT / Claude search can quote the clip directly,
+ * and the embedUrl gives them a working preview. The thumbnailUrl
+ * resolves to the high-res Midjourney still we ship on the same page.
+ *
+ * ISO 8601 duration format: PT{M}M{S}S (e.g., "3:14" → "PT3M14S").
+ */
+function mmssToIso(mmss: string): string {
+  const [m, s] = mmss.split(":").map((n) => parseInt(n, 10));
+  if (Number.isNaN(m) || Number.isNaN(s)) return "PT0S";
+  return `PT${m}M${s}S`;
+}
+
+const videoObjectsJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": CLIPS.map((c) => {
+    const watchUrl = c.videoId
+      ? `https://www.youtube.com/watch?v=${c.videoId}`
+      : `https://atomeons.com/research/lessons-from-sci-fi`;
+    const embedUrl = c.videoId
+      ? `https://www.youtube-nocookie.com/embed/${c.videoId}`
+      : `https://atomeons.com/research/lessons-from-sci-fi`;
+    return {
+      "@type": "VideoObject",
+      name: `${c.film} (${c.year}) — ${c.scene}`,
+      description: `${c.scene} The canonical AI moment from ${c.film} (${c.year}), curated in the AtomEons 'Lessons From Sci-Fi' monograph. ${c.posterAlt}`,
+      thumbnailUrl: `https://atomeons.com${c.posterSrc}`,
+      uploadDate: "2026-05-22",
+      duration: mmssToIso(c.duration),
+      contentUrl: watchUrl,
+      embedUrl,
+      inLanguage: "en",
+      isPartOf: {
+        "@type": "CreativeWork",
+        name: "Lessons From Sci-Fi — AtomEons monograph",
+        url: "https://atomeons.com/research/lessons-from-sci-fi",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "AtomEons Systems Laboratory",
+        url: "https://atomeons.com",
+      },
+    };
+  }),
+};
+
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -550,6 +599,12 @@ export default function LessonsFromSciFi() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(videoObjectsJsonLd),
+        }}
       />
       {/* breadcrumb */}
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
