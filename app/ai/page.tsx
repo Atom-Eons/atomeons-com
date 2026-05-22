@@ -267,6 +267,50 @@ const TOOLS: Tool[] = [
     why: "The lab's own product. A desktop cockpit that turns Claude Code from a chat tool into a real project workspace with memory, receipts, and department routing. Local-first. Zero telemetry. License §4A bans us from ever switching to subscription.",
     caveat: "Windows-only at v6.1. macOS + Linux on roadmap.",
   },
+  // ── Added 2026-05-22 — 6 more tools (Anthropic surface stack + open weights)
+  {
+    name: "Claude Desktop",
+    url: "https://claude.ai/download",
+    category: "general chat · the desktop app",
+    free: "free with Claude account · same tiers as claude.ai",
+    why: "Native macOS / Windows app. Persistent window, no browser tab clutter, voice mode, MCP server connections, file uploads with proper Finder integration. If Claude is your daily AI, the desktop is a better home for it than a browser tab.",
+  },
+  {
+    name: "Claude API (via Anthropic Console)",
+    url: "https://console.anthropic.com",
+    category: "AI building · pay-per-token",
+    free: "$5 free credit on signup · no recurring cost · pay per call",
+    why: "The API surface for building AI products. Same model intelligence as Claude.ai but you control the integration. Pricing: Sonnet 4.7 is ~$3/MTok input + $15/MTok output. Prompt caching cuts that 90%. Used by every founder shipping AI products in 2026.",
+  },
+  {
+    name: "Mistral",
+    url: "https://chat.mistral.ai",
+    category: "general chat · the European one",
+    free: "free tier covers daily use",
+    why: "French AI lab. Their large models (Mistral Large 2, Codestral) compete with Claude on code and reasoning at a lower price point. Best if you want EU-data-residency (Mistral hosts in France), or for any team that prefers a non-US AI provider for regulatory reasons.",
+  },
+  {
+    name: "DeepSeek",
+    url: "https://chat.deepseek.com",
+    category: "AI reasoning · the cheap one",
+    free: "free tier · API at ~10x cheaper than Claude/GPT",
+    why: "Chinese AI lab. DeepSeek R1 / V3 deliver strong reasoning at API prices around $0.27/MTok input vs Claude Sonnet's $3. If price is the bottleneck on your AI product, DeepSeek beats the field. Trade-off: hosted in China — not safe for confidential business data.",
+    caveat: "Don't send confidential business data — hosted in China.",
+  },
+  {
+    name: "Qwen (Alibaba)",
+    url: "https://chat.qwen.ai",
+    category: "AI · the open-weights flagship",
+    free: "free tier · open weights available on Hugging Face",
+    why: "Alibaba's flagship. Strong coding performance, multimodal (vision + audio), and open weights (run locally via Ollama with `qwen2.5-coder:32b`). Best open-source coding model in 2026 by most benchmarks. The lab's local fallback when Claude API is unavailable.",
+  },
+  {
+    name: "Together AI · Groq · Cerebras",
+    url: "https://together.ai",
+    category: "inference · run open models at speed",
+    free: "free signup credits at all three",
+    why: "Three competitors that host open-weight models (Llama, Mistral, Qwen, DeepSeek) at API endpoints. Together AI: broadest model catalog. Groq: cheapest, fastest tokens-per-second on the market for ~10 specific models. Cerebras: the fastest inference for narrow models with their wafer-scale chips. Use these when you need open-model inference without running it yourself.",
+  },
 ];
 
 type Person = {
