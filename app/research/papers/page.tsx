@@ -46,9 +46,23 @@ export const metadata = {
 const summarized = PAPERS.filter((p) => p.status === "summarized");
 const indexed = PAPERS.filter((p) => p.status === "indexed");
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "AtomEons", item: "https://atomeons.com" },
+    { "@type": "ListItem", position: 2, name: "Æ Research", item: "https://atomeons.com/research/about" },
+    { "@type": "ListItem", position: 3, name: "Papers", item: "https://atomeons.com/research/papers" },
+  ],
+};
+
 export default function ResearchPapersPage() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">

@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${BASE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE}/ai`, lastModified: now, changeFrequency: "weekly", priority: 0.97 },
+    { url: `${BASE}/search`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/start`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE}/orangebox`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE}/skilski`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
