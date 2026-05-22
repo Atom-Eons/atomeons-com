@@ -83,9 +83,7 @@ export const metadata: Metadata = {
     url: "https://atomeons.com/orangebox",
     siteName: "AtomEons",
     type: "website",
-    publishedTime: "2026-05-17T00:00:00Z",
-    modifiedTime: "2026-05-22T00:00:00Z",
-    authors: ["Atom McCree"],
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
