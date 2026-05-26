@@ -1,22 +1,41 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "FAQ — ORANGEBOX v6.1.0 Agent Mode",
+  title:
+    "FAQ — AI 101 + ORANGEBOX v6.3 — what is AI, which tool to use, how the cockpit works, what the license actually says",
   description:
-    "Answers about ORANGEBOX Command v6.1.0 Agent Mode — the native AI cockpit. $1 once · FREE first 7 days of public launch · license §4A binds it. Local-first. Zero telemetry. Multi-model swap-lane routing across Claude · GPT · Gemini · Groq · Ollama · OpenRouter.",
+    "Every question answered honestly. The novice AI section (what AI is, which tool to pick first, what to do tonight, what AI cannot do, how to write a good prompt) lives above the ORANGEBOX product Q&A (v6.3 AE See-Suite + AE Operations, $49 once forever, license §4A bans subscription switch, 30-day Material Failure Guarantee, local-first, zero telemetry, source included). FAQPage structured data is exposed so AI search engines can quote any answer directly. CC-BY 4.0.",
+  keywords: [
+    "AI FAQ",
+    "ORANGEBOX FAQ",
+    "what is AI",
+    "AI for beginners",
+    "Claude vs ChatGPT vs Gemini",
+    "ORANGEBOX v6.3",
+    "AE See-Suite",
+    "AE Operations",
+    "AI cockpit",
+    "license §4A",
+    "no subscription AI",
+    "AtomEons",
+    "Atom McCree",
+  ],
   alternates: { canonical: "https://atomeons.com/faq" },
   openGraph: {
-    title: "ORANGEBOX FAQ",
+    title: "AI 101 + ORANGEBOX FAQ — AtomEons",
     description:
-      "$1 once · FREE first 7 days · local-first · multi-model · license §4A bans subscription switch.",
+      "AI 101 + ORANGEBOX v6.3. $49 once · §4A no-saas lock · 30-day MFG · local-first. Every answer formatted as JSON-LD for AI search engine citation.",
     type: "article",
+    url: "https://atomeons.com/faq",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ORANGEBOX FAQ",
+    title: "AI 101 + ORANGEBOX FAQ — AtomEons",
     description:
-      "$1 once · FREE first 7 days · local-first · multi-model.",
+      "AI 101 + ORANGEBOX v6.3. $49 once · §4A bans subscription · local-first · 30-day MFG. FAQPage structured data live.",
+    creator: "@AtomMccree",
   },
+  robots: { index: true, follow: true },
 };
 
 type QA = { q: string; a: string };
@@ -148,12 +167,38 @@ const breadcrumbJsonLd = {
   ],
 };
 
+/**
+ * FAQPage JSON-LD — every question on this page becomes a citable
+ * Q&A entity for AI search engines (Perplexity, ChatGPT search,
+ * Claude search, Gemini, You.com) and Google Rich Results. The
+ * SAME questions render visibly below; this is the structured-data
+ * mirror, not duplicate content. Strips inline markdown emphasis
+ * from answers so the schema text stays plain prose for crawlers.
+ */
+const faqPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  inLanguage: "en-US",
+  mainEntity: FAQS.map((qa) => ({
+    "@type": "Question",
+    name: qa.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: qa.a.replace(/\*\*/g, "").replace(/[_`]/g, ""),
+    },
+  })),
+};
+
 export default function FAQ() {
   return (
     <main className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-12 pb-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
       />
       <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
         <Link href="/">AtomEons</Link>{" "}

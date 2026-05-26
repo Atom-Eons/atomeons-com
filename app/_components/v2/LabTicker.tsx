@@ -6,16 +6,15 @@ import { useEffect, useState } from "react";
  * LabTicker — persistent bottom ticker. Fixed, full-width, 36px.
  * z-30: below sticky buy bar (z-50), above content.
  *
- * 8 strings: 6 static + 2 live (broadcast countdown + buyer count).
- * Content is duplicated inside a single span so the CSS loop is seamless.
- * Animation pauses on hover.
+ * 6 strings (rewritten 2026-05-23): brand · research · product
+ * (v6.3 codename + inquire-to-ship) · price + license · live
+ * broadcast countdown · cite-and-forward call. Buyer count poll
+ * removed — no public counter at the $49 / inquire-only tier.
  *
- * Mobile: animation runs at 40s (narrower viewport, less scroll distance needed).
+ * Content is duplicated inside a single span so the CSS marquee
+ * loops seamlessly. Animation pauses on hover. Mobile runs the
+ * loop in 40s instead of 60s (narrower viewport).
  */
-
-type SalesData = {
-  net_buyers?: number;
-};
 
 function getNextBroadcast(): Date {
   // Next 8pm ET from now.
@@ -51,9 +50,8 @@ function formatCountdown(ms: number): string {
 
 export function LabTicker() {
   const [countdown, setCountdown] = useState<string>("...");
-  const [buyers, setBuyers] = useState<number | null>(null);
 
-  // Countdown tick
+  // Countdown tick — one second; the only live value left on the ticker
   useEffect(() => {
     function tick() {
       const next = getNextBroadcast();
@@ -65,38 +63,13 @@ export function LabTicker() {
     return () => clearInterval(id);
   }, []);
 
-  // Buyer count poll
-  useEffect(() => {
-    let cancelled = false;
-    async function fetchBuyers() {
-      try {
-        const res = await fetch("/api/sales-count", { cache: "no-store" });
-        if (!res.ok) return;
-        const json: SalesData = await res.json();
-        if (!cancelled && typeof json.net_buyers === "number") {
-          setBuyers(json.net_buyers);
-        }
-      } catch {
-        // silent — ticker degrades to static
-      }
-    }
-    fetchBuyers();
-    const id = setInterval(fetchBuyers, 60_000);
-    return () => {
-      cancelled = true;
-      clearInterval(id);
-    };
-  }, []);
-
   const items: string[] = [
-    "LAB · MARCO ISLAND FL",
-    "RESEARCH · 12 PAPERS · CC-BY 4.0",
-    "ORANGEBOX v6.1.0 LIVE · AGENT MODE",
-    "FREE FIRST 7 DAYS · $1 AFTER",
-    `NEXT BROADCAST · ${countdown}`,
-    buyers !== null ? `BUYERS · ${buyers}/100` : "BUYERS · —/100",
-    "60/60 SMOKE PASS · v6.1.0",
-    "CC-BY 4.0 · CITE IT · FORWARD IT",
+    "LAB · ATOMEONS · MARCO ISLAND FL",
+    "ÆONS RESEARCH · 12 PAPERS · CC-BY 4.0",
+    "ORANGEBOX v6.3 · AE SEE-SUITE + AE OPS · INQUIRE-TO-SHIP",
+    "$49 ONCE · LICENSE §4A NO-SAAS LOCK",
+    `FOUNDER'S VIEW · NEXT BROADCAST IN ${countdown}`,
+    "CITE THE WORK · FORWARD THE LINK · NO ALGORITHM",
   ];
 
   const separator = (
