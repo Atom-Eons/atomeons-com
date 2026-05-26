@@ -79,6 +79,7 @@ export function Footer() {
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
             <li><Link href="/about" className="hover:text-[#22F0D5]">About Atom</Link></li>
+            <li><Link href="/manifesto" className="hover:text-[#22F0D5]">Manifesto · 14 clauses</Link></li>
             <li><Link href="/now" className="hover:text-[#22F0D5]">/now · this week</Link></li>
             <li><Link href="/changelog" className="hover:text-[#22F0D5]">Changelog</Link></li>
             <li><Link href="/legal/terms" className="hover:text-[#22F0D5]">Terms</Link></li>

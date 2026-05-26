@@ -59,9 +59,89 @@ async function loadLetterStats() {
 
 const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = [
   {
+    date: "2026-05-23",
+    what:
+      "/pricing (NEW) — standalone $49 pricing surface. Product + FAQPage + Breadcrumb JSON-LD. 6-FAQ schema. Comparison ladder vs part-time-PM hire ($52K/yr), custom consulting ($40K-$120K), Claude Pro stack ($3,120/yr), Notion+Linear+Slack ($2,400/yr).",
+    href: "/pricing",
+  },
+  {
+    date: "2026-05-23",
+    what:
+      "/support (NEW) — buyer-facing 8-channel help hub. Pre-filled mailto templates for replace-the-link, MFG refund, Workflow-Fit refund, install help, license recovery, source question, security disclosure, press inquiry.",
+    href: "/support",
+  },
+  {
+    date: "2026-05-23",
+    what:
+      "/changelog (NEW) — public version history with 13 dated entries reaching back to April 2026. Color-coded by kind. Each entry: surfaces touched + operator note.",
+    href: "/changelog",
+  },
+  {
+    date: "2026-05-23",
+    what:
+      "/legal/* fully rewritten — /legal/refund (dual 30-day MFG + Workflow-Fit), /legal/terms (11 clauses, §4A no-SaaS promoted to clause 2), /legal/privacy (10 sections, zero cockpit telemetry, 6 named subprocessors). All three retired the 2026-05-13 $1 ladder narrative.",
+    href: "/legal/refund",
+  },
+  {
+    date: "2026-05-23",
+    what:
+      "Stripe v6.3 SKU checkout — /api/checkout/v63 endpoint + <OrangeBoxV63Buy /> client. POSTs $49 Stripe Checkout Session when STRIPE_ORANGEBOX_V63_ENABLED=true; 503 + inquire fallback until then.",
+    href: "/orangebox",
+  },
+  {
+    date: "2026-05-23",
+    what:
+      "Footer rebuilt 5 → 6 cols. Learn column added (/ai · /start · /faq · /search). Products column adds /pricing + /support. About+Legal column adds /changelog. Lab Status badges current to v6.3 / $49 / §4A no-SaaS.",
+  },
+  {
+    date: "2026-05-23",
+    what:
+      "Homepage live Founder's View teaser — FoundersViewLiveTeaser server component pulls most recent letter via 5-min ISR. /founders-view ships its own OG card + Blog/BlogPosting JSON-LD + featured-letter hero replacing the utility-grade list lead.",
+    href: "/",
+  },
+  {
+    date: "2026-05-23",
+    what:
+      "/research/about depth pass — Lab Inventory section with citation-as-written blocks for 12 papers, 38-page monograph, X Algorithm dossier, Founder's View. Author-identifier / location / CC-BY 4.0 sub-grid. Open Contribution block.",
+    href: "/research/about",
+  },
+  {
+    date: "2026-05-23",
+    what:
+      "Header + MobileNav restructure. Single pulse chip (was two competing). NEW Learn dropdown (/ai + /faq). ORANGEBOX hint v6.1.0 → v6.3 / $49. Lessons From Sci-Fi restored under Æ Research dropdown.",
+  },
+  {
+    date: "2026-05-23",
+    what:
+      "ORANGEBOX page rebuilt around v6.3 — AE See-Suite + AE Operations, Basic Install + AI Box, $49 once, 30-day MFG + Workflow-Fit refund. Previous v6.1.0 / $1 framing preserved at /orangebox/legacy with an archive banner.",
+    href: "/orangebox",
+  },
+  {
+    date: "2026-05-22",
+    what:
+      "Founder's View letter 31 — 'DISCRETE GEOMETRY FELL. EIGHT THOUSAND DESK CHAIRS DID TOO.' 1,070-word AI news survey in banter register. Humanity-scale framing.",
+    href: "/founders-view",
+  },
+  {
+    date: "2026-05-22",
+    what:
+      "VideoObject × 10 + ImageObject × 10 + HowTo schema added across the AI-search surfaces. BreadcrumbList added to 12 routes including the dynamic /research/papers/[slug].",
+  },
+  {
     date: "2026-05-21",
     what:
-      "/start — the 11-minute AI literacy on-ramp for novices. Animated aurora hero, 6 concrete tasks for tonight with copy-paste prompts, 6 honest limits, 30-day on-ramp, 20-term plain-English glossary. Built for someone who has used ChatGPT under 10 times.",
+      "/ai launched — comprehensive AI gateway with 51 FAQs, 20 revenue paths, 18 named builders, 28 named tools, JSON-LD FAQPage + TechArticle schemas. The 44M on-ramp.",
+    href: "/ai",
+  },
+  {
+    date: "2026-05-21",
+    what:
+      "Mobile viewport export added to app/layout.tsx. Pre-fix, every responsive `md:` breakpoint silently missed on mobile — page rendered at ~980px desktop width.",
+  },
+  {
+    date: "2026-05-21",
+    what:
+      "/start — 11-minute AI literacy on-ramp for novices. Animated aurora hero, 6 concrete tasks with copy-paste prompts, 6 honest limits, 30-day on-ramp, 20-term plain-English glossary.",
     href: "/start",
   },
   {
@@ -148,20 +228,21 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
 ];
 
 const SHIPPING_NEXT: string[] = [
-  "Operator uploads orangebox-v6.0.0-setup.exe to Vercel Blob → PRODUCT_BLOB_URL update",
-  "EV code-signing certificate (DigiCert / Sectigo) → ships in v6.1, eliminates SmartScreen warning",
-  "ANTHROPIC_API_KEY + SUPABASE_SERVICE_ROLE_KEY set in Vercel → autonomous Founder's View letters fire nightly",
-  "Mac notarization + ARM64 native build → v6.x roadmap",
-  "Skil.Ski marketplace public registry → planned",
-  "Mobile companion native app (RN + Expo) → planned",
+  "STRIPE_ORANGEBOX_V63_ENABLED=true (optionally STRIPE_ORANGEBOX_V63_PRICE_ID) in Vercel env → /orangebox flips from inquire-only to live $49 self-serve Stripe Checkout. One env var.",
+  "Cron sanity: confirm /api/cron/founders-view fires at 8pm ET (Vercel Cron + Supabase service-role write). Verify letter cadence post-letter-31.",
+  "EV code-signing certificate (DigiCert / Sectigo) → eliminates Windows SmartScreen warning on first cockpit download.",
+  "Real ORANGEBOX cockpit screenshots → flagged TODO in WEBSITE_HANDOFF. Capture v6.3 on a clean machine, drop into /public/orangebox/.",
+  "Mac notarization + ARM64 native build → v6.x roadmap, not yet wired.",
+  "skil.ski marketplace public registry → planned. Teaser surface live at /skilski.",
 ];
 
 const CURRENT_REALITY: string[] = [
-  "ORANGEBOX v6.0.0 site is live and selling at $1.",
-  "Five seed letters are in the Founder's View archive.",
-  "Twelve research manuscripts are public and summarized.",
-  "One mistake remains open (PRODUCT_BLOB_URL still points to v1.4.0 — defended by SHA gate, root fix awaits operator upload).",
-  "Lab is solo. Atom McCree. Marco Island, FL. No team, no deck, no series-A.",
+  "ORANGEBOX v6.3 (AE See-Suite + AE Operations) is the current cockpit. $49 once, forever. License §4A bans subscription.",
+  "Public checkout is inquire-only until the STRIPE_ORANGEBOX_V63_ENABLED env var is set. The v6.1.0 / $1 archive lives at /orangebox/legacy.",
+  "The Founder's View has 31+ published letters in the archive. Live teaser surfaces the latest on the homepage via 5-min ISR.",
+  "Twelve research manuscripts public + summarized · 38-page Lessons From Sci-Fi monograph live · 1,851-line X Algorithm Alpha dossier live.",
+  "Every major route ships JSON-LD structured data (Organization · WebSite · SearchAction · FAQPage · Blog · TechArticle · BreadcrumbList · VideoObject · ImageObject · HowTo · Product).",
+  "Lab is solo. Atom McCree. Marco Island, FL. No team. No deck. No board. No venture funding ever.",
 ];
 
 const breadcrumbJsonLd = {
@@ -216,7 +297,7 @@ export default async function NowPage() {
           the lab is, right now.
         </p>
         <p className="mt-3 max-w-3xl text-xs text-[#6B7779]">
-          Last touch: 17 May 2026 · Marco Island, FL.
+          Last touch: 23 May 2026 · Marco Island, FL.
         </p>
       </section>
 
@@ -249,9 +330,9 @@ export default async function NowPage() {
             <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#22F0D5]">
               cockpit
             </p>
-            <p className="mt-2 text-2xl font-medium text-[#F2F4F5]">v6.0</p>
+            <p className="mt-2 text-2xl font-medium text-[#F2F4F5]">v6.3</p>
             <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
-              live · $1 ladder
+              $49 once · §4A
             </p>
           </div>
           <div className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5">

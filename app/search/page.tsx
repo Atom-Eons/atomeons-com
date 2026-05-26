@@ -168,6 +168,13 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         keywords: ["about", "atomeons", "operator", "thesis"],
       },
       {
+        href: "/manifesto",
+        title: "/manifesto — the 14-clause lab doctrine",
+        description:
+          "Receipts over slogans. One operator. No venture funding. $49 once · §4A no-saas. Two refund paths. Source included. Local-first. Zero markup. 12 CC-BY manuscripts. Nightly broadcast. The 44M on-ramp. Named tools no affiliate. Falsifiability. Marco Island independent. Quote-it + falsify-it provenance.",
+        keywords: ["manifesto", "doctrine", "philosophy", "principles", "clauses", "values", "stance", "license", "no saas", "no venture", "operator-owned"],
+      },
+      {
         href: "/now",
         title: "/now — what we're doing this week",
         description:
@@ -236,7 +243,7 @@ async function SearchPageInner({
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-20 md:py-28">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::AtomEons · directory · 20 canonical surfaces
+            ::AtomEons · directory · 18 canonical surfaces
           </p>
           <h1 className="mt-5 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
             The lab directory.

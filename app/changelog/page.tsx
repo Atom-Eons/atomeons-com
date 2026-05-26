@@ -63,6 +63,23 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-23",
+    tag: "manifesto-now-refresh",
+    kind: "site",
+    title:
+      "Manifesto · 14-clause doctrine page launched. /now refreshed to v6.3 reality.",
+    surfaces: [
+      "/manifesto (NEW)",
+      "/now (refreshed)",
+      "/sitemap.ts",
+      "/_components/Footer.tsx",
+      "/search",
+      "/changelog",
+    ],
+    body:
+      "The lab's operating doctrine made explicit on one page. Fourteen numbered clauses — receipts over slogans, one operator, no venture funding, $49 once · §4A no-saas, dual 30-day refund paths, source included, local-first, zero markup on token cost, 12 CC-BY manuscripts, nightly broadcast equal-opportunity indignation, the 44M on-ramp, named tools no affiliate, falsifiability, Marco Island independent. Article + BreadcrumbList JSON-LD. Quote-it (CC-BY citation template) + falsify-it provenance blocks. /now refreshed from 17 May ladder-pricing posture to 23 May v6.3 / $49 / §4A reality — SHIPPED_THIS_WEEK rewritten with 16 entries spanning the May 21–23 ship cascade; CURRENT_REALITY rewritten; cockpit counter updated.",
+  },
+  {
+    date: "2026-05-23",
     tag: "site-2026-05-23",
     kind: "site",
     title:
