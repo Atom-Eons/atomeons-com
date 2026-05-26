@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BuyButtonCompact } from "./BuyButtonCompact";
-import { DynamicPrice } from "./DynamicPrice";
+import { OrangeBoxV63Buy } from "./OrangeBoxV63Buy";
 import { SESSION_KEYS } from "@/lib/constants";
 
 /**
@@ -10,8 +9,9 @@ import { SESSION_KEYS } from "@/lib/constants";
  * the in-page #buy zone. Dismissible. Mobile-safe: <72px tall, 44px tap
  * targets, single-row layout even at 320px, safe-area pad.
  *
- * Uses BuyButtonCompact (just the button, no badge / sub-copy) — the
- * full BuyButton would push this to 300px+ tall and bury the screen.
+ * Wired to OrangeBoxV63Buy — the current $49 v6.3 SKU flow. The legacy
+ * BuyButtonCompact + DynamicPrice + $1-ladder copy were retired on
+ * 2026-05-23 in favor of the v6.3 single-price posture.
  *
  * Hard-disabled while sales are paused (NEXT_PUBLIC_ORANGEBOX_SALES_PAUSED).
  * In that window the StickyBuyBar would just confuse — the page already
@@ -54,16 +54,19 @@ export function StickyBuyBar() {
       <div className="mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-2.5 sm:px-6 sm:py-3">
         <div className="min-w-0 flex-1">
           <p className="truncate font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]">
-            ::v6.0 · ladder · live
+            ::v6.3 · live · §4A no-saas
           </p>
           <p className="truncate text-sm text-[#F2F4F5]">
-            <span className="font-bold text-[#FF7A1A]">
-              <DynamicPrice variant="button-label" />
+            <span className="font-bold text-[#FF7A1A]">$49 once</span>
+            <span className="ml-1 text-[#9BA5A7]">
+              · forever · two 30-day refund paths
             </span>
-            <span className="ml-1 text-[#9BA5A7]">· +$1 / 100 sales</span>
           </p>
         </div>
-        <BuyButtonCompact />
+        <OrangeBoxV63Buy
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#FF7A1A] px-5 font-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-black transition-all hover:bg-[#FFA45A] disabled:opacity-60"
+          label="buy · $49"
+        />
         <button
           onClick={() => {
             sessionStorage.setItem(SESSION_KEYS.STICKYBAR_DISMISSED, "1");

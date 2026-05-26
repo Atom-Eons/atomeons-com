@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { BuyButton } from "@/app/_components/BuyButton";
-import { DynamicPrice } from "@/app/_components/DynamicPrice";
-import { SalesCounterV5 } from "@/app/_components/v5/SalesCounterV5";
+import { OrangeBoxV63Buy } from "@/app/_components/OrangeBoxV63Buy";
 
 /**
  * OrangeBoxBlock — condensed product block for the lab homepage.
@@ -9,14 +7,18 @@ import { SalesCounterV5 } from "@/app/_components/v5/SalesCounterV5";
  * IMPORTANT: `<div id="buy" />` must be present. StickyBuyBar watches
  * #buy via IntersectionObserver to decide whether to show/hide the bar.
  *
- * Server component wrapper. BuyButton + DynamicPrice + SalesCounterV5
- * are client components; they handle their own hydration.
+ * 2026-05-23 refactor:
+ * - Retired BuyButton (legacy $1 + ladder + free-7-days), DynamicPrice
+ *   (ladder display), SalesCounterV5 (ladder progress).
+ * - Wired OrangeBoxV63Buy (v6.3 single-price $49 flow).
+ * - LIVE-branch copy rewritten to v6.3 reality: AE See-Suite +
+ *   AE Operations · $49 once · §4A no-saas · two 30-day refund paths.
+ * - SALES_PAUSED branch preserved for future build-windows but adjusted
+ *   to reflect the v6.3-current ship state.
  *
- * SALES PAUSE: when NEXT_PUBLIC_ORANGEBOX_SALES_PAUSED=true, the right
- * column hides DynamicPrice + SalesCounterV5 (those would read "buy
- * now, $1 · 0/100 sold" which is misleading), and the headline pivots
- * to the v6.3 "in build" framing. BuyButton itself already swaps to a
- * NotifyMe inline form when paused.
+ * SALES PAUSE: when NEXT_PUBLIC_ORANGEBOX_SALES_PAUSED=true the right
+ * column hides the buy button (paused state should never appear to
+ * accept money). When live, the buy button renders.
  */
 const SALES_PAUSED =
   process.env.NEXT_PUBLIC_ORANGEBOX_SALES_PAUSED === "true";
@@ -38,8 +40,8 @@ export function OrangeBoxBlock() {
         {/* section label */}
         <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
           {SALES_PAUSED
-            ? "::ORANGEBOX · v6.3 SILENT CANVAS · IN BUILD"
-            : "::WHAT THE LAB SHIPS · ORANGEBOX"}
+            ? "::ORANGEBOX · v6.3 · IN MAINTENANCE WINDOW"
+            : "::WHAT THE LAB SHIPS · ORANGEBOX · v6.3"}
         </p>
 
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
@@ -49,23 +51,24 @@ export function OrangeBoxBlock() {
               <>
                 <h2 className="mb-6 text-balance text-4xl font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] md:text-6xl">
                   The cockpit{" "}
-                  <span className="text-[#FF7A1A]">stopped talking.</span>{" "}
-                  <span className="text-[#22F0D5]">The canvas</span> started.
+                  <span className="text-[#FF7A1A]">is between builds.</span>{" "}
+                  <span className="text-[#22F0D5]">Be first</span> when it
+                  reopens.
                 </h2>
 
                 <div className="space-y-3 text-[#9BA5A7]">
                   <p className="text-base leading-relaxed md:text-lg">
-                    v6.3 rewires how progress reaches you. Describe the goal
-                    once. The cockpit takes it from there — state visible,
-                    progress legible, less narration, more organism.
+                    Sales paused during a v6.x maintenance window. The
+                    v6.3 architecture — AE See-Suite (command surface)
+                    plus AE Operations (engine surface) — ships first
+                    when the window closes.
                   </p>
                   <p className="text-base leading-relaxed md:text-lg">
-                    Six new behaviors. Solidify · Z-Axis Rewind · Pulse Ring ·
-                    Living Canvas · Freeze All · Multi-Canvas Tabs.
+                    No drip. No marketing list. One notification when
+                    sales reopen.
                   </p>
                   <p className="font-mono text-sm uppercase tracking-[0.14em] text-[#FF7A1A]">
-                    v6.0 BUYERS GET v6.3 FREE. License §4A. Forward buyers
-                    lock their price. Forever.
+                    PRIOR BUYERS LOCKED IN. License §4A. Forever.
                   </p>
                 </div>
               </>
@@ -74,25 +77,35 @@ export function OrangeBoxBlock() {
                 <h2 className="mb-6 text-balance text-4xl font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] md:text-6xl">
                   The cockpit.
                   <br />
-                  <span className="text-[#FF7A1A]">One file.</span>{" "}
-                  <span className="text-[#22F0D5]">Double-click.</span> Two
-                  seconds.
+                  <span className="text-[#FF7A1A]">Two surfaces.</span>{" "}
+                  <span className="text-[#22F0D5]">One operator.</span>
                 </h2>
 
                 <div className="space-y-3 text-[#9BA5A7]">
                   <p className="text-base leading-relaxed md:text-lg">
-                    Native Rust binary. 4.46 MB. No webview. No Chromium. No
-                    subscription. 11 lanes — Claude, GPT, Gemini, Groq LPUs,
-                    Ollama, OpenRouter (200+ models), Hermes X feed.
+                    Native Rust binary. No webview. No Chromium. No
+                    subscription. v6.3 ships two surfaces:
+                    <strong className="font-semibold text-[#22F0D5]">
+                      {" "}
+                      AE See-Suite
+                    </strong>{" "}
+                    (command — receipts, dashboards, mission graphs,
+                    broadcast feed) plus{" "}
+                    <strong className="font-semibold text-[#22F0D5]">
+                      AE Operations
+                    </strong>{" "}
+                    (engine — MCP tools, agent routing, model selection).
                   </p>
                   <p className="text-base leading-relaxed md:text-lg">
-                    60+ MCP tools. 15 departments. 27 constitutional
-                    guardrails. Local-first. Zero telemetry. The receipts live
+                    Multi-model routing across Claude, GPT, Gemini, Groq
+                    LPUs, Ollama, OpenRouter (200+ models). 60+ MCP tools.
+                    27 constitutional guardrails. Local-first. Zero
+                    telemetry. Zero markup on token cost. Receipts live
                     on your disk.
                   </p>
                   <p className="font-mono text-sm uppercase tracking-[0.14em] text-[#FF7A1A]">
-                    $1 once. FORWARD BUYERS LOCK THEIR PRICE. Every 100 sales,
-                    up $1. Forever.
+                    $49 ONCE · FOREVER · LICENSE §4A BANS SUBSCRIPTION.
+                    TWO 30-DAY REFUND PATHS IF IT DOESN&apos;T FIT.
                   </p>
                 </div>
               </>
@@ -104,15 +117,15 @@ export function OrangeBoxBlock() {
               className="group mt-8 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:text-[#F2F4F5]"
             >
               {SALES_PAUSED
-                ? "See the v6.3 preview"
-                : "More about ORANGEBOX"}{" "}
+                ? "Read the v6.3 architecture"
+                : "More about ORANGEBOX v6.3"}{" "}
               <span className="transition-transform group-hover:translate-x-1">
                 →
               </span>
             </Link>
           </div>
 
-          {/* right: buy / notify area */}
+          {/* right: buy area */}
           <div className="flex flex-col gap-8">
             {/* #buy sentinel — zero-size, not absolute, never clipped */}
             <div
@@ -121,34 +134,55 @@ export function OrangeBoxBlock() {
               className="block h-0 w-0 overflow-hidden"
             />
 
-            {/* Live price + sales counter only shown when sales are LIVE.
-                When paused, both would mislead — hide. */}
-            {SALES_PAUSED ? null : (
-              <DynamicPrice variant="stacked" showUrgency className="" />
+            {/* price card */}
+            {SALES_PAUSED ? (
+              <div className="rounded-2xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-6">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+                  ::sales paused · maintenance window
+                </p>
+                <p className="mt-3 text-2xl font-medium text-[#F2F4F5]">
+                  $49 once · live when sales reopen
+                </p>
+                <p className="mt-2 text-sm text-[#9BA5A7]">
+                  License §4A locks the price. No subscription, ever.
+                </p>
+              </div>
+            ) : (
+              <div className="rounded-2xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-6">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+                  ::price · once · forever · §4A
+                </p>
+                <p className="mt-2 text-5xl font-medium tracking-tight text-[#F2F4F5]">
+                  $49
+                </p>
+                <p className="mt-2 text-sm text-[#9BA5A7]">
+                  One-time payment. No subscription. No usage meter. No
+                  freemium gate. Source included. Two 30-day refund paths
+                  if it doesn&apos;t fit.
+                </p>
+                <div className="mt-5">
+                  <OrangeBoxV63Buy />
+                </div>
+              </div>
             )}
 
-            {/* BuyButton handles its own swap to NotifyMe when paused */}
-            <BuyButton />
-
-            {SALES_PAUSED ? null : <SalesCounterV5 />}
-
-            {/* trust micro-copy — adapts to state */}
+            {/* trust micro-copy */}
             <div className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] px-5 py-4">
               {SALES_PAUSED ? (
                 <ul className="space-y-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-[#6B7779]">
-                  <li>· v6.3 silent canvas · in build</li>
-                  <li>· 6 new behaviors · alpha.7 shipping first</li>
-                  <li>· v6.0 buyers locked free · license §4A</li>
+                  <li>· v6.3 between builds</li>
+                  <li>· prior buyers locked free · license §4A</li>
                   <li>· no drip · no marketing list</li>
-                  <li>· one notification when v6.3 ships</li>
+                  <li>· one notification when sales reopen</li>
                 </ul>
               ) : (
                 <ul className="space-y-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-[#6B7779]">
                   <li>· instant download · stripe checkout</li>
-                  <li>· 30-day material-failure refund</li>
+                  <li>· 30-day material-failure refund · full</li>
                   <li>· 30-day workflow-fit refund · no questions</li>
-                  <li>· anti-SaaS clause license §4A · written and binding</li>
+                  <li>· license §4A · anti-SaaS · written and binding</li>
                   <li>· source included · local-first · zero telemetry</li>
+                  <li>· zero markup on token cost · BYO keys</li>
                 </ul>
               )}
             </div>
