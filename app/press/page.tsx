@@ -4,7 +4,7 @@ import { PressMediaKit } from "./PressMediaKit";
 export const metadata = {
   title: "Press kit — AtomEons Systems Laboratory",
   description:
-    "AtomEons Systems Laboratory press kit. Total-effort coverage: ÆoNs Research (12 manuscripts · Lessons From Sci-Fi 38-page monograph), ORANGEBOX Command v6.1.0 Agent Mode ($1 desktop AI cockpit), skil.ski (skill marketplace via MCP), /intel (decoded primary-source drops · current: May 2026 xAI algorithm leak), The Founder's View (nightly 8pm ET broadcast), /ai (the comprehensive AI gateway for the 44M facing displacement). Solo independent lab. Marco Island, Florida. Founder: Atom McCree. Boilerplate, founder bio, hero asset, downloadable media pack, three interview-protocol cards, honest-empty coverage feed, direct founder contact.",
+    "AtomEons Systems Laboratory press kit. Total-effort coverage: ÆoNs Research (12 manuscripts · Lessons From Sci-Fi 38-page monograph), ORANGEBOX Command v6.3 ($49 desktop AI cockpit · two surfaces: AE See-Suite + AE Operations · §4A no-saas), skil.ski (skill marketplace via MCP), /intel (decoded primary-source drops · current: May 2026 xAI algorithm leak), The Founder's View (nightly 8pm ET broadcast · 31+ letters), the 14-clause Manifesto, /ai (the comprehensive AI gateway for the 44M facing displacement). Solo independent lab. Marco Island, Florida. Founder: Atom McCree. Boilerplate, founder bio, hero asset, downloadable media pack, three interview-protocol cards, honest-empty coverage feed, direct founder contact.",
   keywords: [
     "AtomEons press kit",
     "Atom McCree press",
@@ -68,11 +68,19 @@ const LAB_SURFACES = [
   },
   {
     pillar: "USE AI",
-    name: "ORANGEBOX Command v6.1.0",
+    name: "ORANGEBOX Command v6.3",
     blurb:
-      "Local-first desktop AI cockpit. Rust + egui. 11 lanes. Agent Mode with 9 real tools. Swap-lane routing across Claude / GPT / Gemini / Groq / Ollama / OpenRouter. JSONL receipts on disk. $1 once · FREE first 7 days. License §4A legally bans switching to monthly billing.",
+      "Local-first desktop AI cockpit. Two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs) + AE Operations (engine — MCP tools, agent routing, model selection). Two install paths: Basic Install or AI Box (curated local-model bundle). Multi-model routing across Claude / GPT / Gemini / Groq LPUs / Ollama / OpenRouter (200+ models). JSONL receipts on disk. $49 once · License §4A legally bans switching to monthly billing · two 30-day refund paths (Material Failure Guarantee + Workflow-Fit Refund).",
     href: "/orangebox",
     accent: "#FF7A1A",
+  },
+  {
+    pillar: "DOCTRINE",
+    name: "The 14-Clause Manifesto",
+    blurb:
+      "The lab's full operating doctrine, made explicit. Fourteen numbered clauses spanning commerce, research, operator structure, and broadcast posture. Each clause is falsifiable — readers are invited to challenge with evidence. Receipts over slogans. One operator. No venture funding. $49 once · §4A no-saas. Zero markup on token cost. Named tools, no affiliate revenue. CC-BY 4.0 with citation template.",
+    href: "/manifesto",
+    accent: "#FFB87A",
   },
   {
     pillar: "MAKE MONEY",
@@ -102,16 +110,20 @@ const LAB_SURFACES = [
 
 const FACTS = [
   ["Lab", "AtomEons Systems Laboratory · Independent AI research"],
-  ["Product", "ORANGEBOX Command v6.0.0"],
-  ["Product tagline", "Local-first AI cockpit. BYO keys. Zero markup."],
-  ["Launch", "May 17, 2026 — midnight ET (04:00 UTC)"],
-  ["Price", "$1 once, forever — no subscription, ever"],
+  ["Product", "ORANGEBOX Command v6.3"],
+  ["Product tagline", "Local-first AI cockpit. BYO keys. Zero markup. Two surfaces."],
+  ["Launch", "v6.0.0 May 17, 2026 — midnight ET · v6.3 May 23, 2026"],
+  ["Price", "$49 once, forever — no subscription, ever (§4A locked)"],
+  ["Refund", "30-day Material Failure Guarantee + 30-day Workflow-Fit Refund (both full)"],
   ["License", "Personal · full source included · §4A anti-SaaS lock"],
-  ["Platform", "Windows 10/11 x64 (macOS/Linux on v1.6 roadmap)"],
+  ["Platform", "Windows 10/11 x64 (macOS/Linux on v6.x roadmap)"],
   ["Requirements", "Node.js 20+, 4 GB RAM, 200 MB disk"],
   ["Distribution", "Direct download on payment confirmed · Stripe + HMAC tokens"],
+  ["Telemetry", "ZERO. No phone-home. No analytics inside the cockpit."],
+  ["Affiliate revenue", "ZERO across all named tools."],
   ["Founder", "Atom McCree, AtomEons Systems Laboratory"],
   ["Location", "Marco Island, FL, USA"],
+  ["Manifesto", "https://atomeons.com/manifesto · 14 clauses · falsifiable"],
   ["URL", "https://atomeons.com/orangebox"],
 ];
 
@@ -125,16 +137,20 @@ const QUOTES = [
     by: "ORANGEBOX doctrine",
   },
   {
-    line: "Built in a garage in Marco Island while Anthropic raised $30B. The cockpit costs less than a tank of gas.",
+    line: "Built in a garage in Marco Island while Anthropic raised $30B. The cockpit costs the price of a paperback book and a coffee.",
     by: "Atom McCree, founder",
   },
   {
-    line: "$1. forever. one dollar. one cockpit. yours.",
-    by: "Launch tweet, May 17 2026",
+    line: "$49. once. forever. §4A bans subscription. Two refund paths if it doesn't fit.",
+    by: "Manifesto clause 04",
   },
   {
     line: "The cockpit is the instrument. The model is the engine. You are the pilot. Everything else is theater.",
     by: "ORANGEBOX doctrine",
+  },
+  {
+    line: "Falsify any clause with evidence and the lab updates the manifesto in public, with attribution.",
+    by: "Manifesto clause 13",
   },
 ];
 
@@ -160,9 +176,14 @@ const ANGLES = [
     beat: "build-in-public · founder narrative · dev tooling",
   },
   {
-    head: "$1 launch as a counter-position to $260/mo stacks",
-    body: "Most devs in 2026 pay ~$260/month for the standard four-vendor AI stack (Claude Pro + ChatGPT Plus + Gemini Advanced + Cursor). ORANGEBOX is locked at $1 perpetual — a deliberate counter to the SaaS norm.",
+    head: "$49-once as a counter-position to $260/mo AI stacks",
+    body: "Most operators in 2026 pay ~$260/month for the standard four-vendor AI stack (Claude Pro + ChatGPT Plus + Gemini Advanced + Cursor). ORANGEBOX is $49 once, forever — License §4A legally bans switching to subscription, and two 30-day refund paths (Material Failure Guarantee + Workflow-Fit Refund) carry the buyer-protection load that a free trial would. A deliberate counter to the SaaS norm.",
     beat: "pricing strategy · product launches · indie business",
+  },
+  {
+    head: "Publishing a 14-clause manifesto when most labs publish a roadmap",
+    body: "Most AI labs publish roadmaps that promise the next thing. AtomEons publishes a manifesto: fourteen explicit clauses on commerce, research, operator structure, broadcast posture, and falsifiability. Clause 13 invites the public to challenge any clause with evidence. The document is CC-BY 4.0 with a quote-it template.",
+    beat: "AI ethics · governance · founder doctrine",
   },
   {
     head: "The Florida garage shipping next to a $30B AI round",
@@ -174,52 +195,53 @@ const ANGLES = [
 const COPY_BLOCKS = [
   {
     title: "Hacker News — Show HN",
-    body: `Show HN: ORANGEBOX – $1 desktop AI cockpit (perpetual price), local-first, 60+ MCP tools
+    body: `Show HN: ORANGEBOX v6.3 – $49 once desktop AI cockpit, local-first, two-surface architecture
 
-I'm Atom — solo founder out of Marco Island, FL. Just shipped v6.0.0 of ORANGEBOX Command, a desktop AI cockpit I've used internally for 2 months to build everything I ship (including atomeons.com itself, built in one day inside the cockpit).
+I'm Atom — solo founder out of Marco Island, FL. Today I shipped v6.3 of ORANGEBOX Command, the desktop AI cockpit I've been using internally to build everything else I ship (including atomeons.com itself, built inside the cockpit it sells).
 
-Today is the first day I'm selling it. $1 once, forever — no subscription, ever. License §4A legally bans us from ever switching to monthly billing.
+What v6.3 is: two surfaces in one app. AE See-Suite is the command surface — receipts, dashboards, mission graphs, broadcast feed. AE Operations is the engine — MCP tools, agent routing, model selection, party-line status bus. Multi-model routing across Claude / GPT / Gemini / Groq LPUs / Ollama / OpenRouter (200+ models).
 
-What it does: pairs with Claude Code via 60+ MCP tools, swap-lane routes between Claude/GPT/Gemini/local Ollama mid-session (mission graph survives every swap), writes JSONL receipts for every action so you have an audit trail on disk (not on a vendor server).
+Two install paths: Basic Install (cockpit alone, BYO keys) or AI Box (cockpit + curated Ollama-managed local bundle for offline operation).
 
-Stack: Tauri 2.x + Next.js 16 + Stripe checkout + HMAC-signed download tokens.
+Pricing: $49 once, forever. License §4A legally bans switching to monthly billing. Two 30-day refund paths (Material Failure Guarantee for documented bugs we can't fix in 14 days; Workflow-Fit Refund for "doesn't fit, no fault-finding required"). Zero markup on token cost — you pay your LLM provider directly.
+
+Receipts on disk (JSONL), not on a vendor server. Zero telemetry. Source included alongside the binary.
+
+The full 14-clause operating doctrine is published as a manifesto at /manifesto — clause 13 invites the public to falsify any clause with evidence.
 
 https://atomeons.com/orangebox
 
-Happy to AMA on the architecture, the 2-month internal-use arc, or why I think the orchestration layer beats the model layer in 2026.`,
+Happy to AMA on the architecture, the post-SaaS pricing model, the manifesto, or why I think the orchestration layer beats the model layer in 2026.`,
   },
   {
     title: "Product Hunt — launch description",
-    body: `ORANGEBOX is the AI cockpit you actually own.
+    body: `ORANGEBOX v6.3 is the AI cockpit you actually own.
 
-60+ MCP tools. Mission-graph memory that survives every context reset. Swap claude/gpt/gemini/ollama mid-session. Local-first. Zero telemetry.
+Two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs) + AE Operations (engine — MCP tools, agent routing, model selection across 200+ models). Multi-model routing across Claude/GPT/Gemini/Groq/Ollama/OpenRouter. Mission-graph memory that survives every context reset. Local-first. Zero telemetry. Zero token markup.
 
-Built in 2 months of internal use before the first sale. License §4A legally bans switching to monthly billing.
+Built in months of internal use. License §4A legally bans switching to monthly billing. Two 30-day refund paths if it doesn't fit. Source included.
 
-$1 once. Forever. No subscription, ever.`,
+$49 once. Forever. No subscription, ever.`,
   },
   {
     title: "DEV.to — build-in-public article opening",
-    body: `# I shipped ORANGEBOX v6.0.0 at midnight: the 14h pre-launch campaign that produced 0 sales and 4 followers
+    body: `# How ORANGEBOX evolved from v6.0 to v6.3: a one-operator lab's pricing and architecture journey
 
-Yes, zero sales. Hear me out.
+When I shipped v6.0.0 at midnight on May 17, 2026, the launch produced 0 sales and 4 followers in the first 14 hours. I wrote about it in public. Six days later, I shipped v6.3 — with a different price ($49, not $1), a different architecture (two surfaces: AE See-Suite + AE Operations), and a published manifesto.
 
-Two months ago I started losing the thread on multi-week projects — Claude rediscovering "what done meant" between sessions, routing decisions evaporating, no place to run a real mission graph that survives a context reset.
+Here's why I changed everything, and what stayed the same.
 
-So I built ORANGEBOX. A desktop AI cockpit. 60+ MCP tools. Swap claude/gpt/gemini/ollama mid-session. Local-first. Zero telemetry. The cockpit I've used internally to build everything else.
+What changed:
+- Price: $1 → $49 once. Same forever-license. Same §4A no-saas clause. The $1 was a counter-position; the $49 is a working price filter for buyers who actually want to operate.
+- Architecture: 11 lanes → two surfaces. AE See-Suite (command) + AE Operations (engine). Cleaner mental model. Same multi-model routing underneath.
+- Refund posture: ladder + 7-day-free → two 30-day refund paths. Material Failure Guarantee + Workflow-Fit Refund. Both full refund.
 
-Today I sold it for the first time. $1 once. Forever.
+What stayed:
+- Local-first. Zero telemetry. Zero token markup. Source included. License §4A no-saas. One operator. Marco Island, FL. No VC. The whole doctrine.
 
-Here's what the 14 hours before launch looked like:
+I also published a 14-clause manifesto so the doctrine is explicit and falsifiable. Clause 13 invites the public to challenge any clause with evidence.
 
-- 22 X posts shipped via custom poster.mjs (X API v2 OAuth 1.0a)
-- 23 strategic replies to verified founders (Chamath Palihapitiya, Greg Brockman, Daniel Smidstrup, Robin Ebers, Nikunj Kothari, Dan McAteer)
-- 4 followers gained (3 verified)
-- 0 sales
-
-I almost panicked. Then I read the leaked xAI ranking code...
-
-[continues with the algorithm intel, build-in-public lessons, and the $1 launch decision]`,
+[continues with the architecture deep-dive, the pricing reasoning, and the manifesto]`,
   },
   {
     title: "Cold email template (universal)",
@@ -227,14 +249,15 @@ I almost panicked. Then I read the leaked xAI ranking code...
 
 Hi [NAME],
 
-While [RECENT NEWS THEY COVERED], I just shipped the counter-play: ORANGEBOX Command v6.0.0, a $1-once desktop AI cockpit (perpetual $1 pricing).
+While [RECENT NEWS THEY COVERED], I just shipped the counter-play: ORANGEBOX Command v6.3, a $49-once desktop AI cockpit with a published 14-clause operating manifesto.
 
-It runs entirely local, swap-lanes between Claude / GPT / Gemini / Ollama mid-session via 60+ MCP tools, and the license has a §4A clause that legally bans us from ever switching to monthly billing.
+Two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs) + AE Operations (engine — MCP tools, agent routing, 200+ models across Claude/GPT/Gemini/Groq/Ollama/OpenRouter). Local-first. Zero telemetry. Zero token markup. License §4A legally bans switching to subscription. Two 30-day refund paths if it doesn't fit.
 
-I used it internally for 2 months before selling the first license. atomeons.com itself was built in one day inside the cockpit it sells.
+The manifesto (https://atomeons.com/manifesto) makes the lab's full doctrine explicit and falsifiable. Clause 13 invites the public to challenge any clause with evidence.
+
+atomeons.com itself was built inside the cockpit it sells.
 
 Full press kit: https://atomeons.com/press
-Press release attached.
 Founder-direct on this email or @AtomMccree.
 
 — Atom McCree
@@ -294,7 +317,7 @@ export default function Press() {
           </p>
           <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-6">
             <a
-              href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20v6.0.0%20press%20enquiry"
+              href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20v6.3%20press%20enquiry"
               className="inline-flex items-center gap-2 text-base text-[#F2F4F5] hover:text-[#22F0D5]"
             >
               <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
@@ -339,7 +362,7 @@ export default function Press() {
           ::the total effort · what the lab has shipped
         </h2>
         <p className="mb-10 max-w-3xl text-sm text-[#6B7779] md:text-base">
-          Six live surfaces across four pillars. All shipped by one
+          Seven live surfaces across five pillars. All shipped by one
           operator. Marco Island, FL. April–May 2026.
         </p>
         <div className="grid gap-4 md:grid-cols-2">
@@ -376,14 +399,20 @@ export default function Press() {
         </p>
         <p className="text-balance text-3xl font-medium leading-[1.2] tracking-[-0.01em] text-[#F2F4F5] md:text-4xl">
           While Anthropic raised{" "}
-          <span className="text-[#FF7A1A]">$30B this week</span>, a solo
-          founder in a Florida garage launched the opposite play —{" "}
-          <span className="text-[#22F0D5]">ORANGEBOX Command v6.0.0</span>, a{" "}
-          <span className="text-[#22F0D5]">$1-once</span> desktop AI cockpit
-          available for <span className="text-[#22F0D5]">$1</span> in its first
-          six hours, with a license clause that{" "}
-          <span className="text-[#FF7A1A]">legally bans</span> switching to
-          monthly billing.
+          <span className="text-[#FF7A1A]">$30B</span>, a solo founder in
+          a Florida garage shipped the opposite play —{" "}
+          <span className="text-[#22F0D5]">ORANGEBOX Command v6.3</span>,
+          a <span className="text-[#22F0D5]">$49-once</span> desktop AI
+          cockpit with two surfaces (
+          <span className="text-[#22F0D5]">AE See-Suite</span> +{" "}
+          <span className="text-[#22F0D5]">AE Operations</span>), a
+          license clause that{" "}
+          <span className="text-[#FF7A1A]">legally bans</span> switching
+          to subscription, two 30-day refund paths, and a published{" "}
+          <span className="text-[#FFB87A]">14-clause manifesto</span>{" "}
+          that invites the public to{" "}
+          <span className="text-[#FFB87A]">falsify any clause with
+          evidence</span>.
         </p>
       </section>
 

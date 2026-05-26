@@ -35,8 +35,11 @@ import { LabFooterCTA } from "./_components/v2/LabFooterCTA";
  * builds commerce tools for operators, publishes alpha intel decoded
  * from primary sources, and ships frontier scientific manuscripts.
  *
- * Pricing canon (2026-05-20): $1 once forever. FREE first 7 days of
- * the public launch window. The $1 + 100-buyer ladder is retired.
+ * Pricing canon (2026-05-23): ORANGEBOX v6.3 is $49 once, forever.
+ * License §4A legally bans switching to subscription. Two 30-day
+ * refund paths (Material Failure Guarantee + Workflow-Fit Refund).
+ * The $1 + 7-day-free framing is retired; v6.1.0 archived at
+ * /orangebox/legacy.
  *
  * IP boundary: marketing-grade publishables only. NEVER surface in
  * homepage copy: Trilane authority hierarchy, Smart router 10×3 matrix,

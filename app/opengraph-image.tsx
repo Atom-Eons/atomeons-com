@@ -2,13 +2,14 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "ORANGEBOX v6.0.0 — the cockpit replaces Claude Code, Cursor, and Codex. $1 once. Yours forever.";
+  "ORANGEBOX v6.3 — the cockpit replaces Claude Code, Cursor, and Codex. $49 once, forever. License §4A bans subscription.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
  * Home / atomeons.com social card.
- * Disruption framing: ONE cockpit replaces three paid tools. $1 once.
+ * Disruption framing: ONE cockpit replaces three paid tools. $49 once,
+ * forever. Two surfaces (AE See-Suite + AE Operations). §4A no-saas.
  */
 export default function OG() {
   return new ImageResponse(
@@ -60,7 +61,7 @@ export default function OG() {
               fontFamily: "monospace",
             }}
           >
-            ● v6.0.0 NATIVE · LIVE NOW
+            ● v6.3 NATIVE · LIVE NOW
           </p>
         </div>
 
@@ -76,7 +77,7 @@ export default function OG() {
               fontFamily: "monospace",
             }}
           >
-            ▲ v6.0 native · one file · double-click · 2 seconds · $1 forever
+            ▲ v6.3 native · two surfaces · $49 forever · §4A no-saas
           </p>
           <p
             style={{
@@ -103,17 +104,18 @@ export default function OG() {
               fontWeight: 400,
             }}
           >
-            4.46 MB native binary. No webview. No chromium. Claude · GPT · Gemini ·
-            Groq LPUs · Ollama. 11 lanes. Local-first. Zero telemetry.
+            Native binary. No webview. No chromium. Claude · GPT · Gemini ·
+            Groq LPUs · Ollama. AE See-Suite + AE Operations. Local-first.
+            Zero telemetry. Zero token markup.
           </p>
         </div>
 
         {/* lane stat bars */}
         <div style={{ display: "flex", gap: 18, marginTop: 28, width: "100%" }}>
           {[
-            { k: "LANES", v: "11" },
+            { k: "SURFACES", v: "2" },
             { k: "MCP TOOLS", v: "60+" },
-            { k: "DEPTS", v: "15" },
+            { k: "MODELS", v: "200+" },
             { k: "GUARDRAILS", v: "27" },
             { k: "SUBSCRIPTIONS", v: "0" },
           ].map((m) => (
@@ -189,7 +191,7 @@ export default function OG() {
             }}
           >
             <p style={{ margin: 0, fontSize: 60, fontWeight: 700, color: "#000", lineHeight: 1 }}>
-              $1
+              $49
             </p>
             <p
               style={{

@@ -2,13 +2,14 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "ORANGEBOX Command v6.0.0 — 11 lanes · 60+ MCP tools · the cockpit replaces Claude Code, Cursor, and Codex. $1 once.";
+  "ORANGEBOX Command v6.3 — AE See-Suite + AE Operations · 60+ MCP tools · 200+ models · the cockpit replaces Claude Code, Cursor, and Codex. $49 once, forever. License §4A bans subscription.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
  * /orangebox product card.
- * Hard-features framing: 11 lanes named + $1 price chip + REPLACES claim.
+ * Hard-features framing: v6.3 two-surface architecture +
+ * $49 price chip + REPLACES claim + §4A no-saas signal.
  */
 export default function OG() {
   return new ImageResponse(
@@ -47,7 +48,7 @@ export default function OG() {
               color: "#22F0D5",
             }}
           >
-            ATOMEONS · MARCO ISLAND · v6.0.0 · LIVE
+            ATOMEONS · MARCO ISLAND · v6.3 · LIVE
           </p>
           <p
             style={{
@@ -75,7 +76,7 @@ export default function OG() {
               color: "#FF7A1A",
             }}
           >
-            ORANGEBOX Command · v6.0.0
+            ORANGEBOX Command · v6.3
           </p>
           <p
             style={{
@@ -104,41 +105,80 @@ export default function OG() {
               fontWeight: 400,
             }}
           >
-            v6.0 native binary · 4.46 MB · Rust + egui · no webview, no chromium.
-            11 lanes. Cockpit · IDE · Terminal · Trilane · Voice · 𝕏 Feed ·
-            Vault · Receipts · Privacy · Skils · Settings.
+            v6.3 native binary · Rust + egui · no webview, no chromium.
+            Two surfaces: AE See-Suite (command — receipts, dashboards,
+            mission graphs) + AE Operations (engine — MCP tools, agent
+            routing, 200+ models). Basic Install or AI Box.
           </p>
         </div>
 
-        {/* lane glyph rail */}
+        {/* two-surface rail · AE See-Suite + AE Operations */}
         <div
           style={{
             display: "flex",
-            gap: 8,
+            gap: 14,
             marginTop: 22,
-            padding: "12px 16px",
-            border: "1px solid #1A2225",
-            borderRadius: 12,
-            background: "rgba(10, 15, 17, 0.7)",
           }}
         >
-          {["⌖", "{}", "›_", "△", "◉", "𝕏", "⬡", "▤", "◆", "✦", "⚙"].map((g, i) => (
+          {[
+            { name: "AE See-Suite", role: "command · receipts · mission graphs", glyph: "◉" },
+            { name: "AE Operations", role: "engine · MCP · routing · 200+ models", glyph: "⚙" },
+          ].map((s) => (
             <div
-              key={i}
+              key={s.name}
               style={{
                 display: "flex",
                 flex: 1,
-                justifyContent: "center",
                 alignItems: "center",
-                height: 50,
-                fontFamily: "monospace",
-                fontSize: 26,
-                color: "#22F0D5",
-                borderRight:
-                  i < 10 ? "1px solid #1A2225" : "none",
+                gap: 16,
+                padding: "16px 22px",
+                border: "1px solid #1A2225",
+                borderRadius: 12,
+                background: "rgba(10, 15, 17, 0.7)",
               }}
             >
-              {g}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 50,
+                  height: 50,
+                  fontFamily: "monospace",
+                  fontSize: 30,
+                  color: "#22F0D5",
+                  border: "1px solid #22F0D5",
+                  borderRadius: 8,
+                  background: "rgba(34,240,213,0.06)",
+                }}
+              >
+                {s.glyph}
+              </div>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    margin: 0,
+                    fontSize: 22,
+                    fontWeight: 700,
+                    color: "#F2F4F5",
+                    letterSpacing: -0.5,
+                  }}
+                >
+                  {s.name}
+                </p>
+                <p
+                  style={{
+                    margin: "4px 0 0",
+                    fontSize: 11,
+                    color: "#9BA5A7",
+                    fontFamily: "monospace",
+                    textTransform: "uppercase",
+                    letterSpacing: 2,
+                  }}
+                >
+                  {s.role}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -191,7 +231,7 @@ export default function OG() {
             }}
           >
             <p style={{ margin: 0, fontSize: 60, fontWeight: 700, color: "#000", lineHeight: 1 }}>
-              $1
+              $49
             </p>
             <p
               style={{
