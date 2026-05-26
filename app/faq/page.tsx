@@ -78,27 +78,27 @@ const FAQS: QA[] = [
   },
   {
     q: "Why is the cockpit called ORANGEBOX?",
-    a: "Because orange — the brand color — is the warning light in the cockpit that says 'pay attention.' Software that runs your life should make you pay attention to what it's doing, not what it's selling you. ORANGEBOX is the cockpit AtomEons uses to build everything else. v6.1.0 sells today for $1 once, free first 7 days of the launch window. The deeper answer is in /orangebox.",
+    a: "Because orange — the brand color — is the warning light in the cockpit that says 'pay attention.' Software that runs your life should make you pay attention to what it's doing, not what it's selling you. ORANGEBOX is the cockpit AtomEons uses to build everything else. v6.3 sells today for $49 once, forever, with License §4A legally banning subscription switch and two 30-day refund paths if it doesn't fit. The deeper answer is in /orangebox.",
   },
   {
-    q: "What is ORANGEBOX v6.0.0?",
-    a: "ORANGEBOX Command v6.0.0 is a 4.46 MB native AI cockpit for Windows. It is one executable file — no webview, no bundled chromium, no Node install required to run. Double-click and the window appears in about 2 seconds. Inside the cockpit: 11 lanes (Cockpit, IDE, Terminal, Trilane debate, Voice, 𝕏 Feed, Vault, Receipts, Privacy, Skils, Settings), 60+ MCP tools, 15 named departments (AE0–AE14), 27 Constitutional Guardrails, multi-model routing across Claude, GPT, Gemini, Groq LPUs, Ollama, and OpenRouter (200+ models). $1 once, forever — with a license clause (§4A) that legally bans subscription switch.",
+    q: "What is ORANGEBOX v6.3?",
+    a: "ORANGEBOX Command v6.3 is a native AI cockpit for Windows with two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs, broadcast feed) and AE Operations (engine — MCP tools, agent routing, model selection, party-line status bus). Two install paths: Basic Install (cockpit alone, BYO keys) or AI Box (cockpit + curated Ollama-managed local-model bundle for offline operation). Multi-model routing across Claude, GPT, Gemini, Groq LPUs, Ollama, and OpenRouter (200+ models). $49 once, forever — License §4A legally bans subscription switch. Two 30-day refund paths (Material Failure Guarantee + Workflow-Fit Refund).",
   },
   {
-    q: "How is the price really $1? Where's the catch?",
-    a: "Pricing canon (2026-05-20): $1 USD once, forever. During the first 7 days of the public launch window, the price is $0 — FREE. After the 7-day window closes, it returns to $1. That's the whole price model. No catch. No ladder. No subscription. You buy it once (or claim it free during launch week), you own it, you keep the binary, you keep the source. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. The earlier ladder-pricing model (+$1 per 100 buyers) was retired on launch day in favor of the simpler $1 + free-first-week canon.",
+    q: "How is the price really $49? Where's the catch?",
+    a: "Pricing canon (2026-05-23): $49 USD once, forever. No subscription, no ladder, no usage meter, no freemium gate. You buy it once, you own it, you keep the binary, you keep the source. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. If it doesn't fit your workflow within 30 days, the Workflow-Fit Refund returns 100% with no fault-finding required. If a documented bug can't be fixed within 14 days, the Material Failure Guarantee returns 100%. The earlier $1 + free-7-days framing (v6.1.0) was retired on 2026-05-23 in favor of the working $49 + dual-30-day-refund canon. Legacy buyers on the prior framing are grandfathered under §4A.",
   },
   {
-    q: "What's inside the v6.0.0 installer?",
-    a: "Three artifacts: orangebox-v6.0.0-setup.exe (NSIS installer, 23.68 MB — recommended), orangebox-v6.0.0-portable.zip (34.71 MB — unzip-and-run, ideal for USB / locked-down corporate machines), and orangebox.exe (the 4.46 MB native binary alone — for advanced users who already have the runtime configured). All three contain the same cockpit, AE0–AE14 doctrine, the full ÆoNs Skill Suite, 60+ MCP tools, mission-graph DAG runner, party-line status bus, receipts pipeline, demo project, operator manual, quickstart, and full source. SHA-256 hashes published on the product page.",
+    q: "What's inside the v6.3 installer?",
+    a: "The installer ships the AE See-Suite and AE Operations surfaces in one native binary for Windows 10/11 x64. Two install paths: Basic Install (cockpit alone) and AI Box (cockpit + curated Ollama-managed local-model bundle for offline operation). Inside: the full ÆoNs Skill Suite, 60+ MCP tools, mission-graph DAG runner, party-line status bus, receipts pipeline, demo project, operator manual, quickstart, and full source. AE0–AE14 department doctrine and 27 Constitutional Guardrails carried forward. SHA-256 hashes published on the product page.",
   },
   {
     q: "Is ORANGEBOX a subscription?",
-    a: "No. $1 USD once, ladder-priced, perpetual. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. The clause is enforceable, published, and ships inside the binary as documentation.",
+    a: "No. $49 USD once, perpetual. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. The clause is enforceable, published in full at /legal/terms, and ships inside the binary as documentation. The 14-clause manifesto restates the same commitment at clause 04.",
   },
   {
-    q: "What's new in v6 versus v5?",
-    a: "v6 ditched the webview. The whole cockpit is now a native Rust + egui binary (4.46 MB). No HTML chrome. No bundled chromium. The new 2026 stack adds Groq LPUs for sub-300ms quick_reply tasks, Ollama LOCAL_MODE for one-env-var air-gap operation, Groq Gemma for opt-in pre-classification (ORANGEBOX_ROUTE_TIER=gemma), and Anthropic's Agent Teams advisory header on every synthesis call. The full prior alpha (memory tool, files API, adaptive thinking, advisor tool, prompt-cache pre-warm, multi-breakpoint cache, structured outputs, compaction) is carried forward.",
+    q: "What's new in v6.3 versus v5 / v6.0?",
+    a: "The v6 generation ditched the webview — the whole cockpit is native Rust + egui. No HTML chrome. No bundled chromium. v6.3 refactors the lane model from 11 independent lanes into two clean surfaces: AE See-Suite (command — receipts, dashboards, mission graphs, broadcast feed) and AE Operations (engine — MCP tools, agent routing, model selection). The 2026 stack carries forward Groq LPUs for sub-300ms quick_reply tasks, Ollama LOCAL_MODE for one-env-var air-gap operation, opt-in pre-classification, and Anthropic's Agent Teams advisory header on every synthesis call. The prior alpha (memory tool, files API, adaptive thinking, advisor tool, prompt-cache pre-warm, multi-breakpoint cache, structured outputs, compaction) is preserved.",
   },
   {
     q: "Does ORANGEBOX work on macOS or Linux?",
@@ -114,7 +114,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Why does Chrome warn on download?",
-    a: "atomeons.com is a brand-new domain — Google Safe Browsing and Windows SmartScreen have zero reputation history for it. The v6.0.0 binaries are also currently unsigned (EV code-signing certificate lands in v6.1). Chrome's warning is automatic for any first-time download from a low-reputation domain serving unsigned executables. To verify integrity: compare the file's SHA-256 against the canonical value published on the product page using Get-FileHash (PowerShell) or shasum -a 256 (bash). If the hash matches, the file is exactly what we built. Then click 'More info → Run anyway' on the SmartScreen prompt.",
+    a: "atomeons.com is a recent domain — Google Safe Browsing and Windows SmartScreen still have low reputation history for it. The v6.x binaries are currently unsigned (EV code-signing certificate is on the v6.x roadmap). Chrome's warning is automatic for any first-time download from a low-reputation domain serving unsigned executables. To verify integrity: compare the file's SHA-256 against the canonical value published on the product page using Get-FileHash (PowerShell) or shasum -a 256 (bash). If the hash matches, the file is exactly what we built. Then click 'More info → Run anyway' on the SmartScreen prompt.",
   },
   {
     q: "What if it doesn't install or doesn't fit my workflow?",
@@ -129,12 +129,12 @@ const FAQS: QA[] = [
     a: "Yes. Full source tree alongside the native binary. Inspect freely. Modify for personal or single-business use. Redistribution is not permitted (LICENSE §3). Re-uploading the binary or source to a public mirror is not permitted. Forking for personal study is fine.",
   },
   {
-    q: "Why $1?",
-    a: "Because anyone with an itch to operate better should be able to afford a real cockpit. Students, freelancers, indie devs, side-project builders — the people who do real work without a budget. The ladder mechanism means as adoption grows the price reflects it, but the floor for the first 100 buyers stays at $1. The price of a video game. The price you don't think twice about.",
+    q: "Why $49?",
+    a: "Because the price of a paperback book and a coffee is a working price filter — it screens for buyers who actually want to operate without screening out the students, freelancers, indie devs, and side-project builders who do real work without a budget. Once. Forever. Specifically chosen NOT to be: a subscription (banned by §4A), a usage meter (no telemetry, no per-call billing), a freemium gate (no feature ransom), or venture-funded pricing (no investors to satisfy). The price exists to fund one operator's ongoing maintenance, not to growth-hack an anchor. See manifesto clause 04 for the full reasoning.",
   },
   {
     q: "How does it compare to hiring a part-time PM, or to Notion + Linear + Slack?",
-    a: "Hiring a part-time PM at 10h/week and $100/h is ~$52,000/year — the doctrine leaves with the human. Notion + Linear + Slack + Loom + Cal stack is ~$2,400/year — surface theater, no mission graph, no receipt law. Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced is ~$3,120/year — chat with no project memory or department routing. Custom AI cockpit consulting build is $40K–$120K and 6–9 months. ORANGEBOX is $1 once (at the current ladder rung) and includes the cockpit, doctrine, skill suite, and worker pack.",
+    a: "Hiring a part-time PM at 10h/week and $100/h is ~$52,000/year — the doctrine leaves with the human. Notion + Linear + Slack + Loom + Cal stack is ~$2,400/year — surface theater, no mission graph, no receipt law. Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced is ~$3,120/year — chat with no project memory or department routing. Custom AI cockpit consulting build is $40K–$120K and 6–9 months. ORANGEBOX is $49 once and includes the cockpit, AE See-Suite + AE Operations surfaces, doctrine, skill suite, and worker pack.",
   },
   {
     q: "Will it stop being relevant if I lock into ORANGEBOX?",
@@ -209,8 +209,9 @@ export default function FAQ() {
         ORANGEBOX <span className="text-[#ff7a18]">questions</span> answered.
       </h1>
       <p className="mt-6 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
-        Real answers about the v6.0.0 native AI cockpit. 4.46 MB. $1
-        ladder. Local-first. No subscription, ever.
+        Real answers about the v6.3 native AI cockpit. Two surfaces:
+        AE See-Suite + AE Operations. $49 once, forever. License §4A
+        bans subscription. Two 30-day refund paths. Local-first.
       </p>
 
       <div className="mt-12 space-y-6">
@@ -236,7 +237,7 @@ export default function FAQ() {
           className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
           style={{ color: "#000", WebkitTextFillColor: "#000" }}
         >
-          See ORANGEBOX · $1 →
+          See ORANGEBOX · $49 →
         </Link>
         <Link
           href="/research/papers"

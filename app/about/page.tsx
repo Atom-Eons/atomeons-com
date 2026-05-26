@@ -167,8 +167,10 @@ export default function About() {
           ORANGEBOX, prototype.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
-          Native binary. 4.46 MB. One file. Double-click. 2 seconds to
-          cockpit. 11 lanes. $1 once, forever. ORANGEBOX.
+          Native binary. One file. Double-click. v6.3 cockpit with two
+          surfaces: AE See-Suite (command) + AE Operations (engine).
+          $49 once, forever. License §4A bans subscription. Two 30-day
+          refund paths. ORANGEBOX.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link

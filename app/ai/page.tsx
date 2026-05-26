@@ -250,7 +250,7 @@ const TOOLS: Tool[] = [
     url: "https://stripe.com",
     category: "payments · the standard",
     free: "free to integrate · 2.9% + 30¢ per transaction",
-    why: "The payment processor every solo founder uses. Connect mode for marketplaces, Checkout for one-shot sales. The lab takes $1 ORANGEBOX purchases through Stripe.",
+    why: "The payment processor every solo founder uses. Connect mode for marketplaces, Checkout for one-shot sales. The lab takes $49 ORANGEBOX purchases through Stripe.",
   },
   {
     name: "Loops & Resend",
@@ -262,10 +262,10 @@ const TOOLS: Tool[] = [
   {
     name: "Æ ORANGEBOX Command",
     url: "/orangebox",
-    category: "AI cockpit · ours, $1 once",
-    free: "FREE first 7 days of launch · $1 forever after",
-    why: "The lab's own product. A desktop cockpit that turns Claude Code from a chat tool into a real project workspace with memory, receipts, and department routing. Local-first. Zero telemetry. License §4A bans us from ever switching to subscription.",
-    caveat: "Windows-only at v6.1. macOS + Linux on roadmap.",
+    category: "AI cockpit · ours, $49 once",
+    free: "$49 once · forever · two 30-day refund paths if it doesn't fit",
+    why: "The lab's own product. A desktop cockpit (v6.3) with two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs) + AE Operations (engine — MCP tools, agent routing, 200+ models). Turns Claude Code from a chat tool into a real project workspace with memory, receipts, and department routing. Local-first. Zero telemetry. License §4A bans us from ever switching to subscription. Source included.",
+    caveat: "Windows-only at v6.3. macOS + Linux on v6.x roadmap.",
   },
   // ── Added 2026-05-22 — 6 more tools (Anthropic surface stack + open weights)
   {
@@ -779,7 +779,7 @@ const FAQS: FAQ[] = [
   {
     category: "misc",
     q: "How does AtomEons fit into all of this?",
-    a: "AtomEons is a one-operator independent AI lab in Marco Island, Florida. Five things ship from one desk: (1) ORANGEBOX Command — the desktop AI cockpit, $1 once. (2) Twelve research manuscripts under CC-BY 4.0. (3) The Founder's View — a nightly broadcast at 8pm ET. (4) /intel — decoded primary-source analysis (current: the May 2026 xAI algorithm leak). (5) The page you're reading. We don't take VC money. We don't gate education behind subscription. We charge $1 for the cockpit because anyone with an itch to learn should be able to afford the real tool. Read more at /about and /press.",
+    a: "AtomEons is a one-operator independent AI lab in Marco Island, Florida. Six things ship from one desk: (1) ORANGEBOX Command v6.3 — the desktop AI cockpit, two surfaces (AE See-Suite + AE Operations), $49 once forever, License §4A bans subscription. (2) Twelve research manuscripts under CC-BY 4.0. (3) The Founder's View — a nightly broadcast at 8pm ET. (4) /intel — decoded primary-source analysis (current: the May 2026 xAI algorithm leak). (5) The 14-clause manifesto at /manifesto. (6) The page you're reading. We don't take VC money. We don't gate education behind subscription. We charge $49 for the cockpit because the price of a paperback book and a coffee is a working price filter — it screens for buyers who actually want to operate. Read more at /about and /press.",
   },
   {
     category: "misc",
@@ -1949,7 +1949,7 @@ export default function AIPage() {
             <code className="font-mono text-[11px] text-[#FFB87A]">
               /orangebox
             </code>{" "}
-            (the $1 cockpit),{" "}
+            (the $49 cockpit · v6.3),{" "}
             <code className="font-mono text-[11px] text-[#FFB87A]">
               /intel/x-algorithm
             </code>{" "}

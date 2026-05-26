@@ -659,7 +659,7 @@ export default function XAlgorithmIntel() {
               ::built through the cockpit
             </p>
             <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
-              ORANGEBOX v6.0.0 · $1 ladder · receipts on every action →
+              ORANGEBOX v6.3 · $49 once · §4A no-saas · receipts on every action →
             </p>
           </Link>
         </div>

@@ -254,7 +254,7 @@ export default function StartPage() {
               {
                 label: "Try the cockpit",
                 title: "Æ ORANGEBOX",
-                body: "The agent-mode environment. $1 forever, free first 7 days.",
+                body: "The v6.3 cockpit. AE See-Suite + AE Operations. $49 once, forever. Two 30-day refund paths.",
                 href: "/orangebox",
                 accent: "#FFB87A",
               },
