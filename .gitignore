@@ -51,3 +51,6 @@ next-env.d.ts
 # one-shot letter payloads for /api/admin/publish-letter
 .letter-*.json
 tailwindcss-*.log
+
+# temp commit-message files (multi-line HEREDOC body passed via `git commit -F`)
+.cm-*.txt
