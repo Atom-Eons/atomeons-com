@@ -11,11 +11,13 @@ import { AeMark } from "./AeMark";
  */
 const PRIMARY: { href: string; label: string }[] = [
   { href: "/", label: "Home" },
-  { href: "/start", label: "Start here · 11 min" },
+  { href: "/learn", label: "Learn AI · the curriculum" },
 ];
 
 const LEARN = [
-  { href: "/ai", label: "AI Guide", hint: "the 44M on-ramp · 51 FAQs · 20 paths · 28 tools" },
+  { href: "/learn", label: "/learn · curriculum", hint: "12 lessons · 5 levels · 5 paths · ~3h" },
+  { href: "/start", label: "/start · 11-min on-ramp", hint: "paced single-page · for first-timers" },
+  { href: "/ai", label: "AI Guide · reference", hint: "44M reference · 51 FAQs · 28 tools · 20 paths" },
   { href: "/faq", label: "FAQ", hint: "AI 101 + ORANGEBOX · FAQPage schema" },
 ];
 

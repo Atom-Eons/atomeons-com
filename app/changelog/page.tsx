@@ -63,6 +63,51 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-26",
+    tag: "learn-curriculum-launch",
+    kind: "site",
+    title:
+      "/learn launched — 12-lesson AI literacy curriculum · 5 levels · 5 persona paths · Course + LearningResource JSON-LD.",
+    surfaces: [
+      "app/learn/page.tsx (NEW)",
+      "app/learn/library/page.tsx (NEW)",
+      "app/learn/[persona]/page.tsx (NEW · 5 dynamic routes)",
+      "app/learn/lesson/[slug]/page.tsx (NEW · 12 dynamic routes)",
+      "app/learn/LearnCopyPrompt.tsx (NEW)",
+      "app/learn/_data/lessons.ts (NEW · 12 lessons)",
+      "app/learn/_data/levels.ts (NEW · 5 levels)",
+      "app/learn/_data/paths.ts (NEW · 5 paths)",
+      "app/_components/v2/HomeOnboardStrip.tsx (NEW · homepage mission strip)",
+      "app/page.tsx (HomeOnboardStrip wired)",
+      "app/_components/Header.tsx (Learn dropdown rebuilt)",
+      "app/_components/MobileNav.tsx (Learn array rebuilt)",
+      "app/_components/Footer.tsx (Learn column +1)",
+      "app/search/page.tsx (USE AI lead = /learn)",
+      "app/sitemap.ts (+/learn, +/learn/library, +5 paths, +12 lessons)",
+      "public/llms.txt (mission line, canonical surfaces, what-this-site-is-for)",
+    ],
+    body:
+      "Operator mission 2026-05-26: 'Onboard humanity to AI through this site.' Built /learn as the deep curriculum surface that complements /start (the 11-min appetizer). 12 lessons across 5 levels (Novice · Learner · User · Operator · Pilot). 5 persona paths (Worker · Builder · Student · Operator · Curious). Every lesson has the same shape: concept · drill (copy-paste prompt + steps) · outcome · trap. Course JSON-LD on /learn, ItemList JSON-LD, LearningResource per lesson, BreadcrumbList on every page. Total ~3 hours at honest pace; 4-8 weeks calendar time. CC-BY 4.0. Free. No signup. No mailing list. No affiliate revenue. /start preserved as the 11-min single-page appetizer.",
+  },
+  {
+    date: "2026-05-26",
+    tag: "finish-stale-claim-crush",
+    kind: "site",
+    title:
+      "FINISH HIM — final stale-claim crush on 404, success, homepage hero stat strip, organism rail, footer CTA, sales-count + pricing legacy docs.",
+    surfaces: [
+      "app/not-found.tsx",
+      "app/success/page.tsx",
+      "app/_components/v2/HeroLabManifest.tsx",
+      "app/_components/v2/OrganismRail.tsx",
+      "app/_components/v2/LabFooterCTA.tsx",
+      "lib/pricing.ts (legacy docstring)",
+      "app/api/sales-count/route.ts (legacy docstring)",
+    ],
+    body:
+      "Final pass through the surfaces that survived the press+OG+body+buybar sweep. 404 'Buy ORANGEBOX · $1' → '$49'; success-page Chrome explainer 'unsigned in v6.0.0 — EV cert lands in v6.1' → 'v6.x binary unsigned · EV cert on v6.x roadmap' (removes the bad EV-in-v6.1 promise); homepage HeroLabManifest stat strip '11 LANES · $1 · FREE FIRST 7 DAYS' → '2 SURFACES · $49 · §4A NO-SAAS'; OrganismRail ORANGEBOX detail rewritten to two-surface architecture; LabFooterCTA buy description '$1 ladder · one file · forever' → 'v6.3 · $49 once · §4A no-saas'. lib/pricing.ts + /api/sales-count docstrings rewritten to clearly label themselves as LEGACY $1 archive flow (no live-current display consumes them). Intentional historical references in changelog, legal pages, the legacy archive, dated ship-log entries, and cross-link labels preserved.",
+  },
+  {
+    date: "2026-05-26",
     tag: "v63-site-wide-stale-claim-cleanup",
     kind: "site",
     title:

@@ -37,8 +37,9 @@ export function Footer() {
             Learn
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li><Link href="/ai" className="hover:text-[#22F0D5]">AI Guide · the 44M on-ramp</Link></li>
-            <li><Link href="/start" className="hover:text-[#22F0D5]">/start · 11-min novice intro</Link></li>
+            <li><Link href="/learn" className="hover:text-[#22F0D5]">/learn · 12-lesson curriculum</Link></li>
+            <li><Link href="/start" className="hover:text-[#22F0D5]">/start · 11-min novice on-ramp</Link></li>
+            <li><Link href="/ai" className="hover:text-[#22F0D5]">AI Guide · the 44M reference</Link></li>
             <li><Link href="/faq" className="hover:text-[#22F0D5]">FAQ · AI 101 + product</Link></li>
             <li><Link href="/search" className="hover:text-[#22F0D5]">Lab directory · /search</Link></li>
           </ul>

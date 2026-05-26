@@ -53,23 +53,36 @@ export function Header() {
         <nav className="hidden items-center gap-1 md:flex md:gap-2 lg:gap-3">
           <NavLink href="/">Home</NavLink>
 
-          {/* Single pulse chip — novice entry. The /ai dropdown lives
-              inside Learn below so it isn't competing for the chip slot. */}
+          {/* Single pulse chip — /learn. The 12-lesson AI literacy
+              curriculum. The bigger, deeper version of the on-ramp;
+              /start is the 11-min appetizer and lives inside Learn
+              below. Operator mission 2026-05-26: onboard humanity to AI
+              through this site. */}
           <Link
-            href="/start"
+            href="/learn"
             className="group ml-1 inline-flex items-center gap-1.5 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
           >
             <span className="size-1.5 rounded-full bg-[#22F0D5] shadow-[0_0_8px_rgba(34,240,213,0.8)]" />
-            start here
+            learn AI · the curriculum
           </Link>
 
           <NavDropdown
             label="Learn"
             items={[
               {
+                href: "/learn",
+                label: "/learn · curriculum",
+                hint: "12 lessons · 5 levels · 5 paths · ~3h total",
+              },
+              {
+                href: "/start",
+                label: "/start · 11-min on-ramp",
+                hint: "paced single-page intro · for first-timers",
+              },
+              {
                 href: "/ai",
-                label: "AI Guide",
-                hint: "the 44M on-ramp · 51 FAQs, 20 paths, 28 tools",
+                label: "AI Guide · reference",
+                hint: "44M reference · 51 FAQs · 28 tools · 20 paths",
               },
               {
                 href: "/faq",

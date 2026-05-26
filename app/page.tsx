@@ -1,4 +1,5 @@
 import { HeroPillarSequence } from "./_components/v2/HeroPillarSequence";
+import { HomeOnboardStrip } from "./_components/v2/HomeOnboardStrip";
 import { StartHereStrip } from "./_components/v2/StartHereStrip";
 import { OrganismRail } from "./_components/v2/OrganismRail";
 import { LatestFromLab } from "./_components/LatestFromLab";
@@ -62,10 +63,22 @@ export default function Home() {
         <HeroPillarSequence />
       </div>
 
+      {/* 1a — Mission strip. Operator directive 2026-05-26:
+              "I WANT TO ONBOARD HUMANITY TO AI. THROUGH THIS SITE.
+               YOU FIGURE IT OUT. BUILD IT. PIZZA MODE."
+              This is the first message any visiting human sees after
+              the brand spine. Persona chips + /onboard CTA. Lives
+              above StartHereStrip because /onboard is the bigger
+              humanity-scale on-ramp; /start is the calmer 11-min
+              walk-through for humans who want pacing instead of
+              picking a persona. */}
+      <HomeOnboardStrip />
+
       {/* 1b — Novice front door. Operator directive 2026-05-21:
               "assume a user has no idea what ai means... we are the
               onboard." This strip is the prominent path to /start,
-              not just the small header chip. */}
+              the 11-minute paced walk-through. /onboard above is the
+              persona-driven version. */}
       <StartHereStrip />
 
       {/* 2 — Four arms (the four products + research): compact card rail

@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { PAPERS } from "./_data/research-papers";
+import { LESSONS } from "./learn/_data/lessons";
+import { PATHS } from "./learn/_data/paths";
 
 const BASE = "https://atomeons.com";
 
@@ -12,8 +14,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: p.status === "summarized" ? 0.7 : 0.5,
   }));
 
+  const lessonEntries: MetadataRoute.Sitemap = LESSONS.map((l) => ({
+    url: `${BASE}/learn/lesson/${l.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  const pathEntries: MetadataRoute.Sitemap = PATHS.map((p) => ({
+    url: `${BASE}/learn/${p.id}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
+  }));
+
   return [
     { url: `${BASE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${BASE}/learn`, lastModified: now, changeFrequency: "weekly", priority: 0.99 },
+    { url: `${BASE}/learn/library`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    ...pathEntries,
+    ...lessonEntries,
     { url: `${BASE}/ai`, lastModified: now, changeFrequency: "weekly", priority: 0.97 },
     { url: `${BASE}/search`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/start`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },

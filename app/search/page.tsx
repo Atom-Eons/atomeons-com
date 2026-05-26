@@ -49,6 +49,14 @@ const GROUPS: { name: string; items: Destination[] }[] = [
     name: "USE AI · the on-ramp",
     items: [
       {
+        href: "/learn",
+        title: "/learn — the 12-lesson AI literacy curriculum",
+        description:
+          "Five levels (Novice → Pilot). Five persona paths (Worker · Builder · Student · Operator · Curious). Real drills, copy-paste prompts, honest limits, graduation criteria. ~3 hours total at honest pace.",
+        keywords: ["learn", "curriculum", "lessons", "course", "path", "novice", "operator", "pilot", "first prompt", "AI literacy", "free course", "no signup"],
+        badge: "12 lessons · 5 levels",
+      },
+      {
         href: "/ai",
         title: "/ai — the comprehensive AI gateway",
         description:
@@ -59,7 +67,7 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         href: "/start",
         title: "/start — the 11-minute novice on-ramp",
         description:
-          "For someone who has used ChatGPT under ten times. No jargon. Six things to try tonight. Six honest limits.",
+          "The appetizer to /learn. For someone who has used ChatGPT under ten times. No jargon. Six things to try tonight. Six honest limits. Send-to-one-person CTA.",
         keywords: ["start", "novice", "beginner", "chatgpt", "first"],
       },
       {
