@@ -64,11 +64,25 @@ const GROUPS: { name: string; items: Destination[] }[] = [
       },
       {
         href: "/orangebox",
-        title: "/orangebox — the $1 native AI cockpit",
+        title: "/orangebox — the v6.3 AI cockpit",
         description:
-          "ORANGEBOX Command v6.1.0 Agent Mode. Rust + egui. 11 lanes, 60+ MCP tools, multi-model routing. License §4A bans subscription.",
-        keywords: ["orangebox", "cockpit", "claude code", "mcp", "rust", "egui", "buy"],
-        badge: "$1 once · FREE 7 days",
+          "ORANGEBOX Command v6.3. Two surfaces: AE See-Suite (command) + AE Operations (systems). Basic Install or AI Box path. License §4A bans subscription. 30-day MFG + Workflow-Fit refund.",
+        keywords: ["orangebox", "cockpit", "claude code", "mcp", "ae see-suite", "ae operations", "buy", "v6.3"],
+        badge: "$49 once · forever",
+      },
+      {
+        href: "/pricing",
+        title: "/pricing — $49 once, forever",
+        description:
+          "Standalone pricing page. $49 ORANGEBOX. License §4A no-saas lock. Comparison ladder vs Notion+Linear+Slack+Loom stack ($2,400/yr), Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced ($3,120/yr), part-time PM ($52K/yr), custom consulting ($40K–$120K). 6-FAQ.",
+        keywords: ["pricing", "cost", "price", "$49", "subscription", "license §4A", "no saas", "buy"],
+      },
+      {
+        href: "/support",
+        title: "/support — buyer help hub",
+        description:
+          "Eight pre-filled mailto channels: replace download link, MFG claim, Workflow-Fit refund, install help, license recovery, source / integration question, security disclosure, press inquiry. One operator. ~2h reply ET waking hours.",
+        keywords: ["support", "help", "refund claim", "lost link", "license recovery", "install help", "security disclosure"],
       },
       {
         href: "/faq",
@@ -159,6 +173,13 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         description:
           "Weekly ship cadence, current research, in-flight commits.",
         keywords: ["now", "current", "week", "cadence"],
+      },
+      {
+        href: "/changelog",
+        title: "/changelog — public version history",
+        description:
+          "Every shipped change with date + surfaces touched + operator note. Site rewrites, ORANGEBOX releases, broadcast cadence, research drops, legal updates. Not a roadmap — what actually shipped.",
+        keywords: ["changelog", "version history", "releases", "ship log"],
       },
       {
         href: "/press",

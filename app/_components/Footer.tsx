@@ -59,14 +59,16 @@ export function Footer() {
 
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
-            Products
+            Products + Buy
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
             <li><Link href="/orangebox" className="hover:text-[#FF7A1A]">ORANGEBOX · v6.3 · $49</Link></li>
+            <li><Link href="/pricing" className="hover:text-[#FF7A1A]">Pricing</Link></li>
             <li><Link href="/orangebox/legacy" className="hover:text-[#FF7A1A]">v6.1.0 legacy archive</Link></li>
             <li><Link href="/skilski" className="hover:text-[#FF7A1A]">skil.ski</Link></li>
             <li><Link href="/b00kmakor" className="hover:text-[#FF7A1A]">B00KMakor</Link></li>
             <li><Link href="/account" className="hover:text-[#FF7A1A]">Your account</Link></li>
+            <li><Link href="/support" className="hover:text-[#FF7A1A]">Support</Link></li>
             <li><Link href="/press" className="hover:text-[#FF7A1A]">Press kit</Link></li>
           </ul>
         </div>
@@ -78,6 +80,7 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
             <li><Link href="/about" className="hover:text-[#22F0D5]">About Atom</Link></li>
             <li><Link href="/now" className="hover:text-[#22F0D5]">/now · this week</Link></li>
+            <li><Link href="/changelog" className="hover:text-[#22F0D5]">Changelog</Link></li>
             <li><Link href="/legal/terms" className="hover:text-[#22F0D5]">Terms</Link></li>
             <li><Link href="/legal/privacy" className="hover:text-[#22F0D5]">Privacy</Link></li>
             <li><Link href="/legal/refund" className="hover:text-[#22F0D5]">Refunds</Link></li>
