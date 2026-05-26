@@ -6,21 +6,26 @@ import { NavDropdown } from "./NavDropdown";
 import { MobileNav } from "./MobileNav";
 
 /**
- * Header — lab-grade.
+ * Header — lab-grade nav, 2026-05-23 rebuild.
  *
- * - Brand wordmark left: orbital AtomMark + Æ glyph + "AtomEons" + the
- *   "Systems Laboratory" subtitle. NOT product framing — the global
- *   header carries the LAB identity, not any one product's identity.
- *   ORANGEBOX-specific version chips, taglines, and pricing live on
- *   /orangebox and below the fold of the homepage, never in the header.
- * - Top-right: standalone Æ badge only. LAB · ONLINE signal lives in LabTicker.
- * - Nav: Home · Products ▾ · Æ Research ▾ · The Founder's View · Press · Account.
- * - Cyan owns the system-status surface. Orange survives ONLY on the Products
- *   dropdown chevron and the Æ glyph fill — never on a global header chip.
+ * Restructured information architecture:
+ *  - Brand wordmark left (orbital AtomMark + Æ glyph + AtomEons +
+ *    Systems Laboratory subtitle).
+ *  - ONE pulse chip: /start (novice entry). The previous duplicate
+ *    /ai pulse chip was collapsed into the new Learn dropdown so the
+ *    two bright surfaces stop competing.
+ *  - Learn ▾ (NEW) — /ai (the comprehensive gateway) + /faq (every
+ *    question, FAQPage schema). The two "anyone-can-learn" surfaces.
+ *  - Products ▾ — /orangebox (now v6.3 inquire-to-ship · $49),
+ *    /skilski, /b00kmakor. Hints updated to match the v6.3 live page.
+ *  - Æ Research ▾ — /research/about, /research/papers,
+ *    /research/lessons-from-sci-fi (was missing — restored),
+ *    /intel/x-algorithm.
+ *  - Founder's View, Press, Account on the tail.
  *
  * Reference framing: Anthropic, OpenAI, xAI, Microsoft all carry just
- * the wordmark + minimal nav. The header should READ as a peer of those
- * surfaces, not as a product launch page.
+ * the wordmark + minimal nav. The header reads as a peer of those
+ * surfaces, not a product launch page.
  */
 export function Header() {
   return (
@@ -47,6 +52,9 @@ export function Header() {
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 md:flex md:gap-2 lg:gap-3">
           <NavLink href="/">Home</NavLink>
+
+          {/* Single pulse chip — novice entry. The /ai dropdown lives
+              inside Learn below so it isn't competing for the chip slot. */}
           <Link
             href="/start"
             className="group ml-1 inline-flex items-center gap-1.5 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
@@ -54,13 +62,22 @@ export function Header() {
             <span className="size-1.5 rounded-full bg-[#22F0D5] shadow-[0_0_8px_rgba(34,240,213,0.8)]" />
             start here
           </Link>
-          <Link
-            href="/ai"
-            className="group inline-flex items-center gap-1.5 rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A] transition-all hover:border-[#FFB87A] hover:bg-[#FFB87A]/20"
-          >
-            <span className="size-1.5 rounded-full bg-[#FFB87A] shadow-[0_0_8px_rgba(255,184,122,0.8)]" />
-            ai guide
-          </Link>
+
+          <NavDropdown
+            label="Learn"
+            items={[
+              {
+                href: "/ai",
+                label: "AI Guide",
+                hint: "the 44M on-ramp · 51 FAQs, 20 paths, 28 tools",
+              },
+              {
+                href: "/faq",
+                label: "FAQ",
+                hint: "AI 101 + ORANGEBOX · FAQPage schema live",
+              },
+            ]}
+          />
 
           <NavDropdown
             label="Products"
@@ -69,7 +86,7 @@ export function Header() {
               {
                 href: "/orangebox",
                 label: "Æ ORANGEBOX",
-                hint: "v6.1.0 Agent Mode · FREE 7 days",
+                hint: "v6.3 · AE See-Suite + AE Ops · $49 inquire",
               },
               {
                 href: "/skilski",
@@ -95,17 +112,17 @@ export function Header() {
               {
                 href: "/research/papers",
                 label: "Research Papers",
-                hint: "12 manuscripts · 2026",
+                hint: "12 manuscripts · CC-BY 4.0",
               },
               {
                 href: "/research/lessons-from-sci-fi",
                 label: "Lessons From Sci-Fi",
-                hint: "century-long monograph · April 2026",
+                hint: "century-long monograph · 10 cinema clips",
               },
               {
                 href: "/intel/x-algorithm",
                 label: "X Algorithm Alpha",
-                hint: "the May 15 2026 xAI leak · operator extensions",
+                hint: "May 2026 xAI leak · operator extensions",
               },
             ]}
           />
@@ -115,10 +132,7 @@ export function Header() {
           <NavLink href="/account">Account</NavLink>
         </nav>
 
-        {/* Right rail: Æ badge only.
-            LAB · ONLINE signal moved to LabTicker (site-wide bottom ticker).
-            Removing the chip here keeps the header peer-grade with
-            Anthropic / OpenAI / xAI wordmark-only headers. */}
+        {/* Right rail: Æ badge only. */}
         <div className="hidden items-center gap-2 md:flex">
           <span
             aria-label="ÆoNs mark"

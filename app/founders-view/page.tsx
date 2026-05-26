@@ -34,11 +34,83 @@ async function loadPosts(): Promise<{
   }
 }
 
+/**
+ * Build CollectionPage + Blog JSON-LD so AI search engines and Google
+ * read this index as a real publication, not just a list page. Each
+ * listed letter becomes a BlogPosting entity referenced under
+ * `blogPost`, giving crawlers an explicit citation graph.
+ */
+function buildIndexJsonLd(posts: FoundersViewPost[]) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://atomeons.com/founders-view#blog",
+        name: "The Founder's View",
+        alternateName: ["Founder's View", "AtomEons nightly broadcast"],
+        url: "https://atomeons.com/founders-view",
+        description:
+          "Daily 8pm ET letter from AtomEons Systems Laboratory. Fictional broadcast framing; events cited are real and from the day's news. No punches pulled. Equal opportunity indignation.",
+        inLanguage: "en-US",
+        publisher: {
+          "@type": "Organization",
+          name: "AtomEons Systems Laboratory",
+          url: "https://atomeons.com",
+        },
+        author: {
+          "@type": "Person",
+          name: "Atom McCree",
+          url: "https://atomeons.com/about",
+          sameAs: ["https://x.com/AtomMccree"],
+        },
+        license: "https://creativecommons.org/licenses/by/4.0/",
+        blogPost: posts.slice(0, 20).map((p) => ({
+          "@type": "BlogPosting",
+          headline: p.title,
+          description: p.dek ?? undefined,
+          datePublished: p.published_at,
+          url: `https://atomeons.com/founders-view/${p.slug}`,
+          wordCount: p.word_count ?? undefined,
+          author: {
+            "@type": "Person",
+            name: "Atom McCree",
+            url: "https://atomeons.com/about",
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "AtomEons", item: "https://atomeons.com" },
+          { "@type": "ListItem", position: 2, name: "The Founder's View", item: "https://atomeons.com/founders-view" },
+        ],
+      },
+    ],
+  };
+}
+
+function readTimeMinutes(words?: number | null): number | null {
+  if (!words || words < 1) return null;
+  // 220 wpm — slightly above average for editorial prose
+  return Math.max(1, Math.round(words / 220));
+}
+
 export default async function FoundersViewIndex() {
   const { posts, error } = await loadPosts();
+  const featured = posts[0] ?? null;
+  const rest = posts.slice(1);
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      {/* JSON-LD — Blog + BlogPosting entities for AI search citation */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildIndexJsonLd(posts)),
+        }}
+      />
+
       <div className="mx-auto w-full max-w-5xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">
@@ -84,13 +156,86 @@ export default async function FoundersViewIndex() {
           .
         </p>
 
-        <div className="mt-10 max-w-2xl">
-          <FoundersViewCountdown />
+        <div className="mt-10 grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
+          <div className="max-w-2xl">
+            <FoundersViewCountdown />
+          </div>
+          {/* RSS subscribe block — promoted out of the inline paragraph
+              now that it's the primary subscribe path. */}
+          <a
+            href="/founders-view/rss.xml"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-3 rounded-xl border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
+          >
+            <span className="text-base">📡</span>
+            subscribe by rss · no email · no algorithm
+          </a>
         </div>
       </section>
 
+      {/* FEATURED LETTER — surfaces the most recent letter as a hero
+          card so the index doesn't lead with utility-grade list rows.
+          Falls through silently when there are no posts yet. */}
+      {featured && !error ? (
+        <section className="mx-auto w-full max-w-5xl px-6 pb-10">
+          <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+            ::most recent · live now
+          </p>
+          <Link
+            href={`/founders-view/${featured.slug}`}
+            className="group block rounded-3xl border border-[#FF7A1A]/35 bg-gradient-to-br from-[#1B100A] via-[#0E0B0A] to-[#0A0F11] p-7 transition-all hover:border-[#FF7A1A]/70 md:p-10"
+          >
+            <div className="flex flex-wrap items-baseline gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#FF7A1A]/40 bg-[#FF7A1A]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
+                <span className="size-1.5 animate-pulse rounded-full bg-[#FF7A1A] shadow-[0_0_8px_rgba(255,122,26,0.7)]" />
+                tonight&apos;s broadcast
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7]">
+                {new Date(featured.published_at).toLocaleDateString("en-US", {
+                  weekday: "long",
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+              </span>
+            </div>
+            <h2 className="mt-5 text-balance text-3xl font-medium leading-[1.05] tracking-tight text-[#F2F4F5] group-hover:text-[#FF7A1A] md:text-5xl">
+              {featured.title}
+            </h2>
+            {featured.dek ? (
+              <p className="mt-5 max-w-3xl text-base leading-[1.6] text-[#C8CCCE] md:text-lg">
+                {featured.dek}
+              </p>
+            ) : null}
+            <div className="mt-7 flex flex-wrap items-baseline gap-4">
+              {featured.word_count ? (
+                <>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+                    {featured.word_count.toLocaleString()} words
+                  </span>
+                  {readTimeMinutes(featured.word_count) ? (
+                    <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+                      · ~{readTimeMinutes(featured.word_count)}-min read
+                    </span>
+                  ) : null}
+                </>
+              ) : null}
+              <span className="ml-auto font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5] group-hover:text-[#FFB87A]">
+                read the letter →
+              </span>
+            </div>
+          </Link>
+        </section>
+      ) : null}
+
       {/* LETTERS LIST */}
       <section className="mx-auto w-full max-w-5xl px-6 pb-24">
+        {featured && rest.length > 0 ? (
+          <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::archive · {rest.length} earlier letter{rest.length === 1 ? "" : "s"}
+          </p>
+        ) : null}
         {error ? (
           <div className="rounded-2xl border border-[#FF7A1A]/30 bg-[#1C0F08]/40 p-7">
             <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
@@ -119,9 +264,21 @@ export default async function FoundersViewIndex() {
               Supabase table. No letters published yet.
             </p>
           </div>
+        ) : rest.length === 0 ? (
+          // featured letter shown above; no earlier letters yet
+          <div className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+              ::archive · empty until tomorrow night
+            </p>
+            <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7]">
+              The next letter goes out at 8pm Eastern. Bookmark
+              this page, or grab the RSS feed above and forget
+              about it — the lab takes care of the cadence.
+            </p>
+          </div>
         ) : (
           <ol className="space-y-5">
-            {posts.map((p, i) => {
+            {rest.map((p, i) => {
               const date = new Date(p.published_at);
               const human = date.toLocaleDateString("en-US", {
                 weekday: "long",
@@ -129,6 +286,9 @@ export default async function FoundersViewIndex() {
                 day: "numeric",
                 year: "numeric",
               });
+              // posts.length - 1 - i because we already showed posts[0] as
+              // the featured card; this list starts at posts[1].
+              const number = posts.length - 1 - i;
               return (
                 <li key={p.id}>
                   <Link
@@ -136,7 +296,7 @@ export default async function FoundersViewIndex() {
                     className="group block rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#FF7A1A]/40 md:p-8"
                   >
                     <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
-                      ::letter №{posts.length - i} · {human}
+                      ::letter №{number} · {human}
                     </p>
                     <h2 className="mt-3 text-2xl font-medium leading-tight text-[#F2F4F5] group-hover:text-[#FF7A1A] md:text-3xl">
                       {p.title}

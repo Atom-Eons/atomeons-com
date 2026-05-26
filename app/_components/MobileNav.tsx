@@ -11,18 +11,25 @@ import { AeMark } from "./AeMark";
  */
 const PRIMARY: { href: string; label: string }[] = [
   { href: "/", label: "Home" },
+  { href: "/start", label: "Start here · 11 min" },
+];
+
+const LEARN = [
+  { href: "/ai", label: "AI Guide", hint: "the 44M on-ramp · 51 FAQs · 20 paths · 28 tools" },
+  { href: "/faq", label: "FAQ", hint: "AI 101 + ORANGEBOX · FAQPage schema" },
 ];
 
 const PRODUCTS = [
-  { href: "/orangebox", label: "Æ ORANGEBOX", hint: "v6.0.0 native · $1" },
+  { href: "/orangebox", label: "Æ ORANGEBOX", hint: "v6.3 · AE See-Suite + AE Ops · $49 inquire" },
   { href: "/skilski", label: "Æ skil.ski", hint: "skill marketplace via MCP" },
-  { href: "/b00kmakor", label: "Æ B00KMakor", hint: "AI publishing house" },
+  { href: "/b00kmakor", label: "Æ B00KMakor", hint: "AI publishing house — coming" },
 ];
 
 const RESEARCH = [
   { href: "/research/about", label: "About the lab", hint: "what ÆoNs Research is" },
-  { href: "/research/papers", label: "Research Papers", hint: "12 manuscripts · 2026" },
-  { href: "/intel/x-algorithm", label: "X Algorithm Alpha", hint: "the May 15 2026 leak · operator extensions" },
+  { href: "/research/papers", label: "Research Papers", hint: "12 manuscripts · CC-BY 4.0" },
+  { href: "/research/lessons-from-sci-fi", label: "Lessons From Sci-Fi", hint: "century-long monograph · 10 clips" },
+  { href: "/intel/x-algorithm", label: "X Algorithm Alpha", hint: "May 2026 xAI leak · operator extensions" },
 ];
 
 const TAIL: { href: string; label: string }[] = [
@@ -35,6 +42,7 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   // Sections default CLOSED so the most direct links (Founder's View, Press,
   // Account) are visible without scroll on a 390px phone. Tap to expand.
+  const [learnOpen, setLearnOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [researchOpen, setResearchOpen] = useState(false);
   const pathname = usePathname();
@@ -102,6 +110,40 @@ export function MobileNav() {
                 {item.label}
               </Link>
             ))}
+
+            {/* Learn section — sits ABOVE Products so the on-ramp surfaces
+                surface first on the small viewport. */}
+            <button
+              type="button"
+              onClick={() => setLearnOpen((v) => !v)}
+              className="mt-1 flex items-center justify-between rounded-md border border-[#22F0D5]/30 bg-[#0A1518]/40 px-3 py-2.5 text-base text-[#22F0D5]"
+              aria-expanded={learnOpen}
+            >
+              <span className="font-semibold uppercase tracking-wide">Learn</span>
+              <span className="font-mono text-xs">{learnOpen ? "▴" : "▾"}</span>
+            </button>
+            {learnOpen ? (
+              <div className="ml-2 flex flex-col gap-1 border-l border-[#1A2225] pl-3">
+                {LEARN.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className={`rounded-md px-3 py-2 text-sm ${
+                      isActive(l.href)
+                        ? "bg-[#0A0F11] text-[#F2F4F5]"
+                        : "text-[#9BA5A7] hover:bg-[#0A0F11] hover:text-[#22F0D5]"
+                    }`}
+                  >
+                    <span className="block font-medium text-[#F2F4F5]">
+                      {l.label}
+                    </span>
+                    <span className="mt-0.5 block font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
+                      {l.hint}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            ) : null}
 
             {/* Products section */}
             <button
