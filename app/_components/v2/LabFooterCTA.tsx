@@ -35,7 +35,7 @@ const TILES: FooterTile[] = [
   },
   {
     label: "Buy ORANGEBOX",
-    description: "$1 ladder · one file · forever",
+    description: "v6.3 · $49 once · §4A no-saas",
     href: "/orangebox",
   },
   {

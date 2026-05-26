@@ -55,7 +55,7 @@ export default function NotFound() {
             className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#FF7A1A]/50"
           >
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
-              ::cockpit · $1 ladder · v6.0
+              ::cockpit · v6.3 · $49 once · §4A
             </p>
             <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
               Æ ORANGEBOX →
@@ -131,7 +131,7 @@ export default function NotFound() {
           href="/orangebox"
           className="rounded-md border border-[#204538] bg-[#071915] px-5 py-2.5 text-sm font-semibold text-[#f7f0e4]"
         >
-          Buy ORANGEBOX · $1
+          Buy ORANGEBOX · $49
         </Link>
         <Link
           href="/research/about"

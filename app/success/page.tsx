@@ -110,10 +110,11 @@ export default async function Success({
               ::chrome warned you? this is normal — here&apos;s why
             </p>
             <p className="mt-2 text-sm text-[#f7f0e4]">
-              atomeons.com is a brand-new domain with no reputation history.
-              Chrome and Windows SmartScreen warn on every first download from
-              new domains. The binary is unsigned in v6.0.0 — EV cert lands in
-              v6.1. <span className="font-semibold">It is safe.</span> Verify
+              atomeons.com is a recent domain with low reputation history.
+              Chrome and Windows SmartScreen warn on first downloads from
+              new domains. The v6.x binary is currently unsigned — EV cert
+              is on the v6.x roadmap.{" "}
+              <span className="font-semibold">It is safe.</span> Verify
               with the SHA-256 below.
             </p>
             <div className="mt-3 rounded border border-[#1A2225] bg-black/60 p-3">

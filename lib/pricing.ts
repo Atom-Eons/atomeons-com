@@ -1,26 +1,26 @@
 /**
- * Pricing canon — operator decree 2026-05-20.
+ * Pricing — LEGACY $1 archive flow.
  *
- *   PRICE:  $1 once, forever. No ladder.
- *   PROMO:  FREE first 7 days of public launch window.
+ * As of 2026-05-26 this module is retired from the live-current
+ * commerce path. The current $49 v6.3 SKU is served by
+ * /api/checkout/v63 + OrangeBoxV63Buy (which do NOT import this
+ * module). LabTicker, OrangeBoxBlock, StickyBuyBar, and /orangebox
+ * all source their $49 price from static copy now.
  *
- * The $1 + 100-buyer ladder from the May 17 launch decree is RETIRED.
- * Forward buyers (the cohort that paid $1 on the ladder before 2026-05-20)
- * are grandfathered under license §4A — no change to their entitlement.
+ * This module is kept ONLY for:
+ *   - /api/checkout (the legacy $1 PaymentIntent endpoint, still
+ *     reachable from /orangebox/legacy for historical reference)
+ *   - /api/sales-count (the legacy sales counter, still readable
+ *     but no longer displayed on any live-current surface)
+ *   - /api/free-claim (the retired free-7-days endpoint)
  *
- * Free-promo window:
- *   FREE_PROMO_START_AT — ISO timestamp set in env (NEXT_PUBLIC_FREE_PROMO_START_AT).
- *                        If unset, defaults to 2026-05-17T04:00:00Z (the public launch).
- *   FREE_PROMO_DURATION_HOURS = 168 (7 days).
+ * BASE_DOLLARS stays at 1 because that's the canonical price for
+ * the archived v6.1.0 / $1 flow. Buyers grandfathered under
+ * license §4A keep their entitlement. Do not change this value
+ * to $49 — the new SKU has its own flow.
  *
- * During the window:
- *   - Display: "FREE · expires in {countdown}"
- *   - Checkout: $0 / coupon override (Stripe Coupon code `LAUNCH7` recommended;
- *     wire via /api/checkout server-side discount until automated)
- *
- * After the window:
- *   - Display: "$1 once · forever"
- *   - Checkout: standard $1 PaymentIntent.
+ * The free-promo window logic is also kept as-is so the legacy
+ * archive renders historically accurate copy.
  */
 
 import { getStripe } from "@/lib/stripe";

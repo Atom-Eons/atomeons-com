@@ -42,7 +42,7 @@ const ORGANISMS: OrgCard[] = [
     name: "ORANGEBOX",
     description: "The native AI cockpit. One file. Two-second launch.",
     detail:
-      "Rust + egui. 11 lanes. Agent Mode v6.1.0 with 9 real tools. Claude + GPT + Gemini + Groq + Ollama + OpenRouter behind one router. $1 once · FREE first 7 days.",
+      "Rust + egui. v6.3 with two surfaces: AE See-Suite (command) + AE Operations (engine). Claude + GPT + Gemini + Groq LPUs + Ollama + OpenRouter (200+ models) behind one router. $49 once, forever · License §4A bans subscription · two 30-day refund paths.",
     href: "/orangebox",
     accentColor: "#FF7A1A",
     borderColor: "border-[#FF7A1A]/40",

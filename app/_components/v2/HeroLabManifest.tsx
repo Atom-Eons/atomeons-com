@@ -51,13 +51,13 @@ export function HeroLabManifest() {
         <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-[#1A2225] pt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <span className="text-[#F2F4F5]">12 PAPERS</span>
           <span aria-hidden className="text-[#1A2225]">·</span>
-          <span className="text-[#F2F4F5]">11 LANES</span>
+          <span className="text-[#F2F4F5]">2 SURFACES</span>
           <span aria-hidden className="text-[#1A2225]">·</span>
           <span className="text-[#F2F4F5]">NIGHTLY BROADCAST</span>
           <span aria-hidden className="text-[#1A2225]">·</span>
           <span className="text-[#F2F4F5]">CC-BY 4.0</span>
           <span aria-hidden className="text-[#1A2225]">·</span>
-          <span className="text-[#FF7A1A]">$1 · FREE FIRST 7 DAYS</span>
+          <span className="text-[#FF7A1A]">$49 · §4A NO-SAAS</span>
         </div>
 
         {/* secondary escape CTAs — low hierarchy, mono, two actions */}
