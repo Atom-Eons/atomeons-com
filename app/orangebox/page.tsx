@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { OrangeBoxV63Buy } from "../_components/OrangeBoxV63Buy";
 
 /**
  * /orangebox — ORANGEBOX Command v6.3 · public-launch coming soon.
@@ -206,12 +207,18 @@ export default function OrangeBox() {
                 with what you&apos;d use it for and what computer
                 you&apos;ll run it on.
               </p>
-              <a
-                href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20purchase%20inquiry"
-                className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FF7A1A] px-5 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-black shadow-[0_0_40px_rgba(255,122,26,0.35)] transition-all hover:bg-[#FFA45A]"
-              >
-                inquire to ship →
-              </a>
+              <div className="mt-5 flex flex-col gap-3">
+                <OrangeBoxV63Buy
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FF7A1A] px-5 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-black shadow-[0_0_40px_rgba(255,122,26,0.35)] transition-all hover:bg-[#FFA45A] disabled:opacity-60"
+                  label="buy or inquire · $49 →"
+                />
+                <a
+                  href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20purchase%20inquiry"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#1A2225] bg-black/40 px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.28em] text-[#9BA5A7] transition-all hover:border-[#22F0D5]/40 hover:text-[#22F0D5]"
+                >
+                  email instead →
+                </a>
+              </div>
               <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
                 a.mccree@gmail.com · ~2h reply in ET waking hours
               </p>
@@ -498,11 +505,12 @@ export default function OrangeBox() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
+            <OrangeBoxV63Buy />
             <a
               href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20v6.3%20early-access%20inquiry&body=Hi%20Atom%2C%0A%0AI%20want%20to%20use%20ORANGEBOX%20for%3A%20___%0AMy%20machine%3A%20Windows%2010%2F11%20%E2%80%94%20___%0AI%20have%3A%20___%20(API%20keys%20%2F%20Ollama%20%2F%20both)%0A%0AThanks%2C%0A___"
-              className="inline-flex items-center gap-2 rounded-full bg-[#FF7A1A] px-7 py-3.5 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-black shadow-[0_0_40px_rgba(255,122,26,0.4)] transition-all hover:bg-[#FFA45A]"
+              className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9BA5A7] transition-colors hover:text-[#FFB87A]"
             >
-              email the founder to ship →
+              email instead →
             </a>
             <Link
               href="/orangebox/legacy"

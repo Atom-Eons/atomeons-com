@@ -6,6 +6,7 @@ import { ResearchSnapshot } from "./_components/v2/ResearchSnapshot";
 import { OrangeBoxBlock } from "./_components/v2/OrangeBoxBlock";
 import { SkilSkiBlock } from "./_components/v2/SkilSkiBlock";
 import { FoundersViewTeaser } from "./_components/v2/FoundersViewTeaser";
+import { FoundersViewLiveTeaser } from "./_components/v2/FoundersViewLiveTeaser";
 import { IntelDrop } from "./_components/v2/IntelDrop";
 import { FounderCard } from "./_components/v2/FounderCard";
 import { LabFooterCTA } from "./_components/v2/LabFooterCTA";
@@ -94,8 +95,11 @@ export default function Home() {
 
       {/* 6 — KNOW THE REAL INFO · the nightly broadcast. Editorial
               satire, real events. Published 8pm ET. Voice separation
-              starts here — the broadcast lives at /founders-view. */}
+              starts here — the broadcast lives at /founders-view.
+              Live teaser surfaces the most recent letter (5-min ISR)
+              above the evergreen broadcast pitch. */}
       <div data-cockpit-section="broadcast">
+        <FoundersViewLiveTeaser />
         <FoundersViewTeaser />
       </div>
 

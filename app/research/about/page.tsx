@@ -197,8 +197,43 @@ export default function ResearchAbout() {
                 they were drafted in, and answers his own email. No team. No
                 co-founders. No deck. No roadmap theater. The work shipped
                 this year unifies four scientific domains under one set of
-                equations and is wired into a product you can download for $1.
+                equations and runs through ORANGEBOX Command v6.3 — the
+                $49 cockpit at{" "}
+                <Link
+                  href="/orangebox"
+                  className="text-[#22F0D5] hover:text-[#FFA45A]"
+                >
+                  /orangebox
+                </Link>
+                .
               </p>
+              <div className="mt-5 grid gap-3 text-xs md:grid-cols-3">
+                <div className="rounded-lg border border-[#1A2225] bg-[#0A0F11] p-3">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                    ::author identifier
+                  </p>
+                  <p className="mt-1 text-[#F2F4F5]">Atom McCree</p>
+                  <p className="font-mono text-[#6B7779]">
+                    AtomEons Systems Laboratory
+                  </p>
+                </div>
+                <div className="rounded-lg border border-[#1A2225] bg-[#0A0F11] p-3">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                    ::location
+                  </p>
+                  <p className="mt-1 text-[#F2F4F5]">Marco Island, FL, USA</p>
+                  <p className="font-mono text-[#6B7779]">independent · no chair</p>
+                </div>
+                <div className="rounded-lg border border-[#1A2225] bg-[#0A0F11] p-3">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                    ::license
+                  </p>
+                  <p className="mt-1 text-[#F2F4F5]">CC-BY 4.0</p>
+                  <p className="font-mono text-[#6B7779]">
+                    quote with attribution
+                  </p>
+                </div>
+              </div>
               <p className="mt-4 font-mono text-xs uppercase tracking-[0.18em] text-[#22F0D5]">
                 <a
                   href="mailto:a.mccree@gmail.com"
@@ -218,6 +253,113 @@ export default function ResearchAbout() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* LAB INVENTORY — what's actually shipped, with citation guidance.
+            Makes the research wing feel research-grade rather than blog-
+            grade, and gives any AI search engine indexing this page an
+            explicit "here is the work" call-out. */}
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+        <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
+          ::lab inventory · what&apos;s shipped
+        </p>
+        <h2 className="mt-4 text-balance text-3xl font-medium leading-tight tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
+          The output. The citation guidance.
+        </h2>
+
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          {[
+            {
+              tag: "manuscripts",
+              count: "12",
+              title: "ÆoNs Research papers",
+              body: "Twelve manuscripts published April 2026 under CC-BY 4.0. Each paper carries an academic abstract and a plain-language summary side-by-side.",
+              href: "/research/papers",
+              cite: 'McCree, A. (2026). "[Paper title]." ÆoNs Research, AtomEons Systems Laboratory. CC-BY 4.0. https://atomeons.com/research/papers/[slug]',
+            },
+            {
+              tag: "monograph",
+              count: "38pp",
+              title: "Lessons From Sci-Fi",
+              body: "A century of imagined machines, taxonomized. 7 epochs, 200+ screen texts, 5-dimensional taxonomy. Companion gallery with 10 cinema-clip embeds.",
+              href: "/research/lessons-from-sci-fi/monograph",
+              cite: 'McCree, A. (2026). "Lessons From Sci-Fi: Novel Features and Use Cases of AI in Film and Television." ÆoNs Research. CC-BY 4.0. https://atomeons.com/research/lessons-from-sci-fi/monograph',
+            },
+            {
+              tag: "intel",
+              count: "1,851ln",
+              title: "X Algorithm Alpha",
+              body: "Operational deconstruction of the May 15 2026 xAI open-sourced For-You algorithm. 31 sections, every claim cited to file+line in xai-org/x-algorithm.",
+              href: "/intel/x-algorithm",
+              cite: 'McCree, A. (2026). "X Algorithm Alpha — operator extensions." AtomEons /intel. CC-BY 4.0. https://atomeons.com/intel/x-algorithm',
+            },
+            {
+              tag: "broadcast",
+              count: "nightly",
+              title: "The Founder's View",
+              body: "Daily 8pm ET letter from the lab. Fictional broadcast framing; events cited are real. Archive at /founders-view, RSS at /founders-view/rss.xml.",
+              href: "/founders-view",
+              cite: 'McCree, A. (2026). "[Letter title]." The Founder\'s View, AtomEons Systems Laboratory. CC-BY 4.0. https://atomeons.com/founders-view/[slug]',
+            },
+          ].map((item) => (
+            <Link
+              key={item.tag}
+              href={item.href}
+              className="group flex flex-col rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40"
+            >
+              <div className="flex items-baseline justify-between gap-3">
+                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">
+                  ::{item.tag}
+                </p>
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                  {item.count}
+                </span>
+              </div>
+              <h3 className="mt-3 text-xl font-semibold text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-2xl">
+                {item.title}
+              </h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#C8CCCE]">
+                {item.body}
+              </p>
+              <p className="mt-4 rounded-lg border border-[#1A2225] bg-[#040608] p-3 font-mono text-[9px] uppercase tracking-[0.12em] text-[#6B7779]">
+                ::cite as
+                <br />
+                <span className="font-sans text-[10px] normal-case tracking-normal text-[#9BA5A7]">
+                  {item.cite}
+                </span>
+              </p>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-[#22F0D5]/30 bg-[#0E1418] p-6 md:p-8">
+          <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::open contribution
+          </p>
+          <p className="mt-4 text-sm leading-[1.7] text-[#C8CCCE] md:text-base">
+            The lab is deliberately one-operator. Not hiring. Not adding
+            co-authors. The reproducibility surface is the github repo at{" "}
+            <a
+              href="https://github.com/AtomEons/atomeons-com"
+              target="_blank"
+              rel="noopener"
+              className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
+            >
+              github.com/AtomEons/atomeons-com
+            </a>{" "}
+            (the site is public source). Useful contributions: factual
+            corrections, accessibility fixes, mobile bug reports,
+            translations of any CC-BY paper into a non-English language.
+            Send a PR or email{" "}
+            <a
+              href="mailto:a.mccree@gmail.com"
+              className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
+            >
+              a.mccree@gmail.com
+            </a>
+            .
+          </p>
         </div>
       </section>
 

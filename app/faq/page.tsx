@@ -194,11 +194,11 @@ export default function FAQ() {
     <main className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-12 pb-24">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
         <Link href="/">AtomEons</Link>{" "}

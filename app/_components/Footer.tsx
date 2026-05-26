@@ -4,7 +4,7 @@ import { AtomMark } from "./AtomMark";
 export function Footer() {
   return (
     <footer className="relative z-10 mt-20 border-t border-[#1A2225] bg-black">
-      <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-12 md:grid-cols-[2fr_1fr_1fr_1fr_1fr]">
+      <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-12 md:grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
             <AtomMark size={32} speed={999} />
@@ -21,6 +21,27 @@ export function Footer() {
             One operator. One cockpit. Ships when it&apos;s ready, not when
             the calendar says so.
           </p>
+          <div className="mt-5">
+            <Link
+              href="/start"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
+            >
+              <span className="size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+              start here · 11 min
+            </Link>
+          </div>
+        </div>
+
+        <div>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+            Learn
+          </p>
+          <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
+            <li><Link href="/ai" className="hover:text-[#22F0D5]">AI Guide · the 44M on-ramp</Link></li>
+            <li><Link href="/start" className="hover:text-[#22F0D5]">/start · 11-min novice intro</Link></li>
+            <li><Link href="/faq" className="hover:text-[#22F0D5]">FAQ · AI 101 + product</Link></li>
+            <li><Link href="/search" className="hover:text-[#22F0D5]">Lab directory · /search</Link></li>
+          </ul>
         </div>
 
         <div>
@@ -28,48 +49,38 @@ export function Footer() {
             Æ Research
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li>
-              <Link
-                href="/start"
-                className="inline-flex items-center gap-1.5 font-semibold text-[#22F0D5] hover:text-[#FFB87A]"
-              >
-                <span className="size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
-                Start here · 11 min
-              </Link>
-            </li>
             <li><Link href="/research/about" className="hover:text-[#22F0D5]">About the lab</Link></li>
-            <li><Link href="/research/papers" className="hover:text-[#22F0D5]">Research Papers</Link></li>
+            <li><Link href="/research/papers" className="hover:text-[#22F0D5]">Research Papers · 12</Link></li>
             <li><Link href="/research/lessons-from-sci-fi" className="hover:text-[#22F0D5]">Lessons From Sci-Fi</Link></li>
-            <li><Link href="/intel/x-algorithm" className="hover:text-[#22F0D5]">X Algorithm Alpha · 2026-05-18</Link></li>
-            <li><Link href="/founders-view" className="hover:text-[#22F0D5]">The Founder&apos;s View · 8pm ET</Link></li>
-            <li><Link href="/now" className="hover:text-[#22F0D5]">/now · what we&apos;re doing</Link></li>
-            <li><Link href="/press" className="hover:text-[#22F0D5]">Press kit</Link></li>
-            <li><Link href="/about" className="hover:text-[#22F0D5]">About Atom</Link></li>
+            <li><Link href="/intel/x-algorithm" className="hover:text-[#22F0D5]">X Algorithm Alpha</Link></li>
+            <li><Link href="/founders-view" className="hover:text-[#22F0D5]">Founder&apos;s View · 8pm ET</Link></li>
           </ul>
         </div>
 
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
             Products
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li><Link href="/orangebox" className="hover:text-[#22F0D5]">ORANGEBOX</Link></li>
-            <li><Link href="/skilski" className="hover:text-[#22F0D5]">skil.ski</Link></li>
-            <li><Link href="/b00kmakor" className="hover:text-[#22F0D5]">B00KMakor</Link></li>
-            <li><Link href="/account" className="hover:text-[#22F0D5]">Your account</Link></li>
-            <li><Link href="/orangebox#buy" className="hover:text-[#22F0D5]">Get ORANGEBOX · FREE 7 days →</Link></li>
+            <li><Link href="/orangebox" className="hover:text-[#FF7A1A]">ORANGEBOX · v6.3 · $49</Link></li>
+            <li><Link href="/orangebox/legacy" className="hover:text-[#FF7A1A]">v6.1.0 legacy archive</Link></li>
+            <li><Link href="/skilski" className="hover:text-[#FF7A1A]">skil.ski</Link></li>
+            <li><Link href="/b00kmakor" className="hover:text-[#FF7A1A]">B00KMakor</Link></li>
+            <li><Link href="/account" className="hover:text-[#FF7A1A]">Your account</Link></li>
+            <li><Link href="/press" className="hover:text-[#FF7A1A]">Press kit</Link></li>
           </ul>
         </div>
 
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-            Legal
+            About + Legal
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
+            <li><Link href="/about" className="hover:text-[#22F0D5]">About Atom</Link></li>
+            <li><Link href="/now" className="hover:text-[#22F0D5]">/now · this week</Link></li>
             <li><Link href="/legal/terms" className="hover:text-[#22F0D5]">Terms</Link></li>
             <li><Link href="/legal/privacy" className="hover:text-[#22F0D5]">Privacy</Link></li>
             <li><Link href="/legal/refund" className="hover:text-[#22F0D5]">Refunds</Link></li>
-            <li><Link href="/faq" className="hover:text-[#22F0D5]">FAQ</Link></li>
           </ul>
         </div>
 
@@ -79,10 +90,11 @@ export function Footer() {
           </p>
           <ul className="mt-3 space-y-2">
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">PAPERS · 12 LIVE</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">ORANGEBOX · v6.1.0</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">BROADCAST · nightly 8pm ET</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">BUILD STATUS · 60/60 GREEN</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">ORANGEBOX · v6.3</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">PRICE · $49 ONCE</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">BROADCAST · 8pm ET</li>
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">LICENSE · CC-BY 4.0</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">LICENSE §4A · NO-SAAS</li>
           </ul>
           <a
             href="https://x.com/AtomMccree"
