@@ -62,6 +62,31 @@ const KIND_COLORS: Record<ChangeKind, string> = {
 const LOG: Entry[] = [
   // Newest first.
   {
+    date: "2026-05-26",
+    tag: "v63-site-wide-stale-claim-cleanup",
+    kind: "site",
+    title:
+      "Site-wide v6.3 / $49 stale-claim cleanup. Press kit + layout JSON-LD + OG cards + body copy + buybars refreshed.",
+    surfaces: [
+      "public/llms.txt",
+      "app/layout.tsx (Organization makesOffer JSON-LD)",
+      "app/press/page.tsx + PressMediaKit.tsx",
+      "app/opengraph-image.tsx",
+      "app/orangebox/opengraph-image.tsx",
+      "app/about/opengraph-image.tsx",
+      "app/faq/opengraph-image.tsx",
+      "app/faq/page.tsx",
+      "app/ai/page.tsx",
+      "app/start/page.tsx",
+      "app/about/page.tsx",
+      "app/intel/x-algorithm/page.tsx",
+      "app/_components/StickyBuyBar.tsx",
+      "app/_components/v2/OrangeBoxBlock.tsx",
+    ],
+    body:
+      "Comprehensive sweep of the surfaces that still emitted the prior v6.1.0 / v6.0.0 / $1 / free-7-days / 11-lanes framing. After this batch every live-current surface — site-wide JSON-LD, llms.txt, press kit (boilerplate, FACTS table, QUOTES, ANGLES, all four COPY_BLOCKS), all four OG cards, /faq body Q&A, /ai tool card + Q&A, /start ORANGEBOX card, /about body, /intel cross-link, the site-wide StickyBuyBar, and the homepage product block — reads v6.3 / $49 once · forever / §4A no-saas / two 30-day refund paths / AE See-Suite + AE Operations / 200+ models / zero markup. The legacy $1 ladder system (BuyButton, DynamicPrice, SalesCounterV5) remains in tree but is only mounted on /orangebox/legacy (historical archive). The OrangeBoxBlock on / now emits OrangeBoxV63Buy, which means the homepage now sells the current SKU.",
+  },
+  {
     date: "2026-05-23",
     tag: "manifesto-now-refresh",
     kind: "site",
