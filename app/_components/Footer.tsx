@@ -121,6 +121,15 @@ export function Footer() {
             </p>
           </div>
           <p className="flex items-center gap-3">
+            <a
+              href="https://www.linkedin.com/developers/apps/verification/91a1ed08-379d-44d7-b347-b0b9977ca824"
+              rel="me noopener"
+              target="_blank"
+              className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779] transition-colors hover:text-[#22F0D5]"
+              aria-label="LinkedIn developer app verification"
+            >
+              linkedin dev verify
+            </a>
             <span className="rounded-md border border-[#22F0D5]/40 bg-black px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-[#22F0D5]">
               v6
             </span>
