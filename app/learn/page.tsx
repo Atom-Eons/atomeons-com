@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LEVELS } from "./_data/levels";
 import { PATHS } from "./_data/paths";
 import { LESSONS, totalCurriculumMinutes } from "./_data/lessons";
+import { CopyLearnLink } from "./CopyLearnLink";
 
 /**
  * /learn — the AI literacy curriculum spine.
@@ -550,6 +551,56 @@ export default function LearnPage() {
               open the full library · filter by level / tag →
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* SEND IT TO ONE PERSON */}
+      <section className="border-b border-[#1A2225] bg-gradient-to-b from-[#0e2520]/40 via-[#0a1a17]/40 to-[#0e2520]/40">
+        <div className="mx-auto w-full max-w-3xl px-6 py-20 md:py-24 text-center">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
+            ::the only ask
+          </p>
+          <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+            Send this to{" "}
+            <span className="text-[#22F0D5]">one person</span>.
+          </h2>
+          <p className="mt-6 text-base leading-[1.7] text-[#C8CCCE] md:text-lg">
+            Someone in your phone right now is staring at the AI
+            transition wondering if they&apos;ve already missed it.
+            They have not. They were not handed the door. Send them
+            the link and walk away. The curriculum has the rest.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="sms:?&body=12-lesson%20AI%20curriculum%20%E2%80%94%20free%2C%20no%20signup%2C%20no%20mailing%20list%2C%20no%20cartel.%20The%20path%20from%20never-used-AI%20to%20operating%20it%20daily.%20https%3A%2F%2Fatomeons.com%2Flearn"
+              className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
+              aria-label="Send via text message"
+            >
+              text it →
+            </a>
+            <a
+              href="https://twitter.com/intent/tweet?text=A%20free%2012-lesson%20AI%20curriculum%20%E2%80%94%20no%20signup%2C%20no%20mailing%20list%2C%20no%20cartel.%20Five%20levels%20(novice%20%E2%86%92%20operator).%20Real%20drills.%20Honest%20limits.%20CC-BY%204.0.%20%40AtomMccree%20built%20it.&url=https%3A%2F%2Fatomeons.com%2Flearn"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 rounded-full border border-[#1A2225] bg-[#0A0F11] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#C8CCCE] transition-all hover:border-[#22F0D5]/40 hover:text-[#22F0D5]"
+              aria-label="Share to X"
+            >
+              tweet it →
+            </a>
+            <a
+              href="mailto:?subject=A%2012-lesson%20AI%20curriculum%2C%20free%2C%20no%20signup&body=I%20found%20this%20and%20thought%20of%20you.%20Twelve%20lessons%20across%20five%20levels.%20Real%20drills%20with%20copy-paste%20prompts.%20Honest%20limits.%20No%20signup.%20No%20mailing%20list.%20No%20affiliate%20revenue.%20CC-BY%204.0.%0A%0Ahttps%3A%2F%2Fatomeons.com%2Flearn"
+              className="inline-flex items-center gap-2 rounded-full border border-[#1A2225] bg-[#0A0F11] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#C8CCCE] transition-all hover:border-[#22F0D5]/40 hover:text-[#22F0D5]"
+              aria-label="Send via email"
+            >
+              email it →
+            </a>
+            <CopyLearnLink />
+          </div>
+
+          <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.28em] text-[#6B7779]">
+            ::no tracking · no shortener · no marketing pixel · just the link
+          </p>
         </div>
       </section>
 

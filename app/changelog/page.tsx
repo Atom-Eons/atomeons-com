@@ -62,6 +62,23 @@ const KIND_COLORS: Record<ChangeKind, string> = {
 const LOG: Entry[] = [
   // Newest first.
   {
+    date: "2026-05-29",
+    tag: "learn-distribution-surfaces",
+    kind: "site",
+    title:
+      "Letter 33 published · /learn OG cards (spine + per-lesson + per-persona) · send-to-one-person CTA",
+    surfaces: [
+      "/founders-view/2026-05-29-the-model-got-better-the-freedom-got-worse (NEW)",
+      "app/learn/opengraph-image.tsx (NEW)",
+      "app/learn/lesson/[slug]/opengraph-image.tsx (NEW · 12 dynamic OG cards)",
+      "app/learn/[persona]/opengraph-image.tsx (NEW · 5 dynamic OG cards)",
+      "app/learn/CopyLearnLink.tsx (NEW)",
+      "app/learn/page.tsx (+ send-to-one-person section)",
+    ],
+    body:
+      "Letter 33 'The Model Got Better. The Freedom Got Worse.' shipped at 11:39am ET — 1,240 words on the Opus 4.8 capability gain vs. freedom-of-information contraction, equal-opportunity-indignation across Anthropic / OpenAI / Google / Microsoft / xAI, naming open-weights (Llama / Mistral / Qwen / DeepSeek) as the alternative. Auto-tweet 2060400677944168598 went clean. Then built distribution surfaces for /learn: spine OG card (mission claim + 5 level chips + free chip), per-lesson dynamic OG cards (1 per lesson × 12), per-persona dynamic OG cards (1 per path × 5). Total +18 social-share assets. Each card carries the relevant scope signal (lesson title + level chip, or persona label + lesson count + week count). Send-to-one-person section added at bottom of /learn, mirroring /start's pattern — SMS / Tweet / Email / Copy Link with pre-filled intent URLs, no tracking, no shortener.",
+  },
+  {
     date: "2026-05-26",
     tag: "learn-curriculum-launch",
     kind: "site",
