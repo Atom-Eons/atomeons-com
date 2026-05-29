@@ -50,11 +50,19 @@ const GROUPS: { name: string; items: Destination[] }[] = [
     items: [
       {
         href: "/learn",
-        title: "/learn — the 12-lesson AI literacy curriculum",
+        title: "/learn — the 27-lesson AI literacy curriculum",
         description:
-          "Five levels (Novice → Pilot). Five persona paths (Worker · Builder · Student · Operator · Curious). Real drills, copy-paste prompts, honest limits, graduation criteria. ~3 hours total at honest pace.",
-        keywords: ["learn", "curriculum", "lessons", "course", "path", "novice", "operator", "pilot", "first prompt", "AI literacy", "free course", "no signup"],
-        badge: "18 lessons · 5 levels",
+          "Starts with L0 — the gateway lesson for humans who are scared or skeptical. Five levels (Novice → Pilot). Five persona paths (Worker · Builder · Student · Operator · Curious). Real drills, copy-paste prompts, worked examples on the foundation lessons, honest limits, graduation criteria. ~8 hours total at honest pace.",
+        keywords: ["learn", "curriculum", "lessons", "course", "path", "novice", "operator", "pilot", "first prompt", "AI literacy", "free course", "no signup", "gateway lesson", "scared of AI", "AI for beginners"],
+        badge: "27 lessons · 5 levels",
+      },
+      {
+        href: "/learn/where-am-i",
+        title: "/learn/where-am-i — 7-question level diagnostic",
+        description:
+          "Two minutes. Seven yes-or-no-ish questions. Maps you to a level (Novice → Pilot) and recommends three lessons to start with. No signup, no tracking, the URL is the answer state.",
+        keywords: ["diagnostic", "level test", "quiz", "where to start", "self-assessment", "AI literacy test", "novice or operator"],
+        badge: "7 questions · ~2 min",
       },
       {
         href: "/ai",

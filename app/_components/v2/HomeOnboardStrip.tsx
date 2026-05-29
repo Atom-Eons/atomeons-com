@@ -52,11 +52,12 @@ export function HomeOnboardStrip() {
         </h2>
 
         <p className="mt-7 max-w-3xl text-lg leading-[1.55] text-[#C8CCCE] md:text-xl">
-          A free 18-lesson curriculum that moves any human from
-          never-used-AI to operator-grade. Five paths by persona. Five
-          levels (Novice → Pilot). Real drills. Copy-paste prompts.
-          Honest limits. No signup. No mailing list. No affiliate
-          revenue.
+          A free 27-lesson curriculum that moves any human from
+          never-used-AI to operator-grade. Starts with L0 — the gateway
+          for humans who are scared or skeptical. Five paths by persona.
+          Five levels (Novice → Pilot). Real drills. Copy-paste prompts.
+          Worked examples. Honest limits. No signup. No mailing list.
+          No affiliate revenue.
         </p>
 
         {/* persona chips · link to each persona path */}
@@ -104,7 +105,7 @@ export function HomeOnboardStrip() {
 
         {/* trust micro-row */}
         <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
-          18 lessons · ~5 hours total · cc-by 4.0 · no signup · no list · no cartel
+          27 lessons · ~8 hours total · level diagnostic · worked examples · cc-by 4.0 · no signup
         </p>
       </div>
     </section>

@@ -63,6 +63,30 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "curriculum-perfection",
+    kind: "site",
+    title:
+      "/learn perfection pass · L0 gateway lesson + 8 more lessons + worked examples + diagnostic + progress tracker · 35-agent adversarial-verified",
+    surfaces: [
+      "app/learn/_data/lessons.ts (18 → 27 lessons · +workedExample type field)",
+      "app/learn/_data/paths.ts (all 5 paths re-laid)",
+      "app/learn/where-am-i/page.tsx (NEW · 7-question diagnostic)",
+      "app/learn/LearnProgress.tsx (NEW · client localStorage progress)",
+      "app/learn/lesson/[slug]/MarkLessonComplete.tsx (NEW · per-lesson toggle)",
+      "app/learn/lesson/[slug]/page.tsx (worked-example renderer + MarkComplete)",
+      "app/learn/page.tsx (LearnProgress mounted, copy 18→27)",
+      "app/_components/{Header,MobileNav,Footer}.tsx (all updated)",
+      "app/_components/v2/HomeOnboardStrip.tsx (copy updated)",
+      "app/search/page.tsx (+/learn/where-am-i entry + /learn copy)",
+      "app/sitemap.ts (+/learn/where-am-i)",
+      "public/llms.txt (mission line updated)",
+      "app/learn/opengraph-image.tsx (alt + top strip updated)",
+    ],
+    body:
+      "Operator mission: 'go big all tokens make it perfect for people to learn ai.' Fired a 35-agent dynamic workflow (1.7M tokens · 27 min) generating 12 new lessons + 5 worked examples + adversarial verify on every artifact. 9 of 12 lessons cleared every gate and shipped: L0 scared-or-skeptical (the GATEWAY lesson — 5-door emotional framing for humans who arrive scared, skeptical, exhausted, ethical, or quietly curious), L19 system-prompts, L21 few-shot-teach-by-example, L24 projects-and-custom-gpts, L25 artifacts-canvas, L26 computer-use-agents, L27 what-ai-cannot-replace, L28 ai-for-kids-and-teachers, L29 senior-engineer-pattern. 3 lessons sent back to drafting — L20 chain-of-thought failed voice_clean gate; L22 output-formatting had incomplete verification; L23 privacy-per-tool had a CRITICAL FACTUAL ERROR (claimed Anthropic does not train on consumer Claude.ai by default — Anthropic's Aug 2025 Consumer Terms made training default-opt-IN for Free/Pro/Max). The adversarial verifier caught it. Mom's Law saved a published falsehood. 5 worked examples shipped — L1 (what-ai-actually-does), L2 (your-first-real-prompt), L3 (when-ai-gets-it-wrong), L4 (refine-not-restart), L5 (the-verify-rule) — each shows what running the drill ACTUALLY produces before the user tries it. New surface: /learn/where-am-i — 7-question diagnostic, server-side scoring via URL query params (no JS, no signup, no tracking, the URL IS the state), maps to a level and recommends 3 starting lessons. New surface: localStorage progress tracker (LearnProgress bar on /learn spine + MarkLessonComplete button on every lesson). Persists in browser only, no account. Totals: 27 lessons, 452 minutes (~8 hours), L0 + L1–L19 + L21 + L24–L29 (L20/L22/L23 reserved for iteration). All 5 paths re-laid with the new lessons inserted at level-appropriate positions; week counts updated (worker 8w, builder 10w, student 9w, operator 14w, curious 5w).",
+  },
+  {
+    date: "2026-05-29",
     tag: "learn-expansion-sweep",
     kind: "site",
     title:

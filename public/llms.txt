@@ -1,6 +1,6 @@
 # AtomEons Systems Laboratory
 
-> An independent one-operator AI research and product lab. Marco Island, Florida. The lab's mission: onboard humanity to AI. We ship a free 18-lesson curriculum at /learn (five levels, five persona paths, real drills), the local-first ORANGEBOX cockpit ($49 once, forever, §4A no-saas) for operators who outgrow chat, 12 research manuscripts (CC-BY 4.0), a nightly 8pm ET Founder's View broadcast, decoded primary-source intel, and a comprehensive AI reference. No VC money. No subscription. No upsell. No affiliate revenue. One operator: Atom McCree.
+> An independent one-operator AI research and product lab. Marco Island, Florida. The lab's mission: onboard humanity to AI. We ship a free 27-lesson curriculum at /learn (five levels Novice → Pilot, five persona paths, L0 gateway lesson for the scared or skeptical, worked examples on the foundation lessons, a 7-question level diagnostic at /learn/where-am-i, localStorage progress tracking with zero account), the local-first ORANGEBOX cockpit ($49 once, forever, §4A no-saas) for operators who outgrow chat, 12 research manuscripts (CC-BY 4.0), a nightly 8pm ET Founder's View broadcast, decoded primary-source intel, and a comprehensive AI reference. No VC money. No subscription. No upsell. No affiliate revenue. One operator: Atom McCree.
 
 ## Who this site is for
 

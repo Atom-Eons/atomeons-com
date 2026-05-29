@@ -4,6 +4,7 @@ import { LEVELS } from "./_data/levels";
 import { PATHS } from "./_data/paths";
 import { LESSONS, totalCurriculumMinutes } from "./_data/lessons";
 import { CopyLearnLink } from "./CopyLearnLink";
+import { LearnProgress } from "./LearnProgress";
 
 /**
  * /learn — the AI literacy curriculum spine.
@@ -12,7 +13,7 @@ import { CopyLearnLink } from "./CopyLearnLink";
  *   "I want to onboard humanity to AI. Through this site."
  *
  * /start was the 11-minute appetizer. /learn is the curriculum that
- * follows — 18 lessons across 5 levels, with 5 persona-fit paths and
+ * follows — 27 lessons across 5 levels, with 5 persona-fit paths and
  * a real understanding of when chat is enough and when it isn't.
  *
  * Page architecture:
@@ -29,7 +30,7 @@ import { CopyLearnLink } from "./CopyLearnLink";
  *
  * Structured data:
  *   - Course (canonical)
- *   - ItemList (the 18 lessons)
+ *   - ItemList (the 27 lessons)
  *   - BreadcrumbList
  */
 
@@ -39,7 +40,7 @@ const TOTAL_LESSONS = LESSONS.length;
 export const metadata: Metadata = {
   title:
     "Learn AI · the multi-week curriculum · onboarding humanity to AI · AtomEons",
-  description: `A free 18-lesson curriculum that moves any human from never-used-AI to operator-grade. Five levels (Novice → Learner → User → Operator → Pilot). Five paths by persona (Worker · Builder · Student · Operator · Curious). Real drills, copy-paste prompts, honest limits, graduation criteria. ${TOTAL_LESSONS} lessons · ~${Math.round(TOTAL_MIN / 60)} hours total. No signup. No mailing list. No affiliate revenue. CC-BY 4.0.`,
+  description: `A free 27-lesson curriculum that moves any human from never-used-AI to operator-grade. Five levels (Novice → Learner → User → Operator → Pilot). Five paths by persona (Worker · Builder · Student · Operator · Curious). Real drills, copy-paste prompts, honest limits, graduation criteria. ${TOTAL_LESSONS} lessons · ~${Math.round(TOTAL_MIN / 60)} hours total. No signup. No mailing list. No affiliate revenue. CC-BY 4.0.`,
   keywords: [
     "AI curriculum",
     "AI learning path",
@@ -88,7 +89,7 @@ const courseJsonLd = {
   "@context": "https://schema.org",
   "@type": "Course",
   name: "Learn AI — the AtomEons curriculum",
-  description: `A 18-lesson curriculum moving any human from never-used-AI to operator-grade. Five levels (Novice → Pilot). Five persona-fit paths. Free, CC-BY 4.0, no signup.`,
+  description: `A 27-lesson curriculum moving any human from never-used-AI to operator-grade. Five levels (Novice → Pilot). Five persona-fit paths. Free, CC-BY 4.0, no signup.`,
   provider: {
     "@type": "Organization",
     name: "AtomEons Systems Laboratory",
@@ -139,7 +140,7 @@ const courseJsonLd = {
 const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "AtomEons Learn — 18 lesson curriculum",
+  name: "AtomEons Learn — 27 lesson curriculum",
   itemListOrder: "https://schema.org/ItemListOrderAscending",
   numberOfItems: LESSONS.length,
   itemListElement: LESSONS.map((l, i) => ({
@@ -245,11 +246,22 @@ export default function LearnPage() {
               full lesson library →
             </Link>
             <Link
+              href="/learn/where-am-i"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A] transition-all hover:border-[#FFB87A] hover:bg-[#FFB87A]/20"
+            >
+              not sure? · take the 2-min diagnostic →
+            </Link>
+            <Link
               href="/start"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A2225] bg-[#0A0F11] px-5 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7] transition-all hover:text-[#22F0D5]"
             >
               or the 11-min appetizer · /start
             </Link>
+          </div>
+
+          {/* PROGRESS BAR — localStorage-backed, no signup */}
+          <div className="mt-12">
+            <LearnProgress totalLessons={TOTAL_LESSONS} variant="spine" />
           </div>
         </div>
       </section>
@@ -269,7 +281,7 @@ export default function LearnPage() {
                 <li className="flex gap-3">
                   <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-[#22F0D5]" />
                   <span>
-                    A curated 18-lesson path. Real drills. Real prompts you
+                    A curated 27-lesson path. Real drills. Real prompts you
                     can copy-paste right now. Honest limits at every level.
                   </span>
                 </li>
@@ -312,7 +324,7 @@ export default function LearnPage() {
                 <li className="flex gap-3">
                   <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-[#FFB87A]" />
                   <span>
-                    Not a 100-lesson series padded for engagement. Eighteen
+                    Not a 100-lesson series padded for engagement. Twenty-seven
                     lessons that actually do the work.
                   </span>
                 </li>
@@ -573,14 +585,14 @@ export default function LearnPage() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <a
-              href="sms:?&body=18-lesson%20AI%20curriculum%20%E2%80%94%20free%2C%20no%20signup%2C%20no%20mailing%20list%2C%20no%20cartel.%20The%20path%20from%20never-used-AI%20to%20operating%20it%20daily.%20https%3A%2F%2Fatomeons.com%2Flearn"
+              href="sms:?&body=27-lesson%20AI%20curriculum%20%E2%80%94%20free%2C%20no%20signup%2C%20no%20mailing%20list%2C%20no%20cartel.%20The%20path%20from%20never-used-AI%20to%20operating%20it%20daily.%20https%3A%2F%2Fatomeons.com%2Flearn"
               className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
               aria-label="Send via text message"
             >
               text it →
             </a>
             <a
-              href="https://twitter.com/intent/tweet?text=A%20free%2018-lesson%20AI%20curriculum%20%E2%80%94%20no%20signup%2C%20no%20mailing%20list%2C%20no%20cartel.%20Five%20levels%20(novice%20%E2%86%92%20operator).%20Real%20drills.%20Honest%20limits.%20CC-BY%204.0.%20%40AtomMccree%20built%20it.&url=https%3A%2F%2Fatomeons.com%2Flearn"
+              href="https://twitter.com/intent/tweet?text=A%20free%2027-lesson%20AI%20curriculum%20%E2%80%94%20no%20signup%2C%20no%20mailing%20list%2C%20no%20cartel.%20Five%20levels%20(novice%20%E2%86%92%20operator).%20Real%20drills.%20Honest%20limits.%20CC-BY%204.0.%20%40AtomMccree%20built%20it.&url=https%3A%2F%2Fatomeons.com%2Flearn"
               target="_blank"
               rel="noopener"
               className="inline-flex items-center gap-2 rounded-full border border-[#1A2225] bg-[#0A0F11] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#C8CCCE] transition-all hover:border-[#22F0D5]/40 hover:text-[#22F0D5]"
@@ -589,7 +601,7 @@ export default function LearnPage() {
               tweet it →
             </a>
             <a
-              href="mailto:?subject=A%2018-lesson%20AI%20curriculum%2C%20free%2C%20no%20signup&body=I%20found%20this%20and%20thought%20of%20you.%20Eighteen%20lessons%20across%20five%20levels.%20Real%20drills%20with%20copy-paste%20prompts.%20Honest%20limits.%20No%20signup.%20No%20mailing%20list.%20No%20affiliate%20revenue.%20CC-BY%204.0.%0A%0Ahttps%3A%2F%2Fatomeons.com%2Flearn"
+              href="mailto:?subject=A%2027-lesson%20AI%20curriculum%2C%20free%2C%20no%20signup&body=I%20found%20this%20and%20thought%20of%20you.%20Twenty-seven%20lessons%20across%20five%20levels.%20Real%20drills%20with%20copy-paste%20prompts.%20Honest%20limits.%20No%20signup.%20No%20mailing%20list.%20No%20affiliate%20revenue.%20CC-BY%204.0.%0A%0Ahttps%3A%2F%2Fatomeons.com%2Flearn"
               className="inline-flex items-center gap-2 rounded-full border border-[#1A2225] bg-[#0A0F11] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#C8CCCE] transition-all hover:border-[#22F0D5]/40 hover:text-[#22F0D5]"
               aria-label="Send via email"
             >

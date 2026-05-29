@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { LESSONS, getLesson, lessonsByLevel } from "../../_data/lessons";
 import { getLevel } from "../../_data/levels";
 import { LearnCopyPrompt } from "../../LearnCopyPrompt";
+import { MarkLessonComplete } from "./MarkLessonComplete";
 
 /**
  * /learn/lesson/[slug] — individual lesson page.
@@ -239,6 +240,74 @@ export default async function LessonPage({
         </div>
       </section>
 
+      {/* WORKED EXAMPLE — only renders if lesson has one */}
+      {lesson.workedExample ? (
+        <section className="border-b border-[#1A2225]">
+          <div className="mx-auto w-full max-w-3xl px-6 py-16 md:py-20">
+            <p
+              className="font-mono text-[10px] uppercase tracking-[0.32em]"
+              style={{ color: level.accent }}
+            >
+              ::worked example · what running this drill actually looks like
+            </p>
+            <h2 className="mt-4 text-balance text-2xl font-medium leading-[1.15] tracking-tight md:text-3xl">
+              Before you try it, see one real run.
+            </h2>
+
+            <div className="mt-8 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 md:p-6">
+              <p
+                className="font-mono text-[10px] uppercase tracking-[0.28em]"
+                style={{ color: level.accent }}
+              >
+                ::what a real human filled in
+              </p>
+              <pre className="mt-3 whitespace-pre-wrap break-words font-mono text-[12px] leading-[1.7] text-[#C8CCCE] md:text-[13px]">
+                {lesson.workedExample.example_input}
+              </pre>
+            </div>
+
+            <div
+              className="mt-5 rounded-2xl border p-5 md:p-6"
+              style={{
+                borderColor: level.accent + "55",
+                background: level.accent + "0A",
+              }}
+            >
+              <p
+                className="font-mono text-[10px] uppercase tracking-[0.28em]"
+                style={{ color: level.accent }}
+              >
+                ::what the AI returned
+              </p>
+              <pre className="mt-3 whitespace-pre-wrap break-words font-mono text-[12px] leading-[1.7] text-[#F2F4F5] md:text-[13px]">
+                {lesson.workedExample.example_output}
+              </pre>
+            </div>
+
+            <div className="mt-8">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">
+                ::what to notice
+              </p>
+              <ul className="mt-4 space-y-3">
+                {lesson.workedExample.what_to_notice.map((n, i) => (
+                  <li
+                    key={i}
+                    className="flex gap-3 rounded-lg border border-[#FFB87A]/30 bg-[#FFB87A]/05 p-4"
+                  >
+                    <span className="mt-0.5 shrink-0 font-mono text-xs font-bold text-[#FFB87A]" aria-hidden>
+                      ◆
+                    </span>
+                    <span className="text-sm leading-[1.65] text-[#C8CCCE] md:text-base">
+                      {n}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       {/* OUTCOME */}
       <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
         <div className="mx-auto w-full max-w-3xl px-6 py-16 md:py-20">
@@ -285,6 +354,13 @@ export default async function LessonPage({
               {lesson.trap}
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* MARK COMPLETE — localStorage progress tracker */}
+      <section className="border-b border-[#1A2225]">
+        <div className="mx-auto w-full max-w-3xl px-6 py-12">
+          <MarkLessonComplete slug={lesson.slug} accent={level.accent} />
         </div>
       </section>
 

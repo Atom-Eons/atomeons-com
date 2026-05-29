@@ -15,7 +15,7 @@ const PRIMARY: { href: string; label: string }[] = [
 ];
 
 const LEARN = [
-  { href: "/learn", label: "/learn · curriculum", hint: "18 lessons · 5 levels · 5 paths · ~5h" },
+  { href: "/learn", label: "/learn · curriculum", hint: "27 lessons · L0 gateway · diagnostic · ~8h" },
   { href: "/start", label: "/start · 11-min on-ramp", hint: "paced single-page · for first-timers" },
   { href: "/ai", label: "AI Guide · reference", hint: "44M reference · 51 FAQs · 28 tools · 20 paths" },
   { href: "/faq", label: "FAQ", hint: "AI 101 + ORANGEBOX · FAQPage schema" },
