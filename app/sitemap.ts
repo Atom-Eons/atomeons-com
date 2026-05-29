@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/learn`, lastModified: now, changeFrequency: "weekly", priority: 0.99 },
     { url: `${BASE}/learn/where-am-i`, lastModified: now, changeFrequency: "monthly", priority: 0.92 },
     { url: `${BASE}/learn/library`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/prompt-kit`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },
     ...pathEntries,
     ...lessonEntries,
     { url: `${BASE}/ai`, lastModified: now, changeFrequency: "weekly", priority: 0.97 },

@@ -42,6 +42,58 @@ export default function StartPage() {
     <main className="bg-[#0B1014] text-[#F2F4F5]">
       <AuroraHero />
 
+      {/* ─── TLDR · the whole page in three lines ─────────────────── */}
+      <section className="border-t border-[#1A2225] bg-[#22F0D5]/05">
+        <div className="mx-auto w-full max-w-3xl px-6 py-8 md:py-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::TL;DR · the whole page in three lines
+          </p>
+          <ul className="mt-4 space-y-3 text-base leading-[1.55] text-[#F2F4F5] md:text-lg">
+            <li className="flex gap-3">
+              <span className="mt-1 shrink-0 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#22F0D5]">
+                WHO
+              </span>
+              <span>
+                For adults who&apos;ve used ChatGPT a few times and want to
+                actually start using AI without feeling behind or stupid.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1 shrink-0 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#22F0D5]">
+                WHAT
+              </span>
+              <span>
+                Eleven minutes covering six real use cases with copy-paste
+                prompts, six honest limits, and a 20-term glossary.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1 shrink-0 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FFB87A]">
+                START
+              </span>
+              <span>
+                Pick one tool tonight, use it daily for 30 days, then come
+                back. Tonight&apos;s homework is at the bottom of the page.
+              </span>
+            </li>
+          </ul>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href="#tonight"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#22F0D5] px-6 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-[#0B1014] shadow-[0_0_30px_rgba(34,240,213,0.45)] transition-all hover:bg-[#7DDBC8]"
+            >
+              jump to tonight&apos;s homework ↓
+            </a>
+            <a
+              href="#this-week"
+              className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7] hover:text-[#22F0D5]"
+            >
+              or browse the six use cases first →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ─── §1 · WHAT IS AI ──────────────────────────────────────── */}
       <section id="what-is-it" className="border-t border-[#1A2225] py-20 md:py-28">
         <div className="mx-auto w-full max-w-3xl px-6">

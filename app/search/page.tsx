@@ -65,6 +65,14 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         badge: "7 questions · ~2 min",
       },
       {
+        href: "/prompt-kit",
+        title: "/prompt-kit — every drill prompt in one copy-paste vault",
+        description:
+          "All 27 prompts from the /learn curriculum on one page. One-click copy on each. Grouped by level. Real prompts that work in free Claude / ChatGPT / Gemini today. CC-BY 4.0. Bookmark and return whenever you need a prompt.",
+        keywords: ["prompts", "prompt library", "AI prompts", "ChatGPT prompts", "Claude prompts", "Gemini prompts", "copy paste", "prompt vault", "prompt kit"],
+        badge: "27 prompts · cc-by 4.0",
+      },
+      {
         href: "/ai",
         title: "/ai — the comprehensive AI gateway",
         description:

@@ -63,6 +63,25 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "site-perfection-pass-2",
+    kind: "site",
+    title:
+      "Site perfection pass 2 — /prompt-kit NEW route · letter-page ToC + reading-time + prev/next · /learn ContinueReading widget · /start TLDR",
+    surfaces: [
+      "app/prompt-kit/page.tsx (NEW · all 27 drill prompts in one vault)",
+      "app/founders-view/[slug]/page.tsx (+ slugify, extractHeadings, readingMinutes, loadNeighbors, h2 ids)",
+      "app/founders-view/[slug]/LetterTOC.tsx (NEW · auto-derived from h2 markers)",
+      "app/founders-view/[slug]/LetterPrevNext.tsx (NEW · neighbor letter nav)",
+      "app/learn/ContinueReading.tsx (NEW · localStorage-aware resume card)",
+      "app/learn/page.tsx (+ ContinueReading mount)",
+      "app/start/page.tsx (+ TL;DR card · WHO/WHAT/START)",
+      "app/sitemap.ts · app/_components/Footer.tsx · app/search/page.tsx · public/llms.txt (all wired to /prompt-kit)",
+    ],
+    body:
+      "13-agent workflow + direct builds. NEW /prompt-kit route surfaces all 27 drill prompts from the /learn curriculum on one page, grouped by level, with one-click copy on each. Server component, no client filter (yet). Linked from sitemap (priority 0.93), Footer Learn column, /search USE AI section, llms.txt canonical surfaces. Letter pages (/founders-view/[slug]) got three additive upgrades: (1) reading-time chip computed from word_count at 200 wpm, displayed alongside the word count in the chip strip; (2) LetterTOC auto-derived from h2 markers in body_md, only renders if letter has 3+ h2 sections (short letters skip), each item anchors to a scroll-mt-20 h2 id slugified from the heading text — duplicate-handling via -2/-3 suffix; (3) LetterPrevNext queries Supabase for the immediately-previous and immediately-next published letters by published_at, renders as a two-column nav at the bottom (failure-soft, hides the side if at archive edge). /learn spine gets ContinueReading client component that reads localStorage progress, finds lowest-numbered incomplete lesson, surfaces it as a 'pick up here' card with progress percentage. Three render states: fresh-user (renders nothing — diagnostic CTA handles entry), resume (lowest undone lesson card), complete (all 27 done — celebration card linking to /orangebox + /founders-view). /start page gets the same TL;DR pattern as /learn, /orangebox, /manifesto (WHO/WHAT/START, jump-to-homework primary CTA). Workflow caught 2 of 3 TLDR specs needing more work (/ai count verification + visual primitive specifics; /research/about count verification) — deferred to a future commit. Verifier worked: didn't ship the broken /ai TLDR. Local `next build` PASS before push.",
+  },
+  {
+    date: "2026-05-29",
     tag: "letter-cron-provider-swap",
     kind: "ops",
     title:

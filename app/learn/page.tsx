@@ -6,6 +6,7 @@ import { LESSONS, totalCurriculumMinutes } from "./_data/lessons";
 import { CopyLearnLink } from "./CopyLearnLink";
 import { LearnProgress } from "./LearnProgress";
 import { LearnSpineTLDR } from "./LearnSpineTLDR";
+import { ContinueReading } from "./ContinueReading";
 
 /**
  * /learn — the AI literacy curriculum spine.
@@ -266,6 +267,12 @@ export default function LearnPage() {
           </div>
         </div>
       </section>
+
+      {/* CONTINUE READING — only renders if user has marked any lesson
+            complete. Surfaces the next undone lesson with a Resume CTA.
+            For fresh users (no progress), renders nothing and the TLDR
+            below carries the entry-point action instead. */}
+      <ContinueReading />
 
       {/* TLDR — three-line compression with primary diagnostic CTA */}
       <LearnSpineTLDR

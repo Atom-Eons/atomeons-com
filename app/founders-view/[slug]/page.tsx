@@ -3,8 +3,57 @@ import { notFound } from "next/navigation";
 import { AeMark } from "../../_components/AeMark";
 import { ShareLetter } from "../../_components/ShareLetter";
 import { publicSupabase, type FoundersViewPost } from "@/lib/supabase";
+import { LetterTOC } from "./LetterTOC";
+import { LetterPrevNext } from "./LetterPrevNext";
 
 export const revalidate = 300;
+
+/**
+ * slugify a heading into an anchor-safe id. Same function used by
+ * renderMarkdown for h2 ids and by LetterTOC for href targets.
+ */
+function slugifyHeading(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .slice(0, 80);
+}
+
+/**
+ * Extract h2 headings from a markdown body. Used to build the TOC.
+ * Returns [] for short letters with no h2 markers.
+ */
+function extractHeadings(md: string): { text: string; slug: string }[] {
+  const out: { text: string; slug: string }[] = [];
+  const seen = new Set<string>();
+  for (const raw of md.split(/\r?\n/)) {
+    const m = raw.trim().match(/^##\s+(.+)$/);
+    if (!m) continue;
+    const text = m[1].trim().replace(/\*\*/g, "").replace(/_/g, "");
+    let slug = slugifyHeading(text);
+    // dedupe with -1 / -2 / etc.
+    let i = 1;
+    let candidate = slug;
+    while (seen.has(candidate)) {
+      candidate = `${slug}-${++i}`;
+    }
+    slug = candidate;
+    seen.add(slug);
+    out.push({ text, slug });
+  }
+  return out;
+}
+
+/**
+ * Compute reading time in minutes from word_count. 200 wpm is the
+ * standard adult-prose rate. Round to nearest minute, minimum 1.
+ */
+function readingMinutes(wordCount: number | null | undefined): number {
+  if (!wordCount || wordCount < 1) return 1;
+  return Math.max(1, Math.round(wordCount / 200));
+}
 
 async function loadPost(slug: string): Promise<FoundersViewPost | null> {
   try {
@@ -19,6 +68,44 @@ async function loadPost(slug: string): Promise<FoundersViewPost | null> {
     return data as FoundersViewPost;
   } catch {
     return null;
+  }
+}
+
+/**
+ * Find the immediately-previous and immediately-next published letters
+ * by published_at timestamp. Used by LetterPrevNext at page bottom.
+ * Failure-soft: returns nulls on any error.
+ */
+async function loadNeighbors(post: FoundersViewPost): Promise<{
+  prev: { slug: string; title: string; published_at: string } | null;
+  next: { slug: string; title: string; published_at: string } | null;
+}> {
+  try {
+    const sb = publicSupabase();
+    const [prevRes, nextRes] = await Promise.all([
+      sb
+        .from("founders_view_posts")
+        .select("slug, title, published_at")
+        .eq("status", "published")
+        .lt("published_at", post.published_at)
+        .order("published_at", { ascending: false })
+        .limit(1)
+        .maybeSingle(),
+      sb
+        .from("founders_view_posts")
+        .select("slug, title, published_at")
+        .eq("status", "published")
+        .gt("published_at", post.published_at)
+        .order("published_at", { ascending: true })
+        .limit(1)
+        .maybeSingle(),
+    ]);
+    return {
+      prev: (prevRes.data as { slug: string; title: string; published_at: string } | null) ?? null,
+      next: (nextRes.data as { slug: string; title: string; published_at: string } | null) ?? null,
+    };
+  } catch {
+    return { prev: null, next: null };
   }
 }
 
@@ -180,6 +267,21 @@ function renderMarkdown(md: string) {
       );
   }
 
+  // Track h2 slugs we've already emitted so duplicates get a -2 / -3
+  // suffix matching the LetterTOC dedupe logic in extractHeadings().
+  const emittedH2Slugs = new Set<string>();
+  function h2Id(text: string): string {
+    const stripped = text.replace(/\*\*/g, "").replace(/_/g, "");
+    let slug = slugifyHeading(stripped);
+    let n = 1;
+    let candidate = slug;
+    while (emittedH2Slugs.has(candidate)) {
+      candidate = `${slug}-${++n}`;
+    }
+    emittedH2Slugs.add(candidate);
+    return candidate;
+  }
+
   for (const raw of lines) {
     const line = raw.trimEnd();
     if (/^##\s+/.test(line)) {
@@ -189,7 +291,8 @@ function renderMarkdown(md: string) {
       out.push(
         <h2
           key={`h2-${out.length}`}
-          className="mt-12 text-2xl font-medium tracking-tight text-[#22F0D5] md:text-3xl"
+          id={h2Id(heading)}
+          className="mt-12 scroll-mt-20 text-2xl font-medium tracking-tight text-[#22F0D5] md:text-3xl"
           dangerouslySetInnerHTML={{ __html: inlineFormat(heading) }}
         />,
       );
@@ -225,6 +328,9 @@ export default async function FoundersViewPostPage({
     day: "numeric",
     year: "numeric",
   });
+  const minutes = readingMinutes(post.word_count);
+  const headings = extractHeadings(post.body_md);
+  const { prev, next } = await loadNeighbors(post);
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
@@ -263,10 +369,13 @@ export default async function FoundersViewPostPage({
           ) : null}
           {post.word_count ? (
             <span className="rounded border border-[#1A2225] bg-black px-2 py-0.5 text-[#6B7779]">
-              {post.word_count} words
+              {post.word_count} words · ~{minutes} min read
             </span>
           ) : null}
         </div>
+
+        {/* TOC — only renders if 3+ h2 sections (short letters skip) */}
+        <LetterTOC headings={headings} />
 
         <hr className="my-12 border-[#1A2225]" />
 
@@ -291,6 +400,9 @@ export default async function FoundersViewPostPage({
             />
           </div>
         </div>
+
+        {/* PREV / NEXT letter navigation — failure-soft (renders nothing if both null) */}
+        <LetterPrevNext prev={prev} next={next} />
 
         <p className="mt-10 font-mono text-xs uppercase tracking-[0.22em] text-[#6B7779]">
           sealed and slipped under your door at 8pm ET
