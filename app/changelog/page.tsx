@@ -63,6 +63,18 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "letter-cron-provider-swap",
+    kind: "ops",
+    title:
+      "Autonomous letter cron refactored — LETTER_PROVIDER env var swaps between Anthropic and OpenAI without code change",
+    surfaces: [
+      "app/api/cron/founders-view/route.ts (provider abstraction · callAnthropic / callOpenAI adapters · env-driven dispatch)",
+    ],
+    body:
+      "Operator request: ability to swap the autonomous letter writer to an OpenAI subscription if needed. Refactored /api/cron/founders-view (the 8pm ET nightly broadcast cron) to a provider abstraction. Both providers receive the same FOUNDERS_VIEW_VOICE system prompt and the same buildUserPrompt() user prompt; both are asked to return the same GeneratedPost JSON envelope (title · dek · theme · voice_tags · body_md). LETTER_PROVIDER env var defaults to 'anthropic' (current behavior preserved — claude-sonnet-4-5 via Anthropic Messages API). Setting LETTER_PROVIDER=openai flips to OpenAI Chat Completions API using OPENAI_API_KEY + OPENAI_FOUNDERS_VIEW_MODEL (default gpt-5), with response_format=json_object enforced for reliable JSON output (the user prompt already contains 'JSON' as required). To flip: Vercel dashboard → Environment Variables → set LETTER_PROVIDER=openai; the next cron tick reads the new value (Vercel reads env per-invocation). No code change. No re-deploy needed if the flip happens before the next tick. The model_used field in supabase now records 'anthropic:claude-sonnet-4-5' or 'openai:gpt-5' so every published letter carries its writer's provenance.",
+  },
+  {
+    date: "2026-05-29",
     tag: "site-wide-tldr-pass",
     kind: "site",
     title:
