@@ -63,6 +63,22 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "lesson-ux-redesign",
+    kind: "site",
+    title:
+      "/learn lesson pages redesigned — TLDR + collapsible concept + AI-launch chips + confetti complete + sticky nav · smarter, easier, more fun",
+    surfaces: [
+      "app/learn/lesson/[slug]/LessonTLDR.tsx (NEW)",
+      "app/learn/lesson/[slug]/OpenInAIChips.tsx (NEW)",
+      "app/learn/lesson/[slug]/StickyLessonNav.tsx (NEW)",
+      "app/learn/lesson/[slug]/MarkLessonComplete.tsx (+ confetti)",
+      "app/learn/lesson/[slug]/page.tsx (TLDR mount, collapsible concept, collapsible worked example, sticky nav mount, anchor IDs)",
+    ],
+    body:
+      "Operator feedback: 'smarter, more helpful, easier to use, less text, more fun.' Lesson pages were text-heavy — long concept paragraphs forced before drill, dense outcome lists, no quick-scan summary, no celebration on completion, no sticky navigation. Redesigned: (1) NEW LessonTLDR card immediately below hero — three lines, MOVE/DRILL/WIN, with a jump-to-drill primary button. Lets readers scan the whole lesson in 5 seconds. (2) Concept section collapsible — first paragraph always visible, remaining 2-4 paragraphs behind a brand-accent 'read full concept' expand. (3) NEW OpenInAIChips row inside drill — three branded buttons (Claude / ChatGPT / Gemini) open the chat AIs in new tabs so user goes 'click here, paste, send' instead of 'now find claude.ai.' (4) Worked example fully collapsed by default — a teaser card opens to reveal input/output/notice. (5) MarkLessonComplete fires CSS-only confetti animation on first false-to-true transition (8 colored squares radiating, 800ms, prefers-reduced-motion respected). (6) NEW StickyLessonNav at page bottom — prev/mark-complete/next sticky bar that floats above the LabTicker on every lesson, mobile-optimized (next button always one tap away). Anchor IDs (#concept, #drill) wired with scroll-margin so TLDR jump buttons land correctly. No content changed — all 27 lessons keep their text. The redesign is pure compression + interaction + reward. The drill is now the visual hero. The dense concept is behind a single click. The 'congrats you did it' moment exists.",
+  },
+  {
+    date: "2026-05-29",
     tag: "curriculum-perfection",
     kind: "site",
     title:

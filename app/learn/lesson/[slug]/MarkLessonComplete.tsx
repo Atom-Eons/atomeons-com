@@ -1,16 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /**
- * MarkLessonComplete — per-lesson "Done" toggle.
+ * MarkLessonComplete — per-lesson "Done" toggle with micro-celebration.
  *
- * Mounts at the bottom of each lesson page. Click toggles a flag in
- * localStorage under a single shared key, then dispatches a same-tab
- * event so the LearnProgress bar elsewhere on the page re-reads.
+ * On first transition false→true, fires a brief confetti animation
+ * (CSS-only — 8 colored squares radiating from the button, fading,
+ * 700ms). Pure aesthetic reward for the act of marking complete.
  *
- * Persists across visits in the same browser. No server. No account.
- * Clears with browser storage.
+ * localStorage-backed. Single shared key. Dispatches a same-tab event
+ * so LearnProgress re-reads without a refresh.
  */
 
 const STORAGE_KEY = "atomeons-learn-progress-v1";
@@ -45,9 +45,13 @@ export function MarkLessonComplete({
   accent?: string;
 }) {
   const [done, setDone] = useState<boolean | null>(null);
+  const [celebrate, setCelebrate] = useState(false);
+  const wasDoneRef = useRef<boolean | null>(null);
 
   useEffect(() => {
-    setDone(Boolean(readProgress()[slug]));
+    const cur = Boolean(readProgress()[slug]);
+    setDone(cur);
+    wasDoneRef.current = cur;
     function onUpdate() {
       setDone(Boolean(readProgress()[slug]));
     }
@@ -61,17 +65,21 @@ export function MarkLessonComplete({
 
   function toggle() {
     const cur = readProgress();
-    if (cur[slug]) {
+    const wasDone = Boolean(cur[slug]);
+    if (wasDone) {
       delete cur[slug];
     } else {
       cur[slug] = true;
     }
     writeProgress(cur);
-    setDone(Boolean(cur[slug]));
+    setDone(!wasDone);
+    // Only celebrate on false → true transition
+    if (!wasDone) {
+      setCelebrate(true);
+      window.setTimeout(() => setCelebrate(false), 800);
+    }
   }
 
-  // Pre-hydration placeholder — matches the rendered shape so no
-  // hydration flash.
   if (done === null) {
     return (
       <div
@@ -84,6 +92,18 @@ export function MarkLessonComplete({
       </div>
     );
   }
+
+  // 8 confetti particles — colored squares radiating from button center
+  const particleColors = [
+    accent,
+    "#FFB87A",
+    "#7DDBC8",
+    "#FF7A1A",
+    accent,
+    "#22F0D5",
+    "#FFB87A",
+    "#F2F4F5",
+  ];
 
   return (
     <div
@@ -107,20 +127,66 @@ export function MarkLessonComplete({
               : "Did you do the drill? Mark this lesson done."}
           </p>
         </div>
-        <button
-          type="button"
-          onClick={toggle}
-          className="inline-flex items-center gap-2 rounded-full border px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] transition-all"
-          style={{
-            borderColor: done ? accent : "#1A2225",
-            background: done ? accent + "22" : "#0E1418",
-            color: done ? accent : "#C8CCCE",
-          }}
-          aria-pressed={done}
-        >
-          {done ? "✓ marked complete" : "mark complete →"}
-        </button>
+        <div className="relative">
+          {/* CONFETTI — only renders briefly on celebrate */}
+          {celebrate &&
+            particleColors.map((color, i) => {
+              const angle = (i / particleColors.length) * 2 * Math.PI;
+              const distance = 60;
+              const dx = Math.cos(angle) * distance;
+              const dy = Math.sin(angle) * distance;
+              return (
+                <span
+                  key={i}
+                  aria-hidden
+                  className="pointer-events-none absolute left-1/2 top-1/2 size-2 rounded-sm"
+                  style={{
+                    background: color,
+                    transform: "translate(-50%, -50%)",
+                    animation: `confetti-pop 800ms cubic-bezier(0.12, 0.8, 0.32, 1) forwards`,
+                    ["--dx" as string]: `${dx}px`,
+                    ["--dy" as string]: `${dy}px`,
+                  }}
+                />
+              );
+            })}
+          <button
+            type="button"
+            onClick={toggle}
+            className="relative inline-flex items-center gap-2 rounded-full border px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] transition-all"
+            style={{
+              borderColor: done ? accent : "#1A2225",
+              background: done ? accent + "22" : "#0E1418",
+              color: done ? accent : "#C8CCCE",
+            }}
+            aria-pressed={done}
+          >
+            {done ? "✓ marked complete" : "mark complete →"}
+          </button>
+        </div>
       </div>
+
+      <style>{`
+        @keyframes confetti-pop {
+          0% {
+            transform: translate(-50%, -50%) scale(0.4);
+            opacity: 1;
+          }
+          70% {
+            opacity: 1;
+          }
+          100% {
+            transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1) rotate(180deg);
+            opacity: 0;
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .relative span[aria-hidden] {
+            animation: none !important;
+            opacity: 0 !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

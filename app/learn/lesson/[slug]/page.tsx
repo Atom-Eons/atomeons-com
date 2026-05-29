@@ -5,6 +5,9 @@ import { LESSONS, getLesson, lessonsByLevel } from "../../_data/lessons";
 import { getLevel } from "../../_data/levels";
 import { LearnCopyPrompt } from "../../LearnCopyPrompt";
 import { MarkLessonComplete } from "./MarkLessonComplete";
+import { LessonTLDR } from "./LessonTLDR";
+import { OpenInAIChips } from "./OpenInAIChips";
+import { StickyLessonNav } from "./StickyLessonNav";
 
 /**
  * /learn/lesson/[slug] — individual lesson page.
@@ -67,6 +70,9 @@ export default async function LessonPage({
     (l) => l.slug !== lesson.slug,
   );
   const nextLesson = lesson.next ? getLesson(lesson.next) : null;
+  // Find the previous lesson by looking for the lesson whose .next
+  // points to this lesson's slug. Used by StickyLessonNav.
+  const prevLesson = LESSONS.find((l) => l.next === lesson.slug) ?? null;
 
   const learningResourceJsonLd = {
     "@context": "https://schema.org",
@@ -173,25 +179,56 @@ export default async function LessonPage({
         </div>
       </section>
 
-      {/* CONCEPT */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
-        <div className="mx-auto w-full max-w-3xl px-6 py-16 md:py-20">
+      {/* TLDR — one-glance compression */}
+      <LessonTLDR lesson={lesson} level={level} />
+
+      {/* CONCEPT · collapsible — first paragraph visible, rest behind expand */}
+      <section
+        id="concept"
+        className="border-b border-[#1A2225] bg-[#0e2520]/30 scroll-mt-20"
+      >
+        <div className="mx-auto w-full max-w-3xl px-6 py-12 md:py-16">
           <p
             className="font-mono text-[10px] uppercase tracking-[0.32em]"
             style={{ color: level.accent }}
           >
             ::concept · what&apos;s actually happening
           </p>
-          <div className="mt-6 space-y-5 text-base leading-[1.75] text-[#C8CCCE] md:text-[17px]">
-            {lesson.concept.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
+          {/* First paragraph always visible */}
+          <p className="mt-6 text-base leading-[1.75] text-[#C8CCCE] md:text-[17px]">
+            {lesson.concept[0]}
+          </p>
+          {/* Rest behind expand if there's more */}
+          {lesson.concept.length > 1 ? (
+            <details className="group mt-6">
+              <summary
+                className="cursor-pointer list-none rounded-full border px-4 py-2 font-mono text-[10px] uppercase tracking-[0.28em] transition-all hover:bg-[#0E1418] inline-flex items-center gap-2 [&::-webkit-details-marker]:hidden"
+                style={{
+                  borderColor: level.accent + "55",
+                  color: level.accent,
+                  background: level.accent + "10",
+                }}
+              >
+                <span className="group-open:hidden">
+                  read full concept · {lesson.concept.length - 1} more paragraph
+                  {lesson.concept.length - 1 === 1 ? "" : "s"} →
+                </span>
+                <span className="hidden group-open:inline">
+                  collapse concept ↑
+                </span>
+              </summary>
+              <div className="mt-6 space-y-5 text-base leading-[1.75] text-[#C8CCCE] md:text-[17px]">
+                {lesson.concept.slice(1).map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </details>
+          ) : null}
         </div>
       </section>
 
-      {/* DRILL */}
-      <section className="border-b border-[#1A2225]">
+      {/* DRILL — the action surface · most-visited part of the lesson */}
+      <section id="drill" className="border-b border-[#1A2225] scroll-mt-20">
         <div className="mx-auto w-full max-w-3xl px-6 py-16 md:py-20">
           <p
             className="font-mono text-[10px] uppercase tracking-[0.32em]"
@@ -209,6 +246,7 @@ export default async function LessonPage({
               label={`L${lesson.number} drill`}
               accent={level.accent}
             />
+            <OpenInAIChips accent={level.accent} />
           </div>
 
           <div className="mt-8">
@@ -240,19 +278,40 @@ export default async function LessonPage({
         </div>
       </section>
 
-      {/* WORKED EXAMPLE — only renders if lesson has one */}
+      {/* WORKED EXAMPLE · collapsible — teaser visible, full content behind expand */}
       {lesson.workedExample ? (
         <section className="border-b border-[#1A2225]">
-          <div className="mx-auto w-full max-w-3xl px-6 py-16 md:py-20">
-            <p
-              className="font-mono text-[10px] uppercase tracking-[0.32em]"
-              style={{ color: level.accent }}
-            >
-              ::worked example · what running this drill actually looks like
-            </p>
-            <h2 className="mt-4 text-balance text-2xl font-medium leading-[1.15] tracking-tight md:text-3xl">
-              Before you try it, see one real run.
-            </h2>
+          <div className="mx-auto w-full max-w-3xl px-6 py-12 md:py-16">
+            <details className="group">
+              <summary
+                className="cursor-pointer list-none rounded-2xl border bg-[#0A0F11] p-5 md:p-6 transition-colors hover:border-[#22F0D5]/40 [&::-webkit-details-marker]:hidden"
+                style={{ borderColor: level.accent + "40" }}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <p
+                      className="font-mono text-[10px] uppercase tracking-[0.32em]"
+                      style={{ color: level.accent }}
+                    >
+                      ::worked example · what one real run looks like
+                    </p>
+                    <p className="mt-2 text-base font-medium text-[#F2F4F5] md:text-lg">
+                      See one real run before you try yours.
+                    </p>
+                  </div>
+                  <span
+                    className="shrink-0 rounded-full border px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] transition-transform group-open:rotate-180"
+                    style={{
+                      borderColor: level.accent + "55",
+                      color: level.accent,
+                      background: level.accent + "12",
+                    }}
+                    aria-hidden
+                  >
+                    ▼ open
+                  </span>
+                </div>
+              </summary>
 
             <div className="mt-8 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 md:p-6">
               <p
@@ -304,6 +363,7 @@ export default async function LessonPage({
                 ))}
               </ul>
             </div>
+            </details>
           </div>
         </section>
       ) : null}
@@ -490,6 +550,16 @@ export default async function LessonPage({
           </div>
         </div>
       </section>
+
+      {/* STICKY LESSON NAV — bottom-anchored, mobile-first */}
+      <StickyLessonNav
+        slug={lesson.slug}
+        accent={level.accent}
+        prevSlug={prevLesson?.slug ?? null}
+        prevTitle={prevLesson?.title ?? null}
+        nextSlug={nextLesson?.slug ?? null}
+        nextTitle={nextLesson?.title ?? null}
+      />
     </main>
   );
 }
