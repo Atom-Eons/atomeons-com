@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "Learn AI · the AtomEons curriculum · 12 lessons · 5 levels (Novice → Pilot) · 5 persona paths (Worker · Builder · Student · Operator · Curious) · free · no signup · CC-BY 4.0. Onboarding humanity to AI.";
+  "Learn AI · the AtomEons curriculum · 18 lessons · 5 levels (Novice → Pilot) · 5 persona paths (Worker · Builder · Student · Operator · Curious) · free · no signup · CC-BY 4.0. Onboarding humanity to AI.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -63,7 +63,7 @@ export default function OG() {
               color: "#FFB87A",
             }}
           >
-            ● 12 lessons · 5 levels · 5 paths
+            ● 18 lessons · 5 levels · 5 paths
           </p>
         </div>
 

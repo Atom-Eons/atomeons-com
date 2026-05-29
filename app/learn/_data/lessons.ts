@@ -21,7 +21,7 @@ import type { LevelId } from "./levels";
  *   - next · slug of the recommended next lesson (or null for tier
  *     transitions)
  *
- * The lesson set is curated, not exhaustive. Twelve lessons that
+ * The lesson set is curated, not exhaustive. Eighteen lessons that
  * actually move a human from Novice to the doorstep of Pilot. Each
  * lesson is a real thing you do, not a paragraph to read.
  *

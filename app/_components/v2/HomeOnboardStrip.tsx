@@ -52,7 +52,7 @@ export function HomeOnboardStrip() {
         </h2>
 
         <p className="mt-7 max-w-3xl text-lg leading-[1.55] text-[#C8CCCE] md:text-xl">
-          A free 12-lesson curriculum that moves any human from
+          A free 18-lesson curriculum that moves any human from
           never-used-AI to operator-grade. Five paths by persona. Five
           levels (Novice → Pilot). Real drills. Copy-paste prompts.
           Honest limits. No signup. No mailing list. No affiliate
@@ -104,7 +104,7 @@ export function HomeOnboardStrip() {
 
         {/* trust micro-row */}
         <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
-          12 lessons · ~3 hours total · cc-by 4.0 · no signup · no list · no cartel
+          18 lessons · ~5 hours total · cc-by 4.0 · no signup · no list · no cartel
         </p>
       </div>
     </section>

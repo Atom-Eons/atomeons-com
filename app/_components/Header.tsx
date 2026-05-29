@@ -72,7 +72,7 @@ export function Header() {
               {
                 href: "/learn",
                 label: "/learn · curriculum",
-                hint: "12 lessons · 5 levels · 5 paths · ~3h total",
+                hint: "18 lessons · 5 levels · 5 paths · ~5h total",
               },
               {
                 href: "/start",

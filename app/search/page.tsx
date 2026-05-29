@@ -54,7 +54,7 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         description:
           "Five levels (Novice → Pilot). Five persona paths (Worker · Builder · Student · Operator · Curious). Real drills, copy-paste prompts, honest limits, graduation criteria. ~3 hours total at honest pace.",
         keywords: ["learn", "curriculum", "lessons", "course", "path", "novice", "operator", "pilot", "first prompt", "AI literacy", "free course", "no signup"],
-        badge: "12 lessons · 5 levels",
+        badge: "18 lessons · 5 levels",
       },
       {
         href: "/ai",
