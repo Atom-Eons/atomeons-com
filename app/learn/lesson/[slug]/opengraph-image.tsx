@@ -2,7 +2,12 @@ import { ImageResponse } from "next/og";
 import { LESSONS, getLesson } from "../../_data/lessons";
 import { getLevel } from "../../_data/levels";
 
-export const runtime = "edge";
+// NOTE: Cannot use `runtime = "edge"` because we use generateStaticParams
+// to pre-render one OG card per lesson at build time. Next 16 forbids
+// the combination. Node runtime + static build is fine — the images
+// are emitted as files at build, served from the CDN, no per-request
+// compute. The edge runtime would only matter for dynamic-on-demand
+// generation, which we don't need here.
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

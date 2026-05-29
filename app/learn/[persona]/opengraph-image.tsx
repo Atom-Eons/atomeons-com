@@ -1,7 +1,10 @@
 import { ImageResponse } from "next/og";
 import { PATHS, getPath, type PathId } from "../_data/paths";
 
-export const runtime = "edge";
+// NOTE: Cannot use `runtime = "edge"` with generateStaticParams (Next 16
+// forbids the combination). Static build emits one OG card per path at
+// build time and serves them from the CDN — no per-request runtime
+// needed.
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
