@@ -5,6 +5,7 @@ import { PATHS } from "./_data/paths";
 import { LESSONS, totalCurriculumMinutes } from "./_data/lessons";
 import { CopyLearnLink } from "./CopyLearnLink";
 import { LearnProgress } from "./LearnProgress";
+import { LearnSpineTLDR } from "./LearnSpineTLDR";
 
 /**
  * /learn — the AI literacy curriculum spine.
@@ -266,13 +267,35 @@ export default function LearnPage() {
         </div>
       </section>
 
-      {/* WHY / WHAT / NOT */}
+      {/* TLDR — three-line compression with primary diagnostic CTA */}
+      <LearnSpineTLDR
+        totalLessons={TOTAL_LESSONS}
+        totalHours={Math.round(TOTAL_MIN / 60)}
+      />
+
+      {/* WHY / WHAT / NOT · collapsible — reassurance, not action */}
       <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
-        <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::what this is · what it isn&apos;t
-          </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mx-auto w-full max-w-5xl px-6 py-10 md:py-12">
+          <details className="group">
+            <summary className="cursor-pointer list-none rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 md:p-6 transition-colors hover:border-[#22F0D5]/40 [&::-webkit-details-marker]:hidden">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+                    ::what this is · what it isn&apos;t
+                  </p>
+                  <p className="mt-2 text-base font-medium text-[#F2F4F5] md:text-lg">
+                    Eight things this curriculum is and isn&apos;t.
+                  </p>
+                </div>
+                <span
+                  className="shrink-0 rounded-full border border-[#22F0D5]/55 bg-[#22F0D5]/12 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-transform group-open:rotate-180"
+                  aria-hidden
+                >
+                  ▼ open
+                </span>
+              </div>
+            </summary>
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-[#22F0D5]/40 bg-[#0A0F11] p-6 md:p-7">
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
                 ::what this is
@@ -344,7 +367,8 @@ export default function LearnPage() {
                 </li>
               </ul>
             </div>
-          </div>
+            </div>
+          </details>
         </div>
       </section>
 

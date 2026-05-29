@@ -63,6 +63,22 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "site-wide-tldr-pass",
+    kind: "site",
+    title:
+      "Site-wide UX pass — TLDR cards on /learn spine + /orangebox + /manifesto · 404 page upgraded with /learn lead",
+    surfaces: [
+      "app/learn/LearnSpineTLDR.tsx (NEW)",
+      "app/learn/page.tsx (TLDR + collapsible 'what this is')",
+      "app/orangebox/page.tsx (+ product TLDR)",
+      "app/manifesto/page.tsx (14-clause scan grid + #clause-NN anchors)",
+      "app/not-found.tsx (/learn promoted to lead card, /search + /manifesto added)",
+    ],
+    body:
+      "Operator: 'IMPROVE SITE FULLY.' Applied the lesson-page UX lessons (compression + scan-first + collapsible deep-read) across the highest-traffic non-lesson surfaces. /learn spine: NEW LearnSpineTLDR card just below hero — three lines (WHO/WHAT/START) with the diagnostic as primary CTA, the L0 gateway as secondary; the 'what this is / what it isn't' double-card collapsed into a single expand so it doesn't push the path picker below the fold. /orangebox: NEW product TLDR card above the two-surfaces section — three lines (WHAT/PRICE/WHO) honest about who the cockpit is and isn't for (not for first-time AI users — routes them to /learn first). /manifesto: NEW 14-clause scan grid right after the hero, all clause titles visible in 10 seconds, each links via #clause-NN anchor to the deep-read further down (scroll-margin set so anchor lands cleanly). /404: rebuilt with /learn as the lead card (spans both columns), added /manifesto + /search cards, dropped the placeholder /b00kmakor (route exists but is coming-soon), added inline /search reference in the apology copy. Pattern: scan-first TLDR or grid, deep content one click away. No content lost. Cognitive load on first scroll dropped sharply across four surfaces in one ship.",
+  },
+  {
+    date: "2026-05-29",
     tag: "lesson-ux-redesign",
     kind: "site",
     title:

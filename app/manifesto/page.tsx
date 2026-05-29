@@ -254,6 +254,39 @@ export default function ManifestoPage() {
         </div>
       </section>
 
+      {/* CLAUSE INDEX · scan all 14 in 10 seconds, click to deep-read */}
+      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-12 md:py-16">
+        <div className="mx-auto w-full max-w-4xl px-6">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::all 14 clauses at a glance · click any to deep-read
+          </p>
+          <ol className="mt-6 grid gap-2 sm:grid-cols-2 md:grid-cols-2">
+            {CLAUSES.map((c) => {
+              const accent = KIND_COLOR[c.kind];
+              return (
+                <li key={c.num}>
+                  <a
+                    href={`#clause-${c.num}`}
+                    className="group flex items-start gap-3 rounded-xl border border-[#1A2225] bg-[#0A0F11] p-3 transition-colors hover:bg-[#0E1418]"
+                    style={{ borderLeftWidth: "3px", borderLeftColor: accent }}
+                  >
+                    <span
+                      className="shrink-0 font-mono text-xs font-bold tabular-nums"
+                      style={{ color: accent }}
+                    >
+                      {c.num}
+                    </span>
+                    <span className="text-sm leading-[1.4] text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-[15px]">
+                      {c.title}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </section>
+
       {/* CLAUSES */}
       <section className="py-20 md:py-28">
         <div className="mx-auto w-full max-w-4xl px-6">
@@ -263,7 +296,8 @@ export default function ManifestoPage() {
               return (
                 <li
                   key={c.num}
-                  className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-9"
+                  id={`clause-${c.num}`}
+                  className="scroll-mt-20 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-9"
                 >
                   <div className="flex flex-wrap items-baseline gap-3">
                     <span className="font-mono text-3xl font-medium text-[#F2F4F5] md:text-4xl">

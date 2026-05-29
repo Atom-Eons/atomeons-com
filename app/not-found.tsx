@@ -33,23 +33,47 @@ export default function NotFound() {
       </p>
 
       <p className="mt-6 max-w-xl text-pretty text-[#a7b8ad]">
-        If a real link broke getting you here, email{" "}
+        Two options: pick a real route below, or use{" "}
+        <Link
+          href="/search"
+          className="text-[#22F0D5] underline-offset-4 hover:underline"
+        >
+          /search
+        </Link>{" "}
+        to find what you were looking for. If a real link broke getting
+        you here, email{" "}
         <a
           href="mailto:a.mccree@gmail.com?subject=404%20on%20atomeons.com"
           className="text-[#22F0D5] underline-offset-4 hover:underline"
         >
           a.mccree@gmail.com
-        </a>{" "}
-        with the URL — we file it within an hour.
+        </a>
+        {" "}with the URL — we file it within an hour.
       </p>
 
-      {/* Discovery rail — every major section, one card each */}
+      {/* Discovery rail — every major section, one card each.
+            /learn is the lead since it's the flagship and most likely
+            destination for a confused first-time visitor. */}
       <div className="mt-12">
         <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           <AeMark size={18} glow />
           ::routes that exist · pick one
         </p>
         <div className="grid gap-3 md:grid-cols-2">
+          <Link
+            href="/learn"
+            className="group rounded-xl border border-[#22F0D5]/40 bg-gradient-to-br from-[#0A1A1C] to-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/80 md:col-span-2"
+          >
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+              ::onboard to AI · the curriculum · 27 lessons · free
+            </p>
+            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-lg">
+              /learn → the humanity-scale on-ramp
+            </p>
+            <p className="mt-1 text-xs text-[#9BA5A7]">
+              Start at L0 (the gateway) · or take the 2-minute level diagnostic at /learn/where-am-i
+            </p>
+          </Link>
           <Link
             href="/orangebox"
             className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#FF7A1A]/50"
@@ -77,10 +101,32 @@ export default function NotFound() {
             className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
           >
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::Æ research · 12 manuscripts
+              ::Æ research · 12 manuscripts · CC-BY 4.0
             </p>
             <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
               Research Papers →
+            </p>
+          </Link>
+          <Link
+            href="/manifesto"
+            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#FFB87A]/50"
+          >
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+              ::doctrine · 14 clauses · falsifiable
+            </p>
+            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#FFB87A]">
+              Manifesto →
+            </p>
+          </Link>
+          <Link
+            href="/search"
+            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
+          >
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+              ::lab directory · 18 canonical surfaces
+            </p>
+            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
+              /search →
             </p>
           </Link>
           <Link
@@ -88,32 +134,10 @@ export default function NotFound() {
             className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
           >
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::lab now · live counters
+              ::lab now · this week
             </p>
             <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
               /now → what we&apos;re doing
-            </p>
-          </Link>
-          <Link
-            href="/skilski"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::skill marketplace · MCP
-            </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-              Æ skil.ski →
-            </p>
-          </Link>
-          <Link
-            href="/b00kmakor"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::AI publishing house · coming
-            </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-              Æ B00KMakor →
             </p>
           </Link>
         </div>

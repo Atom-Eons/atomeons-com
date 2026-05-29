@@ -227,6 +227,55 @@ export default function OrangeBox() {
         </div>
       </section>
 
+      {/* TLDR — three-line product compression */}
+      <section className="border-b border-[#1A2225] bg-[#FF7A1A]/05">
+        <div className="mx-auto w-full max-w-4xl px-6 py-8 md:py-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+            ::TL;DR · ORANGEBOX in three lines
+          </p>
+          <ul className="mt-4 space-y-3 text-base leading-[1.55] text-[#F2F4F5] md:text-lg">
+            <li className="flex gap-3">
+              <span className="mt-1 shrink-0 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FF7A1A]">
+                WHAT
+              </span>
+              <span>
+                A local-first AI cockpit for one operator. Two surfaces — AE
+                See-Suite (command) + AE Operations (engine). Routes Claude
+                / GPT / Gemini / Groq LPUs / Ollama / OpenRouter behind one
+                interface.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1 shrink-0 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FF7A1A]">
+                PRICE
+              </span>
+              <span>
+                $49 once, forever. License §4A legally bans switching to
+                subscription. Two 30-day refund paths (Material Failure
+                Guarantee + Workflow-Fit Refund). Source included.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1 shrink-0 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#22F0D5]">
+                WHO
+              </span>
+              <span>
+                Operators who outgrew chat — multiple projects, scattered
+                conversations, want receipts on disk and mission-graph
+                continuity. Not for first-time AI users —{" "}
+                <Link
+                  href="/learn"
+                  className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
+                >
+                  start at /learn
+                </Link>{" "}
+                first.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* TWO SURFACES */}
       <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-24 md:py-32">
         <div className="mx-auto w-full max-w-6xl px-6">
