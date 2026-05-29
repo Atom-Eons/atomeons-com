@@ -63,6 +63,21 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "learn-expansion-sweep",
+    kind: "site",
+    title:
+      "/learn curriculum doubled · 6 new lessons (L13-L18) · 4 letter drafts queued · 23-agent adversarial-verified expansion",
+    surfaces: [
+      "app/learn/_data/lessons.ts (12 lessons → 18)",
+      "app/learn/_data/paths.ts (all 5 paths expanded)",
+      ".draft-letters/ (NEW · 4 letters held for operator review)",
+      ".gitignore (+drafts patterns)",
+    ],
+    body:
+      "Dynamic-workflow content expansion: 23 agents pipelined across 5 phases (Generate-Lessons + Generate-Letters + Verify-Lessons + Verify-Letters + Synthesize). 6 new lessons cleared every gate (concept-mental-model · drill-actually-works · trap-is-real · voice-is-clean): L13 image-in-chat (paste the screenshot), L14 voice-mode-when-speaking-beats-typing, L15 mcp-servers-plug-socket, L16 agent-mode-when-ai-takes-action, L17 refusal-posture-mapping (the freedom-of-information curriculum extension from Letter 33), L18 receipts-and-paper-trail. Total curriculum: 12 → 18 lessons. Worker path: 9 → 12 lessons (6 → 7 weeks). Builder path: 10 → 14 lessons (6 → 8 weeks). Student path: 8 → 10 lessons (6 → 7 weeks). Operator path: 12 → 18 lessons (8 → 11 weeks). Curious path: 5 → 6 lessons (4 weeks, +refusal-posture). Letter pipeline: 4 of 5 cleared as drafts saved to .draft-letters/ (operator review queue, NOT auto-broadcast to avoid flooding): permission-layer (1287w), open-weights-won (1267w), cartel-pricing-lock (1245w), 44m-actual (1185w). 5th letter verify-rule-body-count killed by verifier for fabricated Stanford/UMass medical study attribution + hallucinated Wall Street note + unsourced pharmacist-replacement pilots — sent back to drafting per honest-receipts doctrine. 1.13M tokens across 23 agents in 9.6 minutes. Adversarial verify is the gate — only what passes ships.",
+  },
+  {
+    date: "2026-05-29",
     tag: "learn-distribution-surfaces",
     kind: "site",
     title:

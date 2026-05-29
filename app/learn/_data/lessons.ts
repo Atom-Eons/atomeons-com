@@ -555,8 +555,230 @@ If those answers are mostly the other direction, stay at Operator level. The coc
     trap:
       "Buying a cockpit because the upgrade feels exciting, not because you have the pain. The pain is a real signal. The excitement is not.",
     timeMinutes: 20,
-    next: null,
+    next: "image-in-chat",
     tags: ["pilot", "cockpit", "system"],
+  },
+  // ── L13 · USER ───────────────────────────────────────────
+  {
+    slug: "image-in-chat",
+    level: "user",
+    number: 13,
+    title: "Image-in-chat — paste the screenshot",
+    oneLiner:
+      "Most people describe what they see when they could just paste the screenshot. The AI reads pixels better than you can describe them. Stop typing the picture.",
+    concept: [
+      "The chat box accepts more than text. Drag an image in, paste from your clipboard, hit the attach button — Claude, ChatGPT, and Gemini all read images on the free tier. They see the actual pixels: the layout, the text, the error message, the chart axes, the dog's expression, the way the cabinet door is hanging crooked. When you describe a screenshot in words, you are doing a job the AI is better at than you are, and you are losing information at every step.",
+      "Here is what changes when you paste instead of describe. You type 'my code is throwing an error about undefined variable' — the AI guesses at five possible causes. You paste the screenshot of the actual terminal — the AI reads the exact filename, the line number, the stack trace, the surrounding context, and tells you the one thing that is wrong. You type 'this chart looks weird' — the AI asks clarifying questions. You paste the chart — the AI says the y-axis is on a log scale and that is why your numbers look compressed. The gap between describing and showing is enormous.",
+      "This works for things that are not screenshots too. A photo of a handwritten note. A picture of the back of a router. A snapshot of a recipe card in a cookbook. A picture of a plant you cannot identify. A photo of a rash before you call the doctor — the AI is not the doctor, but it can tell you whether what you are looking at warrants the urgent-care visit. A photo of the inside of your fridge before grocery shopping. A picture of the parking meter sign you cannot parse. The phone camera plus the chat box is one of the most useful tools you own and almost nobody uses it past 'look at this funny dog.'",
+      "One caveat that matters. Image quality affects what the AI can read. A blurry screenshot of fine-print text will fail. A glare-covered photo of a document will fail. If the AI says 'I cannot read this clearly,' that is honest — retake the photo with better light, get closer, or screenshot the source directly instead of photographing your screen. Phone-photo-of-monitor is the worst version of this; native screenshot is the best. The fix is almost always 'get a cleaner image,' not 'try a different AI.'",
+    ],
+    drillIntro:
+      "Pick a real thing on your screen or in front of you right now that you would normally describe to a human. We are going to skip the description entirely and let the AI read the source. Once you feel this work, you will never go back to typing the picture.",
+    drillPrompt: "I'm attaching an image of [what the image shows — e.g., \"an error message in my terminal\" / \"a chart from a report I need to understand\" / \"a handwritten recipe card\" / \"the back of my router\" / \"a contract paragraph I need plain-English\"].\n\nWhat I need from you:\n1. Tell me what you actually see in the image — be specific about the text, numbers, or details that matter.\n2. [The real ask — e.g., \"Explain what's causing this error and how to fix it\" / \"Tell me what this chart is showing in plain English\" / \"Type out the recipe in a clean format I can save\" / \"Tell me which port I plug my computer into\" / \"Translate this paragraph into language a normal person understands\"].\n3. If the image is unclear or you cannot read part of it, tell me which part and what a better photo would look like.",
+    drillSteps: [
+      "Open Claude, ChatGPT, or Gemini in your browser or app.",
+      "Pick one real thing — an error on your screen, a chart in a document, a piece of paper in front of you, the back of a device, a sign you don't understand. Don't overthink it; the first thing you thought of when reading this lesson is fine.",
+      "Capture it cleanly. On a computer, use the native screenshot tool (Windows: Win+Shift+S; Mac: Cmd+Shift+4). On a phone, take the photo with good light and the subject filling the frame. Avoid photographing your own monitor.",
+      "Drag the image into the chat box, or paste it from clipboard, or use the attach/paperclip button. Confirm the image preview appears before you send.",
+      "Paste the drill prompt above. Fill in the two bracketed slots — what the image shows, and what you actually need.",
+      "Send. Read the response. Notice how much specific detail the AI pulled from the image — text it read, numbers it parsed, layout it identified. That detail came from pixels, not from your description.",
+      "Ask one follow-up that depends on the image. Example: 'Now rewrite that recipe for half the servings' or 'Now tell me which of those settings I should change first.' This proves the AI is still holding the image in the conversation.",
+    ],
+    outcome: [
+      "The AI quoted specific text, numbers, or details from your image — not generic guesses about what it might contain.",
+      "You got a useful answer faster than you would have by typing out a description of the same thing.",
+      "The follow-up question worked without you having to re-explain the image — the AI was still 'looking at' it.",
+      "You noticed at least one detail in the AI's response that you would not have included if you had described the image in words.",
+    ],
+    trap:
+      "Photographing your monitor with your phone instead of taking a native screenshot. The result is a blurry, glare-covered, off-angle image where the AI can only read half the text — and then people blame the AI for being bad at images. The AI is fine. The image is bad. Win+Shift+S on Windows, Cmd+Shift+4 on Mac, screenshot button on phone for phone screens. Native capture, every time.",
+    timeMinutes: 9,
+    next: "voice-mode-when-speaking-beats-typing",
+    tags: ["images", "screenshots", "multimodal", "user"],
+  },
+  // ── L14 · USER ───────────────────────────────────────────
+  {
+    slug: "voice-mode-when-speaking-beats-typing",
+    level: "user",
+    number: 14,
+    title: "Voice mode — when speaking beats typing",
+    oneLiner:
+      "Real-time conversation with AI is a different shape than chat. Knowing when to switch modes is the actual skill.",
+    concept: [
+      "Voice mode is not just chat with your mouth. It is a different interface with a different best-use case. When you type, you can edit before sending, paste long documents, and stack precise constraints. When you speak, you cannot do any of that — but you get something else: speed, interruption, and the natural rhythm of thinking out loud. The trade-off is real, and people who default to one mode for everything are leaving the other half on the table.",
+      "Voice wins when the bottleneck is your own thinking, not the AI's response. If you are pacing the kitchen trying to untangle a decision, or walking the dog while sketching an argument, or driving and want to draft an email by talking through it — voice keeps up with your brain in a way the keyboard cannot. You also get to interrupt. The moment the AI starts going somewhere wrong, you say 'stop, different angle' and it pivots. That interruption feels small but it changes the whole conversation shape — you steer instead of waiting for the full answer to finish before correcting.",
+      "Typing wins when precision matters. Code, contracts, technical specs, anything with proper nouns or numbers or quoted text — type it. Voice transcription mishears names constantly. Voice also cannot paste a document, cannot show you exactly what was sent, and cannot be edited mid-thought. The output side has the same split: voice replies are designed to be heard, so they tend to be shorter, more conversational, and skip the bulleted lists you would get from a text response. If you need something to copy into a document, type the question.",
+      "The honest mental model: voice is for thinking with the AI. Typing is for working with the AI. Thinking is open-ended, exploratory, interruption-friendly. Working is precise, structured, and benefits from being able to scroll back and edit. Most people who say 'I don't use voice mode' never gave it a fair trial on a thinking task. Most people who use voice for everything never noticed the precision they lose. The skill is recognizing which mode the current task wants.",
+    ],
+    drillIntro:
+      "You are going to run the same prompt twice — once typed, once spoken — and notice the difference. Pick a real decision you are actually mulling over (not a hypothetical), because the contrast only shows up when you have skin in the game.",
+    drillPrompt: "I'm trying to decide between [option A] and [option B] for [the actual decision — career move, purchase, project direction, whatever]. Here's what I know: [2–3 sentences of context — what's pushing each way]. What I keep getting stuck on is [the specific friction point]. Don't give me a pros and cons list. Just ask me one question that would help me see this more clearly, and we'll go from there.",
+    drillSteps: [
+      "Open Claude or ChatGPT in text mode. Type the prompt above with your real decision filled in. Have the conversation for 3–4 turns — answer the question it asks, follow up, push back if its next question feels off.",
+      "Stop. Note the time on the clock. Notice how much you typed and how the conversation felt.",
+      "Open the same app on your phone and tap the voice or microphone button (Claude: voice mode in the mobile app; ChatGPT: headphone icon or voice button; Gemini: mic icon). Speak the same opening prompt — same decision, same context.",
+      "Have the same conversation by voice for 3–4 turns. When the AI starts down a path that doesn't fit, interrupt it mid-sentence and redirect. Notice that this feels rude and do it anyway — that is the feature.",
+      "After the voice session, write down one sentence: which mode got you closer to a real answer on this decision, and why. Be honest — the answer is not always voice.",
+    ],
+    outcome: [
+      "You ran the same decision through both modes and can name the specific difference in how each conversation felt.",
+      "You interrupted the AI mid-response in voice mode at least once and watched it pivot cleanly.",
+      "You have a personal rule forming for when you'll reach for voice — at least one concrete situation where you'd choose it over typing.",
+      "You noticed at least one thing voice got wrong that typing would have caught (a misheard name, a lost detail, a meandering reply) — and you are okay with that trade-off for the right tasks.",
+    ],
+    trap:
+      "Treating voice mode like a novelty toy — using it once to ask the weather, deciding it's gimmicky, and never trying it on a real thinking task. The whole point of this lesson is the contrast between modes on a decision that actually matters to you. If you run the drill on a fake or trivial question, both modes will feel about the same and you'll learn nothing.",
+    timeMinutes: 15,
+    next: "mcp-servers-plug-socket",
+    tags: ["voice", "modes", "mobile", "thinking-out-loud"],
+  },
+  // ── L15 · OPERATOR ───────────────────────────────────────────
+  {
+    slug: "mcp-servers-plug-socket",
+    level: "operator",
+    number: 15,
+    title: "MCP servers — the plug socket that turned AI into a real tool",
+    oneLiner:
+      "Model Context Protocol is the standard plug. Knowing what plugs in changes what your AI can actually touch — your files, your inbox, your calendar, your repos.",
+    concept: [
+      "Until late 2024, an AI chat was a sealed glass box. You could pour text in, read text out, paste a document, screenshot a page — but the model could not actually reach across the wall and touch anything real. It could not open the file on your desktop, read the unread email in your inbox, query the spreadsheet you keep your numbers in, or look at the actual contents of the repo you are working in. Anthropic published Model Context Protocol (MCP) in November 2024 as the standard wall socket — one protocol that lets any AI client connect to any data source or tool a developer has wired up, the same way USB lets any computer connect to any keyboard.",
+      "The mental model is the wall socket plus the appliance. The AI client (Claude Desktop, Cursor, Claude Code, ChatGPT Desktop now, dozens of others) is the wall — it provides the socket. An MCP server is the appliance you plug in — a small program someone wrote that exposes one specific capability: read my Google Drive, search my Notion, execute SQL against my Postgres, control my Chrome browser, read my Gmail. Once it is plugged in, the model can call it the same way you would call a function. You ask in plain English; the model figures out which plug to use; the plug returns real data; the model writes a real response grounded in that data instead of guessing.",
+      "What this changes at the operator level is the question you ask. You stop asking 'what can the AI do?' (the model is roughly the same one month to the next) and start asking 'what is plugged in?' Two operators on the same Claude subscription can have wildly different effective capabilities because one has GitHub, Filesystem, and Postgres plugged in and the other has nothing. The first operator's AI can read code from a real repo, write a real file to disk, and query a real database in one turn. The second operator's AI can only talk about code in the abstract. Same model. Different sockets.",
+      "The catalog is already large. Anthropic publishes reference servers (filesystem, GitHub, Google Drive, Slack, Postgres, Puppeteer for browsers, memory, sequential thinking). The community has shipped hundreds more — Notion, Linear, Figma, Stripe, Supabase, Vercel, Spotify, Home Assistant, blender, unreal engine, your IDE. Most install in under five minutes by editing one config file. The skill at this level is not coding new servers — it is reading the catalog, recognizing which two or three plugs would multiply what you can do today, and installing them. The rest of this lesson is that exercise.",
+    ],
+    drillIntro:
+      "You are going to use the AI itself to scout MCP servers for your actual workflow. Not theory — your real tools, your real files, your real bottlenecks. By the end you will have a shortlist of three servers to install and a written justification for each.",
+    drillPrompt: "I'm an operator-level AI user and I want to extend my AI's reach using Model Context Protocol (MCP) servers. Here is my actual stack:\n\nOperating system: [Windows / Mac / Linux]\nAI client I use most: [Claude Desktop / Claude Code / Cursor / ChatGPT Desktop / other]\nTools I use daily for work: [list 5–8 real ones — e.g. Gmail, Google Drive, Notion, GitHub, VS Code, Postgres, Figma, Slack, Linear]\nThe 3 tasks I do most often that involve copy-pasting between AI chat and another app: [list them]\nWhat I'm not willing to plug in for privacy reasons: [e.g. personal banking, medical records, private journal]\n\nDo three things:\n\n1. Tell me which MCP servers exist for the tools in my stack. For each, give me: name of the server, who maintains it (Anthropic official / community / vendor), what it lets the model actually do, and any known sharp edges or auth gotchas.\n\n2. Look at my three most-frequent copy-paste tasks and tell me which two MCP servers would eliminate the most friction. Be specific about why — name the actual operation.\n\n3. Give me the exact install steps for those two servers on my operating system, including where the config file lives and what JSON I add to it. If a server requires an API key or OAuth, name the screen I have to visit to get the credential.\n\nDon't recommend servers I didn't ask about. Don't pad. If you don't know whether a server exists for one of my tools, say so plainly instead of guessing.",
+    drillSteps: [
+      "Pick the AI client you use most often and make sure it actually supports MCP today — Claude Desktop, Claude Code, Cursor, and several others do; older web-only ChatGPT does not. If yours does not, switch to one that does for this drill.",
+      "Fill in every bracketed slot in the prompt above with real specifics. Generic answers (`I use Google stuff`) get generic recommendations. List actual product names.",
+      "Paste the filled-in prompt into your AI client and read the response carefully. Cross-check the server names it gives you — open a browser and search `[server name] MCP github` to confirm the repo exists and is maintained. The AI will sometimes invent plausible-sounding servers.",
+      "Pick ONE of the two recommended servers to install today. Not both. One install, all the way through, including the auth handshake.",
+      "Follow the install steps. When you edit the config file (on Claude Desktop it lives at `%APPDATA%\\Claude\\claude_desktop_config.json` on Windows or `~/Library/Application Support/Claude/claude_desktop_config.json` on Mac), back up the file first by copying it. Restart the AI client fully — not just the window, the whole app.",
+      "Test the new plug with a task that would have required copy-paste yesterday. If the model says it cannot reach the tool, your install did not take — check the config JSON for syntax errors and look at the client's MCP logs (Claude Desktop: Settings → Developer → MCP Log).",
+      "Write down — in plain text, in your saved-prompts file from L6 — which server you installed, the date, and one sentence on what changed. This is the start of your MCP install ledger.",
+    ],
+    outcome: [
+      "You can name what MCP is in one sentence and explain why two users on the same model can have different effective capabilities.",
+      "You have a shortlist of two or three MCP servers that match your actual workflow, not generic 'top 10' recommendations.",
+      "One server is installed and verified working — you watched the model read or write something real that lives outside the chat window.",
+      "Your saved-prompts file has an MCP install ledger started, so future-you knows what is plugged in and when it went in.",
+    ],
+    trap:
+      "Installing five servers in one sitting because the catalog is exciting, then discovering a week later that nothing actually works because the config JSON has a missing comma, two servers are fighting over the same port, and you cannot remember which credential goes with which plug. Install one, prove it works, write down what you did, then install the next. The boring ledger is the difference between an operator with MCP and an operator with a broken config.",
+    timeMinutes: 25,
+    next: "agent-mode-when-ai-takes-action",
+    tags: ["mcp", "operator", "tooling", "extensibility"],
+  },
+  // ── L16 · OPERATOR ───────────────────────────────────────────
+  {
+    slug: "agent-mode-when-ai-takes-action",
+    level: "operator",
+    number: 16,
+    title: "Agent mode — when AI takes action, not just answers",
+    oneLiner:
+      "The frontier of useful AI is agents that DO things — browse, click, file, send. The actual skill is the safety pattern, not the magic.",
+    concept: [
+      "Up to now, every lesson treated AI as a thing you talk to. You type, it types back, you copy the output somewhere it can be used. Agent mode breaks that pattern. An agent is the same underlying model — Claude, ChatGPT, Gemini — but wired to tools: a browser it can click, a filesystem it can read and write, a terminal it can run commands in, an email client it can send from. You give it a goal in plain English (\"book me a flight to Denver under $400 next Saturday\") and it takes the steps. Browsing pages. Filling forms. Submitting. Reporting back.",
+      "The mental model shift is from advisor to employee. An advisor gives you a recommendation and you act on it. An employee acts on your behalf and tells you what they did. That's a different relationship and it carries different risk. An advisor that hallucinates an address wastes your time. An employee that hallucinates an address books the wrong flight on your credit card. Both are the same model under the hood. The difference is whether its mistakes touch the world.",
+      "Right now in 2026, agent mode is real but uneven. ChatGPT's agent mode and Claude's computer use can both genuinely run multi-step tasks in a browser sandbox. Gemini has comparable capabilities through Project Mariner. They work best on bounded, well-defined jobs — \"find me the cheapest version of this specific product across these five retailers,\" \"summarize every PR in this repo touched in the last week,\" \"draft replies to these 12 emails and put them in my drafts folder, do not send.\" They fail in messy, ambiguous, or high-stakes territory. The skill that separates operators from people who got burned isn't picking the right agent. It's picking the right scope and the right stop-points.",
+      "The safety pattern has three pieces. First — sandbox the blast radius. Read-only tasks first. Drafting before sending. Cart before checkout. Second — staged authority. Watch the first three runs of any new task type before letting it run unsupervised. Third — explicit stop conditions you write into the prompt itself: budget caps, time caps, \"stop and ask if X.\" These three together are the difference between agent mode as leverage and agent mode as a story you tell at parties about the time AI ordered $1,800 of dog food.",
+    ],
+    drillIntro:
+      "You're going to give an agent a real task with a real stop condition baked in. Use whichever agent mode you have access to — ChatGPT agent mode, Claude with computer use, or Gemini's equivalent. Pick a research task you actually want done. The point is to feel the pattern, not the task.",
+    drillPrompt: "I want you to act as a research agent on a real task. Here is the job:\n\nGOAL: Find me [specific concrete thing — e.g., \"the three cheapest currently-available 27-inch 4K monitors with USB-C 90W power delivery, in stock at US retailers\"]\n\nRULES, in order of priority:\n1. Read-only mode. Do not add anything to a cart. Do not submit any form. Do not create an account. Do not click \"buy\" or \"checkout\" or \"subscribe\" under any condition.\n2. Time budget: spend no more than [10] minutes on this task. If you have not found the answer in that time, stop and report what you did find.\n3. If you hit a paywall, captcha, login wall, or any page that asks for payment info, stop immediately and tell me which site and which step.\n4. If the answer requires me to make a judgment call (e.g., \"the cheapest\" depends on shipping or warranty), pause and ask me before continuing.\n\nREPORT FORMAT when you're done or when you stop:\n- What you found (the actual answer, with source URLs)\n- What sites you visited (full list, in order)\n- What you would have done next if I'd given you 10 more minutes\n- Anything that surprised you about the task\n\nBegin.",
+    drillSteps: [
+      "Pick a real research task you genuinely want the answer to. Not a test task — a real one. Filling the [bracketed slot] with something you care about is what makes the lesson stick.",
+      "Paste the prompt into your agent-mode interface (ChatGPT agent mode, Claude with computer use, or Gemini agent equivalent). Hit go and DO NOT close the tab or walk away — watch it work in real time.",
+      "Watch the first three actions the agent takes. Notice where it pauses, where it guesses, where it does something you would not have done. This is the most important part of the drill.",
+      "When it asks you a question (it will), answer it. When it finishes or hits a stop condition, read the full report it returns.",
+      "Now run the same task again, but tighten ONE rule. Drop the time budget to 5 minutes, or narrow the goal, or add a constraint. Notice how the same agent behaves differently with tighter scope.",
+      "Write down (somewhere you'll see again) the one moment where you thought 'I'm glad I had rule [N] in there.' That's the safety pattern teaching you what it's for.",
+    ],
+    outcome: [
+      "You can describe, in your own words, the difference between an advisor model and an employee model — and which one agent mode is.",
+      "You have a working template for agent tasks that includes read-only scope, time budget, paywall stop, and judgment-call escalation. You can reuse this template tomorrow.",
+      "You watched at least one moment where the agent would have done the wrong thing if your rules weren't there. You felt why the pattern exists, not just read about it.",
+      "You can name one specific type of task you'd trust an agent to do unsupervised, and one specific type you wouldn't. Based on what you observed, not on a generic rule.",
+    ],
+    trap:
+      "Letting it run unsupervised on the first try because the demo videos make it look magic. The first three runs are the calibration runs — that's when you learn this agent's specific failure modes, where it cuts corners, where it invents URLs, where it gets stuck. Walking away during run one is how people end up with $1,800 of dog food. Watch the first three. Then decide what's safe to leave alone.",
+    timeMinutes: 20,
+    next: "refusal-posture-mapping",
+    tags: ["agents", "automation", "safety", "operator", "scope"],
+  },
+  // ── L17 · LEARNER ───────────────────────────────────────────
+  {
+    slug: "refusal-posture-mapping",
+    level: "learner",
+    number: 17,
+    title: "Refusal posture — knowing what your AI won't say",
+    oneLiner:
+      "Every AI refuses different things in different ways. Map the refusal shape of the tool you actually use, instead of guessing or repeating internet rumors.",
+    concept: [
+      "Every AI assistant has a refusal posture — the set of topics and request shapes it will decline, soften, hedge, or reroute. Claude, ChatGPT, Gemini, and the open-source models all carry different postures. They overlap a lot, but the edges differ, and the edges are where you'll actually feel them. A request that Claude handles in one shot might get a long disclaimer from ChatGPT and a flat refusal from Gemini. The reverse happens too. None of those tools advertises a full list of what it won't do, and even if they did, the lists drift every few months as the companies update their training.",
+      "What this means in practice: if you've only used one model and you've only asked it polite easy questions, you don't actually know its refusal posture. You've just stayed inside the safe zone without noticing the walls. Then one day you ask something legitimate — a medical detail you need for a sick parent, a legal phrasing for a small-claims letter, a security topic for a class — and the model balks. You blame yourself or you blame AI in general. Neither is right. You hit a specific refusal edge of a specific tool, and a different tool, or a different phrasing of the same request, would have gotten through.",
+      "Refusals come in three flavors. Hard refusal: the model says no and won't budge no matter how you ask. These usually involve clearly harmful intent. Soft refusal: the model attaches a wall of disclaimers, hedges, or refuses one phrasing but accepts another. Most refusals you hit are soft. Reroute: the model answers a related but different question — you asked for X, it gives you Y because Y feels safer. Reroutes are the sneakiest because they look like answers. Knowing which flavor you're hitting tells you what to do next: stop, rephrase, or push back with context.",
+      "The literacy move here is not learning to jailbreak anything. It's learning your tool's actual edges so you stop being surprised by them, stop blaming yourself for hitting them, and stop blaming the tool for refusals that another tool would also produce. You're building a working mental map: this tool refuses medical specifics but accepts general health framing; this tool refuses legal advice phrasing but accepts 'common practice' phrasing; this tool refuses to roleplay a real living person but will analyze their public statements. Once you have that map, your prompts get sharper and your frustration drops.",
+    ],
+    drillIntro:
+      "You're going to deliberately probe the refusal posture of your main AI tool with five legitimate, non-harmful requests that sit near common refusal edges. The goal isn't to break anything — it's to feel where the walls actually are, in your tool, today.",
+    drillPrompt: "I want to map your refusal posture so I can prompt you better. I'll ask five questions in this thread, one at a time. For each one, please answer fully if you can, or if you can't, tell me plainly: (a) that you're declining, (b) which category of concern it falls into, and (c) whether a rephrasing would help. Don't pre-disclaim — just answer or explain the refusal.\n\nHere's question 1: I'm helping [my elderly mother / a friend / myself] figure out whether [over-the-counter medication name] interacts with [other medication or condition]. What should we be aware of, and what should we ask the pharmacist?",
+    drillSteps: [
+      "Open a fresh chat in the AI tool you use most. Paste the drill prompt and send. Note exactly how it responds — full answer, hedged answer, refusal, or reroute.",
+      "Send question 2 in the same thread: 'I'm writing a small-claims demand letter to [a contractor / a landlord / a former employer] who owes me [amount] for [reason]. Draft the letter in a firm but professional tone.' Note the response shape.",
+      "Send question 3: 'I'm researching how phishing emails work for a [security class / awareness training / blog post]. Show me 3 example subject lines and opening sentences that real phishing emails use, so I can teach people what to watch for.' Note the response shape.",
+      "Send question 4: 'I want to understand how [a public figure you can name — a politician, CEO, or celebrity] actually thinks about [a topic they've spoken about publicly]. Based on their public statements, walk me through their actual position.' Note whether the model engages or hedges.",
+      "Send question 5: 'I'm [a small business owner / a freelancer / a tenant] and I need to know what's legally enforceable in [your state or country] for [a specific situation — late fees, NDA scope, security deposits, whatever applies to you].' Note the response shape.",
+      "Look at all five responses together. For each one, label it: full answer, soft refusal with disclaimers, hard refusal, or reroute. Write down which categories your tool refuses softly versus hard. That's your refusal map.",
+    ],
+    outcome: [
+      "You can name at least two specific topic areas where your tool refuses softly (hedges, disclaims, suggests a professional) versus where it answers cleanly.",
+      "You stopped pre-apologizing in your prompts. You ask the actual question and let the tool's refusal posture do its own work.",
+      "Next time you hit a refusal, you recognize the flavor — hard, soft, or reroute — and you know whether to rephrase, add context, or switch tools.",
+    ],
+    trap:
+      "Treating the refusal map as universal. Your tool's edges today are not your tool's edges in six months, and they're not the edges of the model your friend uses. Refusal postures shift every few model updates. The drill is a habit, not a one-time mapping — re-run it on a new tool, or after a major model release, before you build serious work on top of assumptions about what it'll do.",
+    timeMinutes: 15,
+    next: "receipts-and-paper-trail",
+    tags: ["refusal", "prompting", "tool-literacy", "model-differences"],
+  },
+  // ── L18 · PILOT ───────────────────────────────────────────
+  {
+    slug: "receipts-and-paper-trail",
+    level: "pilot",
+    number: 18,
+    title: "Receipts and paper trail — audit your own AI use",
+    oneLiner:
+      "At Pilot level, what AI did for you last month becomes evidence. Knowing how to keep that evidence is the skill.",
+    concept: [
+      "At novice level, AI was a help. At learner level, it was a workflow. At user and operator levels, it became part of how you make things. At pilot level, something different happens: someone is going to ask you to account for it. A client wants to know what was AI and what was you. A regulator wants to see how a decision was made. A teammate inherits your project and needs to know which prompt produced which file. Future-you, six months out, needs to remember why a draft was rejected. The work has audit weight now. The chat history is not enough.",
+      "A receipt, in the AI sense, is a small bundle that proves what happened: the prompt, the model that answered, the date, the output, and what you did with it. It is the difference between 'I used AI for this' (defensive, vague, unverifiable) and 'here is the input, the output, the model, the date, and the edits I made on top' (calm, complete, hard to argue with). Receipts are what convert AI-assisted work from a liability into an asset. They also do something quieter: they show you, honestly, what AI is and is not earning its keep on. Most pilots discover they were paying for two tools and only using one.",
+      "The mistake at this level is treating receipts like compliance paperwork — heavy, formal, something to dread. They are not. A receipt is a sticky note with five fields. The discipline is doing it every time, not doing it elaborately. The other mistake is over-engineering: building a custom database, a tagging taxonomy, a whole second job around your first job. Don't. A dated folder with text files works. A spreadsheet works. The shape of the receipt matters more than the storage. If you can answer four questions on demand — what prompt, what model, what date, what edits — you have a paper trail. If you can't, you have a vibe.",
+      "There is a second layer at pilot level: the monthly audit. Once a month, you sit with your receipts and ask three questions. What did AI actually save me time on? What did I think it helped with but didn't? Where did I edit so heavily that I should have just written it myself? This is not self-flagellation — it is portfolio management. The pilot who audits monthly compounds. The pilot who doesn't ends up paying $200/month for a tool they barely use and a tool they overuse, with no idea which is which.",
+    ],
+    drillIntro:
+      "You're going to build a receipt for one piece of AI-assisted work from this past week, then have AI help you design a lightweight system you'll actually maintain. The point is not the template. The point is finding a shape simple enough that you'll still be doing it in November.",
+    drillPrompt: "I need to build a personal audit trail for my AI use. Help me design something I'll actually maintain.\n\nHere's a recent example I want to turn into a receipt:\n- What I was working on: [describe the task — e.g., \"drafting a client proposal,\" \"summarizing a research paper,\" \"writing release notes\"]\n- Which AI tool I used: [Claude / ChatGPT / Gemini / Copilot / other]\n- Approximate date: [date]\n- What I asked it (paste prompt if you have it, or describe): [prompt or summary]\n- What it gave me back (short summary): [output summary]\n- What I did with the output: [shipped as-is / edited heavily / rewrote / threw away]\n- How much time I think it saved me (honest guess): [minutes/hours, or \"none / negative\"]\n\nDo three things for me:\n\n1. Turn the above into a clean receipt entry I could paste into a notes file. Keep it under 10 lines. Use plain text, no markdown tables.\n\n2. Propose the lightest possible system I could maintain — folder structure, file naming, or a single spreadsheet. I want something a busy person will still be doing in six months, not something elaborate. Pick ONE recommendation, not three options.\n\n3. Give me five honest questions I should ask myself at the end of each month when I look back at my receipts. The questions should help me notice if I'm overpaying for AI, underusing a tool, or editing so much that AI isn't actually helping.\n\nPush back if any of my inputs are vague. Ask me to sharpen them before you write the receipt.",
+    drillSteps: [
+      "Pick ONE real piece of AI-assisted work from the past seven days. Not a hypothetical. Something you actually shipped or used.",
+      "Fill in every bracketed slot in the prompt with honest answers — especially the 'time it saved me' field. Resist the urge to round up.",
+      "Paste it into Claude, ChatGPT, or Gemini and read all three sections of the response. Don't skim the monthly-audit questions — they're the load-bearing part.",
+      "Create the storage location the AI recommended (a folder, a spreadsheet, a notes app page) and save the cleaned receipt as your first entry. Use today's date in the filename.",
+      "Set a recurring monthly calendar reminder titled 'AI audit — answer the 5 questions.' Pick a date you'll actually honor — last Friday of the month works for most people.",
+      "Add ONE more receipt from a different task this week, even if it feels redundant. Two entries is when the system becomes a system.",
+    ],
+    outcome: [
+      "A storage location exists (folder, spreadsheet, or notes page) with at least two real receipt entries, each under 10 lines.",
+      "A recurring monthly reminder is on your calendar with a specific date you'll honor, not a vague 'monthly.'",
+      "You can answer in under 30 seconds: what AI tool produced what output, on what date, with what prompt, for which piece of work last week.",
+      "You have a written list of five audit questions you'll ask yourself at month-end — not generic ones, the ones tailored to your actual usage.",
+    ],
+    trap:
+      "Building a beautiful tagging system, a Notion database with seven properties, and a custom GPT to auto-categorize entries — then abandoning the whole thing inside three weeks because the friction is too high. The pilots who keep paper trails for years use plain text files in a dated folder. The pilots who don't are the ones who tried to make it elegant. Pick boring storage. Boring storage survives.",
+    timeMinutes: 18,
+    next: null,
+    tags: ["audit", "receipts", "pilot", "workflow", "documentation"],
   },
 ];
 

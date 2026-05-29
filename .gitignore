@@ -54,3 +54,9 @@ tailwindcss-*.log
 
 # temp commit-message files (multi-line HEREDOC body passed via `git commit -F`)
 .cm-*.txt
+
+# operator working artifacts (drafts, temp commit messages, scratch)
+.draft-letters/
+.lesson-block.txt
+.cm-*.txt
+.letter-*.json
