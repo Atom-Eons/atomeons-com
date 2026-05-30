@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SearchFilter } from "./SearchFilter";
 
 /**
  * /search — the lab directory.
@@ -294,76 +295,17 @@ async function SearchPageInner({
             hand-curated map.
           </p>
 
-          {/* SEARCH FORM (GET to /search?q=…) */}
-          <form
-            method="GET"
-            action="/search"
-            className="mt-10 flex flex-wrap items-stretch gap-3"
-          >
-            <input
-              type="search"
-              name="q"
-              defaultValue={q}
-              autoComplete="off"
-              spellCheck="false"
-              autoFocus
-              placeholder="e.g. claude, mcp, broadcast, money, sci-fi…"
-              className="min-w-[16rem] flex-1 rounded-full border border-[#1A2225] bg-[#0A0F11] px-6 py-3 text-base text-[#F2F4F5] outline-none transition-all placeholder:text-[#6B7779] focus:border-[#22F0D5] focus:shadow-[0_0_30px_rgba(34,240,213,0.20)]"
+          {/* LIVE FILTER — typing hides non-matching items in place */}
+          <div className="mt-10">
+            <SearchFilter
+              initialQuery={q}
+              totalCount={GROUPS.flatMap((g) => g.items).length}
             />
-            <button
-              type="submit"
-              className="inline-flex items-center gap-2 rounded-full bg-[#22F0D5] px-6 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-[#0B1014] transition-all hover:bg-[#F2F4F5]"
-            >
-              search →
-            </button>
-          </form>
-
-          {hasQuery && (
-            <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">
-              {matches.length === 0
-                ? `0 hits for "${q}" · scroll the full directory below`
-                : `${matches.length} hit${matches.length === 1 ? "" : "s"} for "${q}"`}
-            </p>
-          )}
+          </div>
         </div>
       </section>
 
-      {/* SEARCH RESULTS (if query) */}
-      {hasQuery && matches.length > 0 && (
-        <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
-          <div className="mx-auto w-full max-w-4xl px-6 py-16">
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-              ::matches
-            </p>
-            <ul className="mt-6 space-y-3">
-              {matches.map((m) => (
-                <li key={m.href}>
-                  <Link
-                    href={m.href}
-                    className="group flex flex-col gap-2 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40"
-                  >
-                    <div className="flex flex-wrap items-baseline justify-between gap-3">
-                      <h3 className="text-lg font-semibold text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-xl">
-                        {m.title}
-                      </h3>
-                      {m.badge && (
-                        <span className="rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">
-                          {m.badge}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm leading-[1.6] text-[#C8CCCE]">
-                      {m.description}
-                    </p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
-
-      {/* FULL DIRECTORY (always shown) */}
+      {/* FULL DIRECTORY (live-filtered by SearchFilter above) */}
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-6xl px-6 py-20 md:py-28">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
@@ -375,33 +317,46 @@ async function SearchPageInner({
 
           <div className="mt-12 space-y-12">
             {GROUPS.map((g) => (
-              <div key={g.name}>
+              <div key={g.name} data-search-group>
                 <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
                   ::{g.name}
                 </p>
                 <ul className="mt-4 grid gap-3 md:grid-cols-2">
-                  {g.items.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className="group flex h-full flex-col gap-2 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/40"
+                  {g.items.map((item) => {
+                    const searchText = [
+                      item.title,
+                      item.description,
+                      item.href,
+                      ...item.keywords,
+                      item.badge ?? "",
+                    ].join(" ");
+                    return (
+                      <li
+                        key={item.href}
+                        data-search-item
+                        data-search-text={searchText}
                       >
-                        <div className="flex items-baseline justify-between gap-2">
-                          <span className="font-mono text-sm font-semibold text-[#F2F4F5] group-hover:text-[#22F0D5]">
-                            {item.title}
-                          </span>
-                          {item.badge && (
-                            <span className="shrink-0 rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#FFB87A]">
-                              {item.badge}
+                        <Link
+                          href={item.href}
+                          className="group flex h-full flex-col gap-2 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/40"
+                        >
+                          <div className="flex items-baseline justify-between gap-2">
+                            <span className="font-mono text-sm font-semibold text-[#F2F4F5] group-hover:text-[#22F0D5]">
+                              {item.title}
                             </span>
-                          )}
-                        </div>
-                        <p className="text-sm leading-[1.55] text-[#9BA5A7]">
-                          {item.description}
-                        </p>
-                      </Link>
-                    </li>
-                  ))}
+                            {item.badge && (
+                              <span className="shrink-0 rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#FFB87A]">
+                                {item.badge}
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-sm leading-[1.55] text-[#9BA5A7]">
+                            {item.description}
+                          </p>
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}

@@ -63,6 +63,20 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "search-live-filter-kitchen-table-draft",
+    kind: "site",
+    title:
+      "/search live filter · kitchen-table letter drafted · workflow-truncation lesson learned",
+    surfaces: [
+      "app/search/SearchFilter.tsx (NEW · client-side live-typing filter)",
+      "app/search/page.tsx (form → SearchFilter · data-search-item attrs on cards · static SEARCH RESULTS block removed)",
+      ".draft-letters/kitchen-table.json (NEW · operator-review queue)",
+    ],
+    body:
+      "Converted /search from a static directory (filtered only via URL ?q= on form submit) into a live-typing filter that runs client-side with no network round-trip. SearchFilter reads data-search-item + data-search-text attributes on each directory card, hides non-matches on every keystroke (useDeferredValue for smooth typing), shows visible/total count in the input chrome, and hides empty group sections when all their items are filtered out. Pure DOM manipulation, no backend, no tracking. The earlier static SEARCH RESULTS section was removed (duplicated work with the live filter). Form GET to ?q= still preserves deep-link / back-button state. Recovery workflow (run wf_a878a490-faf · 52 agents · 1.83M tokens · 6.2 min) failed at the script level — all 4 letter pipelines and 3 /vs pipelines threw uncaught StructuredOutput timeouts. The long-body content track is unreliable through schema enforcement; future content of that shape will be written directly. Drafted the first letter manually (kitchen-table angle — 'The Room the Leaderboard Doesn't Track' · 1200w · saved to .draft-letters/ for operator publish queue). Remaining 3 letter themes + 3 /vs pages will be hand-written in follow-up commits.",
+  },
+  {
+    date: "2026-05-29",
     tag: "ai-tldr-scroll-coverage",
     kind: "site",
     title:
