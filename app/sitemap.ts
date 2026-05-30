@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { PAPERS } from "./_data/research-papers";
 import { LESSONS } from "./learn/_data/lessons";
 import { PATHS } from "./learn/_data/paths";
+import { COMPARISONS } from "./_data/comparisons";
 
 const BASE = "https://atomeons.com";
 
@@ -36,6 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/prompt-kit`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },
     { url: `${BASE}/glossary`, lastModified: now, changeFrequency: "monthly", priority: 0.88 },
     { url: `${BASE}/tools`, lastModified: now, changeFrequency: "weekly", priority: 0.94 },
+    { url: `${BASE}/vs`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    ...COMPARISONS.map((c) => ({
+      url: `${BASE}/vs/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.83,
+    })),
     ...pathEntries,
     ...lessonEntries,
     { url: `${BASE}/ai`, lastModified: now, changeFrequency: "weekly", priority: 0.97 },

@@ -63,6 +63,21 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "vs-comparison-pages",
+    kind: "site",
+    title:
+      "/vs NEW — 3 honest AI comparison pages (Claude vs ChatGPT · Cloud vs Local · Subscription vs One-time)",
+    surfaces: [
+      "app/_data/comparisons.ts (NEW · 3 comparisons with body_md + table + decision_framework)",
+      "app/vs/[slug]/page.tsx (NEW · dynamic route · LabHero + at-a-glance table + long-form body + decision framework)",
+      "app/vs/page.tsx (NEW · index page listing all comparisons)",
+      "app/sitemap.ts · app/_components/Footer.tsx · public/llms.txt (wired)",
+    ],
+    body:
+      "Recovery workflow couldn't deliver /vs body content through structured-output schema enforcement (max_tokens truncation on long body_md). Written directly in operator voice: calm, technical, helpful — senior-engineer-explaining-tradeoffs-over-coffee. Three head-to-heads at ~1500 words each: Claude vs ChatGPT (voice, pricing, context window, refusal posture, image/audio, agentic mode, privacy, who picks what) · Cloud vs Local AI (quality gap, privacy posture, hardware, when to switch) · Subscription vs One-time (1/3/10-year math, what each model incentivizes, §4A enforceability). Each page has 4 sections: LabHero · at-a-glance table (10-11 dimensions) · long-form body with custom markdown-light pipeline (h2, p, tables, links) · 3-column decision framework (pick left · pick right · pick both). Dynamic route /vs/[slug] generates static for all 3 at build time. Index page /vs lists all comparisons. Article + ItemList + BreadcrumbList JSON-LD. ScrollProgress mounted on each comparison page (long-form). CC-BY 4.0.",
+  },
+  {
+    date: "2026-05-29",
     tag: "search-live-filter-kitchen-table-draft",
     kind: "site",
     title:
