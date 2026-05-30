@@ -63,6 +63,23 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "mega-content-sweep-pass-1",
+    kind: "site",
+    title:
+      "Mega content sweep · +5 /tools tasks · +14 glossary terms · ScrollProgress · /support hero → LabHero",
+    surfaces: [
+      "app/_data/tasks.ts (18 → 23 tasks · +bloodwork, sleep protocol, year-end review, exec brief, 90-day plan)",
+      "app/_data/glossary.ts (26 → 40 terms · +reasoning model, context engineering, vibe coding, AI agent, tool use, function calling, hallucination rate, latency, token cost, distillation, MoE, prompt injection, RLHF, sycophancy)",
+      "app/_components/v2/ScrollProgress.tsx (NEW · CSS-only via animation-timeline)",
+      "app/learn/lesson/[slug]/page.tsx (ScrollProgress mounted)",
+      "app/founders-view/[slug]/page.tsx (ScrollProgress mounted)",
+      "app/support/page.tsx (hero → LabHero)",
+    ],
+    body:
+      "Dynamic-workflow content expansion · 70 agents · 2.55M tokens · 16.5 min. Four parallel tracks fired: /tools tasks (20 slots) · /glossary terms (15 slots) · founder letters (4 slots) · /vs comparison pages (3 slots). Adversarial verify gates on each artifact. Ship plan results: TASKS 5/20 cleared (15 StructuredOutput timeouts from harness on long-prompt slots) · GLOSSARY 14/15 cleared (one entry deferred) · LETTERS 0/4 (all truncated mid-sentence — body_md hit max_tokens cap, verifier correctly held them) · VS PAGES 0/3 (same truncation issue). Shipped only what survived verify. Letters and /vs pages will be re-fired with explicit max_tokens raised. The verifier saved us from shipping 7 truncated artifacts — Mom's Law working as designed. Plus shipped ScrollProgress (top-of-viewport reading bar via CSS animation-timeline · prefers-reduced-motion safe · mounted on lesson + letter pages). /support hero refactored to LabHero — consistent rhythm now across /learn + /manifesto + /press + /support. /faq + /about kept as documentation-narrow layout (max-w-3xl) since LabHero isn't the right fit for those.",
+  },
+  {
+    date: "2026-05-29",
     tag: "tools-task-router",
     kind: "site",
     title:

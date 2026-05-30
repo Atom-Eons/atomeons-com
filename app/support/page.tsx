@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LabHero } from "../_components/v2/LabHero";
 
 /**
  * /support — buyer-facing support hub.
@@ -146,16 +147,13 @@ export default function SupportPage() {
         </p>
       </div>
 
-      {/* HERO */}
-      <section className="border-b border-[#1A2225] py-24 md:py-32">
-        <div className="mx-auto w-full max-w-5xl px-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::support · one operator · ~2h reply · et waking hours
-          </p>
-          <h1 className="mt-6 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.02em] md:text-7xl">
-            Help, in one inbox.
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-[1.55] text-[#C8CCCE] md:text-xl">
+      {/* HERO — LabHero primitive */}
+      <LabHero
+        eyebrow="::support · one operator · ~2h reply · et waking hours"
+        title="Help, in"
+        titleAccent="one inbox."
+        subtitle={
+          <p>
             The lab is a one-operator independent business. There is no
             ticket portal, no chatbot pretending to be staff, no offshore
             tier-1. Every email below goes to Atom directly and gets a
@@ -163,21 +161,23 @@ export default function SupportPage() {
             Pick the closest category and click; the subject line is
             already pre-filled for you.
           </p>
-
-          <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-5 py-2.5">
-            <span className="size-2 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_10px_rgba(34,240,213,0.7)]" />
-            <a
-              href="mailto:a.mccree@gmail.com"
-              className="font-mono text-[12px] uppercase tracking-[0.28em] text-[#22F0D5] hover:text-[#FFB87A]"
-            >
-              a.mccree@gmail.com
-            </a>
-          </div>
+        }
+        primaryCta={{ label: "browse all lanes ↓", href: "#channels" }}
+        tone="cyan"
+      >
+        <div className="inline-flex items-center gap-3 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-5 py-2.5">
+          <span className="size-2 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_10px_rgba(34,240,213,0.7)]" />
+          <a
+            href="mailto:a.mccree@gmail.com"
+            className="font-mono text-[12px] uppercase tracking-[0.28em] text-[#22F0D5] hover:text-[#FFB87A]"
+          >
+            a.mccree@gmail.com
+          </a>
         </div>
-      </section>
+      </LabHero>
 
       {/* CHANNELS GRID */}
-      <section className="border-b border-[#1A2225] py-24 md:py-32">
+      <section id="channels" className="scroll-mt-24 border-b border-[#1A2225] py-24 md:py-32">
         <div className="mx-auto w-full max-w-6xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
             ::pick your lane · {CHANNELS.length} categories

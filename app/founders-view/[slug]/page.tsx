@@ -5,6 +5,7 @@ import { ShareLetter } from "../../_components/ShareLetter";
 import { publicSupabase, type FoundersViewPost } from "@/lib/supabase";
 import { LetterTOC } from "./LetterTOC";
 import { LetterPrevNext } from "./LetterPrevNext";
+import { ScrollProgress } from "../../_components/v2/ScrollProgress";
 
 export const revalidate = 300;
 
@@ -334,6 +335,7 @@ export default async function FoundersViewPostPage({
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <ScrollProgress accent="#22F0D5" accentSecondary="#FFB87A" />
       <div className="mx-auto w-full max-w-3xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">

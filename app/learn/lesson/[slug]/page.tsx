@@ -5,6 +5,7 @@ import { LESSONS, getLesson, lessonsByLevel } from "../../_data/lessons";
 import { getLevel } from "../../_data/levels";
 import { LearnCopyPrompt } from "../../LearnCopyPrompt";
 import { MarkLessonComplete } from "./MarkLessonComplete";
+import { ScrollProgress } from "../../../_components/v2/ScrollProgress";
 import { LessonTLDR } from "./LessonTLDR";
 import { OpenInAIChips } from "./OpenInAIChips";
 import { StickyLessonNav } from "./StickyLessonNav";
@@ -127,6 +128,7 @@ export default async function LessonPage({
 
   return (
     <main className="relative z-10 text-[#F2F4F5]">
+      <ScrollProgress accent={level.accent} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

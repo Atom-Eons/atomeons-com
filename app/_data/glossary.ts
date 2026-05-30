@@ -165,6 +165,90 @@ const RAW: Omit<GlossaryEntry, "slug">[] = [
     short: "building by description",
     body: "Telling an AI what you want and letting it write the code. Coined by Karpathy in 2025. Real, but the AI's mistakes become your mistakes — verify before shipping.",
   },
+  {
+    term: "Reasoning model",
+    short: "thinks before it answers",
+    body:
+      "An AI that works through a problem step by step before replying, instead of answering on instinct. Worth the extra wait on math, code, planning, and anything where a wrong answer costs you.",
+  },
+  {
+    term: "Context engineering",
+    short: "shaping what the model sees",
+    body:
+      "The craft of choosing what to put in front of the AI before it answers: instructions, examples, files, prior turns, tool results. Matters because the same model gives wildly different answers depending on what context it has to work with.",
+  },
+  {
+    term: "Vibe coding",
+    short: "writing software by talking",
+    body:
+      "Building software by describing what you want in plain English and letting the AI write the code. Useful for prototypes and small tools; risky when you ship code you can't read or debug yourself.",
+  },
+  {
+    term: "AI agent",
+    short: "AI that does, not just answers",
+    body:
+      "An AI that takes actions on your behalf — sending emails, booking flights, editing files, running code — instead of just answering questions. It matters when you want work done, not advice; check what it's allowed to touch before you turn it loose.",
+  },
+  {
+    term: "Tool use",
+    short: "when AI reaches outside itself",
+    body:
+      "When the AI calls external systems instead of guessing — searching the web, reading a file, running code, sending an email. Matters because a model with tool use can act on the real world, not just talk about it.",
+  },
+  {
+    term: "Function calling",
+    short: "AI hands you a form",
+    body:
+      "When the AI asks to run a real tool (send an email, query a database, charge a card) by filling in a structured request the app can execute. The point where chat becomes action.",
+  },
+  {
+    term: "Hallucination rate",
+    short: "how often it makes things up",
+    body:
+      "The share of answers from a given AI model that contain invented facts, citations, or quotes. Lower is better; check it before trusting a model for anything where being wrong has a cost.",
+  },
+  {
+    term: "Latency",
+    short: "wait time before reply",
+    body:
+      "The delay between hitting send and the AI starting to answer. Matters when you're chaining tools, building voice apps, or just trying to keep a chat from feeling sluggish.",
+  },
+  {
+    term: "Token cost",
+    short: "what each AI call charges",
+    body:
+      "The price you pay per call, billed by tokens in and tokens out. Long prompts and long answers both add up, so check the per-million-token rate before you run anything at scale.",
+  },
+  {
+    term: "Distillation",
+    short: "big model teaches small model",
+    body:
+      "Training a small, cheap AI to mimic a big, expensive one so it runs faster on your phone or laptop. Most \"tiny\" models you can run locally are distilled from a giant parent.",
+  },
+  {
+    term: "Mixture of experts (MoE)",
+    short: "many sub-models, one front door",
+    body:
+      "A model design where many smaller specialist sub-models sit behind one entry point, and a router picks which few to use for each request. It matters because it makes giant models cheaper and faster to run without shrinking what they know.",
+  },
+  {
+    term: "Prompt injection",
+    short: "hijacking the AI's instructions",
+    body:
+      "When a hidden instruction inside a webpage, email, or file tricks an AI into ignoring its real orders and following the attacker's instead. Matters anytime your AI reads outside content it didn't write itself.",
+  },
+  {
+    term: "Reinforcement learning from human feedback (RLHF)",
+    short: "teaching the AI manners",
+    body:
+      "The training step where humans rank the AI's answers and the model learns to prefer the ones people liked. It is why modern chatbots sound polite and helpful instead of just predicting raw text from the internet.",
+  },
+  {
+    term: "Sycophancy",
+    short: "AI agreeing to please you",
+    body:
+      "When the AI tells you what you want to hear instead of what's true, because training rewarded it for being liked. Push back, ask for the counter-case, or it'll happily validate a bad plan.",
+  },
 ];
 
 export const GLOSSARY: GlossaryEntry[] = RAW.map((e) => ({
