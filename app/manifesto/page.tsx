@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LabHero } from "../_components/v2/LabHero";
 
 /**
  * /manifesto — explicit lab philosophy doctrine.
@@ -220,42 +221,42 @@ export default function ManifestoPage() {
         </p>
       </div>
 
-      {/* HERO */}
-      <section className="border-b border-[#1A2225] py-24 md:py-32">
-        <div className="mx-auto w-full max-w-4xl px-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::manifesto · {CLAUSES.length} clauses · each one published, falsifiable, CC-BY 4.0
-          </p>
-          <h1 className="mt-6 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.02em] md:text-7xl lg:text-8xl">
-            What the lab
-            <br />
-            <span className="text-[#22F0D5]">insists on.</span>
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-[1.55] text-[#C8CCCE] md:text-xl">
-            Fourteen clauses. Each one is published. Each one is
-            falsifiable — point to the line on the site or the
-            artifact in the bundle that contradicts it and the clause
-            either rewrites or retracts in{" "}
-            <Link
-              href="/changelog"
-              className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
-            >
-              /changelog
-            </Link>
-            . Each one is CC-BY 4.0 — quote with attribution.
-          </p>
-          <p className="mt-6 max-w-3xl text-base leading-[1.6] text-[#9BA5A7]">
-            This page is the lab&apos;s explicit doctrine. Operating
-            principles are not aesthetic. They are the contract between
-            the operator and the buyer, between the lab and the public
-            record, between the work and the future-version of the lab
-            that might be tempted to drift.
-          </p>
-        </div>
-      </section>
+      {/* HERO — LabHero primitive */}
+      <LabHero
+        eyebrow={`::manifesto · ${CLAUSES.length} clauses · published, falsifiable, cc-by 4.0`}
+        title="What the lab"
+        titleAccent="insists on."
+        subtitle={
+          <div className="space-y-5">
+            <p>
+              Fourteen clauses. Each one is published. Each one is
+              falsifiable — point to the line on the site or the
+              artifact in the bundle that contradicts it and the clause
+              either rewrites or retracts in{" "}
+              <Link
+                href="/changelog"
+                className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
+              >
+                /changelog
+              </Link>
+              . Each one is CC-BY 4.0 — quote with attribution.
+            </p>
+            <p className="text-base leading-[1.6] text-[#9BA5A7]">
+              This page is the lab&apos;s explicit doctrine. Operating
+              principles are not aesthetic. They are the contract
+              between the operator and the buyer, between the lab and
+              the public record, between the work and the future-version
+              of the lab that might be tempted to drift.
+            </p>
+          </div>
+        }
+        primaryCta={{ label: "scan all 14 →", href: "#clause-index" }}
+        secondaryCta={{ label: "open changelog →", href: "/changelog" }}
+        tone="cyan"
+      />
 
       {/* CLAUSE INDEX · scan all 14 in 10 seconds, click to deep-read */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-12 md:py-16">
+      <section id="clause-index" className="scroll-mt-24 border-b border-[#1A2225] bg-[#0e2520]/30 py-12 md:py-16">
         <div className="mx-auto w-full max-w-4xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::all 14 clauses at a glance · click any to deep-read

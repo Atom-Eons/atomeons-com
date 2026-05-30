@@ -63,6 +63,19 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "design-system-rollout-2",
+    kind: "site",
+    title:
+      "Design-system rollout · /learn and /manifesto heroes refactored to LabHero · calmer rhythm site-wide",
+    surfaces: [
+      "app/learn/page.tsx (hero → LabHero · dropped 2 redundant CTAs from busy hero · kept progress + chip strip in children)",
+      "app/manifesto/page.tsx (hero → LabHero · dropped redundant secondary paragraph from hero shell to subtitle slot · added #clause-index anchor for primary CTA)",
+    ],
+    body:
+      "Second rollout pass of the design-system primitives shipped earlier today. Refactored /learn and /manifesto hero sections to use LabHero. /learn hero went from 4 stacked CTAs (a 2007 template tell) to 1 primary + 1 secondary, with the chip strip and progress bar moving into the children slot at the new spacing. /manifesto hero went from a 3-paragraph subtitle block to a tighter LabHero shell with the secondary paragraph compressed into the subtitle slot. /orangebox hero deliberately not refactored — its right-rail $49 commerce card needs a layout LabHero doesn't model. Net effect: every hero across /learn, /manifesto, and homepage HomeOnboardStrip now shares one display-heading scale (md:text-[7.5rem]), one vertical padding (py-24/md:py-36), and one CTA pair convention. Confident emptiness over busy chrome.",
+  },
+  {
+    date: "2026-05-29",
     tag: "design-system-pass",
     kind: "site",
     title:

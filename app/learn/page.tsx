@@ -5,6 +5,7 @@ import { PATHS } from "./_data/paths";
 import { LESSONS, totalCurriculumMinutes } from "./_data/lessons";
 import { CopyLearnLink } from "./CopyLearnLink";
 import { LearnProgress } from "./LearnProgress";
+import { LabHero } from "../_components/v2/LabHero";
 import { LearnSpineTLDR } from "./LearnSpineTLDR";
 import { ContinueReading } from "./ContinueReading";
 
@@ -198,75 +199,49 @@ export default function LearnPage() {
         </p>
       </div>
 
-      {/* HERO */}
-      <section className="border-b border-[#1A2225]">
-        <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::atomeons · /learn · the curriculum · free · cc-by 4.0
-          </p>
-          <h1 className="mt-6 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.02em] md:text-7xl">
-            Onboarding humanity{" "}
-            <span className="text-[#22F0D5]">to AI.</span>
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-[1.55] text-[#C8CCCE] md:text-xl">
+      {/* HERO — LabHero primitive */}
+      <LabHero
+        eyebrow="::atomeons · /learn · the curriculum · free · cc-by 4.0"
+        title="Onboarding humanity"
+        titleAccent="to AI."
+        subtitle={
+          <p>
             {TOTAL_LESSONS} lessons. Five levels. Five paths. Real
             drills, copy-paste prompts, honest limits, graduation
-            criteria. From <em className="not-italic text-[#FFB87A]">never used AI</em>{" "}
-            to <em className="not-italic text-[#22F0D5]">operating it daily</em>.
+            criteria. From{" "}
+            <em className="not-italic text-[#FFB87A]">never used AI</em>{" "}
+            to{" "}
+            <em className="not-italic text-[#22F0D5]">operating it daily</em>.
             Free. No signup. No mailing list. No affiliate revenue.
           </p>
-
-          <div className="mt-10 flex flex-wrap gap-3 font-mono text-[10px] uppercase tracking-[0.22em]">
-            <span className="rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 text-[#22F0D5]">
+        }
+        primaryCta={{ label: "pick your path →", href: "#paths" }}
+        secondaryCta={{ label: "2-min diagnostic →", href: "/learn/where-am-i" }}
+        tone="cyan"
+      >
+        <div className="space-y-8">
+          <div className="flex flex-wrap gap-3 font-mono text-[10px] uppercase tracking-[0.22em]">
+            <span className="rounded-full border border-[#22F0D5]/30 bg-[#22F0D5]/05 px-3 py-1.5 text-[#22F0D5]">
               {TOTAL_LESSONS} lessons
             </span>
-            <span className="rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 text-[#22F0D5]">
+            <span className="rounded-full border border-[#22F0D5]/30 bg-[#22F0D5]/05 px-3 py-1.5 text-[#22F0D5]">
               5 levels · novice → pilot
             </span>
-            <span className="rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 text-[#22F0D5]">
+            <span className="rounded-full border border-[#22F0D5]/30 bg-[#22F0D5]/05 px-3 py-1.5 text-[#22F0D5]">
               5 paths · pick your fit
             </span>
-            <span className="rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-3 py-1.5 text-[#FFB87A]">
-              ~{Math.round(TOTAL_MIN / 60)}h total · 4–8 weeks at honest pace
+            <span className="rounded-full border border-[#FFB87A]/30 bg-[#FFB87A]/05 px-3 py-1.5 text-[#FFB87A]">
+              ~{Math.round(TOTAL_MIN / 60)}h total
             </span>
-            <span className="rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-3 py-1.5 text-[#FFB87A]">
-              cc-by 4.0 · quote any answer
+            <span className="rounded-full border border-[#FFB87A]/30 bg-[#FFB87A]/05 px-3 py-1.5 text-[#FFB87A]">
+              cc-by 4.0
             </span>
-          </div>
-
-          <div className="mt-12 flex flex-wrap items-center gap-4">
-            <Link
-              href="#paths"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#22F0D5] px-7 py-3.5 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-[#0B1014] shadow-[0_0_60px_rgba(34,240,213,0.35)] transition-all hover:bg-[#7DDBC8]"
-            >
-              pick your path →
-            </Link>
-            <Link
-              href="/learn/library"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A2225] bg-[#0A0F11] px-7 py-3.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#9BA5A7] transition-all hover:border-[#22F0D5]/40 hover:text-[#22F0D5]"
-            >
-              full lesson library →
-            </Link>
-            <Link
-              href="/learn/where-am-i"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A] transition-all hover:border-[#FFB87A] hover:bg-[#FFB87A]/20"
-            >
-              not sure? · take the 2-min diagnostic →
-            </Link>
-            <Link
-              href="/start"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A2225] bg-[#0A0F11] px-5 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7] transition-all hover:text-[#22F0D5]"
-            >
-              or the 11-min appetizer · /start
-            </Link>
           </div>
 
           {/* PROGRESS BAR — localStorage-backed, no signup */}
-          <div className="mt-12">
-            <LearnProgress totalLessons={TOTAL_LESSONS} variant="spine" />
-          </div>
+          <LearnProgress totalLessons={TOTAL_LESSONS} variant="spine" />
         </div>
-      </section>
+      </LabHero>
 
       {/* CONTINUE READING — only renders if user has marked any lesson
             complete. Surfaces the next undone lesson with a Resume CTA.
