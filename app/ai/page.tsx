@@ -1184,6 +1184,67 @@ export default function AIPage() {
         </div>
       </section>
 
+      {/* TL;DR · whole page in three lines */}
+      <section className="border-b border-[#1A2225] bg-[#22F0D5]/04">
+        <div className="mx-auto w-full max-w-3xl px-6 py-8 md:py-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::TL;DR · the whole page in three lines
+          </p>
+          <ul className="mt-4 space-y-3 text-base leading-[1.55] text-[#F2F4F5] md:text-lg">
+            <li className="flex gap-3">
+              <span className="mt-1 shrink-0 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#22F0D5]">
+                WHO
+              </span>
+              <span>
+                For anyone whose job is exposed to AI displacement —
+                or anyone tired of vague hype and ready for named
+                tools, named people, and real numbers.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1 shrink-0 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#22F0D5]">
+                MAP
+              </span>
+              <span>
+                Named AI tools with free-tier guidance (Claude,
+                ChatGPT, Gemini, Perplexity, Cursor, Claude Code,
+                Ollama, etc.) · named builders to follow · 50+ honest
+                FAQs · 30-60-90 day plan.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-1 shrink-0 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FFB87A]">
+                EARN
+              </span>
+              <span>
+                20 specific revenue paths with realistic income
+                ranges — 8 of them require zero coding.
+              </span>
+            </li>
+          </ul>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href="#plan"
+              className="inline-flex items-center gap-2 rounded-full bg-[#22F0D5] px-6 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-[#0B1014] shadow-[0_0_30px_rgba(34,240,213,0.45)] transition-all hover:bg-[#7DDBC8]"
+            >
+              jump to the 30-60-90 day plan ↓
+            </a>
+            <a
+              href="#tools"
+              className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7] hover:text-[#22F0D5]"
+            >
+              or start with the tools →
+            </a>
+            <a
+              href="#money"
+              className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7] hover:text-[#22F0D5]"
+            >
+              or the 20 revenue paths →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* MISSION */}
       <section
         id="mission"

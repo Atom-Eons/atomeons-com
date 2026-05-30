@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { VimeoStyleEmbed } from "./VimeoStyleEmbed";
+import { ScrollProgress } from "../../../_components/v2/ScrollProgress";
 
 /**
  * Lessons From Sci-Fi — the full monograph.
@@ -75,6 +76,7 @@ const CHAPTERS = [
 export default function MonographPage() {
   return (
     <main className="bg-black text-[#F2F4F5]">
+      <ScrollProgress accent="#22F0D5" accentSecondary="#FFB87A" />
       {/* ============================================================
           HERO
           ============================================================ */}

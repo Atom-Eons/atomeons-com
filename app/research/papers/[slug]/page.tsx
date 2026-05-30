@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { AeMark } from "../../../_components/AeMark";
 import { CiteAs } from "../../../_components/research/CiteAs";
 import { PAPERS, getPaper } from "../../../_data/research-papers";
+import { ScrollProgress } from "../../../_components/v2/ScrollProgress";
 
 export async function generateStaticParams() {
   return PAPERS.map((p) => ({ slug: p.slug }));
@@ -166,6 +167,7 @@ export default async function PaperPage({
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <ScrollProgress accent="#22F0D5" accentSecondary="#FFB87A" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

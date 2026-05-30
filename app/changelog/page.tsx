@@ -63,6 +63,20 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "ai-tldr-scroll-coverage",
+    kind: "site",
+    title:
+      "/ai TLDR card · ScrollProgress mounted on monograph + research papers",
+    surfaces: [
+      "app/ai/page.tsx (+TLDR card · WHO/MAP/EARN · jump to plan / tools / money)",
+      "app/research/lessons-from-sci-fi/monograph/page.tsx (ScrollProgress mounted)",
+      "app/research/papers/[slug]/page.tsx (ScrollProgress mounted)",
+    ],
+    body:
+      "Added a TL;DR card to /ai with verified counts ('20 specific revenue paths' is asserted multiple times on the page; '50+ honest FAQs' matches the page's own self-description; tool names are verified by direct quote from the page body — Claude, ChatGPT, Gemini, Perplexity, Cursor, Claude Code, Ollama). Primary CTA jumps to #plan (the 30-60-90 day plan section · anchor verified). Secondary CTAs to #tools and #money (both verified). Workflow had rejected an earlier /ai TLDR for unverified counts — this version verifies against the page itself. ScrollProgress now mounted on every long-form surface: /learn/lesson/[slug], /founders-view/[slug], /research/lessons-from-sci-fi/monograph (38-page monograph — biggest reading surface on the site), /research/papers/[slug] (each paper). Long-form coverage complete.",
+  },
+  {
+    date: "2026-05-29",
     tag: "mega-content-sweep-pass-1",
     kind: "site",
     title:
