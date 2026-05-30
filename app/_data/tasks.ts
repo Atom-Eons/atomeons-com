@@ -518,6 +518,131 @@ Don't pad. Don't repeat. Three distinct angles.`,
       "Claude handles the political-read part better than ChatGPT — it will actually separate stated from unstated goals and name the trap instead of giving a generic 30-60-90 template. Long-context, structured output, willing to be direct.",
     timeMinutes: 15,
   },
+
+  // ── PASS 2 EXPANSION (hand-written, 2026-05-29) ──────────────────
+
+  {
+    id: "rewrite-resume",
+    category: "writing",
+    title: "Rewrite a resume for a specific job",
+    oneLiner:
+      "You have a resume and a target role. Get an honest rewrite that emphasizes what matches, cuts what doesn't, and flags the gap between your background and the posting.",
+    prompt: "Help me rewrite my resume for a specific job. I'll paste both.\n\nMY CURRENT RESUME:\n[paste your full resume here]\n\nTHE TARGET JOB POSTING:\n[paste the posting]\n\nGive me back:\n1. The 3 things in the posting I'm strongest on — for each, name the exact resume bullet that proves it (and tighten the bullet if it's weak).\n2. The 3 things in the posting I'm weakest on — name them honestly.\n3. A rewritten resume that leads with the strongest 3, reorders sections accordingly, and rewrites the summary in 3 sentences calibrated to this specific role.\n4. Two bullets I should add (or invent honestly from real work) that would close the biggest gap.\n5. The one section that should be SHORTER than it currently is.\n\nNo corporate jargon. No 'passionate about'. No 'leverage'. If a bullet sounds AI-written, flag it.",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude resists resume-cliché phrasing better than ChatGPT and is more willing to name what's weak in the resume rather than paper over it.",
+    timeMinutes: 12,
+  },
+  {
+    id: "linkedin-about-section",
+    category: "writing",
+    title: "Write a LinkedIn About section that doesn't sound like every other one",
+    oneLiner:
+      "Your LinkedIn About section is supposed to be the 30-second version of your professional story. Get one that's specific to you instead of template-shaped.",
+    prompt: "I need to write a LinkedIn About section. Most of them are interchangeable. Mine should not be.\n\nABOUT ME:\n- Current role and what I actually do day-to-day: [1-2 sentences]\n- 3 specific accomplishments I'm proud of (with real numbers if possible): [list]\n- The one industry/skill I'm uniquely positioned at the intersection of: [1 sentence]\n- The kind of work I want to do MORE of: [1 sentence]\n- The audience for the section (recruiters / customers / peers / investors): [pick one or two]\n- The voice I want to come across (warm / direct / playful / technical / sharp): [pick]\n\nWrite me 3 different versions, each ~120 words, each leading with a different hook (specific accomplishment / unusual intersection / direct ask). For each, tell me what kind of reader it lands best with.\n\nBan the phrases: 'passionate about', 'driven by', 'I leverage', 'storytelling', 'I am a' (anything that starts that way).",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude writes warmer professional copy and is better at varying hooks across drafts. ChatGPT tends to produce three drafts that all sound similar.",
+    timeMinutes: 10,
+  },
+  {
+    id: "interview-prep-deep",
+    category: "planning",
+    title: "Prep for a specific interview (not generic interview tips)",
+    oneLiner:
+      "You have an interview Thursday. Get a calibrated prep — likely questions for this exact role, your strongest stories ranked, the question you're going to get wrong if you don't prepare for it.",
+    prompt: "I have an interview for a specific role. Help me prep — calibrated to THIS role at THIS company, not generic interview tips.\n\nSITUATION:\n- Role: [exact title]\n- Company: [name + what they do in one line]\n- Interview type: [phone screen / hiring manager / panel / executive / case]\n- Interviewer (if known): [name + role + how long they've been there]\n- The job posting: [paste]\n- My resume: [paste]\n- What I think they care about most: [your best guess]\n- What I'm worried they'll ask: [the question you don't want]\n- My deal-breaker for the role: [a thing that, if true, kills the job for me]\n\nGive me:\n1. The 8 questions most likely to be asked in this specific interview (not generic — calibrated to the role + company + interviewer if known).\n2. For each question, the structure of a strong answer (STAR or otherwise) and which of my background bullets to use.\n3. The 2 questions I'm most likely to get wrong, and what to say if they're asked.\n4. 4 questions I should ask THEM, in order of importance, that show I've done real homework.\n5. The one thing I should NOT bring up unless they bring it up first.\n6. A 90-second self-intro tuned to this specific role.\n\nBe direct. If my deal-breaker is going to come up, tell me how to surface it without burning the interview.",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude is better at calibrating prep to a specific role rather than generating generic interview tips. It will name the question you'll get wrong instead of softening it.",
+    timeMinutes: 20,
+  },
+  {
+    id: "code-review-my-work",
+    category: "decoding",
+    title: "Code-review my own work before I push",
+    oneLiner:
+      "You wrote code that works. Get a senior-engineer review that catches the things you'd be embarrassed for a teammate to find.",
+    prompt: "Review my code before I push it. Act as a senior engineer who has watched too many bugs ship from teammates who didn't ask for review.\n\nWHAT I'M PUSHING:\n[paste the diff or the changed files]\n\nCONTEXT:\n- What this change is supposed to do (one paragraph): [explanation]\n- Where it gets called from / who depends on it: [callers]\n- Language and framework: [e.g. TypeScript + Next.js + Prisma]\n- Tests I added: [list or 'none']\n- Things I'm worried about: [your honest worry, e.g. 'edge case with empty inputs', 'auth boundary', 'race condition with the queue']\n\nReview FOR:\n1. Bugs — anything that would break in production. Include edge cases (empty inputs, null, large input, concurrent access, errors from upstream).\n2. Security — anything that could be exploited (injection, auth bypass, privilege escalation, secrets in logs).\n3. Performance — obvious inefficiencies (N+1 queries, missing indexes, unbounded loops, memory leaks).\n4. Readability — anything I'd want to refactor before someone else has to maintain this.\n5. Tests — what's missing from my test coverage, ranked by importance.\n\nFor each finding, give me: severity (must-fix / should-fix / nice-to-have), what's wrong, and a one-line suggested fix.\n\nDo not say 'looks good overall' unless it actually does. If it has a real bug, lead with that.",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude's code review is more direct and less prone to false positives than ChatGPT's, and it handles long diffs in one paste thanks to the large context window.",
+    lessonSlug: "the-verify-rule",
+    timeMinutes: 12,
+  },
+  {
+    id: "what-to-read-next",
+    category: "deciding",
+    title: "What should I read next?",
+    oneLiner:
+      "Get a personalized reading list calibrated to what you've already read, what's been on your mind, and how much time you actually have — not a top-10 best-of list.",
+    prompt: "Recommend my next 5 books to read. Calibrated to me, not a top-10 list.\n\nABOUT MY READING:\n- 5 books I've read in the last 2 years and what I thought of each (one line each): [list]\n- A book I LOVED and have re-read: [name + why]\n- A book everyone says is great that I bounced off of: [name + why I bounced]\n- What's been on my mind lately (a topic, a question, a tension): [1-2 sentences]\n- How much time I actually have: [N pages per week or N minutes per day]\n- My honest reading speed: [fast / medium / slow on dense non-fiction]\n- Books I've been told to read that I've avoided and why: [list]\n\nRecommend 5 books. For each, give me:\n1. Why this book for me specifically — tie it to something in my history above.\n2. How long it'll take at my pace.\n3. The one chapter or section that's the heart, in case I bail.\n4. What it'll change in how I think (or won't, if it's just a great read).\n5. Whether to read it now or wait for a specific moment.\n\nNo generic recommendations. If I would have already discovered the obvious choice, give me the non-obvious one.",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude's literary recommendations track personal context better than ChatGPT's, which leans toward popular consensus.",
+    timeMinutes: 10,
+  },
+  {
+    id: "argue-against-my-position",
+    category: "deciding",
+    title: "Argue against my position (steel-man the other side)",
+    oneLiner:
+      "You hold a position you're not sure about. Get the strongest possible version of the opposing case — so you can either update your view or know you're holding it for the right reasons.",
+    prompt: "I hold a position. Argue against it as forcefully and intelligently as you can. I want the steel-man, not the straw-man.\n\nMY POSITION:\n[state your position in 1-3 sentences]\n\nWHY I HOLD IT:\n[your reasons, however many you have]\n\nWHAT I'M UNSURE ABOUT:\n[any doubts you already have]\n\nGive me:\n1. The strongest 3-bullet argument against my position. Not the dumb one — the smart one. Cite specifics, not just principles.\n2. The most likely place my reasoning has a hole, with the question that exposes it.\n3. The category of evidence that, if it appeared, should make me update.\n4. The honest read on whether my position is more about identity than analysis. If yes, name the identity.\n5. The position someone smarter than me but on the opposite side would hold — not just inverted, calibrated.\n\nDo not soften. Do not balance. I have the for-my-side arguments already. I need the against-my-side arguments as well as you can make them.",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude steel-mans opposing views more thoroughly than ChatGPT, which tends toward false balance. The 'don't soften' instruction lands.",
+    lessonSlug: "senior-engineer-pattern",
+    timeMinutes: 12,
+  },
+  {
+    id: "explain-to-a-kid",
+    category: "writing",
+    title: "Explain something to a child",
+    oneLiner:
+      "You need to explain a hard topic to a kid — death, divorce, money trouble, a complicated science concept, a hard news event. Get an age-calibrated explanation that doesn't dodge.",
+    prompt: "Help me explain something to a child. I want to be honest without being scary, and clear without being patronizing.\n\nTHE CONVERSATION:\n- Topic to explain: [the topic — e.g. 'why grandpa is moving to assisted living' / 'why we can't afford the trip this year' / 'what war is' / 'why the bee is dying' / 'what death means']\n- Child's age: [age]\n- Child's personality: [thoughtful / anxious / matter-of-fact / silly / very-curious / etc. — be specific]\n- What they already know: [what they've been told so far OR what they're picking up from overhearing]\n- What I want them to walk away understanding: [the core point in plain language]\n- What I want them NOT to walk away worried about: [the trap]\n\nGive me:\n1. The opening — the exact 2-3 sentences to start the conversation, calibrated to the child's age + personality.\n2. The version of the truth at their level — accurate, not sugar-coated, not over-detailed.\n3. The 3 questions they're most likely to ask, and how to answer each one honestly.\n4. The thing I should NOT say, even if they ask, and what to say instead.\n5. How to know if they're processing or shutting down, and what to do for each.\n6. The follow-up — what to do in the days after to keep the door open without forcing more conversation.\n\nDo not write a script for a younger kid than mine. Calibrate to the age.",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude's developmental-sensitivity in parenting conversations is the most reliable on the free tier. ChatGPT tends to age-mismatch.",
+    timeMinutes: 12,
+  },
+  {
+    id: "what-to-cook-tonight",
+    category: "planning",
+    title: "What should I cook tonight?",
+    oneLiner:
+      "You don't want to think about dinner. Tell the AI what's in your fridge, who's eating, and how much energy you have. Get one specific dinner.",
+    prompt: "Tell me what to cook tonight. Just one thing. Calibrated.\n\nWHAT I HAVE:\n- Proteins in the fridge / freezer: [list — be specific about freezer state]\n- Vegetables that are using up: [list]\n- Pantry staples I always have: [grains, oils, spices, condiments]\n- Anything that needs to be eaten THIS WEEK or it spoils: [list]\n\nWHO'S EATING:\n- Number of people, plus ages of any kids: [N adults + N kids ages]\n- Anyone who needs special handling (allergies, picky, vegetarian): [list]\n\nMY STATE TONIGHT:\n- Energy level (1-5): [1 = barely standing, 5 = actively excited to cook]\n- Time I have before we need to eat: [N minutes]\n- Cleanup tolerance (1-5): [1 = one pan only please, 5 = full kitchen ok]\n- Did I have something heavy at lunch?: [yes/no]\n\nGive me ONE dinner. Not three options to choose from. The right one for tonight. Include:\n- What I'm making in one phrase.\n- Active cooking time vs total time.\n- The order of operations (don't make me figure it out).\n- The one ingredient I'm going to forget to use first that I have to start now.\n- One shortcut if my energy is below 3.\n- What to do with the leftovers (or 'no leftovers, eat it all').\n\nIf my fridge contents don't actually support a real dinner, say so and tell me what to grab on the way home.",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude commits to one answer instead of paralyzing you with three options. ChatGPT tends toward 'here are 5 ideas'.",
+    timeMinutes: 6,
+  },
+  {
+    id: "what-to-say-at-the-funeral",
+    category: "writing",
+    title: "Help me write something to say at a funeral or memorial",
+    oneLiner:
+      "Someone has died. You've been asked to speak. You don't know what to say. Get a draft that sounds like you, about the specific person, not template-shaped.",
+    prompt: "I need to write something to say at a funeral or memorial. Help me. I want it to sound like me, not like a generic eulogy template.\n\nABOUT THE PERSON WHO DIED:\n- Their name and relationship to me: [name + how I knew them]\n- How they died (if I'm willing to share): [context if it helps tone — illness / sudden / age]\n- Three specific things I loved or admired about them: [be specific, with stories if you have them]\n- One thing about them that was difficult or complicated and that the room knows is true: [optional but powerful — name the real thing if you want it acknowledged]\n- A specific moment between us that captures who they were: [the moment]\n- What I want the room to walk away remembering about them: [one phrase]\n\nABOUT ME (so the writing sounds like me):\n- My speaking style normally: [warm / direct / dry / funny / formal]\n- How comfortable I am with humor at funerals: [comfortable / uncomfortable / depends on the line]\n- How long the speech should be: [target N minutes]\n\nGive me a draft that:\n1. Opens with the specific moment, not 'we are gathered here today.'\n2. Names the difficult thing if I asked it to (acknowledged with care, not avoided).\n3. Ends with the phrase I want the room to remember, said in my voice.\n4. Is the length I asked for, not longer.\n\nThen give me the one line I should rehearse out loud so I can get through it without breaking.",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude's handling of grief writing is the most respectful and the least template-shaped on the free tier. The 'acknowledge the difficult thing with care' move lands here in a way it does not on ChatGPT.",
+    timeMinutes: 15,
+  },
+  {
+    id: "negotiate-something-hard",
+    category: "deciding",
+    title: "Prep for a hard negotiation (not just salary)",
+    oneLiner:
+      "Salary, contract terms, rent, divorce settlement, business buyout. Get a calibrated prep — your walk-away, their probable walk-away, the moves that backfire.",
+    prompt: "I have a hard negotiation coming up. Help me prep. This is not generic 'negotiation tips' — calibrated to my specific situation.\n\nSITUATION:\n- What I'm negotiating: [exactly what — e.g. 'severance package' / 'commercial lease renewal' / 'final divorce financial terms' / 'business buyout from co-founder']\n- The other side and our relationship: [adversarial / longstanding / new / mixed]\n- My current best alternative if no deal (BATNA): [be honest, even if it's bad]\n- Their likely best alternative if no deal: [your honest read]\n- The specific terms on the table right now: [the offer or the starting points]\n- My honest walk-away point: [the number / terms below which I'd rather have no deal]\n- What I think their walk-away point is: [your guess]\n- Time pressure on me: [high / medium / low]\n- Time pressure on them: [high / medium / low]\n- My biggest negotiation weakness: [emotional / detail / patience / saying no / etc.]\n\nGive me:\n1. The opening move I should make (price + framing + delivery). One specific move, not three options.\n2. The 3 most likely responses they'll give, and what to say to each.\n3. The concession of mine they want most, and what I should get in exchange.\n4. The trap that most people in my position fall into in this specific kind of negotiation.\n5. The line I should NOT say even if it's true.\n6. The signal that means 'walk away, this deal isn't happening'.\n7. The signal that means 'we have a deal, stop negotiating'.\n\nBe specific and direct. No 'know your worth' platitudes. If my walk-away point is unrealistic, tell me.",
+    recommendedAI: "claude",
+    whyThisAI:
+      "Claude handles multi-party negotiation strategy with more honesty about your weak points than ChatGPT, which tends to validate. The 'tell me if my walk-away is unrealistic' instruction lands.",
+    timeMinutes: 15,
+  },
 ];
 
 export function tasksByCategory(category: TaskCategory): Task[] {

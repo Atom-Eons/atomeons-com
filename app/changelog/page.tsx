@@ -63,6 +63,18 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "tools-expansion-pass-2",
+    kind: "site",
+    title:
+      "/tools expanded 23 → 33 tasks · 10 high-stakes life-and-work jobs added",
+    surfaces: [
+      "app/_data/tasks.ts (+10 hand-written tasks)",
+    ],
+    body:
+      "Direct expansion (no workflow — task content writes faster manually than through schema enforcement). Ten new tasks across the high-leverage life-and-work surfaces: rewrite-resume (writing) · linkedin-about-section (writing · ban-list for AI clichés) · interview-prep-deep (planning · calibrated to specific role and interviewer, not generic) · code-review-my-work (decoding · senior-engineer review before push) · what-to-read-next (deciding · personalized not top-10) · argue-against-my-position (deciding · steel-man the opposing case · cross-link to senior-engineer-pattern lesson) · explain-to-a-kid (writing · age + personality calibrated · the trap to avoid) · what-to-cook-tonight (planning · one dinner, not three options · calibrated to energy level) · what-to-say-at-the-funeral (writing · respectful, specific to the person, includes 'acknowledge the difficult thing with care' move) · negotiate-something-hard (deciding · not just salary · walk-away calibration). Each carries the full prompt template with [bracketed slots], recommended AI with routing reasoning, and time estimate. Categories now balanced: WRITING (10), DECODING (5), PLANNING (6), DECIDING (8), LEARNING (4).",
+  },
+  {
+    date: "2026-05-29",
     tag: "og-cards-pass-2",
     kind: "site",
     title:
