@@ -63,6 +63,18 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "pricing-og-card",
+    kind: "site",
+    title:
+      "/pricing OG card · $49 once · §4A no-saas pill",
+    surfaces: [
+      "app/pricing/opengraph-image.tsx (NEW · 'One product · one price · forever')",
+    ],
+    body:
+      "Custom 1200×630 PNG for /pricing shares. Headline: '$49 once. No subscription. Ever.' Orange/cyan dual bloom (orange-led to match the commerce-color identity). Bottom strip: 'two 30-day refund paths · source included · windows 10/11' subtitle + §4A no-saas binding pill. /press and /about already had OG cards — left alone. /manifesto, /intel, /research still lack OG cards and could be future additions.",
+  },
+  {
+    date: "2026-05-29",
     tag: "homepage-compression",
     kind: "site",
     title:
