@@ -63,6 +63,25 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-30",
+    tag: "ppp-pricing-system",
+    kind: "product",
+    title:
+      "PPP / fair-pricing system shipped — reusable across all current and future products",
+    surfaces: [
+      "lib/pricing/countries.ts (NEW · ISO-2 → World Bank income tier 1-4)",
+      "lib/pricing/products.ts (NEW · product registry · ORANGEBOX entry only for now)",
+      "lib/pricing/resolve.ts (NEW · resolvePrice + detectCountry)",
+      "lib/pricing/README.md (NEW · operator-facing docs · 'add new product' single-file process)",
+      "app/api/price/[productId]/route.ts (NEW · public JSON endpoint)",
+      "app/_components/PriceTag.tsx (NEW · client display · 3 variants hero/card/inline)",
+      "app/legal/pricing/page.tsx (NEW · public transparency · tier table + product table)",
+      "app/sitemap.ts (+/legal/pricing)",
+    ],
+    body:
+      "Operator directive 2026-05-30: 'dynamically price based on poverty level. America $9.99, India $0.99, UK $99, Somalia 1 penny etc. All products must follow this system. Do great research.' Researched Stripe Adaptive Pricing (currency conversion only — does not do PPP tiering); World Bank FY2026 income classifications (canonical tier mapping · GNI per capita 2024 Atlas). Built from scratch: 4-tier income mapping (Tier 1 high-income → Tier 4 low-income, 230 countries explicitly classified), per-product anchor + per-country overrides + default tier multipliers (1.0 / 0.4 / 0.1 / 0.02), Stripe-minimum free-floor ($0.50 USD → anything below becomes FREE rather than rounded up). ORANGEBOX entered as first product with operator's exact anchors: US $9.99, IN $0.99, GB $99 (Tier 1 default), SO $0.01 → FREE. Country detection: Vercel x-vercel-ip-country header first, Cloudflare cf-ipcountry second, ?cc= URL param for testing/override. Public /legal/pricing page with full transparency: tier table, product anchor table, per-country override table, free-floor policy, IP-geolocation disclosure, §4A no-saas compatibility statement, audit-your-own-price curl examples. Adding B00KMakor / Video Shop / future products = single entry in lib/pricing/products.ts (documented in README). Same /api/price endpoint, same <PriceTag> component, same checkout integration path.",
+  },
+  {
+    date: "2026-05-30",
     tag: "orangebox-launch-support-batch",
     kind: "product",
     title:

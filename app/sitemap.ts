@@ -71,5 +71,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/legal/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE}/legal/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE}/legal/refund`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${BASE}/legal/pricing`, lastModified: now, changeFrequency: "monthly", priority: 0.55 },
   ];
 }
