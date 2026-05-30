@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PRODUCTS, DEFAULT_TIER_MULTIPLIERS } from "@/lib/pricing/products";
 import { TIER_COUNTS, countryNameFor } from "@/lib/pricing/countries";
+import {
+  USA_ADVANTAGE_CLAUSE,
+  STRATEGIC_TIER_LIFT,
+} from "@/lib/pricing/doctrines";
 
 /**
  * /legal/pricing — public transparency on how prices are set.
@@ -9,8 +13,9 @@ import { TIER_COUNTS, countryNameFor } from "@/lib/pricing/countries";
  * Operator doctrine: receipts over slogans. Most companies that do PPP
  * pricing hide the mechanism behind a vague "regional pricing" tooltip.
  * The lab puts the entire mechanism on a public page: tier thresholds,
- * default multipliers, per-product anchors, per-country overrides,
- * the Stripe-minimum floor that gifts certain countries free.
+ * default multipliers, per-product anchors, the two named country
+ * doctrines (USA Advantage Clause + Strategic Tier Lift), and the
+ * Stripe-minimum free-floor safeguard.
  *
  * If a buyer wants to know exactly why they got the price they got,
  * the answer is here, citable, no support ticket required.
@@ -19,7 +24,7 @@ import { TIER_COUNTS, countryNameFor } from "@/lib/pricing/countries";
 export const metadata: Metadata = {
   title: "Pricing transparency — fair pricing by country · AtomEons",
   description:
-    "How AtomEons prices products by country. World Bank income tier mapping, default multipliers, per-product anchors, per-country overrides, the Stripe-minimum floor that gifts low-income countries free. The full mechanism, public, citable.",
+    "How AtomEons prices products by country. World Bank income tier mapping, default multipliers, per-product anchors, two named doctrines (USA Advantage Pricing Clause + Strategic Tier Lift), the Stripe-minimum free-floor safeguard. The full mechanism, public, citable.",
   alternates: { canonical: "https://atomeons.com/legal/pricing" },
   robots: { index: true, follow: true },
 };
@@ -148,21 +153,98 @@ export default function PricingTransparencyPage() {
         </div>
       </section>
 
-      {/* HOW · BASE PRICE */}
+      {/* HOW · NAMED DOCTRINES */}
       <section className="border-b border-[#1A2225] py-16 md:py-20">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::how · step 2 · per-product base price
+            ::how · step 2 · named country doctrines
+          </p>
+          <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.1] tracking-tight md:text-4xl">
+            Two named clauses. Both public, both reasoned.
+          </h2>
+          <p className="mt-5 text-base leading-[1.7] text-[#C8CCCE] md:text-[17px]">
+            The lab does not use opaque per-country overrides. Where
+            specific countries get different pricing than their World
+            Bank tier would produce, the decision lives as a NAMED
+            DOCTRINE with a published reason. Two are currently active:
+          </p>
+
+          {/* USA Advantage Clause */}
+          <div className="mt-8 rounded-2xl border border-[#22F0D5]/30 bg-[#0A0F11] p-7">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+              ::doctrine 01 · USA Advantage Clause
+            </p>
+            <h3 className="mt-3 text-xl font-medium tracking-tight text-[#F2F4F5] md:text-2xl">
+              US buyers pay 10% of the Tier 1 anchor.
+            </h3>
+            <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE]">
+              Scope: <span className="font-mono text-[13px] text-[#22F0D5]">US</span>{" "}
+              · Multiplier:{" "}
+              <span className="font-mono text-[13px] text-[#22F0D5]">
+                {USA_ADVANTAGE_CLAUSE.multiplier} (10%)
+              </span>{" "}
+              · A US buyer pays{" "}
+              <span className="font-mono text-[13px] text-[#22F0D5]">$9.90</span> on a $99
+              product.
+            </p>
+            <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE]">
+              <span className="font-semibold text-[#F2F4F5]">Reasoning:</span>{" "}
+              {USA_ADVANTAGE_CLAUSE.reasoning}
+            </p>
+            <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+              ::published in · {USA_ADVANTAGE_CLAUSE.published}
+            </p>
+          </div>
+
+          {/* Strategic Tier Lift */}
+          <div className="mt-6 rounded-2xl border border-[#22F0D5]/30 bg-[#0A0F11] p-7">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+              ::doctrine 02 · Strategic Tier Lift
+            </p>
+            <h3 className="mt-3 text-xl font-medium tracking-tight text-[#F2F4F5] md:text-2xl">
+              Specific countries lifted above their World Bank tier.
+            </h3>
+            <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE]">
+              Active lifts:{" "}
+              {Object.entries(STRATEGIC_TIER_LIFT.lifts)
+                .map(
+                  ([cc, tier]) =>
+                    `${countryNameFor(cc)} (${cc}) · → Tier ${tier}`,
+                )
+                .join(" · ")}
+              . A buyer in a lifted country pays the price of the
+              tier they were lifted into, not the World Bank
+              classification tier.
+            </p>
+            <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE]">
+              <span className="font-semibold text-[#F2F4F5]">Reasoning:</span>{" "}
+              {STRATEGIC_TIER_LIFT.reasoning}
+            </p>
+            <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+              ::published in · {STRATEGIC_TIER_LIFT.published}
+            </p>
+          </div>
+
+          <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+            ::source · lib/pricing/doctrines.ts · adding a clause requires the same file + a /changelog entry
+          </p>
+        </div>
+      </section>
+
+      {/* HOW · BASE PRICE */}
+      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
+        <div className="mx-auto w-full max-w-3xl px-6">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::how · step 3 · per-product base price
           </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.1] tracking-tight md:text-4xl">
             Each product carries a Tier-1 anchor.
           </h2>
           <p className="mt-5 text-base leading-[1.7] text-[#C8CCCE] md:text-[17px]">
             The Tier-1 anchor is the price a high-income buyer pays.
-            Lower tiers pay the anchor times their tier&apos;s
-            multiplier. Per-country overrides can bypass the
-            multiplier for specific countries where the operator has
-            set an explicit anchor.
+            Lower tiers pay the anchor times the tier multiplier from
+            step 1. The named doctrines from step 2 override the
+            default for the specific countries they cover.
           </p>
 
           <table className="mt-10 w-full border-collapse text-sm md:text-[15px]">
@@ -170,7 +252,7 @@ export default function PricingTransparencyPage() {
               <tr>
                 <th className="border-b border-[#1A2225] py-3 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">Product</th>
                 <th className="border-b border-[#1A2225] py-3 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">Tier-1 anchor</th>
-                <th className="border-b border-[#1A2225] py-3 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">Per-country overrides</th>
+                <th className="border-b border-[#1A2225] py-3 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">Pricing path</th>
               </tr>
             </thead>
             <tbody>
@@ -183,11 +265,7 @@ export default function PricingTransparencyPage() {
                     ${(p.baseUsdCents / 100).toFixed(p.baseUsdCents % 100 === 0 ? 0 : 2)}
                   </td>
                   <td className="border-b border-[#1A2225] py-3 align-top text-[#C8CCCE] font-mono text-[11px]">
-                    {p.perCountryOverrides
-                      ? Object.entries(p.perCountryOverrides)
-                          .map(([cc, cents]) => `${countryNameFor(cc)} $${(cents / 100).toFixed(cents < 100 ? 2 : cents % 100 === 0 ? 0 : 2)}`)
-                          .join(" · ")
-                      : "none"}
+                    pure tier-driven + named doctrines
                   </td>
                 </tr>
               ))}
@@ -197,31 +275,34 @@ export default function PricingTransparencyPage() {
       </section>
 
       {/* HOW · FREE FLOOR */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
+      <section className="border-b border-[#1A2225] py-16 md:py-20">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::how · step 3 · the Stripe minimum floor (free for the floor)
+            ::how · step 4 · the Stripe minimum floor (free for the floor)
           </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.1] tracking-tight md:text-4xl">
             Below 50 cents, it&apos;s a gift.
           </h2>
-          <p className="mt-6 space-y-4 text-base leading-[1.7] text-[#C8CCCE] md:text-[17px]">
+          <p className="mt-6 text-base leading-[1.7] text-[#C8CCCE] md:text-[17px]">
             Stripe (the payment processor) has a minimum charge of
-            $0.50 USD on most cards. When the lab&apos;s fairness
-            mechanism produces a price below that floor — Somalia at
-            $0.01 is the canonical example — the lab does NOT round up
-            to the processor minimum. The buyer gets the product free.
-            This is consistent with the doctrine that the goal is
-            fairness, not extraction at the margin.
+            $0.50 USD on most cards. The lab&apos;s policy is that if
+            the fairness mechanism ever produces a price below that
+            floor, the buyer gets the product FREE — not rounded up.
+            Under current default multipliers (1.0x / 0.4x / 0.1x /
+            0.02x) and a $99 base, no country falls below $0.50, so the
+            doctrine sits as a published safeguard. It activates the
+            moment a future product&apos;s multiplier curve or a lower
+            base price produces a sub-floor result. The intent is
+            unchanged: fairness, not extraction at the margin.
           </p>
         </div>
       </section>
 
       {/* HOW · DETECTION */}
-      <section className="border-b border-[#1A2225] py-16 md:py-20">
+      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::how · step 4 · country detection
+            ::how · step 5 · country detection
           </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.1] tracking-tight md:text-4xl">
             IP geolocation, no fingerprinting.
@@ -257,7 +338,7 @@ export default function PricingTransparencyPage() {
       </section>
 
       {/* AUDIT YOUR OWN PRICE */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
+      <section className="border-b border-[#1A2225] py-16 md:py-20">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::audit · check your own price
@@ -272,17 +353,31 @@ export default function PricingTransparencyPage() {
 {`# default — detected from your IP
 curl https://atomeons.com/api/price/orangebox
 
-# explicit country override (testing)
-curl https://atomeons.com/api/price/orangebox?cc=IN
-curl https://atomeons.com/api/price/orangebox?cc=SO
-curl https://atomeons.com/api/price/orangebox?cc=GB`}
+# explicit country (testing)
+curl https://atomeons.com/api/price/orangebox?cc=GB   # tier default · $99
+curl https://atomeons.com/api/price/orangebox?cc=US   # USA Advantage Clause · $9.90
+curl https://atomeons.com/api/price/orangebox?cc=CN   # Strategic Tier Lift · $99
+curl https://atomeons.com/api/price/orangebox?cc=IN   # tier default · $9.90
+curl https://atomeons.com/api/price/orangebox?cc=SO   # tier default · $1.98`}
           </pre>
           <p className="mt-6 text-base leading-[1.65] text-[#C8CCCE]">
-            The JSON response shows the resolved price, the tier
-            applied, the multiplier, the source of the decision
-            (country override / tier default / free below minimum),
-            and the base list price. If you ever think the price is
-            wrong, the receipts are right there.
+            The JSON response includes the resolved price, the
+            effective tier (after any Strategic Tier Lift), the
+            multiplier applied, the source of the decision
+            (<code className="font-mono text-[12px] text-[#22F0D5]">tier_default</code>{" "}
+            ·{" "}
+            <code className="font-mono text-[12px] text-[#22F0D5]">usa_advantage_clause</code>{" "}
+            ·{" "}
+            <code className="font-mono text-[12px] text-[#22F0D5]">strategic_tier_lift</code>{" "}
+            ·{" "}
+            <code className="font-mono text-[12px] text-[#22F0D5]">free_below_min</code>),
+            and the base list price. Two boolean flags say plainly
+            whether a named clause applied:{" "}
+            <code className="font-mono text-[12px] text-[#22F0D5]">usaAdvantage</code>{" "}
+            and{" "}
+            <code className="font-mono text-[12px] text-[#22F0D5]">tierLifted</code>.
+            If you ever think the price is wrong, the receipts are right
+            there.
           </p>
         </div>
       </section>
@@ -300,7 +395,7 @@ curl https://atomeons.com/api/price/orangebox?cc=GB`}
             intended) under §4A — the covenant is about pricing
             MODEL (one-time vs. recurring), not pricing AMOUNT (USD
             vs. INR vs. KES). A high-income buyer at $99 and a
-            low-income buyer at $0.99 are both paying once, forever,
+            low-income buyer at $1.98 are both paying once, forever,
             for the same product, with the same source code, with
             the same update path. That&apos;s §4A.
           </p>

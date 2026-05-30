@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   title:
     "Dynamic World Pricing — fair-by-country software pricing · AtomEons",
   description:
-    "AtomEons paper on Dynamic World Pricing. Honest synthesis: PPP tiering + free-floor doctrine + public transparency + product-registry pattern + §4A no-saas integration. CC-BY 4.0. Implementation lives in lib/pricing/. Public mechanism. Crystal math. Ethos-first.",
+    "AtomEons paper on Dynamic World Pricing. Seven-doctrine synthesis: free-floor doctrine + USA Advantage Pricing Clause + Strategic Tier Lift + public mechanism + product registry + §4A compatibility + honest VPN posture. CC-BY 4.0. Implementation lives in lib/pricing/. Public mechanism. Crystal math. Ethos-first.",
   alternates: { canonical: "https://atomeons.com/dynamic-world-pricing" },
   openGraph: {
     title: "Dynamic World Pricing — AtomEons paper",
     description:
-      "Fair-by-country software pricing. Free-floor doctrine. Public mechanism. CC-BY 4.0. Lab ethos in math.",
+      "Fair-by-country software pricing. Seven named doctrines. USA Advantage Pricing Clause. Public mechanism. CC-BY 4.0.",
     url: "https://atomeons.com/dynamic-world-pricing",
     type: "article",
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dynamic World Pricing — AtomEons paper",
     description:
-      "Fair-by-country pricing. Free-floor doctrine. Public mechanism. CC-BY 4.0.",
+      "Fair-by-country pricing. USA Advantage Clause. Strategic Tier Lift. Seven doctrines. Public mechanism. CC-BY 4.0.",
   },
   robots: { index: true, follow: true },
 };
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Dynamic World Pricing — A Free-Floor Synthesis",
+  headline: "Dynamic World Pricing — A Seven-Doctrine Synthesis",
   description:
-    "AtomEons paper on fair-by-country software pricing. World Bank income tiers + free-floor doctrine + public transparency + product-registry pattern + §4A no-saas integration.",
+    "AtomEons paper on fair-by-country software pricing. World Bank income tiers + free-floor doctrine + USA Advantage Pricing Clause + Strategic Tier Lift + public mechanism + product registry + §4A no-saas compatibility + honest VPN posture.",
   datePublished: "2026-05-30",
   author: {
     "@type": "Organization",
@@ -127,10 +127,10 @@ export default function DynamicWorldPricingPaper() {
 
           <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
-              { l: "Tier 1 · UK", v: "$99" },
-              { l: "Tier 1 · US", v: "$9.99" },
-              { l: "Tier 3 · IN", v: "$0.99" },
-              { l: "Tier 4 · SO", v: "FREE" },
+              { l: "Tier 1 · UK", v: "$99", note: "tier default" },
+              { l: "USA Advantage · US", v: "$9.90", note: "named clause" },
+              { l: "Strategic Lift · CN", v: "$99", note: "WB T2 → T1" },
+              { l: "Tier 4 · SO", v: "$1.98", note: "tier default" },
             ].map((c) => (
               <div
                 key={c.l}
@@ -142,16 +142,22 @@ export default function DynamicWorldPricingPaper() {
                 <p className="mt-2 text-2xl font-semibold text-[#22F0D5] dwp-accent-cyan md:text-3xl">
                   {c.v}
                 </p>
+                <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.22em] text-[#6B7779]">
+                  {c.note}
+                </p>
               </div>
             ))}
           </div>
+          <p className="mt-4 max-w-xl font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+            ::pure tier-driven · two named doctrines · no opaque per-country numbers
+          </p>
 
           <p className="mt-12 max-w-2xl text-base leading-[1.65] text-[#9BA5A7]">
-            One product. One source. One update path. Four prices
-            calibrated to where the buyer lives, not what the lab can
-            extract. The mechanism is public, the floor is honest, the
-            implementation is reusable across every product the lab
-            ships.
+            One product. One source. One update path. Every price the
+            system charges traces to either the World Bank income tier
+            or a named, published, reviewable doctrine. The mechanism
+            is public, the floor is honest, the implementation is
+            reusable across every product the lab ships.
           </p>
 
           <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
@@ -254,10 +260,10 @@ export default function DynamicWorldPricingPaper() {
       <section className="dwp-section border-b border-[#1A2225] py-16 md:py-20">
         <div className="mx-auto w-full max-w-4xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5] dwp-accent-cyan">
-            ::03 · the synthesis · five components, named together
+            ::03 · the synthesis · seven components, named together
           </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.1] tracking-tight md:text-4xl">
-            Five doctrines, one system.
+            Seven doctrines, one system.
           </h2>
 
           <ol className="mt-12 space-y-8">
@@ -266,28 +272,40 @@ export default function DynamicWorldPricingPaper() {
                 num: "01",
                 title: "The Free-Floor Doctrine",
                 body:
-                  "When the fairness-adjusted price falls below the payment processor's minimum charge (Stripe USD $0.50), the buyer gets the product free — not rounded up. Most PPP implementations round up to the processor minimum at the bottom. We do the opposite. The doctrine is explicit: the goal is fairness, not extraction at the margin. Somalia at $0.01 becomes a gift, with a single line on the price card that says so.",
+                  "When the fairness-adjusted price falls below the payment processor's minimum charge (Stripe USD $0.50), the buyer gets the product free — not rounded up. Most PPP implementations round up to the processor minimum at the bottom. We do the opposite. The doctrine is explicit: the goal is fairness, not extraction at the margin. Under current multipliers no live country lands below $0.50, so the doctrine sits as a published safeguard — invoked the moment a future product or multiplier curve produces a sub-floor result.",
               },
               {
                 num: "02",
-                title: "The Public Mechanism",
+                title: "The USA Advantage Pricing Clause",
                 body:
-                  "Most software with regional pricing hides the mechanism behind a tooltip and an opaque support article. We put the entire pricing mechanism on a public page (/legal/pricing) — the tier table, the per-product anchor table, the per-country override list, the free-floor policy, the IP-geolocation detection method. Any buyer can curl /api/price/<product> from any terminal and see exactly why they got the price they got, structured JSON with the tier, the multiplier, the source of the decision, the base list price.",
+                  "Operator-declared, mission-aligned, named in code (USA_ADVANTAGE_CLAUSE in lib/pricing/doctrines.ts). US buyers pay 10% of the Tier 1 anchor — $9.90 on a $99 product. Reasoning is published: the lab's stated mission frame is the 44 million US workers whose jobs are exposed to AI displacement in the next decade. The US is the lab's home market and primary onboarding target. The clause accepts ~$90 of per-buyer margin in exchange for an order of magnitude more US adoption. Not a per-country override hidden in a data file — a public clause with a name, a scope, a reason, and a revocation path through /changelog.",
               },
               {
                 num: "03",
-                title: "The Product Registry",
+                title: "Strategic Tier Lift",
                 body:
-                  "Most PPP-pricing implementations are one-off. Each product gets its own integration, its own per-country list, its own bespoke logic. We built it once as a registry — a single TypeScript file (lib/pricing/products.ts) where adding a new product (B00KMakor, Video Shop, future SKUs) is one entry: id, base price, optional per-country overrides. Every downstream surface (API endpoint, display component, transparency page, checkout) reads from the same registry. The system scales by file edit, not by code change.",
+                  "Specific countries are lifted ABOVE their World Bank income classification for stated strategic reasons. China is the canonical example: World Bank Tier 2 (Upper-Middle-Income) → lifted to Tier 1 ($99) for pricing purposes. Reasoning is published: state-backed adversarial markets pay the high-income anchor regardless of GNI per capita classification. The fairness mechanism is calibrated for INDIVIDUAL buyers in lower-income economies, not for buyers operating inside a state-backed economic posture with substantial capital access. The lift is explicit, named, public, and reviewable — adding or removing a country happens in one file with a stated reason that survives in /changelog.",
               },
               {
                 num: "04",
-                title: "The §4A Compatibility Statement",
+                title: "The Public Mechanism",
                 body:
-                  "The lab's License §4A no-saas covenant binds it to never move any one-time-priced product to a subscription model. Per-country pricing has historically been confused with subscription-style pricing because both vary the price at runtime. We make the distinction explicit and public: §4A is about pricing MODEL (one-time vs. recurring), not pricing AMOUNT (USD vs. INR vs. KES). A buyer at $99 and a buyer at $0.99 are both paying ONCE, FOREVER, for the same product. The covenant survives the fairness mechanism without modification.",
+                  "Most software with regional pricing hides the mechanism behind a tooltip and an opaque support article. We put the entire pricing mechanism on a public page (/legal/pricing) — the tier table, the per-product anchor table, the named doctrines and their reasoning, the free-floor policy, the IP-geolocation detection method. Any buyer can curl /api/price/<product> from any terminal and see exactly why they got the price they got, structured JSON with the tier, the multiplier, the source of the decision, whether a named clause applied.",
               },
               {
                 num: "05",
+                title: "The Product Registry",
+                body:
+                  "Most PPP-pricing implementations are one-off. Each product gets its own integration, its own per-country list, its own bespoke logic. We built it once as a registry — a single TypeScript file (lib/pricing/products.ts) where adding a new product (B00KMakor, Video Shop, future SKUs) is one entry: id, base price, optional tier-multiplier curve. Every downstream surface (API endpoint, display component, transparency page, checkout) reads from the same registry. The named doctrines live in a sibling file (lib/pricing/doctrines.ts) and apply to every product automatically. The system scales by file edit, not by code change.",
+              },
+              {
+                num: "06",
+                title: "The §4A Compatibility Statement",
+                body:
+                  "The lab's License §4A no-saas covenant binds it to never move any one-time-priced product to a subscription model. Per-country pricing has historically been confused with subscription-style pricing because both vary the price at runtime. We make the distinction explicit and public: §4A is about pricing MODEL (one-time vs. recurring), not pricing AMOUNT (USD vs. INR vs. KES). A buyer at $99 and a buyer at $1.98 are both paying ONCE, FOREVER, for the same product. The covenant survives the fairness mechanism without modification.",
+              },
+              {
+                num: "07",
                 title: "The Honest VPN Posture",
                 body:
                   "Every PPP-pricing tool in the market is preoccupied with VPN-detection and abuse mitigation. Some of them spend more engineering on abuse prevention than on the fairness logic itself. We do not detect VPNs. The stated posture in /legal/pricing is that modest abuse by edge-case VPN users is the acceptable cost of broad accessibility. The fairness mechanism is calibrated for the population that genuinely lives in lower-income countries; trying to fence out the small subset of high-income VPN users would penalize the population the system was built for.",
@@ -323,7 +341,7 @@ export default function DynamicWorldPricingPaper() {
             ::04 · the math · what ORANGEBOX costs by country, today
           </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.1] tracking-tight md:text-4xl">
-            One product. Four prices. One mechanism.
+            One product. Eight countries. One mechanism, two clauses.
           </h2>
 
           <div className="dwp-card mt-10 overflow-x-auto rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-8">
@@ -354,8 +372,14 @@ export default function DynamicWorldPricingPaper() {
                 <tr>
                   <td className="border-b border-[#1A2225] py-3">United States</td>
                   <td className="border-b border-[#1A2225] py-3">1 · High-income</td>
-                  <td className="border-b border-[#1A2225] py-3">country override</td>
-                  <td className="border-b border-[#1A2225] py-3 text-right text-[#22F0D5] dwp-accent-cyan">$9.99</td>
+                  <td className="border-b border-[#1A2225] py-3 text-[#FFB87A] dwp-accent-orange">USA Advantage Clause · 0.10x base</td>
+                  <td className="border-b border-[#1A2225] py-3 text-right text-[#FFB87A] dwp-accent-orange font-semibold">$9.90</td>
+                </tr>
+                <tr>
+                  <td className="border-b border-[#1A2225] py-3">China</td>
+                  <td className="border-b border-[#1A2225] py-3">1 · High-income (lifted)</td>
+                  <td className="border-b border-[#1A2225] py-3 text-[#FFB87A] dwp-accent-orange">Strategic Tier Lift · WB T2 → T1 · 1.00x base</td>
+                  <td className="border-b border-[#1A2225] py-3 text-right text-[#FFB87A] dwp-accent-orange font-semibold">$99</td>
                 </tr>
                 <tr>
                   <td className="border-b border-[#1A2225] py-3">Brazil</td>
@@ -366,8 +390,8 @@ export default function DynamicWorldPricingPaper() {
                 <tr>
                   <td className="border-b border-[#1A2225] py-3">India</td>
                   <td className="border-b border-[#1A2225] py-3">3 · Lower-middle</td>
-                  <td className="border-b border-[#1A2225] py-3">country override</td>
-                  <td className="border-b border-[#1A2225] py-3 text-right text-[#22F0D5] dwp-accent-cyan">$0.99</td>
+                  <td className="border-b border-[#1A2225] py-3">tier default · 0.10x base</td>
+                  <td className="border-b border-[#1A2225] py-3 text-right text-[#22F0D5] dwp-accent-cyan">$9.90</td>
                 </tr>
                 <tr>
                   <td className="border-b border-[#1A2225] py-3">Bangladesh</td>
@@ -384,23 +408,24 @@ export default function DynamicWorldPricingPaper() {
                 <tr>
                   <td className="py-3">Somalia</td>
                   <td className="py-3">4 · Low-income</td>
-                  <td className="py-3">country override → free-floor (&lt; $0.50)</td>
-                  <td className="py-3 text-right text-[#FFB87A] dwp-accent-orange font-semibold">FREE</td>
+                  <td className="py-3">tier default · 0.02x base</td>
+                  <td className="py-3 text-right text-[#22F0D5] dwp-accent-cyan">$1.98</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <p className="mt-8 text-base leading-[1.7] text-[#C8CCCE] md:text-[17px]">
-            All seven entries above are live as of this paper&apos;s
-            publication. A reader can verify any of them from any
-            terminal:
+            All eight entries above are live as of this paper&apos;s
+            publication. A reader can verify any of them — including
+            the named-doctrine cases — from any terminal:
           </p>
           <pre className="dwp-card mt-5 overflow-x-auto rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 font-mono text-[12px] leading-[1.6] text-[#22F0D5] dwp-accent-cyan md:text-[13px]">
-{`curl https://atomeons.com/api/price/orangebox?cc=GB
-curl https://atomeons.com/api/price/orangebox?cc=US
-curl https://atomeons.com/api/price/orangebox?cc=IN
-curl https://atomeons.com/api/price/orangebox?cc=SO`}
+{`curl https://atomeons.com/api/price/orangebox?cc=GB   # tier default · $99
+curl https://atomeons.com/api/price/orangebox?cc=US   # USA Advantage Clause · $9.90
+curl https://atomeons.com/api/price/orangebox?cc=CN   # Strategic Tier Lift · $99
+curl https://atomeons.com/api/price/orangebox?cc=IN   # tier default · $9.90
+curl https://atomeons.com/api/price/orangebox?cc=SO   # tier default · $1.98`}
           </pre>
         </div>
       </section>
@@ -438,41 +463,55 @@ curl https://atomeons.com/api/price/orangebox?cc=SO`}
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr>
-                  <th className="border-b border-[#1A2225] py-2 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] dwp-accent-cyan">Tier</th>
+                  <th className="border-b border-[#1A2225] py-2 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] dwp-accent-cyan">Source</th>
                   <th className="border-b border-[#1A2225] py-2 text-right font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] dwp-accent-cyan">Price</th>
                   <th className="border-b border-[#1A2225] py-2 text-right font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] dwp-accent-cyan">Stripe fee (2.9%+$0.30)</th>
                   <th className="border-b border-[#1A2225] py-2 text-right font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] dwp-accent-cyan">Net to lab</th>
-                  <th className="border-b border-[#1A2225] py-2 text-right font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] dwp-accent-cyan">Buyers needed to fund 1 Tier-4 country</th>
+                  <th className="border-b border-[#1A2225] py-2 text-right font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] dwp-accent-cyan">Server cost per buyer (~$0.95)</th>
                 </tr>
               </thead>
               <tbody className="font-mono text-[12px] text-[#C8CCCE]">
                 <tr>
-                  <td className="border-b border-[#1A2225] py-2">1 · GB default $99</td>
+                  <td className="border-b border-[#1A2225] py-2">GB · Tier 1 default</td>
                   <td className="border-b border-[#1A2225] py-2 text-right">$99.00</td>
                   <td className="border-b border-[#1A2225] py-2 text-right">$3.17</td>
                   <td className="border-b border-[#1A2225] py-2 text-right text-[#22F0D5] dwp-accent-cyan">$95.83</td>
-                  <td className="border-b border-[#1A2225] py-2 text-right">~1 buyer</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">funds ~100 buyers</td>
                 </tr>
                 <tr>
-                  <td className="border-b border-[#1A2225] py-2">1 · US override $9.99</td>
-                  <td className="border-b border-[#1A2225] py-2 text-right">$9.99</td>
+                  <td className="border-b border-[#1A2225] py-2">US · USA Advantage Clause</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">$9.90</td>
                   <td className="border-b border-[#1A2225] py-2 text-right">$0.59</td>
-                  <td className="border-b border-[#1A2225] py-2 text-right text-[#22F0D5] dwp-accent-cyan">$9.40</td>
-                  <td className="border-b border-[#1A2225] py-2 text-right">~11 buyers</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right text-[#22F0D5] dwp-accent-cyan">$9.31</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">funds ~9 buyers</td>
                 </tr>
                 <tr>
-                  <td className="border-b border-[#1A2225] py-2">2 · BR default $39.60</td>
+                  <td className="border-b border-[#1A2225] py-2">CN · Strategic Tier Lift</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">$99.00</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">$3.17</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right text-[#22F0D5] dwp-accent-cyan">$95.83</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">funds ~100 buyers</td>
+                </tr>
+                <tr>
+                  <td className="border-b border-[#1A2225] py-2">BR · Tier 2 default</td>
                   <td className="border-b border-[#1A2225] py-2 text-right">$39.60</td>
                   <td className="border-b border-[#1A2225] py-2 text-right">$1.45</td>
                   <td className="border-b border-[#1A2225] py-2 text-right text-[#22F0D5] dwp-accent-cyan">$38.15</td>
-                  <td className="border-b border-[#1A2225] py-2 text-right">~3 buyers</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">funds ~40 buyers</td>
                 </tr>
                 <tr>
-                  <td className="py-2">3 · IN override $0.99</td>
-                  <td className="py-2 text-right">$0.99</td>
-                  <td className="py-2 text-right">$0.33</td>
-                  <td className="py-2 text-right text-[#FFB87A] dwp-accent-orange">$0.66</td>
-                  <td className="py-2 text-right">~150 buyers</td>
+                  <td className="border-b border-[#1A2225] py-2">IN · Tier 3 default</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">$9.90</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">$0.59</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right text-[#22F0D5] dwp-accent-cyan">$9.31</td>
+                  <td className="border-b border-[#1A2225] py-2 text-right">funds ~9 buyers</td>
+                </tr>
+                <tr>
+                  <td className="py-2">SO · Tier 4 default</td>
+                  <td className="py-2 text-right">$1.98</td>
+                  <td className="py-2 text-right">$0.36</td>
+                  <td className="py-2 text-right text-[#FFB87A] dwp-accent-orange">$1.62</td>
+                  <td className="py-2 text-right">covers itself + ~70¢</td>
                 </tr>
               </tbody>
             </table>
@@ -480,37 +519,64 @@ curl https://atomeons.com/api/price/orangebox?cc=SO`}
           <p className="mt-5 text-[15px] leading-[1.7] text-[#C8CCCE] md:text-base">
             A single UK Tier-1 buyer at $99 nets $95.83 after Stripe
             fees — enough infrastructure margin to fund roughly 100
-            Somalia buyers at the free-floor (server cost ≈ $0.95 per
-            buyer for the static download path). The system is not
-            burning money on the bottom; it&apos;s subsidizing access
-            with the top, the way an airline funds basic-economy
-            seats with first-class margin.
+            Tier-4 buyers at the server-cost floor (~$0.95 per buyer
+            for the static download path). Under current multipliers
+            every tier covers its own server cost — the system is not
+            burning money on the bottom; it&apos;s charging proportional
+            access, the way an airline funds basic-economy seats with
+            first-class margin while still selling basic-economy at a
+            real price.
           </p>
 
-          {/* 5b · who pays what */}
+          {/* 5b · the USA Advantage Pricing Clause */}
           <h3 className="mt-12 text-xl font-medium tracking-tight text-[#F2F4F5] md:text-2xl">
-            5b · Why the US gets the $9.99 override and the UK doesn&apos;t
+            5b · The USA Advantage Pricing Clause
           </h3>
           <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE] md:text-base">
-            Operator anchor decision, not a tier-system output. The US
-            and the UK are both World Bank Tier 1, both default to $99
-            under the tier-multiplier system. The US override to $9.99
-            is a deliberate market-access decision by the lab: the AI
-            displacement frame is centered on the 44 million US
-            workers whose jobs are exposed in the next decade, and the
-            lab&apos;s mission is to reach them. The override accepts
-            ~$90 of margin per US buyer in exchange for an order of
-            magnitude more US adoption. The UK default holds the
-            $99 anchor because that&apos;s the price where the per-buyer
-            economics actually fund the system.
+            Operator-declared, named in code, published as policy. The
+            US and the UK are both World Bank Tier 1 and default to
+            $99 under the tier-multiplier system. The USA Advantage
+            Clause overrides that default for US buyers specifically:
+            <span className="font-semibold text-[#F2F4F5]">{" "}US buyers pay 10% of the Tier 1 anchor</span> —
+            $9.90 on a $99 product. The reasoning is published
+            verbatim in{" "}
+            <code className="font-mono text-[#22F0D5] dwp-accent-cyan">lib/pricing/doctrines.ts</code>:
+            the lab&apos;s stated mission frame is the 44 million US
+            workers whose jobs are exposed to AI displacement in the
+            next decade. The US is the lab&apos;s home market and primary
+            onboarding target. The clause accepts ~$90 of per-buyer
+            margin in exchange for an order of magnitude more US
+            adoption.
           </p>
           <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE] md:text-base">
-            This is the kind of decision the override system was
-            built to allow. The tier defaults handle 220+ countries
-            with one mechanism. The overrides handle the
-            ten-or-so countries where the operator has a strategic
-            reason to deviate. The mechanism stays simple; the
-            judgment stays operator-side.
+            The clause has a name, a scope (US only), a multiplier
+            (0.1), and a published reason. Adding the clause to the
+            system was one file, one entry. Retiring it — if mission
+            alignment ever changes — is the same: edit the file, log
+            the change in /changelog. There is no opaque override
+            mechanism in the data files; geopolitical pricing decisions
+            live as named clauses in doctrines.ts where they survive
+            review.
+          </p>
+          <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE] md:text-base">
+            The inverse companion clause is{" "}
+            <span className="font-semibold text-[#F2F4F5]">Strategic Tier Lift</span>: specific
+            countries lifted ABOVE their World Bank classification for
+            stated reasons. China currently sits there — World Bank
+            Tier 2 (Upper-Middle-Income) but priced as Tier 1 ($99) for
+            the lab&apos;s purposes. The reasoning is also published:
+            state-backed adversarial markets pay the anchor price; the
+            fairness mechanism is calibrated for individual buyers in
+            lower-income economies, not for buyers operating inside a
+            state-backed economic posture.
+          </p>
+          <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE] md:text-base">
+            Two named clauses, both public, both reviewable, both with
+            scope so narrow they don&apos;t pollute the rest of the
+            system. The tier defaults handle 220+ countries with one
+            mechanism. The two clauses handle the specific geopolitical
+            decisions the operator has chosen to publish. The mechanism
+            stays simple; the judgment stays named and visible.
           </p>
 
           {/* 5c · enforcement */}
@@ -566,8 +632,10 @@ curl https://atomeons.com/api/price/orangebox?cc=SO`}
             is 4–8 countries crossing tier boundaries (e.g., a
             country moving from upper-middle to high-income). The
             maintenance cost is roughly 30 minutes per year, plus
-            an operator review of any per-country overrides that no
-            longer make sense.
+            an operator review of the named doctrines in{" "}
+            <code className="font-mono text-[#22F0D5] dwp-accent-cyan">lib/pricing/doctrines.ts</code>{" "}
+            to confirm USA Advantage Clause and Strategic Tier Lift
+            still align with stated mission and posture.
           </p>
 
           {/* 5e · failure modes */}
@@ -643,12 +711,13 @@ curl https://atomeons.com/api/price/orangebox?cc=SO`}
               <span className="font-semibold text-[#F2F4F5]">Clause 01 — receipts over slogans.</span>{" "}
               Every price the system charges is curl-auditable from
               any terminal. The transparency page (/legal/pricing)
-              shows the full mechanism, the actual tier multipliers,
-              the actual per-country overrides, the free-floor
-              policy, the IP-detection method. If a buyer wants to
-              know exactly why they were charged what they were
-              charged, the answer is in the JSON, not in a support
-              ticket queue.
+              shows the full mechanism: the actual tier multipliers,
+              the two named doctrines (USA Advantage Clause and
+              Strategic Tier Lift) with their published reasoning, the
+              free-floor policy, the IP-detection method. If a buyer
+              wants to know exactly why they were charged what they
+              were charged, the answer is in the JSON response, not in
+              a support ticket queue.
             </p>
             <p>
               <span className="font-semibold text-[#F2F4F5]">Clause 13 — falsifiability.</span>{" "}
@@ -658,9 +727,12 @@ curl https://atomeons.com/api/price/orangebox?cc=SO`}
               World Bank&apos;s, the file is wrong and gets fixed.
               The free-floor is the Stripe documented minimum; if
               Stripe changes that minimum, the constant in code
-              updates. The synthesis is original; if a reader finds a
-              prior published combination of these five components
-              named together as a doctrine, the paper retracts the
+              updates. The two named doctrines are published with
+              their reasoning; if mission alignment shifts, the
+              doctrines are retired publicly via /changelog. The
+              synthesis is original; if a reader finds a prior
+              published combination of these seven components named
+              together as a doctrine, the paper retracts the
               originality claim.
             </p>
           </div>
@@ -690,8 +762,8 @@ curl https://atomeons.com/api/price/orangebox?cc=SO`}
               reference. That is the entire license cost.
             </p>
             <p>
-              If you build on top of the five doctrines and add a
-              sixth — a refinement, a variant, a contradiction — the
+              If you build on top of the seven doctrines and add an
+              eighth — a refinement, a variant, a contradiction — the
               lab wants to know. Email{" "}
               <a
                 href="mailto:a.mccree@gmail.com?subject=Dynamic%20World%20Pricing%20extension"
@@ -738,7 +810,8 @@ curl https://atomeons.com/api/price/orangebox?cc=SO`}
           </p>
           <pre className="dwp-card mt-5 overflow-x-auto rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 font-mono text-[12px] leading-[1.6] text-[#C8CCCE]">
 {`McCree, A. & Claude Opus 4.7 (Anthropic). (2026, May).
-  Dynamic World Pricing — A Free-Floor Synthesis.
+  Dynamic World Pricing — A Seven-Doctrine Synthesis
+    (incl. USA Advantage Pricing Clause).
   AtomEons Systems Laboratory.
   https://atomeons.com/dynamic-world-pricing
   License: CC-BY 4.0`}

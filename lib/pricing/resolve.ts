@@ -3,25 +3,36 @@ import {
   getProduct,
   DEFAULT_TIER_MULTIPLIERS,
   STRIPE_USD_MIN_CENTS,
-  type Product,
 } from "./products";
+import {
+  USA_ADVANTAGE_CLAUSE,
+  effectiveTierFor,
+  isUsaAdvantage,
+} from "./doctrines";
 
 /**
  * Price resolution — the single function downstream code calls.
  *
- *   resolvePrice("orangebox", "IN")  →  { usdCents: 99, tier: 3, free: false, ... }
- *   resolvePrice("orangebox", "SO")  →  { usdCents: 0, tier: 4, free: true,  ... }
- *   resolvePrice("orangebox", "US")  →  { usdCents: 999, tier: 1, free: false, ... }
- *   resolvePrice("orangebox", null)  →  { usdCents: 9900, tier: 1, free: false, ... }
+ *   resolvePrice("orangebox", "GB") → { usdCents: 9900, tier: 1,
+ *                                       source: "tier_default", … }      // UK · Tier 1 default
+ *   resolvePrice("orangebox", "US") → { usdCents:  990, tier: 1,
+ *                                       source: "usa_advantage_clause",
+ *                                       usaAdvantage: true, … }          // USA Advantage Clause
+ *   resolvePrice("orangebox", "CN") → { usdCents: 9900, tier: 1,
+ *                                       source: "strategic_tier_lift",
+ *                                       tierLifted: true, … }            // China · lifted WB Tier 2 → 1
+ *   resolvePrice("orangebox", "IN") → { usdCents:  990, tier: 3, … }     // India · Tier 3 default
+ *   resolvePrice("orangebox", "SO") → { usdCents:  198, tier: 4, … }     // Somalia · Tier 4 default
+ *   resolvePrice("orangebox", null) → { usdCents: 9900, tier: 1, … }     // Unknown → Tier 1
  *
- * The same call is made by:
- *   - /api/price/[productId]      (server-side, with Vercel geolocation header)
- *   - /api/checkout/[productId]   (server-side, with Stripe customer country)
- *   - <PriceTag productId>        (client-side, via fetch to /api/price)
+ * Called by:
+ *   - /api/price/[productId]      (server, Vercel geolocation header)
+ *   - /api/checkout/[productId]   (server, Stripe customer country)
+ *   - <PriceTag productId>        (client, via fetch to /api/price)
  *
  * Returns a structured result rather than just a number so every caller
- * can render the same transparency UI (tier name, country name, why this
- * price, "rounded up to processor minimum" / "below minimum → free").
+ * renders the same transparency UI: tier, country, source of decision,
+ * which named doctrine applied (if any), free-floor flag.
  */
 
 export type PriceResolution = {
@@ -45,7 +56,17 @@ export type PriceResolution = {
   appliedMultiplier: number;
 
   /** Source of the price decision. */
-  source: "country_override" | "tier_default" | "tier_override" | "rounded_up" | "free_below_min";
+  source:
+    | "tier_default"
+    | "tier_override"
+    | "usa_advantage_clause"
+    | "strategic_tier_lift"
+    | "free_below_min";
+
+  /** True if the World Bank tier was lifted by Strategic Tier Lift doctrine. */
+  tierLifted: boolean;
+  /** True if USA Advantage Clause applied to this resolution. */
+  usaAdvantage: boolean;
 
   /** True if final charge would be < Stripe min and gets gifted free. */
   free: boolean;
@@ -92,6 +113,8 @@ export function resolvePrice(
       displayBaseUsd: "—",
       appliedMultiplier: 0,
       source: "tier_default",
+      tierLifted: false,
+      usaAdvantage: false,
       free: false,
       unknownCountry: true,
       ok: false,
@@ -99,31 +122,46 @@ export function resolvePrice(
   }
 
   const cc = countryCode?.toUpperCase() ?? null;
-  const tier = tierFor(cc);
   const baseCents = product.baseUsdCents;
   const minCents = product.minimumChargeCents ?? STRIPE_USD_MIN_CENTS;
 
+  // 1. WORLD BANK TIER — starting point.
+  const worldBankTier = tierFor(cc);
+
+  // 2. STRATEGIC TIER LIFT DOCTRINE — specific countries lifted above
+  //    their World Bank tier for stated strategic reasons. China is
+  //    the canonical example: WB Tier 2 → lifted to Tier 1.
+  const effectiveTier = effectiveTierFor(cc, worldBankTier);
+  const tierLifted = effectiveTier !== worldBankTier;
+
+  // 3. PRICING — two doctrine paths + the default tier path.
   let finalCents: number;
   let multiplier: number;
   let source: PriceResolution["source"];
+  let usaAdvantage = false;
 
-  // 1. Per-country override wins
-  const override = cc ? product.perCountryOverrides?.[cc] : undefined;
-  if (override !== undefined) {
-    finalCents = override;
-    multiplier = override / baseCents;
-    source = "country_override";
+  if (isUsaAdvantage(cc)) {
+    // USA ADVANTAGE CLAUSE — Tier 1 anchor × USA Advantage multiplier (0.1).
+    // US is naturally Tier 1, so this is a 10x discount on the anchor.
+    multiplier = USA_ADVANTAGE_CLAUSE.multiplier;
+    finalCents = Math.round(baseCents * multiplier);
+    source = "usa_advantage_clause";
+    usaAdvantage = true;
+  } else if (product.tierMultipliers?.[effectiveTier] !== undefined) {
+    // Per-product tier multiplier override (rare).
+    multiplier = product.tierMultipliers[effectiveTier] as number;
+    finalCents = Math.round(baseCents * multiplier);
+    source = tierLifted ? "strategic_tier_lift" : "tier_override";
   } else {
-    // 2. Tier multiplier (per-product override OR default)
-    const tierMult =
-      product.tierMultipliers?.[tier] ?? DEFAULT_TIER_MULTIPLIERS[tier];
-    multiplier = tierMult;
-    finalCents = Math.round(baseCents * tierMult);
-    source = product.tierMultipliers?.[tier] !== undefined ? "tier_override" : "tier_default";
+    // Default tier multiplier.
+    multiplier = DEFAULT_TIER_MULTIPLIERS[effectiveTier];
+    finalCents = Math.round(baseCents * multiplier);
+    source = tierLifted ? "strategic_tier_lift" : "tier_default";
   }
 
-  // 3. Apply Stripe minimum floor — below min becomes FREE (not rounded up,
-  // because the operator's stated philosophy is fairness, not extraction).
+  // 4. STRIPE FREE-FLOOR — defensive safeguard. Under current defaults
+  //    (1.0/0.4/0.1/0.02 × $99 base) no country falls below $0.50; the
+  //    branch remains for future multiplier changes or low-base products.
   let free = false;
   if (finalCents > 0 && finalCents < minCents) {
     free = true;
@@ -136,14 +174,16 @@ export function resolvePrice(
     productName: product.name,
     countryCode: cc,
     countryName: countryNameFor(cc),
-    tier,
-    tierLabel: TIER_LABELS[tier],
+    tier: effectiveTier,
+    tierLabel: TIER_LABELS[effectiveTier],
     usdCents: finalCents,
     displayUsd: formatUsd(finalCents),
     baseUsdCents: baseCents,
     displayBaseUsd: formatUsd(baseCents),
     appliedMultiplier: multiplier,
     source,
+    tierLifted,
+    usaAdvantage,
     free,
     unknownCountry: !cc,
     ok: true,

@@ -63,6 +63,25 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-30",
+    tag: "dwp-doctrine-refactor",
+    kind: "research",
+    title:
+      "Dynamic World Pricing — public paper + doctrine refactor (USA Advantage Pricing Clause + Strategic Tier Lift)",
+    surfaces: [
+      "app/dynamic-world-pricing/page.tsx (NEW · public marketing paper · 7 doctrines · ~700 lines)",
+      "app/dynamic-world-pricing/PrintButton.tsx (NEW · window.print() trigger)",
+      "lib/pricing/doctrines.ts (NEW · USA_ADVANTAGE_CLAUSE + STRATEGIC_TIER_LIFT)",
+      "lib/pricing/products.ts (perCountryOverrides REMOVED · ORANGEBOX entry cleaned)",
+      "lib/pricing/resolve.ts (override path REMOVED · doctrine application path ADDED · returns usaAdvantage + tierLifted flags)",
+      "lib/pricing/README.md (REWRITTEN · doctrines documented · adding-product workflow updated)",
+      "app/legal/pricing/page.tsx (Named Doctrines section added · per-country override table removed)",
+      "app/sitemap.ts (+/dynamic-world-pricing priority 0.88)",
+    ],
+    body:
+      "Operator directive sequence 2026-05-30: 'AtomEons paper on Dynamic World Pricing — how it's our idea where original, ethos-tied' → 'public marketing doc PDF' → 'reference this concept in the paper · CEO-grade' → 'this is incorrect, no country override that is the glitch · all your system mine were random numbers, concept only' → 'I do like US at a 10x global first world competition · China is 99' → 'USA Advantage Pricing Clause.' Refactored the entire pricing system to remove the opaque per-country override mechanism and replace it with TWO NAMED, PUBLIC, REASONED DOCTRINES living in lib/pricing/doctrines.ts: (1) USA Advantage Pricing Clause — US buyers pay 10% of the Tier 1 anchor (multiplier 0.1, $99 → $9.90). Mission-aligned with the 44M displaced-worker frame. (2) Strategic Tier Lift — specific countries lifted above their World Bank classification for stated strategic reasons. China currently lifted from WB Tier 2 → Tier 1 ($99); state-backed adversarial-market reasoning. Both doctrines have a NAME, a SCOPE, a MULTIPLIER, a published REASON, and a /changelog-tracked revocation path. Adding or removing a country happens in one file. resolvePrice() now applies doctrines explicitly: source enum becomes tier_default / tier_override / usa_advantage_clause / strategic_tier_lift / free_below_min, plus boolean flags usaAdvantage + tierLifted so the API response tells the buyer plainly which named clause applied. Public marketing paper at /dynamic-world-pricing rebuilt around 7 doctrines (Free-Floor · USA Advantage Clause · Strategic Tier Lift · Public Mechanism · Product Registry · §4A Compatibility · Honest VPN Posture), with cover cards showing UK $99 · US $9.90 · CN $99 · SO $1.98, math table covering 8 country cases with named-source attribution, CEO-grade operations brief (5a cross-subsidization, 5b USA Advantage Pricing Clause explained, 5c enforcement, 5d annual maintenance, 5e four failure modes), ethos section tying to manifesto clauses 04/01/13, citation block under CC-BY 4.0. /legal/pricing transparency page rewritten with explicit Named Country Doctrines section showing both clauses + their reasoning, per-country override section removed. lib/pricing/README.md rewritten to document the doctrine-based system as the public workflow. The system is now: pure tier-driven defaults for ~95% of countries (no per-country thinking), plus two named doctrines for the geopolitical decisions the operator has chosen to publish. No opaque overrides anywhere.",
+  },
+  {
+    date: "2026-05-30",
     tag: "ppp-pricing-system",
     kind: "product",
     title:
