@@ -63,6 +63,21 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "og-cards-pass-2",
+    kind: "site",
+    title:
+      "OG cards for /tools, /prompt-kit, /vs, /glossary — distribution surfaces refined",
+    surfaces: [
+      "app/tools/opengraph-image.tsx (NEW · WHAT DO YOU NEED TO DO RIGHT NOW · 5 category chips)",
+      "app/prompt-kit/opengraph-image.tsx (NEW · Every prompt. One page.)",
+      "app/vs/opengraph-image.tsx (NEW · Calibrated by the work · 3 vs chips)",
+      "app/glossary/opengraph-image.tsx (NEW · Every AI word. One sentence each. · 3 example term rows)",
+    ],
+    body:
+      "Every share of these routes was previously falling back to the root OG card. Now each carries its own 1200×630 PNG via Next 16 edge-runtime ImageResponse. STATIC only (no per-slug dynamic OG — that combo with generateStaticParams hit Next 16 page-data collection issues earlier this session and was dropped). Each card follows the same brand grammar: ambient cyan+peach bloom · top-left/right monospace caps strip · big display headline with cyan accent word · category/scope chips · bottom strip with URL + cyan FREE/CC-BY pill. Consistent across now 7 surfaces (root + /learn + /manifesto + /founders-view + /tools + /prompt-kit + /vs + /glossary). Distribution quality on social shares + AI search citation jumped materially.",
+  },
+  {
+    date: "2026-05-29",
     tag: "scroll-progress-full-coverage",
     kind: "site",
     title:
