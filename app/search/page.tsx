@@ -73,6 +73,14 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         badge: "27 prompts · cc-by 4.0",
       },
       {
+        href: "/glossary",
+        title: "/glossary — every AI word in plain English",
+        description:
+          "Twenty-six AI terms with one-sentence plain-English definitions. LLM, prompt, hallucination, token, context window, agent, MCP, RAG, RLHF, embedding, chain-of-thought, few-shot, fine-tuning, multimodal, jailbreak, AGI, temperature, API key, quantization, vibe coding, and more. No condescension. No jargon-on-jargon. CC-BY 4.0. DefinedTermSet JSON-LD for AI-search ingestion.",
+        keywords: ["glossary", "AI glossary", "AI terms", "AI dictionary", "AI definitions", "what is LLM", "what is RAG", "what is MCP", "plain english AI", "AI vocabulary"],
+        badge: "26 terms · plain english",
+      },
+      {
         href: "/ai",
         title: "/ai — the comprehensive AI gateway",
         description:

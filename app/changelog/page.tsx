@@ -63,6 +63,24 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "design-system-pass",
+    kind: "site",
+    title:
+      "Design-system primitives (LabHero + LabSection) · /glossary NEW route · plain-English commitment surfaces",
+    surfaces: [
+      "app/_components/v2/LabHero.tsx (NEW · canonical hero rhythm)",
+      "app/_components/v2/LabSection.tsx (NEW · borderless section rhythm)",
+      "app/_components/v2/HomeOnboardStrip.tsx (refactored to LabHero)",
+      "app/_data/glossary.ts (NEW · shared data, 26 terms incl. 6 new: chain-of-thought, few-shot, RLHF, temperature, API key, quantization, vibe coding)",
+      "app/glossary/page.tsx (NEW · standalone glossary surface)",
+      "app/start/page.tsx (GLOSSARY moved to shared data, imports from there)",
+      "app/sitemap.ts · app/_components/Footer.tsx · app/search/page.tsx · public/llms.txt (wired to /glossary)",
+    ],
+    body:
+      "Operator critique: 'still looks and feels a bit like html template sites from 2007.' Response: building the design-system primitives that codify a single visual rhythm across the site. LabHero standardizes hero sections — bigger display heading (md:text-[7.5rem]), more vertical padding (py-36 desktop), looser typography rhythm, optional ambient bloom in three tones (calm / cyan / warm), confident emptiness over busy chrome. LabSection replaces ~30 ad-hoc border-divided sections — no borders by default (heavy 1px dividers are a 2007 tell), four background variants instead (default / tint / raised / warm), 32-unit vertical padding for breath. HomeOnboardStrip refactored to use LabHero as proof — same content, calmer rhythm. Plain-English commitment: NEW /glossary route promotes the 20-term AI vocabulary from inside /start to a standalone discoverable surface, expanded to 26 terms with 6 new entries (chain-of-thought, few-shot, RLHF, temperature, API key, quantization, vibe coding). A-Z anchor index in hero, scroll-mt-24 on every term card for clean deep-link jumps. DefinedTermSet JSON-LD for AI-search ingestion. Sorted alphabetically, grouped by letter, alternating section variants for visual rhythm. Wired into sitemap (0.88), Footer Learn column, /search USE AI section, llms.txt canonical surfaces. GLOSSARY data extracted to shared /_data/glossary.ts and imported by both /start §6 and /glossary so a future term addition propagates to both surfaces from one edit. Local next build PASS before push.",
+  },
+  {
+    date: "2026-05-29",
     tag: "site-perfection-pass-2",
     kind: "site",
     title:

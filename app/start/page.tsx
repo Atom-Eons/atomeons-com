@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AuroraHero } from "./AuroraHero";
 import { GlossaryCard } from "./GlossaryCard";
 import { CopyLinkButton } from "./CopyLinkButton";
+import { GLOSSARY } from "../_data/glossary";
 
 /**
  * /start — AI literacy on-ramp for novice readers.
@@ -608,108 +609,9 @@ const STEPS = [
   },
 ] as const;
 
-const GLOSSARY = [
-  {
-    term: "LLM",
-    short: "Large Language Model",
-    body: "The engine behind ChatGPT, Claude, and Gemini. A program trained to predict the next word from everything it ever read.",
-  },
-  {
-    term: "Prompt",
-    short: "what you type",
-    body: "The instruction you give the AI. Better prompts = better answers. There is no magic syntax — just be specific.",
-  },
-  {
-    term: "Hallucination",
-    short: "confident fiction",
-    body: "When the AI invents a fact, citation, or quote that sounds correct but isn't. Verify anything that could matter.",
-  },
-  {
-    term: "Token",
-    short: "roughly a word-piece",
-    body: "How AI bills you and how it measures memory. ~750 words ≈ 1,000 tokens. Names and code take more tokens than plain English.",
-  },
-  {
-    term: "Context window",
-    short: "how much it can hold",
-    body: "How much text the AI can read at once. A short conversation: 4K tokens. A whole book: 200K+. Bigger window = more it can keep straight.",
-  },
-  {
-    term: "Agent",
-    short: "AI that takes action",
-    body: "AI that doesn't just answer — it does things. Books a flight. Sends an email. Runs a script. Always keep a human approval step.",
-  },
-  {
-    term: "MCP",
-    short: "Model Context Protocol",
-    body: "The plug socket that lets AI safely use external tools — your calendar, your files, your email. Open standard, growing fast.",
-  },
-  {
-    term: "RAG",
-    short: "Retrieval-Augmented Generation",
-    body: "AI reads from a specific knowledge base (your docs, a wiki, a database) before answering. Better than guessing for fact-heavy work.",
-  },
-  {
-    term: "Fine-tuning",
-    short: "training on your data",
-    body: "Teaching a model your specific style, tone, or domain by feeding it examples. Expensive. Usually unnecessary for individuals.",
-  },
-  {
-    term: "Multimodal",
-    short: "more than text",
-    body: "AI that handles images, audio, and video — not just text. Modern Claude, GPT-4, and Gemini are all multimodal.",
-  },
-  {
-    term: "Embedding",
-    short: "words → numbers",
-    body: "Turning text into a list of numbers so the AI can do math on meaning. Powers search, recommendation, and clustering.",
-  },
-  {
-    term: "Inference",
-    short: "when AI runs",
-    body: "The act of using the model to produce an output. As opposed to training, which is the months-long process of making the model.",
-  },
-  {
-    term: "Open-source",
-    short: "code anyone can see",
-    body: "Models like Llama, Mistral, and Qwen. You can download and run them. Privacy win. Setup curve.",
-  },
-  {
-    term: "Closed-source",
-    short: "proprietary",
-    body: "Models like GPT-4, Claude, and Gemini. Hosted by the company. Best quality today. You can't see the weights.",
-  },
-  {
-    term: "On-device",
-    short: "runs on your phone",
-    body: "AI that runs without the internet. Smaller, faster, private. Apple Intelligence and on-device Gemini are examples.",
-  },
-  {
-    term: "GPU",
-    short: "the AI chip",
-    body: "Graphics Processing Unit. The chip that makes AI fast. NVIDIA makes most of them. Why their stock went vertical.",
-  },
-  {
-    term: "Model",
-    short: "the AI itself",
-    body: "The actual brain. GPT-4, Claude Sonnet, Llama 3, Gemini 2.5 — each is a distinct model with its own personality and price.",
-  },
-  {
-    term: "System prompt",
-    short: "hidden instructions",
-    body: "The instructions the company set behind the scenes — be helpful, be safe, sound like this. Shapes everything you see.",
-  },
-  {
-    term: "Jailbreak",
-    short: "breaking the rules",
-    body: "Trying to get the AI to ignore its safety rules with clever prompts. Companies patch these constantly. Don't do it on real systems.",
-  },
-  {
-    term: "AGI",
-    short: "Artificial General Intelligence",
-    body: "Hypothetical AI as smart as a human across every domain. Doesn't exist yet. Debated whether it ever will. Hype magnet.",
-  },
-] as const;
+// GLOSSARY now lives at /_data/glossary.ts so the /glossary route can
+// render it as a standalone surface and AI search engines can ingest
+// it via JSON-LD. /start imports it from there above.
 
 const WORRIES = [
   {

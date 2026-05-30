@@ -40,6 +40,7 @@ export function Footer() {
             <li><Link href="/learn" className="hover:text-[#22F0D5]">/learn · 27-lesson curriculum</Link></li>
             <li><Link href="/learn/where-am-i" className="hover:text-[#22F0D5]">Where am I? · 2-min level diagnostic</Link></li>
             <li><Link href="/prompt-kit" className="hover:text-[#22F0D5]">Prompt Kit · 27 copy-paste prompts</Link></li>
+            <li><Link href="/glossary" className="hover:text-[#22F0D5]">Glossary · every AI word in plain English</Link></li>
             <li><Link href="/start" className="hover:text-[#22F0D5]">/start · 11-min novice on-ramp</Link></li>
             <li><Link href="/ai" className="hover:text-[#22F0D5]">AI Guide · the 44M reference</Link></li>
             <li><Link href="/faq" className="hover:text-[#22F0D5]">FAQ · AI 101 + product</Link></li>
