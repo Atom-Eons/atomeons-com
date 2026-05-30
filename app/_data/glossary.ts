@@ -141,11 +141,6 @@ const RAW: Omit<GlossaryEntry, "slug">[] = [
     body: "Giving the AI 2-5 worked examples of what you want, then asking for output #6 on your real input. Examples beat instructions for pattern tasks.",
   },
   {
-    term: "RLHF",
-    short: "Reinforcement Learning from Human Feedback",
-    body: "How most chat AIs are tuned after training — humans rate which responses are better, the model learns to prefer those. Why ChatGPT feels polite.",
-  },
-  {
     term: "Temperature",
     short: "creativity dial",
     body: "A setting (0 to 1+) that controls how random the AI's answer is. Low = predictable, factual. High = creative, weird. Most chat AIs hide this from you.",
@@ -159,11 +154,6 @@ const RAW: Omit<GlossaryEntry, "slug">[] = [
     term: "Quantization",
     short: "smaller, faster, slightly worse",
     body: "Compressing a model so it runs on smaller hardware. A quantized model loses some quality but might run on your laptop instead of needing a cloud GPU.",
-  },
-  {
-    term: "Vibe coding",
-    short: "building by description",
-    body: "Telling an AI what you want and letting it write the code. Coined by Karpathy in 2025. Real, but the AI's mistakes become your mistakes — verify before shipping.",
   },
   {
     term: "Reasoning model",
@@ -248,6 +238,76 @@ const RAW: Omit<GlossaryEntry, "slug">[] = [
     short: "AI agreeing to please you",
     body:
       "When the AI tells you what you want to hear instead of what's true, because training rewarded it for being liked. Push back, ask for the counter-case, or it'll happily validate a bad plan.",
+  },
+  {
+    term: "Foundation model",
+    short: "the big base AI",
+    body: "A large model trained once on enormous data, then adapted for many uses. GPT-5, Claude Opus, Llama 4 — all foundation models. Most products you use are built on top of one.",
+  },
+  {
+    term: "Transformer",
+    short: "the AI architecture",
+    body: "The neural-network design behind every major chat AI since 2018. Invented at Google. Named after the way it 'transforms' input into output through layers of attention.",
+  },
+  {
+    term: "Attention",
+    short: "how the AI focuses",
+    body: "The mechanism that lets a transformer decide which earlier words to weight when generating the next one. Why AI can keep a long thought coherent — and why it gets expensive with long inputs.",
+  },
+  {
+    term: "Diffusion model",
+    short: "image generation engine",
+    body: "How Midjourney, DALL-E, and Stable Diffusion make images: start with noise, denoise it step by step toward what you asked for. Different mechanism than the chat AIs, same era.",
+  },
+  {
+    term: "Parameter count",
+    short: "the 7B, 70B, 405B numbers",
+    body: "How many weights the model has. Bigger usually = smarter but slower and more expensive. A 7B model runs on a laptop. A 70B model needs a serious GPU. A 405B model needs a cluster.",
+  },
+  {
+    term: "Pre-training",
+    short: "the long, expensive phase",
+    body: "The months-long process of feeding an AI most of the internet so it learns language. Costs millions of dollars in GPUs. Happens once per model release; everything after is cheaper.",
+  },
+  {
+    term: "Synthetic data",
+    short: "AI-generated training data",
+    body: "Data created by an AI to train another AI. Cheaper than human-labeled data. Works for some tasks, dangerous for others — if the synthetic data is wrong, the trained model inherits the wrongness.",
+  },
+  {
+    term: "Benchmark",
+    short: "a test the AI sits for",
+    body: "A standardized test like GPQA, SWE-Bench, or MMLU that scores how well a model performs on a fixed set of tasks. Useful for comparison; ignores how the model behaves in your actual work.",
+  },
+  {
+    term: "Top-p / Top-k",
+    short: "the sampling dials",
+    body: "Two settings (with temperature) that shape how the AI picks each next word. Top-p caps probability mass; top-k caps the candidate count. Most chat UIs hide both. Lower = safer. Higher = more creative or more weird.",
+  },
+  {
+    term: "Test-time compute",
+    short: "thinking longer at runtime",
+    body: "Letting the model reason longer at query time instead of just answering. Newer reasoning models (Claude with extended thinking, o3, Gemini 2.5 Pro) use this. Slower per query but better at hard problems.",
+  },
+  {
+    term: "JSON mode / Structured output",
+    short: "guaranteed-shape answers",
+    body: "A setting that forces the AI to return a specific JSON shape instead of free prose. Critical for code that parses AI output. Both Claude and ChatGPT support it on the API.",
+  },
+  {
+    term: "Roleplay prompting",
+    short: "'act as a X'",
+    body: "Telling the AI to take on a role ('act as a senior engineer reviewing this PR') before the actual task. Often produces sharper output than asking cold. Works because the model has seen many examples of how that role talks.",
+  },
+  {
+    term: "Constitutional AI",
+    short: "training with written rules",
+    body: "Anthropic's approach: write a set of principles, then train the model to critique and revise its own answers against those principles. Why Claude refuses certain requests where ChatGPT doesn't.",
+  },
+  {
+    term: "Hugging Face",
+    short: "GitHub for AI models",
+    body: "The main public hub where open-weights models are hosted (Llama, Mistral, Qwen, DeepSeek, thousands more). You download a model from Hugging Face, run it locally via Ollama or LM Studio.",
   },
 ];
 

@@ -63,6 +63,18 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "glossary-expansion-pass-3",
+    kind: "site",
+    title:
+      "/glossary expanded 40 → 52 terms · duplicates removed · 14 new practical terms",
+    surfaces: [
+      "app/_data/glossary.ts (+14 terms · -2 duplicates · net +12)",
+    ],
+    body:
+      "Cleanup + expansion. Removed two duplicate entries from earlier workflow merge (RLHF + Vibe coding were each defined twice with different slugs). Added 14 new hand-written terms covering the 2026 AI vocabulary gaps: Foundation model · Transformer · Attention · Diffusion model · Parameter count · Pre-training · Synthetic data · Benchmark · Top-p/Top-k · Test-time compute · JSON mode/Structured output · Roleplay prompting · Constitutional AI · Hugging Face. All 1-2 sentences, plain English, no jargon stacks. Glossary now hosts 52 unique terms with auto-computed slugs + DefinedTermSet JSON-LD per entry.",
+  },
+  {
+    date: "2026-05-29",
     tag: "tools-expansion-pass-2",
     kind: "site",
     title:
