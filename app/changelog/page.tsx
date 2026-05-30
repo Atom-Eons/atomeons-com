@@ -63,6 +63,19 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "lab-hero-motion-press-refactor",
+    kind: "site",
+    title:
+      "LabHero gets ambient drift motion · /press hero refactored",
+    surfaces: [
+      "app/_components/v2/LabHero.tsx (+ 40s lab-hero-drift keyframe · reduced-motion safe)",
+      "app/press/page.tsx (hero → LabHero · contact card kept in children slot)",
+    ],
+    body:
+      "LabHero now carries a subtle ambient signature: a 40-second slow drift on the bloom layer (translate -2%/+1.5% + scale 1→1.04 → 1, ease-in-out infinite). Every LabHero-using surface — /learn, /manifesto, /press, homepage HomeOnboardStrip — picks up the motion for free. Pure CSS, no JS, will-change:transform for GPU compositing, prefers-reduced-motion media query disables the animation for users who request it. The motion is calm — not Linear-grid, not particle-flow — it just gives the heroes a quiet sense of life so they don't look like static screenshots. /press hero refactored from a custom-padding section to LabHero, with the founder-contact card preserved in the children slot. Primary CTA goes to founder mailto with v6.3 subject line; secondary CTA goes to X. Smaller change but the contact card now sits inside the new visual rhythm.",
+  },
+  {
+    date: "2026-05-29",
     tag: "design-system-rollout-2",
     kind: "site",
     title:

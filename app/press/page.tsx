@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PressMediaKit } from "./PressMediaKit";
+import { LabHero } from "../_components/v2/LabHero";
 
 export const metadata = {
   title: "Press kit — AtomEons Systems Laboratory",
@@ -291,27 +292,34 @@ export default function Press() {
         </p>
       </div>
 
-      {/* HERO */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-24">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
-          ::electronic press kit · the lab in 2026
-        </p>
-        <h1 className="text-balance text-5xl font-medium leading-[1.02] tracking-[-0.02em] md:text-7xl">
-          For journalists,
-          <br />
-          <span className="text-[#22F0D5]">covering the lab.</span>
-        </h1>
-        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-[#9BA5A7]">
-          AtomEons Systems Laboratory is one solo independent AI lab in
-          Marco Island, Florida — running across four pillars: ÆoNs
-          Research, the ORANGEBOX cockpit, skil.ski, and the /intel +
-          Founder&apos;s View broadcast surfaces. Press release, quotes,
-          story angles, downloadable assets, copy-pastable post bodies,
-          and direct founder contact below. No gatekeeping. No PR layer.
-        </p>
-
-        {/* direct contact card */}
-        <div className="mt-12 rounded-2xl border border-[#22F0D5]/40 bg-gradient-to-br from-[#0A1A1C] to-[#0A0F11] p-7 shadow-[0_0_80px_-30px_rgba(34,240,213,0.5)]">
+      {/* HERO — LabHero primitive */}
+      <LabHero
+        eyebrow="::electronic press kit · the lab in 2026"
+        title="For journalists,"
+        titleAccent="covering the lab."
+        subtitle={
+          <p>
+            AtomEons Systems Laboratory is one solo independent AI lab
+            in Marco Island, Florida — running across four pillars:
+            ÆoNs Research, the ORANGEBOX cockpit, skil.ski, and the
+            /intel + Founder&apos;s View broadcast surfaces. Press
+            release, quotes, story angles, downloadable assets,
+            copy-pastable post bodies, and direct founder contact
+            below. No gatekeeping. No PR layer.
+          </p>
+        }
+        primaryCta={{
+          label: "founder contact →",
+          href: "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20v6.3%20press%20enquiry",
+        }}
+        secondaryCta={{
+          label: "@AtomMccree on X →",
+          href: "https://x.com/AtomMccree",
+        }}
+        tone="cyan"
+      >
+        {/* direct contact strip — calmer than the prior card */}
+        <div className="rounded-2xl bg-gradient-to-br from-[#0A1A1C] to-[#0A0F11] p-7 shadow-[0_0_80px_-30px_rgba(34,240,213,0.4)]">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
             ::direct founder contact · sla ~2h waking hours ET
           </p>
@@ -347,7 +355,7 @@ export default function Press() {
             embargo: none · launch is public the moment you publish
           </p>
         </div>
-      </section>
+      </LabHero>
 
       {/* MEDIA KIT — copy-pasteable boilerplate, pitch, bio, hero image,
             downloadable assets row, honest coverage feed, interview

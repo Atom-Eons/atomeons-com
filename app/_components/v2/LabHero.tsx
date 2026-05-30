@@ -70,11 +70,31 @@ export function LabHero({
       data-lab-hero={tone}
     >
       {tone !== "calm" && (
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0"
-          style={{ background: TONE_BLOOM[tone] }}
-        />
+        <>
+          {/* Ambient bloom layer — slow 40s drift on a single CSS keyframe.
+              Reduced-motion users get a static bloom (no animation). The
+              motion is intentionally calm — gives every LabHero-using
+              surface a quiet signature without distracting from content. */}
+          <div
+            aria-hidden
+            className="lab-hero-bloom pointer-events-none absolute inset-0"
+            style={{ background: TONE_BLOOM[tone] }}
+          />
+          <style>{`
+            @keyframes lab-hero-drift {
+              0%   { transform: translate(0%, 0%) scale(1); }
+              50%  { transform: translate(-2%, 1.5%) scale(1.04); }
+              100% { transform: translate(0%, 0%) scale(1); }
+            }
+            .lab-hero-bloom {
+              animation: lab-hero-drift 40s ease-in-out infinite;
+              will-change: transform;
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .lab-hero-bloom { animation: none !important; }
+            }
+          `}</style>
+        </>
       )}
 
       <div
