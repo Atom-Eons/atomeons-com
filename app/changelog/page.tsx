@@ -63,6 +63,18 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "homepage-compression",
+    kind: "site",
+    title:
+      "Homepage section compression · 11 blocks → 9 · dropped redundant duplicates",
+    surfaces: [
+      "app/page.tsx (-StartHereStrip · -FoundersViewTeaser · imports cleaned)",
+    ],
+    body:
+      "Two clear duplications removed. StartHereStrip was redundant after HomeOnboardStrip — both routed novice traffic to /learn / /start with overlapping persona-chip patterns. Dropped StartHereStrip; HomeOnboardStrip carries the mission strip alone now. FoundersViewTeaser was the evergreen broadcast pitch that became redundant when FoundersViewLiveTeaser shipped (the live teaser surfaces the most recent letter via 5-min ISR — superseding the static pitch). Dropped FoundersViewTeaser; the live teaser stands alone. Net: homepage section count dropped from 11 to 9. Same routes still reachable via Header dropdown, Footer Learn column, OrganismRail. Visual rhythm tighter. Both deleted components remain in the codebase for revert (not removed from disk).",
+  },
+  {
+    date: "2026-05-29",
     tag: "glossary-expansion-pass-3",
     kind: "site",
     title:

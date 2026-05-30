@@ -1,12 +1,10 @@
 import { HeroPillarSequence } from "./_components/v2/HeroPillarSequence";
 import { HomeOnboardStrip } from "./_components/v2/HomeOnboardStrip";
-import { StartHereStrip } from "./_components/v2/StartHereStrip";
 import { OrganismRail } from "./_components/v2/OrganismRail";
 import { LatestFromLab } from "./_components/LatestFromLab";
 import { ResearchSnapshot } from "./_components/v2/ResearchSnapshot";
 import { OrangeBoxBlock } from "./_components/v2/OrangeBoxBlock";
 import { SkilSkiBlock } from "./_components/v2/SkilSkiBlock";
-import { FoundersViewTeaser } from "./_components/v2/FoundersViewTeaser";
 import { FoundersViewLiveTeaser } from "./_components/v2/FoundersViewLiveTeaser";
 import { IntelDrop } from "./_components/v2/IntelDrop";
 import { FounderCard } from "./_components/v2/FounderCard";
@@ -74,13 +72,6 @@ export default function Home() {
               picking a persona. */}
       <HomeOnboardStrip />
 
-      {/* 1b — Novice front door. Operator directive 2026-05-21:
-              "assume a user has no idea what ai means... we are the
-              onboard." This strip is the prominent path to /start,
-              the 11-minute paced walk-through. /onboard above is the
-              persona-driven version. */}
-      <StartHereStrip />
-
       {/* 2 — Four arms (the four products + research): compact card rail
               that lets the visitor see the whole lab without scrolling
               past four full sections. Acts as a table of contents for
@@ -116,7 +107,6 @@ export default function Home() {
               above the evergreen broadcast pitch. */}
       <div data-cockpit-section="broadcast">
         <FoundersViewLiveTeaser />
-        <FoundersViewTeaser />
       </div>
 
       {/* 7 — RESEARCH FOR BREAKTHROUGH · ÆoNs Research surface.
