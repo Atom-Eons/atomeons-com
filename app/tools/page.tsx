@@ -10,6 +10,7 @@ import {
 import { LearnCopyPrompt } from "../learn/LearnCopyPrompt";
 import { LabHero } from "../_components/v2/LabHero";
 import { LabSection } from "../_components/v2/LabSection";
+import { ScrollProgress } from "../_components/v2/ScrollProgress";
 
 /**
  * /tools — JOB-driven task router.
@@ -109,6 +110,7 @@ const CATEGORY_ORDER: TaskCategory[] = [
 export default function ToolsPage() {
   return (
     <main className="relative z-10 text-[#F2F4F5]">
+      <ScrollProgress accent="#22F0D5" accentSecondary="#FFB87A" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

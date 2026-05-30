@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LESSONS } from "../learn/_data/lessons";
 import { LEVELS, getLevel } from "../learn/_data/levels";
 import { LearnCopyPrompt } from "../learn/LearnCopyPrompt";
+import { ScrollProgress } from "../_components/v2/ScrollProgress";
 
 /**
  * /prompt-kit — consolidated copy-paste prompt vault.
@@ -98,6 +99,7 @@ export default function PromptKitPage() {
 
   return (
     <main className="relative z-10 text-[#F2F4F5]">
+      <ScrollProgress accent="#22F0D5" accentSecondary="#FFB87A" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

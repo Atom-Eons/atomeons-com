@@ -63,6 +63,23 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "scroll-progress-full-coverage",
+    kind: "site",
+    title:
+      "ScrollProgress now mounted on every long-scroll page · 3 more letter drafts queued",
+    surfaces: [
+      "app/tools/page.tsx (ScrollProgress mounted)",
+      "app/prompt-kit/page.tsx (ScrollProgress mounted)",
+      "app/glossary/page.tsx (ScrollProgress mounted)",
+      ".draft-letters/prompt-as-property.json (NEW · ~1100w)",
+      ".draft-letters/honest-cost-of-cheap.json (NEW · ~1100w)",
+      ".draft-letters/what-a-good-teacher-knows.json (NEW · ~1300w)",
+    ],
+    body:
+      "ScrollProgress now covers every long-scroll page on the site: /learn/lesson/[slug] · /founders-view/[slug] · /research/lessons-from-sci-fi/monograph · /research/papers/[slug] · /vs/[slug] · /tools · /prompt-kit · /glossary. 8 surfaces total. CSS-only via animation-timeline: scroll(root block). Plus three more letter drafts written directly in operator voice and saved to .draft-letters/: Your Prompts Are Property (the IP question · 1100w) · The Honest Cost of Cheap (the $100/mo SaaS stack math · 1100w) · What a Good Teacher Knows (five things AI can't do in education + the one thing it can · 1300w). All four letter drafts now in the publish queue (kitchen-table + 3 new). Operator can pick which to publish via the admin endpoint at any time.",
+  },
+  {
+    date: "2026-05-29",
     tag: "vs-comparison-pages",
     kind: "site",
     title:

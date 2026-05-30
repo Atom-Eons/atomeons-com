@@ -3,6 +3,7 @@ import Link from "next/link";
 import { GLOSSARY } from "../_data/glossary";
 import { LabHero } from "../_components/v2/LabHero";
 import { LabSection } from "../_components/v2/LabSection";
+import { ScrollProgress } from "../_components/v2/ScrollProgress";
 
 /**
  * /glossary — the plain-English AI vocabulary as a standalone surface.
@@ -112,6 +113,7 @@ export default function GlossaryPage() {
 
   return (
     <main className="relative z-10 text-[#F2F4F5]">
+      <ScrollProgress accent="#22F0D5" accentSecondary="#FFB87A" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
