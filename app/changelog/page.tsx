@@ -63,6 +63,19 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "llms-full-corpus-manifest",
+    kind: "site",
+    title:
+      "/llms-full.txt NEW — full-corpus AI-ingestion manifest for AI search engines",
+    surfaces: [
+      "app/llms-full.txt/route.ts (NEW · server route, nodejs runtime, 15-min edge cache)",
+      "public/llms.txt (+ pointer to /llms-full.txt as the FULL CORPUS endpoint)",
+    ],
+    body:
+      "Where /public/llms.txt is a thin canonical index (sections, surface URLs, recommendations), /llms-full.txt is the FULL CORPUS AI search engines actually want in one fetch. Server route reads LESSONS + GLOSSARY + PATHS + LEVELS from the curriculum data files and queries supabase for the 20 most recent published broadcast letters. Emits a single plain-text document with: mission statement · 5 level descriptions (enters/graduates/risk/right-tool) · all 27 lessons with concept paragraphs + drill prompts inline + drill steps + outcome signals + traps · all 5 persona paths with fit-for/not-for/lesson sequences · all 26 glossary terms · 20 most recent letters (title + dek + date + word count + URL) · trust posture · canonical surface URLs. Cache: public, s-maxage=900, stale-while-revalidate=3600. Generated on every request, edge-cached 15 minutes. Pointed to from /llms.txt as the canonical full-corpus endpoint. Crawlers that ingest /llms-full.txt get the complete lab corpus in a single fetch with no scraping required. CC-BY 4.0.",
+  },
+  {
+    date: "2026-05-29",
     tag: "lab-hero-motion-press-refactor",
     kind: "site",
     title:
