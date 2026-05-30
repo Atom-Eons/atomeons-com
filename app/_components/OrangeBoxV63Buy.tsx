@@ -3,21 +3,27 @@
 import { useState } from "react";
 
 /**
- * OrangeBoxV63Buy — v6.3 buy button.
+ * OrangeBoxV63Buy — three-phase launch button.
  *
- * Always renders. On click, POSTs to /api/checkout/v63:
- *   - 200 → Stripe Checkout URL. Redirect.
- *   - 503 → endpoint disabled (no STRIPE_ORANGEBOX_V63_ENABLED env yet);
- *           falls back to mailto inquire so the button is never a
- *           dead-end. Same outcome as the inquire CTA on the page.
+ * Always renders. On click POSTs to /api/checkout/v63. The endpoint
+ * routes through one of three launch phases:
  *
- * Operator activation path: set STRIPE_ORANGEBOX_V63_ENABLED=true in
- * Vercel env (optionally with STRIPE_ORANGEBOX_V63_PRICE_ID for a real
- * Stripe Price object). Button starts taking real payments instantly.
+ *   FREE WEEK (200, { free: true, url: <download> })
+ *     Redirect to the direct download URL. No charge. Grandfathered
+ *     license for life. Operator sets NEXT_PUBLIC_ORANGEBOX_FREE_WEEK_ENDS_AT
+ *     + NEXT_PUBLIC_ORANGEBOX_DOWNLOAD_URL to activate.
+ *
+ *   PAID (200, { url: <stripe-checkout> })
+ *     Redirect to Stripe. Operator sets STRIPE_ORANGEBOX_V63_ENABLED=true
+ *     + (optional) STRIPE_ORANGEBOX_V63_PRICE_ID after the countdown
+ *     expires. Default price $99.
+ *
+ *   PRE-LAUNCH / INSTALLER PENDING (503, inquire-by-email fallback)
+ *     mailto fallback so the button is never a dead-end.
  */
 export function OrangeBoxV63Buy({
   className,
-  label = "buy orangebox · $49 once →",
+  label = "get the bundle →",
 }: {
   className?: string;
   label?: string;
@@ -33,10 +39,19 @@ export function OrangeBoxV63Buy({
         headers: { "Content-Type": "application/json" },
       });
       const data = (await res.json()) as
-        | { url?: string; error?: string; inquire?: string }
+        | {
+            url?: string;
+            error?: string;
+            inquire?: string;
+            free?: boolean;
+            ends_at?: string;
+          }
         | null;
 
       if (res.ok && data?.url) {
+        // Covers both FREE WEEK (free=true, url=download) and PAID
+        // (url=stripe checkout). Either way, the URL is where the
+        // user goes next.
         window.location.href = data.url;
         return;
       }

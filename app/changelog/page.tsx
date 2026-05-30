@@ -63,6 +63,25 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-30",
+    tag: "orangebox-launch-support-batch",
+    kind: "product",
+    title:
+      "ORANGEBOX launch support batch — 3-phase checkout · /pricing $99 · footer + header + llms.txt + launch-day letter draft",
+    surfaces: [
+      "app/api/checkout/v63/route.ts (free-week phase + $99 fallback + 3-tool bundle metadata)",
+      "app/_components/OrangeBoxV63Buy.tsx (3-phase routing client-side · free-week download handling)",
+      "app/_components/Footer.tsx (chip + lab-status updated to launch posture)",
+      "app/_components/Header.tsx (dropdown hint updated)",
+      "app/_components/MobileNav.tsx (mirror header)",
+      "app/pricing/page.tsx ($49 → $99 site-wide + free-week hero treatment + grandfathering callout)",
+      "public/llms.txt (3-tool bundle framing for AI crawlers)",
+      ".draft-letters/launch-day.json (NEW · 1500w launch broadcast for operator publish queue)",
+    ],
+    body:
+      "Support batch for the /orangebox launch rebuild. Checkout endpoint /api/checkout/v63 now routes through three phases: (1) FREE WEEK — if NEXT_PUBLIC_ORANGEBOX_FREE_WEEK_ENDS_AT is set + in future, returns 200 with {free: true, url: <download>} pointing at NEXT_PUBLIC_ORANGEBOX_DOWNLOAD_URL; (2) PAID — STRIPE_ORANGEBOX_V63_ENABLED=true flips Stripe checkout active at $99 fallback or STRIPE_ORANGEBOX_V63_PRICE_ID if set; (3) PRE-LAUNCH — both envs absent returns 503 with email-inquire mailto, unchanged. OrangeBoxV63Buy client redirects to whichever URL the endpoint returns — covers both free-download and stripe-checkout flows. Stripe product description updated to '3-tool bundle (cockpit + AE Operations + Delta IDE)'. Metadata sku=ORANGEBOX_BUNDLE_V1, price=$99, pricing_law='$99_post_countdown_§4A_no_saas_random_change_disclosed'. /pricing page: blanket $49 → $99 replace, hero rewritten to lead with 'FREE for one week · then $99 · may change at random' framing, grandfathering callout box added. Footer chip + Header dropdown hint + MobileNav hint all updated to '3-tool bundle · FREE launch week · then $99'. llms.txt /orangebox surface entry rewritten with full launch posture. Launch-day broadcast letter drafted to .draft-letters/launch-day.json (1500w, 'The Bundle Goes Live', ready for /api/admin/publish-letter when delta uploads). Free-week buyers grandfathered for life by clause.",
+  },
+  {
+    date: "2026-05-30",
     tag: "orangebox-launch-rebuild",
     kind: "product",
     title:

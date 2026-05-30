@@ -6,33 +6,49 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /**
- * /api/checkout/v63 — ORANGEBOX v6.3 SKU checkout ($49 once, forever).
+ * /api/checkout/v63 — ORANGEBOX bundle checkout ($99 once, post-launch).
  *
- * Separate endpoint from /api/checkout (which carries the legacy $1
- * v6.1.0 flow). The /orangebox page already presents the v6.3 product
- * as inquire-to-ship by default. When the operator activates a Stripe
- * Price by setting STRIPE_ORANGEBOX_V63_PRICE_ID in Vercel env, the
- * /orangebox page can flip to self-serve checkout by POSTing here.
+ * THREE-PHASE LAUNCH FLOW (operator-set via env vars):
  *
- * Until that env is set, the endpoint responds 503 with an inquire-by-
- * email fallback message, mirroring the /orangebox page's current
- * inquire-only state. No behavior change for buyers either way.
+ *   1. PRE-LAUNCH (no envs set)
+ *      Returns 503 with the email-inquire fallback. The /orangebox page
+ *      stays in inquire-to-ship mode while the operator finishes the
+ *      installer.
  *
- * Two activation paths:
+ *   2. FREE WEEK
+ *      Operator sets NEXT_PUBLIC_ORANGEBOX_FREE_WEEK_ENDS_AT to an ISO
+ *      timestamp 7 days out. While that timestamp is in the future,
+ *      the endpoint returns 200 with a `free=true` payload pointing the
+ *      client to the direct download URL (no Stripe charge). The
+ *      OrangeBoxV63Buy component reads this and renders the FREE
+ *      download flow.
  *
- *   A. STRIPE_ORANGEBOX_V63_PRICE_ID — preferred. A real Stripe Price
- *      created in the Stripe dashboard for the $49 ORANGEBOX SKU. The
- *      session uses `line_items[].price` and the price is locked at
- *      whatever the dashboard says. Recommended.
+ *   3. PAID ($99)
+ *      After the countdown deadline passes — or when the operator
+ *      explicitly sets STRIPE_ORANGEBOX_V63_ENABLED=true — Stripe
+ *      Checkout activates at $99. Free-week buyers are grandfathered
+ *      for life by clause; no enforcement needed in code, the
+ *      grandfathering is a public commitment carried by the license.
  *
- *   B. Fallback (no env): the endpoint creates an ad-hoc price_data
- *      line at $49 USD. Works without dashboard work but doesn't carry
- *      the brand-level Price object. Useful for first-day activation.
+ * Stripe Price source of truth:
+ *   A. STRIPE_ORANGEBOX_V63_PRICE_ID — preferred. Real Stripe Price
+ *      object created in the dashboard. Locks the amount at whatever
+ *      the dashboard says.
+ *   B. Fallback (no env): ad-hoc price_data at $99 USD.
  *
- * Field collection mirrors the v6.1 endpoint: name + email + postal +
- * phone + birthdate + marketing opt-in. customer_creation = "always"
- * so /account works for the buyer afterward.
+ * 2026-05-30 — switched fallback from $49 → $99 to match the new
+ * launch pricing posture. The price-may-change-at-random doctrine
+ * means future tweaks to this number are expected; the surrounding
+ * messaging on /orangebox + /pricing carries that fact publicly.
  */
+
+function isFreeWeekActive(): { active: boolean; endsAt: number } {
+  const endsAtStr = process.env.NEXT_PUBLIC_ORANGEBOX_FREE_WEEK_ENDS_AT ?? "";
+  if (!endsAtStr) return { active: false, endsAt: 0 };
+  const t = Date.parse(endsAtStr);
+  if (Number.isNaN(t)) return { active: false, endsAt: 0 };
+  return { active: Date.now() < t, endsAt: t };
+}
 export async function POST(req: Request) {
   try {
     const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atomeons.com";
@@ -51,10 +67,44 @@ export async function POST(req: Request) {
       );
     }
 
-    // --- v6.3 activation gate ---
-    // Operator opts into self-serve checkout by setting
-    // STRIPE_ORANGEBOX_V63_ENABLED=true in Vercel. Until then the
-    // /orangebox page stays inquire-only.
+    // --- launch-phase routing ---
+    // Phase 2: FREE WEEK. If a countdown deadline is set + in the
+    // future, the bundle is free — return a download payload, no
+    // Stripe charge. The grandfathering of free-week buyers is a
+    // public commitment, no DB-side enforcement needed.
+    const freeWeek = isFreeWeekActive();
+    if (freeWeek.active) {
+      const downloadUrl =
+        process.env.NEXT_PUBLIC_ORANGEBOX_DOWNLOAD_URL ?? "";
+      if (downloadUrl) {
+        return NextResponse.json({
+          free: true,
+          ends_at: new Date(freeWeek.endsAt).toISOString(),
+          url: downloadUrl,
+          sku: "ORANGEBOX_BUNDLE_FREE_WEEK",
+          price: 0,
+          message:
+            "FREE during the launch countdown. Download the full bundle (ORANGEBOX cockpit + AE Operations + Delta IDE). Your license is grandfathered for life — locked in now even when the price changes after the countdown.",
+        });
+      }
+      // Free week active but no download URL set yet — operator is
+      // still finishing the installer. Return 503 with the same
+      // grandfathering message.
+      return NextResponse.json(
+        {
+          error: "free-week-binary-pending",
+          message:
+            "Free-week countdown is live but the installer is still finishing. Email a.mccree@gmail.com to be on the day-zero list — you keep the free license for life.",
+          inquire:
+            "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20free-week%20day-zero%20list",
+          ends_at: new Date(freeWeek.endsAt).toISOString(),
+        },
+        { status: 503 },
+      );
+    }
+
+    // Phase 3: PAID ($99). Stripe checkout active.
+    // Phase 1: PRE-LAUNCH (no envs). 503 with email-inquire fallback.
     const enabled =
       process.env.STRIPE_ORANGEBOX_V63_ENABLED === "true" ||
       process.env.NEXT_PUBLIC_ORANGEBOX_V63_ENABLED === "true";
@@ -63,7 +113,7 @@ export async function POST(req: Request) {
         {
           error: "v63-checkout-disabled",
           message:
-            "ORANGEBOX v6.3 self-serve checkout is not yet activated. Email a.mccree@gmail.com with subject 'ORANGEBOX purchase inquiry' to ship today.",
+            "ORANGEBOX bundle self-serve checkout is not yet activated. Email a.mccree@gmail.com with subject 'ORANGEBOX purchase inquiry' to ship today.",
           inquire: "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20purchase%20inquiry",
         },
         { status: 503 },
@@ -81,11 +131,11 @@ export async function POST(req: Request) {
             quantity: 1,
             price_data: {
               currency: "usd" as const,
-              unit_amount: 4900, // $49.00
+              unit_amount: 9900, // $99.00 (post-countdown price)
               product_data: {
-                name: "ORANGEBOX Command v6.3",
+                name: "ORANGEBOX Bundle (Cockpit + AE Operations + Delta IDE)",
                 description:
-                  "ORANGEBOX Command v6.3 — AE See-Suite + AE Operations. $49 once, forever. License §4A bans subscription. 30-day Material Failure Guarantee. Windows 10/11 x64.",
+                  "Three-tool bundle. ORANGEBOX cockpit (command surface) + AE Operations (systems layer) + Delta (visual-intelligence IDE replacing Cursor / VS Code for AI-in-the-loop builders). $99 once, forever. License §4A bans subscription. 30-day Material Failure Guarantee. Source included. Windows 10/11 x64.",
               },
             },
           },
@@ -136,12 +186,12 @@ export async function POST(req: Request) {
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}&sku=v63`,
       cancel_url: `${origin}/cancel?sku=v63`,
       metadata: {
-        product: "orangebox",
-        version: "v6.3",
-        sku: "ORANGEBOX_V63",
-        price_cents: "4900",
-        price_dollars: "49",
-        pricing_law: "$49_once_forever_§4A_no_saas",
+        product: "orangebox-bundle",
+        version: "v6.3 + AE Operations + Delta",
+        sku: "ORANGEBOX_BUNDLE_V1",
+        price_cents: "9900",
+        price_dollars: "99",
+        pricing_law: "$99_post_countdown_§4A_no_saas_random_change_disclosed",
         license: "Commercial · §4A · MFG 30-day",
       },
     });
@@ -155,8 +205,8 @@ export async function POST(req: Request) {
     return NextResponse.json({
       url: session.url,
       id: session.id,
-      sku: "ORANGEBOX_V63",
-      price: 49,
+      sku: "ORANGEBOX_BUNDLE_V1",
+      price: 99,
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Unknown error";

@@ -68,7 +68,7 @@ export function Footer() {
             Products + Buy
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li><Link href="/orangebox" className="hover:text-[#FF7A1A]">ORANGEBOX · v6.3 · $49</Link></li>
+            <li><Link href="/orangebox" className="hover:text-[#FF7A1A]">ORANGEBOX bundle · FREE launch week · then $99</Link></li>
             <li><Link href="/pricing" className="hover:text-[#FF7A1A]">Pricing</Link></li>
             <li><Link href="/orangebox/legacy" className="hover:text-[#FF7A1A]">v6.1.0 legacy archive</Link></li>
             <li><Link href="/skilski" className="hover:text-[#FF7A1A]">skil.ski</Link></li>
@@ -100,8 +100,8 @@ export function Footer() {
           </p>
           <ul className="mt-3 space-y-2">
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">PAPERS · 12 LIVE</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">ORANGEBOX · v6.3</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">PRICE · $49 ONCE</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">ORANGEBOX BUNDLE · 3 TOOLS</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">FREE LAUNCH WEEK · THEN $99</li>
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">BROADCAST · 8pm ET</li>
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">LICENSE · CC-BY 4.0</li>
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">LICENSE §4A · NO-SAAS</li>

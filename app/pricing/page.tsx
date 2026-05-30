@@ -13,14 +13,14 @@ import { OrangeBoxV63Buy } from "../_components/OrangeBoxV63Buy";
  */
 
 export const metadata: Metadata = {
-  title: "Pricing — $49 once. No subscription. Ever.",
+  title: "Pricing — $99 once. No subscription. Ever.",
   description:
-    "AtomEons pricing. ORANGEBOX Command: $49 USD once, forever. License §4A legally bans subscription. 30-day Material Failure Guarantee. 30-day Workflow-Fit Refund. Compared to Notion + Linear + Slack + Loom stack ($2,400/yr), Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced ($3,120/yr), part-time PM hire ($52,000/yr), and custom AI cockpit consulting ($40K–$120K).",
+    "AtomEons pricing. ORANGEBOX Command: $99 USD once, forever. License §4A legally bans subscription. 30-day Material Failure Guarantee. 30-day Workflow-Fit Refund. Compared to Notion + Linear + Slack + Loom stack ($2,400/yr), Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced ($3,120/yr), part-time PM hire ($52,000/yr), and custom AI cockpit consulting ($40K–$120K).",
   keywords: [
     "AtomEons pricing",
     "ORANGEBOX price",
     "ORANGEBOX cost",
-    "$49 AI cockpit",
+    "$99 AI cockpit",
     "no subscription AI",
     "License §4A",
     "Material Failure Guarantee",
@@ -29,17 +29,17 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://atomeons.com/pricing" },
   openGraph: {
-    title: "Pricing — $49 once, forever · AtomEons",
+    title: "Pricing — $99 once, forever · AtomEons",
     description:
-      "$49 USD once. License §4A bans subscription. 30-day refund. Source included.",
+      "$99 USD once. License §4A bans subscription. 30-day refund. Source included.",
     url: "https://atomeons.com/pricing",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pricing — $49 once, forever",
+    title: "Pricing — $99 once, forever",
     description:
-      "$49 USD once. §4A no-saas lock. 30-day refund. Source included.",
+      "$99 USD once. §4A no-saas lock. 30-day refund. Source included.",
   },
   robots: { index: true, follow: true },
 };
@@ -80,7 +80,7 @@ const COMPARISON = [
   },
   {
     name: "ORANGEBOX Command",
-    cost: "$49 once · forever",
+    cost: "$99 once · forever",
     detail: "Cockpit + doctrine + skill suite + worker pack. License §4A bans subscription.",
     accent: "#FF7A1A",
   },
@@ -88,12 +88,12 @@ const COMPARISON = [
 
 const FAQS = [
   {
-    q: "Is it really $49 once with no recurring fee?",
+    q: "Is it really $99 once with no recurring fee?",
     a: "Yes. License §4A binds the lab to never switch to subscription. If the lab ever tries, every existing buyer keeps their license free in perpetuity. The clause is in LICENSE.txt shipped with the bundle, enforceable, and published.",
   },
   {
     q: "What about future major versions?",
-    a: "Existing buyers receive all v6.x updates as part of the $49 purchase. A future v7 may be a separate ~$49 upgrade SKU, sold at the same price-tier as the original. Subscription is not on the roadmap and never will be — §4A is the lock.",
+    a: "Existing buyers receive all v6.x updates as part of the $99 purchase. A future v7 may be a separate ~$99 upgrade SKU, sold at the same price-tier as the original. Subscription is not on the roadmap and never will be — §4A is the lock.",
   },
   {
     q: "Refunds?",
@@ -109,7 +109,7 @@ const FAQS = [
   },
   {
     q: "Will it ever be on sale?",
-    a: "No. The price stays $49. Discounts cheapen the trust posture. The launch promo (free first 7 days for the v6.1 cohort) is the only price below $49 that has ever shipped, and it's retired.",
+    a: "No. The price stays $99. Discounts cheapen the trust posture. The launch promo (free first 7 days for the v6.1 cohort) is the only price below $99 that has ever shipped, and it's retired.",
   },
 ];
 
@@ -170,22 +170,54 @@ export default function PricingPage() {
       {/* HERO */}
       <section className="border-b border-[#1A2225] py-24 md:py-32">
         <div className="mx-auto w-full max-w-5xl px-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
-            ::pricing · one product · one price · forever
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#FF7A1A]/40 bg-[#FF7A1A]/10 px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
+              <span className="size-1.5 animate-pulse rounded-full bg-[#FF7A1A]" />
+              launch · free for the first week
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+              after countdown · $99 · may change at random
+            </span>
+          </div>
+
+          <p className="mt-7 font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+            ::pricing · one bundle · launch ladder
           </p>
-          <h1 className="mt-6 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.02em] md:text-7xl lg:text-8xl">
-            $49 once.
+          <h1 className="mt-3 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.02em] md:text-7xl lg:text-8xl">
+            FREE for one week.
             <br />
-            <span className="text-[#FF7A1A]">No subscription. Ever.</span>
+            <span className="text-[#FF7A1A]">Then $99 once.</span>
+            <br />
+            <span className="text-[#FFB87A]">May change at random.</span>
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-[1.55] text-[#C8CCCE] md:text-xl">
-            The lab sells one product through the public site: ORANGEBOX
-            Command, the private AI operations cockpit. Forty-nine
-            dollars. One operator. Source included. License §4A binds
-            the lab to never switch to a subscription model — if we
-            ever try, every existing buyer keeps their license free in
-            perpetuity.
+            One bundle. Three tools: the ORANGEBOX cockpit, the AE
+            Operations systems layer, and Delta — the visual-intelligence
+            IDE that replaces Cursor / VS Code for AI-first builders. Full
+            source included. License §4A binds the lab to never switch to
+            subscription. The first week after launch is FREE. After
+            that the price is $99 once, forever — and may change at
+            random going forward.
           </p>
+
+          <div className="mt-10 max-w-3xl rounded-2xl border border-[#22F0D5]/30 bg-[#0A1A1C] p-6">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+              ::free-week buyers · grandfathered for life
+            </p>
+            <p className="mt-3 text-sm leading-[1.65] text-[#C8CCCE] md:text-base">
+              Anyone who downloads during the launch countdown keeps the
+              full bundle free in perpetuity, even when the price moves
+              to $199, $299, or higher. That is the early-buyer
+              guarantee. The countdown clock lives on{" "}
+              <Link
+                href="/orangebox"
+                className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
+              >
+                /orangebox
+              </Link>
+              .
+            </p>
+          </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <OrangeBoxV63Buy />
@@ -203,7 +235,7 @@ export default function PricingPage() {
       <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-24 md:py-32">
         <div className="mx-auto w-full max-w-5xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::what $49 buys
+            ::what $99 buys
           </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.08] tracking-tight md:text-5xl">
             One cockpit. Both surfaces. All the receipts.

@@ -22,7 +22,7 @@ const LEARN = [
 ];
 
 const PRODUCTS = [
-  { href: "/orangebox", label: "Æ ORANGEBOX", hint: "v6.3 · AE See-Suite + AE Ops · $49 inquire" },
+  { href: "/orangebox", label: "Æ ORANGEBOX", hint: "3-tool bundle · FREE launch week · then $99" },
   { href: "/skilski", label: "Æ skil.ski", hint: "skill marketplace via MCP" },
   { href: "/b00kmakor", label: "Æ B00KMakor", hint: "AI publishing house — coming" },
 ];
