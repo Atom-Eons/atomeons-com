@@ -62,6 +62,19 @@ const KIND_COLORS: Record<ChangeKind, string> = {
 const LOG: Entry[] = [
   // Newest first.
   {
+    date: "2026-05-30",
+    tag: "orangebox-launch-rebuild",
+    kind: "product",
+    title:
+      "/orangebox 100% rebuild · 3-product separation · FREE-week countdown → $99 launch posture",
+    surfaces: [
+      "app/orangebox/page.tsx (REWRITTEN · ~700 lines)",
+      "app/orangebox/CountdownTimer.tsx (NEW · pre-launch / live / expired phases · env-driven)",
+    ],
+    body:
+      "Operator launch directive: separate ORANGEBOX into 3 named tools (AE Operations · ORANGEBOX cockpit · Delta visual-intelligence IDE), free-for-one-week launch promo with live countdown, $99 after countdown closes, public messaging that price may change at random going forward (stair-step toward $999 over time as Stripe transaction history supports). Rebuilt /orangebox from scratch in the walk-em-in-slow-then-go-technical structure the operator asked for: (1) HERO with countdown · pre-launch mode shows 'When the upload lands, the clock starts' · live mode ticks DD/HH/MM/SS · expired mode locks to $99 once forever. (2) PLAIN-LANGUAGE INTRO — no jargon, dinner-table English describing what the system actually is. (3) THREE PRODUCTS rendered with three layers each: plain English / what it does in real life / technical depth for hackers and pros. AE Operations = engine room. ORANGEBOX = cockpit. Delta = visual-intelligence IDE replacing Cursor/VS Code. (4) COMPREHENSIVE FEATURE MATRIX — 5 groups, 35+ features. (5) FOR/NOT-FOR honest screening. (6) PRICING with countdown repeated + two-column 'what stays true forever' vs 'what is intentionally volatile.' (7) FINAL STRIP with founder-direct CTA. CountdownTimer reads NEXT_PUBLIC_ORANGEBOX_FREE_WEEK_ENDS_AT — operator sets env var when uploading binary; absent env renders pre-launch mode. Free-week buyers grandfathered for life by clause. SoftwareApplication JSON-LD reflects new bundle name + $99 price + pre-order availability.",
+  },
+  {
     date: "2026-05-29",
     tag: "pricing-og-card",
     kind: "site",
