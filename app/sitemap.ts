@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/learn/library`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/prompt-kit`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },
     { url: `${BASE}/glossary`, lastModified: now, changeFrequency: "monthly", priority: 0.88 },
+    { url: `${BASE}/tools`, lastModified: now, changeFrequency: "weekly", priority: 0.94 },
     ...pathEntries,
     ...lessonEntries,
     { url: `${BASE}/ai`, lastModified: now, changeFrequency: "weekly", priority: 0.97 },

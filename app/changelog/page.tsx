@@ -63,6 +63,20 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-29",
+    tag: "tools-task-router",
+    kind: "site",
+    title:
+      "/tools NEW — job-driven AI task router with model-routing reasoning per task",
+    surfaces: [
+      "app/_data/tasks.ts (NEW · 18 tasks across 5 categories)",
+      "app/tools/page.tsx (NEW · LabHero + 5 LabSections · category jump chips · per-task details with prompt + AI launch)",
+      "app/sitemap.ts · app/_components/Footer.tsx · app/search/page.tsx · public/llms.txt (wired to /tools)",
+    ],
+    body:
+      "Different angle from /prompt-kit (curriculum-driven) — /tools is JOB-driven. User comes in saying 'I need to do X right now' and the page maps that intent to: the exact copy-paste prompt for that job, the recommended AI (Claude / ChatGPT / Gemini / Perplexity) with one-sentence routing reasoning, and a one-click launch URL. 18 tasks across 5 categories: WRITING (5 — tough email reply, summarize doc, hard conversation, edit my draft, cover letter), DECODING (3 — medical report, legal contract, financial statement), PLANNING (3 — trip, workout, dinner this week), DECIDING (2 — pros/cons, stress-test), LEARNING (2 — quiz me, explain three ways). Each task carries a lessonSlug cross-link to the underlying /learn lesson where applicable. ItemList JSON-LD for the 18 tasks. LabHero + 5 LabSections (alternating default/tint variants). Per-task expandable details panel via native <details> — collapsed by default, expand reveals AI recommendation block + copy-paste prompt (LearnCopyPrompt) + cross-link. Wired into sitemap (0.94), Footer Learn column, /search USE AI section, llms.txt canonical surfaces.",
+  },
+  {
+    date: "2026-05-29",
     tag: "llms-full-corpus-manifest",
     kind: "site",
     title:

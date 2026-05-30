@@ -65,6 +65,14 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         badge: "7 questions · ~2 min",
       },
       {
+        href: "/tools",
+        title: "/tools — what do you need to do right now?",
+        description:
+          "JOB-driven AI task router. 18 concrete tasks across 5 categories (Writing · Decoding · Planning · Deciding · Learning). Each carries the exact copy-paste prompt, the recommended AI for that specific job, one-sentence routing reasoning, and a one-click launch. Reply to a tough email · decode a medical report · plan a 7-day trip · stress-test a decision · quiz me on a subject. CC-BY 4.0.",
+        keywords: ["tools", "AI tasks", "what AI for what task", "Claude vs ChatGPT vs Gemini", "reply to email AI", "decode medical report", "plan trip AI", "AI tutor", "AI quiz", "task router"],
+        badge: "18 tasks · pick the job",
+      },
+      {
         href: "/prompt-kit",
         title: "/prompt-kit — every drill prompt in one copy-paste vault",
         description:
