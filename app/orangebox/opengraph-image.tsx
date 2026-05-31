@@ -1,15 +1,25 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
+// Force dynamic generation · do not serve the year-long-immutable
+// cache that ImageResponse defaults to. This matters because X /
+// Twitter / Facebook cache OG cards aggressively — when they
+// re-scrape the URL (hours-to-days after first share), we want them
+// to get the CURRENT PNG, not whatever Vercel's edge cached at the
+// time of first deploy. Operator-corrected 2026-05-31: 'orangebox x
+// card is old still'.
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export const alt =
-  "Orangebox v1.0.0-beta — turbo-optimize Claude · local-first · BYO key · receipt-backed · FREE launch week · perpetual after · §4A no-saas · AtomEons";
+  "Orangebox v1.0.0-beta — turbo-optimize Claude · 10-80× context compression · persistent memory · skill primers · tamper-evident receipts · FREE launch week · perpetual after · §4A no-saas · AtomEons";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
- * /orangebox product card · v1.0.0-beta GREEN-LIT rebuild.
+ * /orangebox product card · v1.0.0-beta · TURBO-OPTIMIZE CLAUDE.
  * Warm ember palette mirroring the in-app cockpit (NOT cool tech blue).
- * Lifts from WEB_PROJECT_FINAL_PACKAGE_2026-05-30.md §11 + §16.
+ * Headers force-dynamic so X/Twitter scrapes get the current PNG.
  */
 export default function OG() {
   return new ImageResponse(
@@ -76,12 +86,12 @@ export default function OG() {
               color: "#FF7733",
             }}
           >
-            ORANGEBOX · LOCAL-FIRST AI COCKPIT
+            ORANGEBOX · v1.0.0-beta · SHIPPED 2026-05-30
           </p>
           <p
             style={{
               margin: "16px 0 0",
-              fontSize: 88,
+              fontSize: 96,
               fontWeight: 500,
               lineHeight: 0.95,
               letterSpacing: -3,
@@ -89,9 +99,9 @@ export default function OG() {
               maxWidth: 1080,
             }}
           >
-            Your AI cockpit.
+            Turbo-optimize
             <br />
-            <span style={{ color: "#FF7733" }}>Local. Perpetual. Yours.</span>
+            <span style={{ color: "#FF7733" }}>Claude.</span>
           </p>
           <p
             style={{
@@ -99,14 +109,14 @@ export default function OG() {
               fontSize: 22,
               lineHeight: 1.4,
               color: "#C4AD8E",
-              maxWidth: 1020,
+              maxWidth: 1040,
               fontWeight: 400,
             }}
           >
-            Built in 75 days. With itself. Multi-LLM (Claude · GPT ·
-            Gemini · Ollama · OpenRouter). BYOK · zero markup ·
-            tamper-evident receipts on every action. Your code never
-            leaves your machine.
+            Persistent memory across sessions. 10-80× context compression.
+            Reusable skill primers. Tamper-evident JSON receipts on every
+            action. 14-department named-role router. Built in 75 days,
+            with itself.
           </p>
         </div>
 
@@ -120,12 +130,11 @@ export default function OG() {
           }}
         >
           {[
+            "🟧 Optimized for Claude",
             "🔒 Local-first",
-            "🔑 BYOK",
+            "🔑 BYO key · zero markup",
             "🧾 Receipt-backed",
-            "✍️ Signed",
-            "♾ Perpetual",
-            "🚫 No telemetry",
+            "♾ Perpetual · §4A",
           ].map((b) => (
             <span
               key={b}
