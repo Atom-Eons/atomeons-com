@@ -222,13 +222,21 @@ export default function B00KMakorPage() {
       />
 
       {/* breadcrumb */}
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="transition-colors hover:text-[#22F0D5]">
             AtomEons
           </Link>{" "}
           <span className="text-[#1A2225]">/</span> B00KMAKR · v3.2.0 · shipped
         </p>
+        <a
+          href="https://github.com/AtomEons/BookMaker"
+          target="_blank"
+          rel="noopener"
+          className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:text-[#FFB87A]"
+        >
+          ::github.com/AtomEons/BookMaker ↗
+        </a>
       </div>
 
       {/* ── HERO ── */}
@@ -589,6 +597,20 @@ export default function B00KMakorPage() {
             </tbody>
           </table>
         </div>
+
+        <p className="mt-6 text-[14px] leading-[1.6] text-[#9BA5A7]">
+          Provenance + license live on{" "}
+          <a
+            href="https://github.com/AtomEons/BookMaker"
+            target="_blank"
+            rel="noopener"
+            className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
+          >
+            github.com/AtomEons/BookMaker
+          </a>
+          {" "}— public README, EULA, PRIVACY statement. Source is private
+          to AtomEons; the GitHub repo exists as the buyer trust surface.
+        </p>
       </section>
 
       {/* ── WHY IT EXISTS ── */}

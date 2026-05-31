@@ -525,10 +525,10 @@ export default function OrangeboxPage() {
           ::what orangebox is
         </p>
         <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
-          One Windows app. Five jobs.
+          One Windows app. Four jobs.
         </h2>
         <p className="mt-8 max-w-3xl text-[17px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
-          Orangebox is a single Windows desktop application that does five
+          Orangebox is a single Windows desktop application that does four
           things.
         </p>
 
@@ -538,7 +538,6 @@ export default function OrangeboxPage() {
             ["Routes to multiple AI models without lock-in.", "Claude, GPT, Gemini, local Ollama, OpenRouter — all addressable from the same cockpit. Bring your own keys; no markup."],
             ["Produces a receipt for every meaningful action.", "Tamper-evident JSON receipts to your local audit trail. Answer 'what changed, when, by which model' three months from now without reading old logs."],
             ["Lives entirely on your machine.", "No phone-home. No telemetry. No analytics. Your code, prompts, conversations, receipts — all of it stays on disk."],
-            ["Costs $49 once. Forever.", "No subscription. Future v1.x updates free. Your license never expires."],
           ].map(([head, body], i) => (
             <li
               key={head}

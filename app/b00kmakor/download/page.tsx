@@ -239,6 +239,19 @@ export default function B00KMakrDownloadPage() {
             </div>
           ))}
         </div>
+
+        <p className="mt-8 text-center text-[14px] text-[#9BA5A7]">
+          Want to verify against the public ledger? README · LICENSE · PRIVACY at{" "}
+          <a
+            href="https://github.com/AtomEons/BookMaker"
+            target="_blank"
+            rel="noopener"
+            className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
+          >
+            github.com/AtomEons/BookMaker
+          </a>
+          .
+        </p>
       </section>
 
       {/* LICENSE + GRANDFATHER */}
