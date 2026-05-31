@@ -5,7 +5,7 @@ import { LabHero } from "../_components/v2/LabHero";
 export const metadata = {
   title: "Press kit — AtomEons Systems Laboratory",
   description:
-    "AtomEons Systems Laboratory press kit. Total-effort coverage: ÆoNs Research (12 manuscripts · Lessons From Sci-Fi 38-page monograph), ORANGEBOX Command v6.3 ($49 desktop AI cockpit · two surfaces: AE See-Suite + AE Operations · §4A no-saas), skil.ski (skill marketplace via MCP), /intel (decoded primary-source drops · current: May 2026 xAI algorithm leak), The Founder's View (nightly 8pm ET broadcast · 31+ letters), the 14-clause Manifesto, /ai (the comprehensive AI gateway for the 44M facing displacement). Solo independent lab. Marco Island, Florida. Founder: Atom McCree. Boilerplate, founder bio, hero asset, downloadable media pack, three interview-protocol cards, honest-empty coverage feed, direct founder contact.",
+    "AtomEons press kit · launch night 2026-05-30. Two AI applications shipped tonight built by AI, for AI operators, in 75 days using earlier versions of themselves: ORANGEBOX v1.0.0-beta (Windows desktop AI cockpit · 9 LLM providers · 14-department architecture · AECode contracts · tamper-evident JSON receipts · $49 perpetual after free week · §4A no-saas) and B00KMAKR v3.2.0 (Mac + Windows AI publishing cockpit · 142 feature surfaces · mission graph · voice fingerprint persistence · KDP packager · dynamic-world-pricing). Eleven novel features never seen together inside one app before tonight. Plus ÆoNs Research (12 manuscripts), The Founder's View (nightly 8pm ET), 14-clause Manifesto, Dynamic World Pricing doctrine paper. Solo lab. Marco Island, FL. Founder Atom McCree. Boilerplate, bio, hero asset, copy blocks for HN/PH/Dev.to/cold email, direct founder contact.",
   keywords: [
     "AtomEons press kit",
     "Atom McCree press",
@@ -69,11 +69,27 @@ const LAB_SURFACES = [
   },
   {
     pillar: "USE AI",
-    name: "ORANGEBOX Command v6.3",
+    name: "ORANGEBOX v1.0.0-beta",
     blurb:
-      "Local-first desktop AI cockpit. Two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs) + AE Operations (engine — MCP tools, agent routing, model selection). Two install paths: Basic Install or AI Box (curated local-model bundle). Multi-model routing across Claude / GPT / Gemini / Groq LPUs / Ollama / OpenRouter (200+ models). JSONL receipts on disk. $49 once · License §4A legally bans switching to monthly billing · two 30-day refund paths (Material Failure Guarantee + Workflow-Fit Refund).",
+      "Local-first Windows desktop AI cockpit. Shipped 2026-05-30. Multi-LLM routing across Claude / GPT / Gemini / OpenRouter / Groq / Cohere / Mistral / Perplexity / local Ollama (9+ providers, BYO keys, zero markup). 14-department architecture (AE0-AE14). AECode contracts on every AI change. Tamper-evident JSON receipts on every meaningful action. AtomSmasher Crystal Lattice Compression (10-80× context). Built in 75 days using earlier versions of itself. $49 perpetual after FREE launch week (ends 2026-06-06). License §4A legally bans subscription. Signed installer (Sectigo timestamp). Sources at github.com/AtomEons/orangebox.",
     href: "/orangebox",
     accent: "#FF7A1A",
+  },
+  {
+    pillar: "USE AI",
+    name: "B00KMAKR v3.2.0",
+    blurb:
+      "AI publishing cockpit. Shipped 2026-05-30. Mac + Windows. 142 feature surfaces — mission graph for chapters, voice fingerprint persistence, continuity audit across timeline/characters/facts, KDP packager, cover lab, 120-day launch calendar with daily action queue. Universal HTML app + native Tauri builds (.dmg + .msi/.exe). Apple/Microsoft-grade embedded-font PDF manuals (book-red Mac · blue Windows). SHA-256 receipts on every artifact. FREE launch week, then dynamic-world-pricing ($99 Tier 1 anchor · USA Advantage Clause $9.90 · Strategic Tier Lift CN $99). §4A no-saas. Public repo at github.com/AtomEons/BookMaker.",
+    href: "/b00kmakor",
+    accent: "#FFB87A",
+  },
+  {
+    pillar: "USE AI",
+    name: "Dynamic World Pricing · the doctrine",
+    blurb:
+      "A published seven-doctrine synthesis for fair-by-country software pricing. World Bank income tiers + free-floor doctrine + USA Advantage Pricing Clause (US at 10% of Tier 1) + Strategic Tier Lift (China at Tier 1 despite WB Tier 2 classification) + public mechanism + product registry + §4A compatibility + honest VPN posture. Reusable across every lab product. CC-BY 4.0 paper at /dynamic-world-pricing.",
+    href: "/dynamic-world-pricing",
+    accent: "#22F0D5",
   },
   {
     pillar: "DOCTRINE",
@@ -110,44 +126,57 @@ const LAB_SURFACES = [
 ];
 
 const FACTS = [
-  ["Lab", "AtomEons Systems Laboratory · Independent AI research"],
-  ["Product", "ORANGEBOX Command v6.3"],
-  ["Product tagline", "Local-first AI cockpit. BYO keys. Zero markup. Two surfaces."],
-  ["Launch", "v6.0.0 May 17, 2026 — midnight ET · v6.3 May 23, 2026"],
-  ["Price", "$49 once, forever — no subscription, ever (§4A locked)"],
-  ["Refund", "30-day Material Failure Guarantee + 30-day Workflow-Fit Refund (both full)"],
-  ["License", "Personal · full source included · §4A anti-SaaS lock"],
-  ["Platform", "Windows 10/11 x64 (macOS/Linux on v6.x roadmap)"],
-  ["Requirements", "Node.js 20+, 4 GB RAM, 200 MB disk"],
-  ["Distribution", "Direct download on payment confirmed · Stripe + HMAC tokens"],
-  ["Telemetry", "ZERO. No phone-home. No analytics inside the cockpit."],
-  ["Affiliate revenue", "ZERO across all named tools."],
+  ["Lab", "AtomEons Systems Laboratory · Independent AI research · one operator"],
+  ["Shipped tonight", "ORANGEBOX v1.0.0-beta (Windows) + B00KMAKR v3.2.0 (Mac + Windows)"],
+  ["Launch date", "2026-05-30"],
+  ["Compression headline", "ORANGEBOX built in 75 days. With itself. The .exe was produced by earlier versions of the cockpit."],
+  ["ORANGEBOX tagline", "Local-first AI cockpit. Multi-LLM. BYO keys. Zero markup. 9+ providers. 14-department architecture."],
+  ["B00KMAKR tagline", "AI publishing cockpit. Mac + Windows. 142 feature surfaces. Apple/Microsoft-grade polish. SHA-256 verified."],
+  ["Pricing — ORANGEBOX", "FREE first week (ends 2026-06-06 4 PM EDT) · $49 perpetual thereafter · §4A bans subscription"],
+  ["Pricing — B00KMAKR", "FREE first week · then dynamic-world-pricing: $99 Tier 1 anchor · US $9.90 (USA Advantage Clause) · CN $99 (Strategic Tier Lift) · IN $9.90 · SO $1.98"],
+  ["Refund", "30-day Material Failure Guarantee on both products · full refund · no support-queue gauntlet"],
+  ["License", "Perpetual · §4A no-SaaS covenant · once · forever · grandfather-for-life clause for free-week buyers"],
+  ["Platform · ORANGEBOX", "Windows 10/11 x64 · macOS/Linux on roadmap"],
+  ["Platform · B00KMAKR", "Mac + Windows (Universal HTML app + native Tauri builds: .dmg + .msi/.exe)"],
+  ["Telemetry", "ZERO. No phone-home. No analytics. No remote-update channel. No license-server check."],
+  ["Code signing", "Sectigo timestamp · self-Authenticode for beta · Microsoft-issued Authenticode (Azure Trusted Signing) in a future release"],
+  ["SHA-256 receipts", "Every shipped artifact carries a published SHA-256. Buyers verify with shasum / Get-FileHash before install."],
+  ["Public repos", "github.com/AtomEons/orangebox · github.com/AtomEons/BookMaker"],
   ["Founder", "Atom McCree, AtomEons Systems Laboratory"],
   ["Location", "Marco Island, FL, USA"],
   ["Manifesto", "https://atomeons.com/manifesto · 14 clauses · falsifiable"],
-  ["URL", "https://atomeons.com/orangebox"],
+  ["Pricing doctrine paper", "https://atomeons.com/dynamic-world-pricing · CC-BY 4.0 · 7-doctrine synthesis"],
+  ["URLs", "atomeons.com/orangebox · atomeons.com/b00kmakor · atomeons.com/press"],
 ];
 
 const QUOTES = [
+  {
+    line: "An app from the future. The first AI application built by AI, for AI operators, using AI to make AI useful — with one human in the loop reading every receipt before approving every promotion.",
+    by: "Atom McCree, founder · launch night",
+  },
+  {
+    line: "Built in 75 days. With itself. The compression ratio against solo-founder pace is approximately ten-to-one. Against commissioning a custom internal cockpit through a consulting firm, the ratio is closer to a thousand-to-one in dollars.",
+    by: "ORANGEBOX v1.0.0-beta · launch note",
+  },
+  {
+    line: "Eleven features have not lived inside a single application before tonight. AECode contracts. Tamper-evident JSON receipts. Crystal Lattice Compression. Restore Primers. Voice fingerprint persistence. Mission graph DAG. The fourteen-department architecture. Cost-aware multi-LLM routing. License §4A. Dynamic World Pricing with two named geopolitical clauses. The grandfather-for-life launch clause.",
+    by: "Launch dossier · 2026-05-30",
+  },
   {
     line: "The model does not run your project. You do. The cockpit keeps both true.",
     by: "Atom McCree, founder",
   },
   {
-    line: "Receipts, not promises. No fake green. Every meaningful action writes a receipt.",
+    line: "Receipts, not promises. Every meaningful action writes a tamper-evident JSON receipt to the operator's local audit trail. Three months later, the question 'what did the AI do at 2:47 PM on Tuesday' becomes a one-line grep — not a six-tab investigation.",
     by: "ORANGEBOX doctrine",
   },
   {
-    line: "Built in a garage in Marco Island while Anthropic raised $30B. The cockpit costs the price of a paperback book and a coffee.",
-    by: "Atom McCree, founder",
-  },
-  {
-    line: "$49. once. forever. §4A bans subscription. Two refund paths if it doesn't fit.",
+    line: "License §4A is not marketing copy. It is contract text. The lab is legally bound to never move the product to a subscription model. Existing buyers stay perpetual forever — by clause, not by promise.",
     by: "Manifesto clause 04",
   },
   {
-    line: "The cockpit is the instrument. The model is the engine. You are the pilot. Everything else is theater.",
-    by: "ORANGEBOX doctrine",
+    line: "USA Advantage Pricing Clause: US buyers pay 10% of the Tier 1 anchor. Mission-aligned with the 44-million-displaced-worker frame. Strategic Tier Lift: China at the Tier 1 anchor regardless of World Bank classification. Both clauses published verbatim, reasoned in public, revocable through documented changelog entries. No opaque per-country numbers anywhere.",
+    by: "Dynamic World Pricing paper · /dynamic-world-pricing",
   },
   {
     line: "Falsify any clause with evidence and the lab updates the manifesto in public, with attribution.",
@@ -157,92 +186,107 @@ const QUOTES = [
 
 const ANGLES = [
   {
-    head: "The anti-SaaS founder",
-    body: "While the AI tools market doubled subscription prices and split credit pools, one indie founder shipped a $1 one-time desktop cockpit with a license clause (§4A) that legally forbids ever switching to a subscription. If AtomEons ever tries, every existing buyer keeps their license free forever.",
-    beat: "indie founders · SaaS economics · anti-establishment tech",
+    head: "The first AI app built by AI — for AI operators",
+    body: "ORANGEBOX v1.0.0-beta is, by the receipts on disk, an application whose architecture, contracts, documentation, manuals, pricing doctrine, and 142-surface enumeration were each routed through AI agents acting on behalf of one human operator — and the resulting application is itself an instrument for AI to operate. The thing that built the application is the application. Compression ratio against solo-founder pace: approximately 10×. Against custom-internal-cockpit consulting: approximately 1000× in dollars.",
+    beat: "AI agents · self-construction · post-IDE programming · meta-tooling",
+  },
+  {
+    head: "Eleven novel features never seen together inside one app before tonight",
+    body: "AECode contracts (machine-grammar for AI work · intent → contract → patch → gauntlet → receipt). Tamper-evident JSON receipts on every meaningful AI action. AtomSmasher Crystal Lattice Compression (10-80× context compression). Restore Primers (a new AI session learns the cockpit in <30s). Voice fingerprint persistence across sessions. Mission graph DAG that survives context resets. 14-department named-role architecture (AE0-AE14). Cost-aware multi-LLM routing across 9 providers. License §4A as binding contract text, not marketing copy. Dynamic World Pricing with two NAMED geopolitical clauses (USA Advantage + Strategic Tier Lift). Grandfather-for-life free-week clause, legally enforceable. The list runs end-to-end inside one app for the first time tonight.",
+    beat: "AI tooling · agentic systems · IDE-of-the-future · novel UX",
+  },
+  {
+    head: "Dynamic World Pricing — the first published doctrine for fair-by-country software pricing",
+    body: "Most software with regional pricing hides the mechanism behind a tooltip. AtomEons publishes the full mechanism: World Bank income tier mapping, two named country-level doctrines (USA Advantage Pricing Clause sets US at 10% of Tier 1; Strategic Tier Lift moves China to Tier 1 despite Tier 2 classification), the Stripe-minimum free-floor safeguard, the IP-geolocation method, the §4A no-saas compatibility statement. Curl the API yourself: /api/price/orangebox?cc=IN. CC-BY 4.0 paper at /dynamic-world-pricing.",
+    beat: "pricing innovation · global software economics · indie business",
+  },
+  {
+    head: "B00KMAKR — the writer's cockpit with 142 feature surfaces, Mac + Windows, shipped the same night as ORANGEBOX",
+    body: "A solo founder shipped two complete products in the same launch wave. B00KMAKR is the publishing house on the writer's computer: mission graph for chapters, voice fingerprint persistence, continuity audit, KDP packager, cover lab, 120-day launch calendar. Apple/Microsoft-grade polish on both platforms (book-red Mac manual + blue Windows manual · embedded fonts · SHA-256 verified). The cockpit shares the routing layer with ORANGEBOX — 14 departments, AECode contracts, receipts, the whole stack.",
+    beat: "creator tools · writing software · indie publishing · KDP",
   },
   {
     head: "Local-first AI when the industry went cloud-only",
-    body: "ORANGEBOX runs entirely on the buyer's machine. No telemetry. No phone-home. State lives in %APPDATA%. The cockpit physically cannot transmit data even if the founder wanted to. Counter-positioned against every enterprise AI deployment of 2026.",
-    beat: "privacy · data sovereignty · EU/GDPR",
+    body: "Both products run entirely on the buyer's machine. No telemetry. No phone-home. No analytics. No remote-update channel. No license-server check. Verify yourself: open Activity Monitor / Resource Monitor, filter by the application name, watch the absence of outbound traffic. Drop the machine onto an airgapped network — the cockpit fully loads and operates on local Ollama. The 'no phone-home' claim is testable, not branded.",
+    beat: "privacy · data sovereignty · EU/GDPR · zero-trust",
   },
   {
-    head: "Swap-lane routing — the model wars solved",
-    body: "Claude, GPT, Gemini, and Ollama all run from one cockpit. When Claude rate-limits, swap to GPT. When GPT refuses, swap to Gemini. When the bill gets ugly, swap to local Ollama. Mission graph survives every swap. The model wars become irrelevant for operators.",
-    beat: "AI infrastructure · ML ops · dev tools",
+    head: "Anti-SaaS as binding contract — License §4A",
+    body: "License §4A is not a marketing claim. It is contract text that legally binds AtomEons to never move the product to a subscription. Free-week buyers are grandfathered for life by separate clause — even when the price changes for new buyers, even when the company is sold, even when the lab ceases operations. The application keeps working with no online activation, no kill-switch, no license-server check. The covenant survives the lab.",
+    beat: "indie founders · SaaS economics · contract law · post-subscription",
   },
   {
-    head: "Two months of internal use before the first sale",
-    body: "AtomEons used ORANGEBOX internally for two months to build everything else they ship — including atomeons.com itself, built in one day inside the cockpit it sells. v6.0.0 is the first version sold outside the lab.",
-    beat: "build-in-public · founder narrative · dev tooling",
+    head: "The Florida operator shipping two products the same night Anthropic raised at $900B pre-money",
+    body: "While the largest AI labs raised mega-rounds, a solo founder in Marco Island shipped two complete production-grade desktop AI applications in one launch wave — both signed, both with PDF manuals embedding their own fonts, both with SHA-256 receipts publicly verifiable, both with public GitHub repos, both with a published pricing doctrine, all in 75 days of solo work routed through AI. Smallest possible AI lab vs largest possible AI lab, same week.",
+    beat: "geography of tech · alternative AI ecosystem · garage-to-launch · solo founder",
   },
   {
-    head: "$49-once as a counter-position to $260/mo AI stacks",
-    body: "Most operators in 2026 pay ~$260/month for the standard four-vendor AI stack (Claude Pro + ChatGPT Plus + Gemini Advanced + Cursor). ORANGEBOX is $49 once, forever — License §4A legally bans switching to subscription, and two 30-day refund paths (Material Failure Guarantee + Workflow-Fit Refund) carry the buyer-protection load that a free trial would. A deliberate counter to the SaaS norm.",
-    beat: "pricing strategy · product launches · indie business",
-  },
-  {
-    head: "Publishing a 14-clause manifesto when most labs publish a roadmap",
-    body: "Most AI labs publish roadmaps that promise the next thing. AtomEons publishes a manifesto: fourteen explicit clauses on commerce, research, operator structure, broadcast posture, and falsifiability. Clause 13 invites the public to challenge any clause with evidence. The document is CC-BY 4.0 with a quote-it template.",
-    beat: "AI ethics · governance · founder doctrine",
-  },
-  {
-    head: "The Florida garage shipping next to a $30B AI round",
-    body: "A founder in Marco Island shipped a competitive AI product the same week Anthropic raised at a $900B pre-money valuation. Smallest possible AI lab vs largest possible AI lab, same week.",
-    beat: "geography of tech · alternative AI ecosystem · garage-to-launch",
+    head: "Receipts over slogans — proof that travels with the buyer",
+    body: "Every meaningful action in either product writes a tamper-evident JSON receipt to the operator's local audit trail. Receipts include the model used, the prompt that produced the result, a SHA-256 stamp, the gauntlet result, and the approval signature. Three months after a contested change, the question 'what did the AI do' is a one-line grep against the receipt rail — not a six-tab investigation through vendor logs the operator does not own.",
+    beat: "audit · compliance · AI accountability · forensics",
   },
 ];
 
 const COPY_BLOCKS = [
   {
     title: "Hacker News — Show HN",
-    body: `Show HN: ORANGEBOX v6.3 – $49 once desktop AI cockpit, local-first, two-surface architecture
+    body: `Show HN: ORANGEBOX v1.0.0-beta + B00KMAKR v3.2.0 — the first AI apps built by AI, for AI operators (free this week)
 
-I'm Atom — solo founder out of Marco Island, FL. Today I shipped v6.3 of ORANGEBOX Command, the desktop AI cockpit I've been using internally to build everything else I ship (including atomeons.com itself, built inside the cockpit it sells).
+I'm Atom — solo founder out of Marco Island, FL. Tonight I shipped two desktop AI applications in one launch wave, built in 75 days using earlier versions of themselves. The compression ratio against solo-founder pace is approximately 10×. Against a consulting firm building a custom internal cockpit, closer to 1000× in dollars.
 
-What v6.3 is: two surfaces in one app. AE See-Suite is the command surface — receipts, dashboards, mission graphs, broadcast feed. AE Operations is the engine — MCP tools, agent routing, model selection, party-line status bus. Multi-model routing across Claude / GPT / Gemini / Groq LPUs / Ollama / OpenRouter (200+ models).
+ORANGEBOX v1.0.0-beta — Windows desktop AI cockpit. 9-provider multi-LLM router (Claude / GPT / Gemini / OpenRouter / Groq / Cohere / Mistral / Perplexity / local Ollama, BYO keys, zero markup). 14-department named-role architecture (AE0-AE14). AECode contracts on every AI change (intent → contract → patch → gauntlet → receipt). Tamper-evident JSON receipts on every meaningful action. AtomSmasher Crystal Lattice Compression (10-80× context compression).
 
-Two install paths: Basic Install (cockpit alone, BYO keys) or AI Box (cockpit + curated Ollama-managed local bundle for offline operation).
+B00KMAKR v3.2.0 — AI publishing cockpit. Mac + Windows. 142 feature surfaces. Universal HTML app + native Tauri builds. Mission graph for chapters, voice fingerprint persistence, continuity audit across timeline/characters/facts, KDP packager, cover lab, 120-day launch calendar with daily action queue. Embedded-font PDF manuals (book-red Mac, blue Windows so you can tell at a glance).
 
-Pricing: $49 once, forever. License §4A legally bans switching to monthly billing. Two 30-day refund paths (Material Failure Guarantee for documented bugs we can't fix in 14 days; Workflow-Fit Refund for "doesn't fit, no fault-finding required"). Zero markup on token cost — you pay your LLM provider directly.
+Eleven features have not lived inside a single application before tonight: AECode contracts · tamper-evident JSON receipts · Crystal Lattice Compression · Restore Primers (new AI session learns the cockpit in <30s) · voice fingerprint persistence · mission graph DAG · 14-department architecture · cost-aware LLM routing · License §4A as binding contract text · Dynamic World Pricing with two named country-level clauses (USA Advantage + Strategic Tier Lift) · grandfather-for-life free-week clause.
 
-Receipts on disk (JSONL), not on a vendor server. Zero telemetry. Source included alongside the binary.
+Pricing — both products free this week (countdown ends 2026-06-06 4 PM EDT). After: $49 perpetual for ORANGEBOX; $99 Tier 1 with dynamic-world-pricing for B00KMAKR (US $9.90 under USA Advantage Clause, CN $99 under Strategic Tier Lift). License §4A legally bans subscription on both products.
 
-The full 14-clause operating doctrine is published as a manifesto at /manifesto — clause 13 invites the public to falsify any clause with evidence.
+No telemetry. No phone-home. No analytics. Source included alongside each binary. SHA-256 verified, Sectigo-timestamped. Public repos at github.com/AtomEons/orangebox and github.com/AtomEons/BookMaker. Pricing mechanism public at atomeons.com/dynamic-world-pricing.
 
-https://atomeons.com/orangebox
+https://atomeons.com/orangebox · https://atomeons.com/b00kmakor
 
-Happy to AMA on the architecture, the post-SaaS pricing model, the manifesto, or why I think the orchestration layer beats the model layer in 2026.`,
+Happy to AMA on the AI-builds-AI architecture, the dynamic-world-pricing doctrine, the AECode contract system, or how a one-operator lab shipped two production-grade desktop applications in 75 days while the cartel argued about RLHF.`,
   },
   {
     title: "Product Hunt — launch description",
-    body: `ORANGEBOX v6.3 is the AI cockpit you actually own.
+    body: `An app from the future. The first AI applications built by AI, for AI operators, using AI to make AI useful.
 
-Two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs) + AE Operations (engine — MCP tools, agent routing, model selection across 200+ models). Multi-model routing across Claude/GPT/Gemini/Groq/Ollama/OpenRouter. Mission-graph memory that survives every context reset. Local-first. Zero telemetry. Zero token markup.
+Tonight ORANGEBOX v1.0.0-beta and B00KMAKR v3.2.0 shipped — both built in 75 days using earlier versions of themselves. Eleven novel features that have not lived inside a single application before tonight.
 
-Built in months of internal use. License §4A legally bans switching to monthly billing. Two 30-day refund paths if it doesn't fit. Source included.
+ORANGEBOX is the local-first desktop AI cockpit for builders: multi-LLM routing across 9 providers (Claude / GPT / Gemini / Ollama / OpenRouter / Groq / Cohere / Mistral / Perplexity), tamper-evident JSON receipts on every action, 14-department named-role architecture, AECode contracts on every AI change, AtomSmasher Crystal Lattice Compression (10-80× context).
 
-$49 once. Forever. No subscription, ever.`,
+B00KMAKR is the writer's publishing cockpit: Mac + Windows, 142 feature surfaces, mission graph for chapters, voice fingerprint persistence, continuity audit, KDP packager, cover lab, 120-day launch calendar.
+
+Free this week (ends June 6). After: $49 perpetual for ORANGEBOX, dynamic-world-pricing for B00KMAKR (your country's tier rate). License §4A legally bans subscription. Public repos at github.com/AtomEons.`,
   },
   {
     title: "DEV.to — build-in-public article opening",
-    body: `# How ORANGEBOX evolved from v6.0 to v6.3: a one-operator lab's pricing and architecture journey
+    body: `# I shipped two AI apps in one launch wave by having the AI build itself — here's the architecture
 
-When I shipped v6.0.0 at midnight on May 17, 2026, the launch produced 0 sales and 4 followers in the first 14 hours. I wrote about it in public. Six days later, I shipped v6.3 — with a different price ($49, not $1), a different architecture (two surfaces: AE See-Suite + AE Operations), and a published manifesto.
+In 75 days a solo operator out of Marco Island shipped ORANGEBOX v1.0.0-beta (Windows AI cockpit) and B00KMAKR v3.2.0 (Mac + Windows publishing cockpit). Both went live the same night. Both were built by AI agents acting on behalf of one human operator, under structured contracts, with every meaningful action writing a tamper-evident receipt to disk.
 
-Here's why I changed everything, and what stayed the same.
+This is not "I used Claude as a pair programmer." This is the architecture that flips that around — the application is itself an instrument for AI to operate, and the thing that built the application is the application.
 
-What changed:
-- Price: $1 → $49 once. Same forever-license. Same §4A no-saas clause. The $1 was a counter-position; the $49 is a working price filter for buyers who actually want to operate.
-- Architecture: 11 lanes → two surfaces. AE See-Suite (command) + AE Operations (engine). Cleaner mental model. Same multi-model routing underneath.
-- Refund posture: ladder + 7-day-free → two 30-day refund paths. Material Failure Guarantee + Workflow-Fit Refund. Both full refund.
+The pattern has five new pieces:
 
-What stayed:
-- Local-first. Zero telemetry. Zero token markup. Source included. License §4A no-saas. One operator. Marco Island, FL. No VC. The whole doctrine.
+**1. AECode contracts.** A machine-grammar wrapper around every AI-assisted change. The contract specifies intent, mission, target plan, gauntlet, receipt expectation. The AI cannot promote a change until the contract is satisfied. The contract is replay-able from a single file on disk three months later.
 
-I also published a 14-clause manifesto so the doctrine is explicit and falsifiable. Clause 13 invites the public to challenge any clause with evidence.
+**2. Tamper-evident JSON receipts.** Not application logs. Structured receipts with SHA-256 stamps, written to the operator's local audit trail. Every meaningful AI action produces one. "What did the AI do at 2:47 PM on Tuesday" becomes a one-line grep.
 
-[continues with the architecture deep-dive, the pricing reasoning, and the manifesto]`,
+**3. AtomSmasher Crystal Lattice Compression.** 10-80× context compression on typical codebases. The model sees an order of magnitude more code per token. Preserves intent, code shape, dependency graph.
+
+**4. Restore Primers.** Reusable workflow files that teach a fresh AI session — any vendor — how to operate inside the cockpit in under 30 seconds. The session opens, the primer loads, the AI orients to the project state and gets to work. No re-onboarding penalty between vendors.
+
+**5. The 14-department named-role architecture (AE0-AE14).** AI work routes through named departments with charter constraints. Every action has a known author. Every promotion has a known reviewer. The dispatcher logs the route in the receipt.
+
+What this enables in practice: ORANGEBOX's v1.0.0-beta installer was produced by earlier versions of itself. The receipts from those builds are in the install. B00KMAKR's 142 feature surfaces were enumerated, counted, and verified by an AI agent running against the bundle that buyers download tonight.
+
+[continues with deep architecture, AECode contract examples, receipt schema, the dispatcher design, and the manifesto]
+
+Public repos: github.com/AtomEons/orangebox · github.com/AtomEons/BookMaker
+Product pages: atomeons.com/orangebox · atomeons.com/b00kmakor
+Pricing doctrine paper: atomeons.com/dynamic-world-pricing (CC-BY 4.0)`,
   },
   {
     title: "Cold email template (universal)",
@@ -250,15 +294,21 @@ I also published a 14-clause manifesto so the doctrine is explicit and falsifiab
 
 Hi [NAME],
 
-While [RECENT NEWS THEY COVERED], I just shipped the counter-play: ORANGEBOX Command v6.3, a $49-once desktop AI cockpit with a published 14-clause operating manifesto.
+While [RECENT NEWS THEY COVERED], I shipped two AI applications tonight — both built by AI, for AI operators, in 75 days using earlier versions of themselves.
 
-Two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs) + AE Operations (engine — MCP tools, agent routing, 200+ models across Claude/GPT/Gemini/Groq/Ollama/OpenRouter). Local-first. Zero telemetry. Zero token markup. License §4A legally bans switching to subscription. Two 30-day refund paths if it doesn't fit.
+ORANGEBOX v1.0.0-beta — Windows desktop AI cockpit. 9-provider multi-LLM router (Claude/GPT/Gemini/Ollama/OpenRouter/Groq/Cohere/Mistral/Perplexity). AECode contracts on every AI change. Tamper-evident JSON receipts. 14-department architecture. Free this week, then $49 perpetual (§4A legally bans subscription).
 
-The manifesto (https://atomeons.com/manifesto) makes the lab's full doctrine explicit and falsifiable. Clause 13 invites the public to challenge any clause with evidence.
+B00KMAKR v3.2.0 — AI publishing cockpit. Mac + Windows. 142 feature surfaces. Mission graph for chapters. Voice fingerprint persistence. KDP packager. Free this week, then dynamic-world-pricing (your country's tier rate via the USA Advantage Clause + Strategic Tier Lift doctrines).
 
-atomeons.com itself was built inside the cockpit it sells.
+Eleven novel features have not lived inside a single application before tonight. The full list is on the press page.
+
+The story angle: a solo Florida operator shipped two production-grade desktop AI apps in one launch wave while the cartel debated RLHF — and the apps were built by AI under structured contracts, with one human in the loop reading every receipt before approving every promotion. The leverage that gives one human is the leverage that flattens the difference between a fifty-person Series A and a one-operator lab.
 
 Full press kit: https://atomeons.com/press
+Product pages: https://atomeons.com/orangebox · https://atomeons.com/b00kmakor
+Pricing doctrine: https://atomeons.com/dynamic-world-pricing
+Founders Letter: https://atomeons.com/founders-view/2026-05-31-an-app-from-the-future
+
 Founder-direct on this email or @AtomMccree.
 
 — Atom McCree
