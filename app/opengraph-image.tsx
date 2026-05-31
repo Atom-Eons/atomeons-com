@@ -2,14 +2,14 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "ORANGEBOX v6.3 — the cockpit replaces Claude Code, Cursor, and Codex. $49 once, forever. License §4A bans subscription.";
+  "AtomEons launch night 2026-05-30 — ORANGEBOX v1.0.0-beta + B00KMAKR v3.2.0 shipped. Two AI cockpits built by AI, for AI operators, in 75 days. Free for one week.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
- * Home / atomeons.com social card.
- * Disruption framing: ONE cockpit replaces three paid tools. $49 once,
- * forever. Two surfaces (AE See-Suite + AE Operations). §4A no-saas.
+ * Home / atomeons.com social card · LAUNCH NIGHT 2026-05-30.
+ * Two AI cockpits shipped tonight. Free for one week. The single most-shared
+ * card on the site — needs to land the launch headline in <3 seconds.
  */
 export default function OG() {
   return new ImageResponse(
@@ -21,102 +21,61 @@ export default function OG() {
           display: "flex",
           flexDirection: "column",
           background:
-            "radial-gradient(70% 55% at 78% 30%, rgba(34,240,213,0.28) 0%, transparent 60%), radial-gradient(50% 40% at 10% 95%, rgba(255,122,26,0.26) 0%, transparent 65%), #000000",
-          color: "#F2F4F5",
-          padding: 64,
+            "radial-gradient(60% 50% at 75% 25%, rgba(255,119,51,0.32) 0%, transparent 65%), radial-gradient(45% 40% at 15% 90%, rgba(255,170,68,0.20) 0%, transparent 65%), #1A1410",
+          color: "#E8D5B7",
+          padding: 60,
           fontFamily:
             '"Helvetica", "Arial", -apple-system, BlinkMacSystemFont, sans-serif',
         }}
       >
-        {/* TOP STRIP */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            width: "100%",
-            paddingBottom: 16,
-            borderBottom: "1px solid #1A2225",
+            paddingBottom: 14,
+            borderBottom: "1px solid #3D2F22",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            <svg width="48" height="48" viewBox="-50 -50 100 100">
-              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#FF7A1A" strokeWidth="2.5" opacity="0.95" />
-              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#22F0D5" strokeWidth="2" opacity="0.75" transform="rotate(60)" />
-              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#22F0D5" strokeWidth="1.5" opacity="0.5" transform="rotate(120)" />
-              <circle cx="0" cy="0" r="9" fill="#FF7A1A" />
-              <circle cx="0" cy="0" r="4" fill="#FFA45A" />
+            <svg width="44" height="44" viewBox="-50 -50 100 100">
+              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#FF7733" strokeWidth="2.5" opacity="0.95" />
+              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#FFAA66" strokeWidth="2" opacity="0.75" transform="rotate(60)" />
+              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#FFAA66" strokeWidth="1.5" opacity="0.5" transform="rotate(120)" />
+              <circle cx="0" cy="0" r="9" fill="#FF7733" />
+              <circle cx="0" cy="0" r="4" fill="#FFAA66" />
             </svg>
-            <p style={{ margin: 0, fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: "#F2F4F5" }}>
-              ATOMEONS · ORANGEBOX
+            <p style={{ margin: 0, fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: "#E8D5B7" }}>
+              ATOMEONS · MARCO ISLAND
             </p>
           </div>
-          <p
-            style={{
-              margin: 0,
-              fontSize: 12,
-              letterSpacing: 5,
-              textTransform: "uppercase",
-              color: "#FF7A1A",
-              fontFamily: "monospace",
-            }}
-          >
-            ● v6.3 NATIVE · LIVE NOW
+          <p style={{ margin: 0, fontFamily: "monospace", fontSize: 12, letterSpacing: 5, textTransform: "uppercase", color: "#FFAA66" }}>
+            ● shipped 2026-05-30 · FREE this week
           </p>
         </div>
 
-        {/* HEADLINE — disruption claim */}
-        <div style={{ display: "flex", flexDirection: "column", marginTop: 28 }}>
-          <p
-            style={{
-              margin: 0,
-              fontSize: 16,
-              letterSpacing: 5,
-              textTransform: "uppercase",
-              color: "#22F0D5",
-              fontFamily: "monospace",
-            }}
-          >
-            ▲ v6.3 native · two surfaces · $49 forever · §4A no-saas
+        <div style={{ display: "flex", flexDirection: "column", marginTop: 30 }}>
+          <p style={{ margin: 0, fontFamily: "monospace", fontSize: 14, letterSpacing: 5, textTransform: "uppercase", color: "#FF7733" }}>
+            ORANGEBOX v1.0.0-beta · B00KMAKR v3.2.0
           </p>
-          <p
-            style={{
-              margin: "18px 0 0",
-              fontSize: 76,
-              fontWeight: 500,
-              lineHeight: 0.97,
-              letterSpacing: -2.5,
-              color: "#F2F4F5",
-              maxWidth: 1080,
-            }}
-          >
-            One cockpit
+          <p style={{ margin: "18px 0 0", fontSize: 96, fontWeight: 500, lineHeight: 0.95, letterSpacing: -3.5, color: "#E8D5B7", maxWidth: 1100 }}>
+            Two AI cockpits.
             <br />
-            <span style={{ color: "#FF7A1A" }}>replaces three</span> tools.
+            <span style={{ color: "#FF7733" }}>Free this week.</span>
           </p>
-          <p
-            style={{
-              margin: "22px 0 0",
-              fontSize: 24,
-              lineHeight: 1.35,
-              color: "#9BA5A7",
-              maxWidth: 1020,
-              fontWeight: 400,
-            }}
-          >
-            Native binary. No webview. No chromium. Claude · GPT · Gemini ·
-            Groq LPUs · Ollama. AE See-Suite + AE Operations. Local-first.
-            Zero telemetry. Zero token markup.
+          <p style={{ margin: "22px 0 0", fontSize: 22, lineHeight: 1.4, color: "#C4AD8E", maxWidth: 1040, fontWeight: 400 }}>
+            Built by AI, for AI operators, in 75 days using earlier versions of
+            themselves. Multi-LLM. BYO keys. Tamper-evident receipts. Eleven
+            novel features that have not lived inside one app before tonight.
           </p>
         </div>
 
-        {/* lane stat bars */}
-        <div style={{ display: "flex", gap: 18, marginTop: 28, width: "100%" }}>
+        <div style={{ display: "flex", gap: 14, marginTop: 22, width: "100%" }}>
           {[
-            { k: "SURFACES", v: "2" },
-            { k: "MCP TOOLS", v: "60+" },
-            { k: "MODELS", v: "200+" },
-            { k: "GUARDRAILS", v: "27" },
+            { k: "PROVIDERS", v: "9" },
+            { k: "DEPARTMENTS", v: "15" },
+            { k: "SURFACES (B00KMAKR)", v: "142" },
+            { k: "TELEMETRY", v: "0" },
             { k: "SUBSCRIPTIONS", v: "0" },
           ].map((m) => (
             <div
@@ -126,56 +85,32 @@ export default function OG() {
                 flexDirection: "column",
                 flex: 1,
                 padding: "12px 14px",
-                border: "1px solid #1A2225",
+                border: "1px solid #3D2F22",
                 borderRadius: 8,
-                background: "rgba(10, 15, 17, 0.7)",
+                background: "rgba(34,26,20,0.7)",
               }}
             >
-              <p style={{ margin: 0, fontSize: 28, fontWeight: 700, color: "#F2F4F5", lineHeight: 1 }}>
-                {m.v}
-              </p>
-              <p
-                style={{
-                  margin: "6px 0 0",
-                  fontSize: 10,
-                  letterSpacing: 2,
-                  textTransform: "uppercase",
-                  color: "#6B7779",
-                  fontFamily: "monospace",
-                }}
-              >
-                {m.k}
-              </p>
+              <p style={{ margin: 0, fontSize: 28, fontWeight: 700, color: "#E8D5B7", lineHeight: 1 }}>{m.v}</p>
+              <p style={{ margin: "6px 0 0", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", color: "#8A7560", fontFamily: "monospace" }}>{m.k}</p>
             </div>
           ))}
         </div>
 
-        {/* BOTTOM STRIP — URL + price chip */}
         <div
           style={{
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "space-between",
-            width: "100%",
             marginTop: "auto",
             paddingTop: 22,
-            borderTop: "1px solid #1A2225",
+            borderTop: "1px solid #3D2F22",
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <p
-              style={{
-                margin: 0,
-                fontSize: 11,
-                letterSpacing: 4,
-                textTransform: "uppercase",
-                color: "#6B7779",
-                fontFamily: "monospace",
-              }}
-            >
-              ::local-first · zero telemetry · §4A no-saas lock · 30-day refund
+            <p style={{ margin: 0, fontSize: 11, letterSpacing: 4, textTransform: "uppercase", color: "#8A7560", fontFamily: "monospace" }}>
+              ::built in 75 days · with itself · receipts on disk · §4A no-saas
             </p>
-            <p style={{ margin: 0, fontSize: 22, color: "#22F0D5", fontFamily: "monospace", fontWeight: 700 }}>
+            <p style={{ margin: 0, fontSize: 22, color: "#FF7733", fontFamily: "monospace", fontWeight: 700 }}>
               atomeons.com
             </p>
           </div>
@@ -185,25 +120,16 @@ export default function OG() {
               alignItems: "baseline",
               gap: 12,
               padding: "18px 28px",
-              background: "#FF7A1A",
+              background: "#FF7733",
               borderRadius: 14,
-              boxShadow: "0 0 60px rgba(255,122,26,0.55)",
+              boxShadow: "0 0 60px rgba(255,119,51,0.55)",
             }}
           >
-            <p style={{ margin: 0, fontSize: 60, fontWeight: 700, color: "#000", lineHeight: 1 }}>
-              $49
+            <p style={{ margin: 0, fontSize: 60, fontWeight: 700, color: "#1A1410", lineHeight: 1 }}>
+              FREE
             </p>
-            <p
-              style={{
-                margin: 0,
-                fontSize: 14,
-                color: "#000",
-                textTransform: "uppercase",
-                letterSpacing: 2.5,
-                fontWeight: 700,
-              }}
-            >
-              once · forever
+            <p style={{ margin: 0, fontSize: 14, color: "#1A1410", textTransform: "uppercase", letterSpacing: 2.5, fontWeight: 700 }}>
+              ends June 6 · 4 PM EDT
             </p>
           </div>
         </div>
