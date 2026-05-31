@@ -65,7 +65,7 @@ export default function B00KMakrBuy({
         disabled={loading}
         className={baseClasses}
       >
-        {loading ? "Opening checkout…" : "Buy B00KMAKR →"}
+        {loading ? "Opening checkout…" : "Get B00KMAKR →"}
       </button>
       {err && (
         <div className="max-w-md rounded-lg border border-[#FFB87A]/40 bg-[#1C1108] px-4 py-3 text-sm text-[#FFB87A]">

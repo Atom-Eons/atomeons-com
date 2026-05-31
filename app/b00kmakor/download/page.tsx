@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PlatformPicker from "./PlatformPicker";
 
 /**
  * /b00kmakor/download — buyer-facing download landing page.
@@ -105,7 +106,7 @@ export default function B00KMakrDownloadPage() {
         </p>
       </section>
 
-      {/* TWO PLATFORM ZIPS */}
+      {/* TWO PLATFORM ZIPS — with auto OS detection */}
       <section className="mx-auto w-full max-w-5xl px-6 py-12">
         <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
           ::the apps
@@ -114,60 +115,83 @@ export default function B00KMakrDownloadPage() {
           Pick your platform.
         </h2>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {[ARTIFACTS.macZip, ARTIFACTS.winZip].map((a) => (
-            <div
-              key={a.filename}
-              className="rounded-2xl border bg-[#0A0F11] p-7"
-              style={{ borderColor: a.color + "55" }}
+        <div className="mt-8">
+          <PlatformPicker
+            macArtifact={ARTIFACTS.macZip}
+            winArtifact={ARTIFACTS.winZip}
+          />
+        </div>
+      </section>
+
+      {/* AFTER YOU DOWNLOAD — Mom-grade 3-step guide */}
+      <section className="mx-auto w-full max-w-5xl px-6 py-12">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+          ::after you download · plain english
+        </p>
+        <h2 className="mt-3 text-3xl font-medium tracking-tight md:text-4xl">
+          Three steps. That&apos;s it.
+        </h2>
+        <p className="mt-4 max-w-2xl text-base leading-[1.65] text-[#C8CCCE]">
+          You don&apos;t need to install anything. You don&apos;t need to
+          run a command. You don&apos;t need to know what a zip file is.
+          Here&apos;s what happens after the download lands.
+        </p>
+
+        <ol className="mt-10 space-y-6">
+          {[
+            {
+              n: "01",
+              head: "Find the file you just downloaded.",
+              body: "It&apos;s in your Downloads folder. The filename starts with B00KMAKR. On Mac it ends in .zip. On Windows it ends in .zip too.",
+            },
+            {
+              n: "02",
+              head: "Open the zip.",
+              body: "On Mac: double-click it. macOS will unzip it automatically and put a B00KMAKR folder right next to the zip. On Windows: right-click → Extract All → click Extract. A B00KMAKR folder appears.",
+            },
+            {
+              n: "03",
+              head: "Open B00KMAKR.html.",
+              body: "Inside the folder you&apos;ll see a file called B00KMAKR.html. Double-click it. It opens in your browser (Safari, Chrome, whatever you have) and the cockpit is running. That&apos;s the app. No install, no account, no login.",
+            },
+          ].map((step) => (
+            <li
+              key={step.n}
+              className="grid gap-4 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:grid-cols-[80px_1fr] md:p-7"
             >
-              <div className="flex items-center gap-3">
-                <span
-                  className="size-3 rounded-full"
-                  style={{ background: a.color }}
-                />
+              <p className="font-mono text-4xl font-semibold tabular-nums text-[#22F0D5]">
+                {step.n}
+              </p>
+              <div>
+                <h3 className="text-xl font-medium text-[#F2F4F5]">
+                  {step.head}
+                </h3>
                 <p
-                  className="font-mono text-[10px] uppercase tracking-[0.22em]"
-                  style={{ color: a.color }}
-                >
-                  ::{a.label}
-                </p>
+                  className="mt-2 text-[15px] leading-[1.65] text-[#C8CCCE]"
+                  dangerouslySetInnerHTML={{ __html: step.body }}
+                />
               </div>
-              <p className="mt-4 text-xl font-medium text-[#F2F4F5]">
-                {a.filename}
-              </p>
-              <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.22em] text-[#9BA5A7]">
-                {a.size} · {a.accent} accent · SHA-256 verified
-              </p>
-
-              <a
-                href={a.url}
-                download
-                className="mt-6 inline-flex items-center gap-2 rounded-lg border px-5 py-2.5 text-sm font-semibold transition-colors"
-                style={{
-                  borderColor: a.color,
-                  background: a.color,
-                  color: "#0A0F11",
-                }}
-              >
-                Download · {a.size} ↓
-              </a>
-
-              <details className="mt-6 group">
-                <summary className="cursor-pointer font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779] hover:text-[#22F0D5]">
-                  ::verify integrity (SHA-256)
-                </summary>
-                <div className="mt-3 space-y-2">
-                  <code className="block break-all rounded bg-black/40 p-3 font-mono text-[11px] text-[#22F0D5]">
-                    {a.sha}
-                  </code>
-                  <code className="block rounded bg-black/40 p-3 font-mono text-[11px] text-[#C8CCCE]">
-                    {a.verifyCmd}
-                  </code>
-                </div>
-              </details>
-            </div>
+            </li>
           ))}
+        </ol>
+
+        <div className="mt-8 rounded-2xl border border-[#FFB87A]/30 bg-[#1C1308] p-6">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+            ::if anything looks weird
+          </p>
+          <p className="mt-3 text-[15px] leading-[1.65] text-[#C8CCCE]">
+            On Windows you might see a &quot;Windows protected your PC&quot; banner the
+            first time — that&apos;s SmartScreen warning about an un-Microsoft-signed
+            app. Click <span className="font-semibold text-[#F2F4F5]">More info → Run anyway</span>.
+            On Mac you might see &quot;cannot be opened because it is from an
+            unidentified developer&quot; the first time you open the .command launcher
+            — right-click it instead of double-click, choose{" "}
+            <span className="font-semibold text-[#F2F4F5]">Open</span>, then{" "}
+            <span className="font-semibold text-[#F2F4F5]">Open</span> in the dialog.
+            Both warnings go away once the Microsoft + Apple code-signing pipelines
+            finish (this week). If anything else looks wrong, email the founder — link
+            at the bottom of this page.
+          </p>
         </div>
       </section>
 
