@@ -167,10 +167,11 @@ export default function About() {
           ORANGEBOX, prototype.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
-          Native binary. One file. Double-click. v6.3 cockpit with two
-          surfaces: AE See-Suite (command) + AE Operations (engine).
-          $49 once, forever. License §4A bans subscription. Two 30-day
-          refund paths. ORANGEBOX.
+          The turbo-optimization system for Claude. v1.0.0-beta shipped
+          2026-05-30 — persistent memory, 10-80× context compression,
+          skill primers, tamper-evident receipts, 14-department routing.
+          FREE this week · perpetual after. License §4A bans subscription.
+          30-day Material Failure Guarantee. ORANGEBOX.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link

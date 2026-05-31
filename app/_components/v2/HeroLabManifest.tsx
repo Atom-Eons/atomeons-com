@@ -57,7 +57,7 @@ export function HeroLabManifest() {
           <span aria-hidden className="text-[#1A2225]">·</span>
           <span className="text-[#F2F4F5]">CC-BY 4.0</span>
           <span aria-hidden className="text-[#1A2225]">·</span>
-          <span className="text-[#FF7A1A]">$49 · §4A NO-SAAS</span>
+          <span className="text-[#FF7A1A]">FREE WEEK · §4A NO-SAAS</span>
         </div>
 
         {/* secondary escape CTAs — low hierarchy, mono, two actions */}

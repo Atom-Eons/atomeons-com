@@ -82,11 +82,11 @@ const FAQS: QA[] = [
   },
   {
     q: "What is ORANGEBOX v6.3?",
-    a: "ORANGEBOX Command v6.3 is a native AI cockpit for Windows with two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs, broadcast feed) and AE Operations (engine — MCP tools, agent routing, model selection, party-line status bus). Two install paths: Basic Install (cockpit alone, BYO keys) or AI Box (cockpit + curated Ollama-managed local-model bundle for offline operation). Multi-model routing across Claude, GPT, Gemini, Groq LPUs, Ollama, and OpenRouter (200+ models). $49 once, forever — License §4A legally bans subscription switch. Two 30-day refund paths (Material Failure Guarantee + Workflow-Fit Refund).",
+    a: "ORANGEBOX v1.0.0-beta is the turbo-optimization system for Claude on Windows 10/11. It gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident JSON receipts on every action, and a 14-department named-role routing system (AE0-AE14). Optional fallback to GPT, Gemini, Groq, Ollama, and OpenRouter via BYO key. FREE this launch week · perpetual after · License §4A legally bans subscription switch. 30-day Material Failure Guarantee.",
   },
   {
     q: "How is the price really $49? Where's the catch?",
-    a: "Pricing canon (2026-05-23): $49 USD once, forever. No subscription, no ladder, no usage meter, no freemium gate. You buy it once, you own it, you keep the binary, you keep the source. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. If it doesn't fit your workflow within 30 days, the Workflow-Fit Refund returns 100% with no fault-finding required. If a documented bug can't be fixed within 14 days, the Material Failure Guarantee returns 100%. The earlier $1 + free-7-days framing (v6.1.0) was retired on 2026-05-23 in favor of the working $49 + dual-30-day-refund canon. Legacy buyers on the prior framing are grandfathered under §4A.",
+    a: "Pricing posture: FREE this launch week (2026-05-30 → 2026-06-06). After the countdown, perpetual license · price set by the lab · may change at random going forward. No subscription, no ladder, no usage meter, no freemium gate. You buy it once, you own it, you keep the binary, you keep the source. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. If it doesn't fit your workflow within 30 days, the Material Failure Guarantee returns 100% with no fault-finding required. Free-week buyers are grandfathered for life by clause — even when the price changes for new buyers, your license stays.",
   },
   {
     q: "What's inside the v6.3 installer?",
@@ -130,11 +130,11 @@ const FAQS: QA[] = [
   },
   {
     q: "Why $49?",
-    a: "Because the price of a paperback book and a coffee is a working price filter — it screens for buyers who actually want to operate without screening out the students, freelancers, indie devs, and side-project builders who do real work without a budget. Once. Forever. Specifically chosen NOT to be: a subscription (banned by §4A), a usage meter (no telemetry, no per-call billing), a freemium gate (no feature ransom), or venture-funded pricing (no investors to satisfy). The price exists to fund one operator's ongoing maintenance, not to growth-hack an anchor. See manifesto clause 04 for the full reasoning.",
+    a: "The pricing exists to fund one operator's ongoing maintenance, not to growth-hack an anchor. Free during the launch week to seed install reputation. Perpetual after — once, forever — at a price set by the lab. Specifically chosen NOT to be: a subscription (banned by §4A), a usage meter (no telemetry, no per-call billing), a freemium gate (no feature ransom), or venture-funded pricing (no investors to satisfy). The post-countdown price is set by the operator and may change at random going forward; free-week buyers are grandfathered for life by clause. See manifesto clause 04 for the full reasoning.",
   },
   {
     q: "How does it compare to hiring a part-time PM, or to Notion + Linear + Slack?",
-    a: "Hiring a part-time PM at 10h/week and $100/h is ~$52,000/year — the doctrine leaves with the human. Notion + Linear + Slack + Loom + Cal stack is ~$2,400/year — surface theater, no mission graph, no receipt law. Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced is ~$3,120/year — chat with no project memory or department routing. Custom AI cockpit consulting build is $40K–$120K and 6–9 months. ORANGEBOX is $49 once and includes the cockpit, AE See-Suite + AE Operations surfaces, doctrine, skill suite, and worker pack.",
+    a: "Hiring a part-time PM at 10h/week and $100/h is ~$52,000/year — the doctrine leaves with the human. Notion + Linear + Slack + Loom + Cal stack is ~$2,400/year — surface theater, no mission graph, no receipt law. Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced is ~$3,120/year — chat with no project memory or department routing. Custom AI cockpit consulting build is $40K–$120K and 6–9 months. ORANGEBOX is FREE this launch week and perpetual after — one purchase includes the turbo-optimize layer for Claude (memory, compression, skill primers, receipts), the 14-department router, and the optional model fallback.",
   },
   {
     q: "Will it stop being relevant if I lock into ORANGEBOX?",
@@ -209,9 +209,10 @@ export default function FAQ() {
         ORANGEBOX <span className="text-[#ff7a18]">questions</span> answered.
       </h1>
       <p className="mt-6 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
-        Real answers about the v6.3 native AI cockpit. Two surfaces:
-        AE See-Suite + AE Operations. $49 once, forever. License §4A
-        bans subscription. Two 30-day refund paths. Local-first.
+        Real answers about ORANGEBOX v1.0.0-beta (turbo-optimize Claude)
+        and B00KMAKR v3.2.0 (AI publishing cockpit). FREE this week ·
+        perpetual after · License §4A bans subscription · 30-day Material
+        Failure Guarantee · local-first.
       </p>
 
       <div className="mt-12 space-y-6">
@@ -237,7 +238,7 @@ export default function FAQ() {
           className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
           style={{ color: "#000", WebkitTextFillColor: "#000" }}
         >
-          See ORANGEBOX · $49 →
+          See ORANGEBOX · FREE this week →
         </Link>
         <Link
           href="/research/papers"

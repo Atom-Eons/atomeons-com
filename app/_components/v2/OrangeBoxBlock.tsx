@@ -104,8 +104,8 @@ export function OrangeBoxBlock() {
                     on your disk.
                   </p>
                   <p className="font-mono text-sm uppercase tracking-[0.14em] text-[#FF7A1A]">
-                    $49 ONCE · FOREVER · LICENSE §4A BANS SUBSCRIPTION.
-                    TWO 30-DAY REFUND PATHS IF IT DOESN&apos;T FIT.
+                    FREE THIS WEEK · PERPETUAL AFTER · §4A BANS SUBSCRIPTION.
+                    30-DAY MATERIAL FAILURE GUARANTEE IF IT DOESN&apos;T FIT.
                   </p>
                 </div>
               </>
@@ -141,7 +141,7 @@ export function OrangeBoxBlock() {
                   ::sales paused · maintenance window
                 </p>
                 <p className="mt-3 text-2xl font-medium text-[#F2F4F5]">
-                  $49 once · live when sales reopen
+                  FREE this week · perpetual after countdown
                 </p>
                 <p className="mt-2 text-sm text-[#9BA5A7]">
                   License §4A locks the price. No subscription, ever.
@@ -153,11 +153,12 @@ export function OrangeBoxBlock() {
                   ::price · once · forever · §4A
                 </p>
                 <p className="mt-2 text-5xl font-medium tracking-tight text-[#F2F4F5]">
-                  $49
+                  FREE
                 </p>
                 <p className="mt-2 text-sm text-[#9BA5A7]">
-                  One-time payment. No subscription. No usage meter. No
-                  freemium gate. Source included. Two 30-day refund paths
+                  Free this week. Perpetual after the countdown. No
+                  subscription, no usage meter, no freemium gate.
+                  Source included. 30-day Material Failure Guarantee
                   if it doesn&apos;t fit.
                 </p>
                 <div className="mt-5">
