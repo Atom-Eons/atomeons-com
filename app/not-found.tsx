@@ -155,7 +155,7 @@ export default function NotFound() {
           href="/orangebox"
           className="rounded-md border border-[#204538] bg-[#071915] px-5 py-2.5 text-sm font-semibold text-[#f7f0e4]"
         >
-          Buy ORANGEBOX · $49
+          Get ORANGEBOX · FREE this week
         </Link>
         <Link
           href="/research/about"

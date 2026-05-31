@@ -34,8 +34,8 @@ const TILES: FooterTile[] = [
     href: "/intel",
   },
   {
-    label: "Buy ORANGEBOX",
-    description: "v6.3 · $49 once · §4A no-saas",
+    label: "Get ORANGEBOX",
+    description: "v1.0.0-beta · turbo-optimize Claude · FREE this week · §4A no-saas",
     href: "/orangebox",
   },
   {
