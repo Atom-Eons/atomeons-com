@@ -521,6 +521,144 @@ export default function LearnPage() {
         </div>
       </section>
 
+      {/* SUPER SURFACES — 5 high-leverage reference pages */}
+      <section className="border-b border-[#1A2225]">
+        <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::five reference surfaces · for when you don&apos;t want a curriculum
+          </p>
+          <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+            Skip the curriculum.{" "}
+            <span className="text-[#22F0D5]">Just get the answer.</span>
+          </h2>
+          <p className="mt-5 max-w-2xl text-base leading-[1.65] text-[#9BA5A7] md:text-lg">
+            Five standalone references. Each one a complete artifact you
+            can read in 10-20 minutes, print, share, or come back to
+            forever. Pick the one shaped like your question.
+          </p>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/learn/playbooks"
+              className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/60"
+              style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                ::reference 01 · playbooks
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-3xl">
+                AI playbooks · by job
+              </h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7] md:text-base">
+                18 job-by-job playbooks. Writer, software engineer,
+                founder, teacher, marketer, lawyer, realtor, student,
+                parent, designer, researcher, manager, sales, creator,
+                consultant, nurse, retiree, small-business owner. The
+                daily 5-min hook, the 4 daily plays, the 2 weekly plays,
+                the exact prompts, what to never automate.
+              </p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                open the playbooks →
+              </p>
+            </Link>
+
+            <Link
+              href="/learn/decision-tree"
+              className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/60"
+              style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                ::reference 02 · decision tree
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-3xl">
+                Which AI for which task
+              </h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7] md:text-base">
+                The honest decision tree. 18 task categories — long
+                writing, short copy, code, research, images, voice,
+                math, agents, translation, multimodal, private/NDA work.
+                For each: the model to use, the alternative, the exact
+                prompt shape, the trap.
+              </p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                open the decision tree →
+              </p>
+            </Link>
+
+            <Link
+              href="/learn/cheatsheet"
+              className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/60"
+              style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                ::reference 03 · cheatsheet
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-3xl">
+                The printable one-pager
+              </h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7] md:text-base">
+                Two-page printable reference card. Which model for what,
+                the 7-part prompt structure, the verify rule, what to
+                never paste, 10 prompts that work forever, the AI lingo
+                decoder, cost reality check, when to put the AI down.
+                Print it. Pin it. Share it.
+              </p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                open the cheatsheet →
+              </p>
+            </Link>
+
+            <Link
+              href="/learn/mistakes"
+              className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#FFB87A]/60"
+              style={{ borderLeftWidth: "4px", borderLeftColor: "#FFB87A" }}
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">
+                ::reference 04 · mistakes
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[#F2F4F5] group-hover:text-[#FFB87A] md:text-3xl">
+                30 AI mistakes · what NOT to do
+              </h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7] md:text-base">
+                30 catalogued mistakes across 5 categories — prompt
+                mistakes, trust mistakes, safety mistakes, skill
+                mistakes, economy mistakes. For each: the mistake, the
+                symptom you&apos;ll notice if you&apos;re making it,
+                the fix. Calibrated to 2026.
+              </p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">
+                see the catalog →
+              </p>
+            </Link>
+
+            <Link
+              href="/learn/cases"
+              className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/60 md:col-span-2"
+              style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                ::reference 05 · cases
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-3xl">
+                7 real-world AI case studies
+              </h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7] md:text-base">
+                The Substack writer. The indie developer. The public
+                school teacher. The solo attorney. The retiree
+                memoirist. The clinical nurse. The small-business
+                owners. Each one: the before-AI, the stack, the shift,
+                the trap they hit, the fix, where they are one year
+                later. Find the one shaped like you and steal the
+                playbook.
+              </p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                read the cases →
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* LIBRARY TEASER */}
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
