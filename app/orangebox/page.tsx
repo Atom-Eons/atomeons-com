@@ -463,15 +463,6 @@ export default function OrangeboxPage() {
                   <span>{b.label}</span>
                 </span>
               ))}
-              {COMING_BADGES.map((c) => (
-                <span
-                  key={c}
-                  className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em]"
-                  style={{ borderColor: EMBER.separator, background: "transparent", color: EMBER.textDim }}
-                >
-                  {c} · coming v1.0.1
-                </span>
-              ))}
             </div>
           </div>
 
