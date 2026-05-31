@@ -55,8 +55,8 @@ const ASSETS = {
     "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/brand/theorangebox.png",
   exe: "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/v1.0.0-beta/OrangeboxSetup-1.0.0-win-x64.exe",
   cert: "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/v1.0.0-beta/AtomEons-CodeSigning.cer",
-  github: "https://github.com/Atom-Eons/orangebox",
-  ghRelease: "https://github.com/Atom-Eons/orangebox/releases/latest",
+  github: "https://github.com/AtomEons/orangebox",
+  ghRelease: "https://github.com/AtomEons/orangebox/releases/latest",
 } as const;
 
 const SHA256 =
@@ -286,7 +286,7 @@ const FAQ = [
   },
   {
     q: "How do I report a bug?",
-    a: "Open an issue on the public GitHub repo at github.com/Atom-Eons/orangebox, or email support@atomeons.com.",
+    a: "Open an issue on the public GitHub repo at github.com/AtomEons/orangebox, or email support@atomeons.com.",
   },
   {
     q: "Where do I buy?",
@@ -1155,7 +1155,7 @@ export default function OrangeboxPage() {
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>Resources</p>
             <ul className="mt-4 space-y-2 text-[14px]" style={{ color: EMBER.textSoft }}>
-              <li><a href={ASSETS.github + "/tree/main/docs"} target="_blank" rel="noopener">Documentation</a></li>
+              <li><a href={ASSETS.github} target="_blank" rel="noopener">Public repo (docs in-install)</a></li>
               <li><a href="#faq">FAQ</a></li>
               <li><a href={ASSETS.github + "/releases"} target="_blank" rel="noopener">Changelog</a></li>
             </ul>

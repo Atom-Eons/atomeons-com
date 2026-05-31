@@ -99,7 +99,7 @@ export function WhatsInBox() {
 
               <div className="mt-6 border-t border-[#1A2225] pt-4">
                 <a
-                  href="https://github.com/AtomEons/orangebox-os/releases/tag/v6.0.0"
+                  href="https://github.com/AtomEons/orangebox/releases/latest"
                   target="_blank"
                   rel="noopener"
                   className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-[#FF7A1A] transition-colors hover:text-[#FFA45A]"

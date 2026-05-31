@@ -99,7 +99,7 @@ export function Header() {
               {
                 href: "/orangebox",
                 label: "Æ ORANGEBOX",
-                hint: "3-tool bundle · FREE launch week · then $99",
+                hint: "Local-first AI cockpit · FREE launch week · then $49",
               },
               {
                 href: "/skilski",
