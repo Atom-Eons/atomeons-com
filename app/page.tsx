@@ -1,5 +1,6 @@
 import { HeroPillarSequence } from "./_components/v2/HeroPillarSequence";
 import { HomeOnboardStrip } from "./_components/v2/HomeOnboardStrip";
+import { HomeLaunchTiles } from "./_components/HomeLaunchTiles";
 import { OrganismRail } from "./_components/v2/OrganismRail";
 import { LatestFromLab } from "./_components/LatestFromLab";
 import { ResearchSnapshot } from "./_components/v2/ResearchSnapshot";
@@ -60,6 +61,13 @@ export default function Home() {
       <div data-cockpit-section="hero">
         <HeroPillarSequence />
       </div>
+
+      {/* 1.5 — LAUNCH-WEEK DOWNLOAD TILES (operator directive 2026-05-30).
+              Both shipped products with direct-blob download buttons +
+              countdown. Mass-traffic-ready: Orangebox link is a direct
+              Vercel Blob URL (no API gate, no JS handshake), B00KMAKR
+              link points at the static /b00kmakor/download picker page. */}
+      <HomeLaunchTiles />
 
       {/* 1a — Mission strip. Operator directive 2026-05-26:
               "I WANT TO ONBOARD HUMANITY TO AI. THROUGH THIS SITE.

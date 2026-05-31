@@ -25,6 +25,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AtomBoot } from "./_components/AtomBoot";
 import { StickyBuyBar } from "./_components/StickyBuyBar";
 import { LabTicker } from "./_components/v2/LabTicker";
+import { LaunchBanner } from "./_components/LaunchBanner";
 
 /**
  * Site-wide viewport configuration.
@@ -188,6 +189,7 @@ export default function RootLayout({
         <AtomBoot />
         <div className="boot-bar" aria-hidden />
         <MadeWithOrangebox />
+        <LaunchBanner />
         <Header />
         <div className="screen-flicker flex-1">{children}</div>
         <Footer />
