@@ -63,7 +63,7 @@ export default function OG() {
               color: "#FFB87A",
             }}
           >
-            ● updated 2026-05-22
+            ● live · the comprehensive on-ramp
           </p>
         </div>
 
