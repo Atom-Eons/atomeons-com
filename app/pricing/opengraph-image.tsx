@@ -2,13 +2,13 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "AtomEons pricing — Orangebox $49 perpetual + B00KMAKR dynamic-world-pricing (Tier 1 $99 · USA Advantage Clause $9.90 · Strategic Tier Lift CN $99). License §4A bans subscription on both products. Free first week from launch.";
+  "AtomEons pricing — Orangebox perpetual license (FREE this week · perpetual after) + B00KMAKR dynamic-world-pricing (Tier 1 $99 · USA Advantage Clause $9.90 · Strategic Tier Lift CN $99). License §4A bans subscription on both products. Free launch week.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
  * /pricing card · matches the redirect destination (/orangebox#pricing).
- * Lands the dual-product pricing posture: Orangebox $49 perpetual after
+ * Lands the dual-product pricing posture: Orangebox perpetual license after
  * free week, B00KMAKR dynamic-world-pricing with two named clauses.
  */
 export default function OG() {
@@ -39,10 +39,10 @@ export default function OG() {
 
         <div style={{ display: "flex", flexDirection: "column", marginTop: 28 }}>
           <p style={{ margin: 0, fontFamily: "monospace", fontSize: 14, letterSpacing: 5, textTransform: "uppercase", color: "#FF7733" }}>
-            ORANGEBOX · $49 PERPETUAL · §4A LOCKED
+            ORANGEBOX · FREE THIS WEEK · §4A LOCKED
           </p>
           <p style={{ margin: "16px 0 0", fontSize: 84, fontWeight: 500, lineHeight: 0.95, letterSpacing: -3, color: "#E8D5B7", maxWidth: 1080 }}>
-            $49 once for Orangebox.<br />
+            FREE this week, perpetual after.<br />
             <span style={{ color: "#FFAA66" }}>Your country&apos;s rate</span> for B00KMAKR.
           </p>
           <p style={{ margin: "22px 0 0", fontSize: 22, lineHeight: 1.4, color: "#C4AD8E", maxWidth: 1040, fontWeight: 400 }}>

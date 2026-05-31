@@ -64,37 +64,39 @@ const SHA256 =
   "D4E6153FEB19B8B8A46BCC987A2308C8D9645CDC792A1BB4246E3115B0743C83";
 
 export const metadata: Metadata = {
-  title: "Orangebox — Local-first AI cockpit for builders · $49",
+  title: "Orangebox — Turbo-optimize Claude · perpetual license",
   description:
-    "Local-first AI cockpit. Multi-LLM. Bring your own keys. Tamper-evident receipts. $49 perpetual — no subscription. Your code never leaves your machine.",
+    "Orangebox is the local-first turbo-optimization system for Claude. 10-80× context compression. Persistent memory across sessions. Reusable skill primers. Tamper-evident receipts on every action. 14-department routing. BYO key, zero markup. Free this week · perpetual after · §4A no-saas. Made by the team that uses Claude the most.",
   keywords: [
     "Orangebox",
-    "local-first AI",
-    "AI cockpit",
-    "BYOK AI",
-    "AI without subscription",
-    "multi-LLM",
+    "Claude optimization",
+    "Claude memory",
+    "Claude context compression",
+    "Claude skill primers",
+    "Claude session memory",
+    "Claude receipts",
+    "Claude audit trail",
     "AECode",
-    "receipt-backed AI",
-    "Cursor alternative local",
+    "AtomSmasher",
+    "Crystal Lattice Compression",
+    "local-first Claude",
+    "AI without subscription",
     "Claude Code alternative",
-    "privacy AI coding",
-    "AI desktop tool Windows",
+    "Anthropic Claude desktop tool",
   ],
   alternates: { canonical: "https://atomeons.com/orangebox" },
   openGraph: {
-    title: "Orangebox — Local-first AI cockpit for builders · $49",
+    title: "Orangebox — Turbo-optimize Claude · perpetual license",
     description:
-      "Built in 75 days. With itself. Multi-LLM. BYOK. Receipt-backed. $49 perpetual.",
+      "Built in 75 days. With itself. 10-80× context compression for Claude. Persistent memory. Skill primers. Receipts. Once · forever · §4A no-saas.",
     url: "https://atomeons.com/orangebox",
     type: "website",
-    // images: omitted · fall through to app/orangebox/opengraph-image.tsx route convention
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orangebox — $49 perpetual · local-first AI cockpit",
+    title: "Orangebox — turbo-optimize Claude · perpetual license",
     description:
-      "Multi-LLM. BYOK. Receipt-backed. No subscription. Your code never leaves your machine.",
+      "10-80× context compression. Persistent memory. Skill primers. Tamper-evident receipts. No subscription.",
   },
   robots: { index: true, follow: true },
 };
@@ -104,7 +106,7 @@ const softwareJsonLd = {
   "@type": "SoftwareApplication",
   name: "Orangebox",
   description:
-    "Local-first desktop AI cockpit for builders. Multi-LLM routing through Claude, GPT, Gemini, local Ollama, OpenRouter. Tamper-evident JSON receipts on every action. BYOK — no AI markup. $49 perpetual, no subscription.",
+    "Turbo-optimization system for Claude. Local-first desktop tool that gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident JSON receipts on every action, and 14-department named-role routing. Optional fallback to GPT/Gemini/Ollama via BYO key. Free this week · perpetual after · §4A bans subscription.",
   applicationCategory: "DeveloperApplication",
   operatingSystem: "Windows 10 · Windows 11",
   softwareVersion: "1.0.0-beta",
@@ -138,56 +140,88 @@ const breadcrumbJsonLd = {
 // ─────────────────────────────────────────────────────────────────────
 
 const TRUST_BADGES = [
+  { icon: "🟧", label: "Optimized for Claude" },
   { icon: "🔒", label: "Local-first" },
-  { icon: "🔑", label: "BYOK" },
+  { icon: "🔑", label: "BYO key · zero markup" },
   { icon: "🧾", label: "Receipt-backed" },
   { icon: "✍️", label: "Signed Authenticode" },
-  { icon: "🪪", label: "Sectigo timestamped" },
   { icon: "🚫", label: "No telemetry" },
-  { icon: "♾", label: "Perpetual" },
+  { icon: "♾", label: "Perpetual · §4A" },
 ];
 
-const COMING_BADGES = [
-  "🪪 Microsoft-signed via Azure Trusted Signing",
-  "✓ GitHub Verified Publisher",
-];
-
-const PROBLEM = [
+// COMPREHENSIVE SUPER-FEATURES grid · operator directive 2026-05-30:
+// 'I want a bullet super features list under top of orangbox page
+// under the hero. the features are buried under marketing.'
+//
+// Five columns · 6-8 bullets each · scannable in 30 seconds. Buyer
+// reads this and knows exactly what Orangebox does without scrolling
+// past hand-crafted prose.
+const FEATURE_COLUMNS = [
   {
-    head: "Subscription bleed",
-    body:
-      "Cursor + Copilot + Claude Pro + ChatGPT + Linear + Notion = $1,000–$1,400/year. Every subscription disappears the moment you stop paying.",
+    head: "Claude Turbo",
+    accent: "#FF7733",
+    bullets: [
+      "10-80× context compression on codebases (AtomSmasher Crystal Lattice)",
+      "Persistent memory across sessions, crashes, vendor outages",
+      "Voice fingerprint locks your style across every Claude call",
+      "Restore Primers re-onboard a new Claude session in <30s",
+      "Token budget tracking per task, per route, per receipt",
+      "Auto-summarization keeps long sessions inside Claude's context",
+      "Smart-route per task: Sonnet for code, Haiku for fast, Opus for hard",
+    ],
   },
   {
-    head: "The privacy gap",
-    body:
-      "Your code uploads to Cursor's servers. To Copilot's. To Claude Code. To Codex. Sits there. Subject to subpoena. Exposed in any breach.",
+    head: "Memory Engine",
+    accent: "#FFAA66",
+    bullets: [
+      "ChatBackup writes every meaningful AI exchange to local disk",
+      "Conversation index lets you grep your past Claude sessions",
+      "Project-graph memory survives context resets and app restarts",
+      "Decision log: what you decided, when, why, which model said so",
+      "Reproducible reproductions — replay any prior session",
+      "Memory is FILES on disk · backup = Ctrl+C · restore = Ctrl+V",
+      "Survives if AtomEons disappears (no license check, no kill-switch)",
+    ],
   },
   {
-    head: "The audit gap",
-    body:
-      "What did the AI just do? Most tools give you nothing — no trail, no proof, no replay. Three weeks later you can't answer.",
-  },
-];
-
-const PILLARS = [
-  {
-    title: "LOCAL-FIRST",
-    head: "Your code stays.",
-    body:
-      "Runs on your computer. Works offline for local-model and local-skill workflows. The only network traffic is the AI provider calls you explicitly send.",
-  },
-  {
-    title: "BRING YOUR OWN KEYS",
-    head: "No markup. No lock-in.",
-    body:
-      "Orangebox ships zero API keys. You provide them. You pay providers directly at their published rates. Orangebox takes nothing from your model spend.",
+    head: "Knowledge Engine",
+    accent: "#FFAA66",
+    bullets: [
+      "Skill Primers — reusable workflows under skills/ in the data root",
+      "Built-in orangebox-primer · teaches Claude the cockpit in <30s",
+      "AECode contracts wrap every AI change (intent → patch → receipt)",
+      "Tamper-evident JSON receipts · SHA-256 stamped · replay-able",
+      "Knowledge compounds on disk: yesterday's receipts inform today's",
+      "Operator-writable skills · survive app upgrades, vendor changes",
+      "Library of working patterns instead of starting from blank prompt",
+    ],
   },
   {
-    title: "RECEIPT-BACKED",
-    head: "Audit-grade by default.",
-    body:
-      "Every install step, every command, every model call writes a tamper-evident JSON receipt to your local audit trail. Grep your own history. Replay what worked. Prove what happened.",
+    head: "Department Routing",
+    accent: "#FF7733",
+    bullets: [
+      "14 named departments (AE1-AE14) · each with charter constraints",
+      "AE0 Brain is the root router · routes Claude work to the right dept",
+      "Review-pressure overlay: LIPS · MIRRORS · CHECKMATE · ORANGE · MISFITS",
+      "Every action has a known author and a known reviewer",
+      "Gauntlet verification before any change promotes",
+      "Cross-department audit · single receipt rail across all departments",
+      "Charters are operator-editable text files · no hidden logic",
+    ],
+  },
+  {
+    head: "Trust + Privacy",
+    accent: "#88CC66",
+    bullets: [
+      "Zero telemetry · zero analytics · zero phone-home (verifiable)",
+      "Local data root at %USERPROFILE%\\OrangeBox-Data\\",
+      "API keys live on your machine · Orangebox sees none of them",
+      "Zero markup on token cost · you pay your provider directly",
+      "§4A no-SaaS covenant binds the lab to never go subscription",
+      "30-day Material Failure Guarantee · full refund · no gauntlet",
+      "Self-Authenticode + Sectigo timestamp · SHA-256 published",
+      "Source included in the install · audit, fork, self-build",
+    ],
   },
 ];
 
@@ -210,7 +244,7 @@ const COMPARISON = [
   { alt: "ChatGPT Plus", cost: "$240/yr", get: "Chat only · no integration · vendor-locked" },
   { alt: "Cursor + Copilot + Claude Pro + Notion + Linear", cost: "$1,500+/yr", get: "Patchwork of subscriptions · no unified spine" },
   { alt: "Custom internal cockpit", cost: "$40K–$120K", get: "Months of build time before first real loop" },
-  { alt: "Orangebox", cost: "$49 once", get: "All of the above · local-first · BYOK · perpetual", highlight: true },
+  { alt: "Orangebox", cost: "Free this week · perpetual after", get: "All of the above · local-first · BYO key · §4A no-saas · once · forever", highlight: true },
 ];
 
 const BUYERS = [
@@ -278,7 +312,7 @@ const FAQ = [
   },
   {
     q: "How is Orangebox different from Cursor / Copilot / Claude Code?",
-    a: "Cursor and Copilot are SaaS — your code uploads to their servers and you pay monthly forever. Claude Code is single-vendor and subscription-locked. Orangebox is local-first (your code stays on your disk), multi-vendor (any model you have a key for), and one-time $49 perpetual.",
+    a: "Cursor and Copilot are SaaS — your code uploads to their servers and you pay monthly forever. Claude Code is subscription-locked. Orangebox is local-first (your code stays on your disk), tuned for Claude with optional fallback to other providers via BYO key, and a one-time perpetual purchase. License §4A legally bans switching to subscription.",
   },
   {
     q: "Is the source code available?",
@@ -290,7 +324,7 @@ const FAQ = [
   },
   {
     q: "Where do I buy?",
-    a: "FREE this week — download direct from the GitHub Release. Starting next week the price is $49 once, perpetual license, via Stripe checkout. Either way you keep the software forever.",
+    a: "FREE this week — download direct from the GitHub Release. After the free-week countdown closes, the price is set by the lab (perpetual license, §4A no-saas, may change at random going forward). Either way you keep the software forever — free-week buyers are grandfathered for life by clause.",
   },
 ];
 
@@ -373,15 +407,16 @@ export default function OrangeboxPage() {
             </p>
 
             <h1 className="text-balance text-5xl font-medium leading-[0.98] tracking-[-0.025em] md:text-7xl" style={{ color: EMBER.textPrimary }}>
-              Your AI cockpit.<br />
-              <span style={{ color: EMBER.accent }}>Local. Perpetual. Yours.</span>
+              Turbo-optimize<br />
+              <span style={{ color: EMBER.accent }}>Claude.</span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-[1.55] md:text-xl" style={{ color: EMBER.textSoft }}>
-              Orangebox is a Windows desktop tool that turns Claude, GPT,
-              Gemini, and local models into a single project-aware command
-              surface — with tamper-evident receipts on every action,
-              complete privacy, and zero subscription.
+              Orangebox is the local-first system that gives Claude
+              persistent memory across sessions, 10-80× context compression,
+              reusable skill primers, tamper-evident receipts on every
+              action, and a 14-department named-role router. CLI-first ·
+              no visual cockpit · made by the team that uses Claude the most.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -466,11 +501,319 @@ export default function OrangeboxPage() {
 
         {/* Countdown · same component as bundle page */}
         <div className="mt-14">
-          <CountdownTimer postCountdownPrice="$49" />
+          <CountdownTimer postCountdownPrice="Perpetual" />
         </div>
       </section>
 
-      {/* ── COMPRESSION KICKER ── */}
+      {/* ── WORKS PERFECTLY WITH · logo strip operator-spec 2026-05-30 ── */}
+      <section
+        className="relative z-10 border-y"
+        style={{ borderColor: EMBER.border, background: EMBER.bg }}
+        aria-label="Works perfectly with"
+      >
+        <div className="mx-auto w-full max-w-7xl px-6 py-7 md:py-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3 md:justify-start md:gap-x-10">
+            <p
+              className="font-mono text-[11px] uppercase tracking-[0.32em]"
+              style={{ color: EMBER.textSoft }}
+            >
+              Works perfectly with
+            </p>
+            <span aria-hidden style={{ color: EMBER.border }}>|</span>
+            <div className="flex flex-wrap items-center gap-x-7 gap-y-3 md:gap-x-9">
+              {[
+                "Claude",
+                "Codex",
+                "Cursor",
+                "Antigravity",
+                "Cline",
+                "Windsurf",
+                "KIRO",
+                "Trae",
+                "Copilot",
+              ].map((tool) => (
+                <span
+                  key={tool}
+                  className="inline-flex items-baseline gap-2 text-[18px] font-semibold tracking-[-0.01em] md:text-[20px]"
+                  style={{ color: EMBER.textPrimary }}
+                >
+                  <span
+                    aria-hidden
+                    className="inline-block size-1.5 rounded-full"
+                    style={{ background: EMBER.accent + "AA" }}
+                  />
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SUPER FEATURES · bullet grid right under the hero ── */}
+      <section
+        id="features"
+        className="relative z-10 border-y"
+        style={{ borderColor: EMBER.border, background: EMBER.panel }}
+      >
+        <div className="mx-auto w-full max-w-6xl px-6 py-14 md:py-16">
+          <div className="flex flex-wrap items-baseline justify-between gap-4">
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+                ::what you get · v1.0.0-beta
+              </p>
+              <h2 className="mt-3 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl" style={{ color: EMBER.textPrimary }}>
+                Five engines. Forty features. One install.
+              </h2>
+            </div>
+            <p className="max-w-md font-mono text-[11px] uppercase leading-[1.6] tracking-[0.18em]" style={{ color: EMBER.textMuted }}>
+              ::CLI-first · no visual cockpit in v1 · the optimizer is the product · the visual surface ships separately on its own clock
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-px overflow-hidden rounded-2xl" style={{ background: EMBER.border }}>
+            <div className="grid gap-px md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" style={{ background: EMBER.border }}>
+              {FEATURE_COLUMNS.map((col) => (
+                <div key={col.head} className="flex flex-col p-6" style={{ background: EMBER.bg }}>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: col.accent }}>
+                    {col.head.toLowerCase().replace(/ /g, "-")}
+                  </p>
+                  <h3 className="mt-2 text-xl font-medium tracking-tight" style={{ color: EMBER.textPrimary }}>
+                    {col.head}
+                  </h3>
+                  <ul className="mt-5 space-y-3 text-[13px] leading-[1.55]" style={{ color: EMBER.textSoft }}>
+                    {col.bullets.map((b) => (
+                      <li key={b} className="flex items-baseline gap-2">
+                        <span className="select-none" style={{ color: col.accent }}>▸</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>
+            ::deep dives below · memory engine · knowledge engine · compression engine · department router · receipt rail · optional model fallback
+          </p>
+        </div>
+      </section>
+
+      {/* ── MEMORY ENGINE ── */}
+      <section id="memory-engine" className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::engine 01 · memory
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          Claude finally remembers.
+        </h2>
+        <p className="mt-6 max-w-3xl text-[17px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+          Claude itself has no memory between sessions. Open a new chat
+          tomorrow and yesterday is gone. Orangebox is the layer that
+          makes Claude remember — for one operator, on one machine,
+          forever, with the receipts on disk.
+        </p>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              head: "ChatBackup",
+              body: "Every meaningful Claude exchange writes to a local index. Conversations are grep-able, tag-able, replay-able. The index survives crashes, app updates, vendor outages, and your laptop dying.",
+            },
+            {
+              head: "Restore Primers",
+              body: "Any new Claude session — same vendor or different — reloads the project state in under thirty seconds. The primer ships the voice fingerprint, the open mission, the decision log, and the last receipt back into context.",
+            },
+            {
+              head: "Decision log",
+              body: "What you decided, when, why, which model said so. The log is a JSONL file you can open in any editor. Three weeks later you can answer 'what did we settle on for X' in one grep.",
+            },
+          ].map((c) => (
+            <div key={c.head} className="rounded-2xl border p-7" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+              <h3 className="text-xl font-medium tracking-tight" style={{ color: EMBER.accent }}>{c.head}</h3>
+              <p className="mt-3 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>{c.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 font-mono text-[11px] uppercase leading-[1.6] tracking-[0.18em]" style={{ color: EMBER.textMuted }}>
+          ::stored at %USERPROFILE%\OrangeBox-Data\memory\ · backup = Ctrl+C · restore = Ctrl+V · no cloud, no kill-switch
+        </p>
+      </section>
+
+      {/* ── KNOWLEDGE ENGINE ── */}
+      <section id="knowledge-engine" className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20" style={{ background: EMBER.panel, borderRadius: 0 }}>
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::engine 02 · knowledge
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          Skills compound. Receipts pile up. Claude gets smarter.
+        </h2>
+        <p className="mt-6 max-w-3xl text-[17px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+          A skill primer is a reusable workflow you write once and Claude
+          re-applies forever. A receipt is a structured proof of what
+          Claude did this time. Together they form a knowledge base that
+          accumulates on disk and never gets reset by a model upgrade.
+        </p>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {[
+            {
+              head: "Skill Primers",
+              body: "Reusable workflows under skills/ in the data root. Each is a plain markdown file with the instructions, the variables, the expected receipt shape. Operator-writable. Versioned. Survives app upgrades.",
+            },
+            {
+              head: "AECode contracts",
+              body: "A machine-grammar wrapper around every AI-assisted change: intent → AECode source → mission contract → target plan → isolated patch → gauntlet → receipt → approval. Claude cannot promote a change until the contract is satisfied.",
+            },
+            {
+              head: "Tamper-evident receipts",
+              body: "Every meaningful action writes a JSON receipt with SHA-256 stamp, the prompt that produced it, the gauntlet result, and the approval signature. Three months later you can replay any change from a single file.",
+            },
+            {
+              head: "Built-in orangebox-primer",
+              body: "A first-class skill that teaches a brand-new Claude session how Orangebox works in under thirty seconds. Same skill, any session, any vendor. No re-onboarding penalty when Claude rate-limits and you swap to GPT or Gemini.",
+            },
+          ].map((c) => (
+            <div key={c.head} className="rounded-2xl border p-7" style={{ borderColor: EMBER.border, background: EMBER.elevated }}>
+              <h3 className="text-xl font-medium tracking-tight" style={{ color: EMBER.accentSoft }}>{c.head}</h3>
+              <p className="mt-3 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>{c.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── COMPRESSION ENGINE ── */}
+      <section id="compression-engine" className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::engine 03 · compression
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          AtomSmasher · Crystal Lattice Compression.
+        </h2>
+        <div className="mt-8 grid gap-8 md:grid-cols-[1.4fr_1fr]">
+          <p className="text-[17px] leading-[1.7]" style={{ color: EMBER.textSoft }}>
+            Claude's context window is the bottleneck. Send too much code
+            and the model hallucinates the bits it had to truncate. Send
+            too little and it cannot reason about the system. AtomSmasher
+            compresses typical codebases by{" "}
+            <span className="font-semibold" style={{ color: EMBER.accent }}>ten to eighty times</span>{" "}
+            without losing intent, code shape, dependency graph, or
+            cross-file references. The model sees an order of magnitude
+            more code per token and the answers stop hallucinating.
+            Bundled, no add-on fee.
+          </p>
+          <div className="rounded-2xl border p-6" style={{ borderColor: EMBER.accent + "55", background: EMBER.panel }}>
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+              ::measured on this codebase
+            </p>
+            <p className="mt-3 text-5xl font-medium tabular-nums" style={{ color: EMBER.accent }}>10–80×</p>
+            <p className="mt-2 text-[14px]" style={{ color: EMBER.textSoft }}>
+              context compression · preserves intent, code shape, dependencies
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── DEPARTMENT ROUTER ── */}
+      <section id="department-router" className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20" style={{ background: EMBER.panel }}>
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::engine 04 · routing
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          AE0–AE14 · 15-department architecture.
+        </h2>
+        <p className="mt-6 max-w-3xl text-[17px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+          AE0 Brain is the root. AE1 through AE14 are named roles with
+          charter constraints — every Claude action routes through the
+          department whose charter covers the work. Plus a review-pressure
+          overlay (LIPS · MIRRORS · CHECKMATE · ORANGE · MISFITS) that
+          pressure-tests outputs before promotion. Every action has a
+          known author. Every promotion has a known reviewer.
+        </p>
+        <div className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
+          {[
+            "AE0 Brain", "AE1 Product", "AE2 Research", "AE3 Design", "AE4 Marketing",
+            "AE5 Sales", "AE6 Code", "AE7 Review", "AE8 Launch", "AE9 Legal",
+            "AE10 Ops", "AE11 Security", "AE12 Data", "AE13 Automation", "AE14 Bench",
+          ].map((d) => (
+            <span
+              key={d}
+              className="rounded-md border px-2.5 py-2 text-center font-mono text-[11px] uppercase tracking-[0.18em]"
+              style={{ borderColor: EMBER.separator, color: EMBER.textSoft, background: EMBER.elevated }}
+            >
+              {d}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* ── RECEIPT RAIL ── */}
+      <section id="receipt-rail" className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::engine 05 · receipts
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          Every Claude action writes a receipt.
+        </h2>
+        <p className="mt-6 max-w-3xl text-[17px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+          A receipt is a structured JSON record of one AI action. It
+          contains: the model used, the prompt that produced the result,
+          a SHA-256 stamp of the output, the gauntlet result, the
+          department that routed it, the contract that bound it, and
+          the operator signature that approved it. Receipts pile up in
+          <code className="ml-1.5 font-mono text-[14px]" style={{ color: EMBER.accent }}>
+            %USERPROFILE%\OrangeBox-Data\receipts\
+          </code>
+          . You can grep them, replay them, attach them to invoices,
+          ship them to auditors, or just sit on them as proof of work.
+        </p>
+        <pre
+          className="mt-8 overflow-x-auto rounded-2xl border p-6 font-mono text-[12px] leading-[1.65]"
+          style={{ borderColor: EMBER.border, background: EMBER.elevated, color: EMBER.textSoft }}
+        >
+{`{
+  "id":         "rcpt_01HZ7Q...",
+  "ts":         "2026-05-30T20:11:42Z",
+  "department": "AE6_CODE",
+  "contract":   "aecode/refactor-token-bucket-v3",
+  "model":      "claude-sonnet-4.5",
+  "prompt_sha": "9a3f...c211",
+  "patch_sha":  "b8e2...77a4",
+  "gauntlet":   { "lint": "pass", "tests": "pass", "type": "pass" },
+  "reviewer":   "operator",
+  "approved":   true
+}`}
+        </pre>
+      </section>
+
+      {/* ── MODEL FALLBACK (subordinate · Claude is the lead) ── */}
+      <section id="model-fallback" className="relative z-10 mx-auto w-full max-w-5xl px-6 py-16">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accentSoft }}>
+          ::optional · model fallback
+        </p>
+        <h2 className="mt-4 text-2xl font-medium tracking-tight md:text-3xl" style={{ color: EMBER.textPrimary }}>
+          Claude rate-limits? Swap providers without losing the route.
+        </h2>
+        <p className="mt-5 max-w-3xl text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+          Orangebox is tuned for Claude — every primer, every receipt
+          schema, every compression curve is calibrated against the
+          Anthropic model line. But when Claude rate-limits or you want
+          a second opinion, the router falls through to other providers
+          via BYO key. The mission graph, the receipts, and the skill
+          primers survive the swap.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>
+          {["Anthropic Claude (default)", "OpenAI GPT", "Google Gemini", "OpenRouter (100+ models)", "Groq · Cohere · Mistral · Perplexity", "Local Ollama"].map((p) => (
+            <span key={p} className="rounded-md border px-2.5 py-1.5" style={{ borderColor: EMBER.separator }}>
+              {p}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* ── COMPRESSION KICKER (kept · the 75-day claim) ── */}
       <section
         className="relative z-10 border-y"
         style={{ borderColor: EMBER.border, background: `linear-gradient(180deg, ${EMBER.panel} 0%, ${EMBER.elevated} 100%)` }}
@@ -839,7 +1182,7 @@ export default function OrangeboxPage() {
           ::pricing
         </p>
         <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
-          $49 once. Forever.
+          Perpetual. Forever.
         </h2>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -866,7 +1209,7 @@ export default function OrangeboxPage() {
             }}
           >
             <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: EMBER.accent }}>::week 2 onward</p>
-            <h3 className="mt-4 text-3xl font-medium" style={{ color: EMBER.textPrimary }}>$49 perpetual</h3>
+            <h3 className="mt-4 text-3xl font-medium" style={{ color: EMBER.textPrimary }}>Perpetual license</h3>
             <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>v1.0.1+ · Microsoft-signed · once · forever</p>
             <ul className="mt-6 space-y-2 text-[14px] leading-[1.6]" style={{ color: EMBER.textSoft }}>
               <li>▲ One-time payment</li>
@@ -888,7 +1231,7 @@ export default function OrangeboxPage() {
             <ul className="mt-6 space-y-2 text-[14px] leading-[1.6]" style={{ color: EMBER.textMuted }}>
               <li>○ Team multi-seat license (v2.x)</li>
               <li>○ Optional hosted worker rail (v3.x)</li>
-              <li>○ Existing $49 buyers stay at $49 for v1.x</li>
+              <li>○ Existing v1.x buyers stay at their original price for v1.x</li>
             </ul>
           </div>
         </div>
@@ -931,7 +1274,7 @@ export default function OrangeboxPage() {
             ::the anti-saas commitment
           </p>
           <p className="mt-4 text-balance text-2xl leading-[1.35] tracking-tight md:text-3xl" style={{ color: EMBER.textPrimary }}>
-            Orangebox is a one-time $49 purchase. Existing buyers keep their
+            Orangebox is a one-time perpetual purchase. Existing buyers keep their
             license even if future editions add optional paid services.
             You are buying software, not renting the right to remember your own work.
           </p>
@@ -1081,7 +1424,7 @@ export default function OrangeboxPage() {
         </div>
 
         <p className="mt-8 max-w-3xl text-[15px] leading-[1.65]" style={{ color: EMBER.textMuted }}>
-          <span style={{ color: EMBER.accent }}>Anti-SaaS Commitment:</span> existing $49 buyers stay at $49 perpetual for v1.x. v2.x is a separate purchase event when it ships — not committed today. Nothing you bought goes dark.
+          <span style={{ color: EMBER.accent }}>Anti-SaaS Commitment:</span> existing v1.x buyers stay perpetual at their original price · §4A locked. v2.x is a separate purchase event when it ships — not committed today. Nothing you bought goes dark.
         </p>
       </section>
 
@@ -1155,7 +1498,7 @@ export default function OrangeboxPage() {
               aria-disabled="true"
               title="Stripe checkout opens day 8"
             >
-              Buy ($49 from next week)
+              Buy (after free week)
             </span>
           </div>
 

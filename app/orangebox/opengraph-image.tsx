@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "Orangebox v1.0.0-beta — local-first AI cockpit · multi-LLM · BYOK · receipt-backed · $49 perpetual · FREE launch week · AtomEons";
+  "Orangebox v1.0.0-beta — turbo-optimize Claude · local-first · BYO key · receipt-backed · FREE launch week · perpetual after · §4A no-saas · AtomEons";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -195,8 +195,8 @@ export default function OG() {
               boxShadow: "0 0 60px rgba(255,119,51,0.55)",
             }}
           >
-            <p style={{ margin: 0, fontSize: 60, fontWeight: 700, color: "#1A1410", lineHeight: 1 }}>
-              $49
+            <p style={{ margin: 0, fontSize: 52, fontWeight: 700, color: "#1A1410", lineHeight: 1 }}>
+              FREE
             </p>
             <p
               style={{
@@ -208,7 +208,7 @@ export default function OG() {
                 fontWeight: 700,
               }}
             >
-              once · forever
+              this week · grandfathered
             </p>
           </div>
         </div>

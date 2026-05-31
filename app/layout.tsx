@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     template: "%s | AtomEons",
   },
   description:
-    "AtomEons Systems Laboratory. Marco Island, Florida. Independent one-operator AI lab. Twelve research manuscripts under CC-BY 4.0. The ORANGEBOX cockpit v6.3 ($49 once, license §4A bans subscription, two 30-day refund paths). Nightly Founder's View broadcast at 8pm ET. Decoded primary-source intel. The skil.ski skill registry. /ai — the comprehensive on-ramp for the 44 million workers facing generative AI displacement. /start — the 11-minute novice on-ramp. /manifesto — the 14-clause lab doctrine. Independent research and built tools, shipped from outside the cartel.",
+    "AtomEons Systems Laboratory. Marco Island, Florida. Independent one-operator AI lab. Twelve research manuscripts under CC-BY 4.0. Two shipped products tonight: ORANGEBOX v1.0.0-beta (turbo-optimize Claude · local-first · §4A no-saas perpetual · FREE launch week) and B00KMAKR v3.2.0 (AI publishing cockpit · Mac + Windows · dynamic-world-pricing). Nightly Founder's View broadcast at 8pm ET. Decoded primary-source intel. The skil.ski skill registry. /ai — the comprehensive on-ramp for the 44 million workers facing generative AI displacement. /start — the 11-minute novice on-ramp. /manifesto — the 14-clause lab doctrine. Independent research and built tools, shipped from outside the cartel.",
   keywords: [
     "AtomEons",
     "AtomEons Systems Laboratory",
@@ -141,11 +141,9 @@ export default function RootLayout({
               brand: { "@type": "Brand", name: "ORANGEBOX" },
               makesOffer: {
                 "@type": "Offer",
-                name: "ORANGEBOX Command v6.3",
+                name: "ORANGEBOX v1.0.0-beta",
                 description:
-                  "Local-first native AI cockpit. Two surfaces: AE See-Suite (command — receipts, dashboards, mission graphs) + AE Operations (engine — MCP tools, agent routing, model selection across Claude / GPT / Gemini / Groq LPUs / Ollama / OpenRouter, 200+ models). Two install paths: Basic Install or AI Box (curated local-model bundle). BYO keys. Zero token markup. Zero telemetry. Source included. $49 once. License §4A legally bans switching to subscription. Two 30-day refund paths (Material Failure Guarantee + Workflow-Fit Refund).",
-                price: "49",
-                priceCurrency: "USD",
+                  "Turbo-optimization system for Claude. Local-first Windows desktop tool that gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident JSON receipts on every action, and 14-department named-role routing (AE0-AE14). Optional fallback to GPT/Gemini/OpenRouter/Groq/Cohere/Mistral/Perplexity/Ollama via BYO key. BYO keys · zero markup on token cost · zero telemetry · source included. License §4A legally bans switching to subscription. 30-day Material Failure Guarantee.",
                 availability: "https://schema.org/InStock",
                 url: "https://atomeons.com/orangebox",
               },

@@ -22,7 +22,7 @@ const LEARN = [
 ];
 
 const PRODUCTS = [
-  { href: "/orangebox", label: "Æ ORANGEBOX", hint: "Local-first AI cockpit · FREE launch week · then $49" },
+  { href: "/orangebox", label: "Æ ORANGEBOX", hint: "Turbo-optimize Claude · FREE launch week · perpetual after" },
   { href: "/skilski", label: "Æ skil.ski", hint: "skill marketplace via MCP" },
   { href: "/b00kmakor", label: "Æ B00KMakor", hint: "AI publishing house — coming" },
 ];

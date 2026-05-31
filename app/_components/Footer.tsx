@@ -68,7 +68,7 @@ export function Footer() {
             Products + Buy
           </p>
           <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li><Link href="/orangebox" className="hover:text-[#FF7A1A]">ORANGEBOX · FREE launch week · then $49</Link></li>
+            <li><Link href="/orangebox" className="hover:text-[#FF7A1A]">ORANGEBOX · turbo-optimize Claude · FREE launch week</Link></li>
             <li><Link href="/pricing" className="hover:text-[#FF7A1A]">Pricing</Link></li>
             <li><Link href="/orangebox/legacy" className="hover:text-[#FF7A1A]">v6.1.0 legacy archive</Link></li>
             <li><Link href="/skilski" className="hover:text-[#FF7A1A]">skil.ski</Link></li>

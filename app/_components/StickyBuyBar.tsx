@@ -54,18 +54,18 @@ export function StickyBuyBar() {
       <div className="mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-2.5 sm:px-6 sm:py-3">
         <div className="min-w-0 flex-1">
           <p className="truncate font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]">
-            ::v6.3 · live · §4A no-saas
+            ::v1.0.0-beta · FREE this week · §4A no-saas
           </p>
           <p className="truncate text-sm text-[#F2F4F5]">
-            <span className="font-bold text-[#FF7A1A]">$49 once</span>
+            <span className="font-bold text-[#FF7A1A]">Turbo-optimize Claude</span>
             <span className="ml-1 text-[#9BA5A7]">
-              · forever · two 30-day refund paths
+              · perpetual · grandfathered for life
             </span>
           </p>
         </div>
         <OrangeBoxV63Buy
           className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#FF7A1A] px-5 font-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-black transition-all hover:bg-[#FFA45A] disabled:opacity-60"
-          label="buy · $49"
+          label="grab free"
         />
         <button
           onClick={() => {
