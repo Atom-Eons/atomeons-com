@@ -1,264 +1,127 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { OrangeBoxV63Buy } from "../_components/OrangeBoxV63Buy";
+import Image from "next/image";
 import { CountdownTimer } from "./CountdownTimer";
 
 /**
- * /orangebox — public launch page.
+ * /orangebox — public landing page · GREEN-LIT REBUILD 2026-05-30
  *
- * Rebuilt 2026-05-30 around the new three-product separation and the
- * free-for-one-week → $99 launch posture:
+ * Built from the canonical spec:
+ *   C:\AtomEons\orangebox\finals\WEB_PROJECT_FINAL_PACKAGE_2026-05-30.md
  *
- *   1. AE Operations — the systems layer (routing, departments, MCP
- *      tools, gates, recovery, installer).
- *   2. ORANGEBOX (cockpit) — the command surface (mission routes,
- *      party-line, receipts, artifacts, canvas).
- *   3. Delta — the visual-intelligence IDE replacement (Cursor / VS
- *      Code category, but built around the operator's project graph
- *      instead of a flat file tree).
+ * Single product. $49 perpetual. Free preview week (v1.0.0-beta from
+ * GitHub Release). No subscription, no email capture, no third-party
+ * tracking. Warm ember palette mirroring the in-app cockpit
+ * (NOT cool tech blue like the rest of the site).
  *
- * Page voice: plain language for the first half, technical depth for
- * the second half. Operator directive — "walk em in slow, then get
- * technical for the hackers/pros." Non-tech readers should be able to
- * understand WHAT the system is before any acronym appears.
+ * Section structure follows §7 IA verbatim:
+ *   Hero · Compression Kicker · Problem · What Orangebox Is · Pillars ·
+ *   Cockpit · Under the Hood · Privacy · Pricing · Buyers · Use Cases ·
+ *   System Requirements · Not in the Box · Roadmap · FAQ · Final CTA · Footer
  *
- * Pricing posture:
- *   - Free for one week from launch (countdown live via env var
- *     NEXT_PUBLIC_ORANGEBOX_FREE_WEEK_ENDS_AT)
- *   - After countdown: $99 once, forever
- *   - Public messaging: price may change at random — lock in now
+ * Copy is lifted verbatim from §8 + WEBSITE_PASSOVER §21 FAQ.
+ * Palette is lifted verbatim from §11 + native.rs constants.
  *
- * Public checkout flow unchanged — OrangeBoxV63Buy + email inquire
- * fallback until binary is uploaded.
+ * Day 0 CTA wiring per §18 / §10.1:
+ *   Primary "Download free this week" → GitHub Release (when operator
+ *     creates the org/repo per §19 Day 0). Until then it 404s — and the
+ *     direct-mirror Vercel Blob fallback right below it works tonight.
+ *   Secondary "Buy ($49 from next week)" → disabled / coming-soon until
+ *     Stripe link is configured (Day 3-4).
  */
 
+const EMBER = {
+  bg: "#1A1410",
+  panel: "#221A14",
+  elevated: "#2A2018",
+  hover: "#322618",
+  border: "#3D2F22",
+  separator: "#2E241A",
+  textPrimary: "#E8D5B7",
+  textSoft: "#C4AD8E",
+  textMuted: "#8A7560",
+  textDim: "#5C4D3D",
+  accent: "#FF7733",
+  accentSoft: "#FFAA66",
+  success: "#88CC66",
+  warning: "#D4B056",
+  error: "#CC6644",
+  amber: "#FFAA44",
+  glow: "#FF8844",
+} as const;
+
+const ASSETS = {
+  logo:
+    "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/brand/theorangebox.png",
+  exe: "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/v1.0.0-beta/OrangeboxSetup-1.0.0-win-x64.exe",
+  cert: "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/v1.0.0-beta/AtomEons-CodeSigning.cer",
+  github: "https://github.com/Atom-Eons/orangebox",
+  ghRelease: "https://github.com/Atom-Eons/orangebox/releases/latest",
+} as const;
+
+const SHA256 =
+  "D4E6153FEB19B8B8A46BCC987A2308C8D9645CDC792A1BB4246E3115B0743C83";
+
 export const metadata: Metadata = {
-  title:
-    "ORANGEBOX · AE Operations · Delta IDE — FREE for one week, then $99 · AtomEons",
+  title: "Orangebox — Local-first AI cockpit for builders · $49",
   description:
-    "Three tools, one operator-grade system. AE Operations runs the infrastructure. ORANGEBOX is the command cockpit. Delta is the visual-intelligence IDE that replaces Cursor and VS Code for AI-first builders. FREE for one week after launch. Then $99 once, forever. License §4A bans subscription. Price may change at random after the free week — lock in now.",
+    "Local-first AI cockpit. Multi-LLM. Bring your own keys. Tamper-evident receipts. $49 perpetual — no subscription. Your code never leaves your machine.",
   keywords: [
-    "ORANGEBOX",
-    "ORANGEBOX Command",
-    "AE Operations",
-    "Delta IDE",
-    "visual intelligence IDE",
-    "Cursor replacement",
-    "VS Code AI replacement",
-    "AI operations cockpit",
-    "AI cockpit",
-    "MCP cockpit",
-    "Claude Code cockpit",
-    "AI builder",
+    "Orangebox",
     "local-first AI",
-    "no subscription AI",
-    "License §4A",
-    "free launch week",
-    "AtomEons",
+    "AI cockpit",
+    "BYOK AI",
+    "AI without subscription",
+    "multi-LLM",
+    "AECode",
+    "receipt-backed AI",
+    "Cursor alternative local",
+    "Claude Code alternative",
+    "privacy AI coding",
+    "AI desktop tool Windows",
   ],
   alternates: { canonical: "https://atomeons.com/orangebox" },
   openGraph: {
-    title: "ORANGEBOX + AE Operations + Delta — FREE for one week",
+    title: "Orangebox — Local-first AI cockpit for builders · $49",
     description:
-      "Three-tool bundle. The cockpit. The systems layer. The visual-intelligence IDE. FREE for one week from launch · then $99 · price may change at random.",
+      "Built in 75 days. With itself. Multi-LLM. BYOK. Receipt-backed. $49 perpetual.",
     url: "https://atomeons.com/orangebox",
-    siteName: "AtomEons",
     type: "website",
-    locale: "en_US",
+    images: [{ url: ASSETS.logo, width: 1024, height: 1024, alt: "Orangebox" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ORANGEBOX launch — FREE for one week",
+    title: "Orangebox — $49 perpetual · local-first AI cockpit",
     description:
-      "AE Operations · ORANGEBOX cockpit · Delta IDE. Free for one week, then $99 · may change at random.",
-    creator: "@AtomMccree",
+      "Multi-LLM. BYOK. Receipt-backed. No subscription. Your code never leaves your machine.",
+    images: [ASSETS.logo],
   },
   robots: { index: true, follow: true },
 };
 
-// ─────────────────────────────────────────────────────────────────────
-// THE THREE PRODUCTS — plain-language framing + technical depth
-// ─────────────────────────────────────────────────────────────────────
-
-const PRODUCTS = [
-  {
-    id: "ae-operations",
-    name: "AE Operations",
-    tagline: "The systems layer.",
-    plain:
-      "Think of it as the engine room of your AI work. You never look at it directly, but everything else stops working without it.",
-    plainScenario:
-      "You sit down to keep working on the same project you were on yesterday. AE Operations remembers where you left off — what was decided, what was tried, what failed, which AI model handled which part. You don't have to re-explain anything. You don't have to dig through old chat tabs. The system carried the thread.",
-    technicalDepth:
-      "Mission-route compiler turning operator intent into a structured DAG (objective · macro-actions · department assignments · model lane · proof gates · rollback policy · receipt id). AE0–AE14 department routing with capability/permission/effort/evidence binding. 60+ MCP tools wired through a router. Multi-model lanes (Claude · GPT · Gemini · Groq LPUs · Ollama · OpenRouter — 200+ models). Constitutional Guardrails (27 rules) enforced at every gate. Local-first state, JSONL receipts on disk, party-line bus, recovery sequencer. Zero telemetry.",
-    glyphs: ["⚙ install", "◆ lanes", "▣ diagnostics", "↺ recovery", "✓ guardrails"],
-    accent: "#FFB87A",
-  },
-  {
-    id: "orangebox-cockpit",
-    name: "ORANGEBOX",
-    tagline: "The cockpit you actually look at.",
-    plain:
-      "The dashboard. The part of the system you see, click, and watch while AI does work. It shows you what's happening, lets you approve when it matters, and keeps every decision so you can prove what happened later.",
-    plainScenario:
-      "You give the cockpit a project: 'rewrite this client proposal, then draft three follow-up emails, then schedule them.' The cockpit shows each piece getting done in its own panel, with a green check when it's right and a red flag where you need to look. When the client asks 'when did you send that?' the receipt is right there.",
-    technicalDepth:
-      "AE See-Suite command surface. Mission routes rendered as visual graphs (not chat scroll). Party-line panel for structured worker messages, not loose transcript dumps. Silent Canvas pushes structural state into the UI rather than burying it in logs. Receipt timeline + artifact viewer + visual proof panel per route. Configurable per-route refusal posture (the operator decides what the cockpit will refuse, not Anthropic's training board). Constitutional Guardrails visible at every protected action. Built on Tauri 2 + Next 16; runs as a native desktop app on Windows 10/11 today, macOS + Linux on the v6.x roadmap.",
-    glyphs: ["⌖ route", "◉ party-line", "▤ receipts", "✦ canvas", "✋ approve"],
-    accent: "#FF7A1A",
-  },
-  {
-    id: "delta-ide",
-    name: "Delta",
-    tagline: "The visual-intelligence IDE.",
-    plain:
-      "This is what replaces Cursor or VS Code if you write code with AI in the loop. Instead of showing you 'just files,' it shows you what your project actually IS — every connection, every decision, every place AI changed something — so you stay in control even when AI is moving fast.",
-    plainScenario:
-      "You ask AI to refactor a piece of your code. In a traditional IDE you scroll through diffs and hope you catch the breakage. In Delta the project graph rearranges visually: the function that just got moved is highlighted, the three callers that depend on it are pulsing, the test file that's now stale is flagged red. You see the BLAST RADIUS before you approve.",
-    technicalDepth:
-      "Visual-intelligence IDE built for AI-in-the-loop development. Project graph (modules · types · symbols · imports · tests · receipts) rendered as a live spatial map, not a flat tree. Every AI change is a node in the graph with provenance: which model · which prompt · which receipt id. Stale-test detection runs against the project graph instead of file mtimes. Blast-radius visualization on every proposed change. Native LSP integration. Built on the same Tauri + AE Operations spine as the cockpit, so a project edited in Delta carries the same receipts the cockpit shows. Replaces the Cursor / VS Code lane for operators whose code work is mostly AI-orchestrated review-and-approve rather than line-by-line typing.",
-    glyphs: ["▦ project graph", "⟁ blast radius", "⌖ receipts", "✦ visual diff", "✓ stale-detect"],
-    accent: "#22F0D5",
-  },
-];
-
-// ─────────────────────────────────────────────────────────────────────
-// COMPREHENSIVE FEATURE MATRIX
-// ─────────────────────────────────────────────────────────────────────
-
-const FEATURE_GROUPS = [
-  {
-    label: "Operator surface",
-    items: [
-      "Mission routes — structured project objects (objective · macro-actions · departments · lane · gates · rollback · receipt id)",
-      "Party-line bus — structured worker messages, no loose transcript dumps",
-      "Silent Canvas — structural state lives in the UI, not in chat scroll",
-      "Receipt timeline per route — every protected action proves what happened",
-      "Artifact viewer — files, diffs, screenshots, proof attached to the route they came from",
-      "Visual proof panel — before/after for the operator-approved changes",
-      "Configurable refusal posture — you set what the cockpit will and won't do",
-    ],
-  },
-  {
-    label: "AI orchestration",
-    items: [
-      "Multi-model routing — Claude (Anthropic) · GPT (OpenAI) · Gemini (Google) · Groq LPUs · Ollama (local) · OpenRouter (200+ models)",
-      "Per-task model selection — assign the right AI to the right job",
-      "AE0–AE14 department routing — work flows through specialized lanes by domain",
-      "60+ MCP tools wired through a single router — extensible, open-protocol",
-      "27 Constitutional Guardrails — enforced at every gate, visible at every protected action",
-      "Adversarial review engines — verify before commit, catch fabrications",
-      "Mission-graph DAG — survives context resets, model switches, restarts",
-    ],
-  },
-  {
-    label: "Visual-intelligence IDE (Delta)",
-    items: [
-      "Project graph — modules, types, symbols, imports, tests rendered as a live spatial map",
-      "Blast-radius visualization — see what an AI-proposed change actually touches",
-      "Stale-test detection against the graph, not file mtimes",
-      "Per-change provenance — every AI edit carries model · prompt · receipt id",
-      "Native LSP integration — language servers wired into the visual layer",
-      "Receipts inline — the cockpit's receipts available in the editor",
-      "Hand-edit and AI-edit lanes side-by-side, same receipts pipeline",
-    ],
-  },
-  {
-    label: "Installation & systems",
-    items: [
-      "Basic Install — one computer, one operator, default",
-      "Optional AI Box — second-machine heavy-work handoff, never required",
-      "Ethereal AI Link — direct network setup module (approved + reviewable)",
-      "First-run wizard — one question (Do you have an AI computer to set up?)",
-      "Diagnostics panel — package health, lane reachability, model availability",
-      "Recovery sequencer — when something breaks, the system tells you what and how",
-      "Windows 10/11 x64 today · macOS + Linux on the v6.x roadmap",
-    ],
-  },
-  {
-    label: "Privacy & ownership",
-    items: [
-      "Zero telemetry — no phone-home, no analytics, no cohort-tracking",
-      "Local-first state — your data lives on your machine",
-      "Source included in the bundle — inspect freely, modify for personal or single-business use",
-      "JSONL receipts on disk — not on a vendor's server",
-      "Your BYO API keys — no AtomEons rate-limiter, no markup on token cost",
-      "License §4A — legally bans switching to subscription (locked, see /legal/terms)",
-      "If AtomEons ever attempts subscription switch, every existing buyer keeps their license free in perpetuity",
-    ],
-  },
-];
-
-// ─────────────────────────────────────────────────────────────────────
-// HONEST FOR / NOT FOR
-// ─────────────────────────────────────────────────────────────────────
-
-const FOR_OPERATORS = [
-  "solo founders running multi-disciplinary work alone",
-  "tech leads who need a private command suite with receipts",
-  "researchers and lab operators who need durable proof",
-  "consultants whose client work needs an audit trail",
-  "indie builders tired of losing context to chat scroll, browser memory, tool drift",
-  "developers ready to leave Cursor / VS Code for an AI-graph-native IDE",
-];
-
-const NOT_FOR_PEOPLE_WHO = [
-  "only want a generic chat app — Claude, ChatGPT, Gemini do that better",
-  "require cloud-native multi-tenant SaaS on day one — this is local-first by construction",
-  "want 'magic AI' status without operator control — the cockpit puts you in the approval loop",
-  "lead with 'does it have an iOS app' — desktop-first, Tauri-based, native binary",
-  "want a 'subscription that gets better forever' — License §4A is the opposite contract",
-];
-
-// ─────────────────────────────────────────────────────────────────────
-// PRODUCT LAW — the six-line operator doctrine
-// ─────────────────────────────────────────────────────────────────────
-
-const PRODUCT_LAW = [
-  "AE See-Suite commands.",
-  "AE Operations configures.",
-  "Workers execute.",
-  "Receipts prove.",
-  "Review engines challenge.",
-  "The operator approves protected actions.",
-];
-
-// ─────────────────────────────────────────────────────────────────────
-// JSON-LD
-// ─────────────────────────────────────────────────────────────────────
-
 const softwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "ORANGEBOX Command + AE Operations + Delta",
-  alternateName: ["ORANGEBOX", "AE Operations", "Delta IDE"],
-  applicationCategory: "DeveloperApplication",
-  applicationSubCategory: "AI Operations Cockpit",
-  operatingSystem: "Windows 10, Windows 11",
+  name: "Orangebox",
   description:
-    "Three-tool bundle: ORANGEBOX cockpit, AE Operations systems layer, Delta visual-intelligence IDE. FREE for one week post-launch, then $99 once, forever. License §4A bans subscription.",
+    "Local-first desktop AI cockpit for builders. Multi-LLM routing through Claude, GPT, Gemini, local Ollama, OpenRouter. Tamper-evident JSON receipts on every action. BYOK — no AI markup. $49 perpetual, no subscription.",
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Windows 10 · Windows 11",
+  softwareVersion: "1.0.0-beta",
   offers: {
     "@type": "Offer",
-    price: "99.00",
+    price: "49.00",
     priceCurrency: "USD",
-    priceValidUntil: "2027-12-31",
-    availability: "https://schema.org/PreOrder",
-    seller: {
-      "@type": "Organization",
-      name: "AtomEons Systems Laboratory",
-      url: "https://atomeons.com",
-    },
-  },
-  author: {
-    "@type": "Person",
-    name: "Atom McCree",
-    url: "https://atomeons.com/about",
+    availability: "https://schema.org/InStock",
+    url: "https://atomeons.com/orangebox",
   },
   publisher: {
     "@type": "Organization",
     name: "AtomEons Systems Laboratory",
     url: "https://atomeons.com",
   },
+  license:
+    "Perpetual · Anti-SaaS Commitment · License §4A no-SaaS covenant",
 };
 
 const breadcrumbJsonLd = {
@@ -266,17 +129,181 @@ const breadcrumbJsonLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "AtomEons", item: "https://atomeons.com" },
-    { "@type": "ListItem", position: 2, name: "ORANGEBOX", item: "https://atomeons.com/orangebox" },
+    { "@type": "ListItem", position: 2, name: "Orangebox", item: "https://atomeons.com/orangebox" },
   ],
 };
+
+// ─────────────────────────────────────────────────────────────────────
+// CONTENT BLOCKS (lifted from §8 + WEBSITE_PASSOVER §21)
+// ─────────────────────────────────────────────────────────────────────
+
+const TRUST_BADGES = [
+  { icon: "🔒", label: "Local-first" },
+  { icon: "🔑", label: "BYOK" },
+  { icon: "🧾", label: "Receipt-backed" },
+  { icon: "✍️", label: "Signed Authenticode" },
+  { icon: "🪪", label: "Sectigo timestamped" },
+  { icon: "🚫", label: "No telemetry" },
+  { icon: "♾", label: "Perpetual" },
+];
+
+const COMING_BADGES = [
+  "🪪 Microsoft-signed via Azure Trusted Signing",
+  "✓ GitHub Verified Publisher",
+];
+
+const PROBLEM = [
+  {
+    head: "Subscription bleed",
+    body:
+      "Cursor + Copilot + Claude Pro + ChatGPT + Linear + Notion = $1,000–$1,400/year. Every subscription disappears the moment you stop paying.",
+  },
+  {
+    head: "The privacy gap",
+    body:
+      "Your code uploads to Cursor's servers. To Copilot's. To Claude Code. To Codex. Sits there. Subject to subpoena. Exposed in any breach.",
+  },
+  {
+    head: "The audit gap",
+    body:
+      "What did the AI just do? Most tools give you nothing — no trail, no proof, no replay. Three weeks later you can't answer.",
+  },
+];
+
+const PILLARS = [
+  {
+    title: "LOCAL-FIRST",
+    head: "Your code stays.",
+    body:
+      "Runs on your computer. Works offline for local-model and local-skill workflows. The only network traffic is the AI provider calls you explicitly send.",
+  },
+  {
+    title: "BRING YOUR OWN KEYS",
+    head: "No markup. No lock-in.",
+    body:
+      "Orangebox ships zero API keys. You provide them. You pay providers directly at their published rates. Orangebox takes nothing from your model spend.",
+  },
+  {
+    title: "RECEIPT-BACKED",
+    head: "Audit-grade by default.",
+    body:
+      "Every install step, every command, every model call writes a tamper-evident JSON receipt to your local audit trail. Grep your own history. Replay what worked. Prove what happened.",
+  },
+];
+
+const PROVIDERS = [
+  { p: "Anthropic Claude", env: "ANTHROPIC_API_KEY", use: "Default for code reasoning, long context" },
+  { p: "OpenAI GPT", env: "OPENAI_API_KEY", use: "Embeddings, image gen, specialties" },
+  { p: "Google Gemini", env: "GOOGLE_API_KEY", use: "Long context, multimodal" },
+  { p: "OpenRouter", env: "OPENROUTER_API_KEY", use: "Universal cheap fallback (100+ models)" },
+  { p: "Local Ollama", env: "(none)", use: "Offline, batch, free-marginal work" },
+  { p: "Perplexity", env: "PERPLEXITY_API_KEY", use: "Web-grounded research" },
+  { p: "Groq", env: "GROQ_API_KEY", use: "Ultra-low-latency" },
+  { p: "Cohere", env: "COHERE_API_KEY", use: "Embeddings, reranking" },
+  { p: "Mistral", env: "MISTRAL_API_KEY", use: "EU-resident inference" },
+];
+
+const COMPARISON = [
+  { alt: "Cursor Pro", cost: "$240/yr", get: "SaaS · uploads your code · single vendor · monthly forever" },
+  { alt: "GitHub Copilot Pro", cost: "$120/yr", get: "SaaS · uploads your code · GitHub-locked" },
+  { alt: "Claude Pro", cost: "$240/yr", get: "Chat only · no project memory · vendor-locked" },
+  { alt: "ChatGPT Plus", cost: "$240/yr", get: "Chat only · no integration · vendor-locked" },
+  { alt: "Cursor + Copilot + Claude Pro + Notion + Linear", cost: "$1,500+/yr", get: "Patchwork of subscriptions · no unified spine" },
+  { alt: "Custom internal cockpit", cost: "$40K–$120K", get: "Months of build time before first real loop" },
+  { alt: "Orangebox", cost: "$49 once", get: "All of the above · local-first · BYOK · perpetual", highlight: true },
+];
+
+const BUYERS = [
+  { who: "The Solo Founder", quote: "Stop asking 'where was I' every time you open your laptop." },
+  { who: "The Indie Developer", quote: "Your AI tools should outlive your free time, not your free time outlive your AI tools." },
+  { who: "The Privacy-Conscious Engineer", quote: "Your code never leaves your machine. That's the whole point." },
+  { who: "The Consultant / Freelancer", quote: "Every change documented. Every receipt your invoice." },
+  { who: "The Lab Operator / PM", quote: "A definition of done that survives the next sprint." },
+  { who: "The Student / Learner", quote: "One purchase. No expiration. Forever yours." },
+  { who: "The Anti-SaaS Power User", quote: "Software you actually own." },
+];
+
+const USE_CASES = [
+  { n: "01", head: "Solo founder building a SaaS landing page", body: "AE1 Product + AE3 Design + AE4 Marketing in parallel · brand-aware drafts · AE7 Review gates before promotion." },
+  { n: "02", head: "Indie dev shipping a CLI tool", body: "AE6 Code drafts the implementation · AE14 Bench writes the test · AE11 Security audits the args · gauntlet pass before merge." },
+  { n: "03", head: "Consultant on NDA client codebase", body: "Local-only flow · local Ollama for the high-sensitivity slices · receipts as the billable trail." },
+  { n: "04", head: "PM tracking a sprint", body: "Vision Rail shows every dev's WIP through the same receipt lens. One source of truth for 'where are we.'" },
+  { n: "05", head: "Student learning AI-assisted coding", body: "No subscription · receipts as the learning trail · reusable skill primers keep what you learned." },
+];
+
+const FAQ = [
+  {
+    q: "Do I need to know how to code?",
+    a: "Orangebox is a developer's cockpit. If you don't already write or read code at least casually, this is not the product for you. If you do, even a little, Orangebox amplifies you.",
+  },
+  {
+    q: "Does Orangebox include AI model API keys?",
+    a: "No. Orangebox is BYOK — Bring Your Own Keys. You supply keys for Anthropic, OpenAI, Google, OpenRouter, or any other provider you want to use. The keys live on your machine and only authenticate calls to the provider you set them for.",
+  },
+  {
+    q: "What if I don't have any API keys yet?",
+    a: "Orangebox also routes to local models via Ollama, which is free and runs entirely offline. You can use Orangebox without any cloud AI provider at all. Or you can sign up for a free Anthropic, OpenAI, or Google API account — most have generous free tiers.",
+  },
+  {
+    q: "Will Orangebox work on Mac or Linux?",
+    a: "Not in v1.0.0. Mac and Linux installers are on the roadmap if there's demand.",
+  },
+  {
+    q: "Does Orangebox phone home?",
+    a: "No. Read PRIVACY.md in the install. No telemetry, no analytics, no crash reports. The only network traffic Orangebox generates is the AI provider calls you initiate yourself.",
+  },
+  {
+    q: "How do updates work?",
+    a: "v1.x point releases are free to existing buyers. Major version upgrades (v2, v3) will be separate purchase events at the time they ship. Your v1 license never expires.",
+  },
+  {
+    q: "Can I install on multiple computers?",
+    a: "Yes. The license is per-person, not per-machine. Install on any number of computers you own or control.",
+  },
+  {
+    q: "Can I share my license with my team?",
+    a: "No. The license covers you as an individual or your internal business use. For team distribution, contact us — team license ships in v2.x.",
+  },
+  {
+    q: "Is there a refund policy?",
+    a: "Yes. If Orangebox doesn't work on your supported system within 14 days of purchase, we'll issue a full refund. Email support@atomeons.com.",
+  },
+  {
+    q: "Will my purchase still work if AtomEons goes away?",
+    a: "Yes. Orangebox is a perpetual license. The application runs entirely on your local machine. There is no online activation, no license-server check, no kill-switch.",
+  },
+  {
+    q: "What models does Orangebox support?",
+    a: "Anthropic Claude (3.5+ Sonnet, Haiku, Opus), OpenAI GPT (4o, 4-Turbo, 5 when available), Google Gemini (1.5 Pro, 2.5 Pro), local Ollama models (Llama 3.1, Mistral, Qwen, etc.), OpenRouter (100+ models). New providers add via the connector registry without a new Orangebox release.",
+  },
+  {
+    q: "How is Orangebox different from Cursor / Copilot / Claude Code?",
+    a: "Cursor and Copilot are SaaS — your code uploads to their servers and you pay monthly forever. Claude Code is single-vendor and subscription-locked. Orangebox is local-first (your code stays on your disk), multi-vendor (any model you have a key for), and one-time $49 perpetual.",
+  },
+  {
+    q: "Is the source code available?",
+    a: "The source for Orangebox v1.0.0 is private to AtomEons. The installer is provenance-attested via Sigstore + GitHub Artifact Attestations — you can cryptographically verify it came from our official build pipeline. Open-source roadmap is not committed at this time.",
+  },
+  {
+    q: "How do I report a bug?",
+    a: "Open an issue on the public GitHub repo at github.com/Atom-Eons/orangebox, or email support@atomeons.com.",
+  },
+  {
+    q: "Where do I buy?",
+    a: "FREE this week — download direct from the GitHub Release. Starting next week the price is $49 once, perpetual license, via Stripe checkout. Either way you keep the software forever.",
+  },
+];
 
 // ─────────────────────────────────────────────────────────────────────
 // PAGE
 // ─────────────────────────────────────────────────────────────────────
 
-export default function OrangeBox() {
+export default function OrangeboxPage() {
   return (
-    <main className="relative z-10 bg-black text-[#F2F4F5]">
+    <main
+      className="relative isolate min-h-screen"
+      style={{ background: EMBER.bg, color: EMBER.textPrimary }}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
@@ -286,491 +313,873 @@ export default function OrangeBox() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
+      {/* warm radial bloom */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(55% 40% at 50% 18%, rgba(255,119,51,0.22) 0%, transparent 70%), radial-gradient(40% 35% at 85% 75%, rgba(255,170,68,0.10) 0%, transparent 70%)",
+        }}
+      />
+
+      {/* STICKY NAV */}
+      <nav
+        className="sticky top-0 z-30 border-b backdrop-blur-md"
+        style={{ borderColor: EMBER.border, background: `${EMBER.bg}cc` }}
+      >
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-3">
+          <Link href="/orangebox" className="flex items-center gap-3">
+            <Image
+              src={ASSETS.logo}
+              alt="Orangebox"
+              width={28}
+              height={28}
+              className="rounded-md"
+              unoptimized
+            />
+            <span
+              className="font-mono text-[11px] uppercase tracking-[0.28em]"
+              style={{ color: EMBER.accent }}
+            >
+              Orangebox
+            </span>
+          </Link>
+          <div className="hidden items-center gap-7 md:flex">
+            <a href="#download" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textSoft }}>Download</a>
+            <a href="#pricing" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textSoft }}>Pricing</a>
+            <a href="#how-it-works" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textSoft }}>How it works</a>
+            <a href="#faq" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textSoft }}>FAQ</a>
+            <a href={ASSETS.github} target="_blank" rel="noopener" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>GitHub ↗</a>
+          </div>
+        </div>
+      </nav>
+
       {/* breadcrumb */}
-      <div className="mx-auto w-full max-w-6xl px-6 pt-6">
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
-          <Link href="/" className="hover:text-[#22F0D5]">
-            AtomEons
-          </Link>{" "}
-          <span className="text-[#1A2225]">/</span> ORANGEBOX · public launch
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-6">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textDim }}>
+          <Link href="/" style={{ color: EMBER.textDim }}>AtomEons</Link>{" "}
+          <span style={{ color: EMBER.border }}>/</span> Orangebox · v1.0.0-beta · GREEN-LIT
         </p>
       </div>
 
-      {/* HERO */}
-      <section className="relative isolate overflow-hidden border-b border-[#1A2225] py-20 md:py-28">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(70% 55% at 60% 20%, rgba(255,138,61,0.18) 0%, transparent 60%), radial-gradient(50% 45% at 15% 90%, rgba(34,240,213,0.14) 0%, transparent 65%)",
-          }}
-        />
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-6">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#FF7A1A]/40 bg-[#FF7A1A]/10 px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
-              <span className="inline-flex h-1.5 w-1.5 animate-pulse rounded-full bg-[#FF7A1A] shadow-[0_0_8px_rgba(255,122,26,0.7)]" />
-              public launch · three-tool bundle · marco island fl
-            </span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              free week · then $99 · price may change at random
-            </span>
+      {/* ── HERO ── */}
+      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-16 pb-12">
+        <div className="grid gap-10 md:grid-cols-[1.2fr_1fr] md:items-center">
+          <div>
+            <p className="mb-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+              <span className="inline-block size-1.5 animate-pulse rounded-full" style={{ background: EMBER.accent, boxShadow: `0 0 16px ${EMBER.glow}` }} />
+              ::shipped · v1.0.0-beta · FREE this week
+            </p>
+
+            <h1 className="text-balance text-5xl font-medium leading-[0.98] tracking-[-0.025em] md:text-7xl" style={{ color: EMBER.textPrimary }}>
+              Your AI cockpit.<br />
+              <span style={{ color: EMBER.accent }}>Local. Perpetual. Yours.</span>
+            </h1>
+
+            <p className="mt-8 max-w-xl text-lg leading-[1.55] md:text-xl" style={{ color: EMBER.textSoft }}>
+              Orangebox is a Windows desktop tool that turns Claude, GPT,
+              Gemini, and local models into a single project-aware command
+              surface — with tamper-evident receipts on every action,
+              complete privacy, and zero subscription.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#download"
+                className="inline-flex items-center gap-2 rounded-lg px-6 py-3.5 text-base font-semibold transition-colors"
+                style={{
+                  background: EMBER.accent,
+                  color: EMBER.bg,
+                  boxShadow: `0 0 40px ${EMBER.accent}44`,
+                }}
+              >
+                Download free this week →
+              </a>
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center gap-2 rounded-lg border px-6 py-3.5 text-base font-medium transition-colors"
+                style={{ borderColor: EMBER.border, color: EMBER.textPrimary }}
+              >
+                See how it works ↓
+              </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              {TRUST_BADGES.map((b) => (
+                <span
+                  key={b.label}
+                  className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em]"
+                  style={{ borderColor: EMBER.border, background: EMBER.panel, color: EMBER.textSoft }}
+                >
+                  <span>{b.icon}</span>
+                  <span>{b.label}</span>
+                </span>
+              ))}
+              {COMING_BADGES.map((c) => (
+                <span
+                  key={c}
+                  className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em]"
+                  style={{ borderColor: EMBER.separator, background: "transparent", color: EMBER.textDim }}
+                >
+                  {c} · coming v1.0.1
+                </span>
+              ))}
+            </div>
           </div>
 
-          <h1 className="mt-7 text-balance text-5xl font-medium leading-[1.02] tracking-[-0.025em] md:text-7xl lg:text-[7.5rem] lg:leading-[0.94]">
-            One operator,
-            <br />
-            <span className="text-[#FF7A1A]">three tools,</span>
-            <br />
-            one system.
-          </h1>
-          <p className="mt-9 max-w-3xl text-lg leading-[1.55] text-[#C8CCCE] md:text-xl">
-            ORANGEBOX is the cockpit you look at. AE Operations is the
-            engine room you don&apos;t. Delta is the visual-intelligence
-            IDE that replaces Cursor and VS Code for builders who work
-            with AI in the loop. Three tools, one bundle, one operator,
-            one system that remembers what happened.
-          </p>
-
-          {/* COUNTDOWN — the marquee element */}
-          <div className="mt-12">
-            <CountdownTimer postCountdownPrice="$99" />
-          </div>
-
-          {/* primary CTA strip */}
-          <div className="mt-10 grid gap-4 md:grid-cols-[1fr_1fr]">
-            <OrangeBoxV63Buy
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FF7A1A] px-7 py-4 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-black shadow-[0_0_60px_rgba(255,122,26,0.40)] transition-all hover:bg-[#FFA45A] disabled:opacity-60"
-              label="download / inquire →"
-            />
-            <a
-              href="#walkthrough"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-7 py-4 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/15"
+          {/* Logo / hero panel */}
+          <div
+            className="relative rounded-3xl border p-4 md:p-6"
+            style={{ borderColor: EMBER.border, background: EMBER.panel }}
+          >
+            <div
+              className="relative aspect-square w-full overflow-hidden rounded-2xl"
+              style={{ background: EMBER.elevated }}
             >
-              walk me through it ↓
-            </a>
+              <Image
+                src={ASSETS.logo}
+                alt="Orangebox cockpit logo"
+                fill
+                className="object-contain p-4"
+                unoptimized
+                priority
+              />
+            </div>
+            <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: EMBER.textMuted }}>
+              ::OrangeboxSetup-1.0.0-win-x64.exe · 2.81 MB · Authenticode-signed
+            </p>
           </div>
-          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
-            ::a.mccree@gmail.com · ~2h reply in ET waking hours · embargo: none
+        </div>
+
+        {/* Countdown · same component as bundle page */}
+        <div className="mt-14">
+          <CountdownTimer postCountdownPrice="$49" />
+        </div>
+      </section>
+
+      {/* ── COMPRESSION KICKER ── */}
+      <section
+        className="relative z-10 border-y"
+        style={{ borderColor: EMBER.border, background: `linear-gradient(180deg, ${EMBER.panel} 0%, ${EMBER.elevated} 100%)` }}
+      >
+        <div className="mx-auto w-full max-w-4xl px-6 py-20 md:py-24">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accentSoft }}>
+            ::compression
+          </p>
+          <h2 className="mt-5 text-balance text-5xl font-medium leading-[1] tracking-tight md:text-7xl" style={{ color: EMBER.textPrimary }}>
+            Built in 75 days.<br />
+            <span style={{ color: EMBER.accent }}>With itself.</span>
+          </h2>
+          <p className="mt-8 max-w-2xl text-lg leading-[1.55]" style={{ color: EMBER.textSoft }}>
+            Orangebox is the cockpit that compressed two years of solo-founder
+            work into eleven weeks. You&apos;re getting the same cockpit.
+          </p>
+          <p className="mt-4 max-w-2xl text-base leading-[1.6]" style={{ color: EMBER.textMuted }}>
+            The v1.0.0-beta .exe was built using earlier versions of itself.
+            Compression ratio: ~10× vs solo-founder pace, ~10× vs the
+            &quot;custom command suite&quot; alternative. The receipts in
+            the install prove the build path.
           </p>
         </div>
       </section>
 
-      {/* PLAIN-LANGUAGE INTRO — the walk-in */}
-      <section
-        id="walkthrough"
-        className="scroll-mt-24 border-b border-[#1A2225] py-20 md:py-28 bg-[#0e2520]/30"
-      >
-        <div className="mx-auto w-full max-w-3xl px-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::what this actually is · before any acronym
+      {/* ── PROBLEM ── */}
+      <section id="problem" className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::why this exists
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          Three pains converge in 2026 software.
+        </h2>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {PROBLEM.map((p) => (
+            <div
+              key={p.head}
+              className="rounded-2xl border p-7"
+              style={{ borderColor: EMBER.border, background: EMBER.panel }}
+            >
+              <h3 className="text-2xl font-medium tracking-tight" style={{ color: EMBER.accent }}>
+                {p.head}
+              </h3>
+              <p className="mt-4 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+                {p.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── WHAT IT IS ── */}
+      <section id="how-it-works" className="relative z-10 mx-auto w-full max-w-4xl px-6 py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::what orangebox is
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          One Windows app. Five jobs.
+        </h2>
+        <p className="mt-8 max-w-3xl text-[17px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+          Orangebox is a single Windows desktop application that does five
+          things.
+        </p>
+
+        <ol className="mt-10 space-y-5">
+          {[
+            ["Owns the cockpit.", "Every AI-assisted action — chat, code change, deploy, doc edit, terminal run — flows through one local command surface."],
+            ["Routes to multiple AI models without lock-in.", "Claude, GPT, Gemini, local Ollama, OpenRouter — all addressable from the same cockpit. Bring your own keys; no markup."],
+            ["Produces a receipt for every meaningful action.", "Tamper-evident JSON receipts to your local audit trail. Answer 'what changed, when, by which model' three months from now without reading old logs."],
+            ["Lives entirely on your machine.", "No phone-home. No telemetry. No analytics. Your code, prompts, conversations, receipts — all of it stays on disk."],
+            ["Costs $49 once. Forever.", "No subscription. Future v1.x updates free. Your license never expires."],
+          ].map(([head, body], i) => (
+            <li
+              key={head}
+              className="grid gap-3 rounded-2xl border p-6 md:grid-cols-[60px_1fr] md:items-baseline md:gap-6 md:p-7"
+              style={{ borderColor: EMBER.border, background: EMBER.panel }}
+            >
+              <span className="font-mono text-2xl font-semibold tabular-nums" style={{ color: EMBER.accent }}>
+                0{i + 1}
+              </span>
+              <div>
+                <h3 className="text-lg font-medium" style={{ color: EMBER.textPrimary }}>{head}</h3>
+                <p className="mt-2 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>{body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* ── THREE PILLARS ── */}
+      <section id="pillars" className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::the three pillars
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          Three promises. Each verifiable.
+        </h2>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {PILLARS.map((p) => (
+            <div
+              key={p.title}
+              className="rounded-2xl border p-7"
+              style={{ borderColor: EMBER.border, background: EMBER.panel }}
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+                {p.title}
+              </p>
+              <h3 className="mt-4 text-2xl font-medium tracking-tight" style={{ color: EMBER.textPrimary }}>
+                {p.head}
+              </h3>
+              <p className="mt-4 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+                {p.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── UNDER THE HOOD ── */}
+      <section id="under-the-hood" className="relative z-10 mx-auto w-full max-w-5xl px-6 py-24">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::under the hood
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          For the hackers and pros.
+        </h2>
+        <p className="mt-6 max-w-3xl text-[17px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+          The cockpit ships with the architecture below. Each piece is
+          documented in the install at <code style={{ color: EMBER.accent }}>%USERPROFILE%\OrangeBox-Data\docs\</code>.
+        </p>
+
+        {/* 14 departments */}
+        <div className="mt-10 rounded-2xl border p-7" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+          <h3 className="text-xl font-medium" style={{ color: EMBER.textPrimary }}>
+            14-department system · AE0–AE14
+          </h3>
+          <p className="mt-3 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+            Each department is a named role with charter constraints — AI work
+            routes through them so every action has a known author. Plus a
+            review-pressure overlay: LIPS (copy/UX), MIRRORS (anti-theater),
+            CHECKMATE (security), ORANGE (focus), MISFITS (frontier).
           </p>
-          <h2 className="mt-5 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
-            In real language, no jargon.
+          <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-5">
+            {[
+              "AE0 Brain", "AE1 Product", "AE2 Research", "AE3 Design", "AE4 Marketing",
+              "AE5 Sales", "AE6 Code", "AE7 Review", "AE8 Launch", "AE9 Legal",
+              "AE10 Ops", "AE11 Security", "AE12 Data", "AE13 Automation", "AE14 Bench",
+            ].map((d) => (
+              <span
+                key={d}
+                className="rounded-md border px-2.5 py-1.5 text-center font-mono text-[10px] uppercase tracking-[0.18em]"
+                style={{ borderColor: EMBER.separator, color: EMBER.textMuted }}
+              >
+                {d}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* AECode contracts */}
+        <div className="mt-6 rounded-2xl border p-7" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+          <h3 className="text-xl font-medium" style={{ color: EMBER.textPrimary }}>
+            AECode contracts · structured AI work
+          </h3>
+          <p className="mt-3 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+            Contract language for AI changes:
+          </p>
+          <code
+            className="mt-4 block break-all rounded-md p-3 font-mono text-[12px]"
+            style={{ background: EMBER.elevated, color: EMBER.accentSoft, border: `1px solid ${EMBER.separator}` }}
+          >
+            intent → AECode source → mission contract → target plan → isolated patch → gauntlet → receipt → approval
+          </code>
+          <p className="mt-3 text-[15px] leading-[1.6]" style={{ color: EMBER.textMuted }}>
+            Every promotion runs the gauntlet. Every approval generates a
+            replay-able audit receipt. You can reconstruct any change from
+            disk three months later.
+          </p>
+        </div>
+
+        {/* AtomSmasher + ChatBackup + Skills */}
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              h: "AtomSmasher",
+              body: "Crystal Lattice Compression · 10–80× context compression on typical codebases · preserves intent, code shape, dependencies · bundled, no add-on fee.",
+            },
+            {
+              h: "ChatBackup + Restore Primers",
+              body: "Saves every meaningful AI exchange to local data root. Restore primers rebuild context on a new session. Survives crashes, app updates, vendor changes.",
+            },
+            {
+              h: "Skill Primers",
+              body: "Reusable workflows under skills/. Built-in orangebox-primer teaches new AI sessions to operate inside Orangebox in <30s. Operator-writable, survives upgrades.",
+            },
+          ].map((c) => (
+            <div key={c.h} className="rounded-2xl border p-6" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+              <h3 className="text-lg font-medium" style={{ color: EMBER.textPrimary }}>{c.h}</h3>
+              <p className="mt-3 text-[14px] leading-[1.6]" style={{ color: EMBER.textSoft }}>{c.body}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Multi-LLM table */}
+        <div className="mt-10 overflow-x-auto rounded-2xl border" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+          <table className="w-full text-sm">
+            <thead>
+              <tr>
+                <th className="border-b px-5 py-3 text-left font-mono text-[10px] uppercase tracking-[0.22em]" style={{ borderColor: EMBER.separator, color: EMBER.accent }}>Provider</th>
+                <th className="border-b px-5 py-3 text-left font-mono text-[10px] uppercase tracking-[0.22em]" style={{ borderColor: EMBER.separator, color: EMBER.accent }}>Env var</th>
+                <th className="border-b px-5 py-3 text-left font-mono text-[10px] uppercase tracking-[0.22em]" style={{ borderColor: EMBER.separator, color: EMBER.accent }}>Use case</th>
+              </tr>
+            </thead>
+            <tbody>
+              {PROVIDERS.map((row) => (
+                <tr key={row.p} className="border-b last:border-b-0" style={{ borderColor: EMBER.separator }}>
+                  <td className="px-5 py-3" style={{ color: EMBER.textPrimary }}>{row.p}</td>
+                  <td className="px-5 py-3 font-mono text-[12px]" style={{ color: EMBER.accentSoft }}>{row.env}</td>
+                  <td className="px-5 py-3" style={{ color: EMBER.textSoft }}>{row.use}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 text-[14px]" style={{ color: EMBER.textMuted }}>
+          Routing picks the cheapest fit by default. Falls back to next provider on rate-limit. Logs which provider served each call in the receipt. Pin a specific model per task whenever you want control.
+        </p>
+
+        {/* Optional AI Box */}
+        <div className="mt-6 rounded-2xl border p-7" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+          <h3 className="text-xl font-medium" style={{ color: EMBER.textPrimary }}>
+            Optional Advanced AI Box lane
+          </h3>
+          <p className="mt-3 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+            For operators with a second physical computer (high-VRAM AI rig):
+            direct-link diagnostics over Thunderbolt or dedicated Ethernet,
+            token-gated cockpit-to-box communication, heavy-work offload,
+            automatic fallback to Basic Install when the Box is offline.
+            <span className="font-semibold" style={{ color: EMBER.textPrimary }}> Default install is Basic — one computer, no extra hardware.</span>
+          </p>
+        </div>
+      </section>
+
+      {/* ── PRIVACY ── */}
+      <section id="privacy" className="relative z-10 mx-auto w-full max-w-4xl px-6 py-24">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::privacy + security
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          Zero phone-home. Verifiable.
+        </h2>
+        <ul className="mt-8 space-y-3 text-[16px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+          {[
+            "Zero telemetry · zero analytics · zero crash reports · zero phone-home.",
+            "BYOK: API keys read from OS environment, never transmitted except to their provider.",
+            "Local data root at %USERPROFILE%\\OrangeBox-Data\\",
+            "Receipts at %USERPROFILE%\\OrangeBox-Data\\receipts\\",
+            "Backup is Ctrl+C on a folder. Restore is Ctrl+V.",
+            "Signed installer · self-Authenticode for v1.0.0-beta · Azure Trusted Signing (Microsoft-issued) rolls in v1.0.1.",
+            "Sectigo timestamp · signatures stay valid forever.",
+          ].map((l) => (
+            <li key={l} className="flex items-baseline gap-3">
+              <span style={{ color: EMBER.accent }}>▲</span>
+              <span>{l}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* ── DOWNLOAD (free week) ── */}
+      <section id="download" className="relative z-10 mx-auto w-full max-w-4xl px-6 py-24">
+        <div
+          className="rounded-3xl border p-8 md:p-10"
+          style={{
+            borderColor: EMBER.accent + "55",
+            background: `linear-gradient(135deg, ${EMBER.panel} 0%, ${EMBER.elevated} 100%)`,
+            boxShadow: `0 0 80px -10px ${EMBER.accent}55`,
+          }}
+        >
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+            ::download · free this week
+          </p>
+          <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+            No signup. No email. Just the .exe.
           </h2>
-          <div className="mt-10 space-y-6 text-base leading-[1.75] text-[#C8CCCE] md:text-[18px]">
-            <p>
-              If you have ever worked with AI on a real project for
-              more than a week, you know the failure mode. You start
-              fresh each session. The AI forgets context. You have to
-              re-explain what was decided yesterday. Tabs scatter
-              across the browser. Receipts of what AI did for you live
-              nowhere. When something breaks, you have no map to
-              follow back.
+          <p className="mt-6 max-w-2xl text-[16px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+            v1.0.0-beta is FREE this week. Direct download. Self-Authenticode
+            signed. Sectigo-timestamped. SHA-256 verified.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href={ASSETS.ghRelease}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 rounded-lg px-6 py-3.5 text-base font-semibold"
+              style={{ background: EMBER.accent, color: EMBER.bg }}
+            >
+              Get the .exe from GitHub Release →
+            </a>
+            <a
+              href={ASSETS.exe}
+              className="inline-flex items-center gap-2 rounded-lg border px-6 py-3.5 text-base font-medium"
+              style={{ borderColor: EMBER.accent, color: EMBER.accent }}
+            >
+              Direct mirror (.exe · 2.81 MB) ↓
+            </a>
+            <a
+              href={ASSETS.cert}
+              className="inline-flex items-center gap-2 rounded-lg border px-5 py-3.5 font-mono text-[10px] uppercase tracking-[0.22em]"
+              style={{ borderColor: EMBER.border, color: EMBER.textSoft }}
+            >
+              ::optional cert (.cer · 1.1 KB)
+            </a>
+          </div>
+
+          <div className="mt-8 rounded-xl border p-5" style={{ borderColor: EMBER.separator, background: EMBER.bg }}>
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>
+              ::verify before install
             </p>
-            <p>
-              This system is the answer to that. <strong>One workspace</strong>{" "}
-              that holds onto your project across sessions. The AI
-              models are tools INSIDE that workspace. The workspace
-              owns the memory, the receipts, the decisions, the
-              approval gates. The AI does the heavy lifting; the
-              workspace makes sure none of it gets lost.
+            <code
+              className="mt-3 block break-all font-mono text-[12px]"
+              style={{ color: EMBER.accentSoft }}
+            >
+              Get-FileHash -Algorithm SHA256 OrangeboxSetup-1.0.0-win-x64.exe
+            </code>
+            <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.18em]" style={{ color: EMBER.textMuted }}>
+              expected SHA-256:
             </p>
-            <p>
-              It comes as three connected tools because operators do
-              three different kinds of work. The <strong className="text-[#FFB87A]">Operations</strong> layer
-              is the engine room — quiet, working in the background,
-              keeping everything connected. The <strong className="text-[#FF7A1A]">ORANGEBOX</strong> cockpit
-              is the dashboard you actually look at — the place where
-              you give the system work, approve protected actions,
-              and watch progress with proof. The <strong className="text-[#22F0D5]">Delta</strong> IDE is
-              for builders who write code with AI; it shows your project
-              as a living graph, so when AI changes something you can
-              see the blast radius before you say yes.
-            </p>
-            <p>
-              All three pieces run on YOUR computer. Your data stays on
-              your computer. Your API keys, your conversations, your
-              files — yours. The system takes zero markup on what you
-              pay your AI providers. You buy the system once. The
-              license legally forbids us from switching to a
-              subscription model — that&apos;s clause §4A, and it&apos;s
-              binding.
+            <code
+              className="mt-1 block break-all font-mono text-[11px]"
+              style={{ color: EMBER.success }}
+            >
+              {SHA256}
+            </code>
+          </div>
+
+          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>
+            ::first install may show SmartScreen · click More info → Run anyway · Azure Trusted Signing in v1.0.1 removes this
+          </p>
+        </div>
+      </section>
+
+      {/* ── PRICING ── */}
+      <section id="pricing" className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::pricing
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          $49 once. Forever.
+        </h2>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {/* FREE BETA */}
+          <div className="rounded-2xl border p-7" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: EMBER.accentSoft }}>::launch week</p>
+            <h3 className="mt-4 text-3xl font-medium" style={{ color: EMBER.textPrimary }}>FREE preview</h3>
+            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>v1.0.0-beta · self-signed · this week only</p>
+            <ul className="mt-6 space-y-2 text-[14px] leading-[1.6]" style={{ color: EMBER.textSoft }}>
+              <li>▲ Full product</li>
+              <li>▲ Authenticode signed + Sectigo timestamp</li>
+              <li>▲ No signup, no email</li>
+              <li>▲ Free-week installs work forever</li>
+            </ul>
+          </div>
+
+          {/* $49 */}
+          <div
+            className="rounded-2xl border p-7"
+            style={{
+              borderColor: EMBER.accent,
+              background: `linear-gradient(135deg, ${EMBER.panel} 0%, ${EMBER.elevated} 100%)`,
+              boxShadow: `0 0 60px -10px ${EMBER.accent}66`,
+            }}
+          >
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: EMBER.accent }}>::week 2 onward</p>
+            <h3 className="mt-4 text-3xl font-medium" style={{ color: EMBER.textPrimary }}>$49 perpetual</h3>
+            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>v1.0.1+ · Microsoft-signed · once · forever</p>
+            <ul className="mt-6 space-y-2 text-[14px] leading-[1.6]" style={{ color: EMBER.textSoft }}>
+              <li>▲ One-time payment</li>
+              <li>▲ All v1.x updates free</li>
+              <li>▲ Anti-SaaS Commitment</li>
+              <li>▲ 14-day refund window</li>
+              <li>▲ Microsoft-signed (Azure Trusted Signing)</li>
+            </ul>
+            <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>
+              ::Stripe checkout opens day 8
             </p>
           </div>
 
-          <div className="mt-10 rounded-2xl border border-[#22F0D5]/30 bg-[#22F0D5]/05 p-6 md:p-7">
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
-              ::the operator law · six lines
-            </p>
-            <ul className="mt-4 space-y-2 text-base leading-[1.55] text-[#F2F4F5] md:text-lg">
-              {PRODUCT_LAW.map((l, i) => (
-                <li key={i} className="flex gap-3">
-                  <span className="shrink-0 font-mono text-xs font-bold tabular-nums text-[#22F0D5]">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span>{l}</span>
-                </li>
-              ))}
+          {/* TEAM (roadmap) */}
+          <div className="rounded-2xl border p-7 opacity-70" style={{ borderColor: EMBER.separator, background: EMBER.panel }}>
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: EMBER.textDim }}>::roadmap</p>
+            <h3 className="mt-4 text-3xl font-medium" style={{ color: EMBER.textSoft }}>Team / Hosted</h3>
+            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textDim }}>v2.x · v3.x · separate purchase events</p>
+            <ul className="mt-6 space-y-2 text-[14px] leading-[1.6]" style={{ color: EMBER.textMuted }}>
+              <li>○ Team multi-seat license (v2.x)</li>
+              <li>○ Optional hosted worker rail (v3.x)</li>
+              <li>○ Existing $49 buyers stay at $49 for v1.x</li>
             </ul>
           </div>
         </div>
-      </section>
 
-      {/* THE THREE PRODUCTS · plain → technical per product */}
-      <section
-        id="products"
-        className="scroll-mt-24 border-b border-[#1A2225] py-20 md:py-28"
-      >
-        <div className="mx-auto w-full max-w-6xl px-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
-            ::the three products · one bundle
+        {/* Comparison */}
+        <div className="mt-14 overflow-x-auto rounded-2xl border" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+          <table className="w-full text-sm">
+            <thead>
+              <tr>
+                <th className="border-b px-5 py-3 text-left font-mono text-[10px] uppercase tracking-[0.22em]" style={{ borderColor: EMBER.separator, color: EMBER.accent }}>Alternative</th>
+                <th className="border-b px-5 py-3 text-right font-mono text-[10px] uppercase tracking-[0.22em]" style={{ borderColor: EMBER.separator, color: EMBER.accent }}>Cost per year</th>
+                <th className="border-b px-5 py-3 text-left font-mono text-[10px] uppercase tracking-[0.22em]" style={{ borderColor: EMBER.separator, color: EMBER.accent }}>What you actually get</th>
+              </tr>
+            </thead>
+            <tbody>
+              {COMPARISON.map((row) => (
+                <tr
+                  key={row.alt}
+                  className="border-b last:border-b-0"
+                  style={{
+                    borderColor: EMBER.separator,
+                    background: row.highlight ? `${EMBER.accent}11` : "transparent",
+                  }}
+                >
+                  <td className="px-5 py-3" style={{ color: row.highlight ? EMBER.accent : EMBER.textPrimary, fontWeight: row.highlight ? 600 : 400 }}>{row.alt}</td>
+                  <td className="px-5 py-3 text-right font-mono text-[13px]" style={{ color: row.highlight ? EMBER.accent : EMBER.textSoft, fontWeight: row.highlight ? 600 : 400 }}>{row.cost}</td>
+                  <td className="px-5 py-3" style={{ color: row.highlight ? EMBER.textPrimary : EMBER.textSoft }}>{row.get}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Anti-SaaS Commitment */}
+        <div
+          className="mt-12 rounded-2xl border p-7 md:p-10"
+          style={{ borderColor: EMBER.accent, background: `${EMBER.accent}11` }}
+        >
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+            ::the anti-saas commitment
           </p>
-          <h2 className="mt-5 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
-            Three tools.{" "}
-            <span className="text-[#FF7A1A]">One install.</span>
-          </h2>
-          <p className="mt-6 max-w-3xl text-base leading-[1.6] text-[#9BA5A7] md:text-lg">
-            Each one stands alone. They sing together. Read each in
-            plain English first, then the technical depth if you want
-            it.
+          <p className="mt-4 text-balance text-2xl leading-[1.35] tracking-tight md:text-3xl" style={{ color: EMBER.textPrimary }}>
+            Orangebox is a one-time $49 purchase. Existing buyers keep their
+            license even if future editions add optional paid services.
+            You are buying software, not renting the right to remember your own work.
           </p>
+        </div>
 
-          <div className="mt-16 space-y-16">
-            {PRODUCTS.map((p, idx) => (
-              <article
-                key={p.id}
-                id={p.id}
-                className="scroll-mt-24 grid gap-8 md:grid-cols-[1fr_2fr] md:gap-12"
-              >
-                <header>
-                  <p
-                    className="font-mono text-[10px] uppercase tracking-[0.32em]"
-                    style={{ color: p.accent }}
-                  >
-                    ::tool {String(idx + 1).padStart(2, "0")}
-                  </p>
-                  <h3
-                    className="mt-3 text-balance text-3xl font-semibold leading-[1.04] tracking-tight md:text-5xl"
-                    style={{ color: p.accent }}
-                  >
-                    {p.name}
-                  </h3>
-                  <p
-                    className="mt-3 text-lg font-medium leading-[1.4] text-[#F2F4F5] md:text-xl"
-                  >
-                    {p.tagline}
-                  </p>
-                  <ul className="mt-6 space-y-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#9BA5A7]">
-                    {p.glyphs.map((g) => (
-                      <li key={g} className="flex items-center gap-2">
-                        <span
-                          className="size-1.5 rounded-full"
-                          style={{ background: p.accent }}
-                        />
-                        {g}
-                      </li>
-                    ))}
-                  </ul>
-                </header>
-
-                <div className="space-y-7">
-                  <div>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
-                      ::plain english · for everyone
-                    </p>
-                    <p className="mt-3 text-base leading-[1.75] text-[#F2F4F5] md:text-lg">
-                      {p.plain}
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 md:p-6">
-                    <p
-                      className="font-mono text-[10px] uppercase tracking-[0.28em]"
-                      style={{ color: p.accent }}
-                    >
-                      ::what it does in real life
-                    </p>
-                    <p className="mt-3 text-sm leading-[1.7] text-[#C8CCCE] md:text-base">
-                      {p.plainScenario}
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">
-                      ::for the hackers and pros · technical depth
-                    </p>
-                    <p className="mt-3 text-sm leading-[1.7] text-[#9BA5A7] md:text-base">
-                      {p.technicalDepth}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+        {/* ROI line */}
+        <div className="mt-10 max-w-3xl text-[16px] leading-[1.7]" style={{ color: EMBER.textSoft }}>
+          <p>One avoided bad ship pays for Orangebox.</p>
+          <p>One avoided rework cycle pays for Orangebox.</p>
+          <p>One recovered &quot;what did we decide three weeks ago&quot; moment pays for Orangebox.</p>
+          <p className="mt-2" style={{ color: EMBER.textPrimary }}>After that, every receipt is pure margin.</p>
         </div>
       </section>
 
-      {/* COMPREHENSIVE FEATURE MATRIX */}
-      <section
-        id="features"
-        className="scroll-mt-24 border-b border-[#1A2225] bg-[#0e2520]/20 py-20 md:py-28"
-      >
-        <div className="mx-auto w-full max-w-5xl px-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::every feature · grouped by surface
-          </p>
-          <h2 className="mt-5 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
-            The whole matrix.
-          </h2>
-          <p className="mt-5 max-w-2xl text-base leading-[1.6] text-[#9BA5A7] md:text-lg">
-            Everything the bundle ships with on day one. No checklist
-            theater — every line below is something the system does
-            today.
-          </p>
+      {/* ── BUYER PROFILES ── */}
+      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::who buys this
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          Seven buyers. One cockpit.
+        </h2>
 
-          <div className="mt-12 space-y-10">
-            {FEATURE_GROUPS.map((g, gi) => (
-              <div key={g.label}>
-                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
-                  ::{String(gi + 1).padStart(2, "0")} · {g.label}
-                </p>
-                <ul className="mt-5 grid gap-3 md:grid-cols-2">
-                  {g.items.map((item, i) => (
-                    <li
-                      key={i}
-                      className="flex gap-3 rounded-xl border border-[#1A2225] bg-[#0A0F11] p-4 text-sm leading-[1.55] text-[#C8CCCE] md:text-[15px]"
-                    >
-                      <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[#22F0D5]" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {BUYERS.map((b) => (
+            <div key={b.who} className="rounded-2xl border p-6" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>{b.who}</p>
+              <p className="mt-3 text-[15px] leading-[1.55] italic" style={{ color: EMBER.textPrimary }}>
+                &ldquo;{b.quote}&rdquo;
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── USE CASES ── */}
+      <section className="relative z-10 mx-auto w-full max-w-5xl px-6 py-24">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::use cases
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          Five concrete scenarios.
+        </h2>
+
+        <ol className="mt-10 space-y-5">
+          {USE_CASES.map((u) => (
+            <li
+              key={u.n}
+              className="grid gap-4 rounded-2xl border p-6 md:grid-cols-[60px_1fr] md:items-baseline md:gap-6 md:p-7"
+              style={{ borderColor: EMBER.border, background: EMBER.panel }}
+            >
+              <span className="font-mono text-2xl font-semibold tabular-nums" style={{ color: EMBER.accent }}>
+                {u.n}
+              </span>
+              <div>
+                <h3 className="text-lg font-medium" style={{ color: EMBER.textPrimary }}>{u.head}</h3>
+                <p className="mt-2 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>{u.body}</p>
               </div>
-            ))}
-          </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* ── SYSTEM REQUIREMENTS ── */}
+      <section className="relative z-10 mx-auto w-full max-w-4xl px-6 py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::system requirements
+        </p>
+        <h2 className="mt-4 text-3xl font-medium tracking-tight md:text-4xl" style={{ color: EMBER.textPrimary }}>
+          What you need.
+        </h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {[
+            ["OS", "Windows 10 (1809+) or Windows 11"],
+            ["CPU", "x64 · 2 cores minimum · 4 cores recommended"],
+            ["RAM", "8 GB minimum · 16 GB recommended"],
+            ["Disk", "500 MB for the app · receipts grow at ~1 MB/week typical use"],
+            ["Network", "Only outbound to the AI provider you authorized"],
+            ["Optional", "Ollama for local models · second machine for the Advanced AI Box lane"],
+          ].map(([k, v]) => (
+            <div key={k} className="rounded-xl border p-4" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>{k}</p>
+              <p className="mt-2 text-[14px]" style={{ color: EMBER.textSoft }}>{v}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* FOR / NOT FOR */}
-      <section className="border-b border-[#1A2225] py-20 md:py-28">
-        <div className="mx-auto w-full max-w-5xl px-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::who picks this · honest screening
+      {/* ── NOT IN THE BOX ── */}
+      <section className="relative z-10 mx-auto w-full max-w-4xl px-6 py-20">
+        <div className="rounded-2xl border p-7" style={{ borderColor: EMBER.warning + "55", background: EMBER.panel }}>
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.warning }}>
+            ::what is NOT in the box
           </p>
-          <h2 className="mt-5 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
-            For who. <span className="text-[#9BA5A7]">Not for who.</span>
+          <h2 className="mt-4 text-2xl font-medium tracking-tight md:text-3xl" style={{ color: EMBER.textPrimary }}>
+            Honesty card.
           </h2>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-[#22F0D5]/40 bg-[#22F0D5]/05 p-7">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
-                ::for
-              </p>
-              <ul className="mt-5 space-y-3 text-base leading-[1.6] text-[#F2F4F5]">
-                {FOR_OPERATORS.map((line) => (
-                  <li key={line} className="flex gap-3">
-                    <span className="text-[#22F0D5]">·</span>
-                    <span>{line}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-[#FFB87A]/40 bg-[#FFB87A]/05 p-7">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">
-                ::NOT for
-              </p>
-              <ul className="mt-5 space-y-3 text-base leading-[1.6] text-[#F2F4F5]">
-                {NOT_FOR_PEOPLE_WHO.map((line) => (
-                  <li key={line} className="flex gap-3">
-                    <span className="text-[#FFB87A]">·</span>
-                    <span>{line}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <ul className="mt-5 space-y-2 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+            <li>○ No API keys included — Orangebox ships zero credentials. You bring your own (BYOK).</li>
+            <li>○ No Mac or Linux build in v1.0.0 — Windows only for the beta. Roadmap if there&apos;s demand.</li>
+            <li>○ No mobile app — desktop cockpit only.</li>
+            <li>○ No vendor support for individual AI providers — bugs in Claude/GPT/Gemini go to those providers.</li>
+            <li>○ No code hosted on AtomEons servers — your code never leaves your machine.</li>
+          </ul>
         </div>
       </section>
 
-      {/* PRICING + COUNTDOWN (again) + DISCLOSURE */}
+      {/* ── ROADMAP ── */}
+      <section id="roadmap" className="relative z-10 mx-auto w-full max-w-5xl px-6 py-24">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::roadmap
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          The path forward, transparent.
+        </h2>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              v: "v1.x",
+              t: "now",
+              items: ["AE See-Suite + AE Operations cockpit", "14-department architecture", "AECode contracts + gauntlet", "Receipt rail", "AtomSmasher Crystal Lattice Compression", "ChatBackup + Restore Primers", "Multi-LLM routing (9+ providers)", "Basic + Advanced install paths"],
+            },
+            {
+              v: "v1.x patches",
+              t: "free-week",
+              items: ["Sigstore + GitHub Artifact Attestations", "Azure Trusted Signing (Microsoft-issued cert)", "GitHub Verified Publisher badge", "Public roadmap on GitHub"],
+            },
+            {
+              v: "v2.x",
+              t: "planned",
+              items: ["Visual cockpit frontend (Tauri)", "Visual Telemetry surface", "Snapshot scrubber (temporal rewind)", "Code-mode + chat-mode polish", "Voice-as-living-dialogue"],
+            },
+          ].map((c) => (
+            <div key={c.v} className="rounded-2xl border p-6" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
+              <div className="flex items-baseline justify-between">
+                <p className="font-mono text-2xl font-semibold" style={{ color: EMBER.accent }}>{c.v}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>{c.t}</p>
+              </div>
+              <ul className="mt-5 space-y-2 text-[14px] leading-[1.55]" style={{ color: EMBER.textSoft }}>
+                {c.items.map((i) => (
+                  <li key={i}>▲ {i}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-8 max-w-3xl text-[15px] leading-[1.65]" style={{ color: EMBER.textMuted }}>
+          <span style={{ color: EMBER.accent }}>Anti-SaaS Commitment:</span> existing $49 buyers stay at $49 perpetual for v1.x. v2.x is a separate purchase event when it ships — not committed today. Nothing you bought goes dark.
+        </p>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section id="faq" className="relative z-10 mx-auto w-full max-w-3xl px-6 py-24">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::FAQ
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          Fifteen questions. Real answers.
+        </h2>
+
+        <div className="mt-10 space-y-3">
+          {FAQ.map((f, i) => (
+            <details
+              key={f.q}
+              className="rounded-2xl border px-6 py-4"
+              style={{ borderColor: EMBER.border, background: EMBER.panel }}
+              open={i === 0}
+            >
+              <summary className="cursor-pointer text-[16px] font-medium leading-snug" style={{ color: EMBER.textPrimary }}>
+                {f.q}
+              </summary>
+              <p className="mt-3 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+                {f.a}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      {/* ── FINAL CTA ── */}
       <section
-        id="pricing"
-        className="scroll-mt-24 border-b border-[#1A2225] py-20 md:py-28 bg-gradient-to-b from-[#0e2520]/30 via-[#1C0F08]/40 to-[#0e2520]/30"
+        className="relative z-10 border-y"
+        style={{ borderColor: EMBER.border, background: `linear-gradient(180deg, ${EMBER.panel} 0%, ${EMBER.elevated} 100%)` }}
       >
-        <div className="mx-auto w-full max-w-4xl px-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
-            ::pricing · launch terms
+        <div className="mx-auto w-full max-w-4xl px-6 py-24 text-center">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+            ::ship
           </p>
-          <h2 className="mt-5 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
-            FREE for a week.{" "}
-            <span className="text-[#22F0D5]">Then $99.</span>{" "}
-            <span className="text-[#FFB87A]">May change at random.</span>
+          <h2 className="mt-4 text-balance text-5xl font-medium leading-[0.98] tracking-tight md:text-7xl" style={{ color: EMBER.textPrimary }}>
+            Download free this week.
           </h2>
-          <p className="mt-6 max-w-3xl text-base leading-[1.7] text-[#C8CCCE] md:text-lg">
-            The first week of public availability the entire bundle is
-            free — full source, full features, no signup, no email
-            capture. After the countdown the price is{" "}
-            <strong className="text-[#22F0D5]">$99 once, forever</strong>.
-            Public messaging from that point: price may change at
-            random. If we raise it (or lower it) it happens with no
-            warning. Lock in now or accept the volatility.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-[1.55]" style={{ color: EMBER.textSoft }}>
+            No signup. No email. Just the .exe + the SHA-256 + the cert.
           </p>
 
-          <div className="mt-10">
-            <CountdownTimer postCountdownPrice="$99" />
-          </div>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            <div className="rounded-2xl border border-[#22F0D5]/30 bg-[#0A1A1C] p-6">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
-                ::what stays true forever
-              </p>
-              <ul className="mt-4 space-y-3 text-sm leading-[1.6] text-[#C8CCCE] md:text-[15px]">
-                <li className="flex gap-3">
-                  <span className="text-[#22F0D5]">·</span>
-                  <span>
-                    <strong className="text-[#F2F4F5]">License §4A:</strong>{" "}
-                    legally bans switching to subscription. If we ever try,
-                    every existing buyer keeps their license free in
-                    perpetuity.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#22F0D5]">·</span>
-                  <span>
-                    <strong className="text-[#F2F4F5]">Free-week buyers are grandfathered:</strong>{" "}
-                    if you downloaded during the free window, your license
-                    is valid forever even if the price goes to $999.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#22F0D5]">·</span>
-                  <span>
-                    <strong className="text-[#F2F4F5]">30-day Material Failure Guarantee:</strong>{" "}
-                    if the bundle fails to install or launch on Windows 10/11
-                    + Node 20+, full refund. No questions, no fault-finding.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#22F0D5]">·</span>
-                  <span>
-                    <strong className="text-[#F2F4F5]">Source included:</strong>{" "}
-                    in the bundle. Inspect freely. Modify for personal or
-                    single-business use.
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="rounded-2xl border border-[#FFB87A]/40 bg-[#1C0F08] p-6">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">
-                ::what is intentionally volatile
-              </p>
-              <ul className="mt-4 space-y-3 text-sm leading-[1.6] text-[#C8CCCE] md:text-[15px]">
-                <li className="flex gap-3">
-                  <span className="text-[#FFB87A]">·</span>
-                  <span>
-                    <strong className="text-[#F2F4F5]">The price.</strong>{" "}
-                    After the free week, $99 is the floor for now. It
-                    may rise to $199, $299, $999 — or drop briefly for a
-                    surprise sale. No advance notice.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#FFB87A]">·</span>
-                  <span>
-                    <strong className="text-[#F2F4F5]">The release cadence.</strong>{" "}
-                    New features ship when ready, not on a calendar.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#FFB87A]">·</span>
-                  <span>
-                    <strong className="text-[#F2F4F5]">Future modules.</strong>{" "}
-                    Additional optional modules (specialized agent
-                    packs, MCP bundles, niche workflows) may be sold
-                    separately. Core bundle stays one-time-license.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#FFB87A]">·</span>
-                  <span>
-                    <strong className="text-[#F2F4F5]">Who we sell to.</strong>{" "}
-                    We reserve the right to decline an order — no obligation
-                    to sell to any specific buyer or use case.
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Final pricing CTA */}
-          <div className="mt-12 grid gap-4 md:grid-cols-[1fr_1fr]">
-            <OrangeBoxV63Buy
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FF7A1A] px-7 py-4 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-black shadow-[0_0_60px_rgba(255,122,26,0.40)] transition-all hover:bg-[#FFA45A] disabled:opacity-60"
-              label="get the bundle →"
-            />
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20launch%20bundle%20inquiry"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-7 py-4 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/15"
+              href={ASSETS.ghRelease}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 rounded-lg px-7 py-4 text-lg font-semibold"
+              style={{ background: EMBER.accent, color: EMBER.bg, boxShadow: `0 0 60px ${EMBER.accent}66` }}
             >
-              email the founder →
+              Download free →
             </a>
+            <a
+              href={ASSETS.exe}
+              className="inline-flex items-center gap-2 rounded-lg border px-7 py-4 text-lg font-medium"
+              style={{ borderColor: EMBER.accent, color: EMBER.accent }}
+            >
+              Direct mirror ↓
+            </a>
+            <span
+              className="inline-flex cursor-not-allowed items-center gap-2 rounded-lg border px-7 py-4 text-lg font-medium opacity-60"
+              style={{ borderColor: EMBER.border, color: EMBER.textMuted }}
+              aria-disabled="true"
+              title="Stripe checkout opens day 8"
+            >
+              Buy ($49 from next week)
+            </span>
           </div>
+
+          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>
+            ::SHA-256 · {SHA256.slice(0, 20)}…
+          </p>
         </div>
       </section>
 
-      {/* FINAL STRIP */}
-      <section className="bg-black py-16 md:py-20">
-        <div className="mx-auto w-full max-w-3xl px-6 text-center">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#6B7779]">
-            ::one operator · marco island fl · independent · no investors
-          </p>
-          <h3 className="mt-6 text-balance text-3xl font-medium leading-[1.1] tracking-tight md:text-4xl">
-            Built by one person.{" "}
-            <span className="text-[#FF7A1A]">For people who run things.</span>
-          </h3>
-          <p className="mt-5 text-base leading-[1.65] text-[#C8CCCE] md:text-lg">
-            No VC. No board. No telemetry. No subscription ever. No
-            mailing list capture. Email the founder directly to ask
-            anything before you buy.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a
-              href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20question%20before%20I%20buy"
-              className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5] hover:bg-[#22F0D5]/20"
-            >
-              a.mccree@gmail.com
-            </a>
-            <Link
-              href="/legal/terms"
-              className="inline-flex items-center gap-1.5 rounded-full border border-[#1A2225] bg-[#0A0F11] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7] hover:text-[#22F0D5]"
-            >
-              license §4A · /legal/terms
-            </Link>
-            <Link
-              href="/orangebox/legacy"
-              className="inline-flex items-center gap-1.5 rounded-full border border-[#1A2225] bg-[#0A0F11] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779] hover:text-[#22F0D5]"
-            >
-              v6.1.0 legacy archive
-            </Link>
+      {/* ── FOOTER ── */}
+      <footer className="relative z-10 mx-auto w-full max-w-6xl px-6 py-14">
+        <div className="grid gap-10 md:grid-cols-4">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>Product</p>
+            <ul className="mt-4 space-y-2 text-[14px]" style={{ color: EMBER.textSoft }}>
+              <li><a href="#download">Download</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
           </div>
-          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
-            ::~2 hour reply in ET waking hours · no PR layer
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>Trust</p>
+            <ul className="mt-4 space-y-2 text-[14px]" style={{ color: EMBER.textSoft }}>
+              <li><Link href="/legal/privacy">Privacy</Link></li>
+              <li><Link href="/legal/terms">License (EULA)</Link></li>
+              <li><Link href="/legal/refund">Security</Link></li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>Resources</p>
+            <ul className="mt-4 space-y-2 text-[14px]" style={{ color: EMBER.textSoft }}>
+              <li><a href={ASSETS.github + "/tree/main/docs"} target="_blank" rel="noopener">Documentation</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href={ASSETS.github + "/releases"} target="_blank" rel="noopener">Changelog</a></li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>Connect</p>
+            <ul className="mt-4 space-y-2 text-[14px]" style={{ color: EMBER.textSoft }}>
+              <li><a href={ASSETS.github} target="_blank" rel="noopener">GitHub ↗</a></li>
+              <li><a href="mailto:support@atomeons.com">support@atomeons.com</a></li>
+              <li><Link href="/">atomeons.com</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 border-t pt-6" style={{ borderColor: EMBER.border }}>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] leading-[1.8]" style={{ color: EMBER.textMuted }}>
+            Built by AtomEons Systems Laboratory · Marco Island, Florida · © 2026
+            <br />
+            One operator. One organism. One cockpit.
+            <br />
+            Signed via Sectigo timestamp · Azure Trusted Signing rolls week 2 · No telemetry · No phone-home · Source private to AtomEons
           </p>
         </div>
-      </section>
+      </footer>
     </main>
   );
 }
