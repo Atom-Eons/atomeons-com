@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PlatformPicker from "./PlatformPicker";
+import { TrackedDownloadAnchor } from "../../_components/TrackedDownloadAnchor";
 
 /**
  * /b00kmakor/download — buyer-facing download landing page.
@@ -229,13 +230,16 @@ export default function B00KMakrDownloadPage() {
               <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.22em] text-[#9BA5A7]">
                 {a.size} · embedded fonts
               </p>
-              <a
+              <TrackedDownloadAnchor
                 href={a.url}
                 download
+                product="b00kmakor"
+                platform={a.filename.toLowerCase().includes("windows") ? "manual-win" : "manual-mac"}
+                surface="download-page"
                 className="mt-5 inline-flex items-center gap-2 rounded-lg border border-[#22F0D5]/40 bg-[#0A0F11] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] hover:bg-[#22F0D5]/10"
               >
                 Download PDF ↓
-              </a>
+              </TrackedDownloadAnchor>
             </div>
           ))}
         </div>

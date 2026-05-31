@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CountdownTimer } from "./CountdownTimer";
+import { TrackedDownloadAnchor } from "../_components/TrackedDownloadAnchor";
 
 /**
  * /orangebox — public landing page · GREEN-LIT REBUILD 2026-05-30
@@ -384,8 +385,11 @@ export default function OrangeboxPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <a
+              <TrackedDownloadAnchor
                 href={ASSETS.exe}
+                product="orangebox"
+                platform="windows"
+                surface="product-page"
                 className="inline-flex items-center gap-2 rounded-lg px-6 py-3.5 text-base font-semibold transition-colors"
                 style={{
                   background: EMBER.accent,
@@ -394,7 +398,7 @@ export default function OrangeboxPage() {
                 }}
               >
                 Download free now · 2.81 MB ↓
-              </a>
+              </TrackedDownloadAnchor>
               <a
                 href={ASSETS.ghRelease}
                 target="_blank"
@@ -783,20 +787,26 @@ export default function OrangeboxPage() {
             >
               Get the .exe from GitHub Release →
             </a>
-            <a
+            <TrackedDownloadAnchor
               href={ASSETS.exe}
+              product="orangebox"
+              platform="windows"
+              surface="download-page"
               className="inline-flex items-center gap-2 rounded-lg border px-6 py-3.5 text-base font-medium"
               style={{ borderColor: EMBER.accent, color: EMBER.accent }}
             >
               Direct mirror (.exe · 2.81 MB) ↓
-            </a>
-            <a
+            </TrackedDownloadAnchor>
+            <TrackedDownloadAnchor
               href={ASSETS.cert}
+              product="orangebox"
+              platform="cert"
+              surface="download-page"
               className="inline-flex items-center gap-2 rounded-lg border px-5 py-3.5 font-mono text-[10px] uppercase tracking-[0.22em]"
               style={{ borderColor: EMBER.border, color: EMBER.textSoft }}
             >
               ::optional cert (.cer · 1.1 KB)
-            </a>
+            </TrackedDownloadAnchor>
           </div>
 
           <div className="mt-8 rounded-xl border p-5" style={{ borderColor: EMBER.separator, background: EMBER.bg }}>
@@ -1129,13 +1139,16 @@ export default function OrangeboxPage() {
             >
               Download free →
             </a>
-            <a
+            <TrackedDownloadAnchor
               href={ASSETS.exe}
+              product="orangebox"
+              platform="windows"
+              surface="product-page"
               className="inline-flex items-center gap-2 rounded-lg border px-7 py-4 text-lg font-medium"
               style={{ borderColor: EMBER.accent, color: EMBER.accent }}
             >
               Direct mirror ↓
-            </a>
+            </TrackedDownloadAnchor>
             <span
               className="inline-flex cursor-not-allowed items-center gap-2 rounded-lg border px-7 py-4 text-lg font-medium opacity-60"
               style={{ borderColor: EMBER.border, color: EMBER.textMuted }}

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { trackDownload } from "./trackDownload";
 
 /**
  * HomeLaunchTiles — massive download display block for the homepage.
@@ -179,6 +180,7 @@ export function HomeLaunchTiles() {
             <div className="mt-7 flex flex-wrap gap-3">
               <a
                 href={ORANGEBOX_DL}
+                onClick={() => trackDownload({ product: "orangebox", platform: "windows", surface: "home-tiles" })}
                 className="inline-flex items-center gap-2 rounded-lg bg-[#FF7733] px-6 py-3.5 text-base font-bold text-[#1A1410] shadow-[0_0_40px_rgba(255,119,51,0.5)] transition-colors hover:bg-[#FFAA66]"
               >
                 Download ORANGEBOX · 2.81 MB ↓
@@ -225,6 +227,7 @@ export function HomeLaunchTiles() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href="/b00kmakor/download"
+                onClick={() => trackDownload({ product: "b00kmakor", platform: "unknown", surface: "home-tiles" })}
                 className="inline-flex items-center gap-2 rounded-lg bg-[#FFB87A] px-6 py-3.5 text-base font-bold text-[#1A1410] shadow-[0_0_40px_rgba(255,184,122,0.45)] transition-colors hover:bg-[#FFD6AC]"
               >
                 Download B00KMAKR · Mac or Win ↓

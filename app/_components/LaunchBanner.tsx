@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { trackDownload } from "./trackDownload";
 
 /**
  * LaunchBanner — site-wide sticky top bar with live countdown +
@@ -146,12 +147,14 @@ export function LaunchBanner() {
         <div className="flex flex-shrink-0 items-center gap-2">
           <a
             href={ORANGEBOX_DL}
+            onClick={() => trackDownload({ product: "orangebox", platform: "windows", surface: "launch-banner" })}
             className="inline-flex items-center gap-1.5 rounded-md border border-[#FF7733] bg-[#FF7733] px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-[#1A1410] transition-colors hover:bg-[#FFAA66]"
           >
             ↓ Orangebox
           </a>
           <a
             href={B00KMAKR_DL}
+            onClick={() => trackDownload({ product: "b00kmakor", platform: "unknown", surface: "launch-banner" })}
             className="inline-flex items-center gap-1.5 rounded-md border border-[#FF7733] bg-transparent px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-[#FF7733] transition-colors hover:bg-[#FF7733]/15"
           >
             ↓ B00KMAKR

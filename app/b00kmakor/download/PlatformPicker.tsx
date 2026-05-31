@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { trackDownload } from "../../_components/trackDownload";
 
 /**
  * PlatformPicker — auto-detects the visitor's OS and highlights the
@@ -148,6 +149,16 @@ export default function PlatformPicker({
               <a
                 href={a.url}
                 download
+                onClick={() =>
+                  trackDownload({
+                    product: "b00kmakor",
+                    platform:
+                      a.filename.toLowerCase().includes("mac")
+                        ? "mac"
+                        : "windows",
+                    surface: "download-page",
+                  })
+                }
                 className="mt-6 inline-flex items-center gap-2 rounded-lg border px-5 py-2.5 text-sm font-semibold transition-colors"
                 style={{
                   borderColor: a.color,
