@@ -79,7 +79,7 @@ export default function NotFound() {
             className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#FF7A1A]/50"
           >
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
-              ::cockpit · v6.3 · $49 once · §4A
+              ::cockpit · v1.0.0-beta · turbo-optimize Claude · §4A
             </p>
             <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
               Æ ORANGEBOX →
