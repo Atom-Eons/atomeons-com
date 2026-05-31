@@ -109,7 +109,7 @@ export function Header() {
               {
                 href: "/b00kmakor",
                 label: "Æ B00KMakor",
-                hint: "AI publishing house — coming",
+                hint: "AI publishing cockpit · Mac + Windows · FREE this week · then $99",
               },
             ]}
           />

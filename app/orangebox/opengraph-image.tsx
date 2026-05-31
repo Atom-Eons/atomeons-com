@@ -2,14 +2,14 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "ORANGEBOX Command v6.3 — AE See-Suite + AE Operations · 60+ MCP tools · 200+ models · the cockpit replaces Claude Code, Cursor, and Codex. $49 once, forever. License §4A bans subscription.";
+  "Orangebox v1.0.0-beta — local-first AI cockpit · multi-LLM · BYOK · receipt-backed · $49 perpetual · FREE launch week · AtomEons";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
- * /orangebox product card.
- * Hard-features framing: v6.3 two-surface architecture +
- * $49 price chip + REPLACES claim + §4A no-saas signal.
+ * /orangebox product card · v1.0.0-beta GREEN-LIT rebuild.
+ * Warm ember palette mirroring the in-app cockpit (NOT cool tech blue).
+ * Lifts from WEB_PROJECT_FINAL_PACKAGE_2026-05-30.md §11 + §16.
  */
 export default function OG() {
   return new ImageResponse(
@@ -21,8 +21,8 @@ export default function OG() {
           display: "flex",
           flexDirection: "column",
           background:
-            "radial-gradient(70% 55% at 75% 35%, rgba(34,240,213,0.30) 0%, transparent 60%), radial-gradient(50% 40% at 15% 95%, rgba(255,122,26,0.28) 0%, transparent 65%), #000000",
-          color: "#F2F4F5",
+            "radial-gradient(60% 50% at 75% 25%, rgba(255,119,51,0.32) 0%, transparent 65%), radial-gradient(45% 40% at 15% 95%, rgba(255,170,68,0.18) 0%, transparent 65%), #1A1410",
+          color: "#E8D5B7",
           padding: 56,
           fontFamily:
             '"Helvetica", "Arial", -apple-system, BlinkMacSystemFont, sans-serif',
@@ -35,7 +35,7 @@ export default function OG() {
             justifyContent: "space-between",
             alignItems: "center",
             paddingBottom: 14,
-            borderBottom: "1px solid #1A2225",
+            borderBottom: "1px solid #3D2F22",
           }}
         >
           <p
@@ -45,10 +45,10 @@ export default function OG() {
               fontSize: 12,
               letterSpacing: 5,
               textTransform: "uppercase",
-              color: "#22F0D5",
+              color: "#FF7733",
             }}
           >
-            ATOMEONS · MARCO ISLAND · v6.3 · LIVE
+            ATOMEONS · ORANGEBOX · v1.0.0-beta · SHIPPED
           </p>
           <p
             style={{
@@ -57,15 +57,15 @@ export default function OG() {
               fontSize: 12,
               letterSpacing: 5,
               textTransform: "uppercase",
-              color: "#FF7A1A",
+              color: "#FFAA66",
             }}
           >
-            ● replaces claude code · cursor · codex
+            ● FREE launch week · ends June 6
           </p>
         </div>
 
         {/* HEADLINE */}
-        <div style={{ display: "flex", flexDirection: "column", marginTop: 26 }}>
+        <div style={{ display: "flex", flexDirection: "column", marginTop: 30 }}>
           <p
             style={{
               margin: 0,
@@ -73,10 +73,10 @@ export default function OG() {
               fontSize: 14,
               letterSpacing: 5,
               textTransform: "uppercase",
-              color: "#FF7A1A",
+              color: "#FF7733",
             }}
           >
-            ORANGEBOX Command · v6.3
+            ORANGEBOX · LOCAL-FIRST AI COCKPIT
           </p>
           <p
             style={{
@@ -85,101 +85,66 @@ export default function OG() {
               fontWeight: 500,
               lineHeight: 0.95,
               letterSpacing: -3,
-              color: "#F2F4F5",
+              color: "#E8D5B7",
               maxWidth: 1080,
             }}
           >
-            One file.
+            Your AI cockpit.
             <br />
-            Double-click.
-            <br />
-            <span style={{ color: "#22F0D5" }}>2 seconds.</span>
+            <span style={{ color: "#FF7733" }}>Local. Perpetual. Yours.</span>
           </p>
           <p
             style={{
-              margin: "20px 0 0",
+              margin: "22px 0 0",
               fontSize: 22,
-              lineHeight: 1.35,
-              color: "#9BA5A7",
+              lineHeight: 1.4,
+              color: "#C4AD8E",
               maxWidth: 1020,
               fontWeight: 400,
             }}
           >
-            v6.3 native binary · Rust + egui · no webview, no chromium.
-            Two surfaces: AE See-Suite (command — receipts, dashboards,
-            mission graphs) + AE Operations (engine — MCP tools, agent
-            routing, 200+ models). Basic Install or AI Box.
+            Built in 75 days. With itself. Multi-LLM (Claude · GPT ·
+            Gemini · Ollama · OpenRouter). BYOK · zero markup ·
+            tamper-evident receipts on every action. Your code never
+            leaves your machine.
           </p>
         </div>
 
-        {/* two-surface rail · AE See-Suite + AE Operations */}
+        {/* trust rail */}
         <div
           style={{
             display: "flex",
-            gap: 14,
+            gap: 12,
             marginTop: 22,
+            flexWrap: "wrap",
           }}
         >
           {[
-            { name: "AE See-Suite", role: "command · receipts · mission graphs", glyph: "◉" },
-            { name: "AE Operations", role: "engine · MCP · routing · 200+ models", glyph: "⚙" },
-          ].map((s) => (
-            <div
-              key={s.name}
+            "🔒 Local-first",
+            "🔑 BYOK",
+            "🧾 Receipt-backed",
+            "✍️ Signed",
+            "♾ Perpetual",
+            "🚫 No telemetry",
+          ].map((b) => (
+            <span
+              key={b}
               style={{
                 display: "flex",
-                flex: 1,
                 alignItems: "center",
-                gap: 16,
-                padding: "16px 22px",
-                border: "1px solid #1A2225",
-                borderRadius: 12,
-                background: "rgba(10, 15, 17, 0.7)",
+                padding: "8px 14px",
+                border: "1px solid #3D2F22",
+                borderRadius: 999,
+                background: "rgba(34,26,20,0.7)",
+                fontFamily: "monospace",
+                fontSize: 12,
+                letterSpacing: 2,
+                textTransform: "uppercase",
+                color: "#C4AD8E",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 50,
-                  height: 50,
-                  fontFamily: "monospace",
-                  fontSize: 30,
-                  color: "#22F0D5",
-                  border: "1px solid #22F0D5",
-                  borderRadius: 8,
-                  background: "rgba(34,240,213,0.06)",
-                }}
-              >
-                {s.glyph}
-              </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <p
-                  style={{
-                    margin: 0,
-                    fontSize: 22,
-                    fontWeight: 700,
-                    color: "#F2F4F5",
-                    letterSpacing: -0.5,
-                  }}
-                >
-                  {s.name}
-                </p>
-                <p
-                  style={{
-                    margin: "4px 0 0",
-                    fontSize: 11,
-                    color: "#9BA5A7",
-                    fontFamily: "monospace",
-                    textTransform: "uppercase",
-                    letterSpacing: 2,
-                  }}
-                >
-                  {s.role}
-                </p>
-              </div>
-            </div>
+              {b}
+            </span>
           ))}
         </div>
 
@@ -191,7 +156,7 @@ export default function OG() {
             justifyContent: "space-between",
             marginTop: "auto",
             paddingTop: 22,
-            borderTop: "1px solid #1A2225",
+            borderTop: "1px solid #3D2F22",
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
@@ -201,17 +166,17 @@ export default function OG() {
                 fontSize: 11,
                 letterSpacing: 4,
                 textTransform: "uppercase",
-                color: "#6B7779",
+                color: "#8A7560",
                 fontFamily: "monospace",
               }}
             >
-              ::byo keys · zero markup · local-first · §4A no-saas lock
+              ::built in 75 days · with itself · §4A no-saas lock
             </p>
             <p
               style={{
                 margin: 0,
                 fontSize: 22,
-                color: "#22F0D5",
+                color: "#FF7733",
                 fontFamily: "monospace",
                 fontWeight: 700,
               }}
@@ -225,19 +190,19 @@ export default function OG() {
               alignItems: "baseline",
               gap: 12,
               padding: "18px 28px",
-              background: "#FF7A1A",
+              background: "#FF7733",
               borderRadius: 14,
-              boxShadow: "0 0 60px rgba(255,122,26,0.55)",
+              boxShadow: "0 0 60px rgba(255,119,51,0.55)",
             }}
           >
-            <p style={{ margin: 0, fontSize: 60, fontWeight: 700, color: "#000", lineHeight: 1 }}>
+            <p style={{ margin: 0, fontSize: 60, fontWeight: 700, color: "#1A1410", lineHeight: 1 }}>
               $49
             </p>
             <p
               style={{
                 margin: 0,
                 fontSize: 14,
-                color: "#000",
+                color: "#1A1410",
                 textTransform: "uppercase",
                 letterSpacing: 2.5,
                 fontWeight: 700,

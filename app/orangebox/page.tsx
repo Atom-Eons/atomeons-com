@@ -87,14 +87,13 @@ export const metadata: Metadata = {
       "Built in 75 days. With itself. Multi-LLM. BYOK. Receipt-backed. $49 perpetual.",
     url: "https://atomeons.com/orangebox",
     type: "website",
-    images: [{ url: ASSETS.logo, width: 1024, height: 1024, alt: "Orangebox" }],
+    // images: omitted · fall through to app/orangebox/opengraph-image.tsx route convention
   },
   twitter: {
     card: "summary_large_image",
     title: "Orangebox — $49 perpetual · local-first AI cockpit",
     description:
       "Multi-LLM. BYOK. Receipt-backed. No subscription. Your code never leaves your machine.",
-    images: [ASSETS.logo],
   },
   robots: { index: true, follow: true },
 };
@@ -386,7 +385,7 @@ export default function OrangeboxPage() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="#download"
+                href={ASSETS.exe}
                 className="inline-flex items-center gap-2 rounded-lg px-6 py-3.5 text-base font-semibold transition-colors"
                 style={{
                   background: EMBER.accent,
@@ -394,7 +393,16 @@ export default function OrangeboxPage() {
                   boxShadow: `0 0 40px ${EMBER.accent}44`,
                 }}
               >
-                Download free this week →
+                Download free now · 2.81 MB ↓
+              </a>
+              <a
+                href={ASSETS.ghRelease}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 rounded-lg border px-6 py-3.5 text-base font-medium transition-colors"
+                style={{ borderColor: EMBER.accent, color: EMBER.accent }}
+              >
+                GitHub Release →
               </a>
               <a
                 href="#how-it-works"
@@ -595,13 +603,14 @@ export default function OrangeboxPage() {
         {/* 14 departments */}
         <div className="mt-10 rounded-2xl border p-7" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
           <h3 className="text-xl font-medium" style={{ color: EMBER.textPrimary }}>
-            14-department system · AE0–AE14
+            AE0–AE14 · 15-department architecture
           </h3>
           <p className="mt-3 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
-            Each department is a named role with charter constraints — AI work
-            routes through them so every action has a known author. Plus a
-            review-pressure overlay: LIPS (copy/UX), MIRRORS (anti-theater),
-            CHECKMATE (security), ORANGE (focus), MISFITS (frontier).
+            AE0 is the brain root; AE1-AE14 are named roles with charter
+            constraints. AI work routes through them so every action has a
+            known author. Plus a review-pressure overlay: LIPS (copy/UX),
+            MIRRORS (anti-theater), CHECKMATE (security), ORANGE (focus),
+            MISFITS (frontier).
           </p>
           <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-5">
             {[
@@ -751,7 +760,21 @@ export default function OrangeboxPage() {
             signed. Sectigo-timestamped. SHA-256 verified.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div
+            className="mt-6 rounded-xl border px-4 py-3"
+            style={{ borderColor: EMBER.warning + "55", background: EMBER.warning + "11" }}
+          >
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em]" style={{ color: EMBER.warning }}>
+              ::heads up · first install
+            </p>
+            <p className="mt-2 text-[14px] leading-[1.55]" style={{ color: EMBER.textPrimary }}>
+              Windows SmartScreen may say <em>&quot;Windows protected your PC&quot;</em> the first time. Click{" "}
+              <strong>More info</strong> → <strong>Run anyway</strong>. The .exe is self-Authenticode signed; Azure
+              Trusted Signing (Microsoft-issued cert) lands in v1.0.1 and removes the warning entirely.
+            </p>
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-4">
             <a
               href={ASSETS.ghRelease}
               target="_blank"
@@ -798,9 +821,6 @@ export default function OrangeboxPage() {
             </code>
           </div>
 
-          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>
-            ::first install may show SmartScreen · click More info → Run anyway · Azure Trusted Signing in v1.0.1 removes this
-          </p>
         </div>
       </section>
 
@@ -1149,7 +1169,8 @@ export default function OrangeboxPage() {
             <ul className="mt-4 space-y-2 text-[14px]" style={{ color: EMBER.textSoft }}>
               <li><Link href="/legal/privacy">Privacy</Link></li>
               <li><Link href="/legal/terms">License (EULA)</Link></li>
-              <li><Link href="/legal/refund">Security</Link></li>
+              <li><Link href="/legal/privacy">Security · Privacy</Link></li>
+              <li><Link href="/legal/refund">Refund policy</Link></li>
             </ul>
           </div>
           <div>

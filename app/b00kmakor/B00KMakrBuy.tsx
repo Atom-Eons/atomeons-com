@@ -32,8 +32,16 @@ export default function B00KMakrBuy({
     setLoading(true);
     setErr(null);
     setInquire(null);
+    // 5-second timeout: if checkout endpoint hasn't responded, surface a
+    // direct-download fallback so impatient buyers don't bounce.
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
     try {
-      const res = await fetch("/api/checkout/b00kmakor", { method: "POST" });
+      const res = await fetch("/api/checkout/b00kmakor", {
+        method: "POST",
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
       const j: CheckoutResult = await res.json();
       if ("url" in j && j.url) {
         window.location.assign(j.url);
@@ -46,7 +54,16 @@ export default function B00KMakrBuy({
         if ("inquire" in j && j.inquire) setInquire(j.inquire);
       }
     } catch (e) {
-      setErr(e instanceof Error ? e.message : "Checkout failed");
+      clearTimeout(timeoutId);
+      const aborted = e instanceof DOMException && e.name === "AbortError";
+      setErr(aborted
+        ? "Checkout is slow. Grab the bundle directly below — same files, same license."
+        : e instanceof Error
+          ? e.message
+          : "Checkout failed");
+      // Always show the direct-download landing page as a fallback. Buyer
+      // never has to hit the email path just because the checkout API was slow.
+      setInquire("/b00kmakor/download");
     } finally {
       setLoading(false);
     }
@@ -78,7 +95,7 @@ export default function B00KMakrBuy({
               href={inquire}
               className="mt-3 inline-block text-sm text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
             >
-              email the founder directly →
+              {inquire.startsWith("mailto:") ? "email the founder directly →" : "go to direct download →"}
             </a>
           )}
         </div>

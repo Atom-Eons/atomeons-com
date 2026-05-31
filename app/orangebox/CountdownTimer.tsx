@@ -99,12 +99,12 @@ export function CountdownTimer({
           When the upload lands, the clock starts.
         </p>
         <p className="mt-4 max-w-2xl text-base leading-[1.65] text-[#C8CCCE] md:text-lg">
-          ORANGEBOX, the AE Operations layer, and the Delta visual IDE
-          ship together. The first week after launch is{" "}
-          <span className="font-semibold text-[#FF7A1A]">FREE</span> —
-          full bundle, full source. After the countdown closes the
-          price is <span className="font-semibold text-[#22F0D5]">{postCountdownPrice}</span>.
-          The price may change at random after that.
+          Orangebox v1.0.0-beta is{" "}
+          <span className="font-semibold text-[#FF7A1A]">FREE</span> for
+          one week after launch. Signed installer, full product, no
+          signup. After the countdown closes the price is{" "}
+          <span className="font-semibold text-[#22F0D5]">{postCountdownPrice}</span>
+          {" "}once, forever. The price may change going forward.
         </p>
         <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7]">
           ::lock in now (free) · or wait and pay later (price moves)
@@ -158,7 +158,7 @@ export function CountdownTimer({
           FREE · countdown · live
         </span>
         <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
-          price after: $99 · may change at random
+          ends Saturday · June 6 · 4 PM EDT
         </span>
       </div>
 

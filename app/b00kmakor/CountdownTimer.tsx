@@ -145,7 +145,7 @@ export function B00KMakrCountdown() {
           FREE · countdown · live
         </span>
         <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
-          price after: your country&apos;s rate (Tier 1 anchor $99)
+          ends Saturday · June 6 · 4 PM EDT
         </span>
       </div>
 

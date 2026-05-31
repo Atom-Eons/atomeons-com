@@ -101,7 +101,8 @@ export function Footer() {
           <ul className="mt-3 space-y-2">
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">PAPERS · 12 LIVE</li>
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">ORANGEBOX · v1.0.0-beta SHIPPED</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">FREE LAUNCH WEEK · THEN $49</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">B00KMAKR · v3.2.0 SHIPPED · MAC + WIN</li>
+            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">FREE LAUNCH WEEK · ENDS JUNE 6</li>
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">BROADCAST · 8pm ET</li>
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">LICENSE · CC-BY 4.0</li>
             <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">LICENSE §4A · NO-SAAS</li>

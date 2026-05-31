@@ -76,7 +76,7 @@ const softwareJsonLd = {
     "@type": "Offer",
     price: "99",
     priceCurrency: "USD",
-    availability: "https://schema.org/PreOrder",
+    availability: "https://schema.org/InStock",
     url: "https://atomeons.com/b00kmakor",
   },
   publisher: {
