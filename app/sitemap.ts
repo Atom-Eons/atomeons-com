@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/start`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE}/orangebox`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE}/skilski`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE}/b00kmakor`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE}/b00kmakor`, lastModified: now, changeFrequency: "daily", priority: 0.94 },
     { url: `${BASE}/press`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     { url: `${BASE}/account`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/founders-view`, lastModified: now, changeFrequency: "daily", priority: 0.9 },

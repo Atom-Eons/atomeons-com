@@ -87,8 +87,15 @@ export const PRODUCTS: Product[] = [
     notes:
       "Launch pricing 2026-05-30. Free for the first week regardless of country (countdown). After countdown the resolver yields: GB $99 (Tier 1 default) · US $9.90 (USA Advantage Clause) · CN $99 (Strategic Tier Lift · WB Tier 2 → Tier 1) · IN $9.90 (Tier 3 default) · SO $1.98 (Tier 4 default). Public messaging: price may change at random.",
   },
-  // Future products go below this line. Examples to come:
-  //   { id: "b00kmakor", name: "B00KMakor", baseUsdCents: ..., ... },
+  {
+    id: "b00kmakor",
+    name: "B00KMAKR",
+    baseUsdCents: 9900, // $99 Tier 1 anchor — matches operator directive 2026-05-30
+    minimumChargeCents: STRIPE_USD_MIN_CENTS,
+    notes:
+      "Launch pricing 2026-05-30. v3.2.0 shipped dual-platform (Mac + Windows). $99 Tier 1 anchor flows through the same dynamic pricing doctrines as ORANGEBOX: GB $99 (Tier 1 default) · US $9.90 (USA Advantage Clause) · CN $99 (Strategic Tier Lift) · IN $9.90 (Tier 3 default) · SO $1.98 (Tier 4 default). 142 feature surfaces · book-red Mac manual · blue Windows manual · 4 install paths on Windows · §4A no-saas covenant binds it forever.",
+  },
+  // Future products go below this line:
   //   { id: "video-shop", name: "Video Shop", baseUsdCents: ..., ... },
 ];
 

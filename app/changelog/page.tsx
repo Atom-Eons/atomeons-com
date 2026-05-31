@@ -63,6 +63,23 @@ const LOG: Entry[] = [
   // Newest first.
   {
     date: "2026-05-30",
+    tag: "b00kmakr-v3-2-0-launch",
+    kind: "product",
+    title:
+      "B00KMAKR v3.2.0 shipped — Mac + Windows · FREE launch week · dynamic-world-pricing applied",
+    surfaces: [
+      "app/b00kmakor/page.tsx (FULL REBUILD · ~600 lines · shipped-product page replacing coming-soon)",
+      "app/b00kmakor/CountdownTimer.tsx (NEW · free-week countdown · 3-phase · env-driven)",
+      "app/b00kmakor/B00KMakrBuy.tsx (NEW · checkout button · handles free / paid / inquire states)",
+      "app/api/checkout/b00kmakor/route.ts (NEW · 3-phase routing · pre-launch / free-week / paid · dynamic price via resolvePrice + Vercel IP)",
+      "lib/pricing/products.ts (+B00KMAKR entry · $99 anchor · same doctrines as ORANGEBOX)",
+      "app/sitemap.ts (priority 0.7 → 0.94 · changeFrequency weekly → daily)",
+    ],
+    body:
+      "Operator directives 2026-05-30: 'we are going live on bookmaker at $99 dynamically priced. we are going live on a windows and a mac version' + 'free for one week only'. v3.2.0 ships with 142 feature surfaces across two builds (Mac + Windows · same cockpit, same brain router, same craft). Artifacts: B00KMAKR-Mac-v3.2.0-FINAL.zip (2.10 MB, SHA 27c11258…), B00KMAKR-Windows-v3.2.0-FINAL.zip (1.04 MB, SHA 8f6d1ced…), B00KMAKR-Manual.pdf (book-red Mac · 1.28 MB · SHA 3240c4c2…), B00KMAKR-Windows-Manual.pdf (blue · 816 KB · SHA d80eb124…). All four SHA-256 receipts published verbatim on the product page. Windows path documents 4 installs (universal HTML / OPEN-ME.bat smart launcher / INSTALL.ps1 PowerShell installer with -BundleNode -GenerateIcon / Tauri .msi + NSIS .exe native). Mac path documents 3 (universal HTML / OPEN-ME-MAC.command / Tauri .dmg). Both manuals carry the Apple/Microsoft-grade polish: fleuron ornaments, leader-dotted TOC, drop caps, pullquote rules, Inter footer + Cormorant heads, dark sepia back cover with manifesto quote, embedded fonts. Page structure walks-em-in-slow then technical: hero with free-week countdown + dynamic PriceTag → plain-English intro → Mac/Windows side-by-side table → 4 Windows paths → 3 Mac paths → 142-feature callout → PDF manual cards (book-red + blue) → SHA-256 receipt table → For Bob / For Mom / For the writers ethos block → stays-true vs intentionally-volatile pricing rails → final CTA. /api/checkout/b00kmakor mirrors ORANGEBOX v63's 3-phase pattern but pulls dynamic price from lib/pricing/resolve (USA Advantage Clause $9.90, Strategic Tier Lift for China $99, Tier 2/3/4 defaults). Free-week env var: NEXT_PUBLIC_B00KMAKOR_FREE_WEEK_ENDS_AT. Paid-enable env: STRIPE_B00KMAKOR_ENABLED. Same grandfather-for-life clause as ORANGEBOX. Page registers B00KMAKR SoftwareApplication + BreadcrumbList JSON-LD for citation + crawler indexing. License: §4A no-saas · once · forever · 30-day Material Failure Guarantee.",
+  },
+  {
+    date: "2026-05-30",
     tag: "dwp-doctrine-refactor",
     kind: "research",
     title:
