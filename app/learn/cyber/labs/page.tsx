@@ -130,9 +130,6 @@ export default function CyberLabsPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::free practice labs · 10 platforms · all legal · all real
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             Where to hack{" "}
             <span className="text-[#22F0D5]">legally and for free.</span>
@@ -158,7 +155,7 @@ export default function CyberLabsPage() {
       <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20 space-y-5">
           {PLATFORMS.map((p) => (
-            <article key={p.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: "4px solid #22F0D5" }}>
+            <article key={p.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
               <div className="flex flex-wrap items-baseline justify-between gap-3">
                 <h2 className="text-2xl font-semibold tracking-tight text-[#F2F4F5] md:text-3xl">{p.order}. {p.name}</h2>
                 <a href={p.url} target="_blank" rel="noopener" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] hover:text-white">
@@ -176,16 +173,12 @@ export default function CyberLabsPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::18-month order of operations
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             If you start tonight, here&apos;s the sequence.
           </h2>
           <div className="mt-8 space-y-4">
             {ORDER.map((o, i) => (
               <div key={i} className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">::{o.when}</p>
                 <p className="mt-2 text-base leading-[1.7] text-[#C8CCCE]">{o.do}</p>
               </div>
             ))}

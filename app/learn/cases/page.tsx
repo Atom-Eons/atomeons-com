@@ -288,7 +288,6 @@ export default function CasesPage() {
               key={c.slug}
               id={c.slug}
               className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10 scroll-mt-20"
-              style={{ borderLeft: `4px solid ${c.accent}` }}
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: c.accent }}>
                 ::case

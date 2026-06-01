@@ -135,7 +135,6 @@ export default function MistakesPage() {
                     <article
                       key={m.n}
                       className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7"
-                      style={{ borderLeft: `4px solid ${meta.color}` }}
                     >
                       <div className="flex items-baseline gap-4">
                         <span

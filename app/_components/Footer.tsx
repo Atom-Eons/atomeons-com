@@ -1,145 +1,110 @@
 import Link from "next/link";
 import { AtomMark } from "./AtomMark";
 
+/**
+ * Footer — premium-restraint rebuild · 2026-06-01 (wf_79e1e01d-513).
+ *
+ * What the prior footer was doing wrong (per the audit):
+ *  - 6 columns, 35+ links — fire-hose, not navigation
+ *  - Dual accents (cyan + orange) competing in the same surface
+ *  - Animated pulse dot on "start here" — launch-week microsite tell
+ *  - "Lab Status" column reading like a wartime sitrep with v6 badge
+ *  - Mono caps with extreme tracking on every column header
+ *  - Æ-prefix on Research column — advertises specialness
+ *  - Surfaces routes Header explicitly hid (/where-am-i, /tools, /vs, etc.)
+ *
+ * This rebuild:
+ *  - 4 columns mirroring Header dropdowns 1:1
+ *  - One accent (cyan), hover-only
+ *  - Humanist sans column headers, sentence-case
+ *  - All micro-meta (legal links) collapsed into bottom bar
+ *  - Zero badges, zero pulses, zero status sitrep
+ */
+
 export function Footer() {
   return (
-    <footer className="relative z-10 mt-20 border-t border-[#1A2225] bg-black">
-      <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-12 md:grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr]">
+    <footer className="relative z-10 mt-24 border-t border-[#1A2225] bg-black">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-16 md:grid-cols-[2fr_1fr_1fr_1fr]">
+        {/* Brand */}
         <div>
-          <div className="flex items-center gap-3">
-            <AtomMark size={32} speed={999} />
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-                Software · Books · Apps · LLMs
-              </p>
-              <p className="text-sm font-semibold tracking-tight text-[#F2F4F5]">
-                AtomEons
-              </p>
-            </div>
-          </div>
-          <p className="mt-4 max-w-sm text-xs text-[#9BA5A7]">
-            One operator. One cockpit. Ships when it&apos;s ready, not when
-            the calendar says so.
+          <Link href="/" className="inline-flex items-center gap-3" aria-label="AtomEons">
+            <AtomMark size={28} speed={999} />
+            <span className="text-[15px] font-semibold tracking-tight text-[#F2F4F5]">
+              AtomEons
+            </span>
+          </Link>
+          <p className="mt-5 max-w-sm text-sm leading-[1.65] text-[#9BA5A7]">
+            Independent AI research. Software, books, apps, lessons.
+            One operator. Marco Island, FL.
           </p>
-          <div className="mt-5">
-            <Link
-              href="/start"
-              className="inline-flex items-center gap-1.5 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
-            >
-              <span className="size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
-              start here · 11 min
-            </Link>
-          </div>
         </div>
 
+        {/* Learn — mirrors Header dropdown */}
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-            Learn
-          </p>
-          <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li><Link href="/learn" className="hover:text-[#22F0D5]">/learn · 27-lesson curriculum</Link></li>
-            <li><Link href="/learn/where-am-i" className="hover:text-[#22F0D5]">Where am I? · 2-min level diagnostic</Link></li>
-            <li><Link href="/tools" className="hover:text-[#22F0D5]">Tools · what do you need to do right now?</Link></li>
-            <li><Link href="/vs" className="hover:text-[#22F0D5]">Comparisons · honest AI head-to-heads</Link></li>
-            <li><Link href="/prompt-kit" className="hover:text-[#22F0D5]">Prompt Kit · 27 copy-paste prompts</Link></li>
-            <li><Link href="/glossary" className="hover:text-[#22F0D5]">Glossary · every AI word in plain English</Link></li>
-            <li><Link href="/start" className="hover:text-[#22F0D5]">/start · 11-min novice on-ramp</Link></li>
-            <li><Link href="/ai" className="hover:text-[#22F0D5]">AI Guide · the 44M reference</Link></li>
-            <li><Link href="/faq" className="hover:text-[#22F0D5]">FAQ · AI 101 + product</Link></li>
-            <li><Link href="/search" className="hover:text-[#22F0D5]">Lab directory · /search</Link></li>
+          <h2 className="text-[12px] font-medium text-[#9BA5A7]">Learn</h2>
+          <ul className="mt-4 space-y-2.5 text-[14px] text-[#E7EBED]">
+            <li><Link href="/learn" className="transition-colors hover:text-[#22F0D5]">The curriculum</Link></li>
+            <li><Link href="/learn/playbooks" className="transition-colors hover:text-[#22F0D5]">Playbooks by job</Link></li>
+            <li><Link href="/learn/synthesis" className="transition-colors hover:text-[#22F0D5]">Synthesis</Link></li>
+            <li><Link href="/learn/deep" className="transition-colors hover:text-[#22F0D5]">Deep · doctorate track</Link></li>
+            <li><Link href="/learn/cyber" className="transition-colors hover:text-[#22F0D5]">Cyber · ethical hacking</Link></li>
+            <li><Link href="/start" className="transition-colors hover:text-[#22F0D5]">Start · 11-min intro</Link></li>
           </ul>
         </div>
 
+        {/* Products — mirrors Header dropdown */}
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-            Æ Research
-          </p>
-          <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li><Link href="/research/about" className="hover:text-[#22F0D5]">About the lab</Link></li>
-            <li><Link href="/research/papers" className="hover:text-[#22F0D5]">Research Papers · 12</Link></li>
-            <li><Link href="/research/lessons-from-sci-fi" className="hover:text-[#22F0D5]">Lessons From Sci-Fi</Link></li>
-            <li><Link href="/intel/x-algorithm" className="hover:text-[#22F0D5]">X Algorithm Alpha</Link></li>
-            <li><Link href="/founders-view" className="hover:text-[#22F0D5]">Founder&apos;s View · 8pm ET</Link></li>
+          <h2 className="text-[12px] font-medium text-[#9BA5A7]">Products</h2>
+          <ul className="mt-4 space-y-2.5 text-[14px] text-[#E7EBED]">
+            <li><Link href="/orangebox" className="transition-colors hover:text-[#22F0D5]">Orangebox</Link></li>
+            <li><Link href="/b00kmakor" className="transition-colors hover:text-[#22F0D5]">B00KMAKR</Link></li>
+            <li><Link href="/skilski" className="transition-colors hover:text-[#22F0D5]">skil.ski</Link></li>
+            <li><Link href="/pricing" className="transition-colors hover:text-[#22F0D5]">Pricing</Link></li>
+            <li><Link href="/account" className="transition-colors hover:text-[#22F0D5]">Account</Link></li>
+            <li><Link href="/support" className="transition-colors hover:text-[#22F0D5]">Support</Link></li>
           </ul>
         </div>
 
+        {/* Lab — research + about + status folded */}
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
-            Products + Buy
-          </p>
-          <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li><Link href="/orangebox" className="hover:text-[#FF7A1A]">ORANGEBOX · turbo-optimize Claude · FREE launch week</Link></li>
-            <li><Link href="/pricing" className="hover:text-[#FF7A1A]">Pricing</Link></li>
-            <li><Link href="/orangebox/legacy" className="hover:text-[#FF7A1A]">v6.1.0 legacy archive</Link></li>
-            <li><Link href="/skilski" className="hover:text-[#FF7A1A]">skil.ski</Link></li>
-            <li><Link href="/b00kmakor" className="hover:text-[#FF7A1A]">B00KMakor</Link></li>
-            <li><Link href="/account" className="hover:text-[#FF7A1A]">Your account</Link></li>
-            <li><Link href="/support" className="hover:text-[#FF7A1A]">Support</Link></li>
-            <li><Link href="/press" className="hover:text-[#FF7A1A]">Press kit</Link></li>
+          <h2 className="text-[12px] font-medium text-[#9BA5A7]">Lab</h2>
+          <ul className="mt-4 space-y-2.5 text-[14px] text-[#E7EBED]">
+            <li><Link href="/research/papers" className="transition-colors hover:text-[#22F0D5]">Papers</Link></li>
+            <li><Link href="/research/lessons-from-sci-fi" className="transition-colors hover:text-[#22F0D5]">Lessons from sci-fi</Link></li>
+            <li><Link href="/founders-view" className="transition-colors hover:text-[#22F0D5]">Founder&apos;s View</Link></li>
+            <li><Link href="/press" className="transition-colors hover:text-[#22F0D5]">Press</Link></li>
+            <li><Link href="/about" className="transition-colors hover:text-[#22F0D5]">About</Link></li>
+            <li><Link href="/now" className="transition-colors hover:text-[#22F0D5]">/now · this week</Link></li>
           </ul>
-        </div>
-
-        <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-            About + Legal
-          </p>
-          <ul className="mt-3 space-y-2 text-sm text-[#F2F4F5]">
-            <li><Link href="/about" className="hover:text-[#22F0D5]">About Atom</Link></li>
-            <li><Link href="/manifesto" className="hover:text-[#22F0D5]">Manifesto · 14 clauses</Link></li>
-            <li><Link href="/now" className="hover:text-[#22F0D5]">/now · this week</Link></li>
-            <li><Link href="/changelog" className="hover:text-[#22F0D5]">Changelog</Link></li>
-            <li><Link href="/legal/terms" className="hover:text-[#22F0D5]">Terms</Link></li>
-            <li><Link href="/legal/privacy" className="hover:text-[#22F0D5]">Privacy</Link></li>
-            <li><Link href="/legal/refund" className="hover:text-[#22F0D5]">Refunds</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-            Lab Status
-          </p>
-          <ul className="mt-3 space-y-2">
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">PAPERS · 12 LIVE</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">ORANGEBOX · v1.0.0-beta SHIPPED</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">B00KMAKR · v3.2.0 SHIPPED · MAC + WIN</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">FREE LAUNCH WEEK · ENDS JUNE 6</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">BROADCAST · 8pm ET</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">LICENSE · CC-BY 4.0</li>
-            <li className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">LICENSE §4A · NO-SAAS</li>
-          </ul>
-          <a
-            href="https://x.com/AtomMccree"
-            target="_blank"
-            rel="noopener"
-            className="mt-4 block text-sm text-[#F2F4F5] hover:text-[#22F0D5]"
-          >
-            @AtomMccree
-          </a>
         </div>
       </div>
 
+      {/* Bottom bar — copyright + legal microlinks + verify */}
       <div className="border-t border-[#1A2225]">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-start gap-2 px-6 py-5 text-xs text-[#6B7779] md:flex-row md:items-center md:justify-between">
-          <div className="space-y-1">
-            <p>© 2026 AtomEons Systems Laboratory · Atom McCree · Marco Island, FL</p>
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              independent AI research · one operator · LAB ONLINE
-            </p>
-          </div>
-          <p className="flex items-center gap-3">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-start gap-3 px-6 py-6 text-[12px] text-[#6B7779] md:flex-row md:items-center md:justify-between">
+          <p>© 2026 AtomEons Systems Laboratory · Atom McCree · Marco Island, FL</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+            <Link href="/legal/terms" className="transition-colors hover:text-[#E7EBED]">Terms</Link>
+            <Link href="/legal/privacy" className="transition-colors hover:text-[#E7EBED]">Privacy</Link>
+            <Link href="/legal/refund" className="transition-colors hover:text-[#E7EBED]">Refunds</Link>
+            <a
+              href="https://x.com/AtomMccree"
+              target="_blank"
+              rel="noopener"
+              className="transition-colors hover:text-[#E7EBED]"
+            >
+              @AtomMccree
+            </a>
             <a
               href="https://www.linkedin.com/developers/apps/verification/91a1ed08-379d-44d7-b347-b0b9977ca824"
               rel="me noopener"
               target="_blank"
-              className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779] transition-colors hover:text-[#22F0D5]"
+              className="transition-colors hover:text-[#E7EBED]"
               aria-label="LinkedIn developer app verification"
             >
-              linkedin dev verify
+              LinkedIn verify
             </a>
-            <span className="rounded-md border border-[#22F0D5]/40 bg-black px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-[#22F0D5]">
-              v6
-            </span>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

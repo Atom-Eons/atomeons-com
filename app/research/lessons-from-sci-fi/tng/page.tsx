@@ -174,7 +174,7 @@ export default function TNGPage() {
       <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20 space-y-5">
           {EPISODES.map((e, i) => (
-            <article key={i} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: "4px solid #FFB87A" }}>
+            <article key={i} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">::{e.season_episode}</p>
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7]">{e.ai_concept}</p>

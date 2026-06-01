@@ -32,7 +32,6 @@ export default function CareerIndex() {
       </div>
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-5xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">::AI careers · 8 honest guides</p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             Working in AI, <span className="text-[#22F0D5]">no theater.</span>
           </h1>
@@ -45,8 +44,7 @@ export default function CareerIndex() {
         <div className="mx-auto w-full max-w-5xl px-6 py-12 md:py-16">
           <div className="grid gap-4 md:grid-cols-2">
             {CAREER.map((c) => (
-              <Link key={c.slug} href={`/learn/career/${c.slug}`} className="group block rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40" style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}>
-                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">::{c.slug}</p>
+              <Link key={c.slug} href={`/learn/career/${c.slug}`} className="group block rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40">
                 <h2 className="mt-3 text-xl font-semibold tracking-tight text-[#F2F4F5] group-hover:text-[#22F0D5]">{c.title}</h2>
                 <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7]">{c.body}</p>
               </Link>

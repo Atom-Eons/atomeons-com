@@ -103,9 +103,6 @@ export default function CyberLLMWarfarePage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::how LLMs actually fight · production deployments · mid-2026
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             How AI{" "}
             <span style={{ color: ACCENT }}>is actually fighting</span>{" "}
@@ -131,15 +128,12 @@ export default function CyberLLMWarfarePage() {
 
       <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: WARN }}>
-            ::offensive + intelligence side · 4 publicly-disclosed patterns
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             What attackers and intelligence services use LLMs for.
           </h2>
           <div className="mt-8 space-y-5">
             {OFFENSIVE_USE.map((o) => (
-              <article key={o.title} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: `4px solid ${WARN}` }}>
+              <article key={o.title} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
                 <h3 className="text-xl font-semibold tracking-tight text-[#F2F4F5]">{o.title}</h3>
                 <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE]">{o.body}</p>
               </article>
@@ -150,15 +144,12 @@ export default function CyberLLMWarfarePage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::defensive side · 5 production-grade categories
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             What defenders use LLMs for.
           </h2>
           <div className="mt-8 space-y-5">
             {DEFENSIVE_USE.map((d) => (
-              <article key={d.title} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: `4px solid ${ACCENT}` }}>
+              <article key={d.title} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
                 <h3 className="text-xl font-semibold tracking-tight text-[#F2F4F5]">{d.title}</h3>
                 <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE]">{d.body}</p>
               </article>

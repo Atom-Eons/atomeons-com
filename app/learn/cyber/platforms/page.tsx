@@ -162,9 +162,6 @@ export default function CyberPlatformsPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::the platforms actually running modern defense · mid-2026
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             Palantir.{" "}
             <span style={{ color: ACCENT }}>Anduril.</span>{" "}
@@ -188,15 +185,12 @@ export default function CyberPlatformsPage() {
 
       <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::ten platforms · in alphabetical order after the first three
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             The platforms.
           </h2>
           <div className="mt-8 space-y-6">
             {PLATFORMS.map((p) => (
-              <article key={p.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-8" style={{ borderLeft: `4px solid ${ACCENT}` }}>
+              <article key={p.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-8">
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <h3 className="text-3xl font-semibold tracking-tight text-[#F2F4F5]">{p.name}</h3>
                   <a href={p.url} target="_blank" rel="noopener" className="font-mono text-[11px] uppercase tracking-[0.22em]" style={{ color: ACCENT }}>
@@ -207,7 +201,6 @@ export default function CyberPlatformsPage() {
                 <p className="mt-5 text-[15px] leading-[1.7] text-[#C8CCCE]">{p.body}</p>
 
                 <div className="mt-5">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: ACCENT }}>::product lines</p>
                   <ul className="mt-2 space-y-1 text-[14px] leading-[1.6] text-[#C8CCCE]">
                     {p.products.map((prod, i) => (
                       <li key={i}>· {prod}</li>
@@ -227,9 +220,6 @@ export default function CyberPlatformsPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::worth knowing · 8 runners-up
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             The next layer down.
           </h2>

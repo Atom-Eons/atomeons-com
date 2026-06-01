@@ -409,10 +409,10 @@ export function AuroraHero() {
             AI is changing your life
           </span>
           <span
-            className={`mt-1 block bg-gradient-to-r from-[#22F0D5] via-[#7DDBC8] to-[#FFB87A] bg-clip-text text-transparent transition-all duration-700 hero-pulse-weight ${
+            className={`mt-1 block bg-gradient-to-r from-[#22F0D5] via-[#7DDBC8] to-[#FFB87A] bg-clip-text text-transparent transition-all duration-700 ${
               bootDone ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
             }`}
-            style={{ transitionDelay: "440ms" }}
+            style={{ transitionDelay: "440ms", fontVariationSettings: '"wght" 720' }}
           >
             right now.
           </span>

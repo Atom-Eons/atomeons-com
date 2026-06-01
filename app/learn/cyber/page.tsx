@@ -181,55 +181,37 @@ export default function CyberIndex() {
         </p>
       </div>
 
-      {/* HERO */}
+      {/* HERO — 1 eyebrow + 1 H1 + 1 lede + 1 CTA */}
       <section className="border-b border-[#1A2225]">
-        <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::ethical hacking · masters-grade · public info only · CC-BY 4.0
+        <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
+          <p className="text-[12px] font-medium tracking-tight" style={{ color: ACCENT }}>
+            Ethical hacking · masters-grade · public-info only
           </p>
-          <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
-            For the gamers who are{" "}
-            <span style={{ color: ACCENT }}>ready to fight cyber war ethically.</span>
+          <h1 className="mt-6 text-balance text-4xl font-medium leading-[1.05] tracking-tight sm:leading-[1.02] md:text-6xl md:leading-[1]">
+            For the gamers ready to fight cyber war{" "}
+            <span style={{ color: ACCENT }}>ethically.</span>
           </h1>
-          <p className="mt-8 max-w-3xl text-base leading-[1.75] text-[#C8CCCE] md:text-[17px]">
-            You&apos;ve been playing for years. You have fast hands, fast pattern recognition,
-            unreasonable patience for systems that punish you for not paying attention. That
-            instinct that made you good at competitive games is the same instinct that lets a
-            penetration tester find the one flaw in ten thousand lines of code.
+          <p className="mt-8 max-w-[58ch] text-[17px] leading-[1.6] text-[#C8CCCE]">
+            Free labs, bug bounty, federal cyber, AI security — every legitimate on-ramp.{" "}
+            <strong className="text-[#F2F4F5]">The line between ethical hacking and federal prison is authorization.</strong>{" "}
+            This track teaches both.
           </p>
-          <p className="mt-5 max-w-3xl text-base leading-[1.75] text-[#C8CCCE] md:text-[17px]">
-            There is a real career on the other side of that instinct. Free practice labs that
-            train you on real targets you&apos;re legally allowed to break. Bug bounty platforms
-            that pay six figures to people who never finished college. Military and federal
-            paths that need cyber operators more than any other specialty in 2026. Private-sector
-            roles that pay senior software-engineer money for a different and rarer skill.
-          </p>
-          <p className="mt-5 max-w-3xl text-base leading-[1.75] text-[#C8CCCE] md:text-[17px]">
-            This track names every legitimate on-ramp. It also tells you the one thing the
-            recruiting videos don&apos;t: <strong className="text-[#F2F4F5]">the line between
-            ethical hacking and federal prison is authorization</strong>. You will learn what
-            counts as authorization, what doesn&apos;t, what to do when you find a vulnerability
-            you weren&apos;t supposed to find, and how to never end up in a courtroom defending
-            your curiosity.
-          </p>
-          <p className="mt-5 max-w-3xl text-base leading-[1.75] text-[#C8CCCE] md:text-[17px]">
-            <strong className="text-[#F2F4F5]">Everything below is public information.</strong>{" "}
-            No operational tradecraft. No classified material. No advice that helps anyone do
-            anything illegal. The point is the legal career path · not the shortcut.
-          </p>
+          <Link
+            href="/learn/cyber/path"
+            className="mt-10 inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 px-5 py-2.5 text-sm font-medium text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10"
+          >
+            Start with the path <span aria-hidden>→</span>
+          </Link>
         </div>
       </section>
 
       {/* 11 TRACKS */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
-        <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::eleven tracks · open any
-          </p>
-          <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
+      <section className="border-b border-[#1A2225]">
+        <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-24">
+          <h2 className="text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             The full education map.
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-[1.65] text-[#C8CCCE]">
+          <p className="mt-5 max-w-[62ch] text-base leading-[1.7] text-[#C8CCCE]">
             Read them in any order. The career path overview gives you the macro. The labs page
             is the most actionable starting point. The legal page is the one you read first if
             you are under 25 and you have ever &ldquo;just been curious&rdquo; about something
@@ -242,7 +224,6 @@ export default function CyberIndex() {
                 key={t.slug}
                 href={`/learn/cyber/${t.slug}`}
                 className="group block rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40"
-                style={{ borderLeftWidth: "4px", borderLeftColor: ACCENT }}
               >
                 <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: ACCENT }}>
                   ::{t.slug}
@@ -260,13 +241,13 @@ export default function CyberIndex() {
 
       {/* THE PROMISE OF THE TRACK */}
       <section className="border-b border-[#1A2225]">
-        <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::what you'll be able to do after this track
-          </p>
-          <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
+        <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
+          <h2 className="text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             Real, observable outcomes.
           </h2>
+          <p className="mt-4 max-w-[62ch] text-base leading-[1.7] text-[#9BA5A7]">
+            What you&apos;ll be able to do after this track.
+          </p>
           <ul className="mt-8 space-y-4 text-base leading-[1.7] text-[#C8CCCE]">
             <li className="flex gap-3">
               <span style={{ color: ACCENT }}>▲</span>
@@ -322,14 +303,14 @@ export default function CyberIndex() {
       </section>
 
       {/* THE HONEST FRAMING */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
-        <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
-            ::what this track is NOT
-          </p>
-          <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
+      <section className="border-b border-[#1A2225]">
+        <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
+          <h2 className="text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             We do not teach you to break into things you don&apos;t own.
           </h2>
+          <p className="mt-4 max-w-[62ch] text-base leading-[1.7] text-[#FFB87A]">
+            What this track is NOT.
+          </p>
           <ul className="mt-8 space-y-4 text-base leading-[1.7] text-[#C8CCCE]">
             <li className="flex gap-3">
               <span className="text-[#FFB87A]">○</span>
@@ -373,16 +354,16 @@ export default function CyberIndex() {
       </section>
 
       <section className="bg-black">
-        <div className="mx-auto w-full max-w-4xl px-6 py-12 text-center">
+        <div className="mx-auto w-full max-w-4xl px-6 py-16 text-center">
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <Link href="/learn/cyber/path" className="rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5] hover:bg-[#22F0D5]/20">
-              start with the path →
+            <Link href="/learn/cyber/path" className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 px-5 py-2.5 text-sm font-medium text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10">
+              Start with the path <span aria-hidden>→</span>
             </Link>
-            <Link href="/learn/cyber/legal" className="rounded-full border border-[#FFB87A]/40 bg-[#FFB87A]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#FFB87A] hover:bg-[#FFB87A]/20">
-              read the legal page first →
+            <Link href="/learn/cyber/legal" className="inline-flex items-center gap-2 rounded-full border border-[#1A2225] bg-[#0A0F11] px-5 py-2.5 text-sm text-[#C8CCCE] transition-colors hover:border-[#FFB87A]/40 hover:text-[#FFB87A]">
+              Read the legal page first <span aria-hidden>→</span>
             </Link>
-            <Link href="/learn" className="rounded-full border border-[#1A2225] bg-[#0A0F11] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.28em] text-[#C8CCCE] hover:border-[#22F0D5]/40 hover:text-[#22F0D5]">
-              ← back to /learn
+            <Link href="/learn" className="inline-flex items-center gap-2 rounded-full border border-[#1A2225] bg-[#0A0F11] px-5 py-2.5 text-sm text-[#9BA5A7] transition-colors hover:text-[#E7EBED]">
+              <span aria-hidden>←</span> Back to learn
             </Link>
           </div>
         </div>

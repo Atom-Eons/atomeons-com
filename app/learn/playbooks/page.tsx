@@ -1324,7 +1324,6 @@ export default function PlaybooksPage() {
               key={p.slug}
               id={p.slug}
               className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10 scroll-mt-20"
-              style={{ borderLeft: `4px solid ${p.accent}` }}
             >
               <div className="flex flex-wrap items-baseline justify-between gap-3">
                 <h2

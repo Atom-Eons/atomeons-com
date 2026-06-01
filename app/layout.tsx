@@ -189,7 +189,7 @@ export default function RootLayout({
         <MadeWithOrangebox />
         <LaunchBanner />
         <Header />
-        <div className="screen-flicker flex-1">{children}</div>
+        <div className="flex-1">{children}</div>
         <Footer />
         <StickyBuyBar />
         <LabTicker />

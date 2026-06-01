@@ -352,7 +352,6 @@ export default function TrackPage() {
               <article
                 key={i}
                 className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7"
-                style={{ borderLeft: `4px solid ${t.accent}` }}
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: t.accent }}>

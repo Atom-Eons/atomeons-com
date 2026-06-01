@@ -111,7 +111,7 @@ export default function SynthesisIndex() {
       <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 space-y-3">
           {SYNTHESES.map((s, i) => (
-            <Link key={s.slug} href={`/learn/synthesis/${s.slug}`} className="group block rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40" style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}>
+            <Link key={s.slug} href={`/learn/synthesis/${s.slug}`} className="group block rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40">
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">::{String(i + 1).padStart(2, "0")}</p>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-3xl">{s.topic}</h2>
               <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7]">{s.minimumEffectiveDose}…</p>

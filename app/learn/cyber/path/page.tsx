@@ -127,9 +127,6 @@ export default function CyberPathPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::ethical hacking career path · 6 stages · 0 → 10+ years
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             From curious gamer to{" "}
             <span className="text-[#22F0D5]">senior cyber operator.</span>
@@ -149,7 +146,6 @@ export default function CyberPathPage() {
             <article
               key={s.n}
               className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10"
-              style={{ borderLeft: `4px solid ${s.color}` }}
             >
               <div className="flex flex-wrap items-baseline justify-between gap-4">
                 <p className="font-mono text-3xl font-bold tabular-nums" style={{ color: s.color }}>
@@ -200,9 +196,6 @@ export default function CyberPathPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20 space-y-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
-            ::the most-common path failures
-          </p>
           <h2 className="text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             Where people quit (and how to not).
           </h2>

@@ -50,9 +50,6 @@ export default function CyberAISecurityPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::AI security · OWASP LLM Top 10 · MITRE ATLAS · the new attack surface
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             The new attack surface{" "}
             <span className="text-[#22F0D5]">cyber teams are missing.</span>
@@ -75,9 +72,6 @@ export default function CyberAISecurityPage() {
 
       <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::OWASP LLM Top 10 · the canonical vuln catalog
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             What can go wrong in an LLM application.
           </h2>
@@ -90,7 +84,7 @@ export default function CyberAISecurityPage() {
           </p>
           <div className="mt-8 space-y-3">
             {OWASP_LLM.map((o) => (
-              <div key={o.id} className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5" style={{ borderLeft: "4px solid #22F0D5" }}>
+              <div key={o.id} className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <h3 className="text-lg font-semibold text-[#F2F4F5]"><span className="font-mono text-[#22F0D5]">{o.id}</span> · {o.name}</h3>
                 </div>
@@ -103,9 +97,6 @@ export default function CyberAISecurityPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::MITRE ATLAS · adversarial ML kill chain
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             The attack lifecycle, mapped.
           </h2>
@@ -122,7 +113,6 @@ export default function CyberAISecurityPage() {
           <div className="mt-8 grid gap-3 md:grid-cols-2">
             {MITRE_ATLAS.map((a, i) => (
               <div key={i} className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">::tactic · {String(i + 1).padStart(2, "0")}</p>
                 <h3 className="mt-2 text-base font-semibold text-[#F2F4F5]">{a.tactic}</h3>
                 <p className="mt-3 text-sm leading-[1.65] text-[#C8CCCE]">{a.body}</p>
               </div>

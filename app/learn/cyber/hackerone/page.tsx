@@ -63,9 +63,6 @@ export default function CyberHackerOnePage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::bug bounty · HackerOne · Bugcrowd · Intigriti · YesWeHack · Synack
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             Your first paid{" "}
             <span className="text-[#22F0D5]">finding.</span>
@@ -91,12 +88,9 @@ export default function CyberHackerOnePage() {
 
       <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::the six platforms that matter
-          </p>
           <div className="mt-8 space-y-5">
             {PLATFORMS.map((p) => (
-              <article key={p.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: "4px solid #22F0D5" }}>
+              <article key={p.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <h2 className="text-2xl font-semibold tracking-tight text-[#F2F4F5]">{p.name}</h2>
                   <a href={p.url} target="_blank" rel="noopener" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] hover:text-white">

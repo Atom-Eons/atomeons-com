@@ -80,9 +80,6 @@ export default function CyberWarPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
-            ::cyberwar · public framework only · declassified + indicted incidents
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             What &ldquo;cyber war&rdquo;{" "}
             <span className="text-[#FFB87A]">actually means in 2026.</span>
@@ -112,15 +109,12 @@ export default function CyberWarPage() {
 
       <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
-            ::the public incident record · 9 cited cases
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             Nine incidents that defined the field.
           </h2>
           <div className="mt-8 space-y-5">
             {INCIDENTS.map((inc) => (
-              <article key={inc.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: "4px solid #FFB87A" }}>
+              <article key={inc.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <h3 className="text-2xl font-semibold tracking-tight text-[#F2F4F5]">{inc.name}</h3>
                   <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">{inc.year}</p>
@@ -134,9 +128,6 @@ export default function CyberWarPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::the US public posture
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             How America is publicly organized to defend.
           </h2>

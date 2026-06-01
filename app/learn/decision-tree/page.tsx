@@ -262,7 +262,6 @@ export default function DecisionTreePage() {
               key={l.id}
               id={l.id}
               className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-8 scroll-mt-20"
-              style={{ borderLeft: `4px solid #22F0D5` }}
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
                 ::task {String(i + 1).padStart(2, "0")} of {LEAVES.length}

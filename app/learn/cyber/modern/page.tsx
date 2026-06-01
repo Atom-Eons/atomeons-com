@@ -126,40 +126,31 @@ export default function CyberModernPage() {
       </div>
 
       <section className="border-b border-[#1A2225]">
-        <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::realtime intel · modern cyberwar · what&apos;s actually fielded · mid-2026
+        <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
+          <p className="text-[12px] font-medium tracking-tight" style={{ color: ACCENT }}>
+            Realtime intel · public-info · best-effort · mid-2026
           </p>
-          <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
+          <h1 className="mt-6 text-balance text-4xl font-medium leading-[1.05] tracking-tight sm:leading-[1.02] md:text-6xl md:leading-[1]">
             What &ldquo;cyber war&rdquo;{" "}
             <span style={{ color: ACCENT }}>looks like right now.</span>
           </h1>
-          <p className="mt-8 max-w-3xl text-base leading-[1.75] text-[#C8CCCE] md:text-[17px]">
-            Most cybersecurity coursework you&apos;ll find online was written before drones replaced
-            artillery, before Volt Typhoon was disclosed, before Palantir won the Maven Smart System
-            contract, before LLMs were doing intel triage in production. This page exists because
-            the gap between &ldquo;what the textbook says&rdquo; and &ldquo;what&apos;s actually
-            fielded&rdquo; is the largest it has ever been.
-          </p>
-          <p className="mt-5 max-w-3xl text-base leading-[1.7] text-[#C8CCCE]">
-            What follows is public-info only · cited sources at the bottom · current to mid-2026
-            best-effort. If you&apos;re going to step into this field, the floor is comprehension
-            of what&apos;s actually deployed today.
+          <p className="mt-8 max-w-[58ch] text-[17px] leading-[1.6] text-[#C8CCCE]">
+            Drones replaced artillery. Volt Typhoon pre-positioned in US infrastructure. Palantir won Maven. The textbooks are years behind the field. This is the floor.
           </p>
         </div>
       </section>
 
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
-        <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: ACCENT }}>
-            ::drone reality · 5 facts to update your mental model
-          </p>
-          <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
+      <section className="border-b border-[#1A2225]">
+        <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
+          <h2 className="text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             Drones are the air force you actually have.
           </h2>
+          <p className="mt-4 max-w-[62ch] text-base leading-[1.7] text-[#9BA5A7]">
+            Five facts to update your mental model.
+          </p>
           <div className="mt-8 space-y-5">
             {DRONE_REALITY.map((d) => (
-              <article key={d.title} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: `4px solid ${ACCENT}` }}>
+              <article key={d.title} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
                 <h3 className="text-xl font-semibold tracking-tight text-[#F2F4F5]">{d.title}</h3>
                 <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE]">{d.body}</p>
               </article>
@@ -170,15 +161,12 @@ export default function CyberModernPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: WARN }}>
-            ::cyber + kinetic convergence
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             Cyber stopped being a separate war.
           </h2>
           <div className="mt-8 space-y-5">
             {CYBER_KINETIC.map((c) => (
-              <article key={c.title} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: `4px solid ${WARN}` }}>
+              <article key={c.title} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
                 <h3 className="text-xl font-semibold tracking-tight text-[#F2F4F5]">{c.title}</h3>
                 <p className="mt-4 text-[15px] leading-[1.7] text-[#C8CCCE]">{c.body}</p>
               </article>
@@ -238,7 +226,6 @@ export default function CyberModernPage() {
             {PUBLIC_DOCTRINE.map((s) => (
               <li key={s.name} className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-4">
                 <a href={s.url} target="_blank" rel="noopener" className="block">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: ACCENT }}>::source</p>
                   <p className="mt-1 text-base text-[#F2F4F5] underline decoration-[#22F0D5]/30 underline-offset-4 hover:decoration-[#22F0D5]">{s.name}</p>
                 </a>
               </li>

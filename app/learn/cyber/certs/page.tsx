@@ -45,9 +45,6 @@ export default function CyberCertsPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::cyber certifications · which to buy · which to skip
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             Certifications worth{" "}
             <span className="text-[#22F0D5]">the money.</span>
@@ -73,7 +70,7 @@ export default function CyberCertsPage() {
           </h2>
           <div className="mt-8 space-y-5">
             {CERTS.map((c) => (
-              <article key={c.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: "4px solid #22F0D5" }}>
+              <article key={c.name} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <h3 className="text-2xl font-semibold tracking-tight text-[#F2F4F5]">{c.name}</h3>
                   <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">{c.level}</p>
@@ -101,7 +98,6 @@ export default function CyberCertsPage() {
           <div className="mt-8 space-y-3">
             {FREE_STUDY.map((s, i) => (
               <a key={i} href={s.url} target="_blank" rel="noopener" className="block rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/40">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">::{s.topic}</p>
                 <p className="mt-2 text-base text-[#F2F4F5]">{s.source}</p>
               </a>
             ))}

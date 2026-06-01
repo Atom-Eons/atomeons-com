@@ -24,9 +24,6 @@ export default function CyberLegalPage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
-            ::legal · CFAA · scope · authorization · the one page you cannot skip
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             What&apos;s legal.{" "}
             <span className="text-[#FFB87A]">What is not.</span>
@@ -302,7 +299,6 @@ export default function CyberLegalPage() {
           </div>
 
           <div className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10">
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">::summary</p>
             <p className="mt-4 text-base leading-[1.75] text-[#F2F4F5] md:text-[17px]">
               The career path is real. It is well-paid. It is increasingly important to the
               country. It is also one of the few professional fields where a single bad weekend

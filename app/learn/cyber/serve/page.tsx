@@ -120,9 +120,6 @@ export default function CyberServePage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::serving · military + federal cyber paths · public info only
-          </p>
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-6xl">
             Fight cyber war{" "}
             <span className="text-[#22F0D5]">ethically. For your country.</span>
@@ -143,15 +140,12 @@ export default function CyberServePage() {
 
       <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::military · 6 services · 5 with established cyber career fields
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             Military cyber career fields.
           </h2>
           <div className="mt-8 space-y-5">
             {MILITARY.map((m) => (
-              <article key={m.branch} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: "4px solid #22F0D5" }}>
+              <article key={m.branch} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <h3 className="text-2xl font-semibold tracking-tight text-[#F2F4F5]">{m.branch}</h3>
                   <a href={m.publicLink} target="_blank" rel="noopener" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] hover:text-white">
@@ -169,15 +163,12 @@ export default function CyberServePage() {
 
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::federal civilian · 8 agencies with public cyber hiring
-          </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             Federal civilian cyber agencies.
           </h2>
           <div className="mt-8 space-y-5">
             {FEDERAL.map((f) => (
-              <article key={f.agency} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7" style={{ borderLeft: "4px solid #22F0D5" }}>
+              <article key={f.agency} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <h3 className="text-2xl font-semibold tracking-tight text-[#F2F4F5]">{f.agency}</h3>
                   <a href={f.url} target="_blank" rel="noopener" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] hover:text-white">

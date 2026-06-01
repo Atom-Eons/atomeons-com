@@ -956,7 +956,7 @@ export default function TemplatesPage() {
       <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28 space-y-16">
           {TEMPLATES.map((t) => (
-            <article key={t.slug} id={t.slug} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10 scroll-mt-20" style={{ borderLeft: "4px solid #22F0D5" }}>
+            <article key={t.slug} id={t.slug} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10 scroll-mt-20">
               <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">::template · {t.estimatedTime}</p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">{t.title}</h2>
               <p className="mt-3 text-base text-[#9BA5A7]">For: {t.audience}</p>
