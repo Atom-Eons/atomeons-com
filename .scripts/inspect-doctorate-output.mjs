@@ -1,0 +1,13 @@
+import fs from "node:fs";
+const SRC = "C:/Users/a/AppData/Local/Temp/claude/C--AtomEons--claude-worktrees-bold-leakey-4470e8/36c5895e-6dd9-41db-9f77-29d3975f016f/tasks/wn2rccbpi.output";
+const data = JSON.parse(fs.readFileSync(SRC, "utf8")).result;
+console.log("strategy keys:", Object.keys(data.strategy));
+console.log("content keys:", Object.keys(data.content));
+console.log("scifi chapters:", data.content.scifiChapters.chapters.length);
+const realIds = data.content.videos.videos.filter((v) => v.youtube_id && v.youtube_id.length === 11);
+console.log(`videos: ${data.content.videos.videos.length} total · ${realIds.length} with real IDs`);
+console.log("ferriss syntheses:", data.content.ferrissSyntheses.syntheses.length);
+console.log("doctorate pages:", data.content.doctoratePages.pages.length);
+console.log("TNG episodes:", data.strategy.tngCrosswalk.episodes.length);
+console.log("nav primary items:", data.strategy.nav.recommendation.primaryItems);
+console.log("monograph plan · new chapter topics:", data.strategy.monographPlan.newChapterTopics.length);

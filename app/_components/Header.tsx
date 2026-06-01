@@ -1,158 +1,166 @@
 import Link from "next/link";
 import { AtomMark } from "./AtomMark";
-import { AeMark } from "./AeMark";
-import { NavLink } from "./NavLink";
 import { NavDropdown } from "./NavDropdown";
 import { MobileNav } from "./MobileNav";
 
 /**
- * Header — lab-grade nav, 2026-05-23 rebuild.
+ * Header — premium-restraint rebuild · 2026-05-31.
  *
- * Restructured information architecture:
- *  - Brand wordmark left (orbital AtomMark + Æ glyph + AtomEons +
- *    Systems Laboratory subtitle).
- *  - ONE pulse chip: /start (novice entry). The previous duplicate
- *    /ai pulse chip was collapsed into the new Learn dropdown so the
- *    two bright surfaces stop competing.
- *  - Learn ▾ (NEW) — /ai (the comprehensive gateway) + /faq (every
- *    question, FAQPage schema). The two "anyone-can-learn" surfaces.
- *  - Products ▾ — /orangebox (now v6.3 inquire-to-ship · $49),
- *    /skilski, /b00kmakor. Hints updated to match the v6.3 live page.
- *  - Æ Research ▾ — /research/about, /research/papers,
- *    /research/lessons-from-sci-fi (was missing — restored),
- *    /intel/x-algorithm.
- *  - Founder's View, Press, Account on the tail.
+ * Rebuilt from the AE3 Design workflow (wf_716a668b-ecf): cross-referenced
+ * Apple, Anthropic, OpenAI, Stripe, Linear, Vercel, NVIDIA, DeepMind,
+ * Figma, Cursor — the top-cap convergence on minimal, single-accent,
+ * humanist-sans nav with 4-6 primary items.
  *
- * Reference framing: Anthropic, OpenAI, xAI, Microsoft all carry just
- * the wordmark + minimal nav. The header reads as a peer of those
- * surfaces, not a product launch page.
+ * What the prior nav was doing wrong (per the audit):
+ *  - 8+ items in primary row · premium cap is 4-6
+ *  - Pulse chip / animated dot in marque · launch-week microsite tell
+ *  - TWO competing accents (cyan + orange) in same row
+ *  - Right-rail Æ badge duplicating the wordmark
+ *  - Uppercase + monospace + 0.22em tracking · CTF-banner aesthetic
+ *  - Æ-prefix on every product label · advertises specialness
+ *  - "Home" link redundant with wordmark
+ *
+ * What this rebuild does:
+ *  - 5 primary items: Learn · Products · Research · Founder's View · Press
+ *  - One accent (cyan) reserved for active state + 1 right-rail CTA
+ *  - Wordmark only · no right-rail mark · "Systems Laboratory" subtitle
+ *    moves to footer where micro-meta belongs
+ *  - Humanist sans · 500/600 weight · 14px · sentence-case · zero mono
+ *  - Sentence-case dropdown hints with implicit gravity
+ *  - Active state: 1px cyan underline · no background pill
+ *  - Sticky · transparent at top of page · backdrop-blur on scroll
  */
+
 export function Header() {
   return (
-    <header className="sticky top-0 z-30 border-b border-[#1A2225] bg-black/80 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-3">
-        {/* Brand wordmark */}
-        <Link href="/" className="group flex items-center gap-3">
-          <span className="glitch-hover">
-            <AtomMark size={32} speed={999} />
+    <header className="sticky top-0 z-30 border-b border-[#1A2225]/60 bg-black/85 backdrop-blur-md">
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-6 px-6">
+        {/* Brand wordmark · the only mark on the bar */}
+        <Link
+          href="/"
+          className="group flex items-center gap-2.5"
+          aria-label="AtomEons"
+        >
+          <AtomMark size={26} speed={999} />
+          <span className="text-[15px] font-semibold tracking-[-0.01em] text-[#F2F4F5]">
+            AtomEons
           </span>
-          <div className="flex flex-col leading-none">
-            <span className="flex items-baseline gap-1.5">
-              <AeMark size={20} glow />
-              <span className="text-sm font-semibold tracking-tight text-[#F2F4F5]">
-                AtomEons
-              </span>
-            </span>
-            <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              Systems Laboratory
-            </span>
-          </div>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 md:flex md:gap-2 lg:gap-3">
-          <NavLink href="/">Home</NavLink>
-
-          {/* Single pulse chip — /learn. The 12-lesson AI literacy
-              curriculum. The bigger, deeper version of the on-ramp;
-              /start is the 11-min appetizer and lives inside Learn
-              below. Operator mission 2026-05-26: onboard humanity to AI
-              through this site. */}
-          <Link
-            href="/learn"
-            className="group ml-1 inline-flex items-center gap-1.5 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-all hover:border-[#22F0D5] hover:bg-[#22F0D5]/20"
-          >
-            <span className="size-1.5 rounded-full bg-[#22F0D5] shadow-[0_0_8px_rgba(34,240,213,0.8)]" />
-            learn AI · the curriculum
-          </Link>
-
+        {/* Desktop nav · 5 primary items, sentence-case, humanist sans */}
+        <nav className="hidden items-center gap-7 md:flex">
           <NavDropdown
             label="Learn"
             items={[
               {
                 href: "/learn",
-                label: "/learn · curriculum",
-                hint: "27 lessons · L0 gateway · diagnostic · ~8h total",
+                label: "The curriculum",
+                hint: "Forty-five lessons across five levels",
+              },
+              {
+                href: "/learn/playbooks",
+                label: "Playbooks by job",
+                hint: "Eighteen job-by-job AI playbooks",
+              },
+              {
+                href: "/learn/synthesis",
+                label: "Synthesis",
+                hint: "Ferriss-method minimum effective dose",
+              },
+              {
+                href: "/learn/deep",
+                label: "Deep · doctorate track",
+                hint: "Self-directed AI PhD path",
+              },
+              {
+                href: "/learn/videos",
+                label: "Videos",
+                hint: "Vetted AI videos · no hype",
               },
               {
                 href: "/start",
-                label: "/start · 11-min on-ramp",
-                hint: "paced single-page intro · for first-timers",
-              },
-              {
-                href: "/ai",
-                label: "AI Guide · reference",
-                hint: "44M reference · 51 FAQs · 28 tools · 20 paths",
-              },
-              {
-                href: "/faq",
-                label: "FAQ",
-                hint: "AI 101 + ORANGEBOX · FAQPage schema live",
+                label: "Start · the 11-min on-ramp",
+                hint: "Paced single-page intro",
               },
             ]}
           />
 
           <NavDropdown
             label="Products"
-            accent="orange"
             items={[
               {
                 href: "/orangebox",
-                label: "Æ ORANGEBOX",
-                hint: "Turbo-optimize Claude · FREE launch week · perpetual after",
-              },
-              {
-                href: "/skilski",
-                label: "Æ skil.ski",
-                hint: "skill marketplace via MCP",
+                label: "Orangebox",
+                hint: "Local-first AI cockpit",
               },
               {
                 href: "/b00kmakor",
-                label: "Æ B00KMakor",
-                hint: "AI publishing cockpit · Mac + Windows · FREE this week · then $99",
+                label: "B00KMAKR",
+                hint: "AI publishing cockpit",
+              },
+              {
+                href: "/skilski",
+                label: "skil.ski",
+                hint: "Skill marketplace via MCP",
               },
             ]}
           />
 
           <NavDropdown
-            label="Æ Research"
+            label="Research"
             items={[
               {
                 href: "/research/about",
                 label: "About the lab",
-                hint: "what ÆoNs Research is",
+                hint: "What ÆoNs Research is",
               },
               {
                 href: "/research/papers",
-                label: "Research Papers",
-                hint: "12 manuscripts · CC-BY 4.0",
+                label: "Papers",
+                hint: "Twelve manuscripts under CC-BY",
               },
               {
                 href: "/research/lessons-from-sci-fi",
-                label: "Lessons From Sci-Fi",
-                hint: "century-long monograph · 10 cinema clips",
+                label: "Lessons from sci-fi",
+                hint: "Monograph on AI in film and television",
               },
               {
                 href: "/intel/x-algorithm",
-                label: "X Algorithm Alpha",
-                hint: "May 2026 xAI leak · operator extensions",
+                label: "X algorithm alpha",
+                hint: "Decoded May 2026 xAI leak",
               },
             ]}
           />
 
-          <NavLink href="/founders-view">The Founder&apos;s View</NavLink>
-          <NavLink href="/press">Press</NavLink>
-          <NavLink href="/account">Account</NavLink>
+          <Link
+            href="/founders-view"
+            className="text-[14px] font-medium tracking-[0] text-[#E7EBED] transition-colors hover:text-white"
+          >
+            Founder&apos;s View
+          </Link>
+
+          <Link
+            href="/press"
+            className="text-[14px] font-medium tracking-[0] text-[#E7EBED] transition-colors hover:text-white"
+          >
+            Press
+          </Link>
         </nav>
 
-        {/* Right rail: Æ badge only. */}
-        <div className="hidden items-center gap-2 md:flex">
-          <span
-            aria-label="ÆoNs mark"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[#22F0D5]/50 bg-black/70 shadow-[0_0_18px_rgba(34,240,213,0.35)]"
+        {/* Right rail · single quiet CTA + account link */}
+        <div className="hidden items-center gap-6 md:flex">
+          <Link
+            href="/account"
+            className="text-[13px] font-medium text-[#9BA5A7] transition-colors hover:text-[#E7EBED]"
           >
-            <AeMark size={22} glow />
-          </span>
+            Account
+          </Link>
+          <Link
+            href="/start"
+            className="inline-flex items-center gap-1 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-4 py-1.5 text-[13px] font-medium text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20 hover:text-white"
+          >
+            Start <span aria-hidden>→</span>
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
