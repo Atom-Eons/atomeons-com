@@ -1200,6 +1200,636 @@ If those answers are mostly the other direction, stay at Operator level. The coc
     next: null,
     tags: ["decision-making", "prompting", "code-review-mindset", "pre-mortem", "steelman"],
   },
+
+  // ── L30 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "agents-101",
+    level: "operator",
+    number: 30,
+    title: "Agents 101: model plus tools plus loop",
+    oneLiner: "An agent is a model with tools running in a loop until done · know when you need one and when you don't.",
+    concept: [
+    "An agent is not a magic upgrade · it is the simplest possible recipe: a language model, a set of tools it can call, and a loop that keeps running until the model says 'done' or hits a stop condition. Strip away the marketing and that is the entire engineering surface.",
+    "Single-shot prompting beats agents whenever the task fits in one round-trip and you can verify the output in seconds. Drafting an email, summarizing a doc, rewriting a paragraph · these do not need an agent loop, they need a good prompt.",
+    "Agents earn their cost when the work requires uncertain branching · 'I do not know what step three is until I see the result of step two,' or 'I need to call three different tools depending on what the file contains.' That branching is where the loop pays for itself.",
+    "Every agent loop is one bad tool description away from infinite spin. The model will happily call list_files() 47 times if list_files() looks like the answer to its current confusion. Budget caps, max-step limits, and explicit stop conditions are not optional.",
+    "The blunt heuristic: if you can write the workflow as a checklist a human could follow without making choices, you do not need an agent · you need a script. If choices live inside the workflow, an agent might pay for itself."
+],
+    drillIntro: "You will design (not build) an agent on paper for one of your real recurring tasks, then prove to yourself it actually needs the loop.",
+    drillPrompt: "I want to design an AI agent (not a one-shot prompt) for this recurring task I do: [DESCRIBE THE TASK IN 2-3 SENTENCES]. Walk me through: 1) the minimum tools this agent would need (3-5 max, with one-line descriptions of each), 2) the stop condition that tells the loop 'we are done,' 3) the max-step budget you would set as a hard cap, 4) the failure mode you are most worried about, and 5) a brutally honest verdict: does this task actually need an agent loop, or could a single well-crafted prompt plus my own follow-up handle it? Do not flatter the agent framing. If single-shot wins, say so.",
+    drillSteps: [
+    "Pick one task you actually do at least weekly that involves uncertainty (research, code review, planning).",
+    "Paste the prompt above with your task filled in.",
+    "Read the verdict honestly · if the model says single-shot wins, accept it.",
+    "If agent wins, write down the 3-5 tools, stop condition, and step cap on a sticky note.",
+    "Try the single-shot version anyway as a baseline · time it, save the output.",
+    "Decide if the agent overhead is worth it for your weekly cadence."
+],
+    outcome: [
+    "You can articulate the agent recipe in one sentence: model + tools + loop.",
+    "You have an honest verdict on whether one of your tasks actually needs an agent.",
+    "You wrote down a step cap and stop condition · not optional hand-waving.",
+    "You compared agent-overhead against a single-shot baseline you actually ran."
+],
+    trap: "Operators read 'agent' and reach for it on every task because it sounds advanced · then watch the loop call the same tool eight times and burn $4 doing what one prompt could have done for $0.03. Default to single-shot. Earn the loop.",
+    timeMinutes: 20,
+    next: null,
+    tags: ["agents","decisions","advanced"],
+  },
+  // ── L31 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "mcp-foundations",
+    level: "operator",
+    number: 31,
+    title: "MCP: structured tools for AI",
+    oneLiner: "Model Context Protocol is the USB-C of AI tooling · learn the shape before you wire anything.",
+    concept: [
+    "MCP (Model Context Protocol) is an open standard that lets an AI client talk to a tool server in a predictable, typed way. The model does not need to know your tool was written in Python or TypeScript · it sees a list of tools, each with a name, a description, and a JSON Schema for its inputs.",
+    "Before MCP, every AI integration was a snowflake · custom function-call definitions baked into each app, no portability, no reuse. With MCP, the same Postgres server, Gmail server, or filesystem server can plug into Claude Code, Cursor, Codex, and any other MCP-aware client.",
+    "The contract is small: tools (the model can call them), resources (the model can read them), prompts (reusable templates the user can invoke). That is mostly it. The rest is implementation detail and transport (stdio for local, HTTP for remote).",
+    "MCP does not make a tool good · it just makes a tool reachable. A badly described tool will be ignored or misused by the model regardless of how cleanly it is wrapped. Tool descriptions are still prompt engineering.",
+    "Security teaches a hard lesson here: every MCP server you install is code running on your machine with your credentials. Treat them like browser extensions · read the source, prefer official servers, and grant the narrowest scope possible."
+],
+    drillIntro: "You will list every MCP server currently connected to your AI client, audit what each one can actually do, and remove anything you cannot justify.",
+    drillPrompt: "I am auditing my installed MCP servers. For each server I list below, tell me: 1) what tools/resources it exposes (group them: read-only, write, destructive), 2) what credentials or scopes it requires, 3) what the worst-case blast radius is if the model called the wrong tool, and 4) whether the server is from a verified publisher or a community repo. My installed servers: [PASTE LIST OF SERVER NAMES]. After the per-server audit, give me a one-line keep/review/remove recommendation for each, based purely on whether the value I get justifies the surface area.",
+    drillSteps: [
+    "Open your MCP client config (Claude Desktop config.json, Cursor settings, etc.).",
+    "List every server name into the prompt above.",
+    "For any 'remove' verdicts, actually remove them today · don't defer.",
+    "For any 'review' verdicts, read the server's source repo before next session.",
+    "Note one server you wish existed but doesn't · that's your next build idea."
+],
+    outcome: [
+    "You can name every MCP server you have installed and what it does.",
+    "You have removed at least one server you could not justify.",
+    "You can explain MCP to a peer in two sentences without using the word 'protocol' twice.",
+    "You have a written list of credentials each server holds."
+],
+    trap: "Operators install MCP servers like browser extensions, then forget what they granted. Six months later there's a filesystem server with full read/write access to ~/, a GitHub server with admin scope, and three abandoned community servers nobody audits. The blast radius is real.",
+    timeMinutes: 25,
+    next: null,
+    tags: ["MCP","agents","privacy","advanced"],
+  },
+  // ── L32 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "skill-primers",
+    level: "operator",
+    number: 32,
+    title: "Skill primers: teach a session your context in 30 seconds",
+    oneLiner: "A skill is a reusable file that primes a fresh AI session with your project, voice, and rules · stop re-explaining yourself.",
+    concept: [
+    "A skill (sometimes called a 'primer' or 'profile') is just a markdown file with a name, a description, and a body of instructions. When you invoke it, the AI loads that context as if you had typed it yourself. You write it once, you reuse it forever.",
+    "The economic argument is simple: if you find yourself typing the same paragraph of context at the start of three different sessions, that paragraph wants to be a skill. Re-typing it is paying tax for nothing.",
+    "Good skills are narrow and verb-shaped · 'review-pr' or 'draft-cold-email,' not 'general-helper.' The narrow framing means the model knows exactly what mode it is in and which knowledge to pull forward.",
+    "The skill description is the part the model uses to decide whether to invoke it · spend disproportionate effort on it. If the description is vague ('helps with stuff'), the model will guess wrong about when to fire. If it is sharp ('triggered when user pastes a GitHub PR URL'), the firing logic is reliable.",
+    "Skills compound across sessions in a way that chat history does not · they are durable, version-controllable artifacts. A six-month-old skill you forgot you wrote will still work tomorrow. A chat from six months ago is mostly gone."
+],
+    drillIntro: "You will draft your first skill primer for a task you do at least weekly, then test it cold on a fresh session.",
+    drillPrompt: "I want to create a reusable skill primer for this task I do often: [DESCRIBE THE TASK · e.g. 'reviewing my marketing copy for brand voice,' 'triaging incoming support tickets']. Help me draft the skill file with: 1) a 60-character description that makes the firing condition obvious (when should this skill activate?), 2) a 200-word body that gives a cold AI session everything it needs to do this task my way (my context, my voice rules, my done-criteria, my common mistakes to avoid), 3) one example input and one example correctly-handled output so the model has a concrete pattern. Write it tight. No filler. No 'I hope this helps.' I will paste this into a skill file and use it for years.",
+    drillSteps: [
+    "Pick a task you do at least weekly with mostly-the-same shape each time.",
+    "Run the prompt and get a draft skill.",
+    "Save it as a real skill file in your AI client's skills directory.",
+    "Open a fresh session (no prior context).",
+    "Invoke the skill cold and run it on a real instance of the task.",
+    "Edit the skill body wherever the output drifted from what you wanted."
+],
+    outcome: [
+    "You have at least one working skill file checked in or saved durably.",
+    "A fresh session can do the task without you re-explaining context.",
+    "The skill description is sharp enough that firing is reliable, not random.",
+    "You can name three more skills you want to write next."
+],
+    trap: "Operators write one giant 'helper' skill that tries to cover every task · then the model can never decide when to fire it, and the body is too generic to be useful. Narrow beats broad. Five tight skills beat one fat one every time.",
+    timeMinutes: 25,
+    next: null,
+    tags: ["prompts","memory","advanced"],
+  },
+  // ── L33 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "local-models-ollama",
+    level: "operator",
+    number: 33,
+    title: "Local models with Ollama",
+    oneLiner: "Run Llama, Qwen, or Mistral on your own laptop · no API, no logs, no monthly bill for the work that should stay home.",
+    concept: [
+    "Ollama is a runtime that lets you download an open-weight model and run it locally with one command. You get a chat or API surface on localhost, your data never leaves the machine, and the model file lives in a folder you own. That is the whole pitch.",
+    "Local models trade capability for sovereignty · a 7B-parameter model running on your laptop will not match GPT-5 or Claude on hard tasks. It will however match them on the simple, repetitive 80% of work where the cost of round-tripping to a cloud is the actual bottleneck.",
+    "The hardware math matters: a 7B model needs roughly 5-8GB of RAM, a 13B needs 12-16GB, a 70B needs 40GB+ or aggressive quantization. Apple Silicon with unified memory punches above its weight here. Modest hardware is fine for modest models.",
+    "Privacy-critical work has an obvious home here · medical questions, legal drafts, NDA-covered code, journal entries, anything you would not want logged to a cloud provider. The legal blast radius of 'my therapist's chat became training data' is too high for hosted models on sensitive content.",
+    "The honest limitation: open-weight models in 2026 are still behind frontier closed-weight models on hard reasoning, long-context coherence, and agentic tool use. The gap has narrowed but it has not closed. Use local for what local is good at."
+],
+    drillIntro: "You will install Ollama, pull one model, and run it on a real privacy-sensitive task you would otherwise have sent to the cloud.",
+    drillPrompt: "Walk me through installing Ollama on [YOUR OS · macOS / Windows / Linux] and pulling one mid-tier model suitable for my hardware: I have [RAM AMOUNT] of RAM and [APPLE SILICON / NVIDIA GPU / CPU ONLY]. Recommend one specific model name to start with (pin the version), give me the exact pull command, and the exact run command to start a chat. Then give me one privacy-sensitive prompt I should try first to feel the difference · something I would not want logged to a cloud API. Skip the marketing about open source · just the install steps and the first real use.",
+    drillSteps: [
+    "Run the prompt to get install steps tailored to your machine.",
+    "Install Ollama and pull the recommended model (this takes 5-15 min on broadband).",
+    "Run the model with `ollama run <model>` and confirm you get a prompt.",
+    "Try the suggested privacy-sensitive task · feel the latency and quality.",
+    "Compare the same prompt to a cloud model to calibrate the gap.",
+    "Decide which of your recurring tasks will move local."
+],
+    outcome: [
+    "Ollama is running on your machine and a model file is downloaded.",
+    "You have completed one real task end-to-end with the local model.",
+    "You can articulate the capability gap versus the cloud honestly.",
+    "You have a written list of which tasks you will route local going forward."
+],
+    trap: "Operators install Ollama, run 'hello world,' get bored, and never use it again. The win only shows up when you route a real task through it · usually a privacy-critical one. Without that first real use, local stays a demo.",
+    timeMinutes: 30,
+    next: null,
+    tags: ["local","privacy","models","advanced"],
+  },
+  // ── L34 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "vision-models",
+    level: "operator",
+    number: 34,
+    title: "Vision models: when to use them",
+    oneLiner: "Vision lets the model see images · powerful for screenshots and diagrams · weak for precise spatial work · know the line.",
+    concept: [
+    "Vision-capable models can take an image as input alongside text and reason about its contents · they read screenshots, interpret diagrams, describe photos, transcribe handwriting, and find UI elements. The capability changed what 'paste this in' can mean.",
+    "The strongest use cases are descriptive and interpretive · 'what does this error message say,' 'summarize this whiteboard photo,' 'is the layout broken in this screenshot,' 'extract the table from this scanned page.' The model reads the image like a literate person scanning a document.",
+    "The weakest use cases are precise spatial · 'click exactly here,' 'measure this distance in pixels,' 'count exactly how many widgets are in this photo.' Vision models hallucinate coordinates and miscount past a handful. They are interpreters, not measurement tools.",
+    "Mixed text-and-image prompting unlocks workflows that pure text cannot · debugging UI bugs by sharing a screenshot plus describing expected behavior, reviewing design mockups, reading dashboards. The model treats the image as additional context, not as a replacement for instructions.",
+    "Privacy gets tricky fast · screenshots often contain incidental PII (email previews, names, account balances), and people upload them without scrubbing. Vision raises the stakes of 'what did I just send?' considerably."
+],
+    drillIntro: "You will run the same task three ways · text-only, image-only, and text-plus-image · to feel which combination wins for your real work.",
+    drillPrompt: "I am calibrating when to use vision input. Here is a real task I do: [DESCRIBE THE TASK · e.g. 'debugging why a webpage looks wrong,' 'extracting data from a chart in a PDF']. I will try this three ways and want your honest verdict each time: 1) text-only · I describe the situation in words, you respond. 2) image-only · I paste a screenshot with no description, you respond. 3) text-plus-image · I paste the screenshot AND describe what I want, you respond. For each round, tell me what you can and cannot see clearly, and what you would need from me to do better. After all three, give a one-paragraph verdict on which mode wins for tasks of this shape.",
+    drillSteps: [
+    "Pick a real task where vision might help (UI debugging, chart reading, layout review).",
+    "Run round 1 · text-only description.",
+    "Run round 2 · paste screenshot with no description.",
+    "Run round 3 · screenshot plus your description together.",
+    "Read the three responses side by side · note quality and effort.",
+    "Write down which mode you will default to for this task shape."
+],
+    outcome: [
+    "You have three responses to compare honestly.",
+    "You can name two task types where vision wins and one where it loses.",
+    "You have a default mode picked for the task you tested.",
+    "You scrubbed PII from the screenshot before sharing (or noticed you didn't)."
+],
+    trap: "Operators paste screenshots like reflex and skip describing what they want · the model then guesses what is wrong with the image, often correctly but sometimes spectacularly wrong. Vision is a context channel, not a mind-reading channel.",
+    timeMinutes: 20,
+    next: null,
+    tags: ["vision","multimodal","advanced"],
+  },
+  // ── L35 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "audio-whisper-transcription",
+    level: "operator",
+    number: 35,
+    title: "Audio and Whisper transcription",
+    oneLiner: "Whisper turns audio into text · meetings, voice memos, interviews · the AI-era replacement for note-taking.",
+    concept: [
+    "Whisper is OpenAI's open-source speech-to-text model · it transcribes audio in dozens of languages with quality that ranges from 'good enough' on noisy recordings to 'borderline professional' on clean ones. It runs locally on modest hardware or remotely via API at fractions of a cent per minute.",
+    "The transcription itself is rarely the final artifact · it is feedstock for the next step. A 60-minute meeting transcript becomes a 200-word summary, an action item list, a draft thank-you note, and a searchable archive. The pipeline is record-then-process, not record-then-read.",
+    "Speaker diarization (who said what) is a separate problem from transcription · Whisper alone gives you a wall of text. Adding diarization (via Pyannote, AssemblyAI, or similar) costs more but turns a transcript into a real meeting record. Decide upfront whether you need it.",
+    "Audio privacy is one of the most fragile surfaces in AI · recordings often contain incidental disclosures, third-party names, and content the recorder consented to but the speakers did not. Cloud-API transcription means that audio file landed on a third party. Local Whisper avoids that.",
+    "The biggest mistake is recording without a plan · you accumulate hours of audio you never process, and the transcripts become a graveyard. The discipline is to define the downstream artifact (summary, action list, blog post) before you hit record."
+],
+    drillIntro: "You will pick one recurring audio source (a weekly meeting, a voice journal, a podcast you take notes on) and build a one-step record-to-artifact pipeline.",
+    drillPrompt: "I want to build a simple audio-to-artifact pipeline for this recurring audio I capture: [DESCRIBE · e.g. 'my Tuesday 1:1 with my report,' 'voice memos I record while walking,' 'a podcast I want to extract quotes from']. Walk me through: 1) the simplest recording setup that works on [YOUR DEVICE], 2) whether I should use local Whisper or a cloud API given my privacy needs of [DESCRIBE: high / medium / low], 3) the exact prompt I should run on the transcript after to get my downstream artifact (action items / summary / quote list / etc.), 4) one warning about what this pipeline will NOT capture well. No 'just use this app' hand-waving · give me actual commands or actual tools.",
+    drillSteps: [
+    "Pick one recurring audio source you actually have access to.",
+    "Run the prompt and get the pipeline laid out.",
+    "Record one real session with the suggested setup.",
+    "Transcribe it (local Whisper via `whisper file.mp3` or your chosen API).",
+    "Run the downstream artifact prompt on the transcript.",
+    "Evaluate: did you get a useful artifact, or just a wall of text?"
+],
+    outcome: [
+    "You have transcribed one real audio file end-to-end.",
+    "You produced a downstream artifact (summary, action list) from the transcript.",
+    "You can articulate the privacy tradeoff between local and cloud transcription.",
+    "You decided whether speaker diarization is worth adding."
+],
+    trap: "Operators record everything, transcribe nothing, and end up with a hard drive full of audio they will never listen to again. Define the downstream artifact first, or you are just building a graveyard.",
+    timeMinutes: 25,
+    next: null,
+    tags: ["voice","multimodal","privacy","advanced"],
+  },
+  // ── L36 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "rag-vs-long-context",
+    level: "operator",
+    number: 36,
+    title: "RAG vs long context: when to retrieve, when to dump",
+    oneLiner: "RAG fetches the right slice of your data at query time · long context stuffs everything in · know which problem you actually have.",
+    concept: [
+    "RAG (Retrieval-Augmented Generation) is a pattern, not a product · at query time, you search your data for relevant chunks, then put those chunks plus the user question into the prompt. The model answers using both the retrieved context and its trained knowledge.",
+    "Long context is the opposite strategy · stuff all the relevant material directly into the prompt and let the model find what it needs. Modern frontier models support 200K, 1M, even 2M tokens of context · which means many problems that needed RAG five years ago no longer do.",
+    "The honest decision tree: if your data fits comfortably in the context window with room to spare, just dump it · long context is simpler, more accurate, and avoids the retrieval-quality bottleneck. If your data is much larger than the window or you only need a small slice at a time, RAG earns its complexity.",
+    "Retrieval quality is the silent killer of RAG systems · if your retrieval grabs the wrong chunks, the model answers confidently from wrong context and you cannot tell from the output. Most 'RAG hallucinations' are actually retrieval failures dressed up as model failures.",
+    "Hybrid approaches win in production · use RAG to narrow to the right neighborhood, then put that neighborhood (5-50K tokens) into long context and let the model synthesize. Pure-pure of either approach is rarely the answer at scale."
+],
+    drillIntro: "You will take one real corpus of yours and decide honestly whether it wants RAG, long context, or hybrid · then prove the choice with a small test.",
+    drillPrompt: "I am deciding between RAG and long context for this real corpus of mine: [DESCRIBE · e.g. '400 of my journal entries,' '12 PDFs of legal docs,' 'all my Slack messages from one channel for the year']. Help me decide: 1) what is the approximate total token size of this corpus (rule-of-thumb me an estimate), 2) does it fit in a 200K context window? a 1M? 3) at query time, do I typically need the whole thing or a small slice? 4) what is the worst-case if retrieval grabs the wrong chunk · would I notice? Based on those answers, give me a verdict: pure long-context, pure RAG, or hybrid · and the simplest possible first implementation for the winning strategy.",
+    drillSteps: [
+    "Pick one real corpus you have on disk or in a tool.",
+    "Estimate or measure its token count (1 page ≈ 500 tokens roughly).",
+    "Run the prompt and get a verdict.",
+    "If long-context wins, build a simple prompt that dumps it all in and asks one question.",
+    "If RAG wins, sketch the retrieval step (even pseudocode is fine).",
+    "Run one real query end-to-end and grade the answer."
+],
+    outcome: [
+    "You can estimate the token size of one of your real corpora.",
+    "You have a defensible verdict (RAG / long-context / hybrid) for that corpus.",
+    "You ran one real query against the winning approach.",
+    "You can name the retrieval-failure mode that would bite you."
+],
+    trap: "Operators reach for RAG because it sounds advanced, then build a vector database for a corpus that would have fit in a single Claude prompt. Long context is usually the simpler right answer · use RAG when the data genuinely will not fit, not because it sounds sophisticated.",
+    timeMinutes: 25,
+    next: null,
+    tags: ["RAG","memory","advanced"],
+  },
+  // ── L37 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "embeddings-semantic-search",
+    level: "operator",
+    number: 37,
+    title: "Embeddings: meaning as numbers",
+    oneLiner: "An embedding is a list of numbers that captures the meaning of text · learn the shape and you unlock semantic search, deduplication, and clustering.",
+    concept: [
+    "An embedding is a fixed-length vector (usually 256 to 3072 numbers) produced by a model that has been trained to put similar meanings near each other in that high-dimensional space. The number 0.42 has no meaning on its own · the geometric distance between two embeddings is what matters.",
+    "Semantic search is the canonical use · you embed every document, embed the query, and find the documents whose embeddings sit closest to the query's embedding. The match is by meaning, not by literal word match. 'How do I cancel my subscription' finds the doc titled 'Account closure procedures' even though they share no keywords.",
+    "Beyond search, embeddings unlock dedup ('these two support tickets are basically the same complaint'), clustering ('group my customers' open-text feedback by theme'), classification ('is this incoming email more like a support ticket or more like a sales inquiry'), and anomaly detection ('this log message is unusually far from anything we have seen before').",
+    "Embedding models are not free · API calls cost real money at scale, and embedding 100K documents adds up. The good news: embeddings are computed once and cached forever (until the underlying model changes), so the cost amortizes across every future query.",
+    "The mental model that helps: think of embeddings as a coordinate on a vast meaning-map. Words with similar meanings cluster together. Documents about cooking sit near each other. Documents about plumbing sit elsewhere. You are doing geography on meaning."
+],
+    drillIntro: "You will embed a small set of your own text snippets and run a real semantic search to feel how meaning-distance behaves.",
+    drillPrompt: "I want to feel how embeddings work with my own data. Walk me through the smallest possible end-to-end demo: 1) recommend one specific embedding model + API I should use for hobby-scale work (cost-aware), 2) give me a 20-line Python (or Node, whichever I pick · I prefer [LANGUAGE]) script that embeds these five short text snippets I will paste in: [SNIPPET 1 · e.g. about a topic] [SNIPPET 2 · related topic] [SNIPPET 3 · unrelated topic] [SNIPPET 4 · related to 1 and 2] [SNIPPET 5 · totally different domain], 3) computes which snippet is most similar to a query I will provide, 4) prints the similarity scores. Include the exact pip/npm install command. No 'just use LangChain' · I want to see the actual API call.",
+    drillSteps: [
+    "Pick 5 short text snippets you have lying around (notes, ticket titles, emails).",
+    "Run the prompt with your language preference filled in.",
+    "Install the dependencies and run the script.",
+    "Pick a query and see which snippets score highest.",
+    "Try a query you would NOT expect to match anything · see what scores 0.2 vs 0.8.",
+    "Note: this is the same primitive that powers most production AI search."
+],
+    outcome: [
+    "You ran an embeddings API call from your own machine.",
+    "You saw real similarity scores for a real query against your own data.",
+    "You can articulate the difference between keyword search and semantic search.",
+    "You know what one embedding API call costs you (likely a fraction of a cent)."
+],
+    trap: "Operators learn the concept of embeddings but never compute one. The concept feels obvious until you see your two 'related' snippets score 0.31 and have to think about why · only then do you understand what the model considered similar.",
+    timeMinutes: 25,
+    next: null,
+    tags: ["embeddings","coding","advanced"],
+  },
+  // ── L38 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "fine-tune-vs-prompt",
+    level: "operator",
+    number: 38,
+    title: "Fine-tuning vs prompt engineering",
+    oneLiner: "For individuals, fine-tuning is almost never worth it · know exactly when it actually is.",
+    concept: [
+    "Fine-tuning takes a base model and adjusts its weights on your specific data so it behaves more like you want on your tasks. Prompt engineering does not touch weights · you just become a more deliberate user of the off-the-shelf model. They are different categories of work, not different speeds of the same work.",
+    "For 95% of individual operators, prompt engineering plus a good skill primer beats fine-tuning on cost, speed-to-result, and updateability. A bad prompt costs you 10 minutes to fix. A bad fine-tune costs you a fresh training run and the dataset cleanup that preceded it.",
+    "Fine-tuning earns its complexity when three things are true together: you have a high-volume repetitive task, the base model can almost-but-not-quite do it consistently, and you have hundreds-to-thousands of clean examples of the desired behavior. Miss any of those three and you are paying for theater.",
+    "The hidden cost is dataset curation · most fine-tuning failures are not training failures, they are dataset failures. Garbage examples produce garbage behavior, and 'I had 500 examples lying around' usually means 200 of them are mislabeled or inconsistent. Curation is 80% of the work.",
+    "A realistic alternative ladder before fine-tuning: better prompt → skill primer → few-shot examples in the prompt → retrieval over your examples → only then fine-tune. Climb the ladder one rung at a time. Most operators never need to reach the top."
+],
+    drillIntro: "You will honestly assess one of your tasks against the fine-tuning checklist and almost certainly conclude you do not need it · the point is to know why.",
+    drillPrompt: "I am wondering if I should fine-tune a model for this task I do often: [DESCRIBE THE TASK · e.g. 'classifying customer emails into 8 categories,' 'writing in my specific voice']. Walk me through the honest decision: 1) what is the volume · how many times per week do I do this task? 2) what does failure cost me · is a wrong answer expensive or trivial? 3) how many clean labeled examples do I have, today, in a form a training script could consume? (be brutal about 'clean'). 4) what would I try first that is cheaper than fine-tuning · prompt-only, few-shot, RAG, or skill? 5) give me a verdict and the cheapest alternative I should try BEFORE I touch fine-tuning. Do not flatter the fine-tuning idea if it does not earn it.",
+    drillSteps: [
+    "Pick a task where you have at least vaguely thought 'I wish the model just did this my way.'",
+    "Run the prompt and answer the four diagnostic questions honestly.",
+    "Read the verdict · expect 'do not fine-tune' for almost any individual task.",
+    "Try the cheaper alternative the prompt suggested (few-shot, skill, RAG).",
+    "If the cheaper alternative works, you saved yourself days of wasted effort.",
+    "If it still does not work after honest effort, revisit fine-tuning with real volume math."
+],
+    outcome: [
+    "You have one task with a written verdict on whether fine-tuning is justified.",
+    "You can name the three conditions that have to be true together.",
+    "You tried at least one rung of the cheaper ladder.",
+    "You can explain to a peer why fine-tuning is usually not the answer."
+],
+    trap: "Operators reach for fine-tuning because it sounds like the serious, advanced move · then realize three weeks in that they did not have a clean dataset, they had 47 inconsistent examples and a vibe. Climb the cheap ladder first.",
+    timeMinutes: 20,
+    next: null,
+    tags: ["fine-tune","decisions","advanced"],
+  },
+  // ── L39 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "ai-safety-personal",
+    level: "operator",
+    number: 39,
+    title: "AI safety in personal use",
+    oneLiner: "PII, NDAs, financial data, and other people's secrets · know the rules of what you do not paste.",
+    concept: [
+    "The first rule that protects you is the rule the model cannot enforce · do not paste in things that have privacy obligations attached to them. Your therapist's notes, your employer's source code under NDA, your kid's medical records, your tax return · the model does not know these have rules. You do.",
+    "Hosted AI services have privacy policies that range from 'we will not train on your data' (most enterprise tiers) to 'everything you type is fair game' (some free consumer tiers). Read the policy of the specific tier you use, not the marketing page · the two often disagree by 30%.",
+    "Third-party data has a separate problem · even if your privacy policy allows training on your inputs, you do not own your friend's medical complaint or your client's revenue numbers. Pasting them in is consent you cannot give. The legal blast radius lands on you, not the platform.",
+    "The 'verify rule' expands at this level · do not just verify the model's output, verify your own input before you send it. Two seconds of 'wait, is there anything in this paste I would not want logged' has saved more operators than any privacy policy.",
+    "Local models (covered separately in the Ollama lesson) are the structural answer to PII-sensitive work · if the audio, the text, or the image never leaves your machine, the privacy policy of the cloud provider becomes irrelevant. Use the right tool for the sensitivity level."
+],
+    drillIntro: "You will build a personal redaction checklist tailored to your own life and stick it where you can see it before every paste.",
+    drillPrompt: "I am building a personal AI-paste safety checklist tailored to my actual life. Help me list, specifically and honestly: 1) what categories of information I handle that I should never paste into a hosted AI (think: medical, financial, NDA-covered, third-party secrets, others' PII), 2) for each category, what the realistic blast radius is if it leaked (regulatory? professional? relational? legal?), 3) the safer alternative for each category (local model? redact-then-paste? do-not-use-AI-here?), 4) a one-line gut-check question I can ask before every paste · short enough to actually use. My context: [BRIEF DESCRIPTION OF YOUR WORK · e.g. 'solo founder building a fintech app,' 'therapist with private practice,' 'engineer at a company with strict IP policy']. No abstract advice · I want my checklist.",
+    drillSteps: [
+    "Run the prompt with your real work context filled in.",
+    "Review the categories list · add any the model missed for your situation.",
+    "Save the checklist somewhere visible (sticky note, top of CLAUDE.md, etc.).",
+    "Pick one task you currently do in the cloud that should move local.",
+    "Test your one-line gut-check on a paste you were about to send today.",
+    "Update the checklist as you learn what almost-slipped through."
+],
+    outcome: [
+    "You have a written checklist specific to your life, not generic.",
+    "You moved at least one privacy-sensitive workflow to safer ground.",
+    "You can recite your one-line gut-check from memory.",
+    "You read the privacy policy of the AI tier you actually use."
+],
+    trap: "Operators read generic privacy advice, nod, and keep doing exactly what they were doing. The checklist only works if it is specific to your actual categories of data · 'don't paste sensitive stuff' is not a checklist, it's a wish.",
+    timeMinutes: 20,
+    next: null,
+    tags: ["privacy","verify","advanced"],
+  },
+  // ── L40 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "multimodal-prompting",
+    level: "operator",
+    number: 40,
+    title: "Multimodal prompting: combining text, image, audio",
+    oneLiner: "The strongest prompts use the medium that fits the question · sometimes you describe, sometimes you show, sometimes you do both.",
+    concept: [
+    "Multimodal prompting is the practice of choosing which inputs to give the model based on what fits the question, not on what you happen to have. A screenshot plus a question beats a 400-word description plus 'you know what I mean.' A voice memo plus a transcript beats either one alone for capturing what you actually meant.",
+    "The combination unlock is real · text describes intent, image carries unambiguous reference, audio captures inflection and pacing. A debugging session that pairs 'here is what I expected to happen' (text) with a screenshot of what actually happened (image) gives the model both halves of the gap.",
+    "Modalities have asymmetric strengths · text is precise but verbose, images are unambiguous but spatial-only, audio is rich but slow to scan. Match the modality to what you cannot say easily in the others. If your question is 'why is this layout broken,' words are the wrong tool.",
+    "Token costs differ across modalities · a high-res image can cost 1000-2000 tokens, audio costs scale with duration, text is cheapest per unit of content. Multimodal prompts can quietly become expensive prompts if you paste in five 4K screenshots without thinking.",
+    "The frontier models are still learning · they handle two modalities (text + image, text + audio) reliably, but three-way reasoning ('look at this image, listen to this audio, read these notes') still degrades. Save the three-way prompts for high-value work where the cost is justified."
+],
+    drillIntro: "You will take one of your real recent questions and re-ask it three different ways · text-only, image-included, image-plus-text · and rank the answers.",
+    drillPrompt: "I want to practice multimodal prompting on a real question I had this week. The question is: [PASTE OR DESCRIBE THE REAL QUESTION]. The relevant artifact (if any) is [SCREENSHOT / DIAGRAM / RECORDING / PHOTO]. I will ask the same question three ways and want your honest critique each time: Round 1 · text-only, describing the situation as precisely as I can. Round 2 · attach the artifact with minimal text ('what do you see here?'). Round 3 · attach the artifact AND write a sharp text frame around it (here is what I expect, here is what I see, here is what I want to know). For each round, tell me what helped, what was missing, and what I should have included. End with a one-line rule of thumb for when to reach for each mode in tasks of this shape.",
+    drillSteps: [
+    "Find one real question you had recently that involved a visual or audio artifact.",
+    "Run round 1 · text-only version.",
+    "Run round 2 · artifact with minimal framing.",
+    "Run round 3 · artifact plus tight text frame around it.",
+    "Rank the three answers and note where each fell short.",
+    "Write down your one-line rule of thumb · 'for X-shaped questions, default to Y.'"
+],
+    outcome: [
+    "You have three responses to compare on the same real question.",
+    "You can name which round won and articulate why.",
+    "You wrote down a rule of thumb for that question-shape.",
+    "You noticed at least one modality that did not pull its weight."
+],
+    trap: "Operators dump every available artifact into every prompt because 'more context is better' · then watch the model get lost trying to reconcile three loosely-related inputs. Pick the modality the question needs. Skip the rest.",
+    timeMinutes: 20,
+    next: null,
+    tags: ["multimodal","vision","voice","advanced"],
+  },
+  // ── L41 · PILOT · NEW (workflow-generated) ─────────────
+  {
+    slug: "long-context-strategy",
+    level: "pilot",
+    number: 41,
+    title: "Long-context strategy: when 200K is right, when chunking wins",
+    oneLiner: "Long context is a tool, not a default · know what degrades, what costs you, and when chunking beats stuffing.",
+    concept: [
+    "Modern frontier models support context windows from 200K to 2M+ tokens · enough to fit entire codebases, whole books, or hundreds of meeting transcripts in a single prompt. The capability is real. The performance ceiling at the edge of the window is also real.",
+    "Performance does not stay flat as context grows · models reliably handle the first ~20% and the last ~20% of a long context, with a measurable 'lost in the middle' degradation through the middle band. A fact buried at token 80K of a 200K prompt is genuinely harder to retrieve than the same fact at token 5K.",
+    "Cost is the other tax · long context inputs cost real money per token, and a 200K-token prompt is two orders of magnitude more expensive than a 2K-token prompt. If you are sending the same long context on every turn of an interactive session, you are billing yourself for inertia.",
+    "Chunking + retrieval beats raw long-context when the question can be answered from a slice you can identify cheaply · split the source into chunks, find the relevant 5-20K tokens, send only those. The retrieval step adds latency but slashes cost and improves accuracy on middle-of-document facts.",
+    "Caching is the structural answer when you genuinely need to ask many questions against the same long context · Anthropic's prompt caching (and similar features elsewhere) let you pay full price once and ~10% on every subsequent reuse. If you are not using it on stable long contexts, you are paying for nothing."
+],
+    drillIntro: "You will take one real long document, run the same question against three strategies, and learn which one your real work wants.",
+    drillPrompt: "I have a long document I work with: [DESCRIBE · e.g. 'a 60-page contract,' 'a 200-page technical manual,' 'six months of journal entries']. Estimated total tokens: [ESTIMATE]. I have a recurring question I ask against it: [DESCRIBE THE QUESTION]. Walk me through three strategies, with real cost math: Strategy A · dump the whole document into a single long-context prompt with the question. Strategy B · chunk the document by section, retrieve the 3 most relevant chunks, send those plus the question. Strategy C · use prompt caching on the full document and ask the question against the cached version (assume I will ask 10+ similar questions). For each strategy, give me: estimated input tokens per query, estimated cost per query, expected accuracy tradeoffs, and a verdict on which strategy I should use given my query pattern.",
+    drillSteps: [
+    "Pick one real long document you query repeatedly.",
+    "Estimate its token count (1 page ≈ 500 tokens roughly).",
+    "Run the prompt and get cost math for each strategy.",
+    "Pick the winning strategy and run one real query.",
+    "If caching wins, look up whether your AI client actually supports it (Claude API does).",
+    "Compute your real cost-per-query and decide if it's worth optimizing further."
+],
+    outcome: [
+    "You have real cost math for one of your long-context workflows.",
+    "You picked a strategy and ran one real query under it.",
+    "You can name the 'lost in the middle' phenomenon and what it implies.",
+    "You know whether prompt caching is available to you and how to use it."
+],
+    trap: "Operators stuff entire codebases into every prompt because 'the model can handle it,' then wonder why their bill tripled and answers got vaguer. Long context is a load-bearing tool · use it when needed, cache it when reused, chunk it when slicing is cheaper.",
+    timeMinutes: 25,
+    next: null,
+    tags: ["RAG","models","advanced"],
+  },
+  // ── L42 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "chain-of-thought",
+    level: "operator",
+    number: 42,
+    title: "Chain-of-thought: making the model show its work",
+    oneLiner: "Asking the model to reason step-by-step before answering raises accuracy on hard problems · know when it earns its cost.",
+    concept: [
+    "Chain-of-thought (CoT) prompting is the practice of asking the model to lay out its reasoning explicitly before producing a final answer. The phrase 'think step by step' became famous, but the technique is more general · any instruction that forces sequential reasoning ('first list the constraints, then identify the conflicts, then propose a resolution') is CoT.",
+    "On hard reasoning problems · math, multi-step logic, planning, debugging · CoT meaningfully raises accuracy. The model uses the intermediate reasoning as scratch space, and writing it down keeps it from collapsing complex logic into a guess. On easy problems, it is overhead.",
+    "Modern reasoning-tuned models (Claude with extended thinking, OpenAI o-series, Gemini Thinking) bake CoT into the model itself · they produce hidden reasoning before they answer, often visibly to you, sometimes not. For these models, you do not need to ask · they already are.",
+    "Two failure modes are common · the model produces beautiful reasoning that arrives at the wrong answer (sounds smart, is wrong), or the model produces reasoning that contradicts its own final answer (the chain says 'A is impossible,' the answer says 'so the answer is A'). Read the chain, not just the conclusion.",
+    "CoT is verification fuel · when the model shows its work, you can spot the wrong step. When it just hands you an answer, you cannot. For any decision you actually care about, the reasoning trace is the audit log that lets you catch the failure before you ship on it."
+],
+    drillIntro: "You will run the same hard question two ways · answer-only and chain-of-thought · and feel where the reasoning trace catches the failure that the direct answer hid.",
+    drillPrompt: "I want to feel the difference chain-of-thought makes. Here is a real problem I am working through: [DESCRIBE A REAL MULTI-STEP PROBLEM YOU HAVE · e.g. a planning decision with constraints, a debugging puzzle, a math word problem, an ambiguous policy question]. I will ask you the same question two ways and want your most honest work each time: Round 1 · 'What is your answer? Just the answer, one or two sentences.' Round 2 · 'Walk me through this step by step. List the constraints first, then the implications, then your conclusion. Show every step.' After both rounds, tell me: did the reasoning in Round 2 catch anything Round 1 hid? Was there a step in Round 2 you are least confident about? Where would you most want me to push back?",
+    drillSteps: [
+    "Pick a real problem with at least three moving parts.",
+    "Run Round 1 · answer-only.",
+    "Run Round 2 · explicit chain-of-thought.",
+    "Compare the two answers · are they the same? Different?",
+    "Read the chain for any step that feels weak · push back on that step.",
+    "Note: when do you want CoT going forward, and when do you skip it?"
+],
+    outcome: [
+    "You ran the same hard question both ways and can compare.",
+    "You found at least one place where the chain revealed something the direct answer hid.",
+    "You can name when CoT is worth its extra tokens and when it is not.",
+    "You read a chain critically rather than skimming to the conclusion."
+],
+    trap: "Operators ask for chain-of-thought, then skim past the chain to read the bolded conclusion. The chain is the value. If you are not reading it, you are paying for explanation you do not use.",
+    timeMinutes: 15,
+    next: null,
+    tags: ["prompts","verify","advanced"],
+  },
+  // ── L43 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "tool-use-structured-output",
+    level: "operator",
+    number: 43,
+    title: "Tool use and structured output",
+    oneLiner: "Function calling makes the model return JSON your code can use · know the contract before you build on it.",
+    concept: [
+    "Tool use (also called function calling) is the mechanism by which an AI model emits structured output that your code can act on · instead of returning prose, the model returns a JSON object matching a schema you defined. The model says 'call send_email with these arguments,' your code actually sends the email.",
+    "The contract is shaped like a function signature · you describe each tool with a name, a one-paragraph description, and a JSON Schema for its arguments. The model decides when (or whether) to call a tool, and what arguments to pass. The same primitive underlies every agentic system.",
+    "Quality of the tool description is everything · the model picks tools based on what the descriptions say. A description like 'gets data' will be invoked at random. A description like 'fetches the user's current Stripe subscription status by customer email · use this when the user asks about their plan or billing' will be invoked correctly.",
+    "Structured output (the simpler cousin) does not involve calling external tools · you just ask the model to return JSON matching a schema, and you get parseable output for downstream code. Strict JSON modes (OpenAI's response_format, Anthropic's tool_use coerced as output) make this reliable.",
+    "The biggest reliability win: validate the output against your schema before you act on it. Models occasionally drift on edge cases · null where you expected a string, extra fields, missing required fields. The validation step is what separates 'works in the demo' from 'works in production at 3am.'"
+],
+    drillIntro: "You will define one tool with a real schema, ask the model to call it on a real input, and validate the output · the full structured-output loop in under 20 minutes.",
+    drillPrompt: "I want to learn structured output / tool use end-to-end with a real task of mine. The task: take this messy unstructured input · [PASTE A REAL EXAMPLE · e.g. a recipe in prose, a casual meeting note, a free-form support email] · and turn it into structured JSON I could store in a database. Walk me through: 1) propose the JSON Schema (3-7 fields, with types and which are required), 2) write the exact prompt I would send to the model to extract those fields from input like mine, 3) show me one valid output and one likely-invalid output (so I know what to guard against), 4) give me a 10-line Python or Node validator using a real schema library (Pydantic or Zod, whichever I want · I pick [LANGUAGE]). End with one concrete edge case I should test against.",
+    drillSteps: [
+    "Pick a real unstructured input you would love to turn into structured data.",
+    "Run the prompt and design the schema together.",
+    "Run the extraction prompt on your real example.",
+    "Validate the output against your schema using the validator code.",
+    "Try the extraction on a deliberately weird input · see what breaks.",
+    "Decide whether to wire this into a real workflow."
+],
+    outcome: [
+    "You have one working extraction prompt with a real schema.",
+    "You validated at least one output against the schema.",
+    "You saw at least one edge case that broke or stressed the extraction.",
+    "You can explain why tool descriptions matter for model behavior."
+],
+    trap: "Operators ask for 'JSON output' and skip the schema validation step · then ship code that crashes the first time the model returns a slightly-off field name. The schema is the contract. Without validation, the contract is unenforced.",
+    timeMinutes: 25,
+    next: null,
+    tags: ["coding","prompts","agents","advanced"],
+  },
+  // ── L44 · OPERATOR · NEW (workflow-generated) ─────────────
+  {
+    slug: "cost-optimization",
+    level: "operator",
+    number: 44,
+    title: "Cost optimization: tokens, caching, model selection",
+    oneLiner: "AI is metered · the operators who stay profitable measure what they spend and choose the model that fits the task.",
+    concept: [
+    "AI usage is billed per token in and per token out, and the per-token prices vary by an order of magnitude across the model lineup. The cheapest models in a family cost ~5% of the most expensive · which means using the right model for the right task is not a rounding error, it is the entire margin.",
+    "The first cost lever is model selection · use Claude Haiku / GPT mini / Gemini Flash for the 80% of work that is summarization, classification, simple extraction, and conversational. Reserve Opus / GPT frontier / Gemini Pro for the hard reasoning, agentic, and creative work where capability genuinely matters.",
+    "The second lever is prompt caching · if you reuse the same long context across many calls (a codebase, a brand voice guide, a long doc you keep querying), caching cuts the input cost on cached portions to ~10% of normal. This is one of the largest free wins in the AI stack right now.",
+    "The third lever is request shape · batching where supported, async where you can wait, streaming when you want partial results faster. Each shapes the bill in different ways. Most operators leave money on the floor by sending one-by-one when the API offers batch endpoints at a discount.",
+    "The fourth lever is honest measurement · until you have a dashboard or a weekly export of your usage broken down by workflow, every cost discussion is vibes. Five minutes setting up usage tracking pays for itself the first month you see where your money actually goes."
+],
+    drillIntro: "You will audit your last month of AI spend, find the workflow eating the most, and run the same task on a cheaper model to feel where the quality line actually sits.",
+    drillPrompt: "I want to audit and optimize my AI spend. Help me work through it: 1) walk me through how to pull my last month's usage from [WHICH PROVIDER · Anthropic / OpenAI / both / other], grouped by workflow if possible, 2) identify which one workflow is most likely eating my budget given my description: [BRIEFLY DESCRIBE YOUR USAGE · e.g. 'I run a 100-line prompt against Claude Sonnet maybe 30x per day for content review'], 3) for that workflow, recommend a cheaper model in the same family and predict where the quality might drop, 4) walk me through whether prompt caching applies to my pattern · if yes, the rough savings; if no, why not. End with three concrete actions I should take this week to cut my AI bill by 30%+ without dropping the work I actually need quality on.",
+    drillSteps: [
+    "Pull your provider's billing or usage dashboard for the last month.",
+    "Run the prompt with your real usage description.",
+    "Take the biggest workflow and run a side-by-side comparison on a cheaper model.",
+    "Honestly evaluate · is the quality drop acceptable? Often yes.",
+    "If caching applies, enable it on your reused-long-context workflow.",
+    "Set a calendar reminder to re-audit in 30 days."
+],
+    outcome: [
+    "You know your top workflow by spend.",
+    "You ran one workflow on both a frontier and a cheaper model and compared.",
+    "You enabled at least one cost lever (model swap, caching, or batching).",
+    "You set a recurring audit cadence rather than checking once and forgetting."
+],
+    trap: "Operators run every task on the most expensive model out of habit · 'just in case I need the reasoning' · then watch their bill grow while 80% of the requests would have been fine on the cheap tier. Measure first. Switch on evidence.",
+    timeMinutes: 25,
+    next: null,
+    tags: ["models","decisions","advanced"],
+  },
+  // ── L45 · PILOT · NEW (workflow-generated) ─────────────
+  {
+    slug: "open-vs-closed-weights",
+    level: "pilot",
+    number: 45,
+    title: "Open weights vs closed weights",
+    oneLiner: "When the model file is on your machine, the rules change · know what you gain, what you give up, and what stays the same.",
+    concept: [
+    "Closed-weight models (Claude, GPT, Gemini) live on the provider's servers · you send a request, they send a response, the weights never leave their machines. You pay per token, you trust their privacy policy, you depend on their uptime, and you get the model they decide to run today.",
+    "Open-weight models (Llama, Qwen, Mistral, DeepSeek, others) ship the actual weight files publicly · you download them, you run them on your hardware, the model belongs to your machine in the same way a PDF does. Capability lags the frontier by 6-18 months typically, but the gap is narrowing.",
+    "The structural wins of open weights are sovereignty (the model cannot be silently changed or deprecated under you), privacy (the data never leaves your machine), and zero marginal cost after hardware is paid for (you are not paying per token, you are paying per electron). For some workloads these win decisively.",
+    "The structural costs are real · you maintain the inference stack, you debug your own GPU memory issues, you do not get model upgrades for free, and you carry the responsibility for what the model does on your hardware. The hidden engineering tax is the part that surprises operators.",
+    "The practical 2026 split looks like this · closed weights for frontier reasoning and agentic work where capability matters and privacy is acceptable. Open weights for high-volume routine tasks, privacy-critical work, and offline operation. Most serious operators run both."
+],
+    drillIntro: "You will pick one of your current workflows, project where it would land on the open-vs-closed split, and run it both ways for honest comparison.",
+    drillPrompt: "I want to honestly evaluate one of my current AI workflows against open-weight alternatives. The workflow: [DESCRIBE · e.g. 'I use Claude Sonnet to draft replies to customer support emails, ~40 per day']. Walk me through: 1) what specific open-weight model would I try as the closest substitute (name a version that runs reasonably on [YOUR HARDWARE])? 2) where will the capability gap likely show up · which kinds of inputs will the open model handle worse? 3) what does the privacy / cost / latency comparison look like in real numbers for my volume? 4) is there a hybrid · open-weight handles the easy 80%, closed-weight escalates the hard 20%? 5) realistic verdict: should I make this switch, run a pilot, or stay where I am? Do not flatter open weights if they do not win for my use case.",
+    drillSteps: [
+    "Pick one workflow with enough volume that the choice matters.",
+    "Run the prompt and get the open-weight candidate model name.",
+    "Pull that model via Ollama (or your local stack of choice).",
+    "Run the same 5 real inputs on both your closed and the open model.",
+    "Note where they agree, where they disagree, and where one fails outright.",
+    "Decide: full switch, hybrid escalation, or stay closed."
+],
+    outcome: [
+    "You ran the same task on both an open-weight and closed-weight model.",
+    "You can articulate the capability gap on YOUR data, not in abstract.",
+    "You decided open / closed / hybrid for that workflow with evidence.",
+    "You understand the engineering tax you would carry if you went local-only."
+],
+    trap: "Operators read about open-weight progress and assume the gap is closed · then run a 7B model on a reasoning task and watch it confidently produce wrong answers. The gap exists, it just lives in specific places. Test on your data, not on benchmarks.",
+    timeMinutes: 30,
+    next: null,
+    tags: ["local","models","BYOK","advanced"],
+  },
+  // ── L46 · PILOT · NEW (workflow-generated) ─────────────
+  {
+    slug: "ai-receipts-audit-trail",
+    level: "pilot",
+    number: 46,
+    title: "AI receipts: building your own audit trail",
+    oneLiner: "If you cannot replay what the AI did and why, you cannot debug it, defend it, or trust it · build receipts now, thank yourself later.",
+    concept: [
+    "A receipt is a durable record of an AI interaction · what model was called, what prompt went in, what response came out, what tools fired, what the result was, and when it happened. It is the AI equivalent of a database transaction log, and it is the foundation of every serious AI operation.",
+    "Without receipts, AI work is unauditable · you cannot answer 'why did the system do that on Tuesday,' you cannot replay a session to debug a bad output, you cannot demonstrate compliance to a customer or regulator, and you cannot improve a prompt based on what actually went wrong yesterday.",
+    "Minimum viable receipt schema · timestamp, model id (with exact version), full prompt (system + user + any context), full response, tool calls if any, cost in tokens, and a stable ID. Anything less and you are flying blind. Store as JSON, append to a log, never overwrite.",
+    "The blunt rule: if an AI output influences a real-world action (sending an email, modifying a file, running a script, making a decision you act on), the receipt should exist before you act, not after. After-the-fact reconstruction is not an audit trail · it is a vibes-based recollection.",
+    "Receipts compound in value · the first month, they let you debug. The first year, they let you measure improvement. By year two, they are the empirical record that lets you negotiate with vendors, satisfy auditors, and train your own systems on your own history. Stop treating them as overhead."
+],
+    drillIntro: "You will build a minimal receipts logger for one of your AI workflows in the next 30 minutes and start accumulating audit trail immediately.",
+    drillPrompt: "I want to build the minimum-viable receipts layer for one of my AI workflows. The workflow: [DESCRIBE · e.g. 'a Python script that calls Claude to classify customer emails']. Walk me through: 1) the exact JSON schema for one receipt record · timestamp, model id with version, full input, full output, tools called, token counts, cost estimate, stable UUID, 2) the smallest code change I can make to start logging every call to a local file (JSONL · one JSON object per line) without restructuring my code, 3) one query I can run a week from now to answer 'show me every time the model output was longer than 500 tokens last week,' 4) what I should add to the schema if my use case ever needs compliance audit (PII redaction notes, user consent flag, retention policy). Show me code, not abstractions.",
+    drillSteps: [
+    "Pick one AI workflow you currently run with no receipts.",
+    "Run the prompt and get the schema + wrapper code.",
+    "Add the receipts wrapper in under 30 minutes.",
+    "Let it run for one real day and look at the log.",
+    "Run the example query against your own log.",
+    "Decide which other workflows get receipts next."
+],
+    outcome: [
+    "You have a JSONL log file accumulating real receipts.",
+    "You ran one query against your own log and learned something.",
+    "You can defend one of your AI decisions with the receipt that backs it.",
+    "You know what fields you would add for a formal compliance setting."
+],
+    trap: "Operators say 'I'll add logging later' on every AI workflow they build · then six months in, when they finally need to debug a strange output, the data is gone. Receipts cost almost nothing to add upfront and cannot be retroactively created. Build them on day one.",
+    timeMinutes: 30,
+    next: null,
+    tags: ["verify","coding","advanced"],
+  },
+  // ── L47 · PILOT · NEW (workflow-generated) ─────────────
+  {
+    slug: "voice-cloning-ethics",
+    level: "pilot",
+    number: 47,
+    title: "Voice cloning: ethics and practical workflows",
+    oneLiner: "Cloning your own voice unlocks real workflows · cloning someone else's is a consent question with legal teeth · know the line.",
+    concept: [
+    "Voice cloning takes a sample of recorded speech (often as little as 30-60 seconds) and produces a synthesized voice model that can generate new arbitrary text in that voice. The technology is in 2026 reliably good enough that a casual listener cannot distinguish clone from original on short utterances.",
+    "Cloning your own voice is one of the genuine productivity unlocks of the era · narrate articles in your own voice without recording, produce voicemails and audio messages at scale, build accessibility outputs for your own content. The consent question is trivial because you are the speaker.",
+    "Cloning someone else's voice triggers immediate legal and ethical structures · most jurisdictions now have explicit right-of-publicity or 'voice likeness' protections, and consent (ideally written) is the floor below which you are exposed. 'My friend wouldn't mind' is not consent. 'I'll ask forgiveness later' is fraud.",
+    "Detection is improving in parallel · public services increasingly carry watermarks or invisible signatures, and platforms scan for unconsented voice cloning. The arms race is real, but the asymmetry now favors detection enough that 'I cloned my boss's voice to leave a prank message' is more likely to be caught than ignored.",
+    "Practical workflow for self-clones · use a service that requires verification (a phrase you read live, an identity check), keep your voice model in an account you control, never sell or share access. Treat the model file like a credential · it is, functionally, the key to impersonating you."
+],
+    drillIntro: "You will clone your own voice through one of the legitimate self-verifying services, produce one real artifact with it, and write your personal consent rules.",
+    drillPrompt: "I want to set up a self-voice-clone workflow responsibly. Walk me through: 1) one or two reputable services in 2026 that REQUIRE identity verification before cloning (no anonymous-upload services), comparing them on price and consent enforcement, 2) the exact setup steps · what sample length, what to record, how the verification step works, 3) one real practical use case I should try first to feel the value (narrating a blog post? a voice intro to a portfolio? a long-form thank-you note?), 4) the rules I should write for myself about when I will NOT use my clone (e.g., live deception, signing contracts, deepfake content), 5) the security practices around the model file itself · who has access, what's the revocation path. Treat this like setting up a credential I will own for years.",
+    drillSteps: [
+    "Pick a verified service and complete the identity check.",
+    "Record your voice sample following their instructions.",
+    "Generate one short artifact (a 60-second narration of something you wrote).",
+    "Listen to it · feel the line between 'remarkable' and 'unsettling.'",
+    "Write down your personal use rules (when you will, when you won't).",
+    "Note the revocation steps so you can delete the model if needed."
+],
+    outcome: [
+    "You have a clone of your own voice from a verified service.",
+    "You produced one real artifact using your clone.",
+    "You wrote down your personal consent rules in writing.",
+    "You know how to revoke or delete the clone if the service is compromised."
+],
+    trap: "Operators try voice cloning, decide it's amazing, and start using it casually without thinking through what happens if the model file leaks · or worse, casually clone someone else's voice 'just to test.' Both paths end badly. Verified self-cloning with written use rules is the only sane starting point.",
+    timeMinutes: 30,
+    next: null,
+    tags: ["voice","privacy","multimodal","advanced"],
+  },
 ];
 
 export function getLesson(slug: string): Lesson | undefined {

@@ -659,6 +659,97 @@ export default function LearnPage() {
         </div>
       </section>
 
+      {/* INDUSTRY TRACKS · 5 deep-dives */}
+      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+        <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::five industry tracks · domain-specific AI doctrine
+          </p>
+          <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+            Pick your industry.{" "}
+            <span className="text-[#22F0D5]">Get the discipline.</span>
+          </h2>
+          <p className="mt-5 max-w-2xl text-base leading-[1.65] text-[#9BA5A7] md:text-lg">
+            Healthcare. Legal. Marketing. Education. Finance. Each
+            track has the personas, the regulations, the safety rules,
+            the recommended stack, the do-not list, 5-8 named workflows
+            with full prompts, and a real-shaped case study from that
+            field.
+          </p>
+          <div className="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { href: "/learn/healthcare-ai", title: "Healthcare AI", sub: "HIPAA · clinical · documentation", accent: "#22F0D5" },
+              { href: "/learn/legal-ai", title: "Legal AI", sub: "ABA 512 · citation discipline · privilege", accent: "#FFB87A" },
+              { href: "/learn/marketing-ai", title: "Marketing AI", sub: "brand voice · FTC · trend signal", accent: "#22F0D5" },
+              { href: "/learn/education-ai", title: "Education AI", sub: "FERPA · differentiation · K-12+", accent: "#FFB87A" },
+              { href: "/learn/finance-ai", title: "Finance AI", sub: "SOC2 · GLBA · SOX · IRS 230", accent: "#FF7A1A" },
+            ].map((t) => (
+              <Link
+                key={t.href}
+                href={t.href}
+                className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/60"
+                style={{ borderLeftWidth: "4px", borderLeftColor: t.accent }}
+              >
+                <h3 className="text-xl font-semibold" style={{ color: t.accent }}>{t.title}</h3>
+                <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7]">{t.sub}</p>
+                <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">open track →</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INTERACTIVE + DAILY · quiz · prompts · resources · faq · templates */}
+      <section className="border-b border-[#1A2225]">
+        <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::interactive · daily · reference
+          </p>
+          <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+            Five more surfaces.{" "}
+            <span className="text-[#22F0D5]">Each one a habit anchor.</span>
+          </h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <Link href="/learn/quiz" className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/60" style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">::AI literacy quiz</p>
+              <h3 className="mt-3 text-xl font-semibold">Where do you actually sit?</h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7]">30 calibrated questions. 5 result tiers. No signup. localStorage-backed.</p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">take the quiz →</p>
+            </Link>
+            <Link href="/learn/prompts" className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/60" style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">::daily prompt</p>
+              <h3 className="mt-3 text-xl font-semibold">One prompt. Every day.</h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7]">70 hand-curated prompts. Auto-picks today&apos;s by date. Browse them all.</p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">open today&apos;s prompt →</p>
+            </Link>
+            <Link href="/learn/templates" className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/60" style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">::project templates</p>
+              <h3 className="mt-3 text-xl font-semibold">15 end-to-end workflows.</h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7]">Write a novella. Build a SaaS landing. Prep for an interview. Each: 5-12 steps with prompts.</p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">pick a template →</p>
+            </Link>
+            <Link href="/learn/faq" className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/60" style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">::FAQ</p>
+              <h3 className="mt-3 text-xl font-semibold">The questions humans actually ask.</h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7]">47 honest answers across 10 categories. No hedging.</p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">read the FAQ →</p>
+            </Link>
+            <Link href="/learn/resources" className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/60" style={{ borderLeftWidth: "4px", borderLeftColor: "#22F0D5" }}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">::vetted resources</p>
+              <h3 className="mt-3 text-xl font-semibold">30 podcasts · channels · newsletters.</h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7]">No affiliate revenue. Curated by level + category.</p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">open resources →</p>
+            </Link>
+            <Link href="/learn/cheatsheet" className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#FFB87A]/60" style={{ borderLeftWidth: "4px", borderLeftColor: "#FFB87A" }}>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">::6 languages</p>
+              <h3 className="mt-3 text-xl font-semibold">Cheatsheet · ES · FR · PT · HI · ZH · AR</h3>
+              <p className="mt-3 text-sm leading-[1.6] text-[#9BA5A7]">The one-page reference, translated. Spanish, French, Portuguese, Hindi, Mandarin, Arabic.</p>
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">browse languages →</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* LIBRARY TEASER */}
       <section className="border-b border-[#1A2225]">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
