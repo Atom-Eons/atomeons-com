@@ -15,6 +15,7 @@ const ATLAS = [
   { slug: "context", title: "Context windows", body: "How long-context works. Attention scaling. The 'lost in the middle' problem. Long-context evals." },
   { slug: "training", title: "How training actually works", body: "Pretraining corpora. Compute. Hyperparameters. The mechanics of building a frontier model." },
   { slug: "post-training", title: "Post-training", body: "Instruction tuning. RLHF. RLAIF. Tool-use post-training. The work that turns a base model into a useful product." },
+  { slug: "agents", title: "Agentic AI", body: "What 'agents' actually are. ReAct, Toolformer, SWE-bench. Claude Code, Cursor, Devin, Operator, Computer Use. The workflow-vs-agent distinction that finally clarifies the space. Anti-hype." },
 ];
 
 export const metadata: Metadata = {
