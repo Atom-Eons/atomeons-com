@@ -20,6 +20,7 @@ const ATLAS = [
   { slug: "benchmarks", title: "Benchmarks", body: "MMLU · MMLU-Pro · GPQA Diamond · HumanEval · SWE-bench Verified · MMMU · AIME · LMSYS Arena · HELM · ARC-AGI. What each measures, what it doesn't, how to read a 2026 leaderboard without getting suckered." },
   { slug: "rag", title: "RAG", body: "Retrieval-augmented generation in 2026. Naive RAG → hybrid search → contextual retrieval → reranking → query rewriting → GraphRAG → agentic RAG → long-context. Eight architectures + eight vector DBs + six failure modes." },
   { slug: "quantization", title: "Quantization", body: "How big models run on small hardware. FP32 → BF16 → FP8 → INT8 → INT4 → BitNet 1.58-bit. Methods: PTQ, QAT, GPTQ, AWQ, GGUF, AQLM, EXL2. What you lose, what you save, what to run where." },
+  { slug: "inference", title: "Inference", body: "What actually happens when you call a model. Tokenization, prefill, decode, KV cache. FlashAttention, paged attention, continuous batching, speculative decoding, prompt caching, GQA/MLA. Six facts about cost." },
 ];
 
 export const metadata: Metadata = {

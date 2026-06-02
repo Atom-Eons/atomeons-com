@@ -111,6 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/learn/atlas/benchmarks`, lastModified: now, changeFrequency: "monthly", priority: 0.92 },
     { url: `${BASE}/learn/atlas/rag`, lastModified: now, changeFrequency: "monthly", priority: 0.93 },
     { url: `${BASE}/learn/atlas/quantization`, lastModified: now, changeFrequency: "monthly", priority: 0.91 },
+    { url: `${BASE}/learn/atlas/inference`, lastModified: now, changeFrequency: "monthly", priority: 0.91 },
     { url: `${BASE}/learn/cyber/youtube`, lastModified: now, changeFrequency: "weekly", priority: 0.89 },
     { url: `${BASE}/learn/cyber/podcasts`, lastModified: now, changeFrequency: "weekly", priority: 0.89 },
     { url: `${BASE}/learn/career/pathways`, lastModified: now, changeFrequency: "monthly", priority: 0.89 },
