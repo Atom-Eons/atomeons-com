@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "cyber-index",
+    "aspect": "16:9",
+    "prompt": "Cinematic press-photo of a dimly lit cybersecurity operations center seen from above, dark concrete floors, banks of black-bezel monitors glowing in cool cyan and pale white, no humans visible, no readable text on screens, no logos. Aesthetic: Anduril press photography meets Blade Runner 2049, minimalist, premium, high-contrast. Color palette: pure black, deep teal shadow, single bio-cyan glow (#22F0D5). Shot on 35mm, anamorphic, shallow depth of field. No people, no text, no logos."
+  },
+  {
+    "slug": "modern",
+    "aspect": "16:9",
+    "prompt": "Sharp tactical photograph: a single small black quadcopter loitering above a fog-bank at dawn, top-down composition, distant industrial silhouettes below in deep grey. Mood: cold, observant, slightly ominous, lab-grade. No readable text, no markings, no logos, no people. Color palette: black, deep teal, single bio-cyan glow on the drone status light. Cinematic, 35mm, shallow depth of field, premium press-photo quality."
+  },
+  {
+    "slug": "llm-warfare",
+    "aspect": "16:9",
+    "prompt": "Abstract close-up of a black machined-aluminum server module with cooling fins, a single bio-cyan LED status indicator, surrounded by void black. Composition feels like a museum object photographed for a defense-industrial annual report. No text, no logos, no humans. Macro lens, hard rim light, deep blacks, premium cinematic press photography. Color palette: black, graphite, single bio-cyan accent (#22F0D5)."
+  },
+  {
+    "slug": "platforms",
+    "aspect": "16:9",
+    "prompt": "Architectural shot of a dark glass-and-steel control-room wall lined with seamless dark panels, faint cyan reflected highlights, deep teal shadows, no monitors visible. Mood: serious, hushed, premium, defense-industrial. No people, no text, no logos. Cinematic press-photo, 35mm anamorphic, deep blacks, single bio-cyan accent on edge highlights. Restrained, museum-grade."
+  },
+  {
+    "slug": "path",
+    "aspect": "16:9",
+    "prompt": "Long exposure photograph of a single thin cyan light-trail rising along a dark stair of black slate steps that recede into a fog of black-and-graphite. Suggests progression, no end visible. No people, no text, no logos. Cinematic press-photo quality, 35mm, deep blacks, single bio-cyan glow (#22F0D5). Restrained, premium, contemplative."
+  },
+  {
+    "slug": "labs",
+    "aspect": "16:9",
+    "prompt": "Overhead photograph of a dark workbench: a single black mechanical keyboard, a closed black laptop, a small black USB device, and a coiled ethernet cable, arranged neatly on dark concrete. A faint bio-cyan glow from the laptop edge. No people, no text, no readable labels, no logos. Top-down composition, hard rim light, deep blacks, premium product-still aesthetic."
+  },
+  {
+    "slug": "hackerone",
+    "aspect": "16:9",
+    "prompt": "Stylized still-life photograph: a single sealed manila envelope on a dark slate surface, with a barely visible cyan ribbon of light crossing the frame. Conveys discovery, disclosure, professionalism. No text, no logos, no readable markings. Hard rim light, deep blacks, premium press-photo. Color palette: black, slate grey, single bio-cyan accent (#22F0D5). Cinematic, restrained."
+  },
+  {
+    "slug": "legal",
+    "aspect": "16:9",
+    "prompt": "Symmetrical photograph of a dark brutalist courthouse facade at dusk, viewed from below, faint cyan reflection in tall narrow windows. No people, no readable signage, no logos. Mood: somber, weighty, serious-but-fair. Cinematic, 35mm, anamorphic, deep blacks. Color palette: black, deep teal shadow, single bio-cyan glow. Restrained, premium press-photo quality, museum-grade."
+  },
+  {
+    "slug": "serve",
+    "aspect": "16:9",
+    "prompt": "Press photograph of the silhouette of a dark concrete federal-style building at blue hour, framed against an overcast sky, single small bio-cyan-tinted window light. Mood: institutional, restrained, sober. No people, no readable signage, no logos, no flags visible. Cinematic, 35mm, anamorphic, deep blacks. Premium, museum-grade press-photo aesthetic. Color palette: black, slate grey, single bio-cyan accent (#22F0D5)."
+  },
+  {
+    "slug": "certs",
+    "aspect": "16:9",
+    "prompt": "Macro still-life photograph: a small stack of black hardcover books on a dark slate surface, edge-on, with a thin cyan bookmark protruding. Restrained, deliberate. No readable text on spines, no logos. Mood: study, mastery, patience. Hard rim light, deep blacks, premium press-photo. Color palette: black, graphite, single bio-cyan accent. Cinematic, museum-grade."
+  },
+  {
+    "slug": "ai-security",
+    "aspect": "16:9",
+    "prompt": "Abstract close-up of layered translucent dark panels backlit by a single bio-cyan glow source, suggesting a barrier or shield with subtle imperfections. No people, no text, no logos. Mood: defensive, geometric, premium. Cinematic, 35mm macro, deep blacks, single bio-cyan accent (#22F0D5). Restrained, museum-grade defense-industrial press-photo aesthetic."
+  },
+  {
+    "slug": "cyberwar",
+    "aspect": "16:9",
+    "prompt": "Cinematic press photograph: a single black undersea fiber-optic cable rising from dark water, droplets catching a thin cyan rim light, deep navy-black horizon, no boat or hand visible. Mood: cold, geopolitical, infrastructural. No people, no text, no logos. 35mm anamorphic, shallow depth of field, deep blacks, single bio-cyan accent (#22F0D5). Restrained, premium, museum-grade."
+  }
+]
