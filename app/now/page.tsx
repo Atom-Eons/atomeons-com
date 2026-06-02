@@ -59,6 +59,30 @@ async function loadLetterStats() {
 
 const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = [
   {
+    date: "2026-06-02",
+    what:
+      "Immersive homepage + design-system page · NEW. AtomEonsImmersiveHero rotates 12 of 67 Nano Banana Pro press-photos slowly across the viewport while massive variable-weight typography overlays. Stat strip across the bottom (200+ pages, 12 cyber tracks, 50+ atlases, CC-BY 4.0). HomeCurriculumWall is a bento of 18 cards proving the depth of /learn. /design-system is the language we build in, made public — Stripe Press / IBM Carbon / Vercel Geist tier.",
+    href: "/design-system",
+  },
+  {
+    date: "2026-06-02",
+    what:
+      "Nano Banana Pro photography pass · 67 hero images. 12 cyber-track heroes + 55 learn-surface heroes. Each one cinematic press-photo: one subject, no humans, no logos, no readable text. Sealed envelopes on slate, undersea fiber-optic cables, watch movements, machined heatsinks. The anti-cliché doctrine made literal across the site.",
+    href: "/learn",
+  },
+  {
+    date: "2026-06-01",
+    what:
+      "Readability + visual lift pass · 60% → 85%. 58-agent workflow audited 8 dimensions, prescribed 12 fixes, ship-verified. Site-wide animations deleted (bloom-drift, conic-rotate, screen-flicker — premium sites run static surfaces). Cyan accent demoted from wallpaper to signal (30+ touches/page → 3). The `::` mono eyebrow chrome stripped across 40 sections.",
+    href: "/founders-view",
+  },
+  {
+    date: "2026-06-01",
+    what:
+      "11-track cyber education + Hackers gate · NEW. /learn/cyber expansion: modern cyberwar (drones, Volt Typhoon, Replicator), LLM warfare (CIA Osiris, Task Force Lima, Lavender), defense platforms (Palantir, Anduril, Shield AI), hackerone path, legal (CFAA primer), federal serve paths, OSCP+OSEP+CISSP certs, AI security (OWASP LLM Top 10, MITRE ATLAS), historical cyberwar (Stuxnet through Change Healthcare). HackersGate front door — password 'hack the planet.'",
+    href: "/learn/cyber",
+  },
+  {
     date: "2026-05-23",
     what:
       "/pricing (NEW) — standalone $49 pricing surface. Product + FAQPage + Breadcrumb JSON-LD. 6-FAQ schema. Comparison ladder vs part-time-PM hire ($52K/yr), custom consulting ($40K-$120K), Claude Pro stack ($3,120/yr), Notion+Linear+Slack ($2,400/yr).",

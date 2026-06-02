@@ -1,3 +1,5 @@
+import { AtomEonsImmersiveHero } from "./_components/AtomEonsImmersiveHero";
+import { HomeCurriculumWall } from "./_components/HomeCurriculumWall";
 import { HeroPillarSequence } from "./_components/v2/HeroPillarSequence";
 import { HomeOnboardStrip } from "./_components/v2/HomeOnboardStrip";
 import { HomeLaunchTiles } from "./_components/HomeLaunchTiles";
@@ -56,9 +58,18 @@ export const revalidate = 300;
 export default function Home() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
-      {/* 1 — Hero: variable-weight H1 assembling four clauses on scroll.
-              The brand statement. No CTAs — the pillars carry them. */}
+      {/* 1 — IMMERSIVE HERO (2026-06-02 redesign pass). Photo mosaic of 12
+              of our 67 Nano Banana Pro press-photos, slow-rotating, with
+              massive variable-weight typography overlaid. Single primary
+              CTA + single ghost link. Stat strip at the bottom. The new
+              "first 5 seconds" of atomeons.com. */}
       <div data-cockpit-section="hero">
+        <AtomEonsImmersiveHero />
+      </div>
+
+      {/* 1.1 — HeroPillarSequence retained below the fold as the brand
+              spine moment (operator-locked 2026-05-20: four pillars). */}
+      <div data-cockpit-section="brand-spine">
         <HeroPillarSequence />
       </div>
 
@@ -86,6 +97,14 @@ export default function Home() {
               the pillars below. */}
       <div data-cockpit-section="four arms">
         <OrganismRail />
+      </div>
+
+      {/* 2.1 — CURRICULUM WALL (2026-06-02). Bento grid of 18 cards (6 large
+              + 12 small) surfacing the depth of /learn — 200+ pages with
+              real press-photo imagery. Proof-by-mass that AtomEons is a
+              real learning surface, not a marketing site. */}
+      <div data-cockpit-section="curriculum">
+        <HomeCurriculumWall />
       </div>
 
       {/* 3 — USE AI · the cockpit pillar. ORANGEBOX surfaced here as
