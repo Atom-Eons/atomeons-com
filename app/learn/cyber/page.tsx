@@ -77,6 +77,20 @@ const TRACKS = [
       "Cybersecurity is small enough that 2-3 conferences a year puts you in the conversation. What each is, when it runs, what tier, and how a student or junior pro actually gets there. Concrete next-step: attend one this year.",
   },
   {
+    slug: "youtube",
+    title: "YouTube channels worth subscribing to · 13 picks",
+    sub: "LiveOverflow · IppSec · John Hammond · NetworkChuck · The Cyber Mentor · STOK · DEF CON",
+    body:
+      "Thirteen YouTube channels that produce real cyber education. LiveOverflow + IppSec at the technical depth end, NetworkChuck + David Bombal at the on-ramp end, DEF CON + Black Hat for the conference archive. Three hours a week from this list = graduate-level coursework.",
+  },
+  {
+    slug: "podcasts",
+    title: "Cyber podcasts worth your commute · 10 picks",
+    sub: "Darknet Diaries · Risky Business · Smashing Security · Click Here · CyberWire · SANS Stormcast",
+    body:
+      "Ten cyber podcasts. Daily anchor (SANS Stormcast), weekly anchor (Risky Business), longform deep-dive (Darknet Diaries) — that's the right starter kit. Each picked for real recurring signal, not influencer noise.",
+  },
+  {
     slug: "modern",
     title: "What cyberwar looks like RIGHT NOW",
     sub: "Drones · loitering munitions · Volt + Salt Typhoon · Replicator",

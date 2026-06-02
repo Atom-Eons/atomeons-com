@@ -18,6 +18,7 @@ const ATLAS = [
   { slug: "agents", title: "Agentic AI", body: "What 'agents' actually are. ReAct, Toolformer, SWE-bench. Claude Code, Cursor, Devin, Operator, Computer Use. The workflow-vs-agent distinction that finally clarifies the space. Anti-hype." },
   { slug: "scaling-laws", title: "Scaling laws", body: "Kaplan 2020 → Chinchilla 2022 → inference-aware overtraining → o1 test-time scaling. How frontier-model labs decide N × D × FLOPs, and why GPT-5 / Claude 5 / Gemini 3 aren't 10× bigger by parameter count." },
   { slug: "benchmarks", title: "Benchmarks", body: "MMLU · MMLU-Pro · GPQA Diamond · HumanEval · SWE-bench Verified · MMMU · AIME · LMSYS Arena · HELM · ARC-AGI. What each measures, what it doesn't, how to read a 2026 leaderboard without getting suckered." },
+  { slug: "rag", title: "RAG", body: "Retrieval-augmented generation in 2026. Naive RAG → hybrid search → contextual retrieval → reranking → query rewriting → GraphRAG → agentic RAG → long-context. Eight architectures + eight vector DBs + six failure modes." },
 ];
 
 export const metadata: Metadata = {
