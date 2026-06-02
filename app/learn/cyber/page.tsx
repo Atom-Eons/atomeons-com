@@ -70,6 +70,13 @@ const TRACKS = [
       "Seven categories — history + journalism, cryptography + systems, red team, blue team, web + AppSec, career + culture, policy + ethics. Every title is on a serious cyber program's reading list or a senior researcher's recommended shelf.",
   },
   {
+    slug: "conferences",
+    title: "Where the field meets · 12 conferences",
+    sub: "DEF CON · Black Hat · BSides · RSA · ShmooCon · CCC · OWASP Global",
+    body:
+      "Cybersecurity is small enough that 2-3 conferences a year puts you in the conversation. What each is, when it runs, what tier, and how a student or junior pro actually gets there. Concrete next-step: attend one this year.",
+  },
+  {
     slug: "modern",
     title: "What cyberwar looks like RIGHT NOW",
     sub: "Drones · loitering munitions · Volt + Salt Typhoon · Replicator",
