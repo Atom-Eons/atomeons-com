@@ -56,6 +56,20 @@ const TRACKS = [
       "The named voices the field listens to. Twelve public-figure profiles sourced to books, congressional testimony, conference talks, reputable journalism. A junior cyber pro who knows zero names doesn't have the field's social context.",
   },
   {
+    slug: "timeline",
+    title: "Sixty years of cyber",
+    sub: "1969 ARPANET → 2026 Salt Typhoon · the arc in 50 entries",
+    body:
+      "From Bob Thomas's Creeper worm in 1971 to nation-state pre-positioning in critical infrastructure in 2026. Six eras, fifty entries, every one sourced to public material. The pattern across 60 years is the lesson.",
+  },
+  {
+    slug: "books",
+    title: "The definitive reading list · 24 books",
+    sub: "Cuckoo's Egg · Sandworm · Countdown to Zero Day · Applied Crypto · Practical Malware Analysis",
+    body:
+      "Seven categories — history + journalism, cryptography + systems, red team, blue team, web + AppSec, career + culture, policy + ethics. Every title is on a serious cyber program's reading list or a senior researcher's recommended shelf.",
+  },
+  {
     slug: "modern",
     title: "What cyberwar looks like RIGHT NOW",
     sub: "Drones · loitering munitions · Volt + Salt Typhoon · Replicator",
