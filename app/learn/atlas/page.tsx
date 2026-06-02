@@ -16,6 +16,7 @@ const ATLAS = [
   { slug: "training", title: "How training actually works", body: "Pretraining corpora. Compute. Hyperparameters. The mechanics of building a frontier model." },
   { slug: "post-training", title: "Post-training", body: "Instruction tuning. RLHF. RLAIF. Tool-use post-training. The work that turns a base model into a useful product." },
   { slug: "agents", title: "Agentic AI", body: "What 'agents' actually are. ReAct, Toolformer, SWE-bench. Claude Code, Cursor, Devin, Operator, Computer Use. The workflow-vs-agent distinction that finally clarifies the space. Anti-hype." },
+  { slug: "scaling-laws", title: "Scaling laws", body: "Kaplan 2020 → Chinchilla 2022 → inference-aware overtraining → o1 test-time scaling. How frontier-model labs decide N × D × FLOPs, and why GPT-5 / Claude 5 / Gemini 3 aren't 10× bigger by parameter count." },
 ];
 
 export const metadata: Metadata = {

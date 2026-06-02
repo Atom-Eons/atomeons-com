@@ -107,6 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/learn/atlas/training`, lastModified: now, changeFrequency: "monthly", priority: 0.88 },
     { url: `${BASE}/learn/atlas/post-training`, lastModified: now, changeFrequency: "monthly", priority: 0.88 },
     { url: `${BASE}/learn/atlas/agents`, lastModified: now, changeFrequency: "monthly", priority: 0.92 },
+    { url: `${BASE}/learn/atlas/scaling-laws`, lastModified: now, changeFrequency: "monthly", priority: 0.91 },
     { url: `${BASE}/learn/career/pathways`, lastModified: now, changeFrequency: "monthly", priority: 0.89 },
     { url: `${BASE}/learn/career/skill-tree`, lastModified: now, changeFrequency: "monthly", priority: 0.89 },
     { url: `${BASE}/learn/career/salaries`, lastModified: now, changeFrequency: "monthly", priority: 0.92 },
