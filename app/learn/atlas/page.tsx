@@ -22,6 +22,7 @@ const ATLAS = [
   { slug: "quantization", title: "Quantization", body: "How big models run on small hardware. FP32 → BF16 → FP8 → INT8 → INT4 → BitNet 1.58-bit. Methods: PTQ, QAT, GPTQ, AWQ, GGUF, AQLM, EXL2. What you lose, what you save, what to run where." },
   { slug: "inference", title: "Inference", body: "What actually happens when you call a model. Tokenization, prefill, decode, KV cache. FlashAttention, paged attention, continuous batching, speculative decoding, prompt caching, GQA/MLA. Six facts about cost." },
   { slug: "reasoning", title: "Reasoning models", body: "The o1/R1 paradigm. OpenAI o1 + o3, DeepSeek-R1, Gemini Thinking, Claude Extended Thinking. How inference-time-compute scaling works, what 'reasoning' actually means here, when to reach for these models." },
+  { slug: "diffusion", title: "Diffusion models", body: "How image, video, and audio actually get generated. DDPM → latent diffusion → classifier-free guidance → flow matching. Stable Diffusion, Flux, DALL-E 3, Imagen 4, Nano Banana Pro (the engine that powers atomeons.com's hero imagery), Sora, Veo, MusicGen, Suno, Udio." },
 ];
 
 export const metadata: Metadata = {
