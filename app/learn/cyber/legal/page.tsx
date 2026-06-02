@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CyberHeroImage } from "../_components/CyberHeroImage";
 
 export const metadata: Metadata = {
   title: "Legal · CFAA, scope, authorization · /learn/cyber · AtomEons",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function CyberLegalPage() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <CyberHeroImage slug="legal" alt={"Symmetrical photograph of a dark brutalist courthouse facade at dusk, faint cyan reflection in tall windows."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}

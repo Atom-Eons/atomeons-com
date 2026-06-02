@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CyberHeroImage } from "../_components/CyberHeroImage";
 
 const ACCENT = "#22F0D5";
 
@@ -147,6 +148,7 @@ export default function CyberPlatformsPage() {
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <CyberHeroImage slug="platforms" alt={"Architectural shot of a dark glass-and-steel control-room wall with faint cyan reflected highlights."} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
 
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">

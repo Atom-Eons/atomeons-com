@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CyberHeroImage } from "../_components/CyberHeroImage";
 
 /**
  * /learn/cyber/modern — what modern cyberwar actually looks like in 2026.
@@ -112,6 +113,7 @@ export default function CyberModernPage() {
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <CyberHeroImage slug="modern" alt={"Top-down photograph of a single small black drone loitering above fog at dawn, distant industrial silhouettes below."} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }} />
 
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">

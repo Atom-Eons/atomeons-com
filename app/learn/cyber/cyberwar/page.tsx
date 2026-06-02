@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CyberHeroImage } from "../_components/CyberHeroImage";
 
 const INCIDENTS = [
   {
@@ -67,6 +68,7 @@ export const metadata: Metadata = {
 export default function CyberWarPage() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <CyberHeroImage slug="cyberwar" alt={"Black undersea fiber-optic cable rising from dark water with droplets catching a thin cyan rim light."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}

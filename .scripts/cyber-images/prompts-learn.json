@@ -1,0 +1,366 @@
+[
+  {
+    "slug": "atlas-history",
+    "aspect": "16:9",
+    "prompt": "Museum-grade still-life photograph of three artifacts arranged in a precise line on dark slate: a vacuum tube, a perforated paper punch-card, and a polished black silicon chip wafer. Single low directional warm-cool light, deep shadows. No text, no logos, no humans. Cinematic 35mm, anamorphic, premium product-photography quality. Black background, single bio-cyan reflection (#22F0D5)."
+  },
+  {
+    "slug": "atlas-transformer-variants",
+    "aspect": "16:9",
+    "prompt": "Architectural still-life: a polished black branching Y-form sculpture of machined steel, photographed against deep void black. Three branches of slightly different lengths. Hard rim light, single bio-cyan edge highlight (#22F0D5). Museum object photography. No text, no logos, no humans. Cinematic, premium."
+  },
+  {
+    "slug": "atlas-rlhf-family",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph of four tuning forks of decreasing size arranged in a row on dark slate, all matte black, single bio-cyan reflection (#22F0D5) on the tallest fork. Hard rim light, deep blacks. Museum-grade still-life. No text, no logos. Cinematic, anamorphic."
+  },
+  {
+    "slug": "atlas-mech-interp",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of an open mechanical watch movement: intricate gears, springs, and jewels visible, all in dark steel and brass tones with a single bio-cyan jewel highlight (#22F0D5). Black void background, hard rim light. No text, no logos. Museum-grade timepiece photography. Cinematic, premium."
+  },
+  {
+    "slug": "atlas-multimodal",
+    "aspect": "16:9",
+    "prompt": "Architectural still-life: a black sphere, a black cube, and a black cylinder arranged in a precise line on dark slate. Each form perfectly machined, slightly different sizes. Single bio-cyan rim light (#22F0D5) on the leading edge of each form. Museum-object photography. No text, no logos, no humans. Cinematic, deep blacks."
+  },
+  {
+    "slug": "atlas-embeddings",
+    "aspect": "16:9",
+    "prompt": "Macro photograph: a single point of bio-cyan light (#22F0D5) suspended inside a perfectly clear transparent crystal cube, viewed against pure black void. Hard side light reveals refraction. No text, no logos. Museum-grade jewelry-photography style. Cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "atlas-hallucinations",
+    "aspect": "16:9",
+    "prompt": "Photograph of a black-mirror surface at a slight angle, partial reflection slightly distorted as if rippled, set in matte-black surroundings. Single thin bio-cyan rim light (#22F0D5) along one edge. Mood: uncertainty, controlled distortion. No text, no logos, no humans. Cinematic, premium press-photo aesthetic."
+  },
+  {
+    "slug": "atlas-safety",
+    "aspect": "16:9",
+    "prompt": "Wide photograph of a single small bio-cyan night-light (#22F0D5) glowing in a vast dark concrete chamber, perspective from far away. The light is contained, careful, intentional. No people, no text, no logos. Cinematic 35mm anamorphic, deep blacks, museum-grade architectural photography."
+  },
+  {
+    "slug": "atlas-moe",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph of seven identical matte-black gears arranged in a precise hexagonal cluster, one central gear glowing with bio-cyan rim light (#22F0D5). Dark slate surface. Hard directional light. No text, no logos. Museum-object photography. Cinematic, premium."
+  },
+  {
+    "slug": "atlas-context",
+    "aspect": "16:9",
+    "prompt": "Photograph of a long folded paper-like form (like an architectural accordion fan) extending into vanishing-point distance, all matte black, single bio-cyan light tracing one of its folds (#22F0D5). Photographed edge-on. Mood: scale, depth. No text, no logos. Cinematic, deep blacks."
+  },
+  {
+    "slug": "atlas-training",
+    "aspect": "16:9",
+    "prompt": "Vast top-down architectural photograph of an empty modern data-center server room: parallel rows of black equipment cabinets receding to the horizon. Cool overhead lighting, single bio-cyan status indicator (#22F0D5) visible in distance. No people, no readable text, no logos. Cinematic, premium defense-industrial photography."
+  },
+  {
+    "slug": "atlas-post-training",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of a watchmaker's precision tool kit on dark felt: tiny black tweezers, screwdrivers, and tuning forks arranged with deliberate care. Single bio-cyan rim light (#22F0D5) on the leading instrument. No text, no logos, no humans. Museum-grade craft-photography. Cinematic, premium."
+  },
+
+  {
+    "slug": "career-pathways",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph from above: a single road of dark wet asphalt forking into two paths against pure black surroundings. A single bio-cyan light trail (#22F0D5) follows one of the paths into the distance. No people, no signage, no text, no logos. Cinematic anamorphic, deep blacks, museum-grade architectural photography."
+  },
+  {
+    "slug": "career-skill-tree",
+    "aspect": "16:9",
+    "prompt": "Photograph of bare leafless tree branches silhouetted against deep navy-black sky, geometric branching pattern, one single small bio-cyan light (#22F0D5) at the end of one branch. Cinematic, museum-grade, restrained. No text, no logos. Premium press-photo aesthetic."
+  },
+  {
+    "slug": "career-salaries",
+    "aspect": "16:9",
+    "prompt": "Architectural still-life: five matte-black machined rectangular blocks of varying heights arranged in a row on dark slate, ascending like a bar chart, single bio-cyan rim light (#22F0D5) on the tallest. No text, no numbers, no logos. Museum-object photography. Cinematic, deep blacks, hard rim light."
+  },
+  {
+    "slug": "career-resume",
+    "aspect": "16:9",
+    "prompt": "Macro still-life: a single folded sheet of dark matte paper on dark slate, with one bio-cyan thread (#22F0D5) embedded through the fold. Hard rim light, deep blacks. No readable text, no logos. Museum-grade still-life, cinematic, premium."
+  },
+  {
+    "slug": "career-interviews",
+    "aspect": "16:9",
+    "prompt": "Wide photograph of two empty matte-black chairs positioned across a wide dark wooden table in a vast dark room. Single warm overhead spotlight pooling on the table surface. Mood: serious, considered. No people, no text, no logos. Cinematic anamorphic, premium architectural press-photo."
+  },
+  {
+    "slug": "career-non-technical",
+    "aspect": "16:9",
+    "prompt": "Top-down macro still-life: a single matte-black bound notebook closed with a black pen lying beside it on dark slate. Single bio-cyan rim light (#22F0D5) along the pen's edge. No text on notebook, no logos. Museum-grade product photography. Cinematic, deep blacks."
+  },
+  {
+    "slug": "career-negotiation",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph of an unlit chess board with all matte-black pieces, photographed in moody side-lit shadow, single bio-cyan rim light (#22F0D5) on the king. No text, no logos, no humans. Museum-grade still-life. Cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "career-independent",
+    "aspect": "16:9",
+    "prompt": "Photograph of a long dark concrete corridor, a single warm-lit doorway visible far at the end, bio-cyan light spilling from beneath (#22F0D5). Vanishing-point composition, deep shadows along the walls. No people, no signage, no text, no logos. Cinematic anamorphic, premium architectural press-photo."
+  },
+
+  {
+    "slug": "trust-threat-model",
+    "aspect": "16:9",
+    "prompt": "Photograph of a massive dark concrete fortress wall photographed from below at a steep angle, single bio-cyan watchpoint light visible at the top (#22F0D5). Mood: defense, vigilance. No people, no text, no logos. Cinematic anamorphic 35mm, premium architectural photography, deep blacks."
+  },
+  {
+    "slug": "trust-prompt-injection",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of a single drop of clear liquid suspended in mid-air just above a perfectly still pool of dark water. The drop catches a single bio-cyan rim light (#22F0D5). Hard side light, dramatic composition. No text, no logos, no humans. Museum-grade still-life. Cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "trust-data-residency",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of a black machined globe on dark slate, one thin bio-cyan circle (#22F0D5) inscribed around its equator like a longitude line. Hard rim light, deep blacks. No text on globe, no logos, no continents visible. Museum-grade object photography, cinematic, premium."
+  },
+  {
+    "slug": "trust-compliance",
+    "aspect": "16:9",
+    "prompt": "Architectural still-life: a precise stack of three dark sealed folders on a dark slate desk surface, single bio-cyan ribbon (#22F0D5) protruding from one edge. No text on folders, no logos. Museum-grade still-life. Hard rim light, cinematic, premium, deep blacks."
+  },
+
+  {
+    "slug": "decode-acronyms",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of geometric pattern of evenly-spaced raised dots on dark paper, like braille but with no readable pattern, single bio-cyan dot illuminated (#22F0D5). Hard side light reveals texture. No readable text, no logos. Museum-grade still-life, cinematic, premium."
+  },
+  {
+    "slug": "decode-papers",
+    "aspect": "16:9",
+    "prompt": "Photograph of a single folded dark paper manuscript edge-on, the fold catching a thin bio-cyan rim light (#22F0D5). Resting on dark slate surface. No readable text, no logos. Museum-grade archival-style still-life. Cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "decode-people",
+    "aspect": "16:9",
+    "prompt": "Photograph of a matte-black desk lamp with a bio-cyan-tinted bulb glow (#22F0D5), casting a pool of warm light on dark wood surface. The lamp is the subject, no other objects. No people, no text, no logos. Museum-grade product photography. Cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "decode-jargon",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of dark woven fabric with three bio-cyan threads (#22F0D5) woven through it in a geometric pattern. Hard side light reveals texture. No text, no logos. Museum-grade textile photography. Cinematic, premium, deep blacks."
+  },
+
+  {
+    "slug": "tracker-models",
+    "aspect": "16:9",
+    "prompt": "Photograph of a row of seven matte-black machined cylindrical forms of varying heights on dark slate, like artillery shells or industrial canisters but unmarked. Single bio-cyan rim light (#22F0D5) along the leading edge of each. No text, no logos. Museum-grade object photography, cinematic, deep blacks."
+  },
+  {
+    "slug": "tracker-inference-providers",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of a large matte-black aluminum heatsink with parallel cooling fins, single bio-cyan LED status indicator (#22F0D5) at one corner. Photographed in deep void black with hard rim light. No text, no logos. Museum-grade defense-industrial product photography. Cinematic, premium."
+  },
+  {
+    "slug": "tracker-leaderboard",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph of five identical matte-black stacked trays of slightly different heights on dark slate, ascending in a precise row. Single bio-cyan rim light (#22F0D5) on the tallest. No text, no numbers, no logos. Museum-grade still-life, cinematic, deep blacks."
+  },
+  {
+    "slug": "tracker-open-weights",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph of an open dark leather-bound folio book on dark slate, pages blank, single bio-cyan bookmark ribbon (#22F0D5) extending from between pages. No readable text, no logos. Museum-grade archival still-life. Hard rim light, cinematic, deep blacks."
+  },
+  {
+    "slug": "tracker-news",
+    "aspect": "16:9",
+    "prompt": "Photograph of a precise stack of folded dark newsprint pages on dark slate, edge-on, single bio-cyan light strip (#22F0D5) running along one edge. No readable text, no logos. Museum-grade still-life, cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "tracker-funding",
+    "aspect": "16:9",
+    "prompt": "Macro still-life: a single matte-black coin balanced on edge on dark slate, single bio-cyan rim light (#22F0D5) along its face. Long shadow. No markings on coin, no text, no logos. Museum-grade object photography. Cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "tracker-regulation",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of a single matte-black wax-sealed legal document on dark slate, the seal a thin bio-cyan ring (#22F0D5). No readable text, no logos, no readable seal markings. Museum-grade archival photography. Hard rim light, cinematic, deep blacks."
+  },
+  {
+    "slug": "tracker-failures",
+    "aspect": "16:9",
+    "prompt": "Photograph of a single matte-black ceramic tile with a fine hairline fracture across its surface, bio-cyan light (#22F0D5) leaking from beneath the crack. Photographed top-down on dark slate. No text, no logos. Museum-grade still-life, cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "tracker-layoffs",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph of a single empty matte-black office chair in a vast empty dark office, single overhead cool spotlight pooling around it. Mood: stillness, absence. No people, no text, no logos. Cinematic anamorphic, premium architectural press-photo. Deep blacks."
+  },
+  {
+    "slug": "tracker-conferences",
+    "aspect": "16:9",
+    "prompt": "Photograph of three matte-black microphone stands arranged in a precise line on a dark venue stage, single overhead spotlight pooling on the lead mic, bio-cyan rim light (#22F0D5) along the shaft. No people, no audience visible, no readable text, no logos. Museum-grade event photography. Cinematic, deep blacks."
+  },
+
+  {
+    "slug": "index-learn",
+    "aspect": "16:9",
+    "prompt": "Wide architectural photograph of vast dark library shelves receding into vanishing point, geometric repetition of bookshelves filled with matte-black books, single bio-cyan reading light (#22F0D5) glowing at one shelf in the distance. No people, no readable text on spines, no logos. Cinematic anamorphic, premium architectural press-photo. Deep blacks."
+  },
+  {
+    "slug": "index-atlas",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of a globe of dark polished volcanic stone on a matte-black plinth, single bio-cyan equatorial line (#22F0D5) inscribed around it. Hard rim light, deep blacks. No continents visible, no text, no logos. Museum-grade object photography. Cinematic, premium."
+  },
+  {
+    "slug": "index-career",
+    "aspect": "16:9",
+    "prompt": "Photograph of a dark concrete stairway photographed from the bottom looking up to a single point of bio-cyan light (#22F0D5) at the top of the stairs. Vanishing-point composition, deep shadows on each step. No people, no signage, no text, no logos. Cinematic anamorphic, premium architectural press-photo. Deep blacks."
+  },
+  {
+    "slug": "index-trust",
+    "aspect": "16:9",
+    "prompt": "Photograph of a massive dark steel vault door slightly ajar in a void-black wall, bio-cyan light (#22F0D5) spilling from within. Hard rim light reveals the door's machined edge. No text, no logos, no humans. Museum-grade architectural press-photo. Cinematic anamorphic, deep blacks, premium."
+  },
+  {
+    "slug": "index-decode",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of a stack of dark optical lenses on dark slate, edge-on view, single bio-cyan reflection (#22F0D5) catching one lens edge. No text, no logos. Museum-grade product photography, cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "index-calc",
+    "aspect": "16:9",
+    "prompt": "Top-down still-life of a single matte-black slide rule on dark slate desk surface, single bio-cyan rim light (#22F0D5) along its center groove. No readable markings, no text, no logos. Museum-grade craft-tool photography, cinematic, deep blacks, premium."
+  },
+
+  {
+    "slug": "industry-healthcare-ai",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of polished matte-black medical precision instruments (forceps, scalpel-handle, retractor — all unmarked, no blades visible) arranged on dark surgical cloth, single bio-cyan rim light (#22F0D5) along the lead instrument. Hard side light, dramatic shadows. No people, no readable text, no logos. Museum-grade still-life, cinematic, deep blacks, premium."
+  },
+  {
+    "slug": "industry-legal-ai",
+    "aspect": "16:9",
+    "prompt": "Photograph of a single matte-black gavel resting on its dark walnut base on dark slate surface. Single overhead cool spotlight, single bio-cyan rim light (#22F0D5) along the gavel head. No text, no logos, no humans. Museum-grade still-life, cinematic, deep blacks, premium."
+  },
+  {
+    "slug": "industry-marketing-ai",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph of three matte-black folded magazines arranged in a precise stack on dark slate. Single thin bio-cyan light strip (#22F0D5) along the leading edge of the top magazine. No readable text on covers, no logos. Museum-grade print-design photography. Cinematic, deep blacks, premium."
+  },
+  {
+    "slug": "industry-education-ai",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of a precise stack of three matte-black hardcover books on dark slate, edge-on, single bio-cyan bookmark ribbon (#22F0D5) extending from the middle book. No readable text on spines, no logos. Museum-grade archival photography. Hard rim light, cinematic, deep blacks, premium."
+  },
+  {
+    "slug": "industry-finance-ai",
+    "aspect": "16:9",
+    "prompt": "Wide overhead architectural photograph of a vast dark trading floor: rows of empty black monitor stations receding to horizon, single bio-cyan status light (#22F0D5) glowing on one terminal in the distance. No people, no readable text or charts on screens, no logos. Cinematic anamorphic, premium defense-industrial press-photo. Deep blacks."
+  },
+
+  {
+    "slug": "calc-cost-calculator",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of a single matte-black abacus bead on a dark slate surface, single bio-cyan rim light (#22F0D5) along its center groove. Hard rim light, deep blacks. No text, no logos. Museum-grade still-life, cinematic, premium."
+  },
+  {
+    "slug": "calc-token-counter",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of fine dark grains falling through a matte-black hourglass with bio-cyan rim light (#22F0D5) along the hourglass frame. Hard rim light, deep blacks. No text, no logos, no humans. Museum-grade still-life photography. Cinematic, premium."
+  },
+  {
+    "slug": "calc-model-comparator",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of two near-identical matte-black cubes positioned side by side on dark slate, one with a single bio-cyan rim light (#22F0D5) along one edge. Hard rim light, deep blacks. No text, no logos. Museum-grade still-life. Cinematic, premium."
+  },
+  {
+    "slug": "calc-stack-recommender",
+    "aspect": "16:9",
+    "prompt": "Photograph of a precise stack of seven matte-black machined blocks of varying sizes on dark slate, single bio-cyan rim light (#22F0D5) along the top block. Hard rim light, deep blacks. No text, no logos, no markings. Museum-grade still-life. Cinematic, premium."
+  },
+  {
+    "slug": "calc-hardware-calculator",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of a graphics card heatsink: parallel cooling fins, matte-black machined metal, single bio-cyan LED status indicator (#22F0D5) at one corner. Hard rim light, deep void background. No text, no logos. Museum-grade defense-industrial product photography. Cinematic, premium."
+  },
+  {
+    "slug": "calc-break-even",
+    "aspect": "16:9",
+    "prompt": "Photograph of a perfectly balanced matte-black seesaw fulcrum on dark slate, single bio-cyan rim light (#22F0D5) along the central pivot. Side-on composition, hard rim light. No text, no logos, no humans. Museum-grade still-life. Cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "calc-prompt-diff",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph of two folded dark sheets of paper overlapping at one corner on dark slate, single bio-cyan rim light (#22F0D5) where they meet. No readable text, no logos. Museum-grade still-life photography. Cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "calc-roi",
+    "aspect": "16:9",
+    "prompt": "Macro still-life: a single matte-black coin standing on edge on dark slate, casting a long shadow, single bio-cyan reflection (#22F0D5) on its face. Hard rim light, deep blacks. No markings on coin, no text, no logos. Museum-grade object photography. Cinematic, premium."
+  },
+  {
+    "slug": "calc-redact",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of a single matte-black rectangular redaction mark obscuring a section of dark paper on dark slate, single bio-cyan rim light (#22F0D5) along the redaction edge. No readable text, no logos. Museum-grade archival still-life. Cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "calc-jailbreak-checker",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of a single matte-black padlock with a fine hairline bio-cyan crack (#22F0D5) running across its face. Resting on dark slate. Hard rim light, deep blacks. No text, no logos, no keys. Museum-grade still-life. Cinematic, premium."
+  },
+  {
+    "slug": "calc-context-fit",
+    "aspect": "16:9",
+    "prompt": "Macro still-life: a matte-black sphere being placed into a precisely matching matte-black socket on dark slate, bio-cyan rim light (#22F0D5) along the meeting edge. Hard side light, deep shadows. No text, no logos, no humans. Museum-grade craft-photography. Cinematic, premium."
+  },
+  {
+    "slug": "calc-carbon",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of a single piece of matte-black charcoal on dark stone, a thin wisp of bio-cyan smoke (#22F0D5) rising from one corner. Hard rim light, deep blacks. No text, no logos. Museum-grade still-life. Cinematic, premium."
+  },
+
+  {
+    "slug": "vs-claude-vs-chatgpt",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of two near-identical matte-black spheres positioned side by side on dark slate, one slightly larger and with a bio-cyan rim light (#22F0D5) along one edge. Hard rim light, deep blacks. No text, no logos. Museum-grade object photography. Cinematic, premium."
+  },
+  {
+    "slug": "vs-cloud-vs-local-ai",
+    "aspect": "16:9",
+    "prompt": "Photograph of a dark cloud silhouette against deep navy sky on one side and a dark mountain silhouette on the other, single bio-cyan moon (#22F0D5) between them. Mood: contrast, choice. No text, no logos. Cinematic anamorphic, premium landscape photography. Deep blacks."
+  },
+  {
+    "slug": "vs-subscription-vs-one-time",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of a matte-black wall calendar (no readable numbers or text) beside a single closed matte-black hardcover book on dark slate. Single bio-cyan rim light (#22F0D5) along the book's spine. Hard rim light, deep blacks. No logos. Museum-grade still-life. Cinematic, premium."
+  },
+
+  {
+    "slug": "brand-press",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of three matte-black broadcast microphones arranged neatly on dark cloth, single overhead spotlight pooling on the lead mic, single bio-cyan rim light (#22F0D5) along the shaft. No people, no text, no logos. Museum-grade event photography, cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "brand-founders-view",
+    "aspect": "16:9",
+    "prompt": "Photograph of a single matte-black desk lamp casting a warm circular pool of light on dark walnut wood desk surface, single bio-cyan reflection (#22F0D5) on the lamp head. No other objects visible, no people, no text, no logos. Mood: late-night work, quiet focus. Museum-grade product photography. Cinematic anamorphic, deep blacks, premium."
+  },
+  {
+    "slug": "brand-manifesto",
+    "aspect": "16:9",
+    "prompt": "Photograph of a single massive matte-black slab of carved stone in a dark gallery space, deep carved grooves catching shadow, single bio-cyan rim light (#22F0D5) along one edge. No readable text or symbols, no logos, no humans. Cinematic anamorphic, museum-grade architectural press-photo. Deep blacks, premium."
+  },
+  {
+    "slug": "brand-about",
+    "aspect": "16:9",
+    "prompt": "Top-down photograph of dark architectural blueprint paper unrolled on a dark wood surface, single bio-cyan straightedge (#22F0D5) laid across it. No readable lines or markings, no text, no logos. Museum-grade design-studio still-life. Hard rim light, cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "brand-now",
+    "aspect": "16:9",
+    "prompt": "Macro photograph of an analog clock face with no numbers or hands visible, just a single bio-cyan tick mark (#22F0D5) at the 12-o'clock position on a matte-black dial. Hard rim light, deep blacks. No text, no logos. Museum-grade timepiece photography. Cinematic, premium."
+  },
+  {
+    "slug": "brand-pricing",
+    "aspect": "16:9",
+    "prompt": "Still-life photograph of a single matte-black hang-tag (like a luxury-good tag) on dark stone, a bio-cyan string (#22F0D5) threaded through its hole. No readable text on tag, no logos, no markings. Museum-grade product photography, cinematic, premium, deep blacks."
+  },
+  {
+    "slug": "brand-start",
+    "aspect": "16:9",
+    "prompt": "Photograph of a single matte-black door slightly ajar at the end of a dark corridor, bio-cyan light (#22F0D5) spilling from the gap. Vanishing-point composition. No people, no signage, no text, no logos. Cinematic anamorphic 35mm, premium architectural press-photo. Deep blacks."
+  }
+]

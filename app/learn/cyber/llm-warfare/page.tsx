@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CyberHeroImage } from "../_components/CyberHeroImage";
 
 const ACCENT = "#22F0D5";
 const WARN = "#FFB87A";
@@ -88,6 +89,7 @@ export default function CyberLLMWarfarePage() {
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <CyberHeroImage slug="llm-warfare" alt={"Macro close-up of a black machined-aluminum server module with a single bio-cyan status LED against pure black."} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
 
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">

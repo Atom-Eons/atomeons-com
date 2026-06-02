@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CyberHeroImage } from "../_components/CyberHeroImage";
 
 const CERTS = [
   { name: "CompTIA Security+", cost: "$370", time: "2-4 months", level: "Entry", body: "The federal-floor cert. DoD 8570 baseline · most federal cyber-coded billets require it or equivalent. Multiple-choice exam, 90 questions, 90 minutes. Worthwhile as the first cert · zero employers will be impressed but many gates require it. Free study material everywhere (Professor Messer YouTube is the canonical free path).", verdict: "Buy it." },
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
 export default function CyberCertsPage() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <CyberHeroImage slug="certs" alt={"Macro still-life of a small stack of black hardcover books edge-on with a thin cyan bookmark protruding."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}

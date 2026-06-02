@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CyberHeroImage } from "../_components/CyberHeroImage";
 
 export const metadata: Metadata = {
   title: "Bug bounty path · HackerOne · /learn/cyber · AtomEons",
@@ -50,6 +51,7 @@ const PLATFORMS = [
 export default function CyberHackerOnePage() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <CyberHeroImage slug="hackerone" alt={"Still-life of a sealed manila envelope on dark slate with a thin cyan ribbon of light crossing the frame."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}

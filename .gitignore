@@ -60,3 +60,5 @@ tailwindcss-*.log
 .lesson-block.txt
 .cm-*.txt
 .letter-*.json
+
+.env*.local

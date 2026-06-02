@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CyberHeroImage } from "../_components/CyberHeroImage";
 
 const OWASP_LLM = [
   { id: "LLM01", name: "Prompt Injection", body: "Direct or indirect manipulation of model instructions via user input. Indirect injection (model reads tainted external content — webpage, PDF, email, RAG corpus) is the harder variant. Most-cited LLM-specific vulnerability in 2026 deployments." },
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
 export default function CyberAISecurityPage() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <CyberHeroImage slug="ai-security" alt={"Layered translucent dark panels backlit by a single bio-cyan glow source, suggesting a defensive barrier."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}

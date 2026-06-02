@@ -33,8 +33,8 @@ from pathlib import Path
 from typing import Optional
 
 ROOT = Path(__file__).resolve().parents[2]
-PROMPTS_PATH = ROOT / ".scripts/cyber-images/prompts.json"
-OUT_DIR = ROOT / "public/cyber-images"
+DEFAULT_PROMPTS_PATH = ROOT / ".scripts/cyber-images/prompts.json"
+DEFAULT_OUT_DIR = ROOT / "public/cyber-images"
 DEFAULT_MODEL = "gemini-3-pro-image"  # Nano Banana Pro GA
 FALLBACK_MODEL = "nano-banana-pro-preview"  # explicit Nano Banana Pro alias
 API_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
@@ -138,16 +138,21 @@ def main() -> int:
     p.add_argument("--fallback", default=FALLBACK_MODEL, help="model used if --model errors per-request")
     p.add_argument("--rate-sec", type=float, default=1.0, help="sleep between requests")
     p.add_argument("--max-retries", type=int, default=2, help="retries per slug on transient failure")
+    p.add_argument("--input", default=str(DEFAULT_PROMPTS_PATH), help="input prompts json")
+    p.add_argument("--out", default=str(DEFAULT_OUT_DIR), help="output directory")
     args = p.parse_args()
 
-    if not PROMPTS_PATH.exists():
-        print(f"ERROR: {PROMPTS_PATH} not found. Run prompts builder first.", file=sys.stderr)
+    prompts_path = Path(args.input)
+    out_dir = Path(args.out)
+
+    if not prompts_path.exists():
+        print(f"ERROR: {prompts_path} not found.", file=sys.stderr)
         return 2
 
     api_key = get_api_key()
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
 
-    with PROMPTS_PATH.open(encoding="utf-8") as f:
+    with prompts_path.open(encoding="utf-8") as f:
         prompts = json.load(f)
 
     if args.slug:
@@ -157,7 +162,7 @@ def main() -> int:
             return 2
 
     print(f"generating {len(prompts)} image(s) with model={args.model}")
-    print(f"output dir: {OUT_DIR}")
+    print(f"output dir: {out_dir}")
 
     successes = []
     failures = []
@@ -166,7 +171,7 @@ def main() -> int:
         slug = entry["slug"]
         prompt = entry["prompt"]
         aspect = entry.get("aspect", "16:9")
-        out_path = OUT_DIR / f"{slug}.png"
+        out_path = out_dir / f"{slug}.png"
 
         if out_path.exists() and not args.force:
             print(f"[{i:>2}/{len(prompts)}] {slug}  -> exists, skipping")
