@@ -458,7 +458,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="atlas-history" heroImageAlt={"Three artifacts on dark slate: a vacuum tube, a perforated punch-card, and a black silicon chip — the chronology of compute."} />
     </>
   );
 }

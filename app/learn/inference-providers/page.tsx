@@ -539,7 +539,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="tracker-inference-providers" heroImageAlt={"A matte-black aluminum heatsink with a single bio-cyan LED — where inference actually runs."} />
     </>
   );
 }

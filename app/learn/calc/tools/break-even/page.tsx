@@ -197,5 +197,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} />;
+  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} heroImageSlug="calc-break-even" heroImageAlt={"A perfectly balanced matte-black seesaw fulcrum on dark slate."} />;
 }

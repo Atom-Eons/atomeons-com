@@ -373,7 +373,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="tracker-leaderboard" heroImageAlt={"Five identical matte-black stacked trays of varying heights — the leaderboard."} />
     </>
   );
 }

@@ -314,7 +314,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="atlas-training" heroImageAlt={"Vast top-down architectural shot of an empty server room — where training actually happens."} />
     </>
   );
 }

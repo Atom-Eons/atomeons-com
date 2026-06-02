@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LearnHeroImage } from "../../_components/LearnHeroImage";
 
 const ATLAS = [
   { slug: "history", title: "History of AI", body: "Symbolic AI → connectionism → transformers → frontier era. The chronology that explains why 2026 looks the way it does." },
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 export default function AtlasIndex() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <LearnHeroImage slug="index-atlas" alt={"A globe of dark polished volcanic stone on a matte-black plinth, bio-cyan equatorial line."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}

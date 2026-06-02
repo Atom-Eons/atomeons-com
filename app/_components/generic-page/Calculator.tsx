@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { LearnHeroImage } from "../LearnHeroImage";
 import type { CalculatorSpec } from "./types";
 
 /**
@@ -67,9 +68,13 @@ function inputToNumber(v: string | number, type: "number" | "select"): number {
 export function Calculator({
   spec,
   breadcrumb,
+  heroImageSlug,
+  heroImageAlt,
 }: {
   spec: CalculatorSpec;
   breadcrumb: { label: string; href?: string }[];
+  heroImageSlug?: string;
+  heroImageAlt?: string;
 }) {
   const accent = spec.accent || "#22F0D5";
 
@@ -108,6 +113,9 @@ export function Calculator({
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      {heroImageSlug && heroImageAlt && (
+        <LearnHeroImage slug={heroImageSlug} alt={heroImageAlt} />
+      )}
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           {breadcrumb.map((b, i) => (

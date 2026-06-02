@@ -490,7 +490,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="atlas-multimodal" heroImageAlt={"A black sphere, a black cube, and a black cylinder on dark slate — three modalities, one form factor."} />
     </>
   );
 }

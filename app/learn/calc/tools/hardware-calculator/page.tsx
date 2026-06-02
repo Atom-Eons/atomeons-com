@@ -198,5 +198,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} />;
+  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} heroImageSlug="calc-hardware-calculator" heroImageAlt={"Macro of a graphics card heatsink with parallel cooling fins and a bio-cyan LED."} />;
 }

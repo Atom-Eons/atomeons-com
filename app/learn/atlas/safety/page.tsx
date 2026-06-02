@@ -357,7 +357,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="atlas-safety" heroImageAlt={"A single small bio-cyan light glowing in a vast dark concrete chamber — safety is what you keep contained."} />
     </>
   );
 }

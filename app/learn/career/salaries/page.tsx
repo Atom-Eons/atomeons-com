@@ -431,7 +431,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="career-salaries" heroImageAlt={"Five matte-black machined blocks of ascending heights — salary bands as bar chart."} />
     </>
   );
 }

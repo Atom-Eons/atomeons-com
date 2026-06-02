@@ -354,7 +354,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="atlas-hallucinations" heroImageAlt={"A black-mirror surface with a slightly distorted reflection — confident lies look like truth."} />
     </>
   );
 }

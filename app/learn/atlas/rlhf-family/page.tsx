@@ -426,7 +426,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="atlas-rlhf-family" heroImageAlt={"Four matte-black tuning forks of decreasing size on dark slate — RLHF, DPO, KTO, ORPO."} />
     </>
   );
 }

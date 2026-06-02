@@ -428,7 +428,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="tracker-news" heroImageAlt={"A precise stack of folded dark newsprint pages with a bio-cyan light strip along one edge."} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LearnHeroImage } from "../LearnHeroImage";
 import type { ContentPage, Section } from "./types";
 
 /**
@@ -31,14 +32,22 @@ import type { ContentPage, Section } from "./types";
 export function GenericPage({
   page,
   breadcrumb,
+  heroImageSlug,
+  heroImageAlt,
 }: {
   page: ContentPage;
   breadcrumb: { label: string; href?: string }[];
+  heroImageSlug?: string;
+  heroImageAlt?: string;
 }) {
   const accent = page.accent || "#22F0D5";
 
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      {heroImageSlug && heroImageAlt && (
+        <LearnHeroImage slug={heroImageSlug} alt={heroImageAlt} />
+      )}
+
       {/* breadcrumb */}
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[11px] tracking-[0.08em] text-[#6B7779]">

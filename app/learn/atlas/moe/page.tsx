@@ -460,7 +460,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="atlas-moe" heroImageAlt={"Seven identical matte-black gears in a hexagonal cluster, one glowing cyan — mixture of experts."} />
     </>
   );
 }

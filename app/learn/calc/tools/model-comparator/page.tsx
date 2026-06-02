@@ -276,5 +276,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} />;
+  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} heroImageSlug="calc-model-comparator" heroImageAlt={"Two near-identical matte-black cubes on dark slate, one with bio-cyan rim light."} />;
 }

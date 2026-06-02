@@ -531,7 +531,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="career-skill-tree" heroImageAlt={"Bare leafless tree branches against deep navy sky, a single bio-cyan light at one branch tip."} />
     </>
   );
 }

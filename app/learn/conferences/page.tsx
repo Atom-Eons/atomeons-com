@@ -490,7 +490,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="tracker-conferences" heroImageAlt={"Three matte-black microphone stands on a dark stage under a single overhead spotlight."} />
     </>
   );
 }

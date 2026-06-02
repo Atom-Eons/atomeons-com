@@ -242,5 +242,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} />;
+  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} heroImageSlug="calc-stack-recommender" heroImageAlt={"A precise stack of seven matte-black machined blocks of varying sizes."} />;
 }

@@ -369,7 +369,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="career-independent" heroImageAlt={"A long dark corridor with a single warm-lit doorway at the end, bio-cyan light spilling from beneath."} />
     </>
   );
 }

@@ -309,7 +309,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="trust-prompt-injection" heroImageAlt={"A single drop of liquid suspended above a perfectly still dark pool — prompt injection is one drop."} />
     </>
   );
 }

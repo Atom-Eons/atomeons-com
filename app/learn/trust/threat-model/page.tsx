@@ -402,7 +402,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="trust-threat-model" heroImageAlt={"A massive dark concrete fortress wall from below, single bio-cyan watchpoint at the top."} />
     </>
   );
 }

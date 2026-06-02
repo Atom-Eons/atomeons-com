@@ -364,7 +364,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="trust-compliance" heroImageAlt={"A precise stack of three dark sealed folders with a bio-cyan ribbon — compliance is paperwork done right."} />
     </>
   );
 }

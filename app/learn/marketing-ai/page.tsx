@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LearnHeroImage } from "../../_components/LearnHeroImage";
 
 const TRACK = {
   title: "Marketing AI",
@@ -232,6 +233,7 @@ export default function TrackPage() {
   const t = TRACK;
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <LearnHeroImage slug="industry-marketing-ai" alt={"Three matte-black folded magazines in a precise stack with a bio-cyan light along the top edge."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}

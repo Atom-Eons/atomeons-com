@@ -342,7 +342,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="career-pathways" heroImageAlt={"A dark wet road forking into two paths, a single bio-cyan trail following one — career pathways branch."} />
     </>
   );
 }

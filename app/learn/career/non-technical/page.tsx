@@ -564,7 +564,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="career-non-technical" heroImageAlt={"A closed matte-black notebook with a pen beside it on dark slate — non-technical roles."} />
     </>
   );
 }

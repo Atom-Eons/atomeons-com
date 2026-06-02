@@ -478,7 +478,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="decode-jargon" heroImageAlt={"Dark woven fabric with three bio-cyan threads in a geometric pattern — jargon is just woven language."} />
     </>
   );
 }

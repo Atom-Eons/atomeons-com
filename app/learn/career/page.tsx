@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LearnHeroImage } from "../../_components/LearnHeroImage";
 
 const CAREER = [
   { slug: "pathways", title: "Career pathways", body: "Research engineer · ML engineer · MLOps · AI product · prompt engineer · applied AI · the actual job ladders and how they branch." },
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
 export default function CareerIndex() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <LearnHeroImage slug="index-career" alt={"A dark concrete stairway from the bottom looking up to a single point of bio-cyan light."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}

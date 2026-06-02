@@ -1048,7 +1048,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="decode-acronyms" heroImageAlt={"Geometric raised dots on dark paper, one bio-cyan dot illuminated — acronyms decoded."} />
     </>
   );
 }

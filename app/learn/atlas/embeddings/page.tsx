@@ -471,7 +471,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="atlas-embeddings" heroImageAlt={"A single point of bio-cyan light suspended inside a clear crystal cube — a vector in semantic space."} />
     </>
   );
 }

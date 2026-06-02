@@ -487,7 +487,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="tracker-open-weights" heroImageAlt={"An open dark leather folio with a bio-cyan bookmark — open-weight models are the field's library."} />
     </>
   );
 }

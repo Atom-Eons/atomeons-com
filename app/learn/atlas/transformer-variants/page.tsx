@@ -472,7 +472,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} />
+      <GenericPage page={PAGE_DATA} breadcrumb={BREADCRUMB} heroImageSlug="atlas-transformer-variants" heroImageAlt={"Polished black branching Y-form sculpture against deep void black — the transformer family tree."} />
     </>
   );
 }

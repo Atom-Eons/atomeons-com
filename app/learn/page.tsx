@@ -8,6 +8,7 @@ import { LearnProgress } from "./LearnProgress";
 import { LabHero } from "../_components/v2/LabHero";
 import { LearnSpineTLDR } from "./LearnSpineTLDR";
 import { ContinueReading } from "./ContinueReading";
+import { LearnHeroImage } from "../_components/LearnHeroImage";
 
 /**
  * /learn — the AI literacy curriculum spine.
@@ -176,6 +177,7 @@ const breadcrumbJsonLd = {
 export default function LearnPage() {
   return (
     <main className="relative z-10 text-[#F2F4F5]">
+      <LearnHeroImage slug="index-learn" alt={"Vast dark library shelves receding to vanishing point — the learn surface."} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}

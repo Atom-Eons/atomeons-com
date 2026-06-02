@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LearnHeroImage } from "../../_components/LearnHeroImage";
 
 const TRUST = [
   { slug: "threat-model", title: "AI threat model", body: "What can go wrong in an AI application — prompt injection, data leakage, model theft, supply-chain compromise. The structured way to think about it." },
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default function TrustIndex() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <LearnHeroImage slug="index-trust" alt={"A massive dark steel vault door slightly ajar, bio-cyan light spilling from within."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}

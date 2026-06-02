@@ -208,5 +208,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} />;
+  return <Calculator spec={CALC_SPEC} breadcrumb={BREADCRUMB} heroImageSlug="calc-cost-calculator" heroImageAlt={"A single matte-black abacus bead on dark slate with bio-cyan rim light."} />;
 }

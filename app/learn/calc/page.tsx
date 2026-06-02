@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LearnHeroImage } from "../../_components/LearnHeroImage";
 
 const CALCS = [
   { slug: "tools/cost-calculator", title: "Cost calculator", body: "What an AI workload actually costs per month. Input tokens, output tokens, request volume, model choice — the math for real budgets." },
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 export default function CalcIndex() {
   return (
     <main className="relative z-10 bg-black text-[#F2F4F5]">
+      <LearnHeroImage slug="index-calc" alt={"A matte-black slide rule on dark slate with bio-cyan rim light along its center groove."} />
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}
