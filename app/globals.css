@@ -1,3 +1,5 @@
+/* @import rules must precede all other rules (CSS spec). Newsreader serif + JetBrains Mono Variable from Google Fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..800&family=JetBrains+Mono:wght@400..800&display=swap");
 @import "tailwindcss";
 
 /* =============================================================================
@@ -38,13 +40,6 @@
  * site. Noir-cinema tokens are additive; existing surfaces keep working
  * while new surfaces use the noir scale.
  * ============================================================================= */
-
-/* Newsreader serif via Google Fonts — editorial long-form register.
- * Variable axis for opsz so we can run 19/30 body and 30/36 deck without
- * loading a second file. Self-host via next/font in layout.tsx is the
- * end-state migration; this @import is the bridge so the serif works the
- * moment this CSS ships, before layout.tsx is touched. */
-@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..800&family=JetBrains+Mono:wght@400..800&display=swap");
 
 @theme {
   /* ---------------------------------------------------------------------------

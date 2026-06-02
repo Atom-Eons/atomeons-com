@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "./_components/Header";
+import { Header } from "./_components/V3/Header";
 
 /**
  * Inter Variable — full weight axis (100–900). Powers the
@@ -17,7 +17,7 @@ const inter = Inter({
   variable: "--font-inter",
   axes: ["opsz"],
 });
-import { Footer } from "./_components/Footer";
+import Footer from "./_components/V3/Footer";
 import { MadeWithOrangebox } from "./_components/MadeWithOrangebox";
 import { XAdsPixel } from "./_components/XAdsPixel";
 import { Analytics } from "@vercel/analytics/next";
