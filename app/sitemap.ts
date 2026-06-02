@@ -70,6 +70,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/learn/cyber/modern`, lastModified: now, changeFrequency: "daily", priority: 0.95 },
     { url: `${BASE}/learn/cyber/llm-warfare`, lastModified: now, changeFrequency: "daily", priority: 0.95 },
     { url: `${BASE}/learn/cyber/platforms`, lastModified: now, changeFrequency: "weekly", priority: 0.94 },
+    { url: `${BASE}/learn/cyber/breaches`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },
+    { url: `${BASE}/learn/cyber/threat-actors`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },
+    { url: `${BASE}/learn/cyber/tools`, lastModified: now, changeFrequency: "weekly", priority: 0.92 },
     // nvidia-tier-50 sub-area index pages
     { url: `${BASE}/learn/atlas`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },
     { url: `${BASE}/learn/career`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },

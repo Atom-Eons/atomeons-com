@@ -28,6 +28,27 @@ const ACCENT = "#22F0D5";
 
 const TRACKS = [
   {
+    slug: "breaches",
+    title: "15 breaches that defined cybersecurity",
+    sub: "Stuxnet → Target → NotPetya → SolarWinds → Colonial → Change Healthcare → Volt + Salt Typhoon",
+    body:
+      "Each row is a case study taught in every serious cybersecurity program. Public sources only (SEC filings, DOJ indictments, CISA, FBI, reputable journalism). The pattern across all fifteen — supply chain dominant, patches late, ransomware blurred with geopolitics, pre-positioning the 2026 threat.",
+  },
+  {
+    slug: "threat-actors",
+    title: "Threat actor encyclopedia · 16 named groups",
+    sub: "APT28 · APT29 · Sandworm · Lazarus · Volt Typhoon · LockBit · Cl0p · Scattered Spider",
+    body:
+      "The named groups every cyber pro knows cold. Ten state-sponsored APTs (Russia, China, North Korea, Iran, US-attributable Equation Group) + six criminal ransomware crews. Sources: DOJ indictments + CISA advisories + Mandiant + Microsoft Threat Intelligence + CrowdStrike. Public attribution only.",
+  },
+  {
+    slug: "tools",
+    title: "Defensive tool catalogue · 32 named tools",
+    sub: "Wireshark · Nmap · Burp · Ghidra · Volatility · Splunk · Sigma · MITRE Caldera",
+    body:
+      "Every tool in every job description, in eight categories: network analysis, vulnerability scanning, web AppSec, reverse engineering, OSINT, SIEM, endpoint IR, detection engineering. What each tool is, who uses it, where to learn it legally. Recognition-first, not how-to-attack.",
+  },
+  {
     slug: "modern",
     title: "What cyberwar looks like RIGHT NOW",
     sub: "Drones · loitering munitions · Volt + Salt Typhoon · Replicator",
