@@ -62,3 +62,4 @@ tailwindcss-*.log
 .letter-*.json
 
 .env*.local
+app/globals.css.bak

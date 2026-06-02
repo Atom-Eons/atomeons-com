@@ -1,49 +1,901 @@
 @import "tailwindcss";
 
-/* V5 theme — frontier black + bio-cyan glow + ORANGEBOX orange CTA retained.
-   Existing v1.4 color tokens kept for backward-compat on legacy components. */
+/* =============================================================================
+ * ATOMEONS NOIR-CINEMA THEME — V6
+ *
+ * Winner: noir-cinema (D7). Three identities at once:
+ *   1. Cybersecurity leader — defense-industrial gravitas (#08090B base,
+ *      #1F242B hairline, #FF4D4D live-signal dot)
+ *   2. AI college alternative — academic depth via Newsreader serif for
+ *      editorial long-form + §-indexed section structure
+ *   3. Design-inspiration site — the Variable-Weight Reveal as signature
+ *      move (Inter Display Variable, real font-variation-settings axis
+ *      animation, not faux-bold swap)
+ *
+ * Palette (8 colors only — restraint is the move):
+ *   --color-noir-ink     : #08090B    base canvas
+ *   --color-noir-elev    : #0F1114    elevated surface
+ *   --color-noir-paper   : #F4F4F2    inverted surface + primary text on ink
+ *   --color-noir-mute    : #9CA3AF    secondary text
+ *   --color-noir-dim     : #5A6068    tertiary text + dividers on paper
+ *   --color-noir-hair    : #1F242B    hairline borders on ink
+ *   --color-noir-cyan    : #22F0D5    bio-cyan — preserved brand equity,
+ *                                     single live-signal accent only
+ *   --color-noir-pulse   : #FF4D4D    the 1.2s pulsing dot — alarm/alive
+ *
+ * Typography:
+ *   --font-display       : Inter Variable (wght 100-900 axis) — display
+ *   --font-sans          : Inter Variable — body 17/26
+ *   --font-serif         : Newsreader Variable — editorial long-form 19/30
+ *   --font-mono          : JetBrains Mono Variable — receipts/hashes/timestamps
+ *                          (Berkeley Mono paid fallback noted but not bundled)
+ *
+ * Scale 1.333 (modular, no in-between sizes — whitespace does the work):
+ *   12 → 14 → 17 → 22 → 30 → 40 → 56 → 80 → 120 → 200
+ *
+ * LEGACY TOKENS PRESERVED — 200+ existing pages reference --color-orange,
+ * --color-bg, --color-fg, --color-amber, etc. Burning them breaks half the
+ * site. Noir-cinema tokens are additive; existing surfaces keep working
+ * while new surfaces use the noir scale.
+ * ============================================================================= */
+
+/* Newsreader serif via Google Fonts — editorial long-form register.
+ * Variable axis for opsz so we can run 19/30 body and 30/36 deck without
+ * loading a second file. Self-host via next/font in layout.tsx is the
+ * end-state migration; this @import is the bridge so the serif works the
+ * moment this CSS ships, before layout.tsx is touched. */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..800&family=JetBrains+Mono:wght@400..800&display=swap");
+
 @theme {
-  /* legacy v1.4 tokens — DO NOT REMOVE (still referenced across components) */
-  --color-danger: #ff4f5e;
-  --color-bg: #04100d;
-  --color-fg: #f7f0e4;
-  --color-muted: #a7b8ad;
-  --color-line: #204538;
-  --color-card: #071915;
-  --color-card2: #0a211b;
-  --color-orange: #ff7a18;
-  --color-amber: #ffc46b;
-  --color-green: #75ff92;
-  --color-red: #ff4f5e;
-  --color-blue: #59d9ff;
-  --color-trace: #1b8b75;
-  --color-solder: #c7f8df;
-  --color-ink: #06110e;
+  /* ---------------------------------------------------------------------------
+   * V6 NOIR-CINEMA — primary palette (additive, do not collide with v5/legacy)
+   * ------------------------------------------------------------------------- */
+  --color-noir-ink:    #08090B;
+  --color-noir-elev:   #0F1114;
+  --color-noir-paper:  #F4F4F2;
+  --color-noir-mute:   #9CA3AF;
+  --color-noir-dim:    #5A6068;
+  --color-noir-hair:   #1F242B;
+  --color-noir-cyan:   #22F0D5;
+  --color-noir-pulse:  #FF4D4D;
 
-  /* v5 tokens — bio-cyan + pure black + signature orange retained */
-  --color-v5-bg: #000000;
-  --color-v5-bg-elev: #0A0F11;
-  --color-v5-fg: #F2F4F5;
-  --color-v5-fg-muted: #6B7779;
-  --color-v5-cyan: #22F0D5;
-  --color-v5-cyan-dim: #0FB39E;
-  --color-v5-orange: #FF7A1A;
-  --color-v5-orange-hot: #FFA45A;
-  --color-v5-border: #1A2225;
+  /* ---------------------------------------------------------------------------
+   * LEGACY V1.4 TOKENS — DO NOT REMOVE
+   * Still referenced across 200+ pages and 80+ components. Removing any of
+   * these breaks production. New surfaces should reach for noir-* tokens
+   * instead, but existing surfaces stay on these until migrated explicitly.
+   * ------------------------------------------------------------------------- */
+  --color-danger:  #ff4f5e;
+  --color-bg:      #04100d;
+  --color-fg:      #f7f0e4;
+  --color-muted:   #a7b8ad;
+  --color-line:    #204538;
+  --color-card:    #071915;
+  --color-card2:   #0a211b;
+  --color-orange:  #ff7a18;
+  --color-amber:   #ffc46b;
+  --color-green:   #75ff92;
+  --color-red:     #ff4f5e;
+  --color-blue:    #59d9ff;
+  --color-trace:   #1b8b75;
+  --color-solder:  #c7f8df;
+  --color-ink:     #06110e;
 
-  /* Inter is loaded via next/font in layout.tsx and exposed as
-     --font-inter on <html>. We chain it ahead of system fonts so the
-     HeroPillarSequence weight-axis transition has a real variable
-     font to interpolate against, with graceful fallback to system
-     sans before Inter loads. */
+  /* ---------------------------------------------------------------------------
+   * V5 TOKENS — bio-cyan + pure black + signature orange. Still in active
+   * use on cockpit / hero / OrangeBox surfaces. Keep until v6 migration of
+   * those specific components is explicitly scheduled.
+   * ------------------------------------------------------------------------- */
+  --color-v5-bg:           #000000;
+  --color-v5-bg-elev:      #0A0F11;
+  --color-v5-fg:           #F2F4F5;
+  --color-v5-fg-muted:     #6B7779;
+  --color-v5-cyan:         #22F0D5;
+  --color-v5-cyan-dim:     #0FB39E;
+  --color-v5-orange:       #FF7A1A;
+  --color-v5-orange-hot:   #FFA45A;
+  --color-v5-border:       #1A2225;
+
+  /* ---------------------------------------------------------------------------
+   * Typography stacks. Inter Variable is loaded by next/font in layout.tsx
+   * and exposed as --font-inter on <html>. Newsreader + JetBrains Mono are
+   * loaded by the @import above (bridge), with a self-host migration path
+   * via next/font/google for production.
+   * ------------------------------------------------------------------------- */
+  --font-display:
+    var(--font-inter), "Inter Variable", ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
   --font-sans:
-    var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+    var(--font-inter), "Inter Variable", ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --font-serif:
+    "Newsreader", "Source Serif Pro", "Iowan Old Style", "Charter",
+    "Georgia", "Times New Roman", serif;
+
   --font-mono:
-    ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+    "Berkeley Mono", "JetBrains Mono", "JetBrains Mono Variable",
+    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ---------------------------------------------------------------------------
+   * Modular scale — ratio 1.333. Discrete steps only; no in-between sizes.
+   * Whitespace does the work that smaller jumps usually do.
+   *
+   *   12 → caption / mono receipts
+   *   14 → small body / nav
+   *   17 → body (canonical)
+   *   22 → lede / section intro
+   *   30 → small deck / serif body
+   *   40 → deck
+   *   56 → secondary display
+   *   80 → display
+   *  120 → hero (lower bound)
+   *  200 → hero (upper bound, clamp ceiling)
+   * ------------------------------------------------------------------------- */
+  --text-12: 0.75rem;       /* 12 */
+  --text-12--line-height: 1rem;
+  --text-14: 0.875rem;      /* 14 */
+  --text-14--line-height: 1.25rem;
+  --text-17: 1.0625rem;     /* 17 */
+  --text-17--line-height: 1.625rem;
+  --text-22: 1.375rem;      /* 22 */
+  --text-22--line-height: 2rem;
+  --text-30: 1.875rem;      /* 30 */
+  --text-30--line-height: 2.25rem;
+  --text-40: 2.5rem;        /* 40 */
+  --text-40--line-height: 2.75rem;
+  --text-56: 3.5rem;        /* 56 */
+  --text-56--line-height: 3.5rem;
+  --text-80: 5rem;          /* 80 */
+  --text-80--line-height: 4.75rem;
+  --text-120: 7.5rem;       /* 120 */
+  --text-120--line-height: 6.75rem;
+  --text-200: 12.5rem;      /* 200 */
+  --text-200--line-height: 11rem;
+
+  /* ---------------------------------------------------------------------------
+   * Tracking — display goes tight (-0.04em) and editorial body goes neutral.
+   * Mono eyebrows go wide for the architectural index-tab feel.
+   * ------------------------------------------------------------------------- */
+  --tracking-display: -0.04em;
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0em;
+  --tracking-eyebrow:  0.18em;
+  --tracking-section:  0.24em;
+
+  /* ---------------------------------------------------------------------------
+   * Spacing — 4px base, lab-grade granularity. Tailwind defaults preserved.
+   * ------------------------------------------------------------------------- */
+  --spacing-hairline: 1px;
+
+  /* ---------------------------------------------------------------------------
+   * Radii — noir-cinema runs hard edges. 2px for chips, 0 for surfaces.
+   * ------------------------------------------------------------------------- */
+  --radius-noir-chip: 2px;
+  --radius-noir-card: 0;
+
+  /* ---------------------------------------------------------------------------
+   * The Variable-Weight Reveal — exposed as a custom property so the scroll
+   * driver in HeroPillarSequence (or any client component) can write
+   * --reveal-wght and let CSS interpolate the font-variation-settings axis.
+   * Defaults are the resting end-state (full weight). The scroll handler
+   * rewinds these to 100 / 0.04em on top-of-page, then drives them toward
+   * 900 / -0.04em across the first 400px of scroll.
+   * ------------------------------------------------------------------------- */
+  --reveal-wght:     900;
+  --reveal-tracking: -0.04em;
+
+  /* Live Signal Panel — hairline border + corner-grid spacing tokens.
+   * Same composition cyber buyers read as "operational" and designers
+   * screenshot as "architecturally interesting." */
+  --signal-border:   #1F242B;
+  --signal-glow:     rgba(255, 77, 77, 0.55);
 }
 
-/* v5 utility helpers — opt-in via classes, won't break existing surfaces */
+/* =============================================================================
+ * BASE LAYER — html / body / a / selection
+ * The body retains pure black (#000) as the canonical surface for the
+ * existing cockpit/scanline composition, with a 1px difference vs noir-ink
+ * (#08090B) reserved for elevated cards. This keeps existing components
+ * unaffected while noir surfaces opt in via bg-noir-ink utility.
+ * ============================================================================= */
+
+html,
+body {
+  background: #000;
+  color: #f7f0e4;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv02", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Site-wide decorative motion deleted 2026-06-01 per readability-pass
+   workflow wf_79e1e01d-513. Premium references (Apple, Stripe, Linear,
+   Anthropic) all run static surfaces. Atmosphere is now component-scoped
+   only — AuroraHero, mesh-gradient, scanlines, cta-orbital, etc. */
+
+a {
+  color: #ff7a18;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background: rgba(255, 122, 24, 0.3);
+  color: #f7f0e4;
+}
+
+/* Light mode refusal — the cockpit is dark only, on-brand humor */
+@media (prefers-color-scheme: light) {
+  html, body {
+    background: #000 !important;
+    color: #f7f0e4 !important;
+  }
+}
+
+/* =============================================================================
+ * NOIR-CINEMA UTILITIES (V6) — opt-in via classes, additive to v5/legacy
+ * ============================================================================= */
+
+/* Surfaces */
+.noir-ink     { background: #08090B; }
+.noir-elev    { background: #0F1114; }
+.noir-paper   { background: #F4F4F2; color: #08090B; }
+.noir-paper a { color: #08090B; }
+
+/* Foreground */
+.noir-text       { color: #F4F4F2; }
+.noir-text-mute  { color: #9CA3AF; }
+.noir-text-dim   { color: #5A6068; }
+
+/* Hairlines — the single recurring border weight across the entire system.
+ * 1px solid #1F242B on noir-ink. Use border-noir-hair Tailwind utility from
+ * the @theme, or this class for non-Tailwind contexts. */
+.noir-hair        { border-color: #1F242B; }
+.noir-hair-t      { border-top: 1px solid #1F242B; }
+.noir-hair-b      { border-bottom: 1px solid #1F242B; }
+.noir-hair-l      { border-left: 1px solid #1F242B; }
+.noir-hair-r      { border-right: 1px solid #1F242B; }
+.noir-hair-all    { border: 1px solid #1F242B; }
+
+/* Editorial body — Newsreader 19/30 (1.1875rem/1.875rem) for serif long-form
+ * inside the §-indexed sections. The single serif register on the site.
+ * Use `class="font-serif text-noir-editorial"` for the canonical pairing. */
+.text-noir-editorial {
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;     /* 19 */
+  line-height: 1.875rem;    /* 30 */
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  font-feature-settings: "kern", "liga", "onum";
+}
+
+/* Mono receipts — 12/16 JetBrains Mono with wide tracking. Used for SHA-256
+ * hashes, ISO timestamps, build IDs, coordinates, anywhere the lab needs to
+ * read as "instrument output, not marketing copy." */
+.text-noir-receipt {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;       /* 12 */
+  line-height: 1rem;        /* 16 */
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mono eyebrow — uppercase tracker for section §-labels, "EST. 2024",
+ * "MARCO ISLAND, FL", etc. Pairs with text-noir-receipt for grid columns. */
+.text-noir-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;     /* 11 */
+  line-height: 1rem;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #9CA3AF;
+}
+
+/* =============================================================================
+ * THE SIGNATURE MOVE — VARIABLE-WEIGHT REVEAL
+ *
+ * Set --reveal-wght (100→900) and --reveal-tracking (0.04em → -0.04em)
+ * from a scroll handler on the parent element. The headline does not
+ * move; it thickens, like a thought solidifying. Real font-variation-
+ * settings axis interpolation on a true variable font, not faux-bold
+ * swapping. The screenshot vector for designer Twitter.
+ *
+ * Usage:
+ *   <h1 className="noir-reveal" style={{ '--reveal-wght': scrollY }}>
+ *     The lab does not sleep
+ *   </h1>
+ * ============================================================================= */
+
+.noir-reveal {
+  font-family: var(--font-display);
+  font-weight: var(--reveal-wght, 900);
+  font-variation-settings: "wght" var(--reveal-wght, 900);
+  letter-spacing: var(--reveal-tracking, -0.04em);
+  font-size: clamp(80px, 12vw, 200px);
+  line-height: 0.92;
+  color: #F4F4F2;
+  /* The interpolation itself. 600ms cubic for the resting state; the
+   * scroll driver overrides --reveal-wght every frame, so this transition
+   * gives a buttery feel when scroll snaps stop. */
+  transition:
+    font-variation-settings 80ms linear,
+    letter-spacing 80ms linear;
+  text-rendering: geometricPrecision;
+  /* Prevent line-height collapsing the descenders at display sizes. */
+  padding-block: 0.05em;
+}
+
+/* Static end-states for environments without a scroll driver (e.g. SSR
+ * before hydration, screenshot pipelines, prerender). */
+.noir-reveal--hair { --reveal-wght: 100; --reveal-tracking: 0.04em; }
+.noir-reveal--mid  { --reveal-wght: 500; --reveal-tracking: 0em; }
+.noir-reveal--bold { --reveal-wght: 900; --reveal-tracking: -0.04em; }
+
+/* Display tier — the §01 / §02 headlines below the hero. 80/76 on desktop,
+ * scales down via clamp. Inter Display variable, weight 700, tight tracking.
+ * Use as `<h2 className="noir-display">`. */
+.noir-display {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: 0.95;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+  letter-spacing: -0.03em;
+  color: #F4F4F2;
+}
+
+/* Deck tier — 40/44, weight 600. Section openers under display headlines. */
+.noir-deck {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.5vw, 40px);
+  line-height: 1.1;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
+  letter-spacing: -0.02em;
+  color: #F4F4F2;
+}
+
+/* =============================================================================
+ * LIVE SIGNAL PANEL — the trust vector for cybersecurity buyers
+ *
+ * Hairline-bordered floating panel in the hero's bottom-right. Build hash,
+ * FOUNDER_SALARY install count, last commit SHA, 1.2s-pulsing red dot.
+ * The "lab is operating, not displaying" marker. Real values come from
+ * /_data/* and the build pipeline; the styling lives here.
+ * ============================================================================= */
+
+.noir-signal-panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 16px;
+  padding: 14px 18px;
+  background: rgba(8, 9, 11, 0.72);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  border: 1px solid var(--signal-border);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: #9CA3AF;
+  font-variant-numeric: tabular-nums;
+  min-width: 280px;
+  max-width: 360px;
+}
+
+.noir-signal-panel__label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #5A6068;
+}
+
+.noir-signal-panel__value {
+  color: #F4F4F2;
+  text-align: right;
+}
+
+.noir-signal-panel__value--cyan { color: #22F0D5; }
+
+/* The pulse dot — 1.2s ease-in-out, RGBA fade not opacity-only so the
+ * surrounding hairline doesn't twitch. */
+@keyframes noir-pulse {
+  0%, 100% {
+    background: rgba(255, 77, 77, 1);
+    box-shadow: 0 0 0 0 var(--signal-glow);
+  }
+  50% {
+    background: rgba(255, 77, 77, 0.55);
+    box-shadow: 0 0 0 6px rgba(255, 77, 77, 0);
+  }
+}
+
+.noir-pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FF4D4D;
+  vertical-align: 0;
+  animation: noir-pulse 1.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* Solid (non-pulsing) variant for static contexts (server-rendered cards,
+ * print, prefers-reduced-motion). */
+.noir-pulse-dot--still {
+  animation: none;
+  background: #FF4D4D;
+  box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.18);
+}
+
+/* =============================================================================
+ * §-INDEX SECTION LABELS — the academic spine of the homepage
+ *
+ * "§ 01 · THE THESIS" / "§ 02 · THREE DOORS" / "§ 03 · LIVE RECEIPTS" — the
+ * grafted D5 structure that signals "real research institution" instead of
+ * "course platform." Mono, eyebrow-tracked, top-aligned with section content.
+ * ============================================================================= */
+
+.noir-section-index {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: var(--tracking-section);
+  text-transform: uppercase;
+  color: #9CA3AF;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1F242B;
+}
+
+.noir-section-index__sigil {
+  color: #22F0D5;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.noir-section-index__num {
+  color: #F4F4F2;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =============================================================================
+ * NOIR CTA — primary action on noir surfaces
+ *
+ * Hard-edged, hairline-bordered, no fill at rest, inverts on hover.
+ * One CTA style across the site. No shadows, no gradients, no glow.
+ * ============================================================================= */
+
+.noir-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #F4F4F2;
+  background: transparent;
+  border: 1px solid #F4F4F2;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 180ms ease-out, color 180ms ease-out;
+  text-decoration: none;
+}
+
+.noir-cta:hover {
+  background: #F4F4F2;
+  color: #08090B;
+  text-decoration: none;
+}
+
+.noir-cta__arrow {
+  display: inline-block;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.noir-cta:hover .noir-cta__arrow {
+  transform: translateX(4px);
+}
+
+/* Cyan variant — reserved for the bio-cyan live-signal CTAs only. */
+.noir-cta--cyan {
+  color: #22F0D5;
+  border-color: #22F0D5;
+}
+.noir-cta--cyan:hover {
+  background: #22F0D5;
+  color: #08090B;
+}
+
+/* =============================================================================
+ * COLOPHON — full-bleed footer inversion (white-on-black is the dark surface
+ * pattern; black-on-paper is the footer pattern that makes the rest of the
+ * dark site feel composed). The single 60vh moment of paper-tone on the page.
+ * ============================================================================= */
+
+.noir-colophon {
+  background: #F4F4F2;
+  color: #08090B;
+  min-height: 60vh;
+  position: relative;
+  isolation: isolate;
+}
+
+.noir-colophon a {
+  color: #08090B;
+  text-decoration: none;
+}
+
+.noir-colophon a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.noir-colophon__mark {
+  font-family: var(--font-display);
+  font-size: clamp(120px, 18vw, 240px);
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  color: #08090B;
+}
+
+.noir-colophon__col-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5A6068;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #5A6068;
+}
+
+.noir-colophon__hairline {
+  border-top: 1px solid #5A6068;
+}
+
+/* =============================================================================
+ * THREE DOORS — the §02 photo stack with sticky display labels
+ *
+ * Three full-bleed 100vh photographs (Cyber / Learn / Build). The sticky
+ * label is the load-bearing technique: scroll past one, the label pins
+ * to the bottom of the viewport, the next label rises through it. The
+ * caption stays in Newsreader serif for the editorial register.
+ * ============================================================================= */
+
+.noir-door {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #08090B;
+}
+
+.noir-door__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(60%) contrast(1.05);
+}
+
+.noir-door__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 9, 11, 0.15) 0%,
+    rgba(8, 9, 11, 0.45) 60%,
+    rgba(8, 9, 11, 0.75) 100%
+  );
+}
+
+.noir-door__label {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
+  right: 48px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  color: #F4F4F2;
+}
+
+.noir-door__title {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 9vw, 120px);
+  font-weight: 800;
+  font-variation-settings: "wght" 800;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+}
+
+.noir-door__caption {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 30px;
+  max-width: 28ch;
+  color: #F4F4F2;
+  font-weight: 400;
+}
+
+/* =============================================================================
+ * RECEIPTS STRIP — §03 oversized mono numbers from real APIs
+ *
+ * The "lab is operating" moment. Real install count, real lines shipped,
+ * real papers, real commits, real MRR. Numbers come from /_data; the
+ * styling here makes them read as instrument output.
+ * ============================================================================= */
+
+.noir-receipt-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  background: #0F1114;
+  border-top: 1px solid #1F242B;
+  border-bottom: 1px solid #1F242B;
+}
+
+.noir-receipt-cell {
+  padding: 56px 32px;
+  border-right: 1px solid #1F242B;
+  position: relative;
+}
+
+.noir-receipt-cell:last-child {
+  border-right: none;
+}
+
+.noir-receipt-cell__value {
+  font-family: var(--font-mono);
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #F4F4F2;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 16px;
+}
+
+.noir-receipt-cell__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5A6068;
+}
+
+.noir-receipt-cell__delta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #22F0D5;
+  margin-top: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =============================================================================
+ * RESEARCH CARDS — §04 editorial cards for the latest ÆoNs papers
+ *
+ * Newsreader serif title, mono date + SHA-256, 40-word abstract first line.
+ * The AI-college credibility moment. Each card is a hairline-bordered tile
+ * that inverts on hover (Stripe Press technique).
+ * ============================================================================= */
+
+.noir-paper-card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 32px;
+  border: 1px solid #1F242B;
+  background: #08090B;
+  transition: background 280ms ease-out, border-color 280ms ease-out;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.noir-paper-card:hover {
+  background: #0F1114;
+  border-color: #5A6068;
+  text-decoration: none;
+}
+
+.noir-paper-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5A6068;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1F242B;
+}
+
+.noir-paper-card__title {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #F4F4F2;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  flex: 1;
+}
+
+.noir-paper-card__abstract {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 28px;
+  color: #9CA3AF;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.noir-paper-card__hash {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #5A6068;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =============================================================================
+ * CURRICULUM WALL — §05 dense 12-col mono index of 67 cyber/learn images
+ *
+ * Visual density itself is the proof of depth. Hover reveals lesson title,
+ * click opens the lesson page. No skeleton screens, no lazy reveal — every
+ * cell renders in the initial paint so the page reads as "a real catalog."
+ * ============================================================================= */
+
+.noir-wall {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1px;
+  background: #1F242B;
+  border: 1px solid #1F242B;
+}
+
+@media (max-width: 1024px) {
+  .noir-wall { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .noir-wall { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.noir-wall__cell {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #08090B;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.noir-wall__cell:hover {
+  transform: scale(1.04);
+  z-index: 2;
+}
+
+.noir-wall__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(70%) contrast(1.08) brightness(0.85);
+  transition: filter 240ms ease-out;
+}
+
+.noir-wall__cell:hover .noir-wall__img {
+  filter: grayscale(0%) contrast(1) brightness(1);
+}
+
+.noir-wall__label {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 8px 10px;
+  background: linear-gradient(to top, rgba(8, 9, 11, 0.95), rgba(8, 9, 11, 0));
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #F4F4F2;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+.noir-wall__cell:hover .noir-wall__label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================================================
+ * FOUNDER NOTE — §06 the design-inspiration moment most companies omit
+ *
+ * One full-bleed photograph of the operator's workspace, one signed paragraph
+ * in Newsreader serif (max 80 words). Signed "— Atom McCree, Marco Island."
+ * The single first-person register on the entire homepage.
+ * ============================================================================= */
+
+.noir-founder-note {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  background: #08090B;
+}
+
+@media (max-width: 900px) {
+  .noir-founder-note { grid-template-columns: 1fr; }
+}
+
+.noir-founder-note__photo {
+  position: relative;
+  background: #0F1114;
+  overflow: hidden;
+}
+
+.noir-founder-note__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) contrast(1.04);
+}
+
+.noir-founder-note__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(48px, 8vw, 120px);
+  max-width: 640px;
+}
+
+.noir-founder-note__text {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 36px;
+  color: #F4F4F2;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  margin-bottom: 32px;
+}
+
+.noir-founder-note__sig {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9CA3AF;
+}
+
+/* =============================================================================
+ * V5 UTILITIES — preserved (in active use across cockpit + OrangeBox surfaces)
+ * ============================================================================= */
+
 .v5-bg { background: #000; }
 .v5-fg { color: #F2F4F5; }
 .v5-cyan { color: #22F0D5; }
@@ -51,7 +903,6 @@
 .v5-glow-orange { box-shadow: 0 0 40px rgba(255,122,26,0.40); }
 .v5-border { border-color: #1A2225; }
 
-/* v5 animations */
 @keyframes v5slidein {
   from { opacity: 0; transform: translateY(-6px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -76,30 +927,10 @@
   pointer-events: none;
 }
 
-html,
-body {
-  background: #000;
-  color: #f7f0e4;
-  font-family: var(--font-sans);
-}
-
-/* Site-wide decorative motion deleted 2026-06-01 per readability-pass
-   workflow wf_79e1e01d-513. Premium references (Apple, Stripe, Linear,
-   Anthropic) all run static surfaces. Atmosphere is now component-scoped
-   only — AuroraHero, mesh-gradient, scanlines, cta-orbital, etc. */
-
-a {
-  color: #ff7a18;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-::selection {
-  background: rgba(255, 122, 24, 0.3);
-  color: #f7f0e4;
-}
+/* =============================================================================
+ * LEGACY UTILITIES — preserved as-is. 200+ pages depend on these names.
+ * Migration to noir-* utilities is per-component, not site-wide.
+ * ============================================================================= */
 
 /* Tap-to-pulse mobile equivalent of cursor spotlight (no-hover devices) */
 @keyframes tap-pulse {
@@ -111,14 +942,6 @@ a:hover {
   a:active,
   button:active {
     animation: tap-pulse 600ms ease-out;
-  }
-}
-
-/* Light mode refusal — the cockpit is dark only, on-brand humor */
-@media (prefers-color-scheme: light) {
-  html, body {
-    background: #000 !important;
-    color: #f7f0e4 !important;
   }
 }
 
@@ -292,7 +1115,6 @@ a:hover {
   animation: mesh-drift 4s linear infinite;
 }
 
-/* ProofRail — slow infinite horizontal marquee */
 /* AtomBoot — one-shot grand entrance overlay */
 @keyframes atom-boot-fade {
   0% { opacity: 0; }
@@ -378,31 +1200,6 @@ a:hover {
   user-select: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  [style*="atom-spin"] {
-    animation: none !important;
-  }
-  .pulse-ring,
-  .glitch,
-  .glitch-hover:hover,
-  .blink-cursor,
-  .boot-bar,
-  .mesh-gradient,
-  .vercel-glow:hover::before,
-  .proof-rail-track,
-  .receipt-row,
-  .dag-node-active,
-  .cockpit-lane-fill,
-  .cockpit-feed-fade {
-    animation: none !important;
-  }
-  .boot-bar { display: none; }
-  .mesh-gradient {
-    background: linear-gradient(135deg, #071915 0%, #0a211b 100%);
-  }
-  .receipt-row { opacity: 1; transform: none; }
-}
-
 /* Orbital ring CTA — signature move 3.
    Apply .cta-orbital to any button/link to get the sweeping ring on hover.
    currentColor inherits from the element's text color, so it works on both
@@ -429,3 +1226,50 @@ a:hover {
   from { transform: scale(0.85) rotate(0deg); }
   to   { transform: scale(1.0)  rotate(360deg); }
 }
+
+/* =============================================================================
+ * REDUCED MOTION — single consolidated block. Every animation defined above
+ * is silenced here. Static end-states preserved (mesh resolves to gradient,
+ * receipts resolve to opacity:1, etc.) so the layout still reads correctly.
+ * ============================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="atom-spin"] {
+    animation: none !important;
+  }
+  .pulse-ring,
+  .glitch,
+  .glitch-hover:hover,
+  .blink-cursor,
+  .boot-bar,
+  .mesh-gradient,
+  .vercel-glow:hover::before,
+  .proof-rail-track,
+  .receipt-row,
+  .dag-node-active,
+  .cockpit-lane-fill,
+  .cockpit-feed-fade,
+  .noir-pulse-dot,
+  .v5-scanline::after {
+    animation: none !important;
+  }
+  .boot-bar { display: none; }
+  .mesh-gradient {
+    background: linear-gradient(135deg, #071915 0%, #0a211b 100%);
+  }
+  .receipt-row { opacity: 1; transform: none; }
+  .noir-reveal {
+    transition: none;
+  }
+  .noir-pulse-dot {
+    background: #FF4D4D;
+    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.18);
+  }
+}
+
+/* =============================================================================
+ * END — globals.css V6 noir-cinema
+ * Signature: ATOM-NOIR-2026-0602
+ * Palette: #08090B / #0F1114 / #F4F4F2 / #9CA3AF / #5A6068 / #1F242B /
+ *          #22F0D5 / #FF4D4D
+ * ============================================================================= */

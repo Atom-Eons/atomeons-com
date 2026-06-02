@@ -41,7 +41,7 @@ if (!existsSync(inputPath)) {
 const raw = readFileSync(inputPath, "utf8");
 const outer = JSON.parse(raw);
 const result = outer.result || outer;
-const impls = result.implementations || [];
+const impls = result.implementations || result.files || [];
 const winner = result.winner;
 const brief = result.brief;
 
@@ -67,14 +67,19 @@ let skipped = 0;
 let blocked = 0;
 
 for (const impl of impls) {
-  if (!impl.componentName || !impl.code || !impl.filePath) {
-    console.log(`  SKIP — missing required fields`);
+  // v2 workflow uses {path, code}; v1 used {componentName, filePath, code}
+  const path = impl.filePath || impl.path;
+  const name = impl.componentName || (path ? path.split("/").pop() : "");
+  if (!path || !impl.code) {
+    console.log(`  SKIP — missing required fields (need path + code)`);
     skipped++;
     continue;
   }
-  if (onlyComponent && impl.componentName !== onlyComponent) continue;
+  if (onlyComponent && name !== onlyComponent) continue;
+  // Patch impl.componentName for the print
+  impl.componentName = name;
 
-  let dest = impl.filePath.trim().replace(/^\/+/, "").replace(/\\/g, "/");
+  let dest = path.trim().replace(/^\/+/, "").replace(/\\/g, "/");
   const filePath = resolve(dest);
 
   // Safety: refuse to write outside project root
