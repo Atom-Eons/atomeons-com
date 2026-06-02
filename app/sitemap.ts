@@ -73,6 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/learn/cyber/breaches`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },
     { url: `${BASE}/learn/cyber/threat-actors`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },
     { url: `${BASE}/learn/cyber/tools`, lastModified: now, changeFrequency: "weekly", priority: 0.92 },
+    { url: `${BASE}/learn/cyber/heroes`, lastModified: now, changeFrequency: "monthly", priority: 0.90 },
     // nvidia-tier-50 sub-area index pages
     { url: `${BASE}/learn/atlas`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },
     { url: `${BASE}/learn/career`, lastModified: now, changeFrequency: "weekly", priority: 0.93 },

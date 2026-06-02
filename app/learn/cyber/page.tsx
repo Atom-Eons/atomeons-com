@@ -49,6 +49,13 @@ const TRACKS = [
       "Every tool in every job description, in eight categories: network analysis, vulnerability scanning, web AppSec, reverse engineering, OSINT, SIEM, endpoint IR, detection engineering. What each tool is, who uses it, where to learn it legally. Recognition-first, not how-to-attack.",
   },
   {
+    slug: "heroes",
+    title: "Twelve researchers worth knowing",
+    sub: "Krebs · Hutchins · Mudge · Moussouris · Schneier · Halvar · Tavis · Raiu · Galperin · Hyppönen · Snyder · Tabriz",
+    body:
+      "The named voices the field listens to. Twelve public-figure profiles sourced to books, congressional testimony, conference talks, reputable journalism. A junior cyber pro who knows zero names doesn't have the field's social context.",
+  },
+  {
     slug: "modern",
     title: "What cyberwar looks like RIGHT NOW",
     sub: "Drones · loitering munitions · Volt + Salt Typhoon · Replicator",
