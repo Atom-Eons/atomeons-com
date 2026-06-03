@@ -1,152 +1,183 @@
 "use client";
 
 /**
- * Header.tsx — V3 / noir-cinema · 2026-06-02
- * Disclosure: ATOM-V3-HEADER-2026-0602
+ * Header.tsx — V3 / noir-cinema · 2026-06-03
+ * Disclosure: ATOM-V3-HEADER-2026-0603
  *
- * Top navigation for the noir-cinema redesign. This is the persistent
- * companion to the hero's signature move (variable-weight reveal +
- * live signal panel). The header is a hairline — it does not compete
- * with the hero, it frames it.
+ * Six-item top nav with two dropdowns. Replaces the prior five-item shape.
+ * Order: Research · Cyber · Learn▾ · Products▾ · Founder's View · Start (CTA).
  *
- * Doctrine (from winning direction `noir-cinema`):
- *  - Three identities at once: cybersecurity gravitas, AI college depth,
- *    design-inspiration crown. The header has to register all three on
- *    the first 200ms a CISO, a student, and a designer each look at it.
- *  - Bio-cyan (#22F0D5) is the SINGLE live-signal accent. Used here only
- *    for the pulsing dot in the right-rail live panel. Not for hover,
- *    not for active state. Active state is paper-white on near-black
- *    with a 1px hairline underline — silent authority.
- *  - Red (#FF4D4D) is a second live-signal accent — used here for the
- *    1.2s pulsing dot per the direction's signature move spec.
- *  - No drop shadows, no gradients, no rounded soft chrome. Hairlines
- *    only (1px #1F242B). Stripe / Anduril / Linear restraint.
- *  - Mono eyebrow (Berkeley Mono → JetBrains Mono fallback) for the
- *    lab callsign and the live commit hash. Display sans (Inter Variable)
- *    for nav labels at 13/20 weight 450.
- *  - 5 primary nav items, single primary CTA. Mobile-collapse < md.
- *
- * 5 nav items (mapped to existing routes; preserves 200-page surface):
- *   1. Research        → /research/papers   (the AI-college credibility)
- *   2. Cyber           → /learn/cyber       (the cybersecurity surface)
- *   3. Learn           → /learn             (the curriculum index)
- *   4. Build           → /orangebox         (the revenue product)
- *   5. Founder's View  → /founders-view     (the lab-state broadcast)
- *
- * Single CTA: "Enter the lab" → /start. Hairline ghost variant. The hero
- * carries the loud move; the header carries the quiet move.
- *
- * usePathname-driven active state with prefix matching so child routes
- * (e.g. /research/papers/atom-clc-2026-0331) light their parent nav.
- *
- * Live-signal micro-panel (right rail, desktop only): a single pulsing
- * #FF4D4D 6px dot + the last 7 chars of the commit SHA in mono. Reads
- * "the lab is operating right now" without surrendering noir restraint.
- * Commit SHA is read from `NEXT_PUBLIC_COMMIT_SHA` at build (Vercel sets
- * this automatically) and falls back to a frozen sentinel if missing —
- * never a placeholder string that lies about being live.
- *
- * Mobile: hairline hamburger → slide-down panel with the same 5 items
- * stacked, same CTA at the bottom. No accordion drawers. No icons.
- * Sentence-case labels. Closes on route change (Next 16 App Router fires
- * pathname change immediately, useEffect cleans the open state).
+ * Doctrine (operator-stated 2026-06-03):
+ *  - Cyber is PROMOTED to top-level direct link (was buried under /learn).
+ *  - Products dropdown lists Orangebox, B00KMAKR, AI Film (Cinema lab · in production).
+ *    Each row carries a status pip: cyan filled = shipping, dim hollow = in-production.
+ *  - Learn dropdown lists Atlas, Career, Trust, Decode, Calc, Decoded papers.
+ *  - Active-label resolver scans EACH item's child hrefs so deep routes light their
+ *    parent dropdown (e.g. /orangebox lights Products, /learn/atlas lights Learn).
+ *  - Desktop dropdowns: hover-open with 280ms close delay (clearTimeout pattern),
+ *    Tab opens via focus-within, ESC closes, outside-click closes.
+ *  - Mobile drawer: nested accordion — parent label tappable for index route + chevron
+ *    expands children inline.
+ *  - Bio-cyan (#22F0D5) only for live signals + active states. Red (#FF4D4D) only for
+ *    the 1.2s live-dot pulse. No drop shadows, no gradients, ≤2px radius, 1px hairlines.
+ *  - Brand mark "Æ ATOMEONS" top-left, Æ at wght 720, ATOMEONS at wght 540.
  */
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ChevronDown } from "lucide-react";
 
-/* ───────────────────────────────────────────────────────────────────
- * Palette + type tokens — local to this file so the header is portable
- * if it gets lifted into a different layout shell. Names match the
- * winning direction's paletteHex string exactly.
- * ─────────────────────────────────────────────────────────────────── */
 const C = {
-  ink: "#08090B", // hero / page base
-  panel: "#0F1114", // header surface
-  paper: "#F4F4F2", // active / hover text
-  mid: "#9CA3AF", // idle nav label
-  muted: "#5A6068", // mono eyebrow + meta
-  hair: "#1F242B", // 1px hairlines
-  signal: "#22F0D5", // bio-cyan — preserved as live-signal accent
-  pulse: "#FF4D4D", // red — 1.2s pulsing dot only
+  ink: "#08090B",
+  panel: "#0F1114",
+  paper: "#F4F4F2",
+  mid: "#9CA3AF",
+  muted: "#5A6068",
+  dim: "#5A6068",
+  hair: "#1F242B",
+  signal: "#22F0D5",
+  pulse: "#FF4D4D",
 } as const;
 
-/** Mono stack — Berkeley Mono if licensed, JetBrains Mono Variable as
- *  fallback, then system mono. Receipts deserve a typeface. */
 const MONO =
   '"Berkeley Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, ' +
   '"SF Mono", Menlo, Consolas, monospace';
+const SANS = "var(--font-inter), Inter, system-ui, sans-serif";
 
 /* ───────────────────────────────────────────────────────────────────
- * Nav model — 5 items, prefix-driven active state. The `prefix` lets
- * /research/papers/anything-deeper still light the Research tab.
+ * Nav model
  * ─────────────────────────────────────────────────────────────────── */
-type NavItem = {
+
+type Status = "shipping" | "in-production";
+
+type Child = {
   label: string;
   href: string;
-  prefix: string;
-  /** sub-eyebrow shown beneath label in the mobile drawer only */
-  hint: string;
+  hint?: string;
+  status?: Status;
 };
+
+type NavItem =
+  | {
+      kind: "link";
+      label: string;
+      href: string;
+      childHrefs?: readonly string[];
+    }
+  | {
+      kind: "menu";
+      label: string;
+      indexHref: string;
+      childHrefs: readonly string[];
+      children: readonly Child[];
+    }
+  | {
+      kind: "cta";
+      label: string;
+      href: string;
+    };
 
 const NAV: readonly NavItem[] = [
   {
+    kind: "link",
     label: "Research",
     href: "/research/papers",
-    prefix: "/research",
-    hint: "Twelve manuscripts, CC-BY 4.0",
+    childHrefs: ["/research"],
   },
   {
+    kind: "link",
     label: "Cyber",
     href: "/learn/cyber",
-    prefix: "/learn/cyber",
-    hint: "Masters-grade · ethical, public-info only",
+    childHrefs: ["/learn/cyber"],
   },
   {
+    kind: "menu",
     label: "Learn",
-    href: "/learn",
-    // exact-prefix /learn but NOT /learn/cyber (Cyber owns its own tab)
-    prefix: "/learn",
-    hint: "Forty-five lessons across five levels",
+    indexHref: "/learn",
+    childHrefs: [
+      "/learn",
+      "/learn/atlas",
+      "/learn/career",
+      "/learn/trust",
+      "/learn/decode",
+      "/learn/calc",
+      "/learn/decoded-papers",
+    ],
+    children: [
+      { label: "Curriculum", href: "/learn", hint: "Forty-five lessons, five levels" },
+      { label: "Atlas", href: "/learn/atlas", hint: "Field map of the discipline" },
+      { label: "Career", href: "/learn/career", hint: "Routes after the curriculum" },
+      { label: "Trust", href: "/learn/trust", hint: "Verifiable receipts, no theater" },
+      { label: "Decode", href: "/learn/decode", hint: "Plain-language teardowns" },
+      { label: "Calc", href: "/learn/calc", hint: "Operator-grade calculators" },
+      { label: "Decoded papers", href: "/learn/decoded-papers", hint: "Twelve manuscripts, explained" },
+    ],
   },
   {
-    label: "Build",
-    href: "/orangebox",
-    prefix: "/orangebox",
-    hint: "Orangebox · B00KMAKR · skil.ski",
+    kind: "menu",
+    label: "Products",
+    indexHref: "/orangebox",
+    childHrefs: ["/orangebox", "/b00kmakor", "/film"],
+    children: [
+      {
+        label: "ORANGEBOX",
+        href: "/orangebox",
+        hint: "$99 one-time · §4A no-SaaS perpetual",
+        status: "shipping",
+      },
+      {
+        label: "B00KMAKR",
+        href: "/b00kmakor",
+        hint: "$99 dynamically priced · Mac + Windows",
+        status: "shipping",
+      },
+      {
+        label: "AI Film",
+        href: "/film",
+        hint: "Cinema lab · in production",
+        status: "in-production",
+      },
+    ],
   },
   {
+    kind: "link",
     label: "Founder's View",
     href: "/founders-view",
-    prefix: "/founders-view",
-    hint: "Nightly lab-state broadcast",
+    childHrefs: ["/founders-view"],
   },
-] as const;
+  {
+    kind: "cta",
+    label: "Start",
+    href: "/start",
+  },
+];
 
 /* ───────────────────────────────────────────────────────────────────
- * Active-state hook — pathname-prefix match with one specificity rule:
- * /learn/cyber wins over /learn so the Cyber tab activates on its own
- * subtree without also lighting Learn. Implemented by checking the
- * most-specific match first.
+ * Active-label resolver — scans every item's child href list and
+ * picks the most-specific match so deep routes light the right parent.
  * ─────────────────────────────────────────────────────────────────── */
-function useActiveLabel(): string | null {
-  const pathname = usePathname() || "/";
-  // sort prefixes by length desc — most-specific match wins
-  const sorted = [...NAV].sort((a, b) => b.prefix.length - a.prefix.length);
-  for (const item of sorted) {
-    if (pathname === item.prefix || pathname.startsWith(item.prefix + "/")) {
-      return item.label;
+function resolveActive(pathname: string): string | null {
+  let best: { label: string; specificity: number } | null = null;
+  for (const item of NAV) {
+    if (item.kind === "cta") continue;
+    const hrefs =
+      item.kind === "link"
+        ? [item.href, ...(item.childHrefs ?? [])]
+        : [item.indexHref, ...item.childHrefs];
+    for (const href of hrefs) {
+      const matches = pathname === href || pathname.startsWith(href + "/");
+      if (matches && (!best || href.length > best.specificity)) {
+        best = { label: item.label, specificity: href.length };
+      }
     }
   }
-  return null;
+  return best?.label ?? null;
 }
 
 /* ───────────────────────────────────────────────────────────────────
- * Commit SHA — Vercel injects NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA
- * automatically on every deploy. We fall back to a frozen sentinel
- * rather than a fake string so the panel is either real or absent.
- * Sentinel is the cut-date (truthful: "this is the local-dev shell").
+ * Build SHA — Vercel injects NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA.
+ * Falls back to honest sentinel rather than fabricated string.
  * ─────────────────────────────────────────────────────────────────── */
 function commitShort(): string {
   const sha =
@@ -157,21 +188,352 @@ function commitShort(): string {
   return sha.slice(0, 7);
 }
 
+/* ───────────────────────────────────────────────────────────────────
+ * Status pip — cyan filled (shipping) or dim hollow (in-production)
+ * ─────────────────────────────────────────────────────────────────── */
+function StatusPip({ status }: { status: Status }) {
+  if (status === "shipping") {
+    return (
+      <span
+        aria-label="shipping"
+        className="inline-block h-1.5 w-1.5"
+        style={{
+          backgroundColor: C.signal,
+          borderRadius: 999,
+          boxShadow: `0 0 6px ${C.signal}66`,
+        }}
+      />
+    );
+  }
+  return (
+    <span
+      aria-label="in production"
+      className="inline-block h-1.5 w-1.5"
+      style={{
+        backgroundColor: "transparent",
+        border: `1px solid ${C.dim}`,
+        borderRadius: 999,
+      }}
+    />
+  );
+}
+
 /* ═══════════════════════════════════════════════════════════════════
- * Header — the component
+ * DesktopDropdown — hover + focus + ESC + outside-click
+ * ═════════════════════════════════════════════════════════════════ */
+function DesktopDropdown({
+  label,
+  indexHref,
+  children,
+  isActive,
+}: {
+  label: string;
+  indexHref: string;
+  children: readonly Child[];
+  isActive: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  const closeTimer = useRef<number | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  const clearClose = useCallback(() => {
+    if (closeTimer.current !== null) {
+      window.clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  }, []);
+
+  const scheduleClose = useCallback(() => {
+    clearClose();
+    closeTimer.current = window.setTimeout(() => setOpen(false), 280);
+  }, [clearClose]);
+
+  const openNow = useCallback(() => {
+    clearClose();
+    setOpen(true);
+  }, [clearClose]);
+
+  // ESC closes
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  // Outside-click closes
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (!containerRef.current) return;
+      if (!containerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("mousedown", onDown);
+    return () => window.removeEventListener("mousedown", onDown);
+  }, [open]);
+
+  // Unmount cleanup
+  useEffect(() => {
+    return () => clearClose();
+  }, [clearClose]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative"
+      onMouseEnter={openNow}
+      onMouseLeave={scheduleClose}
+      onFocus={openNow}
+      onBlur={(e) => {
+        // close only if focus left the container entirely
+        if (
+          containerRef.current &&
+          !containerRef.current.contains(e.relatedTarget as Node)
+        ) {
+          scheduleClose();
+        }
+      }}
+    >
+      <Link
+        href={indexHref}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-current={isActive ? "page" : undefined}
+        data-active={isActive || undefined}
+        className="group relative inline-flex items-center gap-1.5 outline-none"
+        style={{
+          fontFamily: SANS,
+          fontSize: 13,
+          lineHeight: 1,
+          letterSpacing: "0",
+          fontVariationSettings: isActive ? "'wght' 560" : "'wght' 440",
+          color: isActive ? C.paper : C.mid,
+          transition:
+            "color 220ms ease, font-variation-settings 220ms ease",
+        }}
+      >
+        <span className="block py-6 group-hover:text-[#F4F4F2]">{label}</span>
+        <ChevronDown
+          aria-hidden
+          size={12}
+          strokeWidth={1.5}
+          style={{
+            color: isActive ? C.paper : C.muted,
+            transform: open ? "rotate(180deg)" : "rotate(0)",
+            transition: "transform 220ms ease, color 220ms ease",
+          }}
+        />
+        <span
+          aria-hidden
+          className="absolute inset-x-0 -bottom-[1px] h-px transition-opacity duration-200"
+          style={{
+            backgroundColor: isActive ? C.signal : C.muted,
+            opacity: isActive ? 1 : 0,
+          }}
+        />
+      </Link>
+
+      {/* Panel */}
+      <div
+        role="menu"
+        aria-label={`${label} menu`}
+        aria-hidden={!open}
+        className="absolute left-0 top-full z-50"
+        style={{
+          minWidth: 320,
+          marginTop: 0,
+          pointerEvents: open ? "auto" : "none",
+          opacity: open ? 1 : 0,
+          transform: open ? "translateY(0)" : "translateY(-4px)",
+          transition: "opacity 200ms ease, transform 220ms ease",
+        }}
+      >
+        <div
+          style={{
+            backgroundColor: C.panel,
+            border: `1px solid ${C.hair}`,
+            borderRadius: 2,
+            padding: "8px 0",
+          }}
+        >
+          {children.map((child) => (
+            <Link
+              key={child.href}
+              href={child.href}
+              role="menuitem"
+              className="group flex items-center justify-between gap-6 px-5 py-3 outline-none transition-colors"
+              style={{
+                fontFamily: SANS,
+              }}
+            >
+              <span className="flex flex-col gap-1">
+                <span
+                  className="transition-colors group-hover:text-[#F4F4F2]"
+                  style={{
+                    fontSize: 13,
+                    lineHeight: 1,
+                    color: C.paper,
+                    letterSpacing: "0",
+                    fontVariationSettings: "'wght' 520",
+                  }}
+                >
+                  {child.label}
+                </span>
+                {child.hint ? (
+                  <span
+                    style={{
+                      fontFamily: MONO,
+                      fontSize: 10,
+                      color: C.muted,
+                      letterSpacing: "0.02em",
+                    }}
+                  >
+                    {child.hint}
+                  </span>
+                ) : null}
+              </span>
+              {child.status ? <StatusPip status={child.status} /> : null}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+ * MobileAccordion — parent tappable + chevron expands children inline
+ * ═════════════════════════════════════════════════════════════════ */
+function MobileAccordion({
+  label,
+  indexHref,
+  children,
+  isActive,
+  onNavigate,
+}: {
+  label: string;
+  indexHref: string;
+  children: readonly Child[];
+  isActive: boolean;
+  onNavigate: () => void;
+}) {
+  const [expanded, setExpanded] = useState(isActive);
+
+  return (
+    <div style={{ borderTop: `1px solid ${C.hair}` }}>
+      <div className="flex items-stretch justify-between">
+        <Link
+          href={indexHref}
+          onClick={onNavigate}
+          aria-current={isActive ? "page" : undefined}
+          className="flex-1 py-5"
+        >
+          <span className="flex flex-col gap-1.5">
+            <span
+              style={{
+                fontFamily: SANS,
+                fontSize: 22,
+                lineHeight: 1,
+                letterSpacing: "-0.02em",
+                color: C.paper,
+                fontVariationSettings: isActive ? "'wght' 620" : "'wght' 480",
+              }}
+            >
+              {label}
+            </span>
+            <span
+              style={{
+                fontFamily: MONO,
+                fontSize: 11,
+                color: C.muted,
+                letterSpacing: "0.02em",
+              }}
+            >
+              {children.length} sections
+            </span>
+          </span>
+        </Link>
+        <button
+          type="button"
+          aria-label={`${expanded ? "Collapse" : "Expand"} ${label}`}
+          aria-expanded={expanded}
+          onClick={() => setExpanded((v) => !v)}
+          className="flex items-center justify-center px-3"
+          style={{ color: C.mid }}
+        >
+          <ChevronDown
+            size={20}
+            strokeWidth={1.5}
+            style={{
+              transform: expanded ? "rotate(180deg)" : "rotate(0)",
+              transition: "transform 220ms ease",
+            }}
+          />
+        </button>
+      </div>
+      {expanded ? (
+        <div className="flex flex-col pb-3">
+          {children.map((child) => (
+            <Link
+              key={child.href}
+              href={child.href}
+              onClick={onNavigate}
+              className="flex items-center justify-between gap-4 py-3 pl-4 pr-2"
+            >
+              <span className="flex flex-col gap-1">
+                <span
+                  style={{
+                    fontFamily: SANS,
+                    fontSize: 15,
+                    lineHeight: 1.1,
+                    color: C.paper,
+                    fontVariationSettings: "'wght' 500",
+                  }}
+                >
+                  {child.label}
+                </span>
+                {child.hint ? (
+                  <span
+                    style={{
+                      fontFamily: MONO,
+                      fontSize: 10,
+                      color: C.muted,
+                      letterSpacing: "0.02em",
+                    }}
+                  >
+                    {child.hint}
+                  </span>
+                ) : null}
+              </span>
+              {child.status ? <StatusPip status={child.status} /> : null}
+            </Link>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+ * Header
  * ═════════════════════════════════════════════════════════════════ */
 export function Header() {
-  const active = useActiveLabel();
-  const pathname = usePathname();
+  const pathname = usePathname() || "/";
+  const active = resolveActive(pathname);
   const [open, setOpen] = useState(false);
 
-  // Close mobile drawer on route change (App Router updates pathname
-  // immediately; this fires before paint of the new route).
+  // Close drawer on route change
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  // Lock body scroll while drawer is open (mobile UX standard).
+  // Lock body scroll while drawer is open
   useEffect(() => {
     if (typeof document === "undefined") return;
     const prev = document.body.style.overflow;
@@ -183,230 +545,149 @@ export function Header() {
 
   return (
     <>
-      {/* ─── Sticky bar ────────────────────────────────────────────── */}
       <header
         className="sticky top-0 z-40 w-full"
         style={{
-          backgroundColor: `${C.panel}E6`, // E6 ≈ 90% alpha
+          backgroundColor: `${C.panel}E6`,
           backdropFilter: "saturate(140%) blur(14px)",
           WebkitBackdropFilter: "saturate(140%) blur(14px)",
           borderBottom: `1px solid ${C.hair}`,
         }}
       >
-        <div className="mx-auto flex h-[68px] w-full max-w-[1400px] items-center justify-between gap-8 px-6 md:px-10">
-          {/* ─── Brand ─────────────────────────────────────────────── */}
+        <div className="mx-auto flex h-16 w-full max-w-[1400px] items-center justify-between gap-8 px-6 md:px-10">
+          {/* ─── Brand ──────────────────────────────────────────────── */}
           <Link
             href="/"
             aria-label="AtomEons — return to home"
-            className="group flex items-baseline gap-3 outline-none focus-visible:opacity-80"
+            className="group flex items-baseline gap-2 outline-none focus-visible:opacity-80"
           >
             <span
               aria-hidden
               className="block transition-[font-variation-settings] duration-500"
               style={{
                 color: C.paper,
-                fontFamily: "var(--font-inter), Inter, system-ui, sans-serif",
-                fontSize: 20,
+                fontFamily: SANS,
+                fontSize: 22,
                 lineHeight: 1,
-                letterSpacing: "-0.035em",
+                letterSpacing: "-0.04em",
                 fontVariationSettings: "'wght' 720, 'opsz' 24",
               }}
             >
-              ÆONS
+              Æ
             </span>
             <span
               aria-hidden
-              className="hidden md:inline"
+              className="block transition-[font-variation-settings] duration-500"
               style={{
-                color: C.muted,
-                fontFamily: MONO,
-                fontSize: 10,
+                color: C.paper,
+                fontFamily: SANS,
+                fontSize: 14,
                 lineHeight: 1,
-                letterSpacing: "0.16em",
+                letterSpacing: "0.14em",
                 textTransform: "uppercase",
+                fontVariationSettings: "'wght' 540",
                 transform: "translateY(-1px)",
               }}
             >
-              Research · Marco Island
+              ATOMEONS
             </span>
           </Link>
 
-          {/* ─── Desktop nav (5 items) ─────────────────────────────── */}
+          {/* ─── Desktop nav ─────────────────────────────────────────── */}
           <nav
             aria-label="Primary"
-            className="hidden items-center gap-9 md:flex"
+            className="hidden items-center gap-8 md:flex"
           >
             {NAV.map((item) => {
-              const isActive = active === item.label;
+              if (item.kind === "link") {
+                const isActive = active === item.label;
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    aria-current={isActive ? "page" : undefined}
+                    data-active={isActive || undefined}
+                    className="group relative outline-none"
+                    style={{
+                      fontFamily: SANS,
+                      fontSize: 13,
+                      lineHeight: 1,
+                      letterSpacing: "0",
+                      fontVariationSettings: isActive
+                        ? "'wght' 560"
+                        : "'wght' 440",
+                      color: isActive ? C.paper : C.mid,
+                      transition:
+                        "color 220ms ease, font-variation-settings 220ms ease",
+                    }}
+                  >
+                    <span className="block py-6 group-hover:text-[#F4F4F2]">
+                      {item.label}
+                    </span>
+                    <span
+                      aria-hidden
+                      className="absolute inset-x-0 -bottom-[1px] h-px transition-opacity duration-200"
+                      style={{
+                        backgroundColor: C.signal,
+                        opacity: isActive ? 1 : 0,
+                      }}
+                    />
+                    <span
+                      aria-hidden
+                      className="absolute inset-x-0 -bottom-[1px] h-px opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                      style={{
+                        backgroundColor: C.muted,
+                        opacity: isActive ? 0 : undefined,
+                      }}
+                    />
+                  </Link>
+                );
+              }
+
+              if (item.kind === "menu") {
+                return (
+                  <DesktopDropdown
+                    key={item.label}
+                    label={item.label}
+                    indexHref={item.indexHref}
+                    children={item.children}
+                    isActive={active === item.label}
+                  />
+                );
+              }
+
+              // cta
               return (
                 <Link
                   key={item.label}
                   href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  data-active={isActive || undefined}
-                  className="group relative outline-none"
+                  className="inline-flex items-center gap-2 px-5 py-2 outline-none transition-colors"
                   style={{
-                    fontFamily:
-                      "var(--font-inter), Inter, system-ui, sans-serif",
+                    fontFamily: SANS,
                     fontSize: 13,
-                    lineHeight: 1,
+                    color: C.ink,
+                    backgroundColor: C.signal,
+                    border: `1px solid ${C.signal}`,
+                    borderRadius: 999,
+                    fontVariationSettings: "'wght' 580",
                     letterSpacing: "0",
-                    fontVariationSettings: isActive
-                      ? "'wght' 560"
-                      : "'wght' 440",
-                    color: isActive ? C.paper : C.mid,
-                    transition:
-                      "color 220ms ease, font-variation-settings 220ms ease",
                   }}
                 >
-                  <span className="block py-6 group-hover:text-[--paper]">
-                    {item.label}
+                  <span>{item.label}</span>
+                  <span
+                    aria-hidden
+                    style={{
+                      fontFamily: MONO,
+                      fontSize: 11,
+                      color: C.ink,
+                    }}
+                  >
+                    →
                   </span>
-                  {/* hairline active underline — paper-white, 1px, no glow */}
-                  <span
-                    aria-hidden
-                    className="absolute inset-x-0 -bottom-[1px] h-px transition-opacity duration-200"
-                    style={{
-                      backgroundColor: C.paper,
-                      opacity: isActive ? 1 : 0,
-                    }}
-                  />
-                  {/* idle hover hairline — muted, 1px, appears on hover */}
-                  <span
-                    aria-hidden
-                    className="absolute inset-x-0 -bottom-[1px] h-px opacity-0 transition-opacity duration-200 group-hover:opacity-100"
-                    style={{
-                      backgroundColor: C.muted,
-                      opacity: isActive ? 0 : undefined,
-                    }}
-                  />
                 </Link>
               );
             })}
           </nav>
-
-          {/* ─── Right rail · desktop ─────────────────────────────── */}
-          <div className="hidden items-center gap-6 lg:flex">
-            {/* live-signal micro-panel — the trust vector for cyber buyers */}
-            <div
-              className="flex items-center gap-2 px-3 py-1.5"
-              style={{
-                border: `1px solid ${C.hair}`,
-                borderRadius: 2,
-              }}
-              aria-label={`Build ${commitShort()} — lab operating`}
-              role="status"
-            >
-              <span
-                aria-hidden
-                className="inline-block h-1.5 w-1.5"
-                style={{
-                  backgroundColor: C.pulse,
-                  borderRadius: 999,
-                  animation: "ae-v3-pulse 1.2s ease-in-out infinite",
-                  boxShadow: `0 0 6px ${C.pulse}80`,
-                }}
-              />
-              <span
-                style={{
-                  fontFamily: MONO,
-                  fontSize: 10,
-                  color: C.muted,
-                  letterSpacing: "0.06em",
-                }}
-              >
-                build
-              </span>
-              <span
-                style={{
-                  fontFamily: MONO,
-                  fontSize: 11,
-                  color: C.signal,
-                  letterSpacing: "0.02em",
-                }}
-              >
-                {commitShort()}
-              </span>
-            </div>
-
-            {/* Account — quiet text link */}
-            <Link
-              href="/account"
-              style={{
-                fontFamily:
-                  "var(--font-inter), Inter, system-ui, sans-serif",
-                fontSize: 13,
-                color: C.mid,
-                letterSpacing: "0",
-              }}
-              className="transition-colors hover:text-[#F4F4F2]"
-            >
-              Account
-            </Link>
-
-            {/* Single primary CTA — hairline ghost pill, NOT a solid blob.
-                Noir-cinema demands restraint; the hero carries the loud move. */}
-            <Link
-              href="/start"
-              className="group inline-flex items-center gap-2 px-5 py-2 outline-none transition-colors"
-              style={{
-                fontFamily:
-                  "var(--font-inter), Inter, system-ui, sans-serif",
-                fontSize: 13,
-                color: C.paper,
-                border: `1px solid ${C.hair}`,
-                borderRadius: 2,
-                fontVariationSettings: "'wght' 520",
-                letterSpacing: "0",
-                backgroundColor: "transparent",
-              }}
-            >
-              <span className="transition-colors group-hover:text-[#08090B]">
-                Enter the lab
-              </span>
-              <span
-                aria-hidden
-                style={{
-                  fontFamily: MONO,
-                  fontSize: 11,
-                  color: C.muted,
-                  transition: "transform 200ms ease, color 200ms ease",
-                }}
-                className="translate-x-0 group-hover:translate-x-0.5 group-hover:text-[#08090B]"
-              >
-                →
-              </span>
-              {/* CTA fill on hover — paper inversion (white-on-black flip,
-                  the same move as the colophon footer in § 07) */}
-              <span
-                aria-hidden
-                className="pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
-                style={{
-                  backgroundColor: C.paper,
-                  borderRadius: 2,
-                }}
-              />
-            </Link>
-          </div>
-
-          {/* ─── Right rail · tablet (between md and lg) ──────────── */}
-          <div className="hidden items-center gap-5 md:flex lg:hidden">
-            <Link
-              href="/start"
-              style={{
-                fontFamily:
-                  "var(--font-inter), Inter, system-ui, sans-serif",
-                fontSize: 13,
-                color: C.paper,
-                border: `1px solid ${C.hair}`,
-                borderRadius: 2,
-                fontVariationSettings: "'wght' 520",
-              }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 transition-colors hover:bg-[#1F242B]"
-            >
-              Enter the lab
-            </Link>
-          </div>
 
           {/* ─── Mobile hamburger ──────────────────────────────────── */}
           <button
@@ -454,20 +735,20 @@ export function Header() {
       <div
         id="v3-mobile-drawer"
         aria-hidden={!open}
-        className={`fixed inset-x-0 top-[68px] z-30 md:hidden ${
+        className={`fixed inset-x-0 top-16 z-30 md:hidden ${
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
         style={{
-          height: "calc(100vh - 68px)",
+          height: "calc(100vh - 64px)",
           backgroundColor: C.ink,
           borderTop: `1px solid ${C.hair}`,
           transition: "opacity 220ms ease, transform 260ms ease",
           opacity: open ? 1 : 0,
           transform: open ? "translateY(0)" : "translateY(-8px)",
+          overflowY: "auto",
         }}
       >
-        <div className="flex h-full flex-col px-6 pt-8 pb-10">
-          {/* mono eyebrow inside the drawer */}
+        <div className="flex min-h-full flex-col px-6 pt-6 pb-10">
           <div
             style={{
               fontFamily: MONO,
@@ -477,58 +758,86 @@ export function Header() {
               textTransform: "uppercase",
             }}
           >
-            Navigation · {NAV.length} sections
+            Navigation
           </div>
 
-          <nav aria-label="Mobile primary" className="mt-8 flex flex-col">
+          <nav aria-label="Mobile primary" className="mt-6 flex flex-col">
             {NAV.map((item) => {
-              const isActive = active === item.label;
+              if (item.kind === "link") {
+                const isActive = active === item.label;
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    aria-current={isActive ? "page" : undefined}
+                    className="group flex items-baseline justify-between py-5"
+                    style={{
+                      borderTop: `1px solid ${C.hair}`,
+                    }}
+                  >
+                    <span className="flex flex-col gap-1.5">
+                      <span
+                        style={{
+                          fontFamily: SANS,
+                          fontSize: 22,
+                          lineHeight: 1,
+                          letterSpacing: "-0.02em",
+                          color: C.paper,
+                          fontVariationSettings: isActive
+                            ? "'wght' 620"
+                            : "'wght' 480",
+                        }}
+                      >
+                        {item.label}
+                      </span>
+                    </span>
+                    <span
+                      aria-hidden
+                      style={{
+                        fontFamily: MONO,
+                        fontSize: 12,
+                        color: isActive ? C.signal : C.muted,
+                      }}
+                    >
+                      {isActive ? "● now" : "→"}
+                    </span>
+                  </Link>
+                );
+              }
+
+              if (item.kind === "menu") {
+                return (
+                  <MobileAccordion
+                    key={item.label}
+                    label={item.label}
+                    indexHref={item.indexHref}
+                    children={item.children}
+                    isActive={active === item.label}
+                    onNavigate={() => setOpen(false)}
+                  />
+                );
+              }
+
+              // cta
               return (
                 <Link
                   key={item.label}
                   href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className="group flex items-baseline justify-between py-5"
+                  onClick={() => setOpen(false)}
+                  className="mt-6 inline-flex w-full items-center justify-between px-5 py-4"
                   style={{
-                    borderTop: `1px solid ${C.hair}`,
+                    fontFamily: SANS,
+                    fontSize: 15,
+                    color: C.ink,
+                    backgroundColor: C.signal,
+                    borderRadius: 999,
+                    fontVariationSettings: "'wght' 580",
                   }}
                 >
-                  <span className="flex flex-col gap-1.5">
-                    <span
-                      style={{
-                        fontFamily:
-                          "var(--font-inter), Inter, system-ui, sans-serif",
-                        fontSize: 22,
-                        lineHeight: 1,
-                        letterSpacing: "-0.02em",
-                        color: isActive ? C.paper : C.paper,
-                        fontVariationSettings: isActive
-                          ? "'wght' 620"
-                          : "'wght' 480",
-                      }}
-                    >
-                      {item.label}
-                    </span>
-                    <span
-                      style={{
-                        fontFamily: MONO,
-                        fontSize: 11,
-                        color: C.muted,
-                        letterSpacing: "0.02em",
-                      }}
-                    >
-                      {item.hint}
-                    </span>
-                  </span>
-                  <span
-                    aria-hidden
-                    style={{
-                      fontFamily: MONO,
-                      fontSize: 12,
-                      color: isActive ? C.signal : C.muted,
-                    }}
-                  >
-                    {isActive ? "● now" : "→"}
+                  <span>{item.label}</span>
+                  <span aria-hidden style={{ fontFamily: MONO, fontSize: 13 }}>
+                    →
                   </span>
                 </Link>
               );
@@ -536,33 +845,13 @@ export function Header() {
             <div style={{ borderTop: `1px solid ${C.hair}` }} />
           </nav>
 
-          {/* drawer footer — CTA + live signal repeated for trust */}
-          <div className="mt-auto flex flex-col gap-5">
-            <Link
-              href="/start"
-              className="inline-flex w-full items-center justify-between px-5 py-4"
-              style={{
-                fontFamily:
-                  "var(--font-inter), Inter, system-ui, sans-serif",
-                fontSize: 15,
-                color: C.ink,
-                backgroundColor: C.paper,
-                borderRadius: 2,
-                fontVariationSettings: "'wght' 580",
-              }}
-            >
-              <span>Enter the lab</span>
-              <span aria-hidden style={{ fontFamily: MONO, fontSize: 13 }}>
-                →
-              </span>
-            </Link>
-
+          <div className="mt-auto pt-8">
             <div className="flex items-center justify-between">
               <Link
                 href="/account"
+                onClick={() => setOpen(false)}
                 style={{
-                  fontFamily:
-                    "var(--font-inter), Inter, system-ui, sans-serif",
+                  fontFamily: SANS,
                   fontSize: 13,
                   color: C.mid,
                 }}
@@ -597,6 +886,7 @@ export function Header() {
             </div>
 
             <p
+              className="mt-4"
               style={{
                 fontFamily: MONO,
                 fontSize: 10,
@@ -611,9 +901,6 @@ export function Header() {
         </div>
       </div>
 
-      {/* ─── Keyframes ──────────────────────────────────────────────
-          Scoped to this file via a styled-jsx tag. The pulse is the
-          1.2s easing rhythm specified in the signature-move brief. */}
       <style jsx global>{`
         @keyframes ae-v3-pulse {
           0%,

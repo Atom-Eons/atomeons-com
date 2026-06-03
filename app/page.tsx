@@ -70,6 +70,9 @@ import { useEffect, useRef, useState } from "react";
 
 import { Curriculum } from "./_components/V3/Curriculum";
 import { FinalCTA } from "./_components/V3/FinalCTA";
+import { Products } from "./_components/V3/Products";
+import { BestCyber } from "./_components/V3/BestCyber";
+import { BestAILearning } from "./_components/V3/BestAILearning";
 
 // ---------------------------------------------------------------------------
 // SHARED — Variable-Weight Reveal hook
@@ -1128,6 +1131,9 @@ export default function HomePageV3() {
     >
       <HeroSection />
       <ThesisSection />
+      <Products />
+      <BestCyber />
+      <BestAILearning />
       <ThreeDoorsSection />
       <ReceiptsSection />
       <ResearchSection />
