@@ -84,6 +84,34 @@ const TRACKS = [
       "Four public-intellectual voices (Karp's Technological Republic, Luckey's product-first model, Schmidt's NSCAI work, Khosla's third-position) plus six institutional documents (NSCAI Final Report, 2023 NCS, DoD Cyber Strategy, EO 14028, Replicator, CISA CPGs). What industry pros walk into interviews knowing.",
   },
   {
+    slug: "karp",
+    title: "Alex Karp · Palantir's public posture",
+    sub: "Technological Republic thesis · refusal posture · Maven Smart System",
+    body:
+      "Six positions to know cold from Karp's primary material: Silicon Valley unbundled from national purpose, the Technological Republic frame, refusal as posture not exception, public-intellectual posture, Maven Smart System as proof point, what working at Palantir actually means.",
+  },
+  {
+    slug: "luckey",
+    title: "Palmer Luckey · Anduril's founding arc",
+    sub: "Oculus → Facebook departure → Anduril → Replicator → CCA win",
+    body:
+      "Six chapters of the arc from 2012 to 2026 plus the named product line: Lattice OS, Ghost, ALTIUS family, Bolt, Roadrunner, Sentry Tower, Dive-LD, Fury, Pulsar, Anvil. 'Build the products, then sell them' — product-first defense model.",
+  },
+  {
+    slug: "contracts",
+    title: "Federal cyber contracting vehicles",
+    sub: "GSA · CIO-SP4 · OASIS+ · SEWP VI · Alliant 2 · CHESS · OTAs · SBIR",
+    body:
+      "Where federal cyber money actually flows. Nine vehicles totaling $200B+ ceiling. What each is, who holds prime contracts, how to navigate sam.gov + NAICS codes. Industry-pro contracting fluency.",
+  },
+  {
+    slug: "programs",
+    title: "Federal cyber programs · 7 every pro knows",
+    sub: "Cyber Mission Force · Replicator · JADC2 · Maven Smart System · CMMC · CDM · Mission Partner Environment",
+    body:
+      "The seven named programs that appear in every defense conference talk and every job description for cleared work. Structural framing + key facts + primary-source pointers per program.",
+  },
+  {
     slug: "conferences",
     title: "Where the field meets · 12 conferences",
     sub: "DEF CON · Black Hat · BSides · RSA · ShmooCon · CCC · OWASP Global",
