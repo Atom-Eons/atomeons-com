@@ -70,6 +70,20 @@ const TRACKS = [
       "Seven categories — history + journalism, cryptography + systems, red team, blue team, web + AppSec, career + culture, policy + ethics. Every title is on a serious cyber program's reading list or a senior researcher's recommended shelf.",
   },
   {
+    slug: "employers",
+    title: "Where ethical hackers actually work · 30+ employers",
+    sub: "Booz Allen · Palantir · Anduril · Mandiant · CrowdStrike · NSA · CISA · FBI",
+    body:
+      "Three tiers: defense-industrial primes (Booz Allen Vellox, Palantir AIP+Maven, Anduril Lattice), commercial cyber leaders (Mandiant, CrowdStrike, Microsoft, SentinelOne, Palo Alto, Rapid7), mid-tier federal primes, plus federal employers (NSA, CISA, FBI, USCYBERCOM). Sourced + how-to-apply.",
+  },
+  {
+    slug: "doctrine",
+    title: "Defense-tech doctrine · the public frames",
+    sub: "Karp · Luckey · Schmidt · NSCAI · 2023 National Cybersecurity Strategy",
+    body:
+      "Four public-intellectual voices (Karp's Technological Republic, Luckey's product-first model, Schmidt's NSCAI work, Khosla's third-position) plus six institutional documents (NSCAI Final Report, 2023 NCS, DoD Cyber Strategy, EO 14028, Replicator, CISA CPGs). What industry pros walk into interviews knowing.",
+  },
+  {
     slug: "conferences",
     title: "Where the field meets · 12 conferences",
     sub: "DEF CON · Black Hat · BSides · RSA · ShmooCon · CCC · OWASP Global",
