@@ -14,12 +14,12 @@ export function RefusalStrip() {
     "HYPE",
   ];
   return (
-    <div className="border-y border-[#ff7a18]/40 bg-[#04100d]">
+    <div className="border-y border-[#22F0D5]/40 bg-[#08090B]">
       <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-6 py-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] md:text-[11px]">
         <span className="text-[#ff4f5e]">::this product refuses</span>
         {items.map((item) => (
           <span key={item} className="text-[#a7b8ad]">
-            <span className="text-[#ff7a18]">/</span> {item}
+            <span className="text-[#22F0D5]">/</span> {item}
           </span>
         ))}
       </div>

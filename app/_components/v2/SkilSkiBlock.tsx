@@ -56,14 +56,14 @@ export function SkilSkiBlock() {
             </p>
             <ul className="space-y-2 text-sm leading-relaxed text-[#9BA5A7]">
               <li className="flex gap-3">
-                <span className="text-[#FF7A1A]">·</span>
+                <span className="text-[#22F0D5]">·</span>
                 <span>
                   <span className="text-[#F2F4F5]">Skills as files.</span>{" "}
                   YAML + Markdown + scoring rubric. No platform lock-in.
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#FF7A1A]">·</span>
+                <span className="text-[#22F0D5]">·</span>
                 <span>
                   <span className="text-[#F2F4F5]">Indexed by sector.</span>{" "}
                   Legal, biotech, finance, sales, ops, more as the catalog
@@ -71,7 +71,7 @@ export function SkilSkiBlock() {
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#FF7A1A]">·</span>
+                <span className="text-[#22F0D5]">·</span>
                 <span>
                   <span className="text-[#F2F4F5]">Verified before listed.</span>{" "}
                   40-point Skilski Verify rubric runs against every skill.
@@ -79,7 +79,7 @@ export function SkilSkiBlock() {
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="text-[#FF7A1A]">·</span>
+                <span className="text-[#22F0D5]">·</span>
                 <span>
                   <span className="text-[#F2F4F5]">Drops into ORANGEBOX.</span>{" "}
                   Or any cockpit that reads the skil.ski format.

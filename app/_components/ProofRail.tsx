@@ -18,7 +18,7 @@ export function ProofRail() {
   const items = [...STATEMENTS, ...STATEMENTS]; // duplicated for seamless loop
   return (
     <div
-      className="proof-rail relative overflow-hidden border-y border-[#204538] bg-[#04100d]"
+      className="proof-rail relative overflow-hidden border-y border-[#1F242B] bg-[#08090B]"
       role="status"
       aria-label="ORANGEBOX operator statements"
     >

@@ -109,14 +109,14 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         description:
           "ORANGEBOX Command v6.3. Two surfaces: AE See-Suite (command) + AE Operations (systems). Basic Install or AI Box path. License §4A bans subscription. 30-day MFG + Workflow-Fit refund.",
         keywords: ["orangebox", "cockpit", "claude code", "mcp", "ae see-suite", "ae operations", "buy", "v6.3"],
-        badge: "$49 once · forever",
+        badge: "$99 once · forever",
       },
       {
         href: "/pricing",
-        title: "/pricing — $49 once, forever",
+        title: "/pricing — $99 once, forever",
         description:
-          "Standalone pricing page. $49 ORANGEBOX. License §4A no-saas lock. Comparison ladder vs Notion+Linear+Slack+Loom stack ($2,400/yr), Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced ($3,120/yr), part-time PM ($52K/yr), custom consulting ($40K–$120K). 6-FAQ.",
-        keywords: ["pricing", "cost", "price", "$49", "subscription", "license §4A", "no saas", "buy"],
+          "Standalone pricing page. $99 ORANGEBOX. License §4A no-saas lock. Comparison ladder vs Notion+Linear+Slack+Loom stack ($2,400/yr), Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced ($3,120/yr), part-time PM ($52K/yr), custom consulting ($40K–$120K). 6-FAQ.",
+        keywords: ["pricing", "cost", "price", "$99", "subscription", "license §4A", "no saas", "buy"],
       },
       {
         href: "/support",
@@ -212,7 +212,7 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         href: "/manifesto",
         title: "/manifesto — the 14-clause lab doctrine",
         description:
-          "Receipts over slogans. One operator. No venture funding. $49 once · §4A no-saas. Two refund paths. Source included. Local-first. Zero markup. 12 CC-BY manuscripts. Nightly broadcast. The 44M on-ramp. Named tools no affiliate. Falsifiability. Marco Island independent. Quote-it + falsify-it provenance.",
+          "Receipts over slogans. One operator. No venture funding. $99 once · §4A no-saas. Two refund paths. Source included. Local-first. Zero markup. 12 CC-BY manuscripts. Nightly broadcast. The 44M on-ramp. Named tools no affiliate. Falsifiability. Marco Island independent. Quote-it + falsify-it provenance.",
         keywords: ["manifesto", "doctrine", "philosophy", "principles", "clauses", "values", "stance", "license", "no saas", "no venture", "operator-owned"],
       },
       {

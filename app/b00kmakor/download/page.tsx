@@ -96,8 +96,8 @@ export default function B00KMakrDownloadPage() {
           ::v3.2.0 · grab your platform · grandfathered for life
         </p>
         <h1 className="mt-6 text-balance text-5xl font-medium leading-[1] tracking-tight md:text-7xl">
-          B<span className="text-[#FF7A1A]">0</span>
-          <span className="text-[#FF7A1A]">0</span>K<span className="text-[#22F0D5]">MAKR</span> is yours.
+          B<span className="text-[#22F0D5]">0</span>
+          <span className="text-[#22F0D5]">0</span>K<span className="text-[#22F0D5]">MAKR</span> is yours.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-[1.65] text-[#C8CCCE] md:text-lg">
           Grab the platform you live on. If you use both, grab both —
@@ -339,7 +339,7 @@ export default function B00KMakrDownloadPage() {
         <div className="mt-8 flex flex-wrap gap-4">
           <a
             href="mailto:a.mccree@gmail.com?subject=B00KMAKR%20v3.2.0%20issue"
-            className="inline-flex items-center gap-2 rounded-lg border border-[#FF7A1A] bg-[#FF7A1A] px-6 py-3 text-sm font-semibold text-black hover:bg-[#FFA45A]"
+            className="inline-flex items-center gap-2 rounded-lg border border-[#22F0D5] bg-[#22F0D5] px-6 py-3 text-sm font-semibold text-black hover:bg-[#FFA45A]"
           >
             email the founder →
           </a>

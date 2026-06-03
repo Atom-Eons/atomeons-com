@@ -28,7 +28,7 @@ export function AeMark({ size = 28, className = "", glow = true }: Props) {
         fontWeight: 700,
         color: "#22F0D5",
         textShadow: glow
-          ? "0 0 12px rgba(34, 240, 213, 0.55), 0 0 4px rgba(255, 122, 26, 0.4)"
+          ? "0 0 12px rgba(34, 240, 213, 0.55), 0 0 4px rgba(34, 240, 213, 0.4)"
           : "none",
         letterSpacing: "-0.04em",
       }}
@@ -57,7 +57,7 @@ export function AePrefix({
           color: "#22F0D5",
           letterSpacing: "-0.04em",
           textShadow:
-            "0 0 8px rgba(34, 240, 213, 0.45), 0 0 3px rgba(255, 122, 26, 0.35)",
+            "0 0 8px rgba(34, 240, 213, 0.45), 0 0 3px rgba(34, 240, 213, 0.35)",
         }}
       >
         Æ

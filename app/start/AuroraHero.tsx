@@ -164,7 +164,7 @@ export function AuroraHero() {
     const drawBlobs = (t: number) => {
       bctx.clearRect(0, 0, w, h);
       const baseGrad = bctx.createLinearGradient(0, 0, w, h);
-      baseGrad.addColorStop(0, "#0a1a17");
+      baseGrad.addColorStop(0, "#08090B");
       baseGrad.addColorStop(0.5, "#0e2a25");
       baseGrad.addColorStop(1, "#102622");
       bctx.fillStyle = baseGrad;

@@ -101,8 +101,8 @@ export function BuyButton() {
   if (SALES_PAUSED) {
     return (
       <div className="flex flex-col gap-3">
-        <div className="rounded-2xl border border-[#FF7A1A]/40 bg-[#1A0F08]/50 p-5">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+        <div className="rounded-2xl border border-[#22F0D5]/40 bg-[#1A0F08]/50 p-5">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
             ::sales paused · v6.3 in build
           </p>
           <p className="mt-2 text-sm text-[#F2F4F5]">
@@ -191,7 +191,7 @@ export function BuyButton() {
         <button
           onClick={buy}
           disabled={loading}
-          className="cta-orbital pulse-ring inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#FF7A1A] bg-[#FF7A1A] px-8 py-4 text-base font-bold uppercase tracking-wide text-black shadow-[0_0_60px_rgba(255,122,26,0.55)] transition-all hover:scale-[1.02] hover:bg-[#FFA45A] disabled:cursor-not-allowed disabled:opacity-60 sm:text-lg"
+          className="cta-orbital pulse-ring inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#22F0D5] bg-[#22F0D5] px-8 py-4 text-base font-bold uppercase tracking-wide text-black shadow-[0_0_60px_rgba(34, 240, 213,0.55)] transition-all hover:scale-[1.02] hover:bg-[#FFA45A] disabled:cursor-not-allowed disabled:opacity-60 sm:text-lg"
         >
           {loading ? (
             "Opening checkout…"
@@ -297,7 +297,7 @@ function FreeClaimFlow({ countdownLabel }: { countdownLabel: string }) {
             spam or use the fallback below.
           </p>
         ) : (
-          <p className="mt-3 text-sm leading-relaxed text-[#FF7A1A]">
+          <p className="mt-3 text-sm leading-relaxed text-[#22F0D5]">
             Email send failed ({r.email_via}). Use the direct download URL
             below — save it now, it&apos;s your only copy.
           </p>
@@ -398,7 +398,7 @@ function FreeClaimFlow({ countdownLabel }: { countdownLabel: string }) {
           FREE · {countdownLabel} left
         </span>
       </div>
-      <p className="max-w-md font-mono text-[10px] uppercase tracking-[0.18em] text-[#FF7A1A]">
+      <p className="max-w-md font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]">
         launch promo · free first 7 days · $1 once after
       </p>
       <p className="max-w-md font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">

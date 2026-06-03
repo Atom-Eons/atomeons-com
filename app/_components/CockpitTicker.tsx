@@ -60,7 +60,7 @@ export function CockpitTicker() {
 
   return (
     <div
-      className="group rounded-md border border-[#204538] bg-[#04100d] transition-colors hover:border-[#ff7a18]/40"
+      className="group rounded-md border border-[#1F242B] bg-[#08090B] transition-colors hover:border-[#22F0D5]/40"
       role="status"
       aria-live="polite"
       aria-label="ORANGEBOX cockpit telemetry sample (hover to pause)"
@@ -69,7 +69,7 @@ export function CockpitTicker() {
         // would need state, this gives visual focus only.
       }}
     >
-      <div className="flex items-center justify-between gap-3 border-b border-[#204538] px-3 py-1">
+      <div className="flex items-center justify-between gap-3 border-b border-[#1F242B] px-3 py-1">
         <span className="inline-flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.18em] text-[#a7b8ad]">
           ::sample cockpit telemetry
           <span className="rounded-sm border border-[#ffc46b]/40 bg-[#1a1308] px-1 py-0.5 text-[8px] font-bold text-[#ffc46b]">
@@ -88,7 +88,7 @@ export function CockpitTicker() {
         />
         <span className="truncate">
           {shown}
-          {typing ? <span className="ml-px text-[#ff7a18]">▋</span> : null}
+          {typing ? <span className="ml-px text-[#22F0D5]">▋</span> : null}
         </span>
       </div>
     </div>

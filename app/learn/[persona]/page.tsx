@@ -184,7 +184,7 @@ export default async function PersonaPathPage({
       </section>
 
       {/* FIT / NOT FOR */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30">
         <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-20">
           <div className="grid gap-6 md:grid-cols-2">
             <div

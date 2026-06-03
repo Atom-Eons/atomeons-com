@@ -95,10 +95,10 @@ export default function About() {
         One operator. No team. No deck. The receipts are the proof.
       </p>
 
-      <hr className="my-12 border-[#204538]" />
+      <hr className="my-12 border-[#1F242B]" />
 
       <section>
-        <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
+        <p className="text-xs uppercase tracking-widest text-[#22F0D5]">
           What the lab ships
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
@@ -119,10 +119,10 @@ export default function About() {
         </p>
       </section>
 
-      <hr className="my-12 border-[#204538]" />
+      <hr className="my-12 border-[#1F242B]" />
 
       <section>
-        <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
+        <p className="text-xs uppercase tracking-widest text-[#22F0D5]">
           Doctrine
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
@@ -132,11 +132,11 @@ export default function About() {
           {DOCTRINE.map((d) => (
             <div
               key={d.serial}
-              className="group relative overflow-hidden rounded-xl border border-[#204538] bg-[#071915] p-5 transition-colors hover:border-[#ff7a18]/40"
+              className="group relative overflow-hidden rounded-xl border border-[#1F242B] bg-[#0F1114] p-5 transition-colors hover:border-[#22F0D5]/40"
             >
               <span
                 aria-hidden
-                className="pointer-events-none absolute -right-3 -top-6 select-none font-mono text-[80px] font-black leading-none text-[#0a211b] transition-colors group-hover:text-[#1a3026]"
+                className="pointer-events-none absolute -right-3 -top-6 select-none font-mono text-[80px] font-black leading-none text-[#0F1114] transition-colors group-hover:text-[#1a3026]"
               >
                 {d.num}
               </span>
@@ -144,7 +144,7 @@ export default function About() {
                 <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
                   {d.serial}
                 </p>
-                <h3 className="mt-2 text-lg font-bold text-[#ff7a18]">
+                <h3 className="mt-2 text-lg font-bold text-[#22F0D5]">
                   {d.title}
                 </h3>
                 <p className="mt-2 text-sm text-[#a7b8ad]">{d.body}</p>
@@ -157,10 +157,10 @@ export default function About() {
         </div>
       </section>
 
-      <hr className="my-12 border-[#204538]" />
+      <hr className="my-12 border-[#1F242B]" />
 
       <section>
-        <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
+        <p className="text-xs uppercase tracking-widest text-[#22F0D5]">
           Currently shipping
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
@@ -176,21 +176,21 @@ export default function About() {
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="/orangebox"
-            className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
+            className="rounded-md border border-[#22F0D5] bg-[#22F0D5] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
             style={{ color: "#000", WebkitTextFillColor: "#000" }}
           >
             See ORANGEBOX →
           </Link>
           <Link
             href="/orangebox#buy"
-            className="rounded-md border border-[#204538] bg-[#071915] px-4 py-2 text-sm font-semibold text-[#f7f0e4]"
+            className="rounded-md border border-[#1F242B] bg-[#0F1114] px-4 py-2 text-sm font-semibold text-[#f7f0e4]"
           >
             Buy · $1
           </Link>
         </div>
       </section>
 
-      <hr className="my-12 border-[#204538]" />
+      <hr className="my-12 border-[#1F242B]" />
 
       <section>
         <p className="text-xs uppercase tracking-widest text-[#22F0D5]">
@@ -209,7 +209,7 @@ export default function About() {
           plain-language summary side by side. CC-BY 4.0.
         </p>
         <p className="mt-3 text-[#a7b8ad]">
-          There is also a nightly broadcast, <span className="text-[#FF7A1A]">The Founder&apos;s View</span>.
+          There is also a nightly broadcast, <span className="text-[#22F0D5]">The Founder&apos;s View</span>.
           Publishes at 8pm Eastern. Real events. Editorial is satire.
           No edits before publication — only retracts after, with the reason stated.
         </p>
@@ -223,23 +223,23 @@ export default function About() {
           </Link>
           <Link
             href="/research/papers"
-            className="rounded-md border border-[#204538] bg-[#071915] px-4 py-2 text-sm font-semibold text-[#f7f0e4]"
+            className="rounded-md border border-[#1F242B] bg-[#0F1114] px-4 py-2 text-sm font-semibold text-[#f7f0e4]"
           >
             12 papers
           </Link>
           <Link
             href="/founders-view"
-            className="rounded-md border border-[#204538] bg-[#071915] px-4 py-2 text-sm font-semibold text-[#f7f0e4]"
+            className="rounded-md border border-[#1F242B] bg-[#0F1114] px-4 py-2 text-sm font-semibold text-[#f7f0e4]"
           >
             The Founder&apos;s View · 8pm ET
           </Link>
         </div>
       </section>
 
-      <hr className="my-12 border-[#204538]" />
+      <hr className="my-12 border-[#1F242B]" />
 
       <section>
-        <p className="text-xs uppercase tracking-widest text-[#ff7a18]">
+        <p className="text-xs uppercase tracking-widest text-[#22F0D5]">
           Contact
         </p>
         <p className="mt-3 text-[#f7f0e4]">

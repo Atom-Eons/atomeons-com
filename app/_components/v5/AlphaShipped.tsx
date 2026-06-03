@@ -97,7 +97,7 @@ export function AlphaShipped() {
               className="bg-[#0A0F11] p-7 transition-colors hover:bg-[#101A1C]"
             >
               <div className="flex items-baseline gap-4">
-                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
+                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5]">
                   {a.n}
                 </span>
                 <h3 className="text-base font-medium text-[#F2F4F5]">

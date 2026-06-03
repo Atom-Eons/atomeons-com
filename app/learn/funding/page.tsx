@@ -140,7 +140,7 @@ const PAGE_DATA: ContentPage = {
       "cards": [
         {
           "title": "Cerebras Systems",
-          "body": "Wafer-scale AI accelerator company. Raised $1.1B at an $8.1B valuation in September 2025, then $1B at $23B in February 2026, then priced an IPO in May 2026 at $185 per share with an implied market cap of approximately $40B (roughly $49B fully diluted). Revenue scaled from $24.6M in 2022 to $510M in 2025 per the S-1 disclosure.",
+          "body": "Wafer-scale AI accelerator company. Raised $1.1B at an $8.1B valuation in September 2025, then $1B at $23B in February 2026, then priced an IPO in May 2026 at $185 per share with an implied market cap of approximately $40B (roughly $99B fully diluted). Revenue scaled from $24.6M in 2022 to $510M in 2025 per the S-1 disclosure.",
           "meta": "IPO May 2026 · approx $40B implied"
         },
         {

@@ -97,7 +97,7 @@ export default function DeepIndex() {
           </p>
         </div>
       </section>
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 space-y-3">
           {PAGES.map((p, i) => (
             <Link key={p.slug} href={`/learn/deep/${p.slug}`} className="group block rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40">

@@ -57,7 +57,7 @@ const PRODUCTS: Array<{
     },
     receipt: {
       sku: 'ATOM-OBX-2026',
-      price: 'USD $49',
+      price: 'USD $99',
       status: 'SHIPPING',
       unit: 'one-time · forever',
       build: 'v1.4.0',

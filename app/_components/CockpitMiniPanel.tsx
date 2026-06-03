@@ -14,7 +14,7 @@ const RECEIPT_STREAM: { from: string; status: string; text: string }[] = [
 const LANES = [
   { id: "VISION_RAIL", value: 0.94, color: "#75ff92" },
   { id: "PARTY_LINE", value: 0.72, color: "#59d9ff" },
-  { id: "TRIAD_LANES", value: 0.87, color: "#ff7a18" },
+  { id: "TRIAD_LANES", value: 0.87, color: "#22F0D5" },
 ];
 
 /**
@@ -39,12 +39,12 @@ export function CockpitMiniPanel() {
 
   return (
     <div
-      className="overflow-hidden rounded-xl border border-[#204538] bg-[#04100d]"
+      className="overflow-hidden rounded-xl border border-[#1F242B] bg-[#08090B]"
       role="img"
       aria-label="Sample ORANGEBOX cockpit panel illustration"
     >
       {/* TITLE BAR */}
-      <div className="flex items-center justify-between border-b border-[#204538] bg-[#071915] px-3 py-1.5">
+      <div className="flex items-center justify-between border-b border-[#1F242B] bg-[#0F1114] px-3 py-1.5">
         <div className="flex items-center gap-2">
           <span className="inline-flex h-1.5 w-1.5 animate-pulse rounded-full bg-[#75ff92]" />
           <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#a7b8ad]">
@@ -70,7 +70,7 @@ export function CockpitMiniPanel() {
                   {Math.round(lane.value * 100)}%
                 </span>
               </div>
-              <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-[#0a211b]">
+              <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-[#0F1114]">
                 <div
                   className="cockpit-lane-fill h-full rounded-full"
                   style={{
@@ -86,7 +86,7 @@ export function CockpitMiniPanel() {
       </div>
 
       {/* DAG MINI-GRAPH */}
-      <div className="border-t border-[#204538] bg-[#04100d]/60 px-3 py-2">
+      <div className="border-t border-[#1F242B] bg-[#08090B]/60 px-3 py-2">
         <p className="mb-1 font-mono text-[9px] uppercase tracking-[0.18em] text-[#a7b8ad]">
           ::routing graph
         </p>
@@ -108,7 +108,7 @@ export function CockpitMiniPanel() {
       </div>
 
       {/* PARTY-LINE FEED */}
-      <div className="border-t border-[#204538] bg-[#071915]/60 px-3 py-2">
+      <div className="border-t border-[#1F242B] bg-[#0F1114]/60 px-3 py-2">
         <p className="mb-1 font-mono text-[9px] uppercase tracking-[0.18em] text-[#a7b8ad]">
           ::party line · last
         </p>
@@ -116,10 +116,10 @@ export function CockpitMiniPanel() {
           key={i}
           className="cockpit-feed-fade flex items-center gap-2 font-mono text-[10px]"
         >
-          <span className="shrink-0 rounded-sm bg-[#04100d] px-1.5 py-0.5 text-[9px] font-bold text-[#ff7a18]">
+          <span className="shrink-0 rounded-sm bg-[#08090B] px-1.5 py-0.5 text-[9px] font-bold text-[#22F0D5]">
             {live.from}
           </span>
-          <span className="shrink-0 rounded-sm bg-[#04100d] px-1.5 py-0.5 text-[9px] font-bold text-[#75ff92]">
+          <span className="shrink-0 rounded-sm bg-[#08090B] px-1.5 py-0.5 text-[9px] font-bold text-[#75ff92]">
             {live.status}
           </span>
           <span className="truncate text-[#a7b8ad]">{live.text}</span>
@@ -127,7 +127,7 @@ export function CockpitMiniPanel() {
       </div>
 
       {/* RECEIPT STRIP */}
-      <div className="flex items-center justify-between border-t border-[#204538] bg-[#04100d] px-3 py-1.5 font-mono text-[9px] uppercase tracking-widest">
+      <div className="flex items-center justify-between border-t border-[#1F242B] bg-[#08090B] px-3 py-1.5 font-mono text-[9px] uppercase tracking-widest">
         <span className="text-[#1b8b75]">::receipts on disk</span>
         <span className="text-[#75ff92]">checkmate · pass</span>
         <span className="text-[#a7b8ad]">no fake green</span>

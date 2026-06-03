@@ -69,7 +69,7 @@ export default async function Success({
             currency="USD"
             email={resolved.email}
           />
-        <div className="rounded-xl border border-[#75ff92]/50 bg-[#0a211b] p-8">
+        <div className="rounded-xl border border-[#75ff92]/50 bg-[#0F1114] p-8">
           <p className="text-xs uppercase tracking-widest text-[#75ff92]">
             Payment verified · download ready
           </p>
@@ -84,7 +84,7 @@ export default async function Success({
 
           <a
             href={resolved.downloadUrl}
-            className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg border border-[#ff7a18] bg-[#ff7a18] px-6 py-3 text-base font-bold text-black transition-colors hover:bg-[#ffc46b]"
+            className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg border border-[#22F0D5] bg-[#22F0D5] px-6 py-3 text-base font-bold text-black transition-colors hover:bg-[#ffc46b]"
             style={{ color: "#000", WebkitTextFillColor: "#000" }}
           >
             ↓ Download {PRODUCT.FILENAME}
@@ -105,7 +105,7 @@ export default async function Success({
           </div>
 
           {/* Chrome / SmartScreen warning explainer — turns the panic moment into a credibility moment */}
-          <div className="mt-4 rounded-lg border border-[#22F0D5]/40 bg-[#04100d] p-4">
+          <div className="mt-4 rounded-lg border border-[#22F0D5]/40 bg-[#08090B] p-4">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::chrome warned you? this is normal — here&apos;s why
             </p>
@@ -149,7 +149,7 @@ export default async function Success({
             </p>
           ) : null}
 
-          <div className="mt-6 rounded-lg border border-[#22F0D5]/40 bg-[#04100d] p-4">
+          <div className="mt-6 rounded-lg border border-[#22F0D5]/40 bg-[#08090B] p-4">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::next time you buy
             </p>
@@ -180,7 +180,7 @@ export default async function Success({
           <p className="mt-4 text-[#a7b8ad]">{resolved.message}</p>
           <a
             href={`/success?session_id=${encodeURIComponent(session_id ?? "")}`}
-            className="mt-6 inline-flex rounded-md border border-[#204538] bg-[#04100d] px-4 py-2 text-sm text-[#f7f0e4]"
+            className="mt-6 inline-flex rounded-md border border-[#1F242B] bg-[#08090B] px-4 py-2 text-sm text-[#f7f0e4]"
           >
             Refresh
           </a>
@@ -204,7 +204,7 @@ export default async function Success({
           ) : null}
           <a
             href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20order%20issue"
-            className="mt-6 inline-flex rounded-md border border-[#204538] bg-[#04100d] px-4 py-2 text-sm text-[#f7f0e4]"
+            className="mt-6 inline-flex rounded-md border border-[#1F242B] bg-[#08090B] px-4 py-2 text-sm text-[#f7f0e4]"
           >
             Email a.mccree@gmail.com
           </a>
@@ -212,7 +212,7 @@ export default async function Success({
       ) : null}
 
       {resolved.state === "no-session" ? (
-        <div className="rounded-xl border border-[#204538] bg-[#071915] p-8">
+        <div className="rounded-xl border border-[#1F242B] bg-[#0F1114] p-8">
           <p className="text-xs uppercase tracking-widest text-[#a7b8ad]">
             No session
           </p>
@@ -225,7 +225,7 @@ export default async function Success({
           </p>
           <Link
             href="/orangebox"
-            className="mt-6 inline-flex rounded-md border border-[#ff7a18] bg-[#ff7a18] px-4 py-2 text-sm font-semibold text-[#06110e]"
+            className="mt-6 inline-flex rounded-md border border-[#22F0D5] bg-[#22F0D5] px-4 py-2 text-sm font-semibold text-[#08090B]"
           >
             Buy ORANGEBOX · $1
           </Link>

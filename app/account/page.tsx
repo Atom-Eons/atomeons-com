@@ -33,7 +33,7 @@ export default async function AccountPage({
       </p>
 
       {returned === "1" ? (
-        <div className="mt-6 rounded-lg border border-[#22F0D5]/30 bg-[#0a211b] p-4">
+        <div className="mt-6 rounded-lg border border-[#22F0D5]/30 bg-[#0F1114] p-4">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
             ::saved
           </p>
@@ -49,7 +49,7 @@ export default async function AccountPage({
 
       <div className="mt-10 grid gap-3 border-t border-[#1A2225] pt-8 text-sm text-[#9BA5A7] md:grid-cols-3">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
             ::update
           </p>
           <p className="mt-1">
@@ -57,7 +57,7 @@ export default async function AccountPage({
           </p>
         </div>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
             ::re-buy
           </p>
           <p className="mt-1">
@@ -65,7 +65,7 @@ export default async function AccountPage({
           </p>
         </div>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
             ::unsubscribe
           </p>
           <p className="mt-1">

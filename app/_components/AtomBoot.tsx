@@ -44,7 +44,7 @@ export function AtomBoot() {
   return (
     <div
       aria-hidden
-      className="atom-boot-overlay pointer-events-none fixed inset-0 z-[70] flex items-center justify-center bg-[#04100d]"
+      className="atom-boot-overlay pointer-events-none fixed inset-0 z-[70] flex items-center justify-center bg-[#08090B]"
     >
       <div className="atom-boot-mark">
         <AtomMark size={320} speed={2.4} />

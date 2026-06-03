@@ -186,7 +186,7 @@ export default async function ComparisonPage({
       />
 
       {/* QUICK TABLE */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::at a glance · {c.table.length} dimensions
@@ -239,7 +239,7 @@ export default async function ComparisonPage({
       {/* DECISION FRAMEWORK */}
       <section
         id="decide"
-        className="scroll-mt-24 border-b border-[#1A2225] bg-[#0e2520]/30"
+        className="scroll-mt-24 border-b border-[#1A2225] bg-[#08090B]/30"
       >
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">

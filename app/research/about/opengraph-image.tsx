@@ -16,7 +16,7 @@ export default function OG() {
           display: "flex",
           flexDirection: "column",
           background:
-            "radial-gradient(60% 55% at 70% 30%, rgba(117,255,196,0.32) 0%, transparent 60%), radial-gradient(50% 45% at 20% 80%, rgba(34,240,213,0.30) 0%, transparent 65%), #0a1a17",
+            "radial-gradient(60% 55% at 70% 30%, rgba(117,255,196,0.32) 0%, transparent 60%), radial-gradient(50% 45% at 20% 80%, rgba(34,240,213,0.30) 0%, transparent 65%), #08090B",
           color: "#F2F4F5",
           padding: 60,
           fontFamily:

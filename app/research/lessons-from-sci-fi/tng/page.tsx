@@ -171,7 +171,7 @@ export default function TNGPage() {
           </p>
         </div>
       </section>
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20 space-y-5">
           {EPISODES.map((e, i) => (
             <article key={i} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">

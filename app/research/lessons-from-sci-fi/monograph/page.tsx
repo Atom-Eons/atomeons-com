@@ -180,7 +180,7 @@ export default function MonographPage() {
             Ω · Abstract
           </p>
           <p className="text-balance text-lg leading-[1.7] text-[#D8DDE0] md:text-xl md:leading-[1.75]">
-            <span className="float-left mr-3 font-serif text-[5.5rem] leading-[0.85] text-[#FF7A1A] md:text-[7rem]">
+            <span className="float-left mr-3 font-serif text-[5.5rem] leading-[0.85] text-[#22F0D5] md:text-[7rem]">
               T
             </span>
             his monograph presents a comprehensive analytical survey of
@@ -1182,7 +1182,7 @@ export default function MonographPage() {
           manipulation. Above all, it has provided humanity with a century
           of rehearsal for the moment it now faces.
         </p>
-        <blockquote className="my-12 border-l-2 border-[#FF7A1A] pl-6 text-balance text-xl font-medium leading-[1.4] text-[#F2F4F5] md:text-3xl md:leading-[1.35]">
+        <blockquote className="my-12 border-l-2 border-[#22F0D5] pl-6 text-balance text-xl font-medium leading-[1.4] text-[#F2F4F5] md:text-3xl md:leading-[1.35]">
           The machines are here. They do not look like HAL or the Terminator
           or Ava. They look like a text box on a phone screen. But the
           questions the genre has been asking — Can it think? Can it suffer?
@@ -1470,7 +1470,7 @@ function AlignmentFailureModes() {
           className="relative rounded-lg border border-[#1A2225] bg-[#0A0F11] p-5"
         >
           <div className="flex items-baseline justify-between gap-3">
-            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
+            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
               FM 0{i + 1}
             </span>
             <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#6B7779]">
@@ -1513,7 +1513,7 @@ function UseCaseEvolution() {
         </div>
       ))}
       <div className="border-t border-[#1A2225] bg-[#0F1518] px-5 py-4">
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
           Trajectory
         </p>
         <p className="mt-1 text-sm leading-relaxed text-[#D8DDE0] md:text-base">
@@ -1595,7 +1595,7 @@ function FilmographyTable() {
               key={`${r.title}-${r.year}`}
               className="border-b border-[#1A2225] transition-colors hover:bg-[#0F1518]"
             >
-              <td className="px-4 py-3 align-top font-mono text-[11px] text-[#FF7A1A]">{r.year}</td>
+              <td className="px-4 py-3 align-top font-mono text-[11px] text-[#22F0D5]">{r.year}</td>
               <td className="px-4 py-3 align-top font-medium italic text-[#F2F4F5]">{r.title}</td>
               <td className="px-4 py-3 align-top text-[#9BA5A7]">{r.creator}</td>
               <td className="px-4 py-3 align-top font-mono text-xs text-[#22F0D5]">{r.ai}</td>

@@ -58,7 +58,7 @@ export default async function Image({
           display: "flex",
           flexDirection: "column",
           background:
-            "radial-gradient(70% 55% at 70% 30%, rgba(34,240,213,0.22) 0%, transparent 60%), radial-gradient(50% 40% at 15% 95%, rgba(255,122,26,0.16) 0%, transparent 65%), #000000",
+            "radial-gradient(70% 55% at 70% 30%, rgba(34,240,213,0.22) 0%, transparent 60%), radial-gradient(50% 40% at 15% 95%, rgba(34, 240, 213,0.16) 0%, transparent 65%), #000000",
           color: "#F2F4F5",
           padding: 56,
           fontFamily:
@@ -106,7 +106,7 @@ export default async function Image({
               fontSize: 11,
               letterSpacing: 4,
               textTransform: "uppercase",
-              color: "#FF7A1A",
+              color: "#22F0D5",
             }}
           >
             ● {paper.date} · CC-BY 4.0
@@ -122,7 +122,7 @@ export default async function Image({
               fontSize: 13,
               letterSpacing: 3,
               textTransform: "uppercase",
-              color: "#FF7A1A",
+              color: "#22F0D5",
             }}
           >
             ::{paper.status === "summarized" ? "academic + plain-language" : "manuscript indexed"}

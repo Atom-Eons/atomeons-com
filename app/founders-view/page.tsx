@@ -122,7 +122,7 @@ export default async function FoundersViewIndex() {
 
       {/* HERO */}
       <section className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
-        <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           <AeMark size={20} glow />
           ::nightly broadcast · 8pm ET · sealed · slipped under your door
         </p>
@@ -179,16 +179,16 @@ export default async function FoundersViewIndex() {
           Falls through silently when there are no posts yet. */}
       {featured && !error ? (
         <section className="mx-auto w-full max-w-5xl px-6 pb-10">
-          <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+          <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::most recent · live now
           </p>
           <Link
             href={`/founders-view/${featured.slug}`}
-            className="group block rounded-3xl border border-[#FF7A1A]/35 bg-gradient-to-br from-[#1B100A] via-[#0E0B0A] to-[#0A0F11] p-7 transition-all hover:border-[#FF7A1A]/70 md:p-10"
+            className="group block rounded-3xl border border-[#22F0D5]/35 bg-gradient-to-br from-[#1B100A] via-[#0E0B0A] to-[#0A0F11] p-7 transition-all hover:border-[#22F0D5]/70 md:p-10"
           >
             <div className="flex flex-wrap items-baseline gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#FF7A1A]/40 bg-[#FF7A1A]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
-                <span className="size-1.5 animate-pulse rounded-full bg-[#FF7A1A] shadow-[0_0_8px_rgba(255,122,26,0.7)]" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                <span className="size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_rgba(34, 240, 213,0.7)]" />
                 tonight&apos;s broadcast
               </span>
               <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7]">
@@ -200,7 +200,7 @@ export default async function FoundersViewIndex() {
                 })}
               </span>
             </div>
-            <h2 className="mt-5 text-balance text-3xl font-medium leading-[1.05] tracking-tight text-[#F2F4F5] group-hover:text-[#FF7A1A] md:text-5xl">
+            <h2 className="mt-5 text-balance text-3xl font-medium leading-[1.05] tracking-tight text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-5xl">
               {featured.title}
             </h2>
             {featured.dek ? (
@@ -237,8 +237,8 @@ export default async function FoundersViewIndex() {
           </p>
         ) : null}
         {error ? (
-          <div className="rounded-2xl border border-[#FF7A1A]/30 bg-[#1C0F08]/40 p-7">
-            <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
+          <div className="rounded-2xl border border-[#22F0D5]/30 bg-[#1C0F08]/40 p-7">
+            <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5]">
               ::archive unavailable
             </p>
             <p className="mt-2 text-sm text-[#9BA5A7]">
@@ -293,12 +293,12 @@ export default async function FoundersViewIndex() {
                 <li key={p.id}>
                   <Link
                     href={`/founders-view/${p.slug}`}
-                    className="group block rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#FF7A1A]/40 md:p-8"
+                    className="group block rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/40 md:p-8"
                   >
-                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                       ::letter №{number} · {human}
                     </p>
-                    <h2 className="mt-3 text-2xl font-medium leading-tight text-[#F2F4F5] group-hover:text-[#FF7A1A] md:text-3xl">
+                    <h2 className="mt-3 text-2xl font-medium leading-tight text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-3xl">
                       {p.title}
                     </h2>
                     {p.dek ? (

@@ -316,7 +316,7 @@ export default function ResourcesPage() {
           </p>
         </div>
       </section>
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-24 space-y-4">
           {RESOURCES.map((r, i) => (
             <article key={i} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">

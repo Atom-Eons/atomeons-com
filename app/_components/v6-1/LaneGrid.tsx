@@ -131,13 +131,13 @@ export function LaneGrid() {
             <div
               key={l.id}
               className={`group relative bg-[#0A0F11] p-7 transition-colors hover:bg-[#101A1C] ${
-                l.isNew ? "ring-1 ring-inset ring-[#FF7A1A]/30" : ""
+                l.isNew ? "ring-1 ring-inset ring-[#22F0D5]/30" : ""
               }`}
             >
               <div className="flex items-baseline justify-between">
                 <span
                   className={`font-mono text-3xl leading-none ${
-                    l.isNew ? "text-[#FF7A1A]" : "text-[#22F0D5]"
+                    l.isNew ? "text-[#22F0D5]" : "text-[#22F0D5]"
                   }`}
                 >
                   {l.glyph}
@@ -152,7 +152,7 @@ export function LaneGrid() {
                   {l.name}
                 </h3>
                 {l.isNew && (
-                  <span className="rounded border border-[#FF7A1A]/60 bg-[#FF7A1A]/10 px-1.5 py-0.5 font-mono text-[8px] uppercase tracking-[0.18em] text-[#FF7A1A]">
+                  <span className="rounded border border-[#22F0D5]/60 bg-[#22F0D5]/10 px-1.5 py-0.5 font-mono text-[8px] uppercase tracking-[0.18em] text-[#22F0D5]">
                     NEW v6.1.0
                   </span>
                 )}

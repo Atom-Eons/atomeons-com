@@ -27,7 +27,7 @@ export default function Refund() {
 
       <section className="mt-10 space-y-6 text-[15px] leading-[1.75] text-[#C8CCCE]">
         <p>
-          ORANGEBOX Command is a <strong className="text-[#F2F4F5]">$49 USD
+          ORANGEBOX Command is a <strong className="text-[#F2F4F5]">$99 USD
           one-time</strong> digital purchase. Two refund paths apply. Both
           are full-refund. Both run for thirty days from the date of
           payment.

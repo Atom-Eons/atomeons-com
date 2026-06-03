@@ -56,16 +56,16 @@ export function SalesCounter() {
   const pct = data.progress_pct;
 
   return (
-    <div className="inline-flex flex-col gap-1 rounded-md border border-[#204538] bg-[#04100d] px-3 py-2 font-mono text-[10px] uppercase tracking-[0.18em]">
+    <div className="inline-flex flex-col gap-1 rounded-md border border-[#1F242B] bg-[#08090B] px-3 py-2 font-mono text-[10px] uppercase tracking-[0.18em]">
       <div className="flex items-baseline gap-2">
         <span className="text-[#1b8b75]">::sold</span>
-        <span className="text-base font-bold text-[#ff7a18]">{sold}</span>
+        <span className="text-base font-bold text-[#22F0D5]">{sold}</span>
         <span className="text-[#a7b8ad]">of {goal}</span>
         <span className="text-[#75ff92]">· {remaining} remain</span>
       </div>
-      <div className="relative h-1 w-48 overflow-hidden rounded-full bg-[#0a211b]">
+      <div className="relative h-1 w-48 overflow-hidden rounded-full bg-[#0F1114]">
         <div
-          className="absolute inset-y-0 left-0 bg-[#ff7a18] transition-all duration-1000"
+          className="absolute inset-y-0 left-0 bg-[#22F0D5] transition-all duration-1000"
           style={{ width: `${Math.max(2, pct)}%` }}
           aria-hidden
         />

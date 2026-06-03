@@ -100,7 +100,7 @@ export default function Skilski() {
           className="pointer-events-none absolute inset-0 opacity-90"
           style={{
             background:
-              "radial-gradient(70% 55% at 70% 40%, rgba(34,240,213,0.20) 0%, transparent 60%), radial-gradient(50% 40% at 10% 90%, rgba(255,122,26,0.16) 0%, transparent 65%)",
+              "radial-gradient(70% 55% at 70% 40%, rgba(34,240,213,0.20) 0%, transparent 60%), radial-gradient(50% 40% at 10% 90%, rgba(34, 240, 213,0.16) 0%, transparent 65%)",
           }}
         />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
@@ -185,7 +185,7 @@ export default function Skilski() {
                 key={it.h}
                 className="bg-[#0A0F11] p-7 transition-colors hover:bg-[#101A1C]"
               >
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                   ::{it.t}
                 </p>
                 <h3 className="mt-3 text-lg font-medium text-[#22F0D5]">
@@ -254,7 +254,7 @@ export default function Skilski() {
                 key={t.name}
                 className="bg-[#0A0F11] p-7 transition-colors hover:bg-[#101A1C]"
               >
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                   {t.range}
                 </p>
                 <h3 className="mt-3 text-lg font-medium text-[#22F0D5]">
@@ -295,12 +295,12 @@ export default function Skilski() {
               </li>
             ))}
           </ol>
-          <div className="mt-8 rounded-2xl border border-[#FF7A1A]/30 bg-gradient-to-r from-[#1C0F08] to-[#0A0F11] p-6">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+          <div className="mt-8 rounded-2xl border border-[#22F0D5]/30 bg-gradient-to-r from-[#1C0F08] to-[#0A0F11] p-6">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::critical distinction
             </p>
             <p className="mt-3 text-base text-[#F2F4F5]">
-              <span className="text-[#FF7A1A]">Saving ≠ enabling.</span> Save =
+              <span className="text-[#22F0D5]">Saving ≠ enabling.</span> Save =
               bookmark. <span className="text-[#22F0D5]">Add to Lodge</span> =
               make active on MCP. Your agents can only call what's lodged.
             </p>
@@ -347,7 +347,7 @@ export default function Skilski() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(60% 60% at 50% 50%, rgba(34,240,213,0.20) 0%, transparent 60%), radial-gradient(40% 40% at 80% 20%, rgba(255,122,26,0.18) 0%, transparent 60%)",
+              "radial-gradient(60% 60% at 50% 50%, rgba(34,240,213,0.20) 0%, transparent 60%), radial-gradient(40% 40% at 80% 20%, rgba(34, 240, 213,0.18) 0%, transparent 60%)",
           }}
         />
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
@@ -357,7 +357,7 @@ export default function Skilski() {
           <h2 className="text-balance text-4xl font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] md:text-6xl">
             Stop building skills.
             <br />
-            <span className="text-[#FF7A1A]">Start lodging them.</span>
+            <span className="text-[#22F0D5]">Start lodging them.</span>
           </h2>
           <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-[#9BA5A7]">
             2,127 operator-verified workflows already wired. One subscription.

@@ -98,7 +98,7 @@ export function MarkLessonComplete({
     accent,
     "#FFB87A",
     "#7DDBC8",
-    "#FF7A1A",
+    "#22F0D5",
     accent,
     "#22F0D5",
     "#FFB87A",

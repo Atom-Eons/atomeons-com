@@ -44,8 +44,8 @@ const ORGANISMS: OrgCard[] = [
     detail:
       "Turbo-optimization system for Claude. Local-first Windows desktop tool that gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident receipts on every action. Optional fallback to GPT/Gemini/OpenRouter/Ollama via BYO key. FREE launch week · perpetual after · License §4A bans subscription · 30-day Material Failure Guarantee.",
     href: "/orangebox",
-    accentColor: "#FF7A1A",
-    borderColor: "border-[#FF7A1A]/40",
+    accentColor: "#22F0D5",
+    borderColor: "border-[#22F0D5]/40",
     cta: "Get ORANGEBOX",
   },
   {

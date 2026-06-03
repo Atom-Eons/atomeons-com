@@ -390,7 +390,7 @@ const PAGE_DATA: ContentPage = {
       "href": "/b00kmakor"
     }
   ],
-  "accent": "#FF7A1A"
+  "accent": "#22F0D5"
 };
 
 const BREADCRUMB = [

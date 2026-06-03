@@ -61,7 +61,7 @@ export default function OG() {
             { label: "WRITING", color: "#22F0D5" },
             { label: "DECODING", color: "#FFB87A" },
             { label: "PLANNING", color: "#22F0D5" },
-            { label: "DECIDING", color: "#FF7A1A" },
+            { label: "DECIDING", color: "#22F0D5" },
             { label: "LEARNING", color: "#22F0D5" },
           ].map((p) => (
             <div

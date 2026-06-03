@@ -56,10 +56,10 @@ const LOG_LINES = [
 const TAG_COLOR: Record<string, string> = {
   STEP:   "text-[#6B7779]",
   CALL:   "text-[#22F0D5]",
-  RESULT: "text-[#FF7A1A]",
+  RESULT: "text-[#22F0D5]",
   MODEL:  "text-[#F2F4F5]",
   FINISH: "text-[#22F0D5]",
-  ERROR:  "text-[#FF7A1A]",
+  ERROR:  "text-[#22F0D5]",
 };
 
 export function AgentModeHero() {
@@ -71,13 +71,13 @@ export function AgentModeHero() {
         className="pointer-events-none absolute inset-0 opacity-50"
         style={{
           background:
-            "radial-gradient(55% 40% at 70% 0%, rgba(255,122,26,0.12) 0%, transparent 70%)",
+            "radial-gradient(55% 40% at 70% 0%, rgba(34, 240, 213,0.12) 0%, transparent 70%)",
         }}
       />
 
       <div className="relative mx-auto w-full max-w-7xl px-6">
         {/* section label */}
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           ::agent mode · v6.1.0 live · ctrl+a
         </p>
 
@@ -85,7 +85,7 @@ export function AgentModeHero() {
         <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
           The agent that touches
           <br />
-          <span className="text-[#FF7A1A]">your real files.</span>
+          <span className="text-[#22F0D5]">your real files.</span>
         </h2>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#9BA5A7]">
@@ -121,15 +121,15 @@ export function AgentModeHero() {
           </div>
 
           {/* live log mock */}
-          <div className="overflow-hidden rounded-2xl border border-[#1A2225] bg-[#0A0F11] shadow-[0_0_80px_-30px_rgba(255,122,26,0.25)]">
+          <div className="overflow-hidden rounded-2xl border border-[#1A2225] bg-[#0A0F11] shadow-[0_0_80px_-30px_rgba(34, 240, 213,0.25)]">
             {/* title bar */}
             <div className="flex items-center justify-between border-b border-[#1A2225] px-5 py-3">
               <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
                 agent run · live log · job #a3f9
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#FF7A1A]" />
-                <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#FF7A1A]">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#22F0D5]" />
+                <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#22F0D5]">
                   running
                 </span>
               </span>

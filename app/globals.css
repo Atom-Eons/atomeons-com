@@ -61,20 +61,20 @@
    * instead, but existing surfaces stay on these until migrated explicitly.
    * ------------------------------------------------------------------------- */
   --color-danger:  #ff4f5e;
-  --color-bg:      #04100d;
+  --color-bg:      #08090B;
   --color-fg:      #f7f0e4;
   --color-muted:   #a7b8ad;
-  --color-line:    #204538;
-  --color-card:    #071915;
-  --color-card2:   #0a211b;
-  --color-orange:  #ff7a18;
+  --color-line:    #1F242B;
+  --color-card:    #0F1114;
+  --color-card2:   #0F1114;
+  --color-orange:  #22F0D5;
   --color-amber:   #ffc46b;
   --color-green:   #75ff92;
   --color-red:     #ff4f5e;
   --color-blue:    #59d9ff;
   --color-trace:   #1b8b75;
   --color-solder:  #c7f8df;
-  --color-ink:     #06110e;
+  --color-ink:     #08090B;
 
   /* ---------------------------------------------------------------------------
    * V5 TOKENS — bio-cyan + pure black + signature orange. Still in active
@@ -87,7 +87,7 @@
   --color-v5-fg-muted:     #6B7779;
   --color-v5-cyan:         #22F0D5;
   --color-v5-cyan-dim:     #0FB39E;
-  --color-v5-orange:       #FF7A1A;
+  --color-v5-orange:       #22F0D5;
   --color-v5-orange-hot:   #FFA45A;
   --color-v5-border:       #1A2225;
 
@@ -213,7 +213,7 @@ body {
    only — AuroraHero, mesh-gradient, scanlines, cta-orbital, etc. */
 
 a {
-  color: #ff7a18;
+  color: #22F0D5;
   text-decoration: none;
 }
 a:hover {
@@ -221,7 +221,7 @@ a:hover {
 }
 
 ::selection {
-  background: rgba(255, 122, 24, 0.3);
+  background: rgba(34, 240, 213, 0.3);
   color: #f7f0e4;
 }
 
@@ -895,7 +895,7 @@ a:hover {
 .v5-fg { color: #F2F4F5; }
 .v5-cyan { color: #22F0D5; }
 .v5-glow-cyan { box-shadow: 0 0 40px rgba(34,240,213,0.35); }
-.v5-glow-orange { box-shadow: 0 0 40px rgba(255,122,26,0.40); }
+.v5-glow-orange { box-shadow: 0 0 40px rgba(34, 240, 213,0.40); }
 .v5-border { border-color: #1A2225; }
 
 @keyframes v5slidein {
@@ -929,9 +929,9 @@ a:hover {
 
 /* Tap-to-pulse mobile equivalent of cursor spotlight (no-hover devices) */
 @keyframes tap-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 122, 24, 0.45); }
-  70% { box-shadow: 0 0 0 14px rgba(255, 122, 24, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 122, 24, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(34, 240, 213, 0.45); }
+  70% { box-shadow: 0 0 0 14px rgba(34, 240, 213, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 240, 213, 0); }
 }
 @media (hover: none) {
   a:active,
@@ -952,13 +952,13 @@ a:hover {
 
 @keyframes pulse-ring {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 122, 24, 0.5);
+    box-shadow: 0 0 0 0 rgba(34, 240, 213, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(255, 122, 24, 0);
+    box-shadow: 0 0 0 10px rgba(34, 240, 213, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(255, 122, 24, 0);
+    box-shadow: 0 0 0 0 rgba(34, 240, 213, 0);
   }
 }
 
@@ -980,8 +980,8 @@ a:hover {
       0deg,
       rgba(0, 0, 0, 0) 0,
       rgba(0, 0, 0, 0) 2px,
-      rgba(255, 122, 24, 0.04) 2px,
-      rgba(255, 122, 24, 0.04) 3px
+      rgba(34, 240, 213, 0.04) 2px,
+      rgba(34, 240, 213, 0.04) 3px
     );
 }
 
@@ -1025,7 +1025,7 @@ a:hover {
   width: 0.55ch;
   height: 1em;
   vertical-align: -0.1em;
-  background: #ff7a18;
+  background: #22F0D5;
   animation: blink-cursor 1s steps(2, end) infinite;
 }
 
@@ -1042,7 +1042,7 @@ a:hover {
   right: 0;
   z-index: 60;
   height: 2px;
-  background: linear-gradient(90deg, #ff7a18, #ffc46b, #75ff92, #59d9ff);
+  background: linear-gradient(90deg, #22F0D5, #ffc46b, #75ff92, #59d9ff);
   transform-origin: 0 50%;
   transform: scaleX(0);
   animation: boot-bar 1.4s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
@@ -1060,8 +1060,8 @@ a:hover {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #ffc46b;
-  background: rgba(255, 122, 24, 0.06);
-  border: 1px solid rgba(255, 122, 24, 0.4);
+  background: rgba(34, 240, 213, 0.06);
+  border: 1px solid rgba(34, 240, 213, 0.4);
   border-radius: 2px;
   white-space: nowrap;
 }
@@ -1074,10 +1074,10 @@ a:hover {
 }
 .mesh-gradient {
   background:
-    radial-gradient(circle at 20% 20%, rgba(255, 122, 24, 0.35), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgba(34, 240, 213, 0.35), transparent 45%),
     radial-gradient(circle at 80% 80%, rgba(89, 217, 255, 0.22), transparent 50%),
     radial-gradient(circle at 50% 50%, rgba(117, 255, 146, 0.18), transparent 55%),
-    linear-gradient(135deg, #071915 0%, #0a211b 100%);
+    linear-gradient(135deg, #0F1114 0%, #0F1114 100%);
   background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
   animation: mesh-drift 22s ease-in-out infinite;
 }
@@ -1095,11 +1095,11 @@ a:hover {
   border-radius: inherit;
   background: linear-gradient(
     135deg,
-    rgba(255, 122, 24, 0) 0%,
-    rgba(255, 122, 24, 0.6) 25%,
+    rgba(34, 240, 213, 0) 0%,
+    rgba(34, 240, 213, 0.6) 25%,
     rgba(89, 217, 255, 0.5) 50%,
     rgba(117, 255, 146, 0.5) 75%,
-    rgba(255, 122, 24, 0) 100%
+    rgba(34, 240, 213, 0) 100%
   );
   background-size: 200% 200%;
   opacity: 0;
@@ -1118,8 +1118,8 @@ a:hover {
   100% { opacity: 0; }
 }
 @keyframes atom-boot-shrink {
-  0% { transform: scale(1); filter: drop-shadow(0 0 60px rgba(255, 122, 24, 0.6)); }
-  100% { transform: scale(0.18) translateY(-46vh) translateX(-44vw); filter: drop-shadow(0 0 8px rgba(255, 122, 24, 0.3)); }
+  0% { transform: scale(1); filter: drop-shadow(0 0 60px rgba(34, 240, 213, 0.6)); }
+  100% { transform: scale(0.18) translateY(-46vh) translateX(-44vw); filter: drop-shadow(0 0 8px rgba(34, 240, 213, 0.3)); }
 }
 .atom-boot-overlay {
   animation: atom-boot-fade 1400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -1134,12 +1134,12 @@ a:hover {
 /* DAG mini-graph node pulse for CockpitMiniPanel */
 @keyframes dag-node-pulse {
   0%, 100% {
-    fill: #ff7a18;
+    fill: #22F0D5;
     filter: drop-shadow(0 0 0 transparent);
   }
   50% {
     fill: #ffc46b;
-    filter: drop-shadow(0 0 4px rgba(255, 122, 24, 0.7));
+    filter: drop-shadow(0 0 4px rgba(34, 240, 213, 0.7));
   }
 }
 .dag-node-active {
@@ -1250,7 +1250,7 @@ a:hover {
   }
   .boot-bar { display: none; }
   .mesh-gradient {
-    background: linear-gradient(135deg, #071915 0%, #0a211b 100%);
+    background: linear-gradient(135deg, #0F1114 0%, #0F1114 100%);
   }
   .receipt-row { opacity: 1; transform: none; }
   .noir-reveal {

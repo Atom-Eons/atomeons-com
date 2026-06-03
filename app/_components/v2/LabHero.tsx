@@ -35,7 +35,7 @@ const TONE_BG: Record<Tone, string> = {
 const TONE_BLOOM: Record<Tone, string> = {
   calm: "none",
   cyan: "radial-gradient(70% 55% at 80% 25%, rgba(34,240,213,0.18) 0%, transparent 60%), radial-gradient(50% 45% at 8% 90%, rgba(255,184,122,0.10) 0%, transparent 65%)",
-  warm: "radial-gradient(70% 55% at 78% 30%, rgba(255,184,122,0.20) 0%, transparent 60%), radial-gradient(45% 40% at 12% 85%, rgba(255,122,26,0.10) 0%, transparent 65%)",
+  warm: "radial-gradient(70% 55% at 78% 30%, rgba(255,184,122,0.20) 0%, transparent 60%), radial-gradient(45% 40% at 12% 85%, rgba(34, 240, 213,0.10) 0%, transparent 65%)",
 };
 
 export function LabHero({

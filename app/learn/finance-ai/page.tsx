@@ -6,7 +6,7 @@ const TRACK = {
   title: "Finance AI",
   subtitle: "Audit-trail-grade AI for the people who sign the numbers.",
   intro: "Finance is the one field where \"the AI said so\" is not a defense. You sign the 10-Q. You sign the audit workpaper. You sign the tax return under penalties of perjury. The PCAOB, SEC, IRS, and your own board do not care which model drafted the variance commentary. They care whether the number is right and whether you can show your work.\n\nThat makes finance simultaneously the highest-leverage and the highest-liability AI use case in the enterprise. A controller who runs AI well closes the month two days faster, ships a board deck that actually reads cleanly, and catches contract risk before it goes to legal. A controller who runs AI badly pastes a customer's payroll register into a public chatbot, accepts an AI-confabulated depreciation calculation, or lets a model write footnotes that misstate the accounting policy. One of those gets you promoted. The other gets you fired and possibly disciplined.\n\nThis track teaches the second-order discipline: AI as a drafting and reasoning partner, never as a calculator and never as a system of record. Every number gets recomputed in Excel, Python, or Wolfram before it leaves your desk. Every piece of customer or SOC2-scoped data stays inside a local Ollama instance or your firm's vetted internal LLM — never in a consumer chat window. Every output is an artifact you are willing to defend to an auditor, a regulator, and your own future self.\n\nThis is not \"AI will replace accountants.\" It is \"AI gives accountants four hours back every day, on the condition that they verify everything that touches a decision.\" If you can hold that line, the leverage is enormous. If you can't, stay manual.",
-  accent: "#FF7A1A",
+  accent: "#22F0D5",
   personas: [
   {
     "role": "FP&A Analyst (Corporate)",
@@ -265,7 +265,7 @@ export default function TrackPage() {
       </section>
 
       {/* PERSONAS */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-24">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: t.accent }}>
             ::who lands here
@@ -310,7 +310,7 @@ export default function TrackPage() {
       </section>
 
       {/* STACK + DO NOT */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-24">
           <div className="grid gap-8 md:grid-cols-2">
             <div>
@@ -386,7 +386,7 @@ export default function TrackPage() {
       </section>
 
       {/* REGULATIONS */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-4xl px-6 py-20 md:py-24">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: t.accent }}>
             ::what governs your AI use

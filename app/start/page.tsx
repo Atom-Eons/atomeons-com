@@ -307,7 +307,7 @@ export default function StartPage() {
               {
                 label: "Try the cockpit",
                 title: "Æ ORANGEBOX",
-                body: "The v6.3 cockpit. AE See-Suite + AE Operations. $49 once, forever. Two 30-day refund paths.",
+                body: "The v6.3 cockpit. AE See-Suite + AE Operations. $99 once, forever. Two 30-day refund paths.",
                 href: "/orangebox",
                 accent: "#FFB87A",
               },

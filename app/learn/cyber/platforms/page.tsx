@@ -185,7 +185,7 @@ export default function CyberPlatformsPage() {
         </div>
       </section>
 
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             The platforms.
@@ -239,7 +239,7 @@ export default function CyberPlatformsPage() {
         </div>
       </section>
 
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
           <h2 className="text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             How to actually break into one of these

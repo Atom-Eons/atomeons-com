@@ -53,7 +53,7 @@ export function SkusTable() {
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
             One default SKU.
             <br />
-            <span className="text-[#FF7A1A]">Three optional rails.</span>
+            <span className="text-[#22F0D5]">Three optional rails.</span>
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-[#9BA5A7]">
             Buy{" "}
@@ -70,12 +70,12 @@ export function SkusTable() {
               key={s.id}
               className={`relative bg-[#0A0F11] p-8 ${
                 s.default
-                  ? "md:col-span-2 md:bg-gradient-to-br md:from-[#FF7A1A]/8 md:via-[#0A0F11] md:to-[#22F0D5]/5"
+                  ? "md:col-span-2 md:bg-gradient-to-br md:from-[#22F0D5]/8 md:via-[#0A0F11] md:to-[#22F0D5]/5"
                   : ""
               }`}
             >
               {s.default ? (
-                <span className="absolute right-6 top-6 rounded border border-[#FF7A1A]/60 bg-[#FF7A1A]/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em] text-[#FF7A1A]">
+                <span className="absolute right-6 top-6 rounded border border-[#22F0D5]/60 bg-[#22F0D5]/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]">
                   default · buy this
                 </span>
               ) : null}
@@ -89,7 +89,7 @@ export function SkusTable() {
                 <span
                   className={`font-medium ${
                     s.default
-                      ? "text-5xl text-[#FF7A1A]"
+                      ? "text-5xl text-[#22F0D5]"
                       : "text-3xl text-[#F2F4F5]"
                   }`}
                 >

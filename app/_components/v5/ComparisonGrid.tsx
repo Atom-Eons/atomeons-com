@@ -59,7 +59,7 @@ export function ComparisonGrid() {
               key={r.label}
               className={`flex flex-col gap-2 px-5 py-5 transition-colors md:grid md:grid-cols-[1.4fr_140px_2fr] md:items-center md:gap-4 md:px-8 ${
                 r.highlight
-                  ? "bg-gradient-to-r from-[#FF7A1A]/10 via-[#22F0D5]/5 to-transparent"
+                  ? "bg-gradient-to-r from-[#22F0D5]/10 via-[#22F0D5]/5 to-transparent"
                   : "border-t border-[#1A2225] hover:bg-[#101A1C]/50"
               }`}
             >
@@ -67,7 +67,7 @@ export function ComparisonGrid() {
                 <span
                   className={`text-sm md:text-base ${
                     r.highlight
-                      ? "font-medium text-[#FF7A1A]"
+                      ? "font-medium text-[#22F0D5]"
                       : "text-[#F2F4F5]"
                   }`}
                 >

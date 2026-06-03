@@ -15,7 +15,7 @@ export default function Cancel() {
 ──────────────────────────────────────────────────────`}
       </pre>
 
-      <div className="mt-8 rounded-xl border border-[#204538] bg-[#071915] p-8">
+      <div className="mt-8 rounded-xl border border-[#1F242B] bg-[#0F1114] p-8">
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
           ::checkout cancelled
         </p>
@@ -29,14 +29,14 @@ export default function Cancel() {
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             href="/orangebox#buy"
-            className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
+            className="rounded-md border border-[#22F0D5] bg-[#22F0D5] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
             style={{ color: "#000", WebkitTextFillColor: "#000" }}
           >
             Try again · $1 →
           </Link>
           <Link
             href="/orangebox"
-            className="rounded-md border border-[#204538] bg-[#071915] px-4 py-2 text-sm text-[#f7f0e4]"
+            className="rounded-md border border-[#1F242B] bg-[#0F1114] px-4 py-2 text-sm text-[#f7f0e4]"
           >
             See the full cockpit
           </Link>

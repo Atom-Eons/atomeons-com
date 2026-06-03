@@ -57,7 +57,7 @@ export async function GET() {
   out.push("## Mission");
   out.push("");
   out.push(
-    "Onboard humanity to AI. One operator (Atom McCree), Marco Island, FL. No venture funding. No subscription. No upsell. No affiliate revenue. The lab ships a free 27-lesson curriculum, a $49-once local-first AI cockpit (ORANGEBOX, License §4A bans subscription), 12 research manuscripts (CC-BY 4.0), a nightly 8pm ET broadcast (The Founder's View), a 26-term plain-English glossary, a 14-clause public manifesto, and decoded primary-source intel.",
+    "Onboard humanity to AI. One operator (Atom McCree), Marco Island, FL. No venture funding. No subscription. No upsell. No affiliate revenue. The lab ships a free 27-lesson curriculum, a $99-once local-first AI cockpit (ORANGEBOX, License §4A bans subscription), 12 research manuscripts (CC-BY 4.0), a nightly 8pm ET broadcast (The Founder's View), a 26-term plain-English glossary, a 14-clause public manifesto, and decoded primary-source intel.",
   );
   out.push("");
 
@@ -242,7 +242,7 @@ export async function GET() {
   out.push("- https://atomeons.com/glossary        — 26-term plain-English AI vocabulary");
   out.push("- https://atomeons.com/start           — 11-minute novice on-ramp (the appetizer)");
   out.push("- https://atomeons.com/ai              — comprehensive AI gateway (28 tools, 18 builders, 51 FAQs)");
-  out.push("- https://atomeons.com/orangebox       — ORANGEBOX cockpit · v6.3 · $49 once · §4A no-saas");
+  out.push("- https://atomeons.com/orangebox       — ORANGEBOX cockpit · v6.3 · $99 once · §4A no-saas");
   out.push("- https://atomeons.com/manifesto       — 14-clause lab doctrine");
   out.push("- https://atomeons.com/founders-view   — nightly 8pm ET broadcast index");
   out.push("- https://atomeons.com/research/papers — 12 manuscripts CC-BY 4.0");

@@ -391,7 +391,7 @@ function Visual({ kind }: { kind: Moment["visual"] }) {
                 key={i}
                 className="aspect-square rounded-sm"
                 style={{
-                  background: i % 7 === 0 ? "#22F0D5" : i % 5 === 0 ? "#FF7A1A" : "#1A2225",
+                  background: i % 7 === 0 ? "#22F0D5" : i % 5 === 0 ? "#22F0D5" : "#1A2225",
                   opacity: 0.4 + (i % 3) * 0.2,
                 }}
               />
@@ -406,12 +406,12 @@ function Visual({ kind }: { kind: Moment["visual"] }) {
         <div className={`${base} bg-gradient-to-b from-[#3A2410] via-[#1A0E08] to-[#000]`}>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <svg viewBox="0 0 100 100" className="size-40">
-              <circle cx="50" cy="50" r="40" fill="none" stroke="#FF7A1A" strokeWidth="0.5" opacity="0.4" />
-              <circle cx="50" cy="50" r="28" fill="none" stroke="#FF7A1A" strokeWidth="0.5" opacity="0.6" />
-              <line x1="10" y1="50" x2="40" y2="50" stroke="#FF7A1A" strokeWidth="0.5" opacity="0.6" />
-              <line x1="60" y1="50" x2="90" y2="50" stroke="#FF7A1A" strokeWidth="0.5" opacity="0.6" />
-              <line x1="50" y1="10" x2="50" y2="40" stroke="#FF7A1A" strokeWidth="0.5" opacity="0.6" />
-              <line x1="50" y1="60" x2="50" y2="90" stroke="#FF7A1A" strokeWidth="0.5" opacity="0.6" />
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#22F0D5" strokeWidth="0.5" opacity="0.4" />
+              <circle cx="50" cy="50" r="28" fill="none" stroke="#22F0D5" strokeWidth="0.5" opacity="0.6" />
+              <line x1="10" y1="50" x2="40" y2="50" stroke="#22F0D5" strokeWidth="0.5" opacity="0.6" />
+              <line x1="60" y1="50" x2="90" y2="50" stroke="#22F0D5" strokeWidth="0.5" opacity="0.6" />
+              <line x1="50" y1="10" x2="50" y2="40" stroke="#22F0D5" strokeWidth="0.5" opacity="0.6" />
+              <line x1="50" y1="60" x2="50" y2="90" stroke="#22F0D5" strokeWidth="0.5" opacity="0.6" />
               <circle cx="50" cy="50" r="2" fill="#FF4040" />
             </svg>
           </div>
@@ -691,8 +691,8 @@ export function StillGallery() {
                   <span
                     className={
                       m.lead
-                        ? "font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A] md:text-sm"
-                        : "font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]"
+                        ? "font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5] md:text-sm"
+                        : "font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]"
                     }
                   >
                     {m.year}

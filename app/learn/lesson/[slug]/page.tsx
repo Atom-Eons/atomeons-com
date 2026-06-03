@@ -187,7 +187,7 @@ export default async function LessonPage({
       {/* CONCEPT · collapsible — first paragraph visible, rest behind expand */}
       <section
         id="concept"
-        className="border-b border-[#1A2225] bg-[#0e2520]/30 scroll-mt-20"
+        className="border-b border-[#1A2225] bg-[#08090B]/30 scroll-mt-20"
       >
         <div className="mx-auto w-full max-w-3xl px-6 py-12 md:py-16">
           <p
@@ -371,7 +371,7 @@ export default async function LessonPage({
       ) : null}
 
       {/* OUTCOME */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30">
         <div className="mx-auto w-full max-w-3xl px-6 py-16 md:py-20">
           <p
             className="font-mono text-[10px] uppercase tracking-[0.32em]"
@@ -427,7 +427,7 @@ export default async function LessonPage({
       </section>
 
       {/* NEXT */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30">
         <div className="mx-auto w-full max-w-3xl px-6 py-16 md:py-20">
           {nextLesson ? (
             <Link

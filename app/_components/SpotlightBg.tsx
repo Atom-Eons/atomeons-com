@@ -41,7 +41,7 @@ export function SpotlightBg({ children, className = "" }: Props) {
       style={{
         // Vercel-style cursor halo over the grid background.
         backgroundImage:
-          "radial-gradient(600px circle at var(--mx, 50%) var(--my, 30%), rgba(255, 122, 24, 0.10), transparent 65%)",
+          "radial-gradient(600px circle at var(--mx, 50%) var(--my, 30%), rgba(34, 240, 213, 0.10), transparent 65%)",
       }}
     >
       {children}

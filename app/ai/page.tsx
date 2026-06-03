@@ -1248,7 +1248,7 @@ export default function AIPage() {
       {/* MISSION */}
       <section
         id="mission"
-        className="border-b border-[#1A2225] bg-[#0e2520]/40"
+        className="border-b border-[#1A2225] bg-[#08090B]/40"
       >
         <div className="mx-auto w-full max-w-4xl px-6 py-24 md:py-32">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
@@ -1459,7 +1459,7 @@ export default function AIPage() {
       {/* PEOPLE */}
       <section
         id="people"
-        className="border-b border-[#1A2225] bg-[#0e2520]/30"
+        className="border-b border-[#1A2225] bg-[#08090B]/30"
       >
         <div className="mx-auto w-full max-w-6xl px-6 py-24 md:py-32">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
@@ -1787,7 +1787,7 @@ export default function AIPage() {
       {/* 30-60-90 PLAN */}
       <section
         id="plan"
-        className="border-b border-[#1A2225] bg-[#0e2520]/40"
+        className="border-b border-[#1A2225] bg-[#08090B]/40"
       >
         <div className="mx-auto w-full max-w-5xl px-6 py-24 md:py-32">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">

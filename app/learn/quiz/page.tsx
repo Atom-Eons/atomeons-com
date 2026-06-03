@@ -43,7 +43,7 @@ export default function QuizPage() {
           </p>
         </div>
       </section>
-      <section className="bg-[#0e2520]/20">
+      <section className="bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-4xl px-6 py-12 md:py-16">
           <Quiz />
         </div>

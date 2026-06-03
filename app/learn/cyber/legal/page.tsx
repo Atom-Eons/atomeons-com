@@ -47,7 +47,7 @@ export default function CyberLegalPage() {
         </div>
       </section>
 
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20 space-y-12">
           <div>
             <h2 className="text-balance text-2xl font-medium tracking-tight md:text-3xl">
@@ -152,7 +152,7 @@ export default function CyberLegalPage() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-[#22F0D5]/40 bg-[#0e2520]/30 p-7 md:p-10">
+          <div className="rounded-2xl border border-[#22F0D5]/40 bg-[#08090B]/30 p-7 md:p-10">
             <h2 className="text-balance text-2xl font-medium tracking-tight text-[#22F0D5] md:text-3xl">
               How to stay clearly inside the line
             </h2>

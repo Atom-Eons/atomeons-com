@@ -65,7 +65,7 @@ export default function CyberCertsPage() {
         </div>
       </section>
 
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
           <h2 className="text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             The 10 certifications, ranked by what they actually unlock
@@ -107,7 +107,7 @@ export default function CyberCertsPage() {
         </div>
       </section>
 
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20">
           <h2 className="text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-4xl">
             The honest sequencing recommendation

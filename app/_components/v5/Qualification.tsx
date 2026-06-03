@@ -54,8 +54,8 @@ export function Qualification() {
           </div>
 
           {/* dont if */}
-          <div className="rounded-2xl border border-[#FF7A1A]/30 bg-gradient-to-b from-[#1C0F08] to-[#0A0F11] p-8">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+          <div className="rounded-2xl border border-[#22F0D5]/30 bg-gradient-to-b from-[#1C0F08] to-[#0A0F11] p-8">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::do not buy this if
             </p>
             <ul className="mt-6 space-y-1">
@@ -63,7 +63,7 @@ export function Qualification() {
                 <li key={head} className="rounded transition-colors hover:bg-black/40">
                   <details className="group">
                     <summary className="cursor-pointer list-none px-2 py-2.5 text-sm text-[#F2F4F5] marker:hidden">
-                      <span className="mr-2 font-mono text-[#FF7A1A]">■</span>
+                      <span className="mr-2 font-mono text-[#22F0D5]">■</span>
                       {head}
                     </summary>
                     <p className="px-7 pb-3 text-xs leading-relaxed text-[#9BA5A7]">

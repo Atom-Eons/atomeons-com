@@ -25,8 +25,8 @@ export function AtomMark({ size = 32, className = "", speed = 8 }: Props) {
       <defs>
         <radialGradient id="atom-nucleus-glow" cx="0" cy="0" r="50%">
           <stop offset="0%" stopColor="#ffc46b" stopOpacity="1" />
-          <stop offset="60%" stopColor="#ff7a18" stopOpacity="1" />
-          <stop offset="100%" stopColor="#ff7a18" stopOpacity="0" />
+          <stop offset="60%" stopColor="#22F0D5" stopOpacity="1" />
+          <stop offset="100%" stopColor="#22F0D5" stopOpacity="0" />
         </radialGradient>
         <filter id="atom-glow" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur stdDeviation="2" result="blur" />
@@ -50,7 +50,7 @@ export function AtomMark({ size = 32, className = "", speed = 8 }: Props) {
           rx="42"
           ry="14"
           fill="none"
-          stroke="#ff7a18"
+          stroke="#22F0D5"
           strokeWidth="1.4"
           opacity="0.85"
           filter="url(#atom-glow)"

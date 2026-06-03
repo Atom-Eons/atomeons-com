@@ -106,7 +106,7 @@ export default function ResearchAbout() {
           </p>
           <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
             One operator. <span className="text-[#22F0D5]">One lab.</span>{" "}
-            <span className="text-[#FF7A1A]">One unifying field.</span>
+            <span className="text-[#22F0D5]">One unifying field.</span>
           </h1>
           <p className="mt-8 max-w-3xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
             ÆoNs Research is the publishing arm of AtomEons Systems Laboratory —
@@ -160,7 +160,7 @@ export default function ResearchAbout() {
               className="bg-[#0A0F11] p-7 transition-colors hover:bg-[#101A1C]"
             >
               <div className="flex items-baseline gap-4">
-                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
+                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5]">
                   {p.n}
                 </span>
                 <h3 className="text-base font-medium text-[#F2F4F5]">
@@ -198,7 +198,7 @@ export default function ResearchAbout() {
                 co-founders. No deck. No roadmap theater. The work shipped
                 this year unifies four scientific domains under one set of
                 equations and runs through ORANGEBOX Command v6.3 — the
-                $49 cockpit at{" "}
+                $99 cockpit at{" "}
                 <Link
                   href="/orangebox"
                   className="text-[#22F0D5] hover:text-[#FFA45A]"
@@ -384,12 +384,12 @@ export default function ResearchAbout() {
           </Link>
           <Link
             href="/founders-view"
-            className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#FF7A1A]/50"
+            className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/50"
           >
-            <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
+            <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5]">
               ::nightly broadcast
             </p>
-            <p className="mt-3 text-xl font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
+            <p className="mt-3 text-xl font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
               The Founder&apos;s View → 8pm ET daily
             </p>
             <p className="mt-2 text-sm text-[#9BA5A7]">

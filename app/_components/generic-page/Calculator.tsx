@@ -147,7 +147,7 @@ export function Calculator({
       </section>
 
       {/* INTERACTIVE */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-14 md:py-16">
           <div className="grid gap-8 md:grid-cols-2">
             {/* Inputs */}

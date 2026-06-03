@@ -141,7 +141,7 @@ export default function AtlasInferencePage() {
                   <h3 className="text-xl font-medium tracking-tight text-[#F2F4F5] md:text-2xl">{p.name}</h3>
                 </div>
                 <p className="mt-4 max-w-[62ch] text-[15px] leading-[1.7] text-[#C8CCCE]">{p.body}</p>
-                <p className="mt-3 max-w-[62ch] rounded-lg border border-[#22F0D5]/20 bg-[#0e2520]/30 p-4 text-[14px] leading-[1.65] text-[#C8CCCE]">
+                <p className="mt-3 max-w-[62ch] rounded-lg border border-[#22F0D5]/20 bg-[#08090B]/30 p-4 text-[14px] leading-[1.65] text-[#C8CCCE]">
                   <span className="font-medium text-[#22F0D5]">Why it matters: </span>{p.matters}
                 </p>
               </article>

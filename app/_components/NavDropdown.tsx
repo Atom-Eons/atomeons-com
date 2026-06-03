@@ -66,7 +66,7 @@ export function NavDropdown({ label, items, accent = "cyan" }: Props) {
 
   const triggerClass =
     accent === "orange"
-      ? "rounded-md border border-[#FF7A1A]/40 px-3 py-1.5 text-sm text-[#FF7A1A] hover:bg-[#FF7A1A]/10"
+      ? "rounded-md border border-[#22F0D5]/40 px-3 py-1.5 text-sm text-[#22F0D5] hover:bg-[#22F0D5]/10"
       : "rounded-md px-3 py-1.5 text-sm text-[#9BA5A7] hover:bg-[#0A0F11] hover:text-[#22F0D5]";
 
   return (

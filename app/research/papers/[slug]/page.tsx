@@ -99,7 +99,7 @@ function AuthorBlock({ authors }: { authors: string }) {
             <Link
               key={name}
               href="/research/about"
-              className="group inline-flex items-center gap-2 rounded-xl border border-[#22F0D5]/30 bg-[#04100d] px-4 py-2 transition-colors hover:border-[#22F0D5]/70"
+              className="group inline-flex items-center gap-2 rounded-xl border border-[#22F0D5]/30 bg-[#08090B] px-4 py-2 transition-colors hover:border-[#22F0D5]/70"
             >
               <AeMark size={16} glow />
               <span className="text-sm font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
@@ -113,7 +113,7 @@ function AuthorBlock({ authors }: { authors: string }) {
           return (
             <span
               key={name}
-              className="inline-block rounded border border-[#1A2225] bg-[#0A0F11] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-[#FF7A1A]"
+              className="inline-block rounded border border-[#1A2225] bg-[#0A0F11] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]"
             >
               {name}
             </span>
@@ -218,7 +218,7 @@ export default async function PaperPage({
               className={
                 paper.status === "summarized"
                   ? "text-[#22F0D5]"
-                  : "text-[#FF7A1A]"
+                  : "text-[#22F0D5]"
               }
             >
               {paper.status}
@@ -231,7 +231,7 @@ export default async function PaperPage({
         </div>
 
         {/* KID SUMMARY */}
-        <section className="mt-12 rounded-2xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#04100d] to-[#0A0F11] p-7 md:p-10">
+        <section className="mt-12 rounded-2xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#08090B] to-[#0A0F11] p-7 md:p-10">
           <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
             ::for a six-year-old (or grandma)
           </p>
@@ -242,7 +242,7 @@ export default async function PaperPage({
 
         {/* ACADEMIC SUMMARY */}
         <section className="mt-10 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10">
-          <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+          <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
             ::academic abstract
           </p>
           <p className="mt-4 text-base leading-relaxed text-[#9BA5A7] md:text-lg">

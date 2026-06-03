@@ -20,7 +20,7 @@ export function HomeOnboardStrip() {
     { id: "worker", label: "Worker", accent: "#FFB87A" },
     { id: "builder", label: "Builder", accent: "#22F0D5" },
     { id: "student", label: "Student", accent: "#22F0D5" },
-    { id: "operator", label: "Operator", accent: "#FF7A1A" },
+    { id: "operator", label: "Operator", accent: "#22F0D5" },
     { id: "curious", label: "Curious", accent: "#9BA5A7" },
   ];
 

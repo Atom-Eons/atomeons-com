@@ -219,7 +219,7 @@ export default async function CheatsheetLangPage({ params }: { params: Promise<T
           <h1 className="mt-6 text-balance text-3xl font-medium tracking-tight md:text-4xl">{t.heroTitle}</h1>
         </div>
       </section>
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-3xl px-6 py-12 space-y-6">
           <div className="rounded-2xl border border-[#FFB87A]/40 bg-[#1C1308]/40 p-6 md:p-7">
             <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FFB87A]">{t.verifyRuleTitle}</p>

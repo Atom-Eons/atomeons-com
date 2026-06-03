@@ -255,7 +255,7 @@ export default function DecisionTreePage() {
         </div>
       </section>
 
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28 space-y-8">
           {LEAVES.map((l, i) => (
             <article

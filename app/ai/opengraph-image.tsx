@@ -24,7 +24,7 @@ export default function OG() {
           display: "flex",
           flexDirection: "column",
           background:
-            "radial-gradient(65% 55% at 25% 25%, rgba(34,240,213,0.36) 0%, transparent 60%), radial-gradient(55% 50% at 80% 80%, rgba(255,184,122,0.32) 0%, transparent 65%), radial-gradient(45% 40% at 70% 20%, rgba(117,255,196,0.18) 0%, transparent 60%), #0a1a17",
+            "radial-gradient(65% 55% at 25% 25%, rgba(34,240,213,0.36) 0%, transparent 60%), radial-gradient(55% 50% at 80% 80%, rgba(255,184,122,0.32) 0%, transparent 65%), radial-gradient(45% 40% at 70% 20%, rgba(117,255,196,0.18) 0%, transparent 60%), #08090B",
           color: "#F2F4F5",
           padding: 60,
           fontFamily:

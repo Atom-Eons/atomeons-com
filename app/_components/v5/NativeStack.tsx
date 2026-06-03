@@ -47,18 +47,18 @@ export function NativeStack() {
         className="pointer-events-none absolute inset-0 opacity-60"
         style={{
           background:
-            "radial-gradient(60% 50% at 50% 0%, rgba(255,122,26,0.10) 0%, transparent 70%)",
+            "radial-gradient(60% 50% at 50% 0%, rgba(34, 240, 213,0.10) 0%, transparent 70%)",
         }}
       />
       <div className="relative mx-auto w-full max-w-7xl px-6">
         <div className="mb-20 max-w-3xl">
-          <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+          <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
             ::v6.0 · native stack · 2026
           </p>
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
             One file.
             <br />
-            <span className="text-[#FF7A1A]">Double-click. 2 seconds.</span>
+            <span className="text-[#22F0D5]">Double-click. 2 seconds.</span>
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-[#9BA5A7]">
             v6.0 ditched the webview. The whole cockpit is a 4.46 MB native
@@ -75,7 +75,7 @@ export function NativeStack() {
               className="bg-[#0A0F11] p-7 transition-colors hover:bg-[#101A1C]"
             >
               <div className="flex items-baseline gap-4">
-                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
+                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5]">
                   {s.n}
                 </span>
                 <h3 className="text-base font-medium text-[#F2F4F5]">

@@ -14,14 +14,14 @@ export function DoctrineStrip() {
             ::doctrine
           </p>
           <p className="mt-6 text-balance text-2xl font-medium leading-snug text-[#F2F4F5] md:text-3xl">
-            ORANGEBOX is the <span className="text-[#FF7A1A]">cockpit</span>.
+            ORANGEBOX is the <span className="text-[#22F0D5]">cockpit</span>.
             Skil.Ski is the <span className="text-[#22F0D5]">marketplace</span>.{" "}
             <span className="text-[#FFA45A]">Hermes</span> is the 𝕏 lane inside the cockpit.
           </p>
 
           <div className="mt-8 grid gap-6 border-t border-[#1A2225] pt-8 md:grid-cols-3">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                 ::cockpit
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[#9BA5A7]">

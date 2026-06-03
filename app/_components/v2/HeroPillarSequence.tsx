@@ -33,7 +33,7 @@ const PILLARS = [
   {
     id: "make-money",
     text: "Make money.",
-    style: { color: "#FF7A1A" } as React.CSSProperties,
+    style: { color: "#22F0D5" } as React.CSSProperties,
     gradient: false,
   },
   {
@@ -116,7 +116,7 @@ export function HeroPillarSequence() {
         style={{
           background:
             "radial-gradient(55% 50% at 15% 60%, rgba(34,240,213,0.10) 0%, transparent 65%), " +
-            "radial-gradient(40% 35% at 85% 25%, rgba(255,122,26,0.08) 0%, transparent 60%)",
+            "radial-gradient(40% 35% at 85% 25%, rgba(34, 240, 213,0.08) 0%, transparent 60%)",
         }}
       />
       {/* MOTION LAYER — slow 22s cyan/orange/green mesh drift over HAL's
@@ -157,7 +157,7 @@ export function HeroPillarSequence() {
                   pillar.gradient
                     ? {
                         backgroundImage:
-                          "linear-gradient(90deg, #22F0D5, #FF7A1A)",
+                          "linear-gradient(90deg, #22F0D5, #22F0D5)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                       }

@@ -8,14 +8,14 @@ const STATUS_COLOR: Record<string, string> = {
 };
 
 const FROM_COLOR: Record<string, string> = {
-  AE0: "text-[#ff7a18]",
+  AE0: "text-[#22F0D5]",
   AE3: "text-[#75ff92]",
   AE5: "text-[#ffc46b]",
   AE6: "text-[#59d9ff]",
   AE7: "text-[#75ff92]",
   AE8: "text-[#75ff92]",
   CHECKMATE: "text-[#ff4f5e]",
-  ORANGE: "text-[#ff7a18]",
+  ORANGE: "text-[#22F0D5]",
   MIRRORS: "text-[#59d9ff]",
   MISFITS: "text-[#ff4f5e]",
   LIPS: "text-[#ffc46b]",
@@ -35,11 +35,11 @@ export function BuildReceipts() {
   return (
     <section
       id="build-receipts"
-      className="mt-16 rounded-2xl border border-[#204538] bg-[#04100d] p-6 md:p-8"
+      className="mt-16 rounded-2xl border border-[#1F242B] bg-[#08090B] p-6 md:p-8"
     >
-      <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-[#204538] pb-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-[#1F242B] pb-4">
         <div>
-          <p className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#ff7a18]">
+          <p className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]">
             ::sample build receipts
             <span className="rounded-sm border border-[#ffc46b]/40 bg-[#1a1308] px-1.5 py-0.5 text-[9px] font-bold text-[#ffc46b]">
               SAMPLE DATA
@@ -66,23 +66,23 @@ export function BuildReceipts() {
           <li
             key={entry.id}
             style={{ ["--i" as string]: idx } as React.CSSProperties}
-            className={`receipt-row rounded-lg border bg-[#071915]/70 p-4 transition-colors hover:bg-[#071915] ${
-              STATUS_COLOR[entry.status] ?? "border-[#204538]"
+            className={`receipt-row rounded-lg border bg-[#0F1114]/70 p-4 transition-colors hover:bg-[#0F1114] ${
+              STATUS_COLOR[entry.status] ?? "border-[#1F242B]"
             }`}
           >
             <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-widest">
               <span
-                className={`shrink-0 rounded-sm bg-[#04100d] px-1.5 py-0.5 font-bold ${
+                className={`shrink-0 rounded-sm bg-[#08090B] px-1.5 py-0.5 font-bold ${
                   FROM_COLOR[entry.from] ?? "text-[#a7b8ad]"
                 }`}
               >
                 {entry.from}
               </span>
-              <span className="rounded-sm bg-[#04100d] px-1.5 py-0.5 text-[#a7b8ad]">
+              <span className="rounded-sm bg-[#08090B] px-1.5 py-0.5 text-[#a7b8ad]">
                 {entry.kind}
               </span>
               <span
-                className={`rounded-sm bg-[#04100d] px-1.5 py-0.5 font-bold ${
+                className={`rounded-sm bg-[#08090B] px-1.5 py-0.5 font-bold ${
                   STATUS_COLOR[entry.status]?.split(" ")[0] ?? "text-[#a7b8ad]"
                 }`}
               >
@@ -105,7 +105,7 @@ export function BuildReceipts() {
         ))}
       </ol>
 
-      <p className="mt-6 border-t border-[#204538] pt-4 text-xs text-[#a7b8ad]">
+      <p className="mt-6 border-t border-[#1F242B] pt-4 text-xs text-[#a7b8ad]">
         Every meaningful action in your project gets one of these. No
         audit trail is a red flag. This one is default-on.
       </p>

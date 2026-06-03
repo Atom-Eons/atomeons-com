@@ -52,7 +52,7 @@ type Entry = {
 
 const KIND_COLORS: Record<ChangeKind, string> = {
   site: "#22F0D5",
-  product: "#FF7A1A",
+  product: "#22F0D5",
   research: "#FFB87A",
   broadcast: "#FFB87A",
   legal: "#9BA5A7",
@@ -128,12 +128,12 @@ const LOG: Entry[] = [
       "app/_components/Footer.tsx (chip + lab-status updated to launch posture)",
       "app/_components/Header.tsx (dropdown hint updated)",
       "app/_components/MobileNav.tsx (mirror header)",
-      "app/pricing/page.tsx ($49 → $99 site-wide + free-week hero treatment + grandfathering callout)",
+      "app/pricing/page.tsx ($99 → $99 site-wide + free-week hero treatment + grandfathering callout)",
       "public/llms.txt (3-tool bundle framing for AI crawlers)",
       ".draft-letters/launch-day.json (NEW · 1500w launch broadcast for operator publish queue)",
     ],
     body:
-      "Support batch for the /orangebox launch rebuild. Checkout endpoint /api/checkout/v63 now routes through three phases: (1) FREE WEEK — if NEXT_PUBLIC_ORANGEBOX_FREE_WEEK_ENDS_AT is set + in future, returns 200 with {free: true, url: <download>} pointing at NEXT_PUBLIC_ORANGEBOX_DOWNLOAD_URL; (2) PAID — STRIPE_ORANGEBOX_V63_ENABLED=true flips Stripe checkout active at $99 fallback or STRIPE_ORANGEBOX_V63_PRICE_ID if set; (3) PRE-LAUNCH — both envs absent returns 503 with email-inquire mailto, unchanged. OrangeBoxV63Buy client redirects to whichever URL the endpoint returns — covers both free-download and stripe-checkout flows. Stripe product description updated to '3-tool bundle (cockpit + AE Operations + Delta IDE)'. Metadata sku=ORANGEBOX_BUNDLE_V1, price=$99, pricing_law='$99_post_countdown_§4A_no_saas_random_change_disclosed'. /pricing page: blanket $49 → $99 replace, hero rewritten to lead with 'FREE for one week · then $99 · may change at random' framing, grandfathering callout box added. Footer chip + Header dropdown hint + MobileNav hint all updated to '3-tool bundle · FREE launch week · then $99'. llms.txt /orangebox surface entry rewritten with full launch posture. Launch-day broadcast letter drafted to .draft-letters/launch-day.json (1500w, 'The Bundle Goes Live', ready for /api/admin/publish-letter when delta uploads). Free-week buyers grandfathered for life by clause.",
+      "Support batch for the /orangebox launch rebuild. Checkout endpoint /api/checkout/v63 now routes through three phases: (1) FREE WEEK — if NEXT_PUBLIC_ORANGEBOX_FREE_WEEK_ENDS_AT is set + in future, returns 200 with {free: true, url: <download>} pointing at NEXT_PUBLIC_ORANGEBOX_DOWNLOAD_URL; (2) PAID — STRIPE_ORANGEBOX_V63_ENABLED=true flips Stripe checkout active at $99 fallback or STRIPE_ORANGEBOX_V63_PRICE_ID if set; (3) PRE-LAUNCH — both envs absent returns 503 with email-inquire mailto, unchanged. OrangeBoxV63Buy client redirects to whichever URL the endpoint returns — covers both free-download and stripe-checkout flows. Stripe product description updated to '3-tool bundle (cockpit + AE Operations + Delta IDE)'. Metadata sku=ORANGEBOX_BUNDLE_V1, price=$99, pricing_law='$99_post_countdown_§4A_no_saas_random_change_disclosed'. /pricing page: blanket $99 → $99 replace, hero rewritten to lead with 'FREE for one week · then $99 · may change at random' framing, grandfathering callout box added. Footer chip + Header dropdown hint + MobileNav hint all updated to '3-tool bundle · FREE launch week · then $99'. llms.txt /orangebox surface entry rewritten with full launch posture. Launch-day broadcast letter drafted to .draft-letters/launch-day.json (1500w, 'The Bundle Goes Live', ready for /api/admin/publish-letter when delta uploads). Free-week buyers grandfathered for life by clause.",
   },
   {
     date: "2026-05-30",
@@ -153,12 +153,12 @@ const LOG: Entry[] = [
     tag: "pricing-og-card",
     kind: "site",
     title:
-      "/pricing OG card · $49 once · §4A no-saas pill",
+      "/pricing OG card · $99 once · §4A no-saas pill",
     surfaces: [
       "app/pricing/opengraph-image.tsx (NEW · 'One product · one price · forever')",
     ],
     body:
-      "Custom 1200×630 PNG for /pricing shares. Headline: '$49 once. No subscription. Ever.' Orange/cyan dual bloom (orange-led to match the commerce-color identity). Bottom strip: 'two 30-day refund paths · source included · windows 10/11' subtitle + §4A no-saas binding pill. /press and /about already had OG cards — left alone. /manifesto, /intel, /research still lack OG cards and could be future additions.",
+      "Custom 1200×630 PNG for /pricing shares. Headline: '$99 once. No subscription. Ever.' Orange/cyan dual bloom (orange-led to match the commerce-color identity). Bottom strip: 'two 30-day refund paths · source included · windows 10/11' subtitle + §4A no-saas binding pill. /press and /about already had OG cards — left alone. /manifesto, /intel, /research still lack OG cards and could be future additions.",
   },
   {
     date: "2026-05-29",
@@ -339,7 +339,7 @@ const LOG: Entry[] = [
       "app/manifesto/page.tsx (hero → LabHero · dropped redundant secondary paragraph from hero shell to subtitle slot · added #clause-index anchor for primary CTA)",
     ],
     body:
-      "Second rollout pass of the design-system primitives shipped earlier today. Refactored /learn and /manifesto hero sections to use LabHero. /learn hero went from 4 stacked CTAs (a 2007 template tell) to 1 primary + 1 secondary, with the chip strip and progress bar moving into the children slot at the new spacing. /manifesto hero went from a 3-paragraph subtitle block to a tighter LabHero shell with the secondary paragraph compressed into the subtitle slot. /orangebox hero deliberately not refactored — its right-rail $49 commerce card needs a layout LabHero doesn't model. Net effect: every hero across /learn, /manifesto, and homepage HomeOnboardStrip now shares one display-heading scale (md:text-[7.5rem]), one vertical padding (py-24/md:py-36), and one CTA pair convention. Confident emptiness over busy chrome.",
+      "Second rollout pass of the design-system primitives shipped earlier today. Refactored /learn and /manifesto hero sections to use LabHero. /learn hero went from 4 stacked CTAs (a 2007 template tell) to 1 primary + 1 secondary, with the chip strip and progress bar moving into the children slot at the new spacing. /manifesto hero went from a 3-paragraph subtitle block to a tighter LabHero shell with the secondary paragraph compressed into the subtitle slot. /orangebox hero deliberately not refactored — its right-rail $99 commerce card needs a layout LabHero doesn't model. Net effect: every hero across /learn, /manifesto, and homepage HomeOnboardStrip now shares one display-heading scale (md:text-[7.5rem]), one vertical padding (py-24/md:py-36), and one CTA pair convention. Confident emptiness over busy chrome.",
   },
   {
     date: "2026-05-29",
@@ -521,14 +521,14 @@ const LOG: Entry[] = [
       "app/api/sales-count/route.ts (legacy docstring)",
     ],
     body:
-      "Final pass through the surfaces that survived the press+OG+body+buybar sweep. 404 'Buy ORANGEBOX · $1' → '$49'; success-page Chrome explainer 'unsigned in v6.0.0 — EV cert lands in v6.1' → 'v6.x binary unsigned · EV cert on v6.x roadmap' (removes the bad EV-in-v6.1 promise); homepage HeroLabManifest stat strip '11 LANES · $1 · FREE FIRST 7 DAYS' → '2 SURFACES · $49 · §4A NO-SAAS'; OrganismRail ORANGEBOX detail rewritten to two-surface architecture; LabFooterCTA buy description '$1 ladder · one file · forever' → 'v6.3 · $49 once · §4A no-saas'. lib/pricing.ts + /api/sales-count docstrings rewritten to clearly label themselves as LEGACY $1 archive flow (no live-current display consumes them). Intentional historical references in changelog, legal pages, the legacy archive, dated ship-log entries, and cross-link labels preserved.",
+      "Final pass through the surfaces that survived the press+OG+body+buybar sweep. 404 'Buy ORANGEBOX · $1' → '$99'; success-page Chrome explainer 'unsigned in v6.0.0 — EV cert lands in v6.1' → 'v6.x binary unsigned · EV cert on v6.x roadmap' (removes the bad EV-in-v6.1 promise); homepage HeroLabManifest stat strip '11 LANES · $1 · FREE FIRST 7 DAYS' → '2 SURFACES · $99 · §4A NO-SAAS'; OrganismRail ORANGEBOX detail rewritten to two-surface architecture; LabFooterCTA buy description '$1 ladder · one file · forever' → 'v6.3 · $99 once · §4A no-saas'. lib/pricing.ts + /api/sales-count docstrings rewritten to clearly label themselves as LEGACY $1 archive flow (no live-current display consumes them). Intentional historical references in changelog, legal pages, the legacy archive, dated ship-log entries, and cross-link labels preserved.",
   },
   {
     date: "2026-05-26",
     tag: "v63-site-wide-stale-claim-cleanup",
     kind: "site",
     title:
-      "Site-wide v6.3 / $49 stale-claim cleanup. Press kit + layout JSON-LD + OG cards + body copy + buybars refreshed.",
+      "Site-wide v6.3 / $99 stale-claim cleanup. Press kit + layout JSON-LD + OG cards + body copy + buybars refreshed.",
     surfaces: [
       "public/llms.txt",
       "app/layout.tsx (Organization makesOffer JSON-LD)",
@@ -546,7 +546,7 @@ const LOG: Entry[] = [
       "app/_components/v2/OrangeBoxBlock.tsx",
     ],
     body:
-      "Comprehensive sweep of the surfaces that still emitted the prior v6.1.0 / v6.0.0 / $1 / free-7-days / 11-lanes framing. After this batch every live-current surface — site-wide JSON-LD, llms.txt, press kit (boilerplate, FACTS table, QUOTES, ANGLES, all four COPY_BLOCKS), all four OG cards, /faq body Q&A, /ai tool card + Q&A, /start ORANGEBOX card, /about body, /intel cross-link, the site-wide StickyBuyBar, and the homepage product block — reads v6.3 / $49 once · forever / §4A no-saas / two 30-day refund paths / AE See-Suite + AE Operations / 200+ models / zero markup. The legacy $1 ladder system (BuyButton, DynamicPrice, SalesCounterV5) remains in tree but is only mounted on /orangebox/legacy (historical archive). The OrangeBoxBlock on / now emits OrangeBoxV63Buy, which means the homepage now sells the current SKU.",
+      "Comprehensive sweep of the surfaces that still emitted the prior v6.1.0 / v6.0.0 / $1 / free-7-days / 11-lanes framing. After this batch every live-current surface — site-wide JSON-LD, llms.txt, press kit (boilerplate, FACTS table, QUOTES, ANGLES, all four COPY_BLOCKS), all four OG cards, /faq body Q&A, /ai tool card + Q&A, /start ORANGEBOX card, /about body, /intel cross-link, the site-wide StickyBuyBar, and the homepage product block — reads v6.3 / $99 once · forever / §4A no-saas / two 30-day refund paths / AE See-Suite + AE Operations / 200+ models / zero markup. The legacy $1 ladder system (BuyButton, DynamicPrice, SalesCounterV5) remains in tree but is only mounted on /orangebox/legacy (historical archive). The OrangeBoxBlock on / now emits OrangeBoxV63Buy, which means the homepage now sells the current SKU.",
   },
   {
     date: "2026-05-23",
@@ -563,7 +563,7 @@ const LOG: Entry[] = [
       "/changelog",
     ],
     body:
-      "The lab's operating doctrine made explicit on one page. Fourteen numbered clauses — receipts over slogans, one operator, no venture funding, $49 once · §4A no-saas, dual 30-day refund paths, source included, local-first, zero markup on token cost, 12 CC-BY manuscripts, nightly broadcast equal-opportunity indignation, the 44M on-ramp, named tools no affiliate, falsifiability, Marco Island independent. Article + BreadcrumbList JSON-LD. Quote-it (CC-BY citation template) + falsify-it provenance blocks. /now refreshed from 17 May ladder-pricing posture to 23 May v6.3 / $49 / §4A reality — SHIPPED_THIS_WEEK rewritten with 16 entries spanning the May 21–23 ship cascade; CURRENT_REALITY rewritten; cockpit counter updated.",
+      "The lab's operating doctrine made explicit on one page. Fourteen numbered clauses — receipts over slogans, one operator, no venture funding, $99 once · §4A no-saas, dual 30-day refund paths, source included, local-first, zero markup on token cost, 12 CC-BY manuscripts, nightly broadcast equal-opportunity indignation, the 44M on-ramp, named tools no affiliate, falsifiability, Marco Island independent. Article + BreadcrumbList JSON-LD. Quote-it (CC-BY citation template) + falsify-it provenance blocks. /now refreshed from 17 May ladder-pricing posture to 23 May v6.3 / $99 / §4A reality — SHIPPED_THIS_WEEK rewritten with 16 entries spanning the May 21–23 ship cascade; CURRENT_REALITY rewritten; cockpit counter updated.",
   },
   {
     date: "2026-05-23",
@@ -580,7 +580,7 @@ const LOG: Entry[] = [
       "/legal/privacy",
     ],
     body:
-      "Three new surfaces ship in one cut: /pricing (standalone $49 pricing page with FAQ + Product + Breadcrumb JSON-LD), /support (eight-channel buyer help hub with pre-filled mailto links), /changelog (this page — public version history). All three legal pages rewritten from the 2026-05-13 ladder-pricing $1 narrative to the current v6.3 $49 + dual-30-day-refund posture.",
+      "Three new surfaces ship in one cut: /pricing (standalone $99 pricing page with FAQ + Product + Breadcrumb JSON-LD), /support (eight-channel buyer help hub with pre-filled mailto links), /changelog (this page — public version history). All three legal pages rewritten from the 2026-05-13 ladder-pricing $1 narrative to the current v6.3 $99 + dual-30-day-refund posture.",
   },
   {
     date: "2026-05-23",
@@ -625,7 +625,7 @@ const LOG: Entry[] = [
       "/orangebox/legacy (NEW)",
     ],
     body:
-      "Nav collapsed two competing pulse chips into one (kept 'start here'). Added Learn dropdown (/ai + /faq). Æ Research dropdown restored Lessons From Sci-Fi. ORANGEBOX page rewritten from the v6.1.0 / $1 framing to the v6.3 / $49 inquire-to-ship reality; the prior page preserved at /orangebox/legacy with an archive banner.",
+      "Nav collapsed two competing pulse chips into one (kept 'start here'). Added Learn dropdown (/ai + /faq). Æ Research dropdown restored Lessons From Sci-Fi. ORANGEBOX page rewritten from the v6.1.0 / $1 framing to the v6.3 / $99 inquire-to-ship reality; the prior page preserved at /orangebox/legacy with an archive banner.",
   },
   {
     date: "2026-05-22",
@@ -702,7 +702,7 @@ const LOG: Entry[] = [
       "Pricing canon set: $1 once + FREE first 7 days (the v6.1 ladder was retired here).",
     surfaces: ["lib/pricing.ts", "/api/checkout/route.ts", "BuyButton.tsx"],
     body:
-      "The +$1-per-100-buyers ladder published on 2026-05-17 was retired on 2026-05-20 in favor of $1 + free-first-week. Buyers who paid on the ladder are grandfathered under §4A. (Note: this entry preserved for history; the current v6.3 price is $49 — see the 2026-05-23 entries.)",
+      "The +$1-per-100-buyers ladder published on 2026-05-17 was retired on 2026-05-20 in favor of $1 + free-first-week. Buyers who paid on the ladder are grandfathered under §4A. (Note: this entry preserved for history; the current v6.3 price is $99 — see the 2026-05-23 entries.)",
   },
   {
     date: "2026-05-17",

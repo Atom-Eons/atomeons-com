@@ -28,7 +28,7 @@ export default function NotFound() {
       </h1>
 
       <p className="mt-6 max-w-xl text-pretty text-[#a7b8ad]">
-        The cockpit returned <span className="font-mono text-[#ff7a18]">FAILED</span>{" "}
+        The cockpit returned <span className="font-mono text-[#22F0D5]">FAILED</span>{" "}
         instead of fake green. That is the point.
       </p>
 
@@ -76,23 +76,23 @@ export default function NotFound() {
           </Link>
           <Link
             href="/orangebox"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#FF7A1A]/50"
+            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::cockpit · v1.0.0-beta · turbo-optimize Claude · §4A
             </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
+            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
               Æ ORANGEBOX →
             </p>
           </Link>
           <Link
             href="/founders-view"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#FF7A1A]/50"
+            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::nightly broadcast · 8pm ET
             </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
+            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
               The Founder&apos;s View →
             </p>
           </Link>
@@ -146,20 +146,20 @@ export default function NotFound() {
       <div className="mt-10 flex flex-wrap gap-3">
         <Link
           href="/"
-          className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-5 py-2.5 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
+          className="rounded-md border border-[#22F0D5] bg-[#22F0D5] px-5 py-2.5 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
           style={{ color: "#000", WebkitTextFillColor: "#000" }}
         >
           Back to home
         </Link>
         <Link
           href="/orangebox"
-          className="rounded-md border border-[#204538] bg-[#071915] px-5 py-2.5 text-sm font-semibold text-[#f7f0e4]"
+          className="rounded-md border border-[#1F242B] bg-[#0F1114] px-5 py-2.5 text-sm font-semibold text-[#f7f0e4]"
         >
           Get ORANGEBOX · FREE this week
         </Link>
         <Link
           href="/research/about"
-          className="rounded-md border border-[#204538] bg-transparent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-[#a7b8ad] hover:text-[#f7f0e4]"
+          className="rounded-md border border-[#1F242B] bg-transparent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-[#a7b8ad] hover:text-[#f7f0e4]"
         >
           About the lab
         </Link>

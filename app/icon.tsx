@@ -9,7 +9,7 @@ export default function Icon() {
     (
       <div
         style={{
-          background: "#04100d",
+          background: "#08090B",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -24,7 +24,7 @@ export default function Icon() {
             rx="42"
             ry="14"
             fill="none"
-            stroke="#ff7a18"
+            stroke="#22F0D5"
             strokeWidth="3"
           />
           <ellipse
@@ -49,7 +49,7 @@ export default function Icon() {
             opacity="0.7"
             transform="rotate(120)"
           />
-          <circle cx="0" cy="0" r="11" fill="#ff7a18" />
+          <circle cx="0" cy="0" r="11" fill="#22F0D5" />
           <circle cx="0" cy="0" r="5" fill="#ffc46b" />
         </svg>
       </div>

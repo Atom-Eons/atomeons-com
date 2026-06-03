@@ -70,7 +70,7 @@ const TIER_ACCENT: Record<1 | 2 | 3 | 4, string> = {
   1: "#22F0D5",
   2: "#7DDBC8",
   3: "#FFB87A",
-  4: "#FF7A1A",
+  4: "#22F0D5",
 };
 
 export function PriceTag({

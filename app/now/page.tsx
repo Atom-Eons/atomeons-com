@@ -85,7 +85,7 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
   {
     date: "2026-05-23",
     what:
-      "/pricing (NEW) — standalone $49 pricing surface. Product + FAQPage + Breadcrumb JSON-LD. 6-FAQ schema. Comparison ladder vs part-time-PM hire ($52K/yr), custom consulting ($40K-$120K), Claude Pro stack ($3,120/yr), Notion+Linear+Slack ($2,400/yr).",
+      "/pricing (NEW) — standalone $99 pricing surface. Product + FAQPage + Breadcrumb JSON-LD. 6-FAQ schema. Comparison ladder vs part-time-PM hire ($52K/yr), custom consulting ($40K-$120K), Claude Pro stack ($3,120/yr), Notion+Linear+Slack ($2,400/yr).",
     href: "/pricing",
   },
   {
@@ -109,13 +109,13 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
   {
     date: "2026-05-23",
     what:
-      "Stripe v6.3 SKU checkout — /api/checkout/v63 endpoint + <OrangeBoxV63Buy /> client. POSTs $49 Stripe Checkout Session when STRIPE_ORANGEBOX_V63_ENABLED=true; 503 + inquire fallback until then.",
+      "Stripe v6.3 SKU checkout — /api/checkout/v63 endpoint + <OrangeBoxV63Buy /> client. POSTs $99 Stripe Checkout Session when STRIPE_ORANGEBOX_V63_ENABLED=true; 503 + inquire fallback until then.",
     href: "/orangebox",
   },
   {
     date: "2026-05-23",
     what:
-      "Footer rebuilt 5 → 6 cols. Learn column added (/ai · /start · /faq · /search). Products column adds /pricing + /support. About+Legal column adds /changelog. Lab Status badges current to v6.3 / $49 / §4A no-SaaS.",
+      "Footer rebuilt 5 → 6 cols. Learn column added (/ai · /start · /faq · /search). Products column adds /pricing + /support. About+Legal column adds /changelog. Lab Status badges current to v6.3 / $99 / §4A no-SaaS.",
   },
   {
     date: "2026-05-23",
@@ -132,12 +132,12 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
   {
     date: "2026-05-23",
     what:
-      "Header + MobileNav restructure. Single pulse chip (was two competing). NEW Learn dropdown (/ai + /faq). ORANGEBOX hint v6.1.0 → v6.3 / $49. Lessons From Sci-Fi restored under Æ Research dropdown.",
+      "Header + MobileNav restructure. Single pulse chip (was two competing). NEW Learn dropdown (/ai + /faq). ORANGEBOX hint v6.1.0 → v6.3 / $99. Lessons From Sci-Fi restored under Æ Research dropdown.",
   },
   {
     date: "2026-05-23",
     what:
-      "ORANGEBOX page rebuilt around v6.3 — AE See-Suite + AE Operations, Basic Install + AI Box, $49 once, 30-day MFG + Workflow-Fit refund. Previous v6.1.0 / $1 framing preserved at /orangebox/legacy with an archive banner.",
+      "ORANGEBOX page rebuilt around v6.3 — AE See-Suite + AE Operations, Basic Install + AI Box, $99 once, 30-day MFG + Workflow-Fit refund. Previous v6.1.0 / $1 framing preserved at /orangebox/legacy with an archive banner.",
     href: "/orangebox",
   },
   {
@@ -183,7 +183,7 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
   {
     date: "2026-05-21",
     what:
-      "Site-wide color lift — body bg #04100d → #0a1a17 (warmer base), bloom alphas raised, third green-bloom added lower-right, 40s drift animation across body. Reduced-motion guard extended. Homepage hero gets new mesh-gradient motion layer over HAL vignette.",
+      "Site-wide color lift — body bg #08090B → #08090B (warmer base), bloom alphas raised, third green-bloom added lower-right, 40s drift animation across body. Reduced-motion guard extended. Homepage hero gets new mesh-gradient motion layer over HAL vignette.",
   },
   {
     date: "2026-05-21",
@@ -252,7 +252,7 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
 ];
 
 const SHIPPING_NEXT: string[] = [
-  "STRIPE_ORANGEBOX_V63_ENABLED=true (optionally STRIPE_ORANGEBOX_V63_PRICE_ID) in Vercel env → /orangebox flips from inquire-only to live $49 self-serve Stripe Checkout. One env var.",
+  "STRIPE_ORANGEBOX_V63_ENABLED=true (optionally STRIPE_ORANGEBOX_V63_PRICE_ID) in Vercel env → /orangebox flips from inquire-only to live $99 self-serve Stripe Checkout. One env var.",
   "Cron sanity: confirm /api/cron/founders-view fires at 8pm ET (Vercel Cron + Supabase service-role write). Verify letter cadence post-letter-31.",
   "EV code-signing certificate (DigiCert / Sectigo) → eliminates Windows SmartScreen warning on first cockpit download.",
   "Real ORANGEBOX cockpit screenshots → flagged TODO in WEBSITE_HANDOFF. Capture v6.3 on a clean machine, drop into /public/orangebox/.",
@@ -261,7 +261,7 @@ const SHIPPING_NEXT: string[] = [
 ];
 
 const CURRENT_REALITY: string[] = [
-  "ORANGEBOX v6.3 (AE See-Suite + AE Operations) is the current cockpit. $49 once, forever. License §4A bans subscription.",
+  "ORANGEBOX v6.3 (AE See-Suite + AE Operations) is the current cockpit. $99 once, forever. License §4A bans subscription.",
   "Public checkout is inquire-only until the STRIPE_ORANGEBOX_V63_ENABLED env var is set. The v6.1.0 / $1 archive lives at /orangebox/legacy.",
   "The Founder's View has 31+ published letters in the archive. Live teaser surfaces the latest on the homepage via 5-min ISR.",
   "Twelve research manuscripts public + summarized · 38-page Lessons From Sci-Fi monograph live · 1,851-line X Algorithm Alpha dossier live.",
@@ -340,7 +340,7 @@ export default async function NowPage() {
             </p>
           </div>
           <div className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5">
-            <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+            <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#22F0D5]">
               letters
             </p>
             <p className="mt-2 text-2xl font-medium text-[#F2F4F5]">
@@ -356,11 +356,11 @@ export default async function NowPage() {
             </p>
             <p className="mt-2 text-2xl font-medium text-[#F2F4F5]">v6.3</p>
             <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
-              $49 once · §4A
+              $99 once · §4A
             </p>
           </div>
           <div className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5">
-            <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+            <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#22F0D5]">
               op count
             </p>
             <p className="mt-2 text-2xl font-medium text-[#F2F4F5]">1</p>
@@ -391,7 +391,7 @@ export default async function NowPage() {
 
       {/* SHIPPED THIS WEEK */}
       <section className="mx-auto w-full max-w-4xl px-6 py-10">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           ::shipped this week
         </p>
         <h2 className="mb-6 text-2xl font-medium text-[#F2F4F5] md:text-3xl">
@@ -437,7 +437,7 @@ export default async function NowPage() {
               key={i}
               className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-4 text-sm leading-relaxed text-[#9BA5A7] md:text-base"
             >
-              <span className="text-[#FF7A1A]">→</span> {line}
+              <span className="text-[#22F0D5]">→</span> {line}
             </li>
           ))}
         </ul>
@@ -448,12 +448,12 @@ export default async function NowPage() {
         <div className="grid gap-6 md:grid-cols-3">
           <Link
             href="/founders-view"
-            className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#FF7A1A]/50"
+            className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/50"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::tonight&apos;s letter
             </p>
-            <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
+            <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
               {latest ? latest.title : "Awaiting first 8pm broadcast →"}
             </p>
           </Link>

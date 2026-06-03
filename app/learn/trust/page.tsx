@@ -38,7 +38,7 @@ export default function TrustIndex() {
           </p>
         </div>
       </section>
-      <section className="bg-[#0e2520]/15">
+      <section className="bg-[#08090B]/15">
         <div className="mx-auto w-full max-w-5xl px-6 py-12 md:py-16">
           <div className="grid gap-4 md:grid-cols-2">
             {TRUST.map((t) => (

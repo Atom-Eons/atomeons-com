@@ -259,7 +259,7 @@ function renderMarkdown(md: string) {
     return out
       .replace(
         /\*\*(.+?)\*\*/g,
-        '<strong class="text-[#FF7A1A]">$1</strong>',
+        '<strong class="text-[#22F0D5]">$1</strong>',
       )
       .replace(/_(.+?)_/g, '<em class="text-[#22F0D5]">$1</em>')
       .replace(
@@ -350,7 +350,7 @@ export default async function FoundersViewPostPage({
       </div>
 
       <article className="mx-auto w-full max-w-3xl px-6 py-16 md:py-24">
-        <p className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           <AeMark size={20} glow />
           ::letter from the lab · {human}
         </p>
@@ -412,7 +412,7 @@ export default async function FoundersViewPostPage({
         <p className="mt-3 text-xs text-[#6B7779]">
           <Link
             href="/founders-view"
-            className="text-[#FF7A1A] hover:text-[#FFA45A]"
+            className="text-[#22F0D5] hover:text-[#FFA45A]"
           >
             ← back to the archive
           </Link>

@@ -10,11 +10,11 @@ export const dynamic = "force-dynamic";
  *
  * As of 2026-05-26 this endpoint is no longer consumed by any
  * live-current display surface — LabTicker, OrangeBoxBlock, and
- * StickyBuyBar all read from static $49 v6.3 copy. It is kept for:
+ * StickyBuyBar all read from static $99 v6.3 copy. It is kept for:
  *   - back-compat with /orangebox/legacy archive
  *   - any third-party that scraped the endpoint
  * Counts only succeeded $1 v6.1.0 PaymentIntents through the legacy
- * /api/checkout flow. Does NOT count $49 v6.3 sales (those flow
+ * /api/checkout flow. Does NOT count $99 v6.3 sales (those flow
  * through /api/checkout/v63 + STRIPE_ORANGEBOX_V63_PRICE_ID and
  * carry different metadata).
  *

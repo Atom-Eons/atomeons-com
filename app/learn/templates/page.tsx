@@ -953,7 +953,7 @@ export default function TemplatesPage() {
           </div>
         </div>
       </section>
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28 space-y-16">
           {TEMPLATES.map((t) => (
             <article key={t.slug} id={t.slug} className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-10 scroll-mt-20">

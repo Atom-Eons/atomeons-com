@@ -9,7 +9,7 @@ export default function AppleIcon() {
     (
       <div
         style={{
-          background: "#04100d",
+          background: "#08090B",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -25,7 +25,7 @@ export default function AppleIcon() {
             rx="42"
             ry="14"
             fill="none"
-            stroke="#ff7a18"
+            stroke="#22F0D5"
             strokeWidth="2.4"
           />
           <ellipse
@@ -50,7 +50,7 @@ export default function AppleIcon() {
             opacity="0.7"
             transform="rotate(120)"
           />
-          <circle cx="0" cy="0" r="9" fill="#ff7a18" />
+          <circle cx="0" cy="0" r="9" fill="#22F0D5" />
           <circle cx="0" cy="0" r="4" fill="#ffc46b" />
         </svg>
       </div>

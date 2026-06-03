@@ -100,12 +100,12 @@ export function DynamicPrice({
         className={`inline-flex items-center gap-2 rounded-md border bg-black/70 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] shadow-[0_0_24px_rgba(34,240,213,0.25)] ${
           isFreePromo
             ? "border-[#22F0D5]/60 text-[#22F0D5]"
-            : "border-[#FF7A1A]/60 text-[#FF7A1A]"
+            : "border-[#22F0D5]/60 text-[#22F0D5]"
         } ${className}`}
       >
         <span
           className={`inline-block size-1.5 animate-pulse rounded-full ${
-            isFreePromo ? "bg-[#22F0D5]" : "bg-[#FF7A1A]"
+            isFreePromo ? "bg-[#22F0D5]" : "bg-[#22F0D5]"
           }`}
         />
         {isFreePromo ? (
@@ -125,7 +125,7 @@ export function DynamicPrice({
         </span>
         <span
           className={`text-3xl font-medium ${
-            isFreePromo ? "text-[#22F0D5]" : "text-[#FF7A1A]"
+            isFreePromo ? "text-[#22F0D5]" : "text-[#22F0D5]"
           }`}
         >
           {priceLabel}
@@ -145,7 +145,7 @@ export function DynamicPrice({
   return (
     <span className={`inline-flex items-baseline gap-2 ${className}`}>
       <span
-        className={isFreePromo ? "text-[#22F0D5]" : "text-[#FF7A1A]"}
+        className={isFreePromo ? "text-[#22F0D5]" : "text-[#22F0D5]"}
       >
         {priceLabel}
       </span>

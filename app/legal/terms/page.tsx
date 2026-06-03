@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Terms of Sale · AtomEons",
   description:
-    "ORANGEBOX Command terms of sale. $49 once, forever. License §4A bans subscription. 30-day Material Failure Guarantee + 30-day Workflow-Fit Refund. Source included for buyer transparency.",
+    "ORANGEBOX Command terms of sale. $99 once, forever. License §4A bans subscription. 30-day Material Failure Guarantee + 30-day Workflow-Fit Refund. Source included for buyer transparency.",
   alternates: { canonical: "https://atomeons.com/legal/terms" },
 };
 
@@ -38,7 +38,7 @@ export default function Terms() {
             1. License grant
           </h2>
           <p className="mt-3">
-            Your <strong className="text-[#F2F4F5]">$49 USD</strong>{" "}
+            Your <strong className="text-[#F2F4F5]">$99 USD</strong>{" "}
             purchase grants you a non-exclusive, non-transferable,
             single-operator license to install and use ORANGEBOX Command
             for personal or single-business use. You may install on

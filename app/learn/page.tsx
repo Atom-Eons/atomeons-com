@@ -258,7 +258,7 @@ export default function LearnPage() {
       />
 
       {/* WHY / WHAT / NOT · collapsible — reassurance, not action */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30">
         <div className="mx-auto w-full max-w-5xl px-6 py-10 md:py-12">
           <details className="group">
             <summary className="cursor-pointer list-none rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 md:p-6 transition-colors hover:border-[#22F0D5]/40 [&::-webkit-details-marker]:hidden">
@@ -448,7 +448,7 @@ export default function LearnPage() {
       </section>
 
       {/* PATH PICKER */}
-      <section id="paths" className="border-b border-[#1A2225] bg-[#0e2520]/30">
+      <section id="paths" className="border-b border-[#1A2225] bg-[#08090B]/30">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::five paths · same lessons · different sequence
@@ -655,7 +655,7 @@ export default function LearnPage() {
       </section>
 
       {/* INDUSTRY TRACKS · 5 deep-dives */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::five industry tracks · domain-specific AI doctrine
@@ -677,7 +677,7 @@ export default function LearnPage() {
               { href: "/learn/legal-ai", title: "Legal AI", sub: "ABA 512 · citation discipline · privilege", accent: "#FFB87A" },
               { href: "/learn/marketing-ai", title: "Marketing AI", sub: "brand voice · FTC · trend signal", accent: "#22F0D5" },
               { href: "/learn/education-ai", title: "Education AI", sub: "FERPA · differentiation · K-12+", accent: "#FFB87A" },
-              { href: "/learn/finance-ai", title: "Finance AI", sub: "SOC2 · GLBA · SOX · IRS 230", accent: "#FF7A1A" },
+              { href: "/learn/finance-ai", title: "Finance AI", sub: "SOC2 · GLBA · SOX · IRS 230", accent: "#22F0D5" },
             ].map((t) => (
               <Link
                 key={t.href}
@@ -796,7 +796,7 @@ export default function LearnPage() {
       </section>
 
       {/* SEND IT TO ONE PERSON */}
-      <section className="border-b border-[#1A2225] bg-gradient-to-b from-[#0e2520]/40 via-[#0a1a17]/40 to-[#0e2520]/40">
+      <section className="border-b border-[#1A2225] bg-gradient-to-b from-[#08090B]/40 via-[#08090B]/40 to-[#08090B]/40">
         <div className="mx-auto w-full max-w-3xl px-6 py-20 md:py-24 text-center">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
             ::the only ask

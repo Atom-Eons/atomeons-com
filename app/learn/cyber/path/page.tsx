@@ -74,7 +74,7 @@ const STAGES = [
     n: "04",
     label: "Pro",
     duration: "3-7 years from start",
-    color: "#FF7A1A",
+    color: "#22F0D5",
     what: "You hold a senior or principal role at a real security org. Or you run a successful bug bounty solo career. Or you're a federal cyber operator with a clearance. You shape strategy, not just tickets. You hire and grow other practitioners. The work is half technical and half judgment — picking the right engagement to take on, knowing when a finding is real and when it's a false positive, knowing when to escalate to leadership vs handle quietly.",
     skills: [
       "Threat modeling at the system level (STRIDE, attack trees, kill chains, ATT&CK mapping)",
@@ -91,7 +91,7 @@ const STAGES = [
     n: "05",
     label: "Lead",
     duration: "7+ years",
-    color: "#FF7A1A",
+    color: "#22F0D5",
     what: "You set direction for a security organization, a practice, or a research agenda. Director / VP of security at a real company. Federal Senior Executive Service or O-5+ in military. Boutique-firm partner. Researcher who shifts the field. This is rare, takes a decade, and is not for everyone. Not everyone wants this · being a senior IC is fine and pays well.",
     skills: [
       "Org-design for security teams",
@@ -142,7 +142,7 @@ export default function CyberPathPage() {
         </div>
       </section>
 
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/15">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/15">
         <div className="mx-auto w-full max-w-4xl px-6 py-16 md:py-20 space-y-8">
           {STAGES.map((s) => (
             <article

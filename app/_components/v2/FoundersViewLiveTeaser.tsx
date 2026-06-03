@@ -45,7 +45,7 @@ export async function FoundersViewLiveTeaser() {
     return (
       <section className="border-y border-[#1A2225] bg-[#0e1418]/40">
         <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::the founder&apos;s view · nightly 8pm et
           </p>
           <p className="mt-4 max-w-3xl text-base leading-[1.6] text-[#C8CCCE] md:text-lg">
@@ -75,7 +75,7 @@ export async function FoundersViewLiveTeaser() {
     <section className="border-y border-[#1A2225] bg-[#0e1418]/40">
       <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-20">
         <div className="flex flex-wrap items-baseline justify-between gap-3">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::tonight on the founder&apos;s view · 8pm et nightly
           </p>
           <Link
@@ -88,18 +88,18 @@ export async function FoundersViewLiveTeaser() {
 
         <Link
           href={`/founders-view/${post.slug}`}
-          className="group mt-6 block rounded-3xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1B100A] via-[#0E0B0A] to-[#0A0F11] p-7 transition-all hover:border-[#FF7A1A]/70 md:p-10"
+          className="group mt-6 block rounded-3xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#1B100A] via-[#0E0B0A] to-[#0A0F11] p-7 transition-all hover:border-[#22F0D5]/70 md:p-10"
         >
           <div className="flex flex-wrap items-baseline gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#FF7A1A]/40 bg-[#FF7A1A]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
-              <span className="size-1.5 animate-pulse rounded-full bg-[#FF7A1A] shadow-[0_0_8px_rgba(255,122,26,0.7)]" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+              <span className="size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_rgba(34, 240, 213,0.7)]" />
               most recent · live
             </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7]">
               {human}
             </span>
           </div>
-          <h2 className="mt-5 text-balance text-3xl font-medium leading-[1.05] tracking-tight text-[#F2F4F5] group-hover:text-[#FF7A1A] md:text-5xl">
+          <h2 className="mt-5 text-balance text-3xl font-medium leading-[1.05] tracking-tight text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-5xl">
             {post.title}
           </h2>
           {post.dek ? (

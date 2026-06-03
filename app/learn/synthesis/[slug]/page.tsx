@@ -658,7 +658,7 @@ export default async function SynthesisPage({ params }: { params: Promise<{ slug
           <h1 className="mt-6 text-balance text-4xl font-medium leading-[1] tracking-tight md:text-5xl">{s.topic}</h1>
         </header>
 
-        <section className="rounded-2xl border border-[#22F0D5]/40 bg-[#0e2520]/30 p-7 md:p-10">
+        <section className="rounded-2xl border border-[#22F0D5]/40 bg-[#08090B]/30 p-7 md:p-10">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">::minimum effective dose</p>
           <p className="mt-4 text-[17px] leading-[1.75] text-[#C8CCCE] md:text-[18px] whitespace-pre-line">{s.minimumEffectiveDose}</p>
         </section>
@@ -698,7 +698,7 @@ export default async function SynthesisPage({ params }: { params: Promise<{ slug
           </div>
         </section>
 
-        <section className="rounded-2xl border border-[#22F0D5]/40 bg-[#0e2520]/30 p-6 md:p-7">
+        <section className="rounded-2xl border border-[#22F0D5]/40 bg-[#08090B]/30 p-6 md:p-7">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">::real-world test · this week</p>
           <p className="mt-3 text-base leading-[1.7] text-[#C8CCCE]">{s.realWorldTest}</p>
         </section>

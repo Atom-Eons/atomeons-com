@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
  * 6 strings (rewritten 2026-05-23): brand · research · product
  * (v6.3 codename + inquire-to-ship) · price + license · live
  * broadcast countdown · cite-and-forward call. Buyer count poll
- * removed — no public counter at the $49 / inquire-only tier.
+ * removed — no public counter at the $99 / inquire-only tier.
  *
  * Content is duplicated inside a single span so the CSS marquee
  * loops seamlessly. Animation pauses on hover. Mobile runs the

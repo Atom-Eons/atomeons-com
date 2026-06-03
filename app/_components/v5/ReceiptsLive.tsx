@@ -45,7 +45,7 @@ export function ReceiptsLive() {
             <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
               Every action.
               <br />
-              <span className="text-[#FF7A1A]">Receipt-backed.</span>
+              <span className="text-[#22F0D5]">Receipt-backed.</span>
             </h2>
             <p className="mt-8 max-w-md text-lg leading-relaxed text-[#9BA5A7]">
               No fake green. Every meaningful action writes a JSONL receipt:
@@ -64,7 +64,7 @@ export function ReceiptsLive() {
               Wrap in overflow-x-auto so narrow phones (<420px) get a
               horizontal scroll on the table itself rather than breaking
               the whole page layout. */}
-          <div className="relative overflow-hidden rounded-2xl border border-[#1A2225] bg-[#0A0F11] shadow-[0_0_120px_-40px_rgba(255,122,26,0.3)]">
+          <div className="relative overflow-hidden rounded-2xl border border-[#1A2225] bg-[#0A0F11] shadow-[0_0_120px_-40px_rgba(34, 240, 213,0.3)]">
             {/* header — labelled as the schema sample it is. Not "live"
                 telemetry. The actual receipts stream is a real JSONL file
                 that ORANGEBOX writes to disk per session. The data below is
@@ -118,14 +118,14 @@ export function ReceiptsLive() {
                   <span className="text-right tabular-nums text-[#F2F4F5]">
                     {r.tokens}
                   </span>
-                  <span className="text-right tabular-nums text-[#FF7A1A]">
+                  <span className="text-right tabular-nums text-[#22F0D5]">
                     {r.cents}
                   </span>
                   <span
                     className={
                       r.status === "ok"
                         ? "text-[#22F0D5]"
-                        : "text-[#FF7A1A]"
+                        : "text-[#22F0D5]"
                     }
                   >
                     {r.status === "ok" ? "▲ ok" : "■ flag"}
@@ -142,7 +142,7 @@ export function ReceiptsLive() {
                 <span className="text-[#F2F4F5]">12,486</span> tok
               </span>
               <span className="text-right">
-                <span className="text-[#FF7A1A]">$0.17</span> spend
+                <span className="text-[#22F0D5]">$0.17</span> spend
               </span>
             </div>
           </div>

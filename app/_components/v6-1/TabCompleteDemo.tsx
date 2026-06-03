@@ -40,9 +40,9 @@ export function TabCompleteDemo() {
           <div className="overflow-hidden rounded-2xl border border-[#1A2225] bg-black shadow-[0_0_80px_-30px_rgba(34,240,213,0.18)]">
             {/* title bar */}
             <div className="flex items-center gap-2 border-b border-[#1A2225] px-5 py-3">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#FF7A1A]/50" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#FF7A1A]/30" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#FF7A1A]/15" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#22F0D5]/50" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#22F0D5]/30" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#22F0D5]/15" />
               <span className="ml-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
                 repo-indexer.ts · ide lane · ctrl+2
               </span>
@@ -143,7 +143,7 @@ export function TabCompleteDemo() {
                 <p className="mt-1 text-xs text-[#6B7779]">cache TTL</p>
               </div>
               <div className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5">
-                <p className="font-mono text-2xl font-semibold tabular-nums text-[#FF7A1A]">
+                <p className="font-mono text-2xl font-semibold tabular-nums text-[#22F0D5]">
                   $0
                 </p>
                 <p className="mt-1 text-xs text-[#6B7779]">on cache hit</p>

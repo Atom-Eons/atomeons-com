@@ -183,7 +183,7 @@ const RAW_PATHS: Omit<LearningPath, "totalMinutes">[] = [
       "senior-engineer-pattern",
       "outgrow-the-chatbox",
     ],
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
   {
     id: "curious",

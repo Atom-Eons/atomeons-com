@@ -48,7 +48,7 @@ export default function OG() {
           {[
             { left: "Claude", right: "ChatGPT", color: "#22F0D5" },
             { left: "Cloud", right: "Local", color: "#FFB87A" },
-            { left: "Subscription", right: "One-time", color: "#FF7A1A" },
+            { left: "Subscription", right: "One-time", color: "#22F0D5" },
           ].map((p) => (
             <div
               key={p.left}

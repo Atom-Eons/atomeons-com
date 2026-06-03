@@ -526,7 +526,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
         ))}
 
         {c.keyTakeaways && c.keyTakeaways.length > 0 && (
-          <section className="mt-16 rounded-2xl border border-[#22F0D5]/30 bg-[#0e2520]/30 p-6 md:p-8">
+          <section className="mt-16 rounded-2xl border border-[#22F0D5]/30 bg-[#08090B]/30 p-6 md:p-8">
             <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">::key takeaways</p>
             <ul className="mt-5 space-y-3">
               {c.keyTakeaways.map((t, i) => (

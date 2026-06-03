@@ -85,7 +85,7 @@ export default function ResearchPapersPage() {
         <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
           Read the papers.
           <br />
-          <span className="text-[#FF7A1A]">
+          <span className="text-[#22F0D5]">
             We&apos;ll explain them like you&apos;re six.
           </span>
         </h1>
@@ -127,7 +127,7 @@ export default function ResearchPapersPage() {
               href={`/research/papers/${p.slug}`}
               className="group flex flex-col rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/40"
             >
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                 {p.date} · {(p.bytes / 1024).toFixed(1)} KB · pdf
               </p>
               <h3 className="mt-3 text-lg font-medium text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-xl">
@@ -159,7 +159,7 @@ export default function ResearchPapersPage() {
 
       {/* INDEXED PAPERS */}
       <section className="mx-auto w-full max-w-6xl px-6 py-12">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           ::indexed · summary in progress · {indexed.length} of {PAPERS.length}
         </p>
         <h2 className="mb-10 text-3xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-4xl">

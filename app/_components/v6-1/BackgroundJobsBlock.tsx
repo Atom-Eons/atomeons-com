@@ -49,7 +49,7 @@ const STATE_STYLES: Record<JobState, { pill: string; dot: string; pulse: boolean
   RUNNING:   { pill: "border-[#22F0D5]/40 bg-[#22F0D5]/10 text-[#22F0D5]",  dot: "bg-[#22F0D5]", pulse: true  },
   FINISHED:  { pill: "border-[#22F0D5]/20 bg-[#22F0D5]/5 text-[#22F0D5]/70", dot: "bg-[#22F0D5]/60", pulse: false },
   CANCELLED: { pill: "border-[#1A2225] bg-[#1A2225] text-[#6B7779]",         dot: "bg-[#6B7779]", pulse: false },
-  FAILED:    { pill: "border-[#FF7A1A]/40 bg-[#FF7A1A]/10 text-[#FF7A1A]",  dot: "bg-[#FF7A1A]", pulse: false },
+  FAILED:    { pill: "border-[#22F0D5]/40 bg-[#22F0D5]/10 text-[#22F0D5]",  dot: "bg-[#22F0D5]", pulse: false },
 };
 
 export function BackgroundJobsBlock() {
@@ -61,7 +61,7 @@ export function BackgroundJobsBlock() {
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{
           background:
-            "radial-gradient(50% 40% at 50% 100%, rgba(255,122,26,0.08) 0%, transparent 70%)",
+            "radial-gradient(50% 40% at 50% 100%, rgba(34, 240, 213,0.08) 0%, transparent 70%)",
         }}
       />
 
@@ -70,13 +70,13 @@ export function BackgroundJobsBlock() {
 
           {/* left: copy */}
           <div className="lg:sticky lg:top-24">
-            <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
               ::background queue · codex-parallel
             </p>
             <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
               Spawn the work.
               <br />
-              <span className="text-[#FF7A1A]">Walk away. Read the receipt.</span>
+              <span className="text-[#22F0D5]">Walk away. Read the receipt.</span>
             </h2>
             <p className="mt-8 max-w-md text-lg leading-relaxed text-[#9BA5A7]">
               In-process job queue. LRU eviction at 100. Cancel tokens per job.

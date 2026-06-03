@@ -63,7 +63,7 @@ const DIMENSIONS = [
   {
     name: "Autonomy",
     body: "Tool-level automation (executes narrow commands) → agentic operation (selects goals within constraints) → sovereign intelligence (defines its own objectives and resists external override).",
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
   {
     name: "Alignment",
@@ -73,7 +73,7 @@ const DIMENSIONS = [
   {
     name: "Opacity",
     body: "Glass-box (reasoning transparent to humans) → black-box (inscrutable). Design feature or emergent property. Often both.",
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
   {
     name: "Moral Status",
@@ -672,7 +672,7 @@ export default function LessonsFromSciFi() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(50% 40% at 50% 30%, rgba(34,240,213,0.10) 0%, transparent 60%), radial-gradient(40% 30% at 80% 70%, rgba(255,122,26,0.08) 0%, transparent 60%), radial-gradient(30% 25% at 15% 80%, rgba(0,164,255,0.10) 0%, transparent 60%)",
+              "radial-gradient(50% 40% at 50% 30%, rgba(34,240,213,0.10) 0%, transparent 60%), radial-gradient(40% 30% at 80% 70%, rgba(34, 240, 213,0.08) 0%, transparent 60%), radial-gradient(30% 25% at 15% 80%, rgba(0,164,255,0.10) 0%, transparent 60%)",
           }}
         />
         <div className="relative z-10 mx-auto w-full max-w-5xl px-6">
@@ -688,7 +688,7 @@ export default function LessonsFromSciFi() {
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(110deg, #22F0D5 0%, #00A4FF 45%, #FF7A1A 100%)",
+                  "linear-gradient(110deg, #22F0D5 0%, #00A4FF 45%, #22F0D5 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -718,7 +718,7 @@ export default function LessonsFromSciFi() {
               <span>epochs</span>
             </div>
             <div>
-              <span className="block text-2xl font-medium text-[#FF7A1A]">
+              <span className="block text-2xl font-medium text-[#22F0D5]">
                 5
               </span>
               <span>dimensions</span>
@@ -745,7 +745,7 @@ export default function LessonsFromSciFi() {
           </p>
           <p className="text-pretty text-lg leading-[1.7] text-[#D2D8DA] md:text-xl">
             <span
-              className="float-left mr-3 mt-1 font-medium leading-[0.85] text-[#FF7A1A]"
+              className="float-left mr-3 mt-1 font-medium leading-[0.85] text-[#22F0D5]"
               style={{
                 fontSize: "5.5rem",
                 fontVariationSettings: "'wght' 600",
@@ -796,7 +796,7 @@ export default function LessonsFromSciFi() {
           <h2 className="max-w-3xl text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
             Every AI in the corpus is read along
             <br />
-            <span className="text-[#FF7A1A]">five axes.</span>
+            <span className="text-[#22F0D5]">five axes.</span>
           </h2>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
             The dimensions apply consistently across all seven epochs,
@@ -951,7 +951,7 @@ export default function LessonsFromSciFi() {
                   >
                     {e.num}
                   </p>
-                  <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+                  <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                     {e.era}
                   </p>
                 </div>
@@ -985,7 +985,7 @@ export default function LessonsFromSciFi() {
                           <h3 className="mt-1 text-xl font-medium leading-snug text-[#F2F4F5]">
                             {f.title}
                           </h3>
-                          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-[#FF7A1A]">
+                          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-[#22F0D5]">
                             {f.ai}
                           </p>
                         </div>
@@ -1026,7 +1026,7 @@ export default function LessonsFromSciFi() {
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(110deg, #22F0D5 0%, #FF7A1A 100%)",
+                  "linear-gradient(110deg, #22F0D5 0%, #22F0D5 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -1056,7 +1056,7 @@ export default function LessonsFromSciFi() {
             and attention manipulation. And it has, above all, provided a
             century of rehearsal for the moment we now face.
           </p>
-          <p className="mt-10 max-w-3xl font-mono text-base uppercase tracking-[0.16em] text-[#FF7A1A]">
+          <p className="mt-10 max-w-3xl font-mono text-base uppercase tracking-[0.16em] text-[#22F0D5]">
             The machines are here. They do not look like HAL or the
             Terminator or Ava. They look like a text box on a phone screen.
           </p>
@@ -1176,7 +1176,7 @@ export default function LessonsFromSciFi() {
               </p>
             </div>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                 ::next read
               </p>
               <ul className="mt-2 space-y-1 text-sm text-[#F2F4F5]">

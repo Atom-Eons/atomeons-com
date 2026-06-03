@@ -43,7 +43,7 @@ export function FoundersViewCountdown() {
   if (now == null) {
     return (
       <div className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 md:p-7">
-        <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           ::next sealed envelope · 8pm ET
         </p>
       </div>
@@ -58,8 +58,8 @@ export function FoundersViewCountdown() {
   const s = totalSec % 60;
 
   return (
-    <div className="rounded-2xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1C0F08]/30 to-[#0A0F11] p-6 md:p-7">
-      <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+    <div className="rounded-2xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#1C0F08]/30 to-[#0A0F11] p-6 md:p-7">
+      <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
         ::next sealed envelope · slipped under your door at 8pm ET
       </p>
       <div className="mt-5 flex flex-wrap items-baseline gap-4">

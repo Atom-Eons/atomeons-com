@@ -5,7 +5,7 @@ import { LabHero } from "../_components/v2/LabHero";
 export const metadata = {
   title: "Press kit — AtomEons Systems Laboratory",
   description:
-    "AtomEons press kit · launch night 2026-05-30. Two AI applications shipped tonight built by AI, for AI operators, in 75 days using earlier versions of themselves: ORANGEBOX v1.0.0-beta (Windows desktop AI cockpit · 9 LLM providers · 14-department architecture · AECode contracts · tamper-evident JSON receipts · $49 perpetual after free week · §4A no-saas) and B00KMAKR v3.2.0 (Mac + Windows AI publishing cockpit · 142 feature surfaces · mission graph · voice fingerprint persistence · KDP packager · dynamic-world-pricing). Eleven novel features never seen together inside one app before tonight. Plus ÆoNs Research (12 manuscripts), The Founder's View (nightly 8pm ET), 14-clause Manifesto, Dynamic World Pricing doctrine paper. Solo lab. Marco Island, FL. Founder Atom McCree. Boilerplate, bio, hero asset, copy blocks for HN/PH/Dev.to/cold email, direct founder contact.",
+    "AtomEons press kit · launch night 2026-05-30. Two AI applications shipped tonight built by AI, for AI operators, in 75 days using earlier versions of themselves: ORANGEBOX v1.0.0-beta (Windows desktop AI cockpit · 9 LLM providers · 14-department architecture · AECode contracts · tamper-evident JSON receipts · $99 perpetual after free week · §4A no-saas) and B00KMAKR v3.2.0 (Mac + Windows AI publishing cockpit · 142 feature surfaces · mission graph · voice fingerprint persistence · KDP packager · dynamic-world-pricing). Eleven novel features never seen together inside one app before tonight. Plus ÆoNs Research (12 manuscripts), The Founder's View (nightly 8pm ET), 14-clause Manifesto, Dynamic World Pricing doctrine paper. Solo lab. Marco Island, FL. Founder Atom McCree. Boilerplate, bio, hero asset, copy blocks for HN/PH/Dev.to/cold email, direct founder contact.",
   keywords: [
     "AtomEons press kit",
     "Atom McCree press",
@@ -71,9 +71,9 @@ const LAB_SURFACES = [
     pillar: "USE AI",
     name: "ORANGEBOX v1.0.0-beta",
     blurb:
-      "Local-first Windows desktop AI cockpit. Shipped 2026-05-30. Multi-LLM routing across Claude / GPT / Gemini / OpenRouter / Groq / Cohere / Mistral / Perplexity / local Ollama (9+ providers, BYO keys, zero markup). 14-department architecture (AE0-AE14). AECode contracts on every AI change. Tamper-evident JSON receipts on every meaningful action. AtomSmasher Crystal Lattice Compression (10-80× context). Built in 75 days using earlier versions of itself. $49 perpetual after FREE launch week (ends 2026-06-06). License §4A legally bans subscription. Signed installer (Sectigo timestamp). Sources at github.com/AtomEons/orangebox.",
+      "Local-first Windows desktop AI cockpit. Shipped 2026-05-30. Multi-LLM routing across Claude / GPT / Gemini / OpenRouter / Groq / Cohere / Mistral / Perplexity / local Ollama (9+ providers, BYO keys, zero markup). 14-department architecture (AE0-AE14). AECode contracts on every AI change. Tamper-evident JSON receipts on every meaningful action. AtomSmasher Crystal Lattice Compression (10-80× context). Built in 75 days using earlier versions of itself. $99 perpetual after FREE launch week (ends 2026-06-06). License §4A legally bans subscription. Signed installer (Sectigo timestamp). Sources at github.com/AtomEons/orangebox.",
     href: "/orangebox",
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
   {
     pillar: "USE AI",
@@ -95,7 +95,7 @@ const LAB_SURFACES = [
     pillar: "DOCTRINE",
     name: "The 14-Clause Manifesto",
     blurb:
-      "The lab's full operating doctrine, made explicit. Fourteen numbered clauses spanning commerce, research, operator structure, and broadcast posture. Each clause is falsifiable — readers are invited to challenge with evidence. Receipts over slogans. One operator. No venture funding. $49 once · §4A no-saas. Zero markup on token cost. Named tools, no affiliate revenue. CC-BY 4.0 with citation template.",
+      "The lab's full operating doctrine, made explicit. Fourteen numbered clauses spanning commerce, research, operator structure, and broadcast posture. Each clause is falsifiable — readers are invited to challenge with evidence. Receipts over slogans. One operator. No venture funding. $99 once · §4A no-saas. Zero markup on token cost. Named tools, no affiliate revenue. CC-BY 4.0 with citation template.",
     href: "/manifesto",
     accent: "#FFB87A",
   },
@@ -121,7 +121,7 @@ const LAB_SURFACES = [
     blurb:
       "Nightly broadcast at 8pm ET. No-punches-pulled letter from the lab on real events. Editorial satire. Equal-opportunity indignation. Subscribe by bookmark.",
     href: "/founders-view",
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
 ];
 
@@ -132,7 +132,7 @@ const FACTS = [
   ["Compression headline", "ORANGEBOX built in 75 days. With itself. The .exe was produced by earlier versions of the cockpit."],
   ["ORANGEBOX tagline", "Local-first AI cockpit. Multi-LLM. BYO keys. Zero markup. 9+ providers. 14-department architecture."],
   ["B00KMAKR tagline", "AI publishing cockpit. Mac + Windows. 142 feature surfaces. Apple/Microsoft-grade polish. SHA-256 verified."],
-  ["Pricing — ORANGEBOX", "FREE first week (ends 2026-06-06 4 PM EDT) · $49 perpetual thereafter · §4A bans subscription"],
+  ["Pricing — ORANGEBOX", "FREE first week (ends 2026-06-06 4 PM EDT) · $99 perpetual thereafter · §4A bans subscription"],
   ["Pricing — B00KMAKR", "FREE first week · then dynamic-world-pricing: $99 Tier 1 anchor · US $9.90 (USA Advantage Clause) · CN $99 (Strategic Tier Lift) · IN $9.90 · SO $1.98"],
   ["Refund", "30-day Material Failure Guarantee on both products · full refund · no support-queue gauntlet"],
   ["License", "Perpetual · §4A no-SaaS covenant · once · forever · grandfather-for-life clause for free-week buyers"],
@@ -240,7 +240,7 @@ B00KMAKR v3.2.0 — AI publishing cockpit. Mac + Windows. 142 feature surfaces. 
 
 Eleven features have not lived inside a single application before tonight: AECode contracts · tamper-evident JSON receipts · Crystal Lattice Compression · Restore Primers (new AI session learns the cockpit in <30s) · voice fingerprint persistence · mission graph DAG · 14-department architecture · cost-aware LLM routing · License §4A as binding contract text · Dynamic World Pricing with two named country-level clauses (USA Advantage + Strategic Tier Lift) · grandfather-for-life free-week clause.
 
-Pricing — both products free this week (countdown ends 2026-06-06 4 PM EDT). After: $49 perpetual for ORANGEBOX; $99 Tier 1 with dynamic-world-pricing for B00KMAKR (US $9.90 under USA Advantage Clause, CN $99 under Strategic Tier Lift). License §4A legally bans subscription on both products.
+Pricing — both products free this week (countdown ends 2026-06-06 4 PM EDT). After: $99 perpetual for ORANGEBOX; $99 Tier 1 with dynamic-world-pricing for B00KMAKR (US $9.90 under USA Advantage Clause, CN $99 under Strategic Tier Lift). License §4A legally bans subscription on both products.
 
 No telemetry. No phone-home. No analytics. Source included alongside each binary. SHA-256 verified, Sectigo-timestamped. Public repos at github.com/AtomEons/orangebox and github.com/AtomEons/BookMaker. Pricing mechanism public at atomeons.com/dynamic-world-pricing.
 
@@ -258,7 +258,7 @@ ORANGEBOX is the local-first desktop AI cockpit for builders: multi-LLM routing 
 
 B00KMAKR is the writer's publishing cockpit: Mac + Windows, 142 feature surfaces, mission graph for chapters, voice fingerprint persistence, continuity audit, KDP packager, cover lab, 120-day launch calendar.
 
-Free this week (ends June 6). After: $49 perpetual for ORANGEBOX, dynamic-world-pricing for B00KMAKR (your country's tier rate). License §4A legally bans subscription. Public repos at github.com/AtomEons.`,
+Free this week (ends June 6). After: $99 perpetual for ORANGEBOX, dynamic-world-pricing for B00KMAKR (your country's tier rate). License §4A legally bans subscription. Public repos at github.com/AtomEons.`,
   },
   {
     title: "DEV.to — build-in-public article opening",
@@ -296,7 +296,7 @@ Hi [NAME],
 
 While [RECENT NEWS THEY COVERED], I shipped two AI applications tonight — both built by AI, for AI operators, in 75 days using earlier versions of themselves.
 
-ORANGEBOX v1.0.0-beta — Windows desktop AI cockpit. 9-provider multi-LLM router (Claude/GPT/Gemini/Ollama/OpenRouter/Groq/Cohere/Mistral/Perplexity). AECode contracts on every AI change. Tamper-evident JSON receipts. 14-department architecture. Free this week, then $49 perpetual (§4A legally bans subscription).
+ORANGEBOX v1.0.0-beta — Windows desktop AI cockpit. 9-provider multi-LLM router (Claude/GPT/Gemini/Ollama/OpenRouter/Groq/Cohere/Mistral/Perplexity). AECode contracts on every AI change. Tamper-evident JSON receipts. 14-department architecture. Free this week, then $99 perpetual (§4A legally bans subscription).
 
 B00KMAKR v3.2.0 — AI publishing cockpit. Mac + Windows. 142 feature surfaces. Mission graph for chapters. Voice fingerprint persistence. KDP packager. Free this week, then dynamic-world-pricing (your country's tier rate via the USA Advantage Clause + Strategic Tier Lift doctrines).
 
@@ -457,15 +457,15 @@ export default function Press() {
         </p>
         <p className="text-balance text-3xl font-medium leading-[1.2] tracking-[-0.01em] text-[#F2F4F5] md:text-4xl">
           While Anthropic raised{" "}
-          <span className="text-[#FF7A1A]">$30B</span>, a solo founder in
+          <span className="text-[#22F0D5]">$30B</span>, a solo founder in
           a Florida garage shipped the opposite play —{" "}
           <span className="text-[#22F0D5]">ORANGEBOX Command v6.3</span>,
-          a <span className="text-[#22F0D5]">$49-once</span> desktop AI
+          a <span className="text-[#22F0D5]">$99-once</span> desktop AI
           cockpit with two surfaces (
           <span className="text-[#22F0D5]">AE See-Suite</span> +{" "}
           <span className="text-[#22F0D5]">AE Operations</span>), a
           license clause that{" "}
-          <span className="text-[#FF7A1A]">legally bans</span> switching
+          <span className="text-[#22F0D5]">legally bans</span> switching
           to subscription, two 30-day refund paths, and a published{" "}
           <span className="text-[#FFB87A]">14-clause manifesto</span>{" "}
           that invites the public to{" "}
@@ -532,7 +532,7 @@ export default function Press() {
               key={a.head}
               className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/40"
             >
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#FF7A1A]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#22F0D5]">
                 {a.beat}
               </p>
               <h3 className="mt-3 text-xl font-medium text-[#22F0D5]">
@@ -619,8 +619,8 @@ export default function Press() {
 
       {/* TRANSPARENCY */}
       <section className="mx-auto w-full max-w-6xl px-6 py-16">
-        <div className="rounded-2xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-8">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+        <div className="rounded-2xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-8">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
             ::transparency · for fact-checkers
           </p>
           <p className="mt-3 text-sm leading-relaxed text-[#9BA5A7]">

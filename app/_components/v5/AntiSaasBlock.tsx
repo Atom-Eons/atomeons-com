@@ -38,7 +38,7 @@ export function AntiSaasBlock() {
         className="pointer-events-none absolute inset-0 opacity-50"
         style={{
           background:
-            "radial-gradient(60% 50% at 50% 100%, rgba(255,122,26,0.08) 0%, transparent 70%)",
+            "radial-gradient(60% 50% at 50% 100%, rgba(34, 240, 213,0.08) 0%, transparent 70%)",
         }}
       />
       <div className="relative mx-auto w-full max-w-7xl px-6">
@@ -49,7 +49,7 @@ export function AntiSaasBlock() {
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
             What ORANGEBOX
             <br />
-            <span className="text-[#FF7A1A]">is not.</span>
+            <span className="text-[#22F0D5]">is not.</span>
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-[#9BA5A7]">
             The category is crowded with chatboxes, dashboards, and
@@ -67,7 +67,7 @@ export function AntiSaasBlock() {
               }`}
             >
               <span
-                className="font-mono text-sm font-medium text-[#FF7A1A] md:text-base"
+                className="font-mono text-sm font-medium text-[#22F0D5] md:text-base"
                 dangerouslySetInnerHTML={{ __html: n.no }}
               />
               <span

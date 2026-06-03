@@ -15,7 +15,7 @@ import { LabHero } from "../_components/v2/LabHero";
 export const metadata: Metadata = {
   title: "Manifesto — what the lab insists on",
   description:
-    "AtomEons Systems Laboratory manifesto. The 14 explicit clauses: receipts over slogans, one operator, no venture funding, $49 once, License §4A no-SaaS, source included, local-first by construction, zero telemetry, the 44M frame, equal-opportunity-indignation broadcast, named tools, named builders, CC-BY 4.0 research, Marco Island independent. Every clause is published, falsifiable, and CC-BY 4.0 quotable.",
+    "AtomEons Systems Laboratory manifesto. The 14 explicit clauses: receipts over slogans, one operator, no venture funding, $99 once, License §4A no-SaaS, source included, local-first by construction, zero telemetry, the 44M frame, equal-opportunity-indignation broadcast, named tools, named builders, CC-BY 4.0 research, Marco Island independent. Every clause is published, falsifiable, and CC-BY 4.0 quotable.",
   keywords: [
     "AtomEons manifesto",
     "AtomEons doctrine",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AtomEons Manifesto — 14 clauses, every one published",
     description:
-      "What the lab insists on. Receipts over slogans. One operator. No venture funding. $49 once. §4A no-SaaS. Source included. Local-first.",
+      "What the lab insists on. Receipts over slogans. One operator. No venture funding. $99 once. §4A no-SaaS. Source included. Local-first.",
     url: "https://atomeons.com/manifesto",
     type: "article",
     publishedTime: "2026-05-23T00:00:00Z",
@@ -89,8 +89,8 @@ const CLAUSES: Clause[] = [
   {
     num: "04",
     kind: "commerce",
-    title: "$49 once, forever. License §4A bans SaaS.",
-    body: "ORANGEBOX Command costs $49 USD one time. Subscription is the wrong relationship for an operator-grade cockpit and License §4A binds the lab against ever switching to it. If we ever try, every existing buyer keeps their license free in perpetuity. The clause is enforceable, published, and shipped inside the bundle as documentation.",
+    title: "$99 once, forever. License §4A bans SaaS.",
+    body: "ORANGEBOX Command costs $99 USD one time. Subscription is the wrong relationship for an operator-grade cockpit and License §4A binds the lab against ever switching to it. If we ever try, every existing buyer keeps their license free in perpetuity. The clause is enforceable, published, and shipped inside the bundle as documentation.",
     receipt: "/pricing · /legal/terms · LICENSE.txt §4A in every download bundle",
   },
   {
@@ -167,7 +167,7 @@ const CLAUSES: Clause[] = [
 
 const KIND_COLOR: Record<Clause["kind"], string> = {
   doctrine: "#22F0D5",
-  commerce: "#FF7A1A",
+  commerce: "#22F0D5",
   research: "#FFB87A",
   operator: "#22F0D5",
   broadcast: "#FFB87A",
@@ -178,7 +178,7 @@ const articleJsonLd = {
   "@type": "Article",
   headline: "AtomEons Manifesto — what the lab insists on",
   description:
-    "The 14 explicit clauses of AtomEons Systems Laboratory. Receipts over slogans. One operator. No venture funding. $49 once. License §4A bans SaaS. Source included. Local-first. Zero telemetry. The 44M on-ramp. Equal-opportunity indignation. Named tools, named builders, no affiliate revenue. Falsifiable. Marco Island independent.",
+    "The 14 explicit clauses of AtomEons Systems Laboratory. Receipts over slogans. One operator. No venture funding. $99 once. License §4A bans SaaS. Source included. Local-first. Zero telemetry. The 44M on-ramp. Equal-opportunity indignation. Named tools, named builders, no affiliate revenue. Falsifiable. Marco Island independent.",
   author: {
     "@type": "Person",
     name: "Atom McCree",
@@ -256,7 +256,7 @@ export default function ManifestoPage() {
       />
 
       {/* CLAUSE INDEX · scan all 14 in 10 seconds, click to deep-read */}
-      <section id="clause-index" className="scroll-mt-24 border-b border-[#1A2225] bg-[#0e2520]/30 py-12 md:py-16">
+      <section id="clause-index" className="scroll-mt-24 border-b border-[#1A2225] bg-[#08090B]/30 py-12 md:py-16">
         <div className="mx-auto w-full max-w-4xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::all 14 clauses at a glance · click any to deep-read
@@ -336,7 +336,7 @@ export default function ManifestoPage() {
       </section>
 
       {/* PROVENANCE */}
-      <section className="border-t border-[#1A2225] bg-[#0e2520]/30 py-20 md:py-28">
+      <section className="border-t border-[#1A2225] bg-[#08090B]/30 py-20 md:py-28">
         <div className="mx-auto w-full max-w-4xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
             ::provenance + license
@@ -360,8 +360,8 @@ export default function ManifestoPage() {
                 attribution.
               </p>
             </div>
-            <div className="rounded-2xl border border-[#FF7A1A]/30 bg-[#0A0F11] p-6">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
+            <div className="rounded-2xl border border-[#22F0D5]/30 bg-[#0A0F11] p-6">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
                 ::falsify it
               </p>
               <p className="mt-3 text-sm leading-[1.7] text-[#C8CCCE]">

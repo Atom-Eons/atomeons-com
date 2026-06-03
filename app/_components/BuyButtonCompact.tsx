@@ -56,7 +56,7 @@ export function BuyButtonCompact() {
       disabled={loading}
       aria-label={loading ? "Opening checkout" : "Buy ORANGEBOX"}
       title={error ?? "Buy ORANGEBOX v6.0.0"}
-      className="inline-flex h-11 items-center justify-center gap-1 whitespace-nowrap rounded-md border-2 border-[#FF7A1A] bg-[#FF7A1A] px-4 text-sm font-bold uppercase tracking-wide text-black shadow-[0_0_28px_rgba(255,122,26,0.45)] transition-colors hover:bg-[#FFA45A] disabled:cursor-not-allowed disabled:opacity-60"
+      className="inline-flex h-11 items-center justify-center gap-1 whitespace-nowrap rounded-md border-2 border-[#22F0D5] bg-[#22F0D5] px-4 text-sm font-bold uppercase tracking-wide text-black shadow-[0_0_28px_rgba(34, 240, 213,0.45)] transition-colors hover:bg-[#FFA45A] disabled:cursor-not-allowed disabled:opacity-60"
     >
       {loading ? "…" : (
         <>

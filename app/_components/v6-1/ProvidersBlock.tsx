@@ -60,7 +60,7 @@ export function ProvidersBlock() {
         className="pointer-events-none absolute inset-0 opacity-35"
         style={{
           background:
-            "radial-gradient(60% 35% at 50% 50%, rgba(255,122,26,0.06) 0%, transparent 70%)",
+            "radial-gradient(60% 35% at 50% 50%, rgba(34, 240, 213,0.06) 0%, transparent 70%)",
         }}
       />
 
@@ -84,7 +84,7 @@ export function ProvidersBlock() {
           {PROVIDERS.map((p) => (
             <div
               key={p.name}
-              className="flex flex-col gap-1 rounded-xl border border-[#1A2225] bg-[#0A0F11] px-5 py-4 transition-colors hover:border-[#FF7A1A]/30 hover:bg-[#101A1C]"
+              className="flex flex-col gap-1 rounded-xl border border-[#1A2225] bg-[#0A0F11] px-5 py-4 transition-colors hover:border-[#22F0D5]/30 hover:bg-[#101A1C]"
             >
               <div className="flex items-center gap-2">
                 <span className="text-base font-medium text-[#F2F4F5]">
@@ -104,14 +104,14 @@ export function ProvidersBlock() {
         {/* tail */}
         <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-8">
           <div className="flex items-start gap-3">
-            <span className="mt-0.5 font-mono text-xs text-[#FF7A1A]">·</span>
+            <span className="mt-0.5 font-mono text-xs text-[#22F0D5]">·</span>
             <p className="text-sm leading-relaxed text-[#9BA5A7]">
               Zero token markup. BYO keys. Your spend goes directly to the
               provider — no middleman, no markup, no surprises.
             </p>
           </div>
           <div className="flex items-start gap-3">
-            <span className="mt-0.5 font-mono text-xs text-[#FF7A1A]">·</span>
+            <span className="mt-0.5 font-mono text-xs text-[#22F0D5]">·</span>
             <p className="text-sm leading-relaxed text-[#9BA5A7]">
               Local Whisper.cpp for voice. Audio never leaves your machine.
               The cockpit is locked to no provider.

@@ -454,7 +454,7 @@ export default function Quiz() {
   if (submitted) {
     return (
       <div className="space-y-8">
-        <div className="rounded-2xl border border-[#22F0D5]/40 bg-[#0e2520]/40 p-7 md:p-10">
+        <div className="rounded-2xl border border-[#22F0D5]/40 bg-[#08090B]/40 p-7 md:p-10">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::your result · {pct}% · {score} / {totalWeight} weighted points
           </p>

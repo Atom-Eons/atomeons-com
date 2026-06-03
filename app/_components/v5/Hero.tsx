@@ -60,7 +60,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 opacity-70"
         style={{
           background:
-            "radial-gradient(70% 55% at 75% 40%, rgba(34,240,213,0.15) 0%, transparent 60%), radial-gradient(50% 40% at 10% 90%, rgba(255,122,26,0.14) 0%, transparent 65%)",
+            "radial-gradient(70% 55% at 75% 40%, rgba(34,240,213,0.15) 0%, transparent 60%), radial-gradient(50% 40% at 10% 90%, rgba(34, 240, 213,0.14) 0%, transparent 65%)",
         }}
       />
 
@@ -84,7 +84,7 @@ export function Hero() {
 
           <h1 className="text-balance text-[2rem] font-medium leading-[1.05] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl sm:leading-[0.98] md:text-7xl md:leading-[0.95] lg:text-8xl">
             One file.{" "}
-            <span className="text-[#FF7A1A]">Double-click. 2 seconds.</span>{" "}
+            <span className="text-[#22F0D5]">Double-click. 2 seconds.</span>{" "}
             <span className="text-[#22F0D5]">The cockpit replaces</span>{" "}
             <span className="text-[#6B7779]">Claude Code, Cursor, and Codex.</span>
           </h1>
@@ -93,10 +93,10 @@ export function Hero() {
             4.46 MB. Native binary. 11 lanes, 15 departments, 200+ models
             behind one routing layer. Your project state never leaves your
             machine. $1 once.{" "}
-            <span className="font-medium text-[#FF7A1A]">FOREVER.</span>
+            <span className="font-medium text-[#22F0D5]">FOREVER.</span>
           </p>
 
-          <p className="mt-4 max-w-2xl font-mono text-sm uppercase tracking-[0.18em] text-[#FF7A1A]">
+          <p className="mt-4 max-w-2xl font-mono text-sm uppercase tracking-[0.18em] text-[#22F0D5]">
             ladder pricing · starts at $1 · every 100 sales goes up $1 · all updates free
           </p>
 

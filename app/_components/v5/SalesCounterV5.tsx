@@ -66,7 +66,7 @@ export function SalesCounterV5() {
     <div className="inline-flex flex-col gap-2 rounded-lg border border-[#1A2225] bg-black/70 px-4 py-3 backdrop-blur-sm">
       <div className="flex items-baseline gap-2 font-mono text-[10px] uppercase tracking-[0.2em]">
         <span className="text-[#22F0D5]">::sold live</span>
-        <span className="text-2xl font-medium tabular-nums leading-none text-[#FF7A1A]">
+        <span className="text-2xl font-medium tabular-nums leading-none text-[#22F0D5]">
           {sold}
         </span>
         <span className="text-[#6B7779]">of {goal}</span>
@@ -75,7 +75,7 @@ export function SalesCounterV5() {
       <div className="relative h-1 w-56 overflow-hidden rounded-full bg-[#1A2225]">
         <div
           aria-hidden
-          className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#FF7A1A] to-[#22F0D5] transition-all duration-1000"
+          className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#22F0D5] to-[#22F0D5] transition-all duration-1000"
           style={{
             width: `${Math.max(2, pct)}%`,
             boxShadow: "0 0 8px rgba(34,240,213,0.6)",

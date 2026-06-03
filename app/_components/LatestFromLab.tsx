@@ -51,21 +51,21 @@ export async function LatestFromLab() {
         </p>
         <h2 className="text-balance text-3xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
           Tonight&apos;s letter.{" "}
-          <span className="text-[#FF7A1A]">Today&apos;s paper.</span>
+          <span className="text-[#22F0D5]">Today&apos;s paper.</span>
         </h2>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {/* Latest Founder's View letter */}
           <Link
             href={letter ? `/founders-view/${letter.slug}` : "/founders-view"}
-            className="group flex flex-col rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#FF7A1A]/50 md:p-9"
+            className="group flex flex-col rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/50 md:p-9"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::nightly broadcast · sealed and slipped under your door
             </p>
             {letter ? (
               <>
-                <h3 className="mt-4 text-2xl font-medium leading-tight text-[#F2F4F5] group-hover:text-[#FF7A1A] md:text-3xl">
+                <h3 className="mt-4 text-2xl font-medium leading-tight text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-3xl">
                   {letter.title}
                 </h3>
                 {letter.dek ? (
@@ -82,7 +82,7 @@ export async function LatestFromLab() {
                   {letter.word_count ? (
                     <span>{letter.word_count} words</span>
                   ) : null}
-                  <span className="ml-auto text-[#FF7A1A]">
+                  <span className="ml-auto text-[#22F0D5]">
                     read the letter →
                   </span>
                 </p>
@@ -96,7 +96,7 @@ export async function LatestFromLab() {
                   The first letter publishes at 00:00 UTC. Bookmark the
                   archive. No email list. No algorithm.
                 </p>
-                <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-[#FF7A1A]">
+                <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]">
                   open the archive →
                 </p>
               </>

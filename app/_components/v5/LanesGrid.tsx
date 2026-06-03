@@ -54,7 +54,7 @@ export function LanesGrid() {
                   {l.name}
                 </h3>
                 {l.flag ? (
-                  <span className="rounded border border-[#FF7A1A]/60 bg-[#FF7A1A]/10 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.18em] text-[#FF7A1A]">
+                  <span className="rounded border border-[#22F0D5]/60 bg-[#22F0D5]/10 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.18em] text-[#22F0D5]">
                     {l.flag}
                   </span>
                 ) : null}

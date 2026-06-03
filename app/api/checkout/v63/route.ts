@@ -36,7 +36,7 @@ export const dynamic = "force-dynamic";
  *      the dashboard says.
  *   B. Fallback (no env): ad-hoc price_data at $99 USD.
  *
- * 2026-05-30 — switched fallback from $49 → $99 to match the new
+ * 2026-05-30 — switched fallback from $99 → $99 to match the new
  * launch pricing posture. The price-may-change-at-random doctrine
  * means future tweaks to this number are expected; the surrounding
  * messaging on /orangebox + /pricing carries that fact publicly.

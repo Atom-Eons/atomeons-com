@@ -93,7 +93,7 @@ export default function PricingTransparencyPage() {
       </section>
 
       {/* HOW · TIERS */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30 py-16 md:py-20">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::how · step 1 · World Bank income tiers
@@ -128,7 +128,7 @@ export default function PricingTransparencyPage() {
                 { t: 1, label: "High-income", gni: "> $13,935", color: "#22F0D5" },
                 { t: 2, label: "Upper-middle-income", gni: "$4,496 – $13,935", color: "#7DDBC8" },
                 { t: 3, label: "Lower-middle-income", gni: "$1,136 – $4,495", color: "#FFB87A" },
-                { t: 4, label: "Low-income", gni: "≤ $1,135", color: "#FF7A1A" },
+                { t: 4, label: "Low-income", gni: "≤ $1,135", color: "#22F0D5" },
               ].map((row) => (
                 <tr key={row.t}>
                   <td className="border-b border-[#1A2225] py-3 align-top" style={{ color: row.color }}>
@@ -232,7 +232,7 @@ export default function PricingTransparencyPage() {
       </section>
 
       {/* HOW · BASE PRICE */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30 py-16 md:py-20">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::how · step 3 · per-product base price
@@ -299,7 +299,7 @@ export default function PricingTransparencyPage() {
       </section>
 
       {/* HOW · DETECTION */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30 py-16 md:py-20">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::how · step 5 · country detection

@@ -26,13 +26,13 @@ export function SystemLog({ intervalMs = 4200 }: { intervalMs?: number }) {
 
   return (
     <div
-      className="border-b border-[#204538] bg-[#04100d]/95 backdrop-blur-sm"
+      className="border-b border-[#1F242B] bg-[#08090B]/95 backdrop-blur-sm"
       role="status"
       aria-live="polite"
       aria-label="ORANGEBOX cockpit status sample"
     >
       <div className="mx-auto flex w-full max-w-6xl items-center gap-3 px-6 py-1.5 font-mono text-[10px] tracking-tight">
-        <span className="shrink-0 rounded-sm bg-[#0a211b] px-1.5 py-0.5 text-[9px] font-bold text-[#75ff92]">
+        <span className="shrink-0 rounded-sm bg-[#0F1114] px-1.5 py-0.5 text-[9px] font-bold text-[#75ff92]">
           {frame.tag}
         </span>
         <span className="truncate text-[#a7b8ad]">{frame.text}</span>

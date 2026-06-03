@@ -218,7 +218,7 @@ export default function DynamicWorldPricingPaper() {
       </section>
 
       {/* 2 — PRIOR ART */}
-      <section className="dwp-section dwp-pagebreak border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
+      <section className="dwp-section dwp-pagebreak border-b border-[#1A2225] bg-[#08090B]/30 py-16 md:py-20">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5] dwp-accent-cyan">
             ::02 · prior art · what we did not invent
@@ -335,7 +335,7 @@ export default function DynamicWorldPricingPaper() {
       </section>
 
       {/* 4 — THE MATH */}
-      <section className="dwp-section dwp-pagebreak border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
+      <section className="dwp-section dwp-pagebreak border-b border-[#1A2225] bg-[#08090B]/30 py-16 md:py-20">
         <div className="mx-auto w-full max-w-4xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5] dwp-accent-cyan">
             ::04 · the math · what ORANGEBOX costs by country, today
@@ -700,8 +700,8 @@ curl https://atomeons.com/api/price/orangebox?cc=SO   # tier default · $1.98`}
               of them bear directly on this paper.
             </p>
             <p>
-              <span className="font-semibold text-[#F2F4F5]">Clause 04 — $49 once · §4A no-saas.</span>{" "}
-              Originally drafted around a single-anchor $49 price. The
+              <span className="font-semibold text-[#F2F4F5]">Clause 04 — $99 once · §4A no-saas.</span>{" "}
+              Originally drafted around a single-anchor $99 price. The
               Dynamic World Pricing system extends the same covenant
               to a price that varies by country, while preserving the
               one-time-forever model. The buyer at any price tier
@@ -740,7 +740,7 @@ curl https://atomeons.com/api/price/orangebox?cc=SO   # tier default · $1.98`}
       </section>
 
       {/* 6 — WHAT YOU DO WITH THIS */}
-      <section className="dwp-section dwp-pagebreak border-b border-[#1A2225] bg-[#0e2520]/30 py-16 md:py-20">
+      <section className="dwp-section dwp-pagebreak border-b border-[#1A2225] bg-[#08090B]/30 py-16 md:py-20">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5] dwp-accent-cyan">
             ::07 · what you do with this

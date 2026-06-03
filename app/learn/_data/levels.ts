@@ -87,7 +87,7 @@ export const LEVELS: Level[] = [
       "Building a custom cockpit yourself instead of using one. Many Operators code their own scratch cockpit and burn three months. The cockpit is a tool, not the lesson.",
     rightTool:
       "The chat AI you pay for + a second one as backup + Perplexity. Start exploring Claude Code (CLI) or Cursor if you're technical. Try Ollama with one local model so you have an opinion about offline.",
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
   {
     id: "pilot",
@@ -102,7 +102,7 @@ export const LEVELS: Level[] = [
     riskAtThisLevel:
       "Forgetting that the Pilot tools are leverage on judgment, not substitute for judgment. The 35 years of experience the Operator brought IS the moat. The cockpit just multiplies it.",
     rightTool:
-      "ORANGEBOX Command v6.3 (atomeons.com/orangebox) — the lab's own cockpit, $49 once, License §4A bans subscription. Or any equivalent cockpit you build for yourself. The principle is what matters: receipts, mission graph, multi-model routing.",
+      "ORANGEBOX Command v6.3 (atomeons.com/orangebox) — the lab's own cockpit, $99 once, License §4A bans subscription. Or any equivalent cockpit you build for yourself. The principle is what matters: receipts, mission graph, multi-model routing.",
     accent: "#FFB87A",
   },
 ];

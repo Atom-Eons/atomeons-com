@@ -675,7 +675,7 @@ export const CATEGORY_META: Record<
   deciding: {
     label: "Deciding",
     oneLiner: "Real pros/cons, stress-tests, the question you've been avoiding.",
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
   learning: {
     label: "Learning",

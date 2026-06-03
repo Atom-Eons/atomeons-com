@@ -39,7 +39,7 @@ export function FounderCard() {
               <h2 className="mb-1 text-3xl font-medium text-[#F2F4F5] md:text-4xl">
                 Atom McCree
               </h2>
-              <p className="mb-1 font-mono text-sm uppercase tracking-[0.18em] text-[#FF7A1A]">
+              <p className="mb-1 font-mono text-sm uppercase tracking-[0.18em] text-[#22F0D5]">
                 Founder · AtomEons Systems Laboratory
               </p>
               <p className="mb-8 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">

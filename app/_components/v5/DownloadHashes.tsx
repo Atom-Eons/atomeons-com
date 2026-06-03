@@ -50,7 +50,7 @@ export function DownloadHashes() {
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
             Hashes published.
             <br />
-            <span className="text-[#FF7A1A]">Verify before you trust.</span>
+            <span className="text-[#22F0D5]">Verify before you trust.</span>
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-[#9BA5A7]">
             Every v6.0.0 binary has its SHA-256 in the public release.
@@ -72,16 +72,16 @@ export function DownloadHashes() {
               key={a.file}
               className={`rounded-2xl border bg-[#0A0F11] p-6 md:p-8 ${
                 a.pill
-                  ? "border-[#FF7A1A]/60 shadow-[0_0_60px_-20px_rgba(255,122,26,0.5)]"
+                  ? "border-[#22F0D5]/60 shadow-[0_0_60px_-20px_rgba(34, 240, 213,0.5)]"
                   : "border-[#1A2225]"
               }`}
             >
               <div className="flex flex-wrap items-baseline justify-between gap-3">
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
+                  <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5]">
                     {a.label}{" "}
                     {a.pill ? (
-                      <span className="ml-2 rounded border border-[#FF7A1A] bg-[#FF7A1A]/15 px-1.5 py-0.5 text-[9px] text-[#FF7A1A]">
+                      <span className="ml-2 rounded border border-[#22F0D5] bg-[#22F0D5]/15 px-1.5 py-0.5 text-[9px] text-[#22F0D5]">
                         {a.pill}
                       </span>
                     ) : null}

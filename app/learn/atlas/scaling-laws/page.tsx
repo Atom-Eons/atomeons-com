@@ -136,7 +136,7 @@ export default function AtlasScalingLawsPage() {
                   </h3>
                 </div>
                 <p className="mt-5 max-w-[62ch] text-[15px] leading-[1.7] text-[#C8CCCE]">{m.body}</p>
-                <p className="mt-4 max-w-[62ch] rounded-lg border border-[#22F0D5]/20 bg-[#0e2520]/30 p-4 text-[14px] leading-[1.65] text-[#C8CCCE]">
+                <p className="mt-4 max-w-[62ch] rounded-lg border border-[#22F0D5]/20 bg-[#08090B]/30 p-4 text-[14px] leading-[1.65] text-[#C8CCCE]">
                   <span className="font-medium text-[#22F0D5]">Contribution: </span>{m.contribution}
                 </p>
               </article>

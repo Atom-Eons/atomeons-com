@@ -165,14 +165,14 @@ export default function XAlgorithmIntel() {
 
       {/* HERO */}
       <section className="mx-auto w-full max-w-6xl px-6 py-20 md:py-28">
-        <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           <AeMark size={20} glow />
           ::alpha intel · received 2026-05-18 · source xai-org/x-algorithm
         </p>
         <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
           The X algorithm
           <br />
-          <span className="text-[#FF7A1A]">finally has receipts.</span>
+          <span className="text-[#22F0D5]">finally has receipts.</span>
         </h1>
         <p className="mt-8 max-w-3xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
           On May 15, 2026, xAI published the X For-You algorithm source code
@@ -234,7 +234,7 @@ export default function XAlgorithmIntel() {
                 i > 0 ? "border-t border-[#1A2225]" : ""
               }`}
             >
-              <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
+              <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5]">
                 {item.n}
               </span>
               <p className="text-sm leading-relaxed text-[#F2F4F5] md:text-base">
@@ -262,7 +262,7 @@ export default function XAlgorithmIntel() {
               className="bg-[#0A0F11] p-7 transition-colors hover:bg-[#101A1C]"
             >
               <div className="flex items-baseline gap-4">
-                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
+                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5]">
                   {e.n}
                 </span>
                 <h3 className="text-base font-medium text-[#F2F4F5] md:text-lg">
@@ -279,7 +279,7 @@ export default function XAlgorithmIntel() {
 
       {/* CHEATSHEET */}
       <section className="mx-auto w-full max-w-6xl px-6 py-16">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           ::actionable cheatsheet · 12 rules
         </p>
         <h2 className="mb-10 text-3xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
@@ -359,7 +359,7 @@ export default function XAlgorithmIntel() {
 
       {/* DEEP DIVE — §15 MIN-TRACTION GATE */}
       <section className="mx-auto w-full max-w-4xl px-6 py-16">
-        <p className="mb-3 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           ::deep dive · § 15
         </p>
         <h2 className="mb-6 text-3xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
@@ -416,7 +416,7 @@ export default function XAlgorithmIntel() {
 
       {/* DEEP DIVE — §26 SHADOWBAN TYPES */}
       <section className="mx-auto w-full max-w-4xl px-6 py-16">
-        <p className="mb-3 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           ::deep dive · § 26
         </p>
         <h2 className="mb-6 text-3xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
@@ -460,7 +460,7 @@ export default function XAlgorithmIntel() {
               className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6"
             >
               <div className="flex items-baseline gap-4">
-                <span className="font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+                <span className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
                   type {t.n}
                 </span>
                 <h3 className="text-lg font-semibold text-[#F2F4F5] md:text-xl">
@@ -491,7 +491,7 @@ export default function XAlgorithmIntel() {
 
       {/* DEEP DIVE — §30 ANATOMY OF THE PERFECT POST */}
       <section className="mx-auto w-full max-w-4xl px-6 py-16">
-        <p className="mb-3 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           ::deep dive · § 30
         </p>
         <h2 className="mb-6 text-3xl font-medium tracking-[-0.015em] text-[#F2F4F5] md:text-5xl">
@@ -532,8 +532,8 @@ export default function XAlgorithmIntel() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-[#FF7A1A]/30 bg-[#0E1418] p-6">
-          <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <div className="mt-8 rounded-2xl border border-[#22F0D5]/30 bg-[#0E1418] p-6">
+          <p className="font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
             ::operator caveat
           </p>
           <p className="mt-3 text-sm leading-[1.7] text-[#C8CCCE] md:text-base">
@@ -631,12 +631,12 @@ export default function XAlgorithmIntel() {
         <div className="grid gap-6 md:grid-cols-3">
           <Link
             href="/founders-view"
-            className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#FF7A1A]/50"
+            className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/50"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::tonight&apos;s letter
             </p>
-            <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
+            <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
               The Founder&apos;s View covers it tonight at 8pm ET →
             </p>
           </Link>
@@ -653,13 +653,13 @@ export default function XAlgorithmIntel() {
           </Link>
           <Link
             href="/orangebox"
-            className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#FF7A1A]/50"
+            className="group rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 transition-colors hover:border-[#22F0D5]/50"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               ::built through the cockpit
             </p>
-            <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
-              ORANGEBOX v6.3 · $49 once · §4A no-saas · receipts on every action →
+            <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
+              ORANGEBOX v6.3 · $99 once · §4A no-saas · receipts on every action →
             </p>
           </Link>
         </div>

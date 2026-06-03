@@ -20,7 +20,7 @@ import type { ContentPage, Section } from "./types";
  *  - Cyan demoted from decoration to signal — kept only on hover state +
  *    citation [NN] indices (utility marker, tabular-nums).
  *  - `::` eyebrow chrome stripped; subtitle becomes humanist sans sub-headline.
- *  - Section bg-[#0e2520]/15 film removed — true black throughout.
+ *  - Section bg-[#08090B]/15 film removed — true black throughout.
  *  - List bullets are quiet hairlines (aria-hidden), no more cyan triangles.
  *  - Timeline dots/rail neutral, glow removed.
  *  - Card left-stripe removed (was 4px cyan per card = wallpaper).
@@ -238,7 +238,7 @@ function SectionRenderer({ section, accent }: { section: Section; accent: string
                 {section.tableRows.map((row, i) => (
                   <tr
                     key={i}
-                    className="border-b border-[#1A2225] last:border-b-0 hover:bg-[#0e2520]/25"
+                    className="border-b border-[#1A2225] last:border-b-0 hover:bg-[#08090B]/25"
                   >
                     {row.map((cell, j) => (
                       <td

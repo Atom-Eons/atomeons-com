@@ -629,7 +629,7 @@ For each: run the same prompt template from Lesson 2 (context / constraint / out
     concept: [
       "Three signals you've outgrown chat: (1) You catch yourself re-pasting the same project background into every chat. (2) You have 4+ chats open across 2+ AI tools, each holding partial state for the same project. (3) You can't reconstruct what AI did for you last Tuesday because the chats are gone or buried.",
       "What you need next: persistent project memory (the AI remembers between sessions), multi-tool routing in one app (Claude OR GPT OR local, swap mid-session), receipts on disk (every AI action carries a paper trail), mission-graph thinking (the project IS the graph, the AI works against the graph).",
-      "Options to get there: build a custom cockpit yourself (3-month project — most people who try this regret it), use a third-party cockpit (Cursor, Continue, Replit for coding-only), or use ORANGEBOX (the lab's own cockpit, $49 once, License §4A bans subscription).",
+      "Options to get there: build a custom cockpit yourself (3-month project — most people who try this regret it), use a third-party cockpit (Cursor, Continue, Replit for coding-only), or use ORANGEBOX (the lab's own cockpit, $99 once, License §4A bans subscription).",
       "Whichever path you pick, the principle is the same: the chat box stops being the system. The system is your project. The chat box is a tool inside the system.",
     ],
     drillIntro:

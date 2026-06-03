@@ -57,7 +57,7 @@ export default async function Image({
           display: "flex",
           flexDirection: "column",
           background:
-            "radial-gradient(70% 55% at 75% 35%, rgba(255,122,26,0.22) 0%, transparent 60%), radial-gradient(50% 40% at 10% 95%, rgba(34,240,213,0.18) 0%, transparent 65%), #000000",
+            "radial-gradient(70% 55% at 75% 35%, rgba(34, 240, 213,0.22) 0%, transparent 60%), radial-gradient(50% 40% at 10% 95%, rgba(34,240,213,0.18) 0%, transparent 65%), #000000",
           color: "#F2F4F5",
           padding: 64,
           fontFamily:
@@ -105,7 +105,7 @@ export default async function Image({
               fontSize: 11,
               letterSpacing: 4,
               textTransform: "uppercase",
-              color: "#FF7A1A",
+              color: "#22F0D5",
             }}
           >
             ● {dateStr} · 8pm ET
@@ -128,7 +128,7 @@ export default async function Image({
               fontSize: 14,
               letterSpacing: 4,
               textTransform: "uppercase",
-              color: "#FF7A1A",
+              color: "#22F0D5",
             }}
           >
             ::letter from the lab · {theme}
@@ -202,9 +202,9 @@ export default async function Image({
               alignItems: "baseline",
               gap: 10,
               padding: "16px 22px",
-              background: "#FF7A1A",
+              background: "#22F0D5",
               borderRadius: 14,
-              boxShadow: "0 0 60px rgba(255,122,26,0.55)",
+              boxShadow: "0 0 60px rgba(34, 240, 213,0.55)",
             }}
           >
             <p

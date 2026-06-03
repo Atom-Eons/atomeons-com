@@ -81,7 +81,7 @@ export function OrangeBoxV63Buy({
       disabled={pending}
       className={
         className ??
-        "inline-flex items-center justify-center gap-2 rounded-full bg-[#FF7A1A] px-7 py-3.5 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-black shadow-[0_0_40px_rgba(255,122,26,0.4)] transition-all hover:bg-[#FFA45A] disabled:opacity-60"
+        "inline-flex items-center justify-center gap-2 rounded-full bg-[#22F0D5] px-7 py-3.5 font-mono text-[12px] font-semibold uppercase tracking-[0.28em] text-black shadow-[0_0_40px_rgba(34, 240, 213,0.4)] transition-all hover:bg-[#FFA45A] disabled:opacity-60"
       }
     >
       {pending ? "redirecting…" : label}

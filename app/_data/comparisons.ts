@@ -268,14 +268,14 @@ There is an alternative pricing model — one-time license, paid once, used fore
 
 Take a representative operator stack: Claude Pro + ChatGPT Plus + Cursor + Perplexity Pro = $80/month = $960/year.
 
-| Years | Subscription stack | One-time tool (e.g. $49) |
+| Years | Subscription stack | One-time tool (e.g. $99) |
 | --- | --- | --- |
-| 1 | $960 | $49 |
-| 3 | $2,880 | $49 |
-| 5 | $4,800 | $49 |
-| 10 | $9,600 | $49 |
+| 1 | $960 | $99 |
+| 3 | $2,880 | $99 |
+| 5 | $4,800 | $99 |
+| 10 | $9,600 | $99 |
 
-The headline number after a decade: roughly $10,000 in subscription fees versus a one-time $49 payment.
+The headline number after a decade: roughly $10,000 in subscription fees versus a one-time $99 payment.
 
 The honest counter-argument: the subscription tools are getting better every quarter. The 2034 version of Claude Pro will be substantially more capable than the 2026 version. The one-time tool will not (unless explicitly upgraded). For frontier-grade work, the subscription model captures real ongoing value.
 
@@ -307,7 +307,7 @@ Neither model is automatically better at lock-in avoidance. A poorly-designed on
 
 ## The §4A example
 
-The ORANGEBOX cockpit shipped by AtomEons is priced at $49 once, forever, with a clause in the license (§4A) that legally binds the lab to never switch to a subscription model. If the lab ever attempts the switch, every existing buyer keeps their license free in perpetuity.
+The ORANGEBOX cockpit shipped by AtomEons is priced at $99 once, forever, with a clause in the license (§4A) that legally binds the lab to never switch to a subscription model. If the lab ever attempts the switch, every existing buyer keeps their license free in perpetuity.
 
 This is unusual. Most software licenses reserve the right to change pricing models. §4A removes that right. The reason it exists is to make the one-time commitment legally enforceable rather than merely promised. Without a clause like §4A, "one-time pricing" is a marketing claim, not a contract.
 
@@ -345,11 +345,11 @@ If you're building a workflow you intend to use for a decade, look for tools wit
 
 The deeper pattern: the AI industry in 2026 is repeating the SaaS playbook of 2010. Subscription pricing is a structural advantage for sellers and a structural cost for buyers. There is no rule that says it has to be the only model. The buyers who refuse to accept that rule have leverage. The buyers who accept it pay for the decade.
 
-For more on AtomEons's one-time-licensing posture, see [the manifesto](/manifesto) — specifically clause 4 ($49 once · §4A no-saas).`,
+For more on AtomEons's one-time-licensing posture, see [the manifesto](/manifesto) — specifically clause 4 ($99 once · §4A no-saas).`,
     table: [
-      { dimension: "1-year cost (4-tool stack at $20/mo each)", left: "$960", right: "$49 once" },
-      { dimension: "5-year cost", left: "$4,800", right: "$49" },
-      { dimension: "10-year cost", left: "$9,600", right: "$49" },
+      { dimension: "1-year cost (4-tool stack at $20/mo each)", left: "$960", right: "$99 once" },
+      { dimension: "5-year cost", left: "$4,800", right: "$99" },
+      { dimension: "10-year cost", left: "$9,600", right: "$99" },
       { dimension: "Ongoing model updates", left: "Yes · monthly", right: "Manual upgrade if available" },
       { dimension: "Lock-in pressure", left: "Higher (state lives in service)", right: "Lower (state lives on your machine)" },
       { dimension: "Cancellation experience", left: "Lose Projects / Custom GPTs / saved state", right: "No cancellation concept" },

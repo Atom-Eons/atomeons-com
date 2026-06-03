@@ -59,7 +59,7 @@ export function RepoIndexerBlock() {
                   <p className="font-mono text-3xl font-semibold tabular-nums text-[#22F0D5] md:text-4xl">
                     {s.value}
                   </p>
-                  <p className="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-[#FF7A1A]">
+                  <p className="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-[#22F0D5]">
                     {s.unit}
                   </p>
                   <p className="mt-1 text-xs text-[#6B7779]">{s.caption}</p>
@@ -95,7 +95,7 @@ export function RepoIndexerBlock() {
               <div className="space-y-2">
                 {SKIP.map((s) => (
                   <div key={s} className="flex items-center gap-3">
-                    <span className="font-mono text-xs text-[#FF7A1A]">✗</span>
+                    <span className="font-mono text-xs text-[#22F0D5]">✗</span>
                     <span className="font-mono text-sm text-[#F2F4F5]">{s}</span>
                   </div>
                 ))}

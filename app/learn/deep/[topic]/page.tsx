@@ -1150,7 +1150,7 @@ export default async function DeepTopicPage({ params }: { params: Promise<{ topi
           </ol>
         </section>
 
-        <section className="rounded-2xl border border-[#22F0D5]/40 bg-[#0e2520]/30 p-7 md:p-8">
+        <section className="rounded-2xl border border-[#22F0D5]/40 bg-[#08090B]/30 p-7 md:p-8">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">::milestones · observable</p>
           <ul className="mt-5 space-y-3">
             {p.milestones.map((m, i) => (

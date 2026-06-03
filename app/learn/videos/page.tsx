@@ -513,7 +513,7 @@ export default function VideosPage() {
           </div>
         </div>
       </section>
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-20 space-y-16">
           {CATEGORIES.map((cat) => {
             const items = VIDEOS.filter((v) => v.category === cat);

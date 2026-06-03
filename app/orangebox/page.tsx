@@ -10,7 +10,7 @@ import { TrackedDownloadAnchor } from "../_components/TrackedDownloadAnchor";
  * Built from the canonical spec:
  *   C:\AtomEons\orangebox\finals\WEB_PROJECT_FINAL_PACKAGE_2026-05-30.md
  *
- * Single product. $49 perpetual. Free preview week (v1.0.0-beta from
+ * Single product. $99 perpetual. Free preview week (v1.0.0-beta from
  * GitHub Release). No subscription, no email capture, no third-party
  * tracking. Warm ember palette mirroring the in-app cockpit
  * (NOT cool tech blue like the rest of the site).
@@ -27,7 +27,7 @@ import { TrackedDownloadAnchor } from "../_components/TrackedDownloadAnchor";
  *   Primary "Download free this week" → GitHub Release (when operator
  *     creates the org/repo per §19 Day 0). Until then it 404s — and the
  *     direct-mirror Vercel Blob fallback right below it works tonight.
- *   Secondary "Buy ($49 from next week)" → disabled / coming-soon until
+ *   Secondary "Buy ($99 from next week)" → disabled / coming-soon until
  *     Stripe link is configured (Day 3-4).
  */
 
@@ -1100,7 +1100,7 @@ export default function OrangeboxPage() {
             </ul>
           </div>
 
-          {/* $49 */}
+          {/* $99 */}
           <div
             className="rounded-2xl border p-7"
             style={{

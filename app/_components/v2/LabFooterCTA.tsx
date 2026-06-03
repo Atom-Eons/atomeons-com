@@ -68,7 +68,7 @@ export function LabFooterCTA() {
                 style={{
                   background:
                     idx === 3
-                      ? "linear-gradient(90deg, transparent, rgba(255,122,26,0.5), transparent)"
+                      ? "linear-gradient(90deg, transparent, rgba(34, 240, 213,0.5), transparent)"
                       : "linear-gradient(90deg, transparent, rgba(34,240,213,0.35), transparent)",
                 }}
               />

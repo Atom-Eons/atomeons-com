@@ -265,7 +265,7 @@ export default function TrackPage() {
       </section>
 
       {/* PERSONAS */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-24">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: t.accent }}>
             ::who lands here
@@ -310,7 +310,7 @@ export default function TrackPage() {
       </section>
 
       {/* STACK + DO NOT */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-24">
           <div className="grid gap-8 md:grid-cols-2">
             <div>
@@ -386,7 +386,7 @@ export default function TrackPage() {
       </section>
 
       {/* REGULATIONS */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-4xl px-6 py-20 md:py-24">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: t.accent }}>
             ::what governs your AI use

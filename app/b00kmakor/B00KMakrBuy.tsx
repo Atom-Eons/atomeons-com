@@ -71,7 +71,7 @@ export default function B00KMakrBuy({
 
   const baseClasses =
     variant === "primary"
-      ? "inline-flex items-center gap-2 rounded-lg border border-[#FF7A1A] bg-[#FF7A1A] px-7 py-3.5 text-base font-semibold text-black shadow-[0_0_40px_rgba(255,122,26,0.4)] transition-colors hover:bg-[#FFA45A] disabled:opacity-60"
+      ? "inline-flex items-center gap-2 rounded-lg border border-[#22F0D5] bg-[#22F0D5] px-7 py-3.5 text-base font-semibold text-black shadow-[0_0_40px_rgba(34, 240, 213,0.4)] transition-colors hover:bg-[#FFA45A] disabled:opacity-60"
       : "inline-flex items-center gap-2 rounded-lg border border-[#22F0D5]/40 bg-[#0A0F11] px-6 py-3 font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10 disabled:opacity-60";
 
   return (

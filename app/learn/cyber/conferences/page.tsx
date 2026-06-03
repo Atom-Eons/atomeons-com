@@ -166,7 +166,7 @@ export default function CyberConferencesPage() {
               <p className="mt-2 text-sm text-[#FFB87A]">{c.when}</p>
               <p className="mt-1 text-sm text-[#9BA5A7]">{c.tier}</p>
               <p className="mt-5 max-w-[62ch] text-[15px] leading-[1.7] text-[#C8CCCE]">{c.body}</p>
-              <p className="mt-4 max-w-[62ch] rounded-lg border border-[#22F0D5]/20 bg-[#0e2520]/30 p-4 text-[14px] leading-[1.65] text-[#C8CCCE]">
+              <p className="mt-4 max-w-[62ch] rounded-lg border border-[#22F0D5]/20 bg-[#08090B]/30 p-4 text-[14px] leading-[1.65] text-[#C8CCCE]">
                 <span className="font-medium text-[#22F0D5]">Student / junior pro: </span>{c.student}
               </p>
             </article>

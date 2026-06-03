@@ -208,7 +208,7 @@ export function CockpitFrame() {
       {/* bottom-right: broadcast countdown */}
       <div className={`${cornerClass} ${opacity} bottom-3 right-3`}>
         <div className="flex items-end justify-end gap-2">
-          <span className="mb-1 tabular-nums text-[#FF7A1A]/80">
+          <span className="mb-1 tabular-nums text-[#22F0D5]/80">
             NEXT BROADCAST · {countdown}
           </span>
           {bracket("br")}

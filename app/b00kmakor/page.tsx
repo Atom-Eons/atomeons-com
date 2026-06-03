@@ -206,7 +206,7 @@ export default function B00KMakorPage() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 50% at 50% 25%, rgba(255,122,26,0.18) 0%, transparent 60%), radial-gradient(45% 40% at 80% 80%, rgba(34,240,213,0.18) 0%, transparent 60%)",
+            "radial-gradient(60% 50% at 50% 25%, rgba(34, 240, 213,0.18) 0%, transparent 60%), radial-gradient(45% 40% at 80% 80%, rgba(34,240,213,0.18) 0%, transparent 60%)",
         }}
       />
       <div
@@ -241,14 +241,14 @@ export default function B00KMakorPage() {
 
       {/* ── HERO ── */}
       <section className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-14 pb-20">
-        <p className="mb-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
-          <span className="inline-block size-1.5 animate-pulse rounded-full bg-[#FF7A1A] shadow-[0_0_12px_#FF7A1A]" />
+        <p className="mb-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
+          <span className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_12px_#22F0D5]" />
           ::shipped · 2026-05-30 · mac + windows · v3.2.0
         </p>
 
         <h1 className="text-balance text-6xl font-medium leading-[0.95] tracking-[-0.03em] md:text-9xl">
-          B<span className="text-[#FF7A1A]">0</span>
-          <span className="text-[#FF7A1A]">0</span>K
+          B<span className="text-[#22F0D5]">0</span>
+          <span className="text-[#22F0D5]">0</span>K
           <span className="text-[#22F0D5]">MAKR</span>
         </h1>
 
@@ -615,8 +615,8 @@ export default function B00KMakorPage() {
 
       {/* ── WHY IT EXISTS ── */}
       <section className="relative z-10 mx-auto w-full max-w-4xl px-6 py-24">
-        <div className="rounded-3xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-10 md:p-14">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <div className="rounded-3xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-10 md:p-14">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::why this exists
           </p>
           <p className="mt-6 text-balance text-2xl leading-[1.35] tracking-tight text-[#F2F4F5] md:text-3xl">
@@ -708,7 +708,7 @@ export default function B00KMakorPage() {
         <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
           For Bob. For Mom.
           <br />
-          <span className="text-[#FF7A1A]">For the writers. Shipped.</span>
+          <span className="text-[#22F0D5]">For the writers. Shipped.</span>
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
           v3.2.0 · Mac and Windows · 142 surfaces · embedded-font

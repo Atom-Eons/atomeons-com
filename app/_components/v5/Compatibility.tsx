@@ -76,7 +76,7 @@ export function Compatibility() {
           </summary>
           <div className="mt-4 space-y-3 leading-relaxed">
             <p>
-              <span className="text-[#FF7A1A]">SmartScreen.</span> Installer is
+              <span className="text-[#22F0D5]">SmartScreen.</span> Installer is
               unsigned (code-signing on v1.6 roadmap). Windows SmartScreen will
               warn "unknown publisher" — click{" "}
               <strong className="text-[#F2F4F5]">More info</strong> →{" "}
@@ -84,7 +84,7 @@ export function Compatibility() {
               indie software.
             </p>
             <p>
-              <span className="text-[#FF7A1A]">Download.</span> Your link
+              <span className="text-[#22F0D5]">Download.</span> Your link
               appears on the success page after payment. Save it before you
               close the tab. Email delivery is a backup, not a guarantee.
             </p>

@@ -62,7 +62,7 @@ export function MoatsTable() {
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
             9 things Claude Code, Cursor, and Codex
             <br />
-            <span className="text-[#FF7A1A]">structurally can&apos;t copy.</span>
+            <span className="text-[#22F0D5]">structurally can&apos;t copy.</span>
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-[#9BA5A7]">
             Single features get copied in a sprint. Compound doctrine takes a
@@ -80,7 +80,7 @@ export function MoatsTable() {
               }`}
             >
               <div className="flex items-baseline gap-3 md:contents">
-                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#FF7A1A]">
+                <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5]">
                   {m.n}
                 </span>
                 <h3 className="text-base font-medium text-[#F2F4F5] md:text-lg">

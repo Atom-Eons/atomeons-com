@@ -303,7 +303,7 @@ export default function FAQPage() {
           </p>
         </div>
       </section>
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-4xl px-6 py-20 md:py-24 space-y-12">
           {CATEGORIES.map((cat) => {
             const items = FAQ.filter((f) => f.category === cat);

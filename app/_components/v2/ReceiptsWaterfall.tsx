@@ -49,7 +49,7 @@ const RECEIPTS = [
 
 const CHIP_STYLES: Record<string, string> = {
   cyan: "text-[#22F0D5] border-[#22F0D5]/30",
-  orange: "text-[#FF7A1A] border-[#FF7A1A]/30",
+  orange: "text-[#22F0D5] border-[#22F0D5]/30",
 };
 
 export function ReceiptsWaterfall() {

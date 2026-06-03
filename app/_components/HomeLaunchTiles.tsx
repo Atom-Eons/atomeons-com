@@ -206,8 +206,8 @@ export function HomeLaunchTiles() {
               ::B00KMAKR · v3.2.0 · mac + windows
             </p>
             <h3 className="mt-4 text-5xl font-medium leading-[0.95] tracking-tight text-[#E8D5B7] md:text-6xl">
-              B<span className="text-[#FF7A1A]">0</span>
-              <span className="text-[#FF7A1A]">0</span>K
+              B<span className="text-[#22F0D5]">0</span>
+              <span className="text-[#22F0D5]">0</span>K
               <span className="text-[#22F0D5]">MAKR</span>
             </h3>
             <p className="mt-5 text-[17px] leading-[1.5] text-[#C4AD8E]">

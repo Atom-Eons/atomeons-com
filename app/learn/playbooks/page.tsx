@@ -233,7 +233,7 @@ const PLAYBOOKS: Playbook[] = [
     ],
     upskill:
       "When you've stopped doing AI prompts and started writing reusable Skill Primers that any new AI session can load in 30s, you're operating. Stack the primers in a folder, version them, and a new model rotation (Sonnet 5, GPT-6) doesn't blow up your workflow.",
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
   {
     slug: "teacher",
@@ -1317,7 +1317,7 @@ export default function PlaybooksPage() {
       </section>
 
       {/* Playbooks */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/20">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/20">
         <div className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28 space-y-20">
           {PLAYBOOKS.map((p) => (
             <article

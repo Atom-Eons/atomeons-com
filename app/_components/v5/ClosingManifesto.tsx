@@ -8,7 +8,7 @@ export function ClosingManifesto() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 60% at 50% 50%, rgba(255,122,26,0.18) 0%, transparent 60%), radial-gradient(40% 40% at 80% 20%, rgba(34,240,213,0.18) 0%, transparent 60%)",
+            "radial-gradient(60% 60% at 50% 50%, rgba(34, 240, 213,0.18) 0%, transparent 60%), radial-gradient(40% 40% at 80% 20%, rgba(34,240,213,0.18) 0%, transparent 60%)",
         }}
       />
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
@@ -18,7 +18,7 @@ export function ClosingManifesto() {
         <h2 className="text-balance text-4xl font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] md:text-7xl">
           Serious project.
           <br />
-          <span className="text-[#FF7A1A]">Your hands on the wheel.</span>
+          <span className="text-[#22F0D5]">Your hands on the wheel.</span>
         </h2>
         <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-[#9BA5A7]">
           ORANGEBOX does not manage you. It does not nudge you, notify you,

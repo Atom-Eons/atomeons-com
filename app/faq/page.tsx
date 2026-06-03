@@ -4,7 +4,7 @@ export const metadata = {
   title:
     "FAQ — AI 101 + ORANGEBOX v6.3 — what is AI, which tool to use, how the cockpit works, what the license actually says",
   description:
-    "Every question answered honestly. The novice AI section (what AI is, which tool to pick first, what to do tonight, what AI cannot do, how to write a good prompt) lives above the ORANGEBOX product Q&A (v6.3 AE See-Suite + AE Operations, $49 once forever, license §4A bans subscription switch, 30-day Material Failure Guarantee, local-first, zero telemetry, source included). FAQPage structured data is exposed so AI search engines can quote any answer directly. CC-BY 4.0.",
+    "Every question answered honestly. The novice AI section (what AI is, which tool to pick first, what to do tonight, what AI cannot do, how to write a good prompt) lives above the ORANGEBOX product Q&A (v6.3 AE See-Suite + AE Operations, $99 once forever, license §4A bans subscription switch, 30-day Material Failure Guarantee, local-first, zero telemetry, source included). FAQPage structured data is exposed so AI search engines can quote any answer directly. CC-BY 4.0.",
   keywords: [
     "AI FAQ",
     "ORANGEBOX FAQ",
@@ -24,7 +24,7 @@ export const metadata = {
   openGraph: {
     title: "AI 101 + ORANGEBOX FAQ — AtomEons",
     description:
-      "AI 101 + ORANGEBOX v6.3. $49 once · §4A no-saas lock · 30-day MFG · local-first. Every answer formatted as JSON-LD for AI search engine citation.",
+      "AI 101 + ORANGEBOX v6.3. $99 once · §4A no-saas lock · 30-day MFG · local-first. Every answer formatted as JSON-LD for AI search engine citation.",
     type: "article",
     url: "https://atomeons.com/faq",
   },
@@ -32,7 +32,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "AI 101 + ORANGEBOX FAQ — AtomEons",
     description:
-      "AI 101 + ORANGEBOX v6.3. $49 once · §4A bans subscription · local-first · 30-day MFG. FAQPage structured data live.",
+      "AI 101 + ORANGEBOX v6.3. $99 once · §4A bans subscription · local-first · 30-day MFG. FAQPage structured data live.",
     creator: "@AtomMccree",
   },
   robots: { index: true, follow: true },
@@ -78,14 +78,14 @@ const FAQS: QA[] = [
   },
   {
     q: "Why is the cockpit called ORANGEBOX?",
-    a: "Because orange — the brand color — is the warning light in the cockpit that says 'pay attention.' Software that runs your life should make you pay attention to what it's doing, not what it's selling you. ORANGEBOX is the cockpit AtomEons uses to build everything else. v6.3 sells today for $49 once, forever, with License §4A legally banning subscription switch and two 30-day refund paths if it doesn't fit. The deeper answer is in /orangebox.",
+    a: "Because orange — the brand color — is the warning light in the cockpit that says 'pay attention.' Software that runs your life should make you pay attention to what it's doing, not what it's selling you. ORANGEBOX is the cockpit AtomEons uses to build everything else. v6.3 sells today for $99 once, forever, with License §4A legally banning subscription switch and two 30-day refund paths if it doesn't fit. The deeper answer is in /orangebox.",
   },
   {
     q: "What is ORANGEBOX v6.3?",
     a: "ORANGEBOX v1.0.0-beta is the turbo-optimization system for Claude on Windows 10/11. It gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident JSON receipts on every action, and a 14-department named-role routing system (AE0-AE14). Optional fallback to GPT, Gemini, Groq, Ollama, and OpenRouter via BYO key. FREE this launch week · perpetual after · License §4A legally bans subscription switch. 30-day Material Failure Guarantee.",
   },
   {
-    q: "How is the price really $49? Where's the catch?",
+    q: "How is the price really $99? Where's the catch?",
     a: "Pricing posture: FREE this launch week (2026-05-30 → 2026-06-06). After the countdown, perpetual license · price set by the lab · may change at random going forward. No subscription, no ladder, no usage meter, no freemium gate. You buy it once, you own it, you keep the binary, you keep the source. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. If it doesn't fit your workflow within 30 days, the Material Failure Guarantee returns 100% with no fault-finding required. Free-week buyers are grandfathered for life by clause — even when the price changes for new buyers, your license stays.",
   },
   {
@@ -94,7 +94,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Is ORANGEBOX a subscription?",
-    a: "No. $49 USD once, perpetual. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. The clause is enforceable, published in full at /legal/terms, and ships inside the binary as documentation. The 14-clause manifesto restates the same commitment at clause 04.",
+    a: "No. $99 USD once, perpetual. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. The clause is enforceable, published in full at /legal/terms, and ships inside the binary as documentation. The 14-clause manifesto restates the same commitment at clause 04.",
   },
   {
     q: "What's new in v6.3 versus v5 / v6.0?",
@@ -129,7 +129,7 @@ const FAQS: QA[] = [
     a: "Yes. Full source tree alongside the native binary. Inspect freely. Modify for personal or single-business use. Redistribution is not permitted (LICENSE §3). Re-uploading the binary or source to a public mirror is not permitted. Forking for personal study is fine.",
   },
   {
-    q: "Why $49?",
+    q: "Why $99?",
     a: "The pricing exists to fund one operator's ongoing maintenance, not to growth-hack an anchor. Free during the launch week to seed install reputation. Perpetual after — once, forever — at a price set by the lab. Specifically chosen NOT to be: a subscription (banned by §4A), a usage meter (no telemetry, no per-call billing), a freemium gate (no feature ransom), or venture-funded pricing (no investors to satisfy). The post-countdown price is set by the operator and may change at random going forward; free-week buyers are grandfathered for life by clause. See manifesto clause 04 for the full reasoning.",
   },
   {
@@ -202,11 +202,11 @@ export default function FAQ() {
       />
       <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
         <Link href="/">AtomEons</Link>{" "}
-        <span className="text-[#204538]">/</span> FAQ
+        <span className="text-[#1F242B]">/</span> FAQ
       </p>
 
       <h1 className="mt-6 text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-        ORANGEBOX <span className="text-[#ff7a18]">questions</span> answered.
+        ORANGEBOX <span className="text-[#22F0D5]">questions</span> answered.
       </h1>
       <p className="mt-6 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
         Real answers about ORANGEBOX v1.0.0-beta (turbo-optimize Claude)
@@ -219,23 +219,23 @@ export default function FAQ() {
         {FAQS.map((f, i) => (
           <section
             key={i}
-            className="rounded-xl border border-[#204538] bg-[#071915] p-5 transition-colors hover:border-[#ff7a18]/40"
+            className="rounded-xl border border-[#1F242B] bg-[#0F1114] p-5 transition-colors hover:border-[#22F0D5]/40"
           >
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#1b8b75]">
               ::Q.{String(i + 1).padStart(2, "0")}
             </p>
-            <h2 className="mt-2 text-lg font-bold text-[#ff7a18]">{f.q}</h2>
+            <h2 className="mt-2 text-lg font-bold text-[#22F0D5]">{f.q}</h2>
             <p className="mt-3 text-sm text-[#f7f0e4]">{f.a}</p>
           </section>
         ))}
       </div>
 
-      <hr className="my-12 border-[#204538]" />
+      <hr className="my-12 border-[#1F242B]" />
 
       <div className="flex flex-wrap gap-3">
         <Link
           href="/orangebox"
-          className="rounded-md border border-[#ff7a18] bg-[#ff7a18] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
+          className="rounded-md border border-[#22F0D5] bg-[#22F0D5] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
           style={{ color: "#000", WebkitTextFillColor: "#000" }}
         >
           See ORANGEBOX · FREE this week →
@@ -249,13 +249,13 @@ export default function FAQ() {
         </Link>
         <Link
           href="/founders-view"
-          className="rounded-md border border-[#204538] bg-[#071915] px-4 py-2 text-sm text-[#f7f0e4]"
+          className="rounded-md border border-[#1F242B] bg-[#0F1114] px-4 py-2 text-sm text-[#f7f0e4]"
         >
           Tonight&apos;s letter
         </Link>
         <a
           href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20question"
-          className="rounded-md border border-[#204538] bg-[#071915] px-4 py-2 text-sm text-[#f7f0e4]"
+          className="rounded-md border border-[#1F242B] bg-[#0F1114] px-4 py-2 text-sm text-[#f7f0e4]"
         >
           Email a question
         </a>

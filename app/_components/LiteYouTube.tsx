@@ -39,7 +39,7 @@ export default function LiteYouTube({ id, title }: { id: string; title: string }
       />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex h-16 w-24 items-center justify-center rounded-xl bg-black/75 transition-transform group-hover:scale-110">
-          <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[#FF7A1A]"><path d="M8 5v14l11-7z" /></svg>
+          <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[#22F0D5]"><path d="M8 5v14l11-7z" /></svg>
         </div>
       </div>
     </button>

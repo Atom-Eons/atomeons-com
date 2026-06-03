@@ -313,7 +313,7 @@ function QuestionForm({
   answered: number;
 }) {
   return (
-    <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
+    <section className="border-b border-[#1A2225] bg-[#08090B]/30">
       <div className="mx-auto w-full max-w-3xl px-6 py-16 md:py-20">
         {answered > 0 && (
           <div className="mb-8">
@@ -480,7 +480,7 @@ function ResultPanel({
       </section>
 
       {/* RECOMMENDED LESSONS */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30">
         <div className="mx-auto w-full max-w-3xl px-6 py-20 md:py-24">
           <p
             className="font-mono text-[10px] uppercase tracking-[0.32em]"

@@ -67,7 +67,7 @@ export default function IntelIndexPage() {
         <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
           The lab watches the systems.
           <br />
-          <span className="text-[#FF7A1A]">Receipts published.</span>
+          <span className="text-[#22F0D5]">Receipts published.</span>
         </h1>
         <p className="mt-7 max-w-2xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
           Independent analysis of public systems — algorithms, codebases,

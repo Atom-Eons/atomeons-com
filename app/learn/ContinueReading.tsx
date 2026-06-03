@@ -122,7 +122,7 @@ export function ContinueReading() {
           <div className="mt-5 flex flex-wrap gap-3">
             <Link
               href="/orangebox"
-              className="inline-flex items-center gap-2 rounded-full bg-[#FF7A1A] px-5 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-[#0B1014] transition-all hover:bg-[#FFA45A]"
+              className="inline-flex items-center gap-2 rounded-full bg-[#22F0D5] px-5 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-[#0B1014] transition-all hover:bg-[#FFA45A]"
             >
               the cockpit · /orangebox →
             </Link>

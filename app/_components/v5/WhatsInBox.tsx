@@ -36,7 +36,7 @@ export function WhatsInBox() {
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
             One zip.
             <br />
-            <span className="text-[#FF7A1A]">Nothing missing.</span>
+            <span className="text-[#22F0D5]">Nothing missing.</span>
           </h2>
         </div>
 
@@ -48,11 +48,11 @@ export function WhatsInBox() {
                 key={i}
                 className={`grid grid-cols-[110px_1fr] items-baseline gap-4 px-6 py-3.5 ${
                   i > 0 ? "border-t border-[#1A2225]" : ""
-                } ${s.new ? "bg-gradient-to-r from-[#FF7A1A]/8 to-transparent" : ""}`}
+                } ${s.new ? "bg-gradient-to-r from-[#22F0D5]/8 to-transparent" : ""}`}
               >
                 <span
                   className={`font-mono text-[10px] uppercase tracking-[0.18em] ${
-                    s.new ? "text-[#FF7A1A]" : "text-[#6B7779]"
+                    s.new ? "text-[#22F0D5]" : "text-[#6B7779]"
                   }`}
                 >
                   {s.tag}
@@ -64,7 +64,7 @@ export function WhatsInBox() {
 
           {/* binary metadata card */}
           <div className="lg:sticky lg:top-24">
-            <div className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 shadow-[0_0_80px_-30px_rgba(255,122,26,0.4)]">
+            <div className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6 shadow-[0_0_80px_-30px_rgba(34, 240, 213,0.4)]">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                 ::binary
               </p>
@@ -102,7 +102,7 @@ export function WhatsInBox() {
                   href="https://github.com/AtomEons/orangebox/releases/latest"
                   target="_blank"
                   rel="noopener"
-                  className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-[#FF7A1A] transition-colors hover:text-[#FFA45A]"
+                  className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-[#22F0D5] transition-colors hover:text-[#FFA45A]"
                 >
                   <span>↗ verify on github</span>
                 </a>

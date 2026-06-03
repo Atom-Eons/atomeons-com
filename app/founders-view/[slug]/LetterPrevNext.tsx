@@ -30,12 +30,12 @@ export function LetterPrevNext({
       {prev ? (
         <Link
           href={`/founders-view/${prev.slug}`}
-          className="group flex flex-col gap-2 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#FF7A1A]/40"
+          className="group flex flex-col gap-2 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/40"
         >
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
             ← previous letter · {dateChip(prev.published_at)}
           </p>
-          <p className="text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A] md:text-lg">
+          <p className="text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-lg">
             {prev.title}
           </p>
         </Link>

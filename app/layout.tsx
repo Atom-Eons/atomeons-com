@@ -42,13 +42,13 @@ import { AmbientSignature } from "./_components/AmbientSignature";
  * `initialScale: 1` prevents zoom-out on iOS/Safari first paint.
  * `maximumScale: 5` keeps user pinch-zoom available (accessibility).
  * `themeColor` sets the browser chrome / Android status-bar tint to
- *   the same `#0e2520` warm-slate the site uses as its base.
+ *   the same `#08090B` warm-slate the site uses as its base.
  */
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#0e2520",
+  themeColor: "#08090B",
   colorScheme: "dark",
 };
 

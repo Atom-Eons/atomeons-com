@@ -60,10 +60,10 @@ export function B00KMakrCountdown() {
   if (!mounted) {
     return (
       <div
-        className="rounded-3xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-8 md:p-10"
+        className="rounded-3xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-8 md:p-10"
         aria-hidden
       >
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]/60">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]/60">
           ::launch · loading
         </p>
         <div className="mt-6 h-24 w-full rounded-2xl bg-[#1A2225]/30" />
@@ -73,10 +73,10 @@ export function B00KMakrCountdown() {
 
   if (phase === "pre-launch") {
     return (
-      <div className="rounded-3xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-8 md:p-10">
+      <div className="rounded-3xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-8 md:p-10">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#FF7A1A]/40 bg-[#FF7A1A]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
-            <span className="size-1.5 animate-pulse rounded-full bg-[#FF7A1A]" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 bg-[#22F0D5]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+            <span className="size-1.5 animate-pulse rounded-full bg-[#22F0D5]" />
             launch · imminent
           </span>
           <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7]">
@@ -90,7 +90,7 @@ export function B00KMakrCountdown() {
           B00KMAKR v3.2.0 ships in two builds — Mac and Windows — same
           cockpit, same brain router, same 142 feature surfaces. The
           first week after launch is{" "}
-          <span className="font-semibold text-[#FF7A1A]">FREE</span> —
+          <span className="font-semibold text-[#22F0D5]">FREE</span> —
           full bundle, both platforms, both manuals. After the
           countdown closes the price is{" "}
           <span className="font-semibold text-[#22F0D5]">$99 Tier 1 anchor</span>,
@@ -138,10 +138,10 @@ export function B00KMakrCountdown() {
   const s = totalSec % 60;
 
   return (
-    <div className="rounded-3xl border border-[#FF7A1A]/40 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-8 md:p-10 shadow-[0_0_80px_-20px_rgba(255,122,26,0.4)]">
+    <div className="rounded-3xl border border-[#22F0D5]/40 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-8 md:p-10 shadow-[0_0_80px_-20px_rgba(34, 240, 213,0.4)]">
       <div className="flex flex-wrap items-center gap-3">
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#FF7A1A]/50 bg-[#FF7A1A]/15 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.28em] text-[#FF7A1A]">
-          <span className="size-1.5 animate-pulse rounded-full bg-[#FF7A1A]" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/50 bg-[#22F0D5]/15 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+          <span className="size-1.5 animate-pulse rounded-full bg-[#22F0D5]" />
           FREE · countdown · live
         </span>
         <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
@@ -158,9 +158,9 @@ export function B00KMakrCountdown() {
         ].map((cell) => (
           <div
             key={cell.label}
-            className="rounded-2xl border border-[#FF7A1A]/30 bg-black/40 p-4 text-center md:p-6"
+            className="rounded-2xl border border-[#22F0D5]/30 bg-black/40 p-4 text-center md:p-6"
           >
-            <p className="font-mono text-4xl font-bold tabular-nums leading-none text-[#FF7A1A] md:text-6xl">
+            <p className="font-mono text-4xl font-bold tabular-nums leading-none text-[#22F0D5] md:text-6xl">
               {pad2(cell.value)}
             </p>
             <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#9BA5A7] md:mt-3">
@@ -173,7 +173,7 @@ export function B00KMakrCountdown() {
       <p className="mt-6 text-base leading-[1.65] text-[#C8CCCE] md:text-lg">
         Full bundle (Mac + Windows · universal HTML + native installers ·
         both manuals) is{" "}
-        <span className="font-semibold text-[#FF7A1A]">FREE</span>{" "}
+        <span className="font-semibold text-[#22F0D5]">FREE</span>{" "}
         for everyone who downloads before the countdown hits zero.
         After that the price is your country&apos;s Tier rate — Tier 1
         anchor $99 · US $9.90 · IN $9.90 · SO $1.98 — applied

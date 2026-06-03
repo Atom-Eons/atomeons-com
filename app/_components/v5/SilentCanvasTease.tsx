@@ -42,7 +42,7 @@ const FEATURES: Feature[] = [
     name: "Solidify",
     one_liner: "One command. Production. Done.",
     body: "Describe the end state once. The canvas resolves it to a shippable artifact without negotiating the steps back to you.",
-    border_accent: "#FF7A1A",
+    border_accent: "#22F0D5",
   },
   {
     name: "Z-Axis Rewind",
@@ -54,7 +54,7 @@ const FEATURES: Feature[] = [
     name: "Living Canvas",
     one_liner: "The cockpit breathes when idle.",
     body: "Usage heatmap. Idle pulse. The canvas is an organism — it reflects where the work lives, where it hasn't been touched, where heat is accumulating.",
-    border_accent: "#FF7A1A",
+    border_accent: "#22F0D5",
   },
 ];
 
@@ -142,7 +142,7 @@ export function SilentCanvasTease() {
         <h2 className="max-w-3xl text-balance text-4xl font-medium leading-[1.04] tracking-[-0.02em] text-[#F2F4F5] md:text-6xl">
           The cockpit stopped talking.
           <br />
-          <span className="text-[#FF7A1A]">The canvas started.</span>
+          <span className="text-[#22F0D5]">The canvas started.</span>
         </h2>
 
         {/* dek + opening paragraph */}
@@ -209,7 +209,7 @@ export function SilentCanvasTease() {
             date, no roadmap theater. For the operator class who wants the
             cockpit quieter than the thing it builds.
           </p>
-          <p className="mt-6 font-mono text-base uppercase tracking-[0.18em] text-[#FF7A1A]">
+          <p className="mt-6 font-mono text-base uppercase tracking-[0.18em] text-[#22F0D5]">
             THE CANVAS SHOWS THE WORK. THE WORK IS REAL.
           </p>
         </div>
@@ -218,7 +218,7 @@ export function SilentCanvasTease() {
         <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
           <Link
             href="#buy"
-            className="group inline-flex items-center gap-1.5 rounded-lg border border-[#FF7A1A] bg-[#FF7A1A] px-5 py-3 text-sm font-medium text-black transition-colors hover:bg-[#FFA45A]"
+            className="group inline-flex items-center gap-1.5 rounded-lg border border-[#22F0D5] bg-[#22F0D5] px-5 py-3 text-sm font-medium text-black transition-colors hover:bg-[#FFA45A]"
           >
             <span>buy v6.0 · $1</span>
             <span className="transition-transform group-hover:translate-x-1">

@@ -22,7 +22,7 @@ export default function OG() {
           display: "flex",
           flexDirection: "column",
           background:
-            "radial-gradient(60% 50% at 25% 30%, rgba(255,122,26,0.34) 0%, transparent 60%), radial-gradient(50% 45% at 80% 80%, rgba(34,240,213,0.20) 0%, transparent 65%), #0a1a17",
+            "radial-gradient(60% 50% at 25% 30%, rgba(34, 240, 213,0.34) 0%, transparent 60%), radial-gradient(50% 45% at 80% 80%, rgba(34,240,213,0.20) 0%, transparent 65%), #08090B",
           color: "#F2F4F5",
           padding: 60,
           fontFamily:
@@ -57,7 +57,7 @@ export default function OG() {
               fontSize: 12,
               letterSpacing: 5,
               textTransform: "uppercase",
-              color: "#FF7A1A",
+              color: "#22F0D5",
             }}
           >
             ● sealed · slipped under your door
@@ -72,7 +72,7 @@ export default function OG() {
               fontSize: 14,
               letterSpacing: 5,
               textTransform: "uppercase",
-              color: "#FF7A1A",
+              color: "#22F0D5",
             }}
           >
             The Founder&apos;s View
@@ -90,7 +90,7 @@ export default function OG() {
           >
             No punches pulled.
             <br />
-            <span style={{ color: "#FF7A1A" }}>Every night.</span>
+            <span style={{ color: "#22F0D5" }}>Every night.</span>
           </p>
           <p
             style={{
@@ -149,9 +149,9 @@ export default function OG() {
               alignItems: "baseline",
               gap: 14,
               padding: "16px 26px",
-              background: "#FF7A1A",
+              background: "#22F0D5",
               borderRadius: 14,
-              boxShadow: "0 0 50px rgba(255,122,26,0.55)",
+              boxShadow: "0 0 50px rgba(34, 240, 213,0.55)",
             }}
           >
             <p

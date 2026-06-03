@@ -10,9 +10,9 @@ import { OrangeBoxV63Buy } from "@/app/_components/OrangeBoxV63Buy";
  * 2026-05-23 refactor:
  * - Retired BuyButton (legacy $1 + ladder + free-7-days), DynamicPrice
  *   (ladder display), SalesCounterV5 (ladder progress).
- * - Wired OrangeBoxV63Buy (v6.3 single-price $49 flow).
+ * - Wired OrangeBoxV63Buy (v6.3 single-price $99 flow).
  * - LIVE-branch copy rewritten to v6.3 reality: AE See-Suite +
- *   AE Operations · $49 once · §4A no-saas · two 30-day refund paths.
+ *   AE Operations · $99 once · §4A no-saas · two 30-day refund paths.
  * - SALES_PAUSED branch preserved for future build-windows but adjusted
  *   to reflect the v6.3-current ship state.
  *
@@ -32,7 +32,7 @@ export function OrangeBoxBlock() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(50% 45% at 80% 55%, rgba(255,122,26,0.12) 0%, transparent 60%)",
+            "radial-gradient(50% 45% at 80% 55%, rgba(34, 240, 213,0.12) 0%, transparent 60%)",
         }}
       />
 
@@ -51,7 +51,7 @@ export function OrangeBoxBlock() {
               <>
                 <h2 className="mb-6 text-balance text-4xl font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] md:text-6xl">
                   The cockpit{" "}
-                  <span className="text-[#FF7A1A]">is between builds.</span>{" "}
+                  <span className="text-[#22F0D5]">is between builds.</span>{" "}
                   <span className="text-[#22F0D5]">Be first</span> when it
                   reopens.
                 </h2>
@@ -67,7 +67,7 @@ export function OrangeBoxBlock() {
                     No drip. No marketing list. One notification when
                     sales reopen.
                   </p>
-                  <p className="font-mono text-sm uppercase tracking-[0.14em] text-[#FF7A1A]">
+                  <p className="font-mono text-sm uppercase tracking-[0.14em] text-[#22F0D5]">
                     PRIOR BUYERS LOCKED IN. License §4A. Forever.
                   </p>
                 </div>
@@ -77,7 +77,7 @@ export function OrangeBoxBlock() {
                 <h2 className="mb-6 text-balance text-4xl font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] md:text-6xl">
                   The cockpit.
                   <br />
-                  <span className="text-[#FF7A1A]">Two surfaces.</span>{" "}
+                  <span className="text-[#22F0D5]">Two surfaces.</span>{" "}
                   <span className="text-[#22F0D5]">One operator.</span>
                 </h2>
 
@@ -103,7 +103,7 @@ export function OrangeBoxBlock() {
                     telemetry. Zero markup on token cost. Receipts live
                     on your disk.
                   </p>
-                  <p className="font-mono text-sm uppercase tracking-[0.14em] text-[#FF7A1A]">
+                  <p className="font-mono text-sm uppercase tracking-[0.14em] text-[#22F0D5]">
                     FREE THIS WEEK · PERPETUAL AFTER · §4A BANS SUBSCRIPTION.
                     30-DAY MATERIAL FAILURE GUARANTEE IF IT DOESN&apos;T FIT.
                   </p>
@@ -136,7 +136,7 @@ export function OrangeBoxBlock() {
 
             {/* price card */}
             {SALES_PAUSED ? (
-              <div className="rounded-2xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-6">
+              <div className="rounded-2xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-6">
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
                   ::sales paused · maintenance window
                 </p>
@@ -148,7 +148,7 @@ export function OrangeBoxBlock() {
                 </p>
               </div>
             ) : (
-              <div className="rounded-2xl border border-[#FF7A1A]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-6">
+              <div className="rounded-2xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#1C0F08] to-[#0A0F11] p-6">
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
                   ::price · once · forever · §4A
                 </p>

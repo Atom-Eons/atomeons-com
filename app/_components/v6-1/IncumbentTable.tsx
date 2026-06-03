@@ -104,7 +104,7 @@ const COST_ROW = {
 function cellColor(val: string): string {
   if (val.startsWith("✓")) return "text-[#22F0D5]";
   if (val === "✗")          return "text-[#6B7779]";
-  if (val === "partial")    return "text-[#FF7A1A]";
+  if (val === "partial")    return "text-[#22F0D5]";
   return "text-[#9BA5A7]";
 }
 
@@ -112,13 +112,13 @@ export function IncumbentTable() {
   return (
     <section className="relative overflow-hidden bg-black py-32">
       <div className="mx-auto w-full max-w-7xl px-6">
-        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#FF7A1A]">
+        <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           ::honest comparison · what nobody else has
         </p>
         <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
           Local + receipts + multi-model.
           <br />
-          <span className="text-[#FF7A1A]">Nothing else has all three.</span>
+          <span className="text-[#22F0D5]">Nothing else has all three.</span>
         </h2>
         <p className="mt-6 max-w-2xl text-lg text-[#9BA5A7]">
           Cursor, Codex, and Claude Code are real products. So is this comparison.
@@ -140,7 +140,7 @@ export function IncumbentTable() {
                   <th className="px-5 py-4 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
                     feature
                   </th>
-                  <th className="border-l border-[#FF7A1A]/30 bg-[#FF7A1A]/5 px-5 py-4 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+                  <th className="border-l border-[#22F0D5]/30 bg-[#22F0D5]/5 px-5 py-4 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                     orangebox v6.1.0
                   </th>
                   <th className="border-l border-[#1A2225] px-5 py-4 text-left font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
@@ -162,7 +162,7 @@ export function IncumbentTable() {
                     className="transition-colors hover:bg-[#101A1C]"
                   >
                     <td className="px-5 py-3.5 text-[#F2F4F5]">{r.feature}</td>
-                    <td className={`border-l border-[#FF7A1A]/20 bg-[#FF7A1A]/5 px-5 py-3.5 font-mono text-xs ${cellColor(r.ob)}`}>
+                    <td className={`border-l border-[#22F0D5]/20 bg-[#22F0D5]/5 px-5 py-3.5 font-mono text-xs ${cellColor(r.ob)}`}>
                       {r.ob}
                     </td>
                     <td className={`border-l border-[#1A2225] px-5 py-3.5 font-mono text-xs ${cellColor(r.cursor)}`}>
@@ -182,7 +182,7 @@ export function IncumbentTable() {
                   <td className="px-5 py-3.5 font-medium text-[#F2F4F5]">
                     {COST_ROW.feature}
                   </td>
-                  <td className="border-l border-[#FF7A1A]/20 bg-[#FF7A1A]/10 px-5 py-3.5 font-mono text-xs font-semibold text-[#FF7A1A]">
+                  <td className="border-l border-[#22F0D5]/20 bg-[#22F0D5]/10 px-5 py-3.5 font-mono text-xs font-semibold text-[#22F0D5]">
                     {COST_ROW.ob}
                   </td>
                   <td className="border-l border-[#1A2225] px-5 py-3.5 font-mono text-xs text-[#6B7779]">

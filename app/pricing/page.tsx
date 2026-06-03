@@ -6,8 +6,8 @@ import { redirect } from "next/navigation";
  * The old standalone /pricing page documented the $99 bundle SKU
  * (ORANGEBOX cockpit + AE Operations + Delta IDE). The 2026-05-30
  * WEB_PROJECT_FINAL_PACKAGE repositioning collapsed that bundle into
- * a single $49 perpetual ORANGEBOX product. The full pricing block
- * (FREE Beta · $49 Perpetual · Team Roadmap · comparison table ·
+ * a single $99 perpetual ORANGEBOX product. The full pricing block
+ * (FREE Beta · $99 Perpetual · Team Roadmap · comparison table ·
  * Anti-SaaS Commitment · ROI line) now lives on /orangebox#pricing
  * per §7 IA of the FINAL package.
  *

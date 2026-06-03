@@ -134,7 +134,7 @@ const CALC_SPEC: CalculatorSpec = {
         "setupHours": 20,
         "confidence": 80
       },
-      "explanation": "Annual value = 150 * 8 * 52 * 0.80 = $49,920. Annual cost = $960 + $3,000 = $3,960. Net ROI = $45,960. ROI = 1,160%. The setup hours and the $80/mo API budget eat into the headline, but the verdict is still 'obviously yes'."
+      "explanation": "Annual value = 150 * 8 * 52 * 0.80 = $99,920. Annual cost = $960 + $3,000 = $3,960. Net ROI = $45,960. ROI = 1,160%. The setup hours and the $80/mo API budget eat into the headline, but the verdict is still 'obviously yes'."
     },
     {
       "scenario": "Curious skeptic, light use, low confidence",

@@ -58,7 +58,7 @@ export async function GET(req: Request) {
   const stripe = getStripe();
 
   // Pull all successful payment intents for ORANGEBOX
-  // (paginated; cap at 1000 — we'll never have more than that for $49 indie product)
+  // (paginated; cap at 1000 — we'll never have more than that for $99 indie product)
   let totalSales = 0;
   let totalRevenue = 0;
   let refunds = 0;

@@ -183,7 +183,7 @@ export function StreamingPlaylist() {
     <section className="relative bg-[#0A0F11] py-32 md:py-40">
       <div className="mx-auto w-full max-w-7xl px-6">
         <div className="mb-12 max-w-3xl">
-          <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+          <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::THE PLAYLIST · WHERE TO WATCH
           </p>
           <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-[-0.015em] text-[#F2F4F5] md:text-6xl">
@@ -243,7 +243,7 @@ export function StreamingPlaylist() {
                     <h3 className="text-lg font-medium leading-tight text-[#F2F4F5]">
                       {w.film}
                     </h3>
-                    <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A]">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                       {w.year}
                     </span>
                   </div>
@@ -311,7 +311,7 @@ export function StreamingPlaylist() {
           </div>
 
           <div className="rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-6">
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
               ::why brand names are safe
             </p>
             <p className="mt-3 text-sm leading-relaxed text-[#9BA5A7]">

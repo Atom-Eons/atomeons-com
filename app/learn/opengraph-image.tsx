@@ -113,7 +113,7 @@ export default function OG() {
             { label: "L1 · NOVICE", color: "#9BA5A7" },
             { label: "L2 · LEARNER", color: "#22F0D5" },
             { label: "L3 · USER", color: "#22F0D5" },
-            { label: "L4 · OPERATOR", color: "#FF7A1A" },
+            { label: "L4 · OPERATOR", color: "#22F0D5" },
             { label: "L5 · PILOT", color: "#FFB87A" },
           ].map((p) => (
             <div

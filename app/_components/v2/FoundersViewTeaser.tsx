@@ -19,7 +19,7 @@ export function FoundersViewTeaser() {
           {/* left: doctrine copy */}
           <div>
             {/* section label */}
-            <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7A1A]">
+            <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
               ::THE FOUNDER&apos;S VIEW · NIGHTLY AT 8PM ET
             </p>
 
@@ -47,7 +47,7 @@ export function FoundersViewTeaser() {
             <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/founders-view"
-                className="group inline-flex items-center gap-1.5 rounded-lg border border-[#FF7A1A]/50 bg-[#FF7A1A]/10 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF7A1A] transition-colors hover:bg-[#FF7A1A]/20"
+                className="group inline-flex items-center gap-1.5 rounded-lg border border-[#22F0D5]/50 bg-[#22F0D5]/10 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
               >
                 Read tonight&apos;s letter{" "}
                 <span className="transition-transform group-hover:translate-x-1">

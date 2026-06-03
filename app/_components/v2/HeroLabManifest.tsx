@@ -18,7 +18,7 @@ export function HeroLabManifest() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(55% 50% at 15% 60%, rgba(34,240,213,0.07) 0%, transparent 65%), radial-gradient(40% 35% at 85% 25%, rgba(255,122,26,0.06) 0%, transparent 60%)",
+            "radial-gradient(55% 50% at 15% 60%, rgba(34,240,213,0.07) 0%, transparent 65%), radial-gradient(40% 35% at 85% 25%, rgba(34, 240, 213,0.06) 0%, transparent 60%)",
         }}
       />
 
@@ -36,7 +36,7 @@ export function HeroLabManifest() {
         <h1 className="max-w-5xl text-balance text-[2.5rem] font-medium leading-[1.02] tracking-[-0.025em] text-[#F2F4F5] sm:text-5xl md:text-7xl lg:text-8xl">
           One operator.{" "}
           <span className="text-[#22F0D5]">One lab.</span>{" "}
-          <span className="text-[#FF7A1A]">Twelve papers,</span> a cockpit,
+          <span className="text-[#22F0D5]">Twelve papers,</span> a cockpit,
           and a nightly letter.
         </h1>
 
@@ -57,7 +57,7 @@ export function HeroLabManifest() {
           <span aria-hidden className="text-[#1A2225]">·</span>
           <span className="text-[#F2F4F5]">CC-BY 4.0</span>
           <span aria-hidden className="text-[#1A2225]">·</span>
-          <span className="text-[#FF7A1A]">FREE WEEK · §4A NO-SAAS</span>
+          <span className="text-[#22F0D5]">FREE WEEK · §4A NO-SAAS</span>
         </div>
 
         {/* secondary escape CTAs — low hierarchy, mono, two actions */}

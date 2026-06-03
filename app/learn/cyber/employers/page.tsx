@@ -268,7 +268,7 @@ export default function CyberEmployersPage() {
                     </ul>
                   </div>
 
-                  <p className="mt-6 max-w-[62ch] rounded-lg border border-[#22F0D5]/20 bg-[#0e2520]/30 p-4 text-[14px] leading-[1.65] text-[#C8CCCE]">
+                  <p className="mt-6 max-w-[62ch] rounded-lg border border-[#22F0D5]/20 bg-[#08090B]/30 p-4 text-[14px] leading-[1.65] text-[#C8CCCE]">
                     <span className="font-medium text-[#22F0D5]">Doctrine: </span>{c.doctrine}
                   </p>
 

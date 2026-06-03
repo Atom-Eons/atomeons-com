@@ -9,7 +9,7 @@ import { SESSION_KEYS } from "@/lib/constants";
  * the in-page #buy zone. Dismissible. Mobile-safe: <72px tall, 44px tap
  * targets, single-row layout even at 320px, safe-area pad.
  *
- * Wired to OrangeBoxV63Buy — the current $49 v6.3 SKU flow. The legacy
+ * Wired to OrangeBoxV63Buy — the current $99 v6.3 SKU flow. The legacy
  * BuyButtonCompact + DynamicPrice + $1-ladder copy were retired on
  * 2026-05-23 in favor of the v6.3 single-price posture.
  *
@@ -57,14 +57,14 @@ export function StickyBuyBar() {
             ::v1.0.0-beta · FREE this week · §4A no-saas
           </p>
           <p className="truncate text-sm text-[#F2F4F5]">
-            <span className="font-bold text-[#FF7A1A]">Turbo-optimize Claude</span>
+            <span className="font-bold text-[#22F0D5]">Turbo-optimize Claude</span>
             <span className="ml-1 text-[#9BA5A7]">
               · perpetual · grandfathered for life
             </span>
           </p>
         </div>
         <OrangeBoxV63Buy
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#FF7A1A] px-5 font-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-black transition-all hover:bg-[#FFA45A] disabled:opacity-60"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#22F0D5] px-5 font-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-black transition-all hover:bg-[#FFA45A] disabled:opacity-60"
           label="grab free"
         />
         <button
@@ -73,7 +73,7 @@ export function StickyBuyBar() {
             setDismissed(true);
           }}
           aria-label="Dismiss buy bar"
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded border border-[#1A2225] bg-[#071915] font-mono text-sm text-[#6B7779] hover:text-[#F2F4F5]"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded border border-[#1A2225] bg-[#0F1114] font-mono text-sm text-[#6B7779] hover:text-[#F2F4F5]"
         >
           ✕
         </button>

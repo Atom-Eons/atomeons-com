@@ -26,8 +26,8 @@ export function InstallCommand() {
     },
   ];
   return (
-    <div className="rounded-lg border border-[#204538] bg-[#04100d]">
-      <div className="flex items-center justify-between border-b border-[#204538] px-3 py-2">
+    <div className="rounded-lg border border-[#1F242B] bg-[#08090B]">
+      <div className="flex items-center justify-between border-b border-[#1F242B] px-3 py-2">
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a7b8ad]">
           ::install · 3 steps · ~10 minutes · no terminal
         </p>
@@ -39,7 +39,7 @@ export function InstallCommand() {
         {steps.map((s) => (
           <li
             key={s.n}
-            className="border-b border-[#204538]/40 px-3 py-3 last:border-b-0"
+            className="border-b border-[#1F242B]/40 px-3 py-3 last:border-b-0"
           >
             <div className="flex items-baseline gap-3">
               <span className="font-mono text-[10px] tracking-widest text-[#1b8b75]">
@@ -56,7 +56,7 @@ export function InstallCommand() {
           </li>
         ))}
       </ol>
-      <p className="border-t border-[#204538] px-3 py-2 font-mono text-[10px] tracking-tight text-[#a7b8ad]">
+      <p className="border-t border-[#1F242B] px-3 py-2 font-mono text-[10px] tracking-tight text-[#a7b8ad]">
         cockpit binds to{" "}
         <span className="text-[#75ff92]">http://127.0.0.1:8787/</span> · runs
         in a Tauri desktop window

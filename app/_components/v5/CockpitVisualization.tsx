@@ -79,7 +79,7 @@ export function CockpitVisualization() {
           <div className="flex items-center justify-between border-b border-[#1A2225] px-6 py-4">
             <div className="flex items-center gap-3">
               <div className="flex gap-1.5">
-                <span className="size-2.5 rounded-full bg-[#FF7A1A]" />
+                <span className="size-2.5 rounded-full bg-[#22F0D5]" />
                 <span className="size-2.5 rounded-full bg-[#22F0D5]" />
                 <span className="size-2.5 rounded-full bg-[#6B7779]" />
               </div>
@@ -106,7 +106,7 @@ export function CockpitVisualization() {
                 </div>
                 <div className="mt-3 h-1 w-full overflow-hidden rounded bg-[#1A2225]">
                   <div
-                    className="h-full rounded bg-gradient-to-r from-[#FF7A1A] via-[#22F0D5] to-[#22F0D5] transition-all duration-100"
+                    className="h-full rounded bg-gradient-to-r from-[#22F0D5] via-[#22F0D5] to-[#22F0D5] transition-all duration-100"
                     style={{
                       width: `${progress[i]}%`,
                       boxShadow: "0 0 12px rgba(34,240,213,0.6)",
@@ -143,7 +143,7 @@ export function CockpitVisualization() {
                       <span className="rounded border border-[#1A2225] bg-black px-1.5 py-0.5 text-[10px] uppercase tracking-[0.15em] text-[#22F0D5]">
                         {t.dept}
                       </span>
-                      <span className="text-[10px] uppercase tracking-[0.15em] text-[#FF7A1A]">
+                      <span className="text-[10px] uppercase tracking-[0.15em] text-[#22F0D5]">
                         {t.tag}
                       </span>
                       <span className="truncate text-[#F2F4F5]">{t.body}</span>

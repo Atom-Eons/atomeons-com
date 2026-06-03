@@ -68,7 +68,7 @@ const CHANNELS: Channel[] = [
     mailto:
       "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20MFG%20refund%20claim&body=Order%20ID%3A%20pi_%3F%3F%3F%0AOS%3A%20Win%2011%20%2F%20Win%2010%0ANode%3A%20v%3F%3F%0A%0AWhat%20I%20ran%3A%0A%0AError%20I%20saw%3A",
     mailtoLabel: "File MFG claim →",
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
   {
     tag: "::workflow-fit doesn't work for me",
@@ -94,7 +94,7 @@ const CHANNELS: Channel[] = [
     tag: "::license recovery",
     title: "I lost my license / can't access /account",
     description:
-      "The Stripe Customer Portal at /account uses the email you bought with. If that email is no longer reachable, email the lab from the address you'd like to be the new contact, with the original Stripe order ID and any proof of purchase (PayPal confirm, bank statement line showing the $49 / $1 charge).",
+      "The Stripe Customer Portal at /account uses the email you bought with. If that email is no longer reachable, email the lab from the address you'd like to be the new contact, with the original Stripe order ID and any proof of purchase (PayPal confirm, bank statement line showing the $99 / $1 charge).",
     mailto:
       "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20license%20recovery&body=Original%20order%20ID%3A%20pi_%3F%3F%3F%0AOriginal%20email%3A%20%3F%3F%3F%0ANew%20contact%20email%3A%20%3F%3F%3F",
     mailtoLabel: "Recover license →",
@@ -118,7 +118,7 @@ const CHANNELS: Channel[] = [
     mailto:
       "mailto:a.mccree@gmail.com?subject=Security%20disclosure%20(private)&body=Surface%3A%20%3F%3F%3F%0AImpact%3A%20%3F%3F%3F%0AReproduction%3A",
     mailtoLabel: "Private disclosure →",
-    accent: "#FF7A1A",
+    accent: "#22F0D5",
   },
   {
     tag: "::press inquiry",
@@ -221,7 +221,7 @@ export default function SupportPage() {
       </section>
 
       {/* WHAT TO INCLUDE */}
-      <section className="border-b border-[#1A2225] bg-[#0e2520]/30 py-24 md:py-32">
+      <section className="border-b border-[#1A2225] bg-[#08090B]/30 py-24 md:py-32">
         <div className="mx-auto w-full max-w-3xl px-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::write a good support email
@@ -352,9 +352,9 @@ export default function SupportPage() {
             </Link>
             <Link
               href="/orangebox"
-              className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#FF7A1A]/40"
+              className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/40"
             >
-              <p className="text-base font-medium text-[#F2F4F5] group-hover:text-[#FF7A1A]">
+              <p className="text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
                 /orangebox →
               </p>
               <p className="mt-2 text-sm text-[#9BA5A7]">
