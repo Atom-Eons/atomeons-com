@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, ExternalLink } from "lucide-react";
+import { Mail } from "lucide-react";
 
 // Inline SVG icons — lucide-react 1.x dropped Github/Twitter brand icons.
 // Kept hairline (strokeWidth 1.5) + 14px box to match other footer icons.
@@ -98,17 +98,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <a
-                  href="https://skil.ski"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-display inline-flex items-center gap-1.5 text-sm text-[#9CA3AF] transition-colors duration-200 hover:text-[#22F0D5]"
-                >
-                  Skil.ski
-                  <ExternalLink className="h-3 w-3" strokeWidth={1.5} />
-                </a>
-              </li>
             </ul>
           </div>
 
