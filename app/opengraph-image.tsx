@@ -2,14 +2,15 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "AtomEons launch night 2026-05-30 — ORANGEBOX v1.0.0-beta + B00KMAKR v3.2.0 shipped. Two AI cockpits built by AI, for AI operators, in 75 days. Free for one week.";
+  "AtomEons Systems Laboratory — one operator shipped 31 papers and a code-signed Claude accelerator in 75 days. Marco Island, FL.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
- * Home / atomeons.com social card · LAUNCH NIGHT 2026-05-30.
- * Two AI cockpits shipped tonight. Free for one week. The single most-shared
- * card on the site — needs to land the launch headline in <3 seconds.
+ * Homepage OG · NOIR-CINEMA V3 · 2026-06-03
+ * Lab-grade card replacing the May 30 launch ember design. The card now
+ * reflects the current lab pose: receipts, papers, guardrails, operator —
+ * not "FREE this week."
  */
 export default function OG() {
   return new ImageResponse(
@@ -20,116 +21,238 @@ export default function OG() {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          background:
-            "radial-gradient(60% 50% at 75% 25%, rgba(255,119,51,0.32) 0%, transparent 65%), radial-gradient(45% 40% at 15% 90%, rgba(255,170,68,0.20) 0%, transparent 65%), #1A1410",
-          color: "#E8D5B7",
-          padding: 60,
+          background: "#08090B",
+          color: "#F4F4F2",
+          padding: 64,
           fontFamily:
-            '"Helvetica", "Arial", -apple-system, BlinkMacSystemFont, sans-serif',
+            'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+          position: "relative",
         }}
       >
+        {/* hairline grid backdrop — kept extremely subtle */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, transparent 0%, transparent 75%, rgba(34,240,213,0.04) 100%)",
+            display: "flex",
+          }}
+        />
+
+        {/* top rail */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            paddingBottom: 14,
-            borderBottom: "1px solid #3D2F22",
+            paddingBottom: 18,
+            borderBottom: "1px solid #1F242B",
+            position: "relative",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            <svg width="44" height="44" viewBox="-50 -50 100 100">
-              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#FF7733" strokeWidth="2.5" opacity="0.95" />
-              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#FFAA66" strokeWidth="2" opacity="0.75" transform="rotate(60)" />
-              <ellipse cx="0" cy="0" rx="42" ry="14" fill="none" stroke="#FFAA66" strokeWidth="1.5" opacity="0.5" transform="rotate(120)" />
-              <circle cx="0" cy="0" r="9" fill="#FF7733" />
-              <circle cx="0" cy="0" r="4" fill="#FFAA66" />
-            </svg>
-            <p style={{ margin: 0, fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: "#E8D5B7" }}>
-              ATOMEONS · MARCO ISLAND
+          <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
+            <p
+              style={{
+                margin: 0,
+                fontSize: 28,
+                fontWeight: 700,
+                letterSpacing: "-0.04em",
+                color: "#F4F4F2",
+              }}
+            >
+              Æ
+            </p>
+            <p
+              style={{
+                margin: 0,
+                fontSize: 14,
+                fontWeight: 540,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#F4F4F2",
+              }}
+            >
+              ATOMEONS · SYSTEMS LABORATORY
             </p>
           </div>
-          <p style={{ margin: 0, fontFamily: "monospace", fontSize: 12, letterSpacing: 5, textTransform: "uppercase", color: "#FFAA66" }}>
-            ● shipped 2026-05-30 · FREE this week
-          </p>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+            }}
+          >
+            <span
+              style={{
+                width: 10,
+                height: 10,
+                borderRadius: 999,
+                background: "#FF4D4D",
+                boxShadow: "0 0 12px #FF4D4D88",
+                display: "flex",
+              }}
+            />
+            <p
+              style={{
+                margin: 0,
+                fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                fontSize: 12,
+                letterSpacing: "0.28em",
+                textTransform: "uppercase",
+                color: "#9CA3AF",
+              }}
+            >
+              LAB · LIVE · MARCO ISLAND, FL
+            </p>
+          </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", marginTop: 30 }}>
-          <p style={{ margin: 0, fontFamily: "monospace", fontSize: 14, letterSpacing: 5, textTransform: "uppercase", color: "#FF7733" }}>
-            ORANGEBOX v1.0.0-beta · B00KMAKR v3.2.0
-          </p>
-          <p style={{ margin: "18px 0 0", fontSize: 96, fontWeight: 500, lineHeight: 0.95, letterSpacing: -3.5, color: "#E8D5B7", maxWidth: 1100 }}>
-            Two AI cockpits.
-            <br />
-            <span style={{ color: "#FF7733" }}>Free this week.</span>
-          </p>
-          <p style={{ margin: "22px 0 0", fontSize: 22, lineHeight: 1.4, color: "#C4AD8E", maxWidth: 1040, fontWeight: 400 }}>
-            Built by AI, for AI operators, in 75 days using earlier versions of
-            themselves. Multi-LLM. BYO keys. Tamper-evident receipts. Eleven
-            novel features that have not lived inside one app before tonight.
-          </p>
-        </div>
+        {/* eyebrow */}
+        <p
+          style={{
+            margin: "44px 0 0",
+            fontFamily: "ui-monospace, SFMono-Regular, monospace",
+            fontSize: 13,
+            letterSpacing: "0.32em",
+            textTransform: "uppercase",
+            color: "#22F0D5",
+            display: "flex",
+          }}
+        >
+          § Thesis · current build
+        </p>
 
-        <div style={{ display: "flex", gap: 14, marginTop: 22, width: "100%" }}>
+        {/* headline */}
+        <p
+          style={{
+            margin: "22px 0 0",
+            fontSize: 76,
+            fontWeight: 300,
+            lineHeight: 1.04,
+            letterSpacing: "-0.025em",
+            color: "#F4F4F2",
+            maxWidth: 1060,
+            display: "flex",
+          }}
+        >
+          One operator shipped 31 papers and a code-signed Claude accelerator
+          in 75 days.
+        </p>
+
+        {/* receipt grid */}
+        <div
+          style={{
+            display: "flex",
+            gap: 0,
+            marginTop: 36,
+            border: "1px solid #1F242B",
+            width: "100%",
+          }}
+        >
           {[
-            { k: "PROVIDERS", v: "9" },
-            { k: "DEPARTMENTS", v: "15" },
-            { k: "SURFACES (B00KMAKR)", v: "142" },
-            { k: "TELEMETRY", v: "0" },
-            { k: "SUBSCRIPTIONS", v: "0" },
-          ].map((m) => (
+            { k: "Papers", v: "31" },
+            { k: "Lessons", v: "68" },
+            { k: "Guardrails", v: "27" },
+            { k: "Pages", v: "200+" },
+            { k: "Operator", v: "1" },
+          ].map((m, i) => (
             <div
               key={m.k}
               style={{
                 display: "flex",
                 flexDirection: "column",
                 flex: 1,
-                padding: "12px 14px",
-                border: "1px solid #3D2F22",
-                borderRadius: 8,
-                background: "rgba(34,26,20,0.7)",
+                padding: "18px 22px",
+                borderLeft: i === 0 ? "none" : "1px solid #1F242B",
+                background: "#0F1114",
               }}
             >
-              <p style={{ margin: 0, fontSize: 28, fontWeight: 700, color: "#E8D5B7", lineHeight: 1 }}>{m.v}</p>
-              <p style={{ margin: "6px 0 0", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", color: "#8A7560", fontFamily: "monospace" }}>{m.k}</p>
+              <p
+                style={{
+                  margin: 0,
+                  fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                  fontSize: 10,
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  color: "#5A6068",
+                }}
+              >
+                {m.k}
+              </p>
+              <p
+                style={{
+                  margin: "10px 0 0",
+                  fontSize: 44,
+                  fontWeight: 400,
+                  lineHeight: 1,
+                  letterSpacing: "-0.03em",
+                  color: "#F4F4F2",
+                }}
+              >
+                {m.v}
+              </p>
             </div>
           ))}
         </div>
 
+        {/* bottom rail */}
         <div
           style={{
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "space-between",
             marginTop: "auto",
-            paddingTop: 22,
-            borderTop: "1px solid #3D2F22",
+            paddingTop: 24,
+            borderTop: "1px solid #1F242B",
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <p style={{ margin: 0, fontSize: 11, letterSpacing: 4, textTransform: "uppercase", color: "#8A7560", fontFamily: "monospace" }}>
-              ::built in 75 days · with itself · receipts on disk · §4A no-saas
+            <p
+              style={{
+                margin: 0,
+                fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                fontSize: 11,
+                letterSpacing: "0.28em",
+                textTransform: "uppercase",
+                color: "#5A6068",
+              }}
+            >
+              CC-BY 4.0 · §4A no-SaaS · source on request
             </p>
-            <p style={{ margin: 0, fontSize: 22, color: "#FF7733", fontFamily: "monospace", fontWeight: 700 }}>
+            <p
+              style={{
+                margin: 0,
+                fontSize: 26,
+                fontWeight: 600,
+                letterSpacing: "-0.015em",
+                color: "#22F0D5",
+              }}
+            >
               atomeons.com
             </p>
           </div>
           <div
             style={{
               display: "flex",
-              alignItems: "baseline",
+              alignItems: "center",
               gap: 12,
-              padding: "18px 28px",
-              background: "#FF7733",
-              borderRadius: 14,
-              boxShadow: "0 0 60px rgba(255,119,51,0.55)",
+              padding: "12px 20px",
+              border: "1px solid #22F0D5",
+              background: "rgba(34,240,213,0.05)",
             }}
           >
-            <p style={{ margin: 0, fontSize: 60, fontWeight: 700, color: "#1A1410", lineHeight: 1 }}>
-              FREE
-            </p>
-            <p style={{ margin: 0, fontSize: 14, color: "#1A1410", textTransform: "uppercase", letterSpacing: 2.5, fontWeight: 700 }}>
-              ends June 6 · 4 PM EDT
+            <p
+              style={{
+                margin: 0,
+                fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                fontSize: 12,
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                color: "#22F0D5",
+              }}
+            >
+              Read the receipts → /receipts
             </p>
           </div>
         </div>

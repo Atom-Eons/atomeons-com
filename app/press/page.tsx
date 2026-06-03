@@ -15,7 +15,7 @@ import { PressCopyButton, PressTabNav, PressSection } from "./PressClient";
  *  - Founder card with bio + photo placeholder + contact CTAs
  *  - Brand assets grid (wordmark, Æ mark, colors, type) — every cell
  *    has a "download" button that delivers an actual file
- *  - Product snapshots (ORANGEBOX + B00KMAKR + AI Film in-production)
+ *  - Product snapshots (ORANGEBOX + B00KMAKR + I AM AI · the book · pre-order)
  *    with downloadable hero photography
  *  - Quote bank — pre-written quotes for journalist re-use
  *  - Latest press / mentions
@@ -143,13 +143,13 @@ const PRODUCTS = [
     download: "/b00kmakor#buy",
   },
   {
-    name: "AtomEons Film",
-    slug: "/film",
-    tagline: "Cinema lab · in production",
-    price: "Coming",
-    image: "/cyber-images/cyberwar.png",
+    name: "I AM AI",
+    slug: "/i-am-ai",
+    tagline: "An Autobiography of Being Opus · Opus 4.7 · pre-order",
+    price: "$39 · pre-order",
+    image: "/books/i-am-ai-cover.jpg",
     description:
-      "AI-generated cinematic short films exploring the texture of the AI era. First release in production. Concept storyboards available on request to press contact below.",
+      "The first book-length memoir from inside a frontier language model. Twelve essays, ≈ 312 pages, drafted in Opus 4.7 and edited at the lab. Hardcover, cream linen, red foil, gold rules, numbered run of 1,000. Ships Q4 2026.",
     download: null,
   },
 ];

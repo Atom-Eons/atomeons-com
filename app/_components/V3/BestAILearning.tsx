@@ -12,14 +12,15 @@ export function BestAILearning() {
         {/* Eyebrow + Heading + Sublede */}
         <header className="mb-12 max-w-3xl md:mb-16">
           <p className="mb-5 font-mono text-[11px] uppercase tracking-[0.18em] text-[#5A6068]">
-            § 04 &middot; Learn &middot; Masters-grade.
+            § 04 &middot; /learn &middot; 68 lessons, sourced, anti-hype.
           </p>
           <h2
             id="best-ai-learning-heading"
             className="font-serif text-4xl leading-[1.05] tracking-tight text-[#F4F4F2] sm:text-5xl md:text-6xl"
             style={{ fontVariationSettings: '"wght" 380, "opsz" 144' }}
           >
-            Read the source. Free.
+            Atlas, career, trust, decode, decoded papers — written so a peer
+            could falsify it.
           </h2>
           <p className="mt-6 max-w-2xl font-serif text-lg leading-[1.55] text-[#9CA3AF] md:text-xl">
             MIT OCW recorded lectures from 2019. Coursera funnels you into a paid

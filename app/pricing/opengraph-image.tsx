@@ -2,14 +2,14 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "AtomEons pricing — Orangebox perpetual license (FREE this week · perpetual after) + B00KMAKR dynamic-world-pricing (Tier 1 $99 · USA Advantage Clause $9.90 · Strategic Tier Lift CN $99). License §4A bans subscription on both products. Free launch week.";
+  "AtomEons pricing — ORANGEBOX $99 one-time perpetual · B00KMAKR $99 dynamic · I AM AI $39 hardcover pre-order. §4A no-SaaS license bans subscription on every product.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
- * /pricing card · matches the redirect destination (/orangebox#pricing).
- * Lands the dual-product pricing posture: Orangebox perpetual license after
- * free week, B00KMAKR dynamic-world-pricing with two named clauses.
+ * /pricing OG · NOIR-CINEMA V3 · 2026-06-03
+ * Three-product price card. Perpetual license posture, no subscription,
+ * §4A clause visible.
  */
 export default function OG() {
   return new ImageResponse(
@@ -20,90 +20,53 @@ export default function OG() {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          background:
-            "radial-gradient(60% 50% at 75% 25%, rgba(255,119,51,0.30) 0%, transparent 65%), radial-gradient(50% 45% at 15% 90%, rgba(34,240,213,0.18) 0%, transparent 65%), #1A1410",
-          color: "#E8D5B7",
-          padding: 60,
+          background: "#08090B",
+          color: "#F4F4F2",
+          padding: 64,
           fontFamily:
-            '"Helvetica", "Arial", -apple-system, BlinkMacSystemFont, sans-serif',
+            'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
         }}
       >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingBottom: 14, borderBottom: "1px solid #3D2F22" }}>
-          <p style={{ margin: 0, fontFamily: "monospace", fontSize: 12, letterSpacing: 5, textTransform: "uppercase", color: "#FF7733" }}>
-            ATOMEONS · PRICING · BOTH PRODUCTS
-          </p>
-          <p style={{ margin: 0, fontFamily: "monospace", fontSize: 12, letterSpacing: 5, textTransform: "uppercase", color: "#22F0D5" }}>
-            ● §4A · no-saas · binding
-          </p>
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column", marginTop: 28 }}>
-          <p style={{ margin: 0, fontFamily: "monospace", fontSize: 14, letterSpacing: 5, textTransform: "uppercase", color: "#FF7733" }}>
-            ORANGEBOX · FREE THIS WEEK · §4A LOCKED
-          </p>
-          <p style={{ margin: "16px 0 0", fontSize: 84, fontWeight: 500, lineHeight: 0.95, letterSpacing: -3, color: "#E8D5B7", maxWidth: 1080 }}>
-            FREE this week, perpetual after.<br />
-            <span style={{ color: "#FFAA66" }}>Your country&apos;s rate</span> for B00KMAKR.
-          </p>
-          <p style={{ margin: "22px 0 0", fontSize: 22, lineHeight: 1.4, color: "#C4AD8E", maxWidth: 1040, fontWeight: 400 }}>
-            Dynamic World Pricing — Tier 1 anchor $99 · US $9.90 (USA Advantage
-            Clause) · CN $99 (Strategic Tier Lift) · IN $9.90 · SO $1.98.
-            Mechanism public. §4A bans subscription on both products.
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingBottom: 18, borderBottom: "1px solid #1F242B" }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
+            <p style={{ margin: 0, fontSize: 28, fontWeight: 700, letterSpacing: "-0.04em", color: "#F4F4F2" }}>Æ</p>
+            <p style={{ margin: 0, fontSize: 14, fontWeight: 540, letterSpacing: "0.18em", textTransform: "uppercase", color: "#F4F4F2" }}>
+              ATOMEONS · PRICING
+            </p>
+          </div>
+          <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 12, letterSpacing: "0.28em", textTransform: "uppercase", color: "#22F0D5" }}>
+            §4A · no-SaaS · binding on every product
           </p>
         </div>
 
-        <div style={{ display: "flex", gap: 12, marginTop: 24, flexWrap: "wrap" }}>
+        <p style={{ margin: "44px 0 0", fontFamily: "ui-monospace, monospace", fontSize: 13, letterSpacing: "0.32em", textTransform: "uppercase", color: "#22F0D5", display: "flex" }}>
+          § Three products · one perpetual license clause
+        </p>
+        <p style={{ margin: "20px 0 0", fontSize: 72, fontWeight: 300, lineHeight: 1.03, letterSpacing: "-0.025em", color: "#F4F4F2", maxWidth: 1060, display: "flex" }}>
+          One purchase. Forever. No subscription, ever.
+        </p>
+
+        <div style={{ display: "flex", gap: 0, marginTop: 38, border: "1px solid #1F242B", width: "100%" }}>
           {[
-            "FREE this week",
-            "§4A no-saas",
-            "30-day MFG",
-            "Source included",
-            "Receipts on disk",
-            "BYO keys · zero markup",
-          ].map((b) => (
-            <span
-              key={b}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                padding: "8px 14px",
-                border: "1px solid #3D2F22",
-                borderRadius: 999,
-                background: "rgba(34,26,20,0.7)",
-                fontFamily: "monospace",
-                fontSize: 12,
-                letterSpacing: 2,
-                textTransform: "uppercase",
-                color: "#C4AD8E",
-              }}
-            >
-              {b}
-            </span>
+            { k: "ORANGEBOX", v: "$99", note: "one-time · perpetual" },
+            { k: "B00KMAKR", v: "$99", note: "dynamic · Mac + Win" },
+            { k: "I AM AI", v: "$39", note: "pre-order · hardcover" },
+          ].map((m, i) => (
+            <div key={m.k} style={{ display: "flex", flexDirection: "column", flex: 1, padding: "24px 26px", borderLeft: i === 0 ? "none" : "1px solid #1F242B", background: "#0F1114" }}>
+              <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#22F0D5" }}>{m.k}</p>
+              <p style={{ margin: "12px 0 0", fontSize: 56, fontWeight: 400, lineHeight: 1, letterSpacing: "-0.03em", color: "#F4F4F2" }}>{m.v}</p>
+              <p style={{ margin: "12px 0 0", fontFamily: "ui-monospace, monospace", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9CA3AF" }}>{m.note}</p>
+            </div>
           ))}
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "space-between",
-            marginTop: "auto",
-            paddingTop: 22,
-            borderTop: "1px solid #3D2F22",
-          }}
-        >
-          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <p style={{ margin: 0, fontSize: 11, letterSpacing: 4, textTransform: "uppercase", color: "#8A7560", fontFamily: "monospace" }}>
-              ::full mechanism at /dynamic-world-pricing · curl /api/price/[product]
-            </p>
-            <p style={{ margin: 0, fontSize: 22, color: "#FF7733", fontFamily: "monospace", fontWeight: 700 }}>
-              atomeons.com/orangebox#pricing
-            </p>
-          </div>
-          <div style={{ display: "flex", alignItems: "baseline", gap: 12, padding: "16px 24px", background: "#FF7733", borderRadius: 14, boxShadow: "0 0 60px rgba(255,119,51,0.45)" }}>
-            <p style={{ margin: 0, fontSize: 38, fontWeight: 700, color: "#1A1410", lineHeight: 1 }}>§4A</p>
-            <p style={{ margin: 0, fontSize: 12, color: "#1A1410", textTransform: "uppercase", letterSpacing: 2.5, fontWeight: 700 }}>no-saas · binding</p>
-          </div>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginTop: "auto", paddingTop: 24, borderTop: "1px solid #1F242B" }}>
+          <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 11, letterSpacing: "0.28em", textTransform: "uppercase", color: "#5A6068" }}>
+            BYO API key · zero markup · Material-Failure guarantee
+          </p>
+          <p style={{ margin: 0, fontSize: 22, fontWeight: 600, letterSpacing: "-0.015em", color: "#22F0D5" }}>
+            atomeons.com/pricing
+          </p>
         </div>
       </div>
     ),

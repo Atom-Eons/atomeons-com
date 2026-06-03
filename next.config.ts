@@ -48,6 +48,13 @@ const nextConfig: NextConfig = {
         source: "/founders-view/rss.xml",
         destination: "/founders-view/rss",
       },
+      // Same constraint applies to /intel/rss.xml — the internal route
+      // lives at app/intel/rss/route.ts; this rewrite preserves the
+      // canonical public URL with the .xml suffix that subscribers use.
+      {
+        source: "/intel/rss.xml",
+        destination: "/intel/rss",
+      },
     ];
   },
 };

@@ -39,7 +39,7 @@ const labLinks = [
 const productLinks = [
   { label: "ORANGEBOX", href: "/orangebox" },
   { label: "B00KMAKR", href: "/b00kmakor" },
-  { label: "AI Film", href: "/film" },
+  { label: "I AM AI · the book", href: "/i-am-ai" },
 ];
 
 const learnLinks = [
@@ -48,6 +48,8 @@ const learnLinks = [
   { label: "Trust", href: "/learn/trust" },
   { label: "Decode", href: "/learn/decode" },
   { label: "Calc", href: "/learn/calc" },
+  { label: "Books", href: "/books" },
+  { label: "Monograph", href: "/research/lessons-from-sci-fi/monograph" },
   { label: "Decoded papers", href: "/learn/decoded" },
   { label: "Cyber", href: "/learn/cyber" },
 ];

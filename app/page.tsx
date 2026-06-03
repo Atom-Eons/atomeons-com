@@ -249,8 +249,9 @@ function HeroSection() {
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#F4F4F2]">THESIS</span>
             </p>
-            <h1 className="v3-hero-h1 mt-8 max-w-[18ch] text-balance text-[#F4F4F2]">
-              A research laboratory you can actually walk into
+            <h1 className="v3-hero-h1 mt-8 max-w-[22ch] text-balance text-[#F4F4F2]">
+              One operator shipped 31 papers and a code-signed Claude
+              accelerator in 75 days.
             </h1>
           </div>
 
@@ -377,9 +378,10 @@ function ThesisSection() {
 
             <h2
               id="v3-thesis-heading"
-              className="v3-thesis-h2 mt-10 max-w-[14ch] text-balance text-[#F4F4F2]"
+              className="v3-thesis-h2 mt-10 max-w-[22ch] text-balance text-[#F4F4F2]"
             >
-              One operator. Three instruments.
+              The lab compresses Claude 10–80×, audits 27 guardrails, and
+              keeps a human on every stop button.
             </h2>
           </div>
 
@@ -725,10 +727,10 @@ function ReceiptsSection() {
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#5A6068]">UPDATED THIS BUILD</span>
             </p>
-            <h2 className="mt-8 max-w-[18ch] text-balance text-[clamp(36px,6vw,72px)] font-extralight leading-[1.04] tracking-[-0.02em] text-[#F4F4F2]">
-              <span className="font-light">Numbers that exist.</span>
+            <h2 className="mt-8 max-w-[22ch] text-balance text-[clamp(36px,6vw,72px)] font-extralight leading-[1.04] tracking-[-0.02em] text-[#F4F4F2]">
+              <span className="font-light">Every claim below</span>
               <br />
-              <span className="font-thin text-[#9CA3AF]">No projections, no roadmap.</span>
+              <span className="font-thin text-[#9CA3AF]">is a file you can open.</span>
             </h2>
           </div>
 
@@ -896,11 +898,11 @@ function ResearchSection() {
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#5A6068]">{SIGNAL.papersCount} PUBLISHED</span>
             </p>
-            <h2 className="mt-10 max-w-[20ch] text-balance text-[clamp(44px,7vw,96px)] font-extralight leading-[1.02] tracking-[-0.025em] text-[#F4F4F2]">
-              <span className="font-thin">Papers that ship.</span>
+            <h2 className="mt-10 max-w-[24ch] text-balance text-[clamp(40px,6vw,84px)] font-extralight leading-[1.05] tracking-[-0.025em] text-[#F4F4F2]">
+              <span className="font-thin">Each paper preregistered.</span>
               <br />
               <span className="font-extralight text-[#9CA3AF]">
-                Not press releases.
+                Each claim sourced. Each retraction kept on file.
               </span>
             </h2>
           </div>

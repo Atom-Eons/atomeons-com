@@ -1,0 +1,30 @@
+{
+  "scanned_files": 415,
+  "real_routes": 199,
+  "unique_hrefs": 102,
+  "dead_count": 3,
+  "case_mismatch_count": 0,
+  "dead": [
+    {
+      "href": "/intel/rss.xml",
+      "files": [
+        "app\\intel\\page.tsx"
+      ]
+    },
+    {
+      "href": "/legal",
+      "files": [
+        "app\\legal\\pricing\\page.tsx"
+      ]
+    },
+    {
+      "href": "/receipts",
+      "files": [
+        "app\\page.tsx",
+        "app\\page.v3.tsx",
+        "app\\_components\\V3\\FinalCTA.tsx"
+      ]
+    }
+  ],
+  "case_mismatch": []
+}

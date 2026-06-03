@@ -9,7 +9,7 @@
  *
  * Doctrine (operator-stated 2026-06-03):
  *  - Cyber is PROMOTED to top-level direct link (was buried under /learn).
- *  - Products dropdown lists Orangebox, B00KMAKR, AI Film (Cinema lab · in production).
+ *  - Products dropdown lists Orangebox, B00KMAKR, I AM AI (the book · forthcoming).
  *    Each row carries a status pip: cyan filled = shipping, dim hollow = in-production.
  *  - Learn dropdown lists Atlas, Career, Trust, Decode, Calc, Decoded papers.
  *  - Active-label resolver scans EACH item's child hrefs so deep routes light their
@@ -103,6 +103,8 @@ const NAV: readonly NavItem[] = [
       "/learn/decode",
       "/learn/calc",
       "/learn/decoded-papers",
+      "/books",
+      "/research/lessons-from-sci-fi/monograph",
     ],
     children: [
       { label: "Curriculum", href: "/learn", hint: "Forty-five lessons, five levels" },
@@ -112,13 +114,15 @@ const NAV: readonly NavItem[] = [
       { label: "Decode", href: "/learn/decode", hint: "Plain-language teardowns" },
       { label: "Calc", href: "/learn/calc", hint: "Operator-grade calculators" },
       { label: "Decoded papers", href: "/learn/decoded-papers", hint: "Twelve manuscripts, explained" },
+      { label: "Books", href: "/books", hint: "I AM AI, the Monograph, reading lists" },
+      { label: "Monograph", href: "/research/lessons-from-sci-fi/monograph", hint: "Lessons from Sci-Fi, book-length" },
     ],
   },
   {
     kind: "menu",
     label: "Products",
     indexHref: "/orangebox",
-    childHrefs: ["/orangebox", "/b00kmakor", "/film"],
+    childHrefs: ["/orangebox", "/orangebox-primer", "/b00kmakor", "/i-am-ai"],
     children: [
       {
         label: "ORANGEBOX",
@@ -133,9 +137,9 @@ const NAV: readonly NavItem[] = [
         status: "shipping",
       },
       {
-        label: "AI Film",
-        href: "/film",
-        hint: "Cinema lab · in production",
+        label: "I AM AI",
+        href: "/i-am-ai",
+        hint: "$39 hardcover · pre-order · Opus 4.7",
         status: "in-production",
       },
     ],

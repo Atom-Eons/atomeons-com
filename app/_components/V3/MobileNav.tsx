@@ -47,7 +47,7 @@ const SECTIONS: NavSection[] = [
     children: [
       { href: "/orangebox", label: "ORANGEBOX", pip: "live" },
       { href: "/b00kmakor", label: "B00KMAKR", pip: "live" },
-      { href: "/film", label: "AI Film", pip: "soon" },
+      { href: "/i-am-ai", label: "I AM AI · the book", pip: "soon" },
     ],
   },
   { kind: "link", href: "/founders-view", label: "Founder's View" },

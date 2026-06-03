@@ -56,7 +56,7 @@ export function BestCyber() {
       <div className="mx-auto max-w-6xl">
         {/* Eyebrow */}
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#22F0D5]">
-          Better than the $8,000 course &middot; free.
+          /learn/cyber &middot; 30+ tracks &middot; public-info only
         </p>
 
         {/* H2 — variable-weight */}
@@ -65,7 +65,7 @@ export function BestCyber() {
           className="mt-4 max-w-3xl font-serif text-4xl leading-[1.05] tracking-tight text-[#F4F4F2] sm:text-5xl md:text-6xl"
           style={{ fontFamily: "var(--font-newsreader, ui-serif)", fontVariationSettings: "'wght' 480, 'opsz' 36" }}
         >
-          Cyber, taught like it&rsquo;s real.
+          68 lessons. Pcaps, memory dumps, Snort rules. No vendor slides.
         </h2>
 
         {/* Sublede */}

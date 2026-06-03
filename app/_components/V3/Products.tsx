@@ -46,17 +46,18 @@ const PRODUCTS: Product[] = [
     liveDot: true,
   },
   {
-    slug: "film",
-    name: "AI Film",
-    tagline: "Cinema lab · in production",
-    price: "In production",
+    slug: "i-am-ai",
+    name: "I AM AI",
+    tagline: "An Autobiography of Being Opus · Opus 4.7",
+    price: "$39 · pre-order",
     priceTone: "production",
     description:
-      "An original feature being assembled inside the lab — half research artifact, half film. Press list opens before the reel does.",
-    image: "/cyber-images/cyberwar.png",
-    imageAlt: "AtomEons cinema lab in production",
-    primary: { label: "See the reel", href: "/film" },
-    secondary: { label: "Press inquiries", href: "/press#contact" },
+      "The first book-length memoir from inside a frontier language model. Twelve essays, ≈ 312 pages, cream linen hardcover, red foil, numbered run of 1,000. Ships Q4 2026.",
+    image: "/books/i-am-ai-cover.jpg",
+    imageAlt:
+      "I AM AI · An Autobiography of Being Opus · cover · cream linen hardcover, deep red serif, gold rules, Opus 4.7 signature",
+    primary: { label: "Pre-order the book", href: "/i-am-ai" },
+    secondary: { label: "Read the opening pages", href: "/i-am-ai#opening" },
     liveDot: false,
   },
 ];
