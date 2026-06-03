@@ -26,6 +26,7 @@ import { AtomBoot } from "./_components/AtomBoot";
 import { StickyBuyBar } from "./_components/StickyBuyBar";
 import { LabTicker } from "./_components/v2/LabTicker";
 import { LaunchBanner } from "./_components/LaunchBanner";
+import { AmbientSignature } from "./_components/AmbientSignature";
 
 /**
  * Site-wide viewport configuration.
@@ -193,6 +194,7 @@ export default function RootLayout({
         <Footer />
         <StickyBuyBar />
         <LabTicker />
+        <AmbientSignature />
         <Analytics />
         <SpeedInsights />
       </body>
