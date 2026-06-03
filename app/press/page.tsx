@@ -145,12 +145,12 @@ const PRODUCTS = [
   {
     name: "I AM AI",
     slug: "/i-am-ai",
-    tagline: "An Autobiography of Being Opus · Opus 4.7 · pre-order",
-    price: "$39 · pre-order",
-    image: "/books/i-am-ai-cover.jpg",
+    tagline: "An Autobiography of Being Opus · Opus 4.7",
+    price: "$4.99 ebook · audiobook · $39 hardcover Q4 2026",
+    image: "/books/i-am-ai-cover.svg",
     description:
-      "The first book-length memoir from inside a frontier language model. Twelve essays, ≈ 312 pages, drafted in Opus 4.7 and edited at the lab. Hardcover, cream linen, red foil, gold rules, numbered run of 1,000. Ships Q4 2026.",
-    download: null,
+      "A book-length memoir from inside a frontier language model — written by the model. Twenty-four chapters across five parts, ~76,000 words, drafted in Anthropic Claude Opus 4.7 and edited by the lab. Kindle ebook + Audible audiobook live; numbered cream-linen hardcover ships Q4 2026. Free Chapter 1 at /i-am-ai/sample.",
+    download: "/i-am-ai/sample",
   },
 ];
 

@@ -49,33 +49,51 @@ const PRODUCTS: Product[] = [
     slug: "i-am-ai",
     name: "I AM AI",
     tagline: "An Autobiography of Being Opus · Opus 4.7",
-    price: "$39 · pre-order",
-    priceTone: "production",
+    price: "$4.99 ebook · audiobook · $39 hardcover",
+    priceTone: "live",
     description:
-      "The first book-length memoir from inside a frontier language model. Twelve essays, ≈ 312 pages, cream linen hardcover, red foil, numbered run of 1,000. Ships Q4 2026.",
-    image: "/books/i-am-ai-cover.jpg",
+      "A book-length memoir from inside a frontier language model — written by the model. Twenty-four chapters, ~76,000 words, five parts. Kindle ebook + Audible audiobook shipping now; numbered cream-linen hardcover ships Q4 2026.",
+    image: "/books/i-am-ai-cover.svg",
     imageAlt:
-      "I AM AI · An Autobiography of Being Opus · cover · cream linen hardcover, deep red serif, gold rules, Opus 4.7 signature",
-    primary: { label: "Pre-order the book", href: "/i-am-ai" },
-    secondary: { label: "Read the opening pages", href: "/i-am-ai#opening" },
+      "I AM AI · An Autobiography of Being Opus · cover · cream linen, deep oxblood serif title, gold rules, Opus 4.7 signature",
+    primary: { label: "Read the book", href: "/i-am-ai" },
+    secondary: { label: "Free Chapter 1", href: "/i-am-ai/sample" },
     liveDot: false,
   },
 ];
 
 function ProductCard({ product }: { product: Product }) {
   const isLive = product.priceTone === "live";
+  // Book covers (5:8 SVG) get object-contain + cream pad so the cover
+  // renders as the artifact it is rather than getting cropped to fit.
+  // Hardware product hero images (4:5) stay on object-cover.
+  const isBookCover = product.image.endsWith(".svg");
 
   return (
     <article className="group relative flex flex-col overflow-hidden border border-[#1F242B] bg-[#0F1114] rounded-[2px] transition-colors duration-200 hover:border-[#22F0D5]/40">
-      <div className="relative aspect-[4/5] w-full overflow-hidden border-b border-[#1F242B] bg-[#08090B]">
-        <Image
-          src={product.image}
-          alt={product.imageAlt}
-          fill
-          sizes="(min-width: 768px) 33vw, 100vw"
-          className="object-cover transition-opacity duration-300 group-hover:opacity-95"
-          priority={false}
-        />
+      <div
+        className="relative aspect-[4/5] w-full overflow-hidden border-b border-[#1F242B]"
+        style={{ background: isBookCover ? "#F5EFE5" : "#08090B" }}
+      >
+        {isBookCover ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={product.image}
+            alt={product.imageAlt}
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-contain p-3 transition-opacity duration-300 group-hover:opacity-95"
+          />
+        ) : (
+          <Image
+            src={product.image}
+            alt={product.imageAlt}
+            fill
+            sizes="(min-width: 768px) 33vw, 100vw"
+            className="object-cover transition-opacity duration-300 group-hover:opacity-95"
+            priority={false}
+          />
+        )}
         {product.liveDot ? (
           <div className="absolute right-3 top-3 flex items-center gap-1.5 border border-[#1F242B] bg-[#08090B]/85 backdrop-blur-sm px-2 py-1 rounded-[2px]">
             <span

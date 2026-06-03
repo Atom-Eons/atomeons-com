@@ -62,6 +62,11 @@ const REDIRECTS: Record<string, string> = {
   "/opus": "/i-am-ai",
   "/opus47": "/i-am-ai",
   "/autobiography": "/i-am-ai",
+  // free-sample alias + the manuscript Markdown
+  "/chapter-1": "/i-am-ai/sample",
+  "/chapter1": "/i-am-ai/sample",
+  "/sample": "/i-am-ai/sample",
+  "/free-sample": "/i-am-ai/sample",
   // ai film removed 2026-06-03; legacy /film → /books
   "/film": "/books",
   "/cinema": "/books",

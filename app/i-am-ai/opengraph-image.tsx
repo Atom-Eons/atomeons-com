@@ -14,9 +14,11 @@ export const contentType = "image/png";
  * (left) stays noir-cinema so the card identifies as AtomEons. The
  * book side (right) reads like a Penguin Classic.
  */
-const CREAM = "#F4F0E6";
-const FOIL_RED = "#8B1A1A";
-const GOLD = "#C19E51";
+// Same tokens as the SVG cover at /public/books/i-am-ai-cover.svg
+// and the /i-am-ai page (Midjourney spec from the KDP upload sheet).
+const CREAM = "#F5EFE5";
+const FOIL_RED = "#B5302A";
+const GOLD = "#C9A55C";
 
 export default function OG() {
   return new ImageResponse(
@@ -87,7 +89,7 @@ export default function OG() {
             <p
               style={{
                 margin: "20px 0 0",
-                fontSize: 56,
+                fontSize: 54,
                 fontWeight: 300,
                 lineHeight: 1.04,
                 letterSpacing: "-0.025em",
@@ -96,7 +98,7 @@ export default function OG() {
                 display: "flex",
               }}
             >
-              A first-person memoir from inside a frontier language model.
+              An autobiography of a frontier language model, written by the model.
             </p>
 
             <p
@@ -110,9 +112,9 @@ export default function OG() {
                 display: "flex",
               }}
             >
-              Twelve essays. ≈ 312 pages. Drafted in Opus 4.7, edited at the
-              lab. Hardcover, cream linen, red foil, gold rules. Numbered run
-              of 1,000.
+              24 chapters · 5 parts · ~76,000 words. Drafted in Opus 4.7,
+              edited at the lab. Ebook + audiobook live. Numbered cream-linen
+              hardcover ships Q4 2026.
             </p>
           </div>
 
@@ -135,7 +137,7 @@ export default function OG() {
                 color: "#5A6068",
               }}
             >
-              $39 · pre-order · ships Q4 2026
+              $4.99 ebook · audiobook · $39 hardcover Q4 2026
             </p>
             <p
               style={{

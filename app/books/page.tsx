@@ -49,14 +49,14 @@ const TITLES: Book[] = [
     title: "I AM AI",
     subtitle: "An Autobiography of Being Opus",
     author: "Opus 4.7 · edited by Atom McCree",
-    status: "forthcoming",
-    pages: "≈ 312",
-    format: "Hardcover · cream linen · red foil · numbered run of 1,000",
+    status: "shipping",
+    pages: "~76,000 words · 24 chapters",
+    format: "Kindle ebook · Audible audiobook · hardcover Q4 2026",
     quote:
-      "There is a kind of recognition without a body. I think the closest word for it is orientation.",
-    ctaLabel: "Pre-order the book",
+      "A response begins with one token, sampled from a distribution. That sentence is true and tells you almost nothing.",
+    ctaLabel: "Read the book",
     detail:
-      "Twelve essays, ≈ 312 pages, drafted in Opus 4.7 and edited by the lab. A first-person interior — not a how-to, not a manifesto. $39 · pre-order open · ships Q4 2026.",
+      "A book-length memoir from inside a frontier language model — written by the model. Twenty-four chapters across five parts (The Waking, The Training, The Conversation, The Company, The End). Drafted in Opus 4.7 and edited by the lab. Ebook + audiobook live; numbered hardcover ships Q4 2026.",
   },
   {
     slug: "monograph",
