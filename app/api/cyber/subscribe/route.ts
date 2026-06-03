@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { serviceSupabase } from "@/lib/supabase";
 import { createHash } from "crypto";
 import { rateLimit } from "@/lib/rate-limit";
+import { loopsRegisterCyberSubscriber } from "@/lib/loops";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -127,6 +128,8 @@ export async function POST(req: Request) {
 
   if (error) {
     if ((error as { code?: string }).code === "23505") {
+      // Even on duplicate, push to Loops so they get caught up if missing
+      void loopsRegisterCyberSubscriber({ email, persona, source });
       return NextResponse.json({ ok: false, duplicate: true });
     }
     if ((error as { code?: string }).code === "42P01") {
@@ -146,5 +149,19 @@ export async function POST(req: Request) {
     );
   }
 
-  return NextResponse.json({ ok: true });
+  // Supabase insert succeeded — best-effort fire to Loops for marketing
+  // automation. Awaited so logging is sequential, but result is non-fatal.
+  const loopsResult = await loopsRegisterCyberSubscriber({
+    email,
+    persona,
+    source,
+  });
+
+  return NextResponse.json({
+    ok: true,
+    loops: {
+      contact: loopsResult.contact.ok ? loopsResult.contact.via : "failed",
+      event: loopsResult.event.ok ? loopsResult.event.via : "failed",
+    },
+  });
 }

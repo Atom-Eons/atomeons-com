@@ -70,7 +70,6 @@ import { useEffect, useRef, useState } from "react";
 
 import { Curriculum } from "./_components/V3/Curriculum";
 import { FinalCTA } from "./_components/V3/FinalCTA";
-import { HomepageReveal } from "./_components/HomepageReveal";
 
 // ---------------------------------------------------------------------------
 // SHARED — Variable-Weight Reveal hook
@@ -190,9 +189,8 @@ function HeroSection() {
       {/*   a whisper of original tone. priority + sizes for LCP.             */}
       {/* ------------------------------------------------------------------- */}
       <div className="absolute inset-0 z-0">
-        {/* Veo Concept 3 · "Variable-Weight Reveal" video — autoplays when
-            present, otherwise the static photo below carries. */}
-        <HomepageReveal />
+        {/* HomepageReveal video removed 2026-06-03 per operator call —
+            looked bad, static photograph below carries the hero. */}
         <Image
           src="/cyber-images/cyberwar.png"
           alt="Cinematic photograph — operations room, low-light tonality"
