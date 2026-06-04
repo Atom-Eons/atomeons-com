@@ -27,6 +27,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { SearchPalette, SearchTrigger } from "./SearchPalette";
 
 const C = {
   ink: "#08090B",
@@ -556,11 +557,11 @@ export function Header() {
   return (
     <>
       <header
-        className="sticky top-0 z-40 w-full"
+        className="fixed left-0 right-0 top-0 z-40 w-full"
         style={{
-          backgroundColor: `${C.panel}E6`,
-          backdropFilter: "saturate(140%) blur(14px)",
-          WebkitBackdropFilter: "saturate(140%) blur(14px)",
+          backgroundColor: `${C.panel}F2`,
+          backdropFilter: "saturate(140%) blur(16px)",
+          WebkitBackdropFilter: "saturate(140%) blur(16px)",
           borderBottom: `1px solid ${C.hair}`,
         }}
       >
@@ -699,16 +700,23 @@ export function Header() {
             })}
           </nav>
 
-          {/* ─── Mobile hamburger ──────────────────────────────────── */}
-          <button
-            type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            aria-controls="v3-mobile-drawer"
-            onClick={() => setOpen((v) => !v)}
-            className="relative flex h-10 w-10 items-center justify-center md:hidden"
-            style={{ color: C.paper }}
-          >
+          {/* ─── Search trigger (desktop) ──────────────────────────── */}
+          <div className="hidden md:block">
+            <SearchTrigger />
+          </div>
+
+          {/* ─── Mobile rail: search icon + hamburger ─────────────── */}
+          <div className="flex items-center gap-2 md:hidden">
+            <SearchTrigger compact />
+            <button
+              type="button"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              aria-controls="v3-mobile-drawer"
+              onClick={() => setOpen((v) => !v)}
+              className="relative flex h-10 w-10 items-center justify-center"
+              style={{ color: C.paper }}
+            >
             <span
               aria-hidden
               className="absolute block h-px w-5 transition-transform duration-200"
@@ -737,7 +745,8 @@ export function Header() {
                   : "translateY(4px) rotate(0)",
               }}
             />
-          </button>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -910,6 +919,11 @@ export function Header() {
           </div>
         </div>
       </div>
+
+      {/* Global Cmd-K / Ctrl-K / "/" search palette — lives next to the
+          Header so the trigger button can dispatch to its keydown
+          listener and the palette renders above all content. */}
+      <SearchPalette />
 
       <style jsx global>{`
         @keyframes ae-v3-pulse {

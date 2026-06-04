@@ -190,7 +190,11 @@ export default function RootLayout({
         <MadeWithOrangebox />
         <LaunchBanner />
         <Header />
-        <div className="flex-1">{children}</div>
+        {/* pt-16 reserves the 64px the fixed Header occupies. The
+            LaunchBanner above the Header is part of the normal flow
+            (not fixed), so no extra offset is needed for it — when it
+            scrolls past, the Header continues to hover at top:0. */}
+        <div className="flex-1 pt-16">{children}</div>
         <Footer />
         <StickyBuyBar />
         <LabTicker />
