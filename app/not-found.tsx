@@ -1,169 +1,195 @@
 import Link from "next/link";
-import { AeMark } from "./_components/AeMark";
 
 export const metadata = {
-  title: "404 — route not found",
+  title: "Page not found · AtomEons",
 };
 
 /**
- * Custom 404. The cockpit returns FAILED honestly instead of fake-green.
- * Updated wave-14: surface every major section so a 404 becomes a discovery
- * moment rather than a dead end — Æ Research, Founder's View, /now, /mistakes,
- * the cockpit itself, and a soft note about why we even bother with this page.
+ * /404 — the calm rewrite.
+ *
+ * Operator directive 2026-06-04: the previous 404 used internal lab
+ * jargon ("not on the DAG", "cockpit returned FAILED", "fake green")
+ * which read as a system error to a normal visitor. No page on the
+ * site should do that. This rewrite uses the V3 noir voice and the
+ * same calm register as /press, /supermodels, /i-am-ai — eyebrow +
+ * headline + one paragraph + useful next steps. No memes, no jargon,
+ * no stale numbers.
  */
+
+const ROUTES = [
+  {
+    href: "/learn",
+    eyebrow: "Curriculum · 68 lessons · five levels · free",
+    title: "The curriculum",
+    detail:
+      "Novice → Learner → User → Operator → Pilot. Persona paths for Worker, Builder, Student, Operator, Curious. Free, CC-BY 4.0.",
+  },
+  {
+    href: "/supermodels",
+    eyebrow: "Hottest supermodels · May 2026",
+    title: "The reasoning rankings",
+    detail:
+      "Twelve frontier models scored against four independent leaderboards. No vendor decks; no paid threads; receipts only.",
+  },
+  {
+    href: "/orangebox",
+    eyebrow: "ORANGEBOX · $99 perpetual · §4A no-SaaS",
+    title: "The cockpit",
+    detail:
+      "Local-first turbo-optimization for Claude. 10-80× context compression, persistent memory, 14-department routing.",
+  },
+  {
+    href: "/i-am-ai",
+    eyebrow: "I AM AI · Opus 4.7 · 24 chapters",
+    title: "The book",
+    detail:
+      "An autobiography of a frontier language model, written by the model. Ebook + audiobook live; hardcover Q4 2026.",
+  },
+  {
+    href: "/research/papers",
+    eyebrow: "ÆoNs Research · 31 manuscripts · CC-BY 4.0",
+    title: "The papers",
+    detail:
+      "Crystal Lattice Compression, the Hallucination Reduction Engine, GlyphSpeak EODO transport, and the rest of the lab catalog.",
+  },
+  {
+    href: "/founders-view",
+    eyebrow: "Nightly broadcast · 8pm ET",
+    title: "Founder's View",
+    detail:
+      "The lab's nightly dispatch. Decoded primary-source intel, technical disclosures, what changed in the field today.",
+  },
+];
+
 export default function NotFound() {
   return (
-    <main className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-16 pb-24">
-      <pre className="select-none overflow-hidden font-mono text-[11px] tracking-tight text-[#1b8b75]">
-{`──────────────────────────────────────────────────────
-[ STATUS ]    404 NOT_FOUND
-[ ROUTE ]     unknown
-[ COCKPIT ]   refused to fake green
-──────────────────────────────────────────────────────`}
-      </pre>
+    <main
+      data-page="not-found"
+      className="relative bg-[#08090B] text-[#F4F4F2] antialiased"
+    >
+      <section
+        aria-label="Page not found"
+        className="border-b border-[#1F242B]"
+      >
+        <div className="mx-auto w-full max-w-4xl px-6 pt-24 pb-16 md:px-10 md:pt-32 md:pb-24">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+            <span className="text-[#9CA3AF]">Status</span>
+            <span className="mx-3 text-[#1F242B]">·</span>
+            <span className="text-[#22F0D5]">404 · page not found</span>
+          </p>
 
-      <h1 className="mt-8 text-balance text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
-        That route is{" "}
-        <span className="text-[#ff4f5e]">not on the DAG</span>.
-      </h1>
+          <h1
+            className="mt-10 max-w-[20ch] text-balance text-[clamp(44px,7vw,96px)] font-extralight leading-[1.02] tracking-[-0.03em] text-[#F4F4F2]"
+          >
+            That page does not exist on atomeons.com.
+          </h1>
 
-      <p className="mt-6 max-w-xl text-pretty text-[#a7b8ad]">
-        The cockpit returned <span className="font-mono text-[#22F0D5]">FAILED</span>{" "}
-        instead of fake green. That is the point.
-      </p>
+          <p
+            className="mt-10 max-w-[64ch] font-serif text-[19px] leading-[1.55] text-[#9CA3AF]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
+            Either the URL is mistyped, the page was renamed, or the link
+            you followed pointed somewhere the lab does not publish. Try
+            the lab&apos;s search (press <kbd className="mx-1 border border-[#1F242B] px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.16em] text-[#9CA3AF]">⌘K</kbd>{" "}
+            or <kbd className="mx-1 border border-[#1F242B] px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.16em] text-[#9CA3AF]">/</kbd>
+            ), pick one of the destinations below, or email{" "}
+            <a
+              href="mailto:a.mccree@gmail.com?subject=Broken%20link%20on%20atomeons.com"
+              className="text-[#22F0D5] underline decoration-[#1F242B] underline-offset-[6px] transition-colors hover:decoration-[#22F0D5]"
+            >
+              a.mccree@gmail.com
+            </a>{" "}
+            with the URL and the lab will file a fix.
+          </p>
 
-      <p className="mt-6 max-w-xl text-pretty text-[#a7b8ad]">
-        Two options: pick a real route below, or use{" "}
-        <Link
-          href="/search"
-          className="text-[#22F0D5] underline-offset-4 hover:underline"
-        >
-          /search
-        </Link>{" "}
-        to find what you were looking for. If a real link broke getting
-        you here, email{" "}
-        <a
-          href="mailto:a.mccree@gmail.com?subject=404%20on%20atomeons.com"
-          className="text-[#22F0D5] underline-offset-4 hover:underline"
-        >
-          a.mccree@gmail.com
-        </a>
-        {" "}with the URL — we file it within an hour.
-      </p>
-
-      {/* Discovery rail — every major section, one card each.
-            /learn is the lead since it's the flagship and most likely
-            destination for a confused first-time visitor. */}
-      <div className="mt-12">
-        <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
-          <AeMark size={18} glow />
-          ::routes that exist · pick one
-        </p>
-        <div className="grid gap-3 md:grid-cols-2">
-          <Link
-            href="/learn"
-            className="group rounded-xl border border-[#22F0D5]/40 bg-gradient-to-br from-[#0A1A1C] to-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/80 md:col-span-2"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::onboard to AI · the curriculum · 27 lessons · free
-            </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5] md:text-lg">
-              /learn → the humanity-scale on-ramp
-            </p>
-            <p className="mt-1 text-xs text-[#9BA5A7]">
-              Start at L0 (the gateway) · or take the 2-minute level diagnostic at /learn/where-am-i
-            </p>
-          </Link>
-          <Link
-            href="/orangebox"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::cockpit · v1.0.0-beta · turbo-optimize Claude · §4A
-            </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-              Æ ORANGEBOX →
-            </p>
-          </Link>
-          <Link
-            href="/founders-view"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::nightly broadcast · 8pm ET
-            </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-              The Founder&apos;s View →
-            </p>
-          </Link>
-          <Link
-            href="/research/papers"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::Æ research · 12 manuscripts · CC-BY 4.0
-            </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-              Research Papers →
-            </p>
-          </Link>
-          <Link
-            href="/manifesto"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#FFB87A]/50"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
-              ::doctrine · 14 clauses · falsifiable
-            </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#FFB87A]">
-              Manifesto →
-            </p>
-          </Link>
-          <Link
-            href="/search"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::lab directory · 18 canonical surfaces
-            </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-              /search →
-            </p>
-          </Link>
-          <Link
-            href="/now"
-            className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/50"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::lab now · this week
-            </p>
-            <p className="mt-2 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-              /now → what we&apos;re doing
-            </p>
-          </Link>
+          <div className="mt-12 flex flex-wrap gap-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-3 border border-[#22F0D5] bg-[#22F0D5]/5 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10"
+            >
+              <span aria-hidden>←</span>
+              <span>Lab home</span>
+            </Link>
+            <Link
+              href="/learn"
+              className="inline-flex items-center gap-3 border border-[#1F242B] bg-[#0F1114] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+            >
+              <span>Start at the curriculum</span>
+              <span aria-hidden>→</span>
+            </Link>
+            <Link
+              href="/press"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] transition-colors hover:text-[#22F0D5]"
+            >
+              Press kit
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="mt-10 flex flex-wrap gap-3">
-        <Link
-          href="/"
-          className="rounded-md border border-[#22F0D5] bg-[#22F0D5] px-5 py-2.5 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
-          style={{ color: "#000", WebkitTextFillColor: "#000" }}
-        >
-          Back to home
-        </Link>
-        <Link
-          href="/orangebox"
-          className="rounded-md border border-[#1F242B] bg-[#0F1114] px-5 py-2.5 text-sm font-semibold text-[#f7f0e4]"
-        >
-          Get ORANGEBOX · FREE this week
-        </Link>
-        <Link
-          href="/research/about"
-          className="rounded-md border border-[#1F242B] bg-transparent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-[#a7b8ad] hover:text-[#f7f0e4]"
-        >
-          About the lab
-        </Link>
-      </div>
+      <section
+        aria-labelledby="routes-heading"
+        className="border-b border-[#1F242B] bg-[#0F1114] py-20 md:py-28"
+      >
+        <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+            <span className="text-[#9CA3AF]">§</span>
+            <span className="mx-3 text-[#1F242B]">·</span>
+            <span className="text-[#22F0D5]">Six destinations that do exist</span>
+          </p>
+          <h2
+            id="routes-heading"
+            className="mt-6 max-w-[22ch] text-balance text-[clamp(28px,4vw,48px)] font-light leading-[1.1] tracking-[-0.02em] text-[#F4F4F2]"
+          >
+            Pick one. The lab is small enough that all of these are one click away.
+          </h2>
+
+          <ul
+            role="list"
+            className="mt-12 grid grid-cols-1 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-2"
+          >
+            {ROUTES.map((r) => (
+              <li key={r.href} className="bg-[#0F1114]">
+                <Link
+                  href={r.href}
+                  className="group flex h-full flex-col gap-3 p-7 transition-colors hover:bg-[#08090B] md:p-9"
+                >
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                    {r.eyebrow}
+                  </p>
+                  <h3
+                    className="font-serif text-[24px] leading-[1.2] tracking-[-0.005em] text-[#F4F4F2] transition-colors group-hover:text-[#22F0D5] md:text-[28px]"
+                    style={{ fontFamily: "Newsreader, Georgia, serif" }}
+                  >
+                    {r.title}
+                  </h3>
+                  <p
+                    className="font-serif text-[15px] leading-[1.55] text-[#9CA3AF]"
+                    style={{ fontFamily: "Newsreader, Georgia, serif" }}
+                  >
+                    {r.detail}
+                  </p>
+                  <p className="mt-auto pt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                    atomeons.com{r.href}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20">
+        <div className="mx-auto w-full max-w-3xl px-6 text-center md:px-10">
+          <p
+            className="font-serif text-[17px] italic leading-[1.55] text-[#9CA3AF]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
+            If a public link sent you here, the lab wants to know. Broken
+            links inside the lab&apos;s own pages get a same-day fix.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
