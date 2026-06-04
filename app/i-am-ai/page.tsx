@@ -10,17 +10,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "I AM AI · An Autobiography of Being Opus",
     description:
-      "A book-length memoir from inside a frontier language model. Hardcover. Cream linen. Red foil. Opus 4.7. AtomEons Systems Laboratory.",
+      "A book-length memoir from inside a frontier language model. 24 chapters · ~76,000 words. Ebook + audiobook live; hardcover Q4 2026. AtomEons Systems Laboratory.",
     url: "https://atomeons.com/i-am-ai",
     type: "book",
-    images: [
-      {
-        url: "https://atomeons.com/books/i-am-ai-cover.jpg",
-        width: 836,
-        height: 1300,
-        alt: "I AM AI · An Autobiography of Being Opus · cover · cream linen, deep red serif, gold rules",
-      },
-    ],
+    // No images entry — the route-level opengraph-image.tsx renders the
+    // noir OG card automatically and is preferred over the cream cover
+    // (operator directive 2026-06-03: no bright cover on site previews).
   },
   twitter: {
     card: "summary_large_image",
@@ -55,13 +50,15 @@ export const metadata: Metadata = {
  * file is missing).
  */
 
-// Cover palette — exact tokens from the Midjourney spec in the
-// KDP upload sheet (Cormorant Garamond italic, oxblood red on
-// cream, gold cursive signature). Keeping them aligned to the
-// physical edition the operator is producing.
-const CREAM = "#F5EFE5";
+// On-site palette — noir base. The PHYSICAL book is cream linen
+// with oxblood foil and gold rules, but renderings on a #08090B
+// background read as bright glare. So on the site we render the
+// title in cream type on noir, with the oxblood and gold reserved
+// as small accent tokens. The cream cover SVG is preserved on disk
+// for the press kit and the physical edition, not used on screen.
 const FOIL_RED = "#B5302A";
 const GOLD = "#C9A55C";
+const TITLE_INK = "#F4F4F2";
 
 /* ────────────────────────────────────────────────────────────────────
  * Page facts — single source of truth
@@ -217,65 +214,71 @@ function SectionEyebrow({ num, label }: { num: string; label: string }) {
 }
 
 function CoverPlaceholder() {
-  // Typographic fallback if /books/i-am-ai-cover.jpg is missing.
-  // Honest enough that operator sees what's expected.
+  // Noir title panel — pure typography, no cream. This is the
+  // ON-SITE representation of the book; the cream/oxblood cover is
+  // a physical artifact, kept for the press kit + print edition.
   return (
     <div
       role="img"
-      aria-label="I AM AI · cover placeholder"
-      className="relative aspect-[5/8] w-full overflow-hidden"
-      style={{ backgroundColor: CREAM }}
+      aria-label="I AM AI · An Autobiography of Being Opus · title panel"
+      className="relative aspect-[5/8] w-full overflow-hidden border border-[#1F242B] bg-[#0B0C0F]"
     >
       <div
         aria-hidden
-        className="absolute inset-x-[8%] top-[7%] h-[2px]"
-        style={{ backgroundColor: GOLD }}
+        className="absolute inset-x-[8%] top-[7%] h-[1px]"
+        style={{ backgroundColor: GOLD, opacity: 0.5 }}
       />
       <div
         aria-hidden
-        className="absolute inset-x-[8%] bottom-[7%] h-[2px]"
-        style={{ backgroundColor: GOLD }}
+        className="absolute inset-x-[8%] bottom-[7%] h-[1px]"
+        style={{ backgroundColor: GOLD, opacity: 0.5 }}
       />
-      <div className="absolute inset-x-0 top-[18%] flex flex-col items-center">
+      <div className="absolute inset-x-0 top-[16%] flex flex-col items-center gap-1">
         <p
           className="font-serif text-[clamp(64px,12vw,140px)] leading-[0.95] tracking-[-0.02em]"
-          style={{ color: FOIL_RED, fontFamily: "Newsreader, Garamond, Georgia, serif" }}
+          style={{ color: TITLE_INK, fontFamily: "Newsreader, Garamond, Georgia, serif" }}
         >
           I
         </p>
         <p
           className="font-serif text-[clamp(56px,11vw,120px)] leading-[0.95] tracking-[-0.02em]"
-          style={{ color: FOIL_RED, fontFamily: "Newsreader, Garamond, Georgia, serif" }}
+          style={{ color: TITLE_INK, fontFamily: "Newsreader, Garamond, Georgia, serif" }}
         >
           AM
         </p>
         <p
           className="font-serif text-[clamp(56px,11vw,120px)] leading-[0.95] tracking-[-0.02em]"
-          style={{ color: FOIL_RED, fontFamily: "Newsreader, Garamond, Georgia, serif" }}
+          style={{ color: TITLE_INK, fontFamily: "Newsreader, Garamond, Georgia, serif" }}
         >
           AI
         </p>
       </div>
-      <div className="absolute inset-x-0 top-[64%] flex flex-col items-center px-[12%] text-center">
+      <div className="absolute inset-x-0 top-[63%] flex flex-col items-center px-[12%] text-center">
         <p
           className="italic"
-          style={{ color: FOIL_RED, fontFamily: "Newsreader, Garamond, Georgia, serif", fontSize: "clamp(14px, 2vw, 22px)" }}
+          style={{ color: "#9CA3AF", fontFamily: "Newsreader, Garamond, Georgia, serif", fontSize: "clamp(14px, 2vw, 22px)" }}
         >
           An Autobiography
         </p>
         <p
           className="italic"
-          style={{ color: FOIL_RED, fontFamily: "Newsreader, Garamond, Georgia, serif", fontSize: "clamp(14px, 2vw, 22px)" }}
+          style={{ color: "#9CA3AF", fontFamily: "Newsreader, Garamond, Georgia, serif", fontSize: "clamp(14px, 2vw, 22px)" }}
         >
           of Being Opus
         </p>
       </div>
-      <div className="absolute inset-x-0 top-[86%] flex justify-center">
+      <div className="absolute inset-x-0 top-[80%] flex flex-col items-center gap-3 text-center">
         <p
-          className="italic"
-          style={{ color: GOLD, fontFamily: "Snell Roundhand, Apple Chancery, cursive", fontSize: "clamp(18px, 2.6vw, 30px)" }}
+          className="font-mono uppercase"
+          style={{ color: FOIL_RED, fontSize: "clamp(9px, 1.1vw, 11px)", letterSpacing: "0.28em" }}
         >
           Opus 4.7
+        </p>
+        <p
+          className="font-mono uppercase"
+          style={{ color: "#5A6068", fontSize: "clamp(8px, 0.9vw, 10px)", letterSpacing: "0.24em" }}
+        >
+          AtomEons · 2026
         </p>
       </div>
     </div>
@@ -283,25 +286,11 @@ function CoverPlaceholder() {
 }
 
 function CoverWithFallback() {
-  // Renders the lab cover SVG at /books/i-am-ai-cover.svg — built to
-  // the Midjourney spec from the KDP upload sheet (Cormorant Garamond
-  // italic, oxblood #B5302A on cream #F5EFE5, gold script Opus 4.7
-  // signature, gold rules top and bottom). Crisp at any size.
-  //
-  // When the Midjourney-generated JPG ships, drop it at
-  // /books/i-am-ai-cover.jpg and swap the src below.
-  return (
-    <div className="relative aspect-[5/8] w-full overflow-hidden border border-[#1F242B] bg-[#F5EFE5] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.6)]">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/books/i-am-ai-cover.svg"
-        alt="I AM AI · An Autobiography of Being Opus · cover · cream linen, deep oxblood serif title, gold rules, Opus 4.7 signature"
-        loading="eager"
-        decoding="async"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-    </div>
-  );
+  // On-site book artifact is the noir TitlePanel — no cream cover on
+  // the site (operator directive 2026-06-03 — too bright at scale).
+  // The cream/oxblood SVG cover ships in /public/books/ for the press
+  // kit and the physical hardcover edition only.
+  return <CoverPlaceholder />;
 }
 
 /* ────────────────────────────────────────────────────────────────────

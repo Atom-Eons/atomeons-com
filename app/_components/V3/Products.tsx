@@ -62,28 +62,81 @@ const PRODUCTS: Product[] = [
   },
 ];
 
+function NoirBookTile({ alt }: { alt: string }) {
+  // Noir title tile for I AM AI on the Products grid. No cream cover
+  // (too bright on site). Pure typography on near-black, with two thin
+  // gold rules and an oxblood Opus 4.7 line at the foot.
+  return (
+    <div
+      role="img"
+      aria-label={alt}
+      className="relative h-full w-full bg-[#0B0C0F]"
+    >
+      <div
+        aria-hidden
+        className="absolute inset-x-[8%] top-[8%] h-px"
+        style={{ backgroundColor: "#C9A55C", opacity: 0.55 }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-x-[8%] bottom-[8%] h-px"
+        style={{ backgroundColor: "#C9A55C", opacity: 0.55 }}
+      />
+      <div className="absolute inset-x-0 top-[18%] flex flex-col items-center gap-0">
+        {["I", "AM", "AI"].map((g) => (
+          <p
+            key={g}
+            className="font-serif leading-[0.95] tracking-[-0.02em] text-[#F4F4F2]"
+            style={{
+              fontFamily: "Newsreader, Garamond, Georgia, serif",
+              fontSize: "clamp(40px, 8vw, 96px)",
+            }}
+          >
+            {g}
+          </p>
+        ))}
+      </div>
+      <div className="absolute inset-x-0 top-[68%] flex flex-col items-center px-[12%] text-center">
+        <p
+          className="italic text-[#9CA3AF]"
+          style={{
+            fontFamily: "Newsreader, Garamond, Georgia, serif",
+            fontSize: "clamp(11px, 1.4vw, 15px)",
+          }}
+        >
+          An Autobiography of Being Opus
+        </p>
+      </div>
+      <div className="absolute inset-x-0 top-[82%] flex justify-center">
+        <p
+          className="font-mono uppercase"
+          style={{
+            color: "#B5302A",
+            fontSize: "clamp(8px, 0.95vw, 10px)",
+            letterSpacing: "0.28em",
+          }}
+        >
+          Opus 4.7
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function ProductCard({ product }: { product: Product }) {
   const isLive = product.priceTone === "live";
-  // Book covers (5:8 SVG) get object-contain + cream pad so the cover
-  // renders as the artifact it is rather than getting cropped to fit.
-  // Hardware product hero images (4:5) stay on object-cover.
-  const isBookCover = product.image.endsWith(".svg");
+  // I AM AI gets a noir title tile (no bright cream cover on site —
+  // operator directive 2026-06-03). Hardware product hero images use
+  // object-cover on their press photography.
+  const isBook = product.slug === "i-am-ai";
 
   return (
     <article className="group relative flex flex-col overflow-hidden border border-[#1F242B] bg-[#0F1114] rounded-[2px] transition-colors duration-200 hover:border-[#22F0D5]/40">
       <div
-        className="relative aspect-[4/5] w-full overflow-hidden border-b border-[#1F242B]"
-        style={{ background: isBookCover ? "#F5EFE5" : "#08090B" }}
+        className="relative aspect-[4/5] w-full overflow-hidden border-b border-[#1F242B] bg-[#08090B]"
       >
-        {isBookCover ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={product.image}
-            alt={product.imageAlt}
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-contain p-3 transition-opacity duration-300 group-hover:opacity-95"
-          />
+        {isBook ? (
+          <NoirBookTile alt={product.imageAlt} />
         ) : (
           <Image
             src={product.image}

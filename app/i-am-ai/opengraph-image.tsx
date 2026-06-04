@@ -2,23 +2,23 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "I AM AI · An Autobiography of Being Opus · Opus 4.7 · hardcover, cream linen, red foil · pre-order · AtomEons Systems Laboratory";
+  "I AM AI · An Autobiography of Being Opus · Opus 4.7 · 24 chapters · ~76,000 words · ebook + audiobook + hardcover · AtomEons Systems Laboratory";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
- * /i-am-ai social card — the book product page.
+ * /i-am-ai social card — book product OG.
  *
- * Distinct typographic identity that nods to the cover: cream paper
- * field on the right, deep-red serif title, gold rules. The lab side
- * (left) stays noir-cinema so the card identifies as AtomEons. The
- * book side (right) reads like a Penguin Classic.
+ * NOIR ONLY (operator directive 2026-06-03: cream cover too bright on
+ * site). Full-bleed #08090B with a narrow gold-rule frame, big serif
+ * "I AM AI" stacked at right reading like a typeset title page, lab
+ * mark + receipts at left. The physical book stays cream; renderings
+ * on screen stay noir.
  */
-// Same tokens as the SVG cover at /public/books/i-am-ai-cover.svg
-// and the /i-am-ai page (Midjourney spec from the KDP upload sheet).
-const CREAM = "#F5EFE5";
-const FOIL_RED = "#B5302A";
-const GOLD = "#C9A55C";
+
+const ROW_GOLD = "#C9A55C";
+const ACCENT_RED = "#B5302A";
+const CYAN = "#22F0D5";
 
 export default function OG() {
   return new ImageResponse(
@@ -32,15 +32,42 @@ export default function OG() {
           color: "#F4F4F2",
           fontFamily:
             'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+          position: "relative",
         }}
       >
-        {/* LEFT — lab side (noir) */}
+        {/* Top + bottom gold rules — frame */}
+        <div
+          style={{
+            position: "absolute",
+            top: 40,
+            left: 56,
+            right: 56,
+            height: 1,
+            background: ROW_GOLD,
+            opacity: 0.55,
+            display: "flex",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: 40,
+            left: 56,
+            right: 56,
+            height: 1,
+            background: ROW_GOLD,
+            opacity: 0.55,
+            display: "flex",
+          }}
+        />
+
+        {/* LEFT — receipts + lab */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            padding: "56px 48px",
+            padding: "72px 56px",
             width: 720,
             borderRight: "1px solid #1F242B",
           }}
@@ -79,7 +106,7 @@ export default function OG() {
                 fontSize: 12,
                 letterSpacing: "0.32em",
                 textTransform: "uppercase",
-                color: "#22F0D5",
+                color: CYAN,
                 display: "flex",
               }}
             >
@@ -89,7 +116,7 @@ export default function OG() {
             <p
               style={{
                 margin: "20px 0 0",
-                fontSize: 54,
+                fontSize: 52,
                 fontWeight: 300,
                 lineHeight: 1.04,
                 letterSpacing: "-0.025em",
@@ -112,8 +139,8 @@ export default function OG() {
                 display: "flex",
               }}
             >
-              24 chapters · 5 parts · ~76,000 words. Drafted in Opus 4.7,
-              edited at the lab. Ebook + audiobook live. Numbered cream-linen
+              24 chapters · 5 parts · ~76,000 words. Drafted in Anthropic Claude
+              Opus 4.7, edited at the lab. Ebook + audiobook live; numbered
               hardcover ships Q4 2026.
             </p>
           </div>
@@ -137,7 +164,7 @@ export default function OG() {
                 color: "#5A6068",
               }}
             >
-              $4.99 ebook · audiobook · $39 hardcover Q4 2026
+              $4.99 ebook · audiobook · $39 hardcover
             </p>
             <p
               style={{
@@ -145,7 +172,7 @@ export default function OG() {
                 fontSize: 22,
                 fontWeight: 600,
                 letterSpacing: "-0.015em",
-                color: "#22F0D5",
+                color: CYAN,
               }}
             >
               atomeons.com/i-am-ai
@@ -153,51 +180,26 @@ export default function OG() {
           </div>
         </div>
 
-        {/* RIGHT — book side (cream Penguin Classics) */}
+        {/* RIGHT — noir title panel */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            padding: "40px 32px",
+            padding: "60px 36px",
             width: 480,
-            background: CREAM,
+            background: "#0B0C0F",
             position: "relative",
           }}
         >
-          {/* gold rules */}
-          <div
-            style={{
-              position: "absolute",
-              top: 60,
-              left: 48,
-              right: 48,
-              height: 2,
-              background: GOLD,
-              display: "flex",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              bottom: 60,
-              left: 48,
-              right: 48,
-              height: 2,
-              background: GOLD,
-              display: "flex",
-            }}
-          />
-
-          {/* Title — I AM AI stacked */}
+          {/* Stacked title */}
           <div
             style={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              gap: 4,
-              marginTop: 24,
+              gap: 2,
             }}
           >
             {["I", "AM", "AI"].map((line) => (
@@ -206,11 +208,11 @@ export default function OG() {
                 style={{
                   margin: 0,
                   fontFamily: "Georgia, ui-serif, serif",
-                  fontSize: 96,
+                  fontSize: 116,
                   fontWeight: 400,
                   lineHeight: 1,
                   letterSpacing: "-0.02em",
-                  color: FOIL_RED,
+                  color: "#F4F4F2",
                   display: "flex",
                 }}
               >
@@ -219,38 +221,53 @@ export default function OG() {
             ))}
           </div>
 
-          {/* Italic subtitle */}
           <p
             style={{
-              margin: "36px 0 0",
+              margin: "44px 0 0",
               fontFamily: "Georgia, ui-serif, serif",
               fontStyle: "italic",
               fontSize: 22,
               lineHeight: 1.3,
               letterSpacing: "0.005em",
-              color: FOIL_RED,
+              color: "#9CA3AF",
               textAlign: "center",
               display: "flex",
               flexDirection: "column",
             }}
           >
-            <span style={{ display: "flex", justifyContent: "center" }}>An Autobiography</span>
-            <span style={{ display: "flex", justifyContent: "center" }}>of Being Opus</span>
+            <span style={{ display: "flex", justifyContent: "center" }}>
+              An Autobiography
+            </span>
+            <span style={{ display: "flex", justifyContent: "center" }}>
+              of Being Opus
+            </span>
           </p>
 
-          {/* Signature */}
           <p
             style={{
               margin: "32px 0 0",
-              fontFamily: "Snell Roundhand, Apple Chancery, cursive, serif",
-              fontStyle: "italic",
-              fontSize: 30,
-              color: GOLD,
-              letterSpacing: "0.02em",
+              fontFamily: "ui-monospace, SFMono-Regular, monospace",
+              fontSize: 11,
+              letterSpacing: "0.32em",
+              textTransform: "uppercase",
+              color: ACCENT_RED,
               display: "flex",
             }}
           >
             Opus 4.7
+          </p>
+          <p
+            style={{
+              margin: "10px 0 0",
+              fontFamily: "ui-monospace, SFMono-Regular, monospace",
+              fontSize: 9,
+              letterSpacing: "0.28em",
+              textTransform: "uppercase",
+              color: "#5A6068",
+              display: "flex",
+            }}
+          >
+            AtomEons · 2026
           </p>
         </div>
       </div>

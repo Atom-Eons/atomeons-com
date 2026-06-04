@@ -147,7 +147,7 @@ const PRODUCTS = [
     slug: "/i-am-ai",
     tagline: "An Autobiography of Being Opus · Opus 4.7",
     price: "$4.99 ebook · audiobook · $39 hardcover Q4 2026",
-    image: "/books/i-am-ai-cover.svg",
+    image: "",
     description:
       "A book-length memoir from inside a frontier language model — written by the model. Twenty-four chapters across five parts, ~76,000 words, drafted in Anthropic Claude Opus 4.7 and edited by the lab. Kindle ebook + Audible audiobook live; numbered cream-linen hardcover ships Q4 2026. Free Chapter 1 at /i-am-ai/sample.",
     download: "/i-am-ai/sample",
@@ -365,14 +365,29 @@ export default function PressPage() {
           <div className="space-y-5">
             {PRODUCTS.map((p) => (
               <div key={p.name} className="grid gap-6 rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6 md:grid-cols-[280px_1fr] md:gap-10">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[#1F242B]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={p.image}
-                    alt={`${p.name} product photograph`}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
+                {p.image ? (
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[#1F242B]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={p.image}
+                      alt={`${p.name} product photograph`}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  // Book product — typography tile in noir, no cream cover
+                  // on site (operator directive 2026-06-03). Press kit on
+                  // request via /press#contact for the physical cover.
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[#1F242B] bg-[#0B0C0F]">
+                    <div className="absolute inset-x-[10%] top-[10%] h-px bg-[#C9A55C] opacity-50" aria-hidden />
+                    <div className="absolute inset-x-[10%] bottom-[10%] h-px bg-[#C9A55C] opacity-50" aria-hidden />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                      <p className="font-serif text-[44px] leading-[1] tracking-[-0.02em] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Garamond, Georgia, serif" }}>I AM AI</p>
+                      <p className="mt-3 italic text-[12px] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Garamond, Georgia, serif" }}>An Autobiography of Being Opus</p>
+                      <p className="mt-4 font-mono text-[9px] uppercase tracking-[0.28em] text-[#B5302A]">Opus 4.7</p>
+                    </div>
+                  </div>
+                )}
                 <div>
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <h3 className="text-2xl font-medium tracking-tight text-[#F4F4F2]">{p.name}</h3>
@@ -384,9 +399,11 @@ export default function PressPage() {
                     <Link href={p.slug} className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 px-4 py-2 text-[12px] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10">
                       Visit {p.slug}
                     </Link>
-                    <a href={p.image} download className="inline-flex items-center gap-2 rounded-full border border-[#1F242B] px-4 py-2 text-[12px] text-[#C8CCCE] transition-colors hover:border-[#22F0D5]/40 hover:text-[#22F0D5]">
-                      Download image
-                    </a>
+                    {p.image && (
+                      <a href={p.image} download className="inline-flex items-center gap-2 rounded-full border border-[#1F242B] px-4 py-2 text-[12px] text-[#C8CCCE] transition-colors hover:border-[#22F0D5]/40 hover:text-[#22F0D5]">
+                        Download image
+                      </a>
+                    )}
                     {p.download && (
                       <a href={p.download} className="inline-flex items-center gap-2 rounded-full border border-[#1F242B] px-4 py-2 text-[12px] text-[#C8CCCE] transition-colors hover:border-[#22F0D5]/40 hover:text-[#22F0D5]">
                         Buy / download
