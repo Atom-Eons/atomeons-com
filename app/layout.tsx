@@ -25,7 +25,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AtomBoot } from "./_components/AtomBoot";
 import { StickyBuyBar } from "./_components/StickyBuyBar";
 import { LabTicker } from "./_components/v2/LabTicker";
-import { LaunchBanner } from "./_components/LaunchBanner";
 import { AmbientSignature } from "./_components/AmbientSignature";
 
 /**
@@ -188,7 +187,11 @@ export default function RootLayout({
         <AtomBoot />
         <div className="boot-bar" aria-hidden />
         <MadeWithOrangebox />
-        <LaunchBanner />
+        {/* LaunchBanner removed 2026-06-04: the ORANGEBOX free-week
+            countdown was covering the now-fixed top nav. The banner
+            component itself stays in the repo (app/_components/
+            LaunchBanner.tsx) so a future launch can re-enable it by
+            uncommenting one import + one element. */}
         <Header />
         {/* pt-16 reserves the 64px the fixed Header occupies. The
             LaunchBanner above the Header is part of the normal flow
