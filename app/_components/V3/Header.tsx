@@ -87,6 +87,12 @@ const NAV: readonly NavItem[] = [
   },
   {
     kind: "link",
+    label: "Supermodels",
+    href: "/supermodels",
+    childHrefs: ["/supermodels"],
+  },
+  {
+    kind: "link",
     label: "Cyber",
     href: "/learn/cyber",
     childHrefs: ["/learn/cyber"],

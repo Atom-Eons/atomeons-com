@@ -67,6 +67,15 @@ const REDIRECTS: Record<string, string> = {
   "/chapter1": "/i-am-ai/sample",
   "/sample": "/i-am-ai/sample",
   "/free-sample": "/i-am-ai/sample",
+  // model rankings aliases — /models, /rankings, /hottest, /top-models all
+  // land on /supermodels (the AtomEons reasoning ranking issue)
+  "/models": "/supermodels",
+  "/model-rankings": "/supermodels",
+  "/rankings": "/supermodels",
+  "/hottest": "/supermodels",
+  "/hottest-models": "/supermodels",
+  "/top-models": "/supermodels",
+  "/leaderboard": "/supermodels",
   // ai film removed 2026-06-03; legacy /film → /books
   "/film": "/books",
   "/cinema": "/books",

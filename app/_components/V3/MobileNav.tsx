@@ -26,6 +26,7 @@ type NavSection =
 
 const SECTIONS: NavSection[] = [
   { kind: "link", href: "/research", label: "Research" },
+  { kind: "link", href: "/supermodels", label: "Supermodels" },
   { kind: "link", href: "/cyber", label: "Cyber" },
   {
     kind: "group",
