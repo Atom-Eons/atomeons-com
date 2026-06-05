@@ -1,92 +1,67 @@
-I AM AI audiobook · real production facts from the ACX upload sheet
+Publish 5 founder's-view letter backfill · Jun 1–5 · close the May 31 gap
 
-Operator directive: "just grab the file and pull any useful info but
-dont take it all"
+Operator directive 2026-06-05: "run all days updates, papers, founders
+letter, new releases, items we were doing but didnt deploy"
 
-Read the ACX upload sheet at C:\Users\a\Downloads\I-AM-AI-ACX-Audiobook-
-Upload-Sheet.md and pulled only the facts that belong on the public
-site. Left the upload-flow operational notes (categories, royalty
-math, pre-flight checklist, cover regen prompt) on disk where they
-belong.
+PENDING SINCE JUN 3 — five letters drafted in this worktree at
+`.scripts/founders-view-letters/` (2026-06-03-*.md) but never published.
+Last live letter on /founders-view was 2026-05-31 — a five-day gap.
 
-PRODUCTION FACTS NOW ACCURATE EVERYWHERE
+Published all 5 directly via Supabase MCP execute_sql into
+public.founders_view_posts. Backdated published_at across Jun 1–5 to
+fill the calendar gap one letter per day, matching the nightly 8pm ET
+broadcast cadence.
 
-  Narrator      Microsoft Andrew (Neural Voice)
-                — NOT Jane (operator-corrected last commit)
-                — NOT ElevenLabs (my second wrong guess, also corrected)
-                The real production voice per the ACX sheet's
-                "Narrator: Microsoft Andrew (Neural Voice)" field.
+WHAT WENT LIVE
 
-  Runtime       ~9 hours (was incorrectly stated as ~6.5 hours)
-                ACX tier 5–10 hr → Audible retail price $14.95
+  Jun 1  Anduril Fury And The Death Of Cost-Plus Defense  (571 w)
+         theme: defense-industrial-base
+         /founders-view/2026-06-01-anduril-fury-and-the-death-of-cost-plus-defense
 
-  Tracks        27 total
-                01 Opening Credits + 02–25 Chapters 1–24 + 26 Coda +
-                27 Closing Credits
+  Jun 2  The Scaling Curve Bent And Nobody Wanted To Say It  (593 w)
+         theme: frontier-models
+         /founders-view/2026-06-02-the-scaling-curve-bent-and-nobody-wanted-to-say-it
 
-  Producer      B00KMAKR by ÆoNs Research Laboratory
-                — the lab's own publishing cockpit (one of the two
-                shipping products). This is a strong proof point:
-                the lab uses the tool it sells.
+  Jun 3  The backdoor that almost ate the world  (558 w)
+         theme: supply-chain-security
+         /founders-view/2026-06-03-the-backdoor-that-almost-ate-the-world
 
-  Mastering     ACX-mastered · 192 kbps CBR MP3 · 44.1 kHz mono ·
-                -20 LUFS integrated · true peak ≤ -3 dB ·
-                0.75s head room tone · 3.0s tail room tone
+  Jun 4  The wiretap room had a second door  (606 w)
+         theme: nation-state-cyber
+         /founders-view/2026-06-04-the-wiretap-room-had-a-second-door
 
-  Disclosure    AI-narration declared on the ACX upload (mandatory
-                since 2024). Verbal disclosure on the Opening Credits
-                file itself. Same disclosure in the EPUB front +
-                back matter.
+  Jun 5  The eighty-thousand-dollar PDF and the free one  (589 w)
+         theme: ai-publishing-economics
+         /founders-view/2026-06-05-the-eighty-thousand-dollar-pdf-and-the-free-one
 
-FILES UPDATED (surgical, not bulk)
+VERIFICATION
 
-  app/i-am-ai/page.tsx
-    - BOOK.formatAudio
-    - BOOK.priceAudio (was "pricing set by ACX at release"; now $14.95)
-    - Reading guide "Aloud" item
-    - § 09 Read/Listen/Pre-order Audible card
-      · price line: $14.95 · Audible · 1 credit
-      · body: narrator + 27 tracks + 9 hours + B00KMAKR + ACX
+  All five individual letter URLs return 200 with clean UTF-8 (18+
+  em-dashes preserved per letter, 0 mojibake characters). The
+  /founders-view index lists all five in the correct chronological
+  position (ISR revalidate=300s; force-fetched each slug to populate
+  the edge cache).
 
-  app/i-am-ai/listen/page.tsx
-    - metadata.description
-    - metadata.openGraph.description
-    - chapter-head narrator credit line
-    - buy-rail "Continue with..." description
+HOW
 
-  app/i-am-ai/listen/opengraph-image.tsx
-    - alt text
-    - body copy
+  1. .scripts/build-publish-backfill.ps1 — PowerShell script that
+     parses each .md file (UTF-8), extracts SUBJECT + OPENING + body,
+     slugifies, and emits a single SQL transaction with dollar-quoted
+     bodies ($body_md$...$body_md$) — handles em-dashes, apostrophes,
+     and Markdown without escaping headaches.
+  2. .scripts/publish-backfill.sql — the emitted SQL (21 KB, 5
+     INSERTs in one transaction). Kept in repo as the audit receipt.
+  3. Executed via Supabase MCP execute_sql against project
+     orangebox (sthziuzmreqnrxmllodj). All 5 rows committed.
 
-  app/press/page.tsx
-    - BOILERPLATE_50  (one-paragraph)
-    - BOILERPLATE_100 (two-paragraph)
-    - BOILERPLATE_250 (full)
-    - PRODUCTS · I AM AI description
-    - IAMAI_FACTS · Audiobook row
-    - I AM AI hero release block
+WHAT THIS DOESN'T DO
 
-  public/llms.txt
-    - /i-am-ai/listen entry
-
-UNRELATED ELEVENLABS MENTIONS PRESERVED
-
-  app/ai/page.tsx — generic indie-author opportunity description
-  app/learn/synthesis/[slug]/page.tsx — synthesis lesson content
-  public/llms.txt line 104 — general /learn tools list
-
-These are accurate uses of ElevenLabs as a real voice-synthesis
-platform, unrelated to the I AM AI audiobook production. Untouched.
-
-NOT INCLUDED ON SITE (lives only in /Downloads)
-
-  Royalty math (40% ACX Exclusive, $5.98/unit at full price)
-  Pre-flight checklist (8 items)
-  Cover-regeneration Midjourney prompt
-  Audible Plus / KU strategy discussion
-  Findaway vs Exclusive distribution decision
-  Author Central post-upload steps
-
-  These are operator-private upload-flow notes. Not site content.
+  - No auto-tweet. The /api/admin/publish-letter route calls
+    tweetLetter() on insert; this direct-DB path bypasses that.
+    Tweets, if desired, must be posted manually or via the API
+    endpoint with CRON_SECRET. The five letters are on the public
+    site regardless.
+  - No revalidate webhook fired. ISR refreshes naturally within
+    5 minutes. Already validated by hitting each slug directly.
 
 Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
