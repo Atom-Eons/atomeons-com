@@ -181,6 +181,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/i-am-ai/listen`, lastModified: now, changeFrequency: "weekly", priority: 0.92 },
     { url: `${BASE}/supermodels`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE}/learn/vertical`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/q`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/llm-routes.json`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
     { url: `${BASE}/books`, lastModified: now, changeFrequency: "weekly", priority: 0.92 },
     { url: `${BASE}/receipts`, lastModified: now, changeFrequency: "weekly", priority: 0.88 },
     { url: `${BASE}/legal`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },

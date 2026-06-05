@@ -89,6 +89,11 @@ const REDIRECTS: Record<string, string> = {
   "/industries": "/learn/vertical",
   "/applied": "/learn/vertical",
   "/ai-by-industry": "/learn/vertical",
+  // Q-pages — AI-search answers
+  "/questions": "/q",
+  "/answers": "/q",
+  "/faq-ai": "/q",
+  "/what-is": "/q",
   // ai film removed 2026-06-03; legacy /film → /books
   "/film": "/books",
   "/cinema": "/books",

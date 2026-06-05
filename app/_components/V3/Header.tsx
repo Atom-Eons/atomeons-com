@@ -123,6 +123,7 @@ const NAV: readonly NavItem[] = [
       { label: "Decode", href: "/learn/decode", hint: "Plain-language teardowns" },
       { label: "Calc", href: "/learn/calc", hint: "Operator-grade calculators" },
       { label: "Decoded papers", href: "/learn/decoded-papers", hint: "Twelve manuscripts, explained" },
+      { label: "Q · AI search", href: "/q", hint: "Twenty answered common questions" },
       { label: "Books", href: "/books", hint: "I AM AI, the Monograph, reading lists" },
       { label: "Monograph", href: "/research/lessons-from-sci-fi/monograph", hint: "Lessons from Sci-Fi, book-length" },
     ],
