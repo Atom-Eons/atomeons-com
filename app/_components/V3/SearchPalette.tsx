@@ -23,7 +23,7 @@ import { useRouter } from "next/navigation";
  *   .scripts/build-search-index.mjs (run pre-build).
  */
 
-type Record = {
+export type SearchRecord = {
   r: string; // route
   t: string; // title
   d: string; // description
@@ -34,14 +34,18 @@ type Record = {
   w: number; // priority weight 0..1
 };
 
-type IndexFile = {
+export type SearchIndexFile = {
   v: number;
   built: string;
   count: number;
-  records: Record[];
+  records: SearchRecord[];
 };
 
-type Scored = Record & { score: number; matchedField: string };
+export type Scored = SearchRecord & { score: number; matchedField: string };
+
+// Internal type-alias so the rest of this file keeps its existing names.
+type Record = SearchRecord;
+type IndexFile = SearchIndexFile;
 
 /* ────────────────────────────────────────────────────────────────────
  * Sublime-style subsequence match — returns score 0..1 (0 = no match)
@@ -86,7 +90,7 @@ function fuzzyScore(needle: string, hay: string): number {
   return 0.35 * tightness + 0.25 * startBonus + 0.4 * (bestConsec / n.length);
 }
 
-function rankRecord(query: string, r: Record): Scored | null {
+export function rankRecord(query: string, r: Record): Scored | null {
   const titleScore = fuzzyScore(query, r.t);
   const catScore = fuzzyScore(query, r.c) * 0.6;
   const routeScore = fuzzyScore(query, r.r.replace(/^\//, "").replace(/-/g, " ")) * 0.9;

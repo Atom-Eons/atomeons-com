@@ -26,6 +26,7 @@ import { AtomBoot } from "./_components/AtomBoot";
 import { StickyBuyBar } from "./_components/StickyBuyBar";
 import { LabTicker } from "./_components/v2/LabTicker";
 import { AmbientSignature } from "./_components/AmbientSignature";
+import { SearchInline } from "./_components/V3/SearchInline";
 
 /**
  * Site-wide viewport configuration.
@@ -196,8 +197,16 @@ export default function RootLayout({
         {/* pt-16 reserves the 64px the fixed Header occupies. The
             LaunchBanner above the Header is part of the normal flow
             (not fixed), so no extra offset is needed for it — when it
-            scrolls past, the Header continues to hover at top:0. */}
-        <div className="flex-1 pt-16">{children}</div>
+            scrolls past, the Header continues to hover at top:0.
+            SearchInline is sticky top-16 below the Header — when it's
+            in the document flow it occupies ~52px additional height
+            that gets accounted for naturally by the scroll position
+            (no extra padding needed since the bar is part of children
+            flow, not fixed-out-of-flow like the Header). */}
+        <div className="flex-1 pt-16">
+          <SearchInline />
+          {children}
+        </div>
         <Footer />
         <StickyBuyBar />
         <LabTicker />
