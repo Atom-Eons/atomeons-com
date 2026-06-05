@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import HackersGate from "./_components/HackersGate";
 import { CyberHeroImage } from "./_components/CyberHeroImage";
 import { CyberMontage } from "./_components/CyberMontage";
+import { LearnCyberAiSummary } from "../../_components/ai-summary/learn-cyber-ai-summary";
 
 /**
  * /learn/cyber — masters-grade ethical hacking career path index.
@@ -477,6 +478,7 @@ export default function CyberIndex() {
           </div>
         </div>
       </section>
-    </main>
+          <section aria-label="AI summary block" className="border-y border-[#1F242B] bg-[#08090B] py-12"><div className="mx-auto w-full max-w-4xl px-6 md:px-10"><LearnCyberAiSummary /></div></section>
+</main>
   );
 }

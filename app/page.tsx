@@ -73,6 +73,7 @@ import { FinalCTA } from "./_components/V3/FinalCTA";
 import { Products } from "./_components/V3/Products";
 import { BestCyber } from "./_components/V3/BestCyber";
 import { BestAILearning } from "./_components/V3/BestAILearning";
+import { HomeAiSummary } from "./_components/ai-summary/home-ai-summary";
 
 // ---------------------------------------------------------------------------
 // SHARED — Variable-Weight Reveal hook
@@ -482,15 +483,15 @@ const SCOREBOARD_ROWS: ScoreRow[] = [
     primary: { label: "See the rankings", href: "/supermodels" },
   },
   {
-    value: "82",
+    value: "110",
     unit: "deep dives · free, CC-BY",
     sentence: (
       <>
-        <strong className="font-medium text-[#F4F4F2]">82 long-form
+        <strong className="font-medium text-[#F4F4F2]">110 long-form
         teach-yourself pages</strong>{" "}
         <span className="text-[#9CA3AF]">
-          across cyber, AI atlas, and decoded research. Free. Open license.
-          The curriculum a working operator would actually read.
+          across cyber (40), AI atlas (32), decoded research (35), AI
+          search Q-pages (20). Free. Open license.
         </span>
       </>
     ),
@@ -498,15 +499,16 @@ const SCOREBOARD_ROWS: ScoreRow[] = [
     secondary: { label: "Decoded papers", href: "/learn/decoded-papers" },
   },
   {
-    value: "206",
+    value: "256",
     unit: "live pages · all real",
     sentence: (
       <>
-        <strong className="font-medium text-[#F4F4F2]">206 real pages,
+        <strong className="font-medium text-[#F4F4F2]">256 real pages,
         not a marketing tree.</strong>{" "}
         <span className="text-[#9CA3AF]">
           Every one navigable, indexed, and built for someone landing on
-          it cold. Hit ⌘K and search anything.
+          it cold. Hit ⌘K and search any of them — the index ships
+          alongside.
         </span>
       </>
     ),
@@ -1488,6 +1490,11 @@ export default function HomePageV3() {
       <ResearchSection />
       <Curriculum />
       <FounderNoteSection />
+      <section aria-label="AI summary block" className="border-y border-[#1F242B] bg-[#08090B] py-12">
+        <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
+          <HomeAiSummary />
+        </div>
+      </section>
       <FinalCTA />
     </main>
   );

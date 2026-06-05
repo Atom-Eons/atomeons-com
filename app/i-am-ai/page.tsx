@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { IAmAiAiSummary } from "../_components/ai-summary/i-am-ai-ai-summary";
 
 export const metadata: Metadata = {
   title: "I AM AI · An Autobiography of Being Opus · AtomEons",
@@ -888,6 +889,7 @@ export default function IAmAiBookPage() {
           </p>
         </div>
       </section>
-    </main>
+          <section aria-label="AI summary block" className="border-y border-[#1F242B] bg-[#08090B] py-12"><div className="mx-auto w-full max-w-4xl px-6 md:px-10"><IAmAiAiSummary /></div></section>
+</main>
   );
 }

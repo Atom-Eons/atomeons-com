@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { LearnHeroImage } from "../../_components/LearnHeroImage";
+import { LearnAtlasAiSummary } from "../../_components/ai-summary/learn-atlas-ai-summary";
 
 const ATLAS = [
   { slug: "history", title: "History of AI", body: "Symbolic AI → connectionism → transformers → frontier era. The chronology that explains why 2026 looks the way it does." },
@@ -66,6 +67,7 @@ export default function AtlasIndex() {
           </div>
         </div>
       </section>
-    </main>
+          <section aria-label="AI summary block" className="border-y border-[#1F242B] bg-[#08090B] py-12"><div className="mx-auto w-full max-w-4xl px-6 md:px-10"><LearnAtlasAiSummary /></div></section>
+</main>
   );
 }

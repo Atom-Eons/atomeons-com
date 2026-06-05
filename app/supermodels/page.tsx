@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { SupermodelsAiSummary } from "../_components/ai-summary/supermodels-ai-summary";
 
 export const metadata: Metadata = {
   title: "Hottest Supermodels · May 2026 · the AtomEons reasoning rankings",
@@ -890,6 +891,7 @@ export default function SupermodelsPage() {
           </p>
         </div>
       </section>
-    </main>
+          <section aria-label="AI summary block" className="border-y border-[#1F242B] bg-[#08090B] py-12"><div className="mx-auto w-full max-w-4xl px-6 md:px-10"><SupermodelsAiSummary /></div></section>
+</main>
   );
 }

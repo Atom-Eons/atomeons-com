@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { PressCopyButton, PressTabNav, PressSection } from "./PressClient";
+import { PressAiSummary } from "../_components/ai-summary/press-ai-summary";
 
 /**
  * /press — modern Electronic Press Kit.
@@ -735,6 +736,7 @@ export default function PressPage() {
       </div>
 
       <div className="h-24" />
-    </main>
+          <section aria-label="AI summary block" className="border-y border-[#1F242B] bg-[#08090B] py-12"><div className="mx-auto w-full max-w-4xl px-6 md:px-10"><PressAiSummary /></div></section>
+</main>
   );
 }
