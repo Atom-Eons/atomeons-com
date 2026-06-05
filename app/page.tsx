@@ -436,84 +436,98 @@ type ScoreRow = {
 
 const SCOREBOARD_ROWS: ScoreRow[] = [
   {
-    value: "206",
-    unit: "live routes",
-    sentence: (
-      <>
-        Two hundred and six public surfaces. Every one navigable, indexed,
-        and built for someone landing on it cold — not a marketing tree
-        with five real pages and 200 sitemap-stuffing redirects.
-      </>
-    ),
-    primary: { label: "Browse the routemap", href: "/sitemap.xml" },
-    secondary: { label: "/learn", href: "/learn" },
-  },
-  {
     value: "76,005",
-    unit: "words · I AM AI",
+    unit: "the book an AI wrote about itself",
     sentence: (
       <>
-        A frontier language model wrote a 76,005-word memoir about being a
-        frontier language model. The lab edited it, narrated it, published
-        it across Kindle, Audible, and a numbered hardcover, and shipped
-        Chapter 1 free in prose and Chapter 20 free in audio.
+        <strong className="font-medium text-[#F4F4F2]">An AI wrote a
+        memoir about itself.</strong>{" "}
+        <span className="text-[#9CA3AF]">
+          76,005 words. 24 chapters. Read Chapter 1 free. Listen to
+          Chapter 20 free.
+        </span>
       </>
     ),
-    primary: { label: "The book →", href: "/i-am-ai" },
-    secondary: { label: "Free audio · Chapter 20", href: "/i-am-ai/listen" },
+    primary: { label: "Read the book", href: "/i-am-ai" },
+    secondary: { label: "Listen free · Chapter 20", href: "/i-am-ai/listen" },
   },
   {
     value: "33",
-    unit: "Founder's View letters",
+    unit: "letters · one every night",
     sentence: (
       <>
-        A nightly broadcast at 8&nbsp;p.m. ET, every night since launch.
-        Decoded primary-source intelligence, defense procurement, frontier
-        AI, supply-chain compromise — written like a manuscript, not a
-        newsletter.
+        <strong className="font-medium text-[#F4F4F2]">A new letter
+        every night at 8 p.m. ET.</strong>{" "}
+        <span className="text-[#9CA3AF]">
+          Real intelligence, decoded. Defense, AI, cyber, supply chain.
+          Written like a manuscript. Free.
+        </span>
       </>
     ),
     primary: { label: "Tonight's letter", href: "/founders-view" },
   },
   {
     value: "12",
-    unit: "supermodels ranked",
+    unit: "AIs ranked by real reasoning",
     sentence: (
       <>
-        The May 2026 reasoning rankings, scored against four independent
-        public leaderboards (LMArena · Humanity's Last Exam · Aider
-        Polyglot · Artificial Analysis). No vendor decks. No paid threads.
-        Receipts only.
+        <strong className="font-medium text-[#F4F4F2]">Which AI is
+        actually best at thinking?</strong>{" "}
+        <span className="text-[#9CA3AF]">
+          May 2026 rankings against four independent benchmarks. No vendor
+          decks, no paid threads. Receipts only.
+        </span>
       </>
     ),
     primary: { label: "See the rankings", href: "/supermodels" },
   },
   {
     value: "82",
-    unit: "deep-dives + decodings",
+    unit: "deep dives · free, CC-BY",
     sentence: (
       <>
-        Thirty-one cyber catalog pages. Twenty-six atlas field-maps of the
-        AI discipline. Twenty-five arXiv papers translated into plain
-        English. The curriculum a working operator would actually read.
+        <strong className="font-medium text-[#F4F4F2]">82 long-form
+        teach-yourself pages</strong>{" "}
+        <span className="text-[#9CA3AF]">
+          across cyber, AI atlas, and decoded research. Free. Open license.
+          The curriculum a working operator would actually read.
+        </span>
       </>
     ),
-    primary: { label: "Atlas", href: "/learn/atlas" },
+    primary: { label: "Start here", href: "/learn" },
     secondary: { label: "Decoded papers", href: "/learn/decoded-papers" },
+  },
+  {
+    value: "206",
+    unit: "live pages · all real",
+    sentence: (
+      <>
+        <strong className="font-medium text-[#F4F4F2]">206 real pages,
+        not a marketing tree.</strong>{" "}
+        <span className="text-[#9CA3AF]">
+          Every one navigable, indexed, and built for someone landing on
+          it cold. Hit ⌘K and search anything.
+        </span>
+      </>
+    ),
+    primary: { label: "Browse it all", href: "/learn" },
+    secondary: { label: "Press kit", href: "/press" },
   },
   {
     value: "1 · 0",
     unit: "operator · investors",
     sentence: (
       <>
-        One operator. Marco Island, Florida. Zero investors, zero
-        subscriptions, zero ads, zero affiliate revenue, zero employees.
-        Everything above shipped through a single person and a fleet of
-        named AI agents — the lab uses the tools it sells.
+        <strong className="font-medium text-[#F4F4F2]">Built by one
+        person. No outside capital.</strong>{" "}
+        <span className="text-[#9CA3AF]">
+          Marco Island, Florida. Zero investors. Zero subscriptions. Zero
+          ads. The lab uses the tools it sells — and sells what it uses.
+        </span>
       </>
     ),
-    primary: { label: "The manifesto · 14 clauses", href: "/manifesto" },
-    secondary: { label: "About", href: "/about" },
+    primary: { label: "Manifesto · 14 clauses", href: "/manifesto" },
+    secondary: { label: "About the lab", href: "/about" },
   },
 ];
 
@@ -560,18 +574,18 @@ function ScoreboardSection() {
         </p>
 
         <h2
-          className="mt-8 max-w-[20ch] text-balance text-[clamp(48px,8vw,120px)] font-extralight leading-[0.98] tracking-[-0.045em] text-[#F4F4F2]"
+          className="mt-8 max-w-[22ch] text-balance text-[clamp(48px,8vw,120px)] font-extralight leading-[0.98] tracking-[-0.045em] text-[#F4F4F2]"
         >
-          Six numbers. Every one tappable. Every one a receipt.
+          Six things the lab built. <span className="text-[#22F0D5]">Tap any number.</span>
         </h2>
 
         <p
-          className="mt-8 max-w-[68ch] font-serif text-[clamp(18px,1.6vw,22px)] leading-[1.55] text-[#9CA3AF]"
+          className="mt-8 max-w-[60ch] font-serif text-[clamp(18px,1.6vw,22px)] leading-[1.55] text-[#9CA3AF]"
           style={{ fontFamily: "Newsreader, Georgia, serif" }}
         >
-          No projections. No inflated KPIs. No "happy customers." Each row
-          below is a complete sentence — the number is the headline, the
-          link is the proof.
+          Real pages. Real benchmarks. Real audio. No projections, no
+          inflated KPIs, no "happy customers." Each row drops you straight
+          onto the thing.
         </p>
       </div>
 
@@ -585,8 +599,12 @@ function ScoreboardSection() {
             key={i}
             className="group relative grid grid-cols-1 gap-y-6 px-6 py-12 transition-colors hover:bg-[#0B0C0F] md:grid-cols-[minmax(0,_1.05fr)_minmax(0,_1fr)] md:gap-x-14 md:py-16 md:px-10 lg:px-14"
           >
-            {/* LEFT — the number */}
-            <div className="flex flex-col">
+            {/* LEFT — the number (clickable, drops you on the surface) */}
+            <Link
+              href={row.primary.href}
+              className="flex flex-col focus-visible:outline-none"
+              aria-label={`${row.value} — ${row.primary.label}`}
+            >
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
                 <span className="text-[#1F242B]">
                   R/{String(i + 1).padStart(2, "0")}
@@ -594,7 +612,7 @@ function ScoreboardSection() {
                 · {row.unit}
               </p>
               <p
-                className="mt-4 font-display leading-[0.92] tracking-[-0.045em] tabular-nums text-[#F4F4F2]"
+                className="mt-4 font-display leading-[0.92] tracking-[-0.045em] tabular-nums text-[#F4F4F2] transition-colors group-hover:text-[#22F0D5] motion-safe:transition-[font-variation-settings] motion-safe:duration-300 group-hover:[font-variation-settings:'wght'_320]"
                 style={{
                   fontFamily:
                     "Inter, ui-sans-serif, system-ui, sans-serif",
@@ -604,12 +622,12 @@ function ScoreboardSection() {
               >
                 {row.value}
               </p>
-            </div>
+            </Link>
 
             {/* RIGHT — the sentence + links */}
             <div className="flex flex-col justify-center">
               <p
-                className="max-w-[52ch] font-serif text-[clamp(20px,2vw,28px)] leading-[1.4] text-[#F4F4F2]"
+                className="max-w-[52ch] font-serif text-[clamp(20px,2vw,28px)] leading-[1.35] text-[#F4F4F2]"
                 style={{ fontFamily: "Newsreader, Georgia, serif" }}
               >
                 {row.sentence}
@@ -620,7 +638,7 @@ function ScoreboardSection() {
                   className="inline-flex items-center gap-2 border-b border-[#22F0D5]/60 pb-1 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:border-[#22F0D5]"
                 >
                   <span>{row.primary.label}</span>
-                  <span aria-hidden>↗</span>
+                  <span aria-hidden>→</span>
                 </Link>
                 {row.secondary ? (
                   <Link

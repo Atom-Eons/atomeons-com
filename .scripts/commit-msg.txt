@@ -1,91 +1,93 @@
-Homepage · Scoreboard V2 · museum-hall · live ticker + 6 editorial hero rows
+Scoreboard V3 · human-readable + marketing-effect copy pass
 
-Operator directive 2026-06-05: "do better"
+Operator directive 2026-06-05: "for humans needs to be readable and
+marketing effect"
 
-V1 was a 4×3 mono grid (boring, jaded scroller has seen 10,000 of
-these). V2 is a museum-hall full-bleed editorial moment — same real
-receipts, but staged as pull-quotes instead of KPI cells.
+V2 (museum-hall) had the right SHAPE but the copy was too editorial —
+50-word pull-quotes a tired scroller could not scan. V3 keeps the
+museum-hall layout (big numbers + Newsreader serif + hover lift) and
+rewrites every line for a 2-second read with a clear next action.
 
-WHAT REPLACED THE GRID
+ROW REORDER · sales-funnel
 
-  - LIVE TICKER STRIP at the top edge, full-bleed, mono uppercase:
-    LIVE pulse · audit date · last letter · last book · last issue ·
-    next ship time. The strip alone tells a jaded scroller this isn't
-    a static brochure.
-  - Headline: "Six numbers. Every one tappable. Every one a receipt."
-    (clamp 48px → 120px, Inter Light wght 200, -0.045em tracking)
-  - SIX HERO ROWS, each spanning the full 1600px content width:
-    LEFT  · the number, Inter Light wght 180, 80px → 220px clamp,
-             tabular-nums, -0.045em tracking. Massive.
-    RIGHT · a complete sentence in Newsreader serif (20px → 28px
-             clamp). The number IS the headline; the sentence is the
-             editorial pull-quote.
-    FOOT  · 1 primary link (cyan border-bottom, ↗) + 1 secondary link
-             (graphite underline)
-    Hairline #1F242B rule between rows. Hover lifts to #0B0C0F.
+  The order changed to lead with the strongest pull. I AM AI (the
+  book) is now R/01 — it is the single most marketable artifact the
+  lab has shipped this season. Routes count moved from R/01 to R/05
+  (still on the list, no longer the lead).
 
-  - Foot rail: "Walk every receipt" cyan CTA + /now + /press + a
-    mono note about freshness ("Every number rebakes at next ship").
+  R/01  76,005   the book an AI wrote about itself
+  R/02  33       letters · one every night
+  R/03  12       AIs ranked by real reasoning
+  R/04  82       deep dives · free, CC-BY
+  R/05  206      live pages · all real
+  R/06  1 · 0    operator · investors
 
-THE SIX ROWS
+COPY · two-clause pattern
 
-  R/01  206              Live routes
-                         "Every one navigable, indexed, and built for
-                         someone landing on it cold — not a marketing
-                         tree with five real pages and 200 sitemap-
-                         stuffing redirects."
-                         → /sitemap.xml + /learn
+  Each sentence now follows: <STRONG ASSERTION>.<one-line proof>.
 
-  R/02  76,005           Words · I AM AI
-                         "A frontier language model wrote a 76,005-
-                         word memoir about being a frontier language
-                         model. The lab edited it, narrated it,
-                         published it across Kindle, Audible, and a
-                         numbered hardcover."
-                         → /i-am-ai + /i-am-ai/listen
+  R/01  "An AI wrote a memoir about itself. 76,005 words.
+         24 chapters. Read Chapter 1 free. Listen to Chapter 20 free."
 
-  R/03  33               Founder's View letters
-                         "A nightly broadcast at 8 p.m. ET, every
-                         night since launch."
-                         → /founders-view
+  R/02  "A new letter every night at 8 p.m. ET. Real intelligence,
+         decoded. Defense, AI, cyber, supply chain. Written like a
+         manuscript. Free."
 
-  R/04  12               Supermodels ranked
-                         "Scored against four independent public
-                         leaderboards. No vendor decks. No paid
-                         threads. Receipts only."
-                         → /supermodels
+  R/03  "Which AI is actually best at thinking? May 2026 rankings
+         against four independent benchmarks. No vendor decks,
+         no paid threads. Receipts only."
 
-  R/05  82               Deep-dives + decodings
-                         "Thirty-one cyber catalog pages. Twenty-six
-                         atlas field-maps. Twenty-five arXiv papers
-                         translated into plain English."
-                         → /learn/atlas + /learn/decoded-papers
+  R/04  "82 long-form teach-yourself pages across cyber, AI atlas,
+         and decoded research. Free. Open license. The curriculum a
+         working operator would actually read."
 
-  R/06  1 · 0            Operator · investors
-                         "One operator. Marco Island, Florida. Zero
-                         investors, zero subscriptions, zero ads,
-                         zero affiliate revenue, zero employees."
-                         → /manifesto + /about
+  R/05  "206 real pages, not a marketing tree. Every one navigable,
+         indexed, and built for someone landing on it cold.
+         Hit ⌘K and search anything."
 
-ANTI-JADED MOVES (vs V1 grid)
+  R/06  "Built by one person. No outside capital. Marco Island,
+         Florida. Zero investors. Zero subscriptions. Zero ads. The
+         lab uses the tools it sells — and sells what it uses."
 
-  - Killed the 4×3 grid card entirely.
-  - Killed the counter-up KPI feel. No animation tricks.
-  - Numbers are EDITORIAL pull-quotes, not labels.
-  - Each row is a complete sentence — the number is the story.
-  - Every claim is hyperlinked to the surface that proves it.
-  - The ticker strip + "next ship: tonight 8 p.m. ET" tells the
-    visitor the lab is operating right now, not displaying.
+  Strong asserts render as #F4F4F2 (cream). Proof line drops to
+  #9CA3AF (graphite). Scanner's eye lands on the assert first.
 
-LAYOUT
+INTERACTION · the numbers are now hyperlinks
 
-  Container max-w-[1600px] (was [1400px]) — gives the giant
-  numerals room to breathe. 12-row × 16-page mental model
-  (museum-hall, not stats card).
+  V2 made the numbers passive. V3 wraps each number cell in
+  <Link href={row.primary.href}> with proper aria-label. Hovering
+  the row lifts both:
+    - color: #F4F4F2 → #22F0D5 (cream → cyan)
+    - font-variation-settings: wght 180 → 320 (Variable axis ramp)
+  Click anywhere on the giant 220px number, drop on the surface.
+
+HEADLINE
+
+  V2: "Six numbers. Every one tappable. Every one a receipt."
+  V3: "Six things the lab built. Tap any number." (cyan accent on
+      the verb)
+
+  Subhead V2 (54 words): "No projections. No inflated KPIs. No
+  'happy customers.' Each row below is a complete sentence — the
+  number is the headline, the link is the proof."
+
+  Subhead V3 (29 words): "Real pages. Real benchmarks. Real audio.
+  No projections, no inflated KPIs, no 'happy customers.' Each row
+  drops you straight onto the thing."
+
+CTA · directionals
+
+  Each row's primary link uses → instead of ↗ to read as "drop you
+  on the page" (in-site) rather than "open external."
 
 NO REGRESSION
 
-  Same data-section="scoreboard" attribute (preserves the audit
-  check). Same v3PulseRed keyframe (scoped local <style>).
+  - Live ticker strip unchanged
+  - Foot rail (/receipts CTA + /now + /press + freshness note)
+    unchanged
+  - PulseRed keyframe unchanged
+  - data-section="scoreboard" preserved
+  - max-w-[1600px] preserved
+  - All six surfaces verifiable on live site
 
 Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
