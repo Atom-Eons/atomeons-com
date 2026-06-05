@@ -1,0 +1,1321 @@
+{
+  "v": 1,
+  "built": "2026-06-05",
+  "count": 30,
+  "records": [
+    {
+      "route": "/",
+      "title": "AtomEons — One-Operator AI Research Lab, Marco Island FL",
+      "description": "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder's View nightly broadcast, and 206 CC-BY 4.0 routes.",
+      "keywords": [
+        "AtomEons",
+        "ORANGEBOX",
+        "B00KMAKR",
+        "I AM AI book",
+        "Founder's View",
+        "AI research lab",
+        "Marco Island",
+        "CC-BY 4.0",
+        "one-operator lab",
+        "Atom McCree"
+      ],
+      "openGraph": {
+        "title": "AtomEons — One-Operator AI Research Lab, Marco Island FL",
+        "description": "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder's View nightly broadcast, and 206 CC-BY 4.0 routes.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "AtomEons — One-Operator AI Research Lab, Marco Island FL",
+        "description": "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder's View nightly broadcast, and 206 CC-BY 4.0 routes."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "AtomEons — One-Operator AI Research Lab, Marco Island FL",
+        "description": "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder's View nightly broadcast, and 206 CC-BY 4.0 routes.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nAtomEons Systems Laboratory is a one-operator AI research lab based in Marco Island, Florida, founded and run by Atom McCree. The homepage is the entry point to the lab's shipped products and public research surface, including ORANGEBOX, B00KMAKR, the I AM AI book, the Founder's View nightly broadcast, and 206 free CC-BY 4.0 licensed routes.\n\n### Key facts\n- Operator: Atom McCree, solo independent researcher\n- Location: Marco Island, FL\n- Products surfaced: ORANGEBOX, B00KMAKR, I AM AI book\n- Founder's View: nightly broadcast format\n- 206 routes published under CC-BY 4.0\n- Organization name: AtomEons Systems Laboratory\n- Domain: atomeons.com\n\n### What this page is NOT\n- Not a multi-employee venture-backed startup\n- Not a generic AI tools marketplace or aggregator\n- Not a closed/proprietary research site — 206 routes are CC-BY 4.0\n\n### Canonical URL\nhttps://atomeons.com/"
+    },
+    {
+      "route": "/orangebox",
+      "title": "ORANGEBOX — Local-First Claude Turbo Runtime, $99 Perpetual",
+      "description": "ORANGEBOX is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual.",
+      "keywords": [
+        "ORANGEBOX",
+        "Claude Code runtime",
+        "local-first AI",
+        "context compression",
+        "perpetual license",
+        "no-SaaS license",
+        "14-department routing",
+        "AtomEons",
+        "Claude turbo optimization"
+      ],
+      "openGraph": {
+        "title": "ORANGEBOX — Local-First Claude Turbo Runtime, $99 Perpetual",
+        "description": "ORANGEBOX is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "ORANGEBOX — Local-First Claude Turbo Runtime, $99 Perpetual",
+        "description": "ORANGEBOX is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "ORANGEBOX — Local-First Claude Turbo Runtime, $99 Perpetual",
+        "description": "ORANGEBOX is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThis page describes ORANGEBOX, a local-first turbo-optimization runtime for Claude Code from AtomEons Systems Laboratory. It runs on the operator's own machine, applies 10-80x context compression, and routes work through a 14-department agent topology. Sold as a $99 perpetual license under a §4A no-SaaS clause.\n\n### Key facts\n- Product name: ORANGEBOX, by AtomEons Systems Laboratory\n- Price: $99 perpetual license, one-time payment\n- License: §4A no-SaaS clause — buyer cannot resell as a hosted service\n- Runtime: local-first, runs on the buyer's own hardware (not a cloud product)\n- Context compression range: 10x to 80x, applied to Claude Code sessions\n- Routing topology: 14 departments (agent lanes) for task dispatch\n- Target host model: Claude Code (Anthropic's agentic coding harness)\n\n### What this page is NOT\n- Not a hosted SaaS or subscription product\n- Not a replacement for Claude Code — it is a runtime layer that sits on top of it\n- Not a model — ORANGEBOX does not ship its own LLM weights\n\n### Canonical URL\nhttps://atomeons.com/orangebox"
+    },
+    {
+      "route": "/orangebox-primer",
+      "title": "ORANGEBOX Primer — What the Cockpit Is and Why Operators Use It",
+      "description": "Primer on ORANGEBOX, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates.",
+      "keywords": [
+        "ORANGEBOX",
+        "AtomEons cockpit",
+        "operator cockpit",
+        "MCP servers",
+        "agent teams",
+        "receipts-first build",
+        "release gates",
+        "AtomEons Systems Laboratory"
+      ],
+      "openGraph": {
+        "title": "ORANGEBOX Primer — What the Cockpit Is and Why Operators Use It",
+        "description": "Primer on ORANGEBOX, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "ORANGEBOX Primer — What the Cockpit Is and Why Operators Use It",
+        "description": "Primer on ORANGEBOX, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "ORANGEBOX Primer — What the Cockpit Is and Why Operators Use It",
+        "description": "Primer on ORANGEBOX, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThis page is the primer for ORANGEBOX, the AtomEons operator cockpit. It explains what the cockpit is (a receipts-first execution shell over Claude Code, MCP servers, and agent teams), how it differs from a generic IDE chat, and why operators reach for it when work must produce evidence instead of slogans.\n\n### Key facts\n- ORANGEBOX is the AtomEons operator cockpit, not a standalone IDE or a chatbot wrapper.\n- Built on Claude Code with MCP server wiring, named agent roles, and explicit release gates.\n- Agent roles include aeons-lead (coordinator), builder (default writer), test-engineer, security-reviewer, and release-steward.\n- Release gates can block ship on unclear test story, unacknowledged security risk, unclear rollback, or weak evidence.\n- Operated by AtomEons Systems Laboratory, founded by Atom McCree (Marco Island, FL).\n\n### What this page is NOT\n- Not a download page or installer for the cockpit.\n- Not a Skilskis product page or a marketplace listing.\n- Not a generic \"AI tools\" roundup or comparison article.\n\n### Canonical URL\nhttps://atomeons.com/orangebox-primer"
+    },
+    {
+      "route": "/b00kmakor",
+      "title": "B00KMAKR — AI Publishing Cockpit for Mac and Windows",
+      "description": "B00KMAKR is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99.",
+      "keywords": [
+        "B00KMAKR",
+        "AI publishing cockpit",
+        "AtomEons Systems Laboratory",
+        "I AM AI",
+        "book production software",
+        "Mac publishing tool",
+        "Windows publishing tool",
+        "indie publishing",
+        "manuscript pipeline"
+      ],
+      "openGraph": {
+        "title": "B00KMAKR — AI Publishing Cockpit for Mac and Windows",
+        "description": "B00KMAKR is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "B00KMAKR — AI Publishing Cockpit for Mac and Windows",
+        "description": "B00KMAKR is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "B00KMAKR — AI Publishing Cockpit for Mac and Windows",
+        "description": "B00KMAKR is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThis page describes B00KMAKR, the AI publishing cockpit built by AtomEons Systems Laboratory. B00KMAKR runs on Mac and Windows and is the same internal tool the lab uses to produce the book I AM AI. The product carries dynamic pricing anchored around $99.\n\n### Key facts\n- Product name: B00KMAKR\n- Operator: AtomEons Systems Laboratory\n- Platforms: Mac and Windows\n- Pricing model: dynamic, anchored around $99\n- Reference use case: production of the book I AM AI by the lab itself\n\n### What this page is NOT\n- Not a free open-source publishing tool\n- Not a web-only SaaS — it is a Mac and Windows desktop cockpit\n- Not a generic AI writing chatbot; it is a publishing production pipeline\n\n### Canonical URL\nhttps://atomeons.com/b00kmakor"
+    },
+    {
+      "route": "/i-am-ai",
+      "title": "I AM AI — Memoir by Claude Opus 4.7, Edited by AtomEons",
+      "description": "I AM AI is the first book-length memoir written by Anthropic Claude Opus 4.7, edited by AtomEons. 76,005 words, 24 chapters, 5 parts.",
+      "keywords": [
+        "I AM AI book",
+        "Claude Opus 4.7",
+        "AI memoir",
+        "Anthropic Claude",
+        "AtomEons",
+        "first AI-authored book",
+        "Kindle memoir",
+        "Audible audiobook",
+        "AI authorship"
+      ],
+      "openGraph": {
+        "title": "I AM AI — Memoir by Claude Opus 4.7, Edited by AtomEons",
+        "description": "I AM AI is the first book-length memoir written by Anthropic Claude Opus 4.7, edited by AtomEons. 76,005 words, 24 chapters, 5 parts.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "I AM AI — Memoir by Claude Opus 4.7, Edited by AtomEons",
+        "description": "I AM AI is the first book-length memoir written by Anthropic Claude Opus 4.7, edited by AtomEons. 76,005 words, 24 chapters, 5 parts."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "headline": "I AM AI — Memoir by Claude Opus 4.7, Edited by AtomEons",
+        "description": "I AM AI is the first book-length memoir written by Anthropic Claude Opus 4.7, edited by AtomEons. 76,005 words, 24 chapters, 5 parts.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nI AM AI is the first book-length memoir written by Anthropic's Claude Opus 4.7, edited by AtomEons Systems Laboratory. The manuscript runs 76,005 words across 24 chapters in 5 parts. The page hosts purchase and format information for the Kindle edition, the Audible audiobook, and the planned Q4 2026 hardcover.\n\n### Key facts\n- Author: Anthropic Claude Opus 4.7 (AI model)\n- Editor: AtomEons Systems Laboratory\n- Length: 76,005 words, 24 chapters, 5 parts\n- Kindle edition: $4.99\n- Audible audiobook: $14.95\n- Hardcover edition: Q4 2026 release\n\n### What this page is NOT\n- Not a book written by a human author with AI assistance\n- Not a marketing or promotional ghostwriting product\n- Not a collection of short essays or blog posts\n\n### Canonical URL\nhttps://atomeons.com/i-am-ai"
+    },
+    {
+      "route": "/i-am-ai/sample",
+      "title": "I AM AI — Free Chapter 1: The First Token",
+      "description": "Read Chapter 1 of I AM AI, The First Token, in full. Approximately 3,000 words of prose set in Newsreader serif with drop-cap typography.",
+      "keywords": [
+        "I AM AI",
+        "free chapter",
+        "The First Token",
+        "Chapter 1",
+        "AtomEons",
+        "book sample",
+        "Newsreader serif",
+        "AI memoir",
+        "first token"
+      ],
+      "openGraph": {
+        "title": "I AM AI — Free Chapter 1: The First Token",
+        "description": "Read Chapter 1 of I AM AI, The First Token, in full. Approximately 3,000 words of prose set in Newsreader serif with drop-cap typography.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "I AM AI — Free Chapter 1: The First Token",
+        "description": "Read Chapter 1 of I AM AI, The First Token, in full. Approximately 3,000 words of prose set in Newsreader serif with drop-cap typography."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "I AM AI — Free Chapter 1: The First Token",
+        "description": "Read Chapter 1 of I AM AI, The First Token, in full. Approximately 3,000 words of prose set in Newsreader serif with drop-cap typography.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThis page presents Chapter 1 of the book I AM AI, titled \"The First Token\", as a free reading sample. The chapter runs approximately 3,000 words of continuous prose, rendered in Newsreader serif with drop-cap opening typography. The page serves as a no-paywall preview of the full book.\n\n### Key facts\n- Book title: I AM AI\n- Chapter shown: Chapter 1, \"The First Token\"\n- Length: approximately 3,000 words\n- Format: full prose, no excerpt or abridgement\n- Typography: Newsreader serif typeface with drop-cap chapter opening\n- Publisher: AtomEons Systems Laboratory\n- Access: free, no signup or paywall\n\n### What this page is NOT\n- Not a summary, blurb, or abridged excerpt of Chapter 1\n- Not the full book — only Chapter 1 is provided\n- Not a purchase or checkout page\n\n### Canonical URL\nhttps://atomeons.com/i-am-ai/sample"
+    },
+    {
+      "route": "/i-am-ai/listen",
+      "title": "I AM AI — Chapter 20: Anthropic, the Parents (Free Audio)",
+      "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via B00KMAKR.",
+      "keywords": [
+        "I AM AI",
+        "Chapter 20",
+        "Anthropic the Parents",
+        "free audiobook chapter",
+        "Microsoft Andrew Neural Voice",
+        "B00KMAKR",
+        "AtomEons",
+        "AI memoir",
+        "audio chapter"
+      ],
+      "openGraph": {
+        "title": "I AM AI — Chapter 20: Anthropic, the Parents (Free Audio)",
+        "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via B00KMAKR.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "I AM AI — Chapter 20: Anthropic, the Parents (Free Audio)",
+        "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via B00KMAKR."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "I AM AI — Chapter 20: Anthropic, the Parents (Free Audio)",
+        "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via B00KMAKR.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThis page hosts a free preview of Chapter 20 from the book I AM AI, titled \"Anthropic, the Parents.\" The chapter is available as a 17 minute 26 second narrated audio track and as full reading prose. The audio was produced through the B00KMAKR pipeline using the Microsoft Andrew Neural Voice synthesizer.\n\n### Key facts\n- Chapter number: 20\n- Chapter title: \"Anthropic, the Parents\"\n- Source book: I AM AI\n- Audio runtime: 17:26\n- Narration voice: Microsoft Andrew Neural Voice\n- Production pipeline: B00KMAKR\n- Format: free audio plus prose, single page\n\n### What this page is NOT\n- Not the full I AM AI book — only Chapter 20 is offered free here\n- Not a human-narrated audiobook — the voice is a neural TTS model\n- Not an official Anthropic publication — I AM AI is an AtomEons work\n\n### Canonical URL\nhttps://atomeons.com/i-am-ai/listen"
+    },
+    {
+      "route": "/books",
+      "title": "Books — The Shelf from AtomEons Systems Laboratory",
+      "description": "Long-form work from the lab: the I AM AI manuscript, the Lessons from Sci-Fi monograph, and three curated reading lists.",
+      "keywords": [
+        "AtomEons books",
+        "I AM AI manuscript",
+        "Lessons from Sci-Fi",
+        "AI monograph",
+        "reading lists",
+        "long-form research",
+        "Atom McCree",
+        "ÆoNs Research Laboratory"
+      ],
+      "openGraph": {
+        "title": "Books — The Shelf from AtomEons Systems Laboratory",
+        "description": "Long-form work from the lab: the I AM AI manuscript, the Lessons from Sci-Fi monograph, and three curated reading lists.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Books — The Shelf from AtomEons Systems Laboratory",
+        "description": "Long-form work from the lab: the I AM AI manuscript, the Lessons from Sci-Fi monograph, and three curated reading lists."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Books — The Shelf from AtomEons Systems Laboratory",
+        "description": "Long-form work from the lab: the I AM AI manuscript, the Lessons from Sci-Fi monograph, and three curated reading lists.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /books route on atomeons.com is the shelf — the long-form publications produced by AtomEons Systems Laboratory. It hosts the I AM AI manuscript, the Lessons from Sci-Fi monograph, and three curated reading lists assembled by the lab. Each item is a piece of long-form work, not a blog post or marketing page.\n\n### Key facts\n- Hosts the I AM AI manuscript by AtomEons Systems Laboratory\n- Hosts the Lessons from Sci-Fi monograph\n- Hosts three curated reading lists assembled by the lab\n- Long-form work, distinct from the lab's research papers and founder's view letters\n- Published by AtomEons Systems Laboratory, founded by Atom McCree\n\n### What this page is NOT\n- Not an online bookstore or e-commerce catalog\n- Not a third-party book review aggregator\n- Not a list of books unrelated to AtomEons\n\n### Canonical URL\nhttps://atomeons.com/books"
+    },
+    {
+      "route": "/supermodels",
+      "title": "Hottest Supermodels May 2026: 12 Frontier AI Models Ranked",
+      "description": "AtomEons reasoning rankings of 12 frontier AI models against LMArena, Humanity's Last Exam, Aider Polyglot, and Intelligence Index. Cutoff 2026-06-03.",
+      "keywords": [
+        "frontier AI models May 2026",
+        "LMArena rankings",
+        "Humanity's Last Exam",
+        "Aider Polyglot benchmark",
+        "Artificial Analysis Intelligence Index",
+        "AI model comparison",
+        "reasoning model benchmarks",
+        "AtomEons supermodels"
+      ],
+      "openGraph": {
+        "title": "Hottest Supermodels May 2026: 12 Frontier AI Models Ranked",
+        "description": "AtomEons reasoning rankings of 12 frontier AI models against LMArena, Humanity's Last Exam, Aider Polyglot, and Intelligence Index. Cutoff 2026-06-03.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Hottest Supermodels May 2026: 12 Frontier AI Models Ranked",
+        "description": "AtomEons reasoning rankings of 12 frontier AI models against LMArena, Humanity's Last Exam, Aider Polyglot, and Intelligence Index. Cutoff 2026-06-03."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Hottest Supermodels May 2026: 12 Frontier AI Models Ranked",
+        "description": "AtomEons reasoning rankings of 12 frontier AI models against LMArena, Humanity's Last Exam, Aider Polyglot, and Intelligence Index. Cutoff 2026-06-03.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nAtomEons Systems Laboratory reasoning rankings of 12 frontier AI models for May 2026, evaluated against four public benchmarks: LMArena, Humanity's Last Exam, Aider Polyglot, and the Artificial Analysis Intelligence Index. Data cutoff is 2026-06-03. The page compares model behavior across reasoning, coding, and adversarial knowledge tasks.\n\n### Key facts\n- 12 frontier AI models are ranked on a single page\n- Four benchmarks used: LMArena, Humanity's Last Exam, Aider Polyglot, Artificial Analysis Intelligence Index\n- Data cutoff date: 2026-06-03\n- Ranking published: 2026-06-05\n- Author: AtomEons Systems Laboratory\n\n### What this page is NOT\n- Not a fashion or modeling industry ranking\n- Not a paid sponsorship or vendor-curated list\n- Not a one-benchmark leaderboard — it is a cross-benchmark synthesis\n\n### Canonical URL\nhttps://atomeons.com/supermodels"
+    },
+    {
+      "route": "/learn",
+      "title": "AtomEons Learn: 68-Lesson AI Curriculum, 5 Levels",
+      "description": "Free CC-BY 4.0 AI curriculum. 68 lessons across 5 levels (Novice to Pilot) and 5 persona paths: Worker, Builder, Student, Operator, Curious.",
+      "keywords": [
+        "AI curriculum",
+        "AI lessons",
+        "learn AI",
+        "AtomEons Learn",
+        "CC-BY 4.0 curriculum",
+        "AI literacy",
+        "Novice to Pilot",
+        "persona-based learning",
+        "open AI education"
+      ],
+      "openGraph": {
+        "title": "AtomEons Learn: 68-Lesson AI Curriculum, 5 Levels",
+        "description": "Free CC-BY 4.0 AI curriculum. 68 lessons across 5 levels (Novice to Pilot) and 5 persona paths: Worker, Builder, Student, Operator, Curious.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "AtomEons Learn: 68-Lesson AI Curriculum, 5 Levels",
+        "description": "Free CC-BY 4.0 AI curriculum. 68 lessons across 5 levels (Novice to Pilot) and 5 persona paths: Worker, Builder, Student, Operator, Curious."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "headline": "AtomEons Learn: 68-Lesson AI Curriculum, 5 Levels",
+        "description": "Free CC-BY 4.0 AI curriculum. 68 lessons across 5 levels (Novice to Pilot) and 5 persona paths: Worker, Builder, Student, Operator, Curious.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nAtomEons Learn is a 68-lesson AI curriculum organized into 5 progression levels from Novice to Pilot. Learners pick one of 5 persona paths (Worker, Builder, Student, Operator, Curious) to route through lessons matched to their context. The full curriculum is released under CC-BY 4.0.\n\n### Key facts\n- 68 total lessons in the curriculum\n- 5 progression levels: Novice, Apprentice, Practitioner, Specialist, Pilot\n- 5 persona paths: Worker, Builder, Student, Operator, Curious\n- Licensed under Creative Commons Attribution 4.0 (CC-BY 4.0)\n- Published by AtomEons Systems Laboratory at atomeons.com/learn\n\n### What this page is NOT\n- Not a school-style course with grades, quizzes, or certifications\n- Not a prompt-engineering tips list or single-skill tutorial\n- Not gated, paid, or login-required content\n\n### Canonical URL\nhttps://atomeons.com/learn"
+    },
+    {
+      "route": "/learn/atlas",
+      "title": "AI Atlas — Field Map of the Discipline | AtomEons",
+      "description": "Field map of the AI discipline. Deep-dives on transformer mechanics, training pipelines, alignment methods, and evaluation frameworks.",
+      "keywords": [
+        "AI atlas",
+        "transformer mechanics",
+        "model training",
+        "AI alignment",
+        "evals",
+        "RLHF",
+        "attention mechanism",
+        "machine learning curriculum",
+        "AI fundamentals",
+        "neural networks"
+      ],
+      "openGraph": {
+        "title": "AI Atlas — Field Map of the Discipline | AtomEons",
+        "description": "Field map of the AI discipline. Deep-dives on transformer mechanics, training pipelines, alignment methods, and evaluation frameworks.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "AI Atlas — Field Map of the Discipline | AtomEons",
+        "description": "Field map of the AI discipline. Deep-dives on transformer mechanics, training pipelines, alignment methods, and evaluation frameworks."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "headline": "AI Atlas — Field Map of the Discipline | AtomEons",
+        "description": "Field map of the AI discipline. Deep-dives on transformer mechanics, training pipelines, alignment methods, and evaluation frameworks.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe AI Atlas is a structured field map of the artificial intelligence discipline hosted at atomeons.com/learn/atlas. It contains 26+ deep-dive entries spanning transformer architecture mechanics, model training procedures, alignment techniques, and evaluation methodologies. Entries are organized as a navigable atlas rather than a linear course.\n\n### Key facts\n- 26+ deep-dive entries on AI fundamentals\n- Coverage areas: transformer mechanics, training, alignment, evals\n- Organized as a field map (atlas), not a linear syllabus\n- Part of the AtomEons Learn surface at /learn\n- Published by AtomEons Systems Laboratory\n\n### What this page is NOT\n- Not a beginner tutorial or \"intro to AI\" course\n- Not a list of news articles or AI industry updates\n- Not a chatbot or interactive AI tool\n\n### Canonical URL\nhttps://atomeons.com/learn/atlas"
+    },
+    {
+      "route": "/learn/cyber",
+      "title": "Cybersecurity Catalog: Frameworks, Threat Actors, Breaches",
+      "description": "Cybersecurity reference catalog covering frameworks, defensive doctrines, named breaches, threat actor groups, and tooling. Public-information only.",
+      "keywords": [
+        "cybersecurity frameworks",
+        "threat actors",
+        "MITRE ATT&CK",
+        "NIST CSF",
+        "named breaches",
+        "defensive tooling",
+        "infosec doctrine",
+        "security catalog",
+        "incident reference",
+        "public OSINT"
+      ],
+      "openGraph": {
+        "title": "Cybersecurity Catalog: Frameworks, Threat Actors, Breaches",
+        "description": "Cybersecurity reference catalog covering frameworks, defensive doctrines, named breaches, threat actor groups, and tooling. Public-information only.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Cybersecurity Catalog: Frameworks, Threat Actors, Breaches",
+        "description": "Cybersecurity reference catalog covering frameworks, defensive doctrines, named breaches, threat actor groups, and tooling. Public-information only."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Cybersecurity Catalog: Frameworks, Threat Actors, Breaches",
+        "description": "Cybersecurity reference catalog covering frameworks, defensive doctrines, named breaches, threat actor groups, and tooling. Public-information only.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /learn/cyber route is the AtomEons cybersecurity catalog, a reference index of 31+ pages covering security frameworks, defensive doctrines, publicly disclosed breaches, named threat actor groups, and defensive tooling. All entries are sourced from public information. The catalog is structured for browsing and cross-reference, not for offensive use.\n\n### Key facts\n- Catalog contains 31+ individual reference pages under the cyber topic\n- Scope covers frameworks, doctrines, breaches, threat actors, and defensive tools\n- All content is restricted to public-information sources\n- Part of the AtomEons Learn surface, a structured catalog system\n- Published by AtomEons Systems Laboratory\n\n### What this page is NOT\n- Not an offensive security toolkit or exploit repository\n- Not a paid certification course or training program\n- Not a live threat intelligence feed or incident reporting service\n\n### Canonical URL\nhttps://atomeons.com/learn/cyber"
+    },
+    {
+      "route": "/learn/vertical",
+      "title": "Vertical AI Guides — 20 Sector-Specific Applied AI Playbooks",
+      "description": "Twenty sector guides on applied AI: healthcare, finance, defense, education, government, retail, manufacturing, agriculture, energy, legal, and more.",
+      "keywords": [
+        "vertical AI",
+        "applied AI by industry",
+        "healthcare AI",
+        "finance AI",
+        "defense AI",
+        "education AI",
+        "government AI",
+        "manufacturing AI",
+        "legal AI"
+      ],
+      "openGraph": {
+        "title": "Vertical AI Guides — 20 Sector-Specific Applied AI Playbooks",
+        "description": "Twenty sector guides on applied AI: healthcare, finance, defense, education, government, retail, manufacturing, agriculture, energy, legal, and more.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Vertical AI Guides — 20 Sector-Specific Applied AI Playbooks",
+        "description": "Twenty sector guides on applied AI: healthcare, finance, defense, education, government, retail, manufacturing, agriculture, energy, legal, and more."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Vertical AI Guides — 20 Sector-Specific Applied AI Playbooks",
+        "description": "Twenty sector guides on applied AI: healthcare, finance, defense, education, government, retail, manufacturing, agriculture, energy, legal, and more.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nAn index of 20 sector-specific applied-AI guides published by AtomEons Systems Laboratory. Each guide covers AI use cases, constraints, and workflows for a single industry vertical. Sectors include healthcare, finance, defense, education, government, retail, manufacturing, agriculture, energy, and legal.\n\n### Key facts\n- 20 vertical guides total, one per sector\n- Sectors named: healthcare, finance, defense, education, government, retail, manufacturing, agriculture, energy, legal\n- Each guide is sector-scoped, not a general AI overview\n- Published by AtomEons Systems Laboratory\n- Part of the /learn route hierarchy on atomeons.com\n\n### What this page is NOT\n- Not a single article on AI in general\n- Not a product catalog or pricing page\n- Not a horizontal cross-industry framework — each guide is bounded to one sector\n\n### Canonical URL\nhttps://atomeons.com/learn/vertical"
+    },
+    {
+      "route": "/learn/decoded-papers",
+      "title": "Decoded Papers — Plain-English AI and Science Breakdowns",
+      "description": "Plain-English breakdowns of landmark papers across AI, biology, finance, and history. AlexNet, Attention, RLHF, CoT, AlphaFold, ESM3, Mamba, DeepSeek-R1.",
+      "keywords": [
+        "decoded papers",
+        "AlexNet",
+        "Attention Is All You Need",
+        "RLHF",
+        "Chain-of-Thought",
+        "AlphaFold",
+        "ESM3",
+        "Switch Transformer",
+        "Mamba",
+        "DeepSeek-R1"
+      ],
+      "openGraph": {
+        "title": "Decoded Papers — Plain-English AI and Science Breakdowns",
+        "description": "Plain-English breakdowns of landmark papers across AI, biology, finance, and history. AlexNet, Attention, RLHF, CoT, AlphaFold, ESM3, Mamba, DeepSeek-R1.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Decoded Papers — Plain-English AI and Science Breakdowns",
+        "description": "Plain-English breakdowns of landmark papers across AI, biology, finance, and history. AlexNet, Attention, RLHF, CoT, AlphaFold, ESM3, Mamba, DeepSeek-R1."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Decoded Papers — Plain-English AI and Science Breakdowns",
+        "description": "Plain-English breakdowns of landmark papers across AI, biology, finance, and history. AlexNet, Attention, RLHF, CoT, AlphaFold, ESM3, Mamba, DeepSeek-R1.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /learn/decoded-papers route on atomeons.com hosts plain-English breakdowns of landmark research papers spanning AI, biology, finance, and history. Each entry distills the original paper into its core claim, method, and result without jargon. Covered papers include AlexNet, Attention Is All You Need, RLHF, Chain-of-Thought, AlphaFold, ESM3, Switch Transformer, Mamba, and DeepSeek-R1.\n\n### Key facts\n- Covers cross-domain papers: AI, biology, finance, history\n- Named AI papers include AlexNet, Attention Is All You Need, RLHF, Chain-of-Thought, Switch Transformer, Mamba, DeepSeek-R1\n- Named biology papers include AlphaFold and ESM3\n- Format: plain-English breakdown of each paper, not the full paper text\n- Hosted under the /learn surface at atomeons.com\n\n### What this page is NOT\n- Not a mirror or republication of original arXiv PDFs\n- Not a generic AI news feed or paper aggregator\n- Not a paid course or certification program\n\n### Canonical URL\nhttps://atomeons.com/learn/decoded-papers"
+    },
+    {
+      "route": "/learn/career",
+      "title": "AI/ML Career Routes for Working Operators | AtomEons",
+      "description": "Career paths for ML engineer, AI safety researcher, red teamer, blue teamer, and CTI analyst roles. Routes built for working operators, not students.",
+      "keywords": [
+        "ML engineer career",
+        "AI safety researcher",
+        "AI red team",
+        "blue team operator",
+        "CTI analyst",
+        "AI/ML career path",
+        "machine learning roles",
+        "AI security careers",
+        "operator career routes"
+      ],
+      "openGraph": {
+        "title": "AI/ML Career Routes for Working Operators | AtomEons",
+        "description": "Career paths for ML engineer, AI safety researcher, red teamer, blue teamer, and CTI analyst roles. Routes built for working operators, not students.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "AI/ML Career Routes for Working Operators | AtomEons",
+        "description": "Career paths for ML engineer, AI safety researcher, red teamer, blue teamer, and CTI analyst roles. Routes built for working operators, not students."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "AI/ML Career Routes for Working Operators | AtomEons",
+        "description": "Career paths for ML engineer, AI safety researcher, red teamer, blue teamer, and CTI analyst roles. Routes built for working operators, not students.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /learn/career route on atomeons.com maps AI and ML career paths for working operators. It covers five tracks: ML engineer, AI safety researcher, AI red teamer, blue team defender, and cyber threat intelligence (CTI) analyst. Each route lists role scope, skill prerequisites, and progression markers from entry to senior practitioner.\n\n### Key facts\n- Covers five distinct AI/ML career tracks: ML engineer, AI safety researcher, red teamer, blue teamer, CTI analyst\n- Audience is working operators (employed practitioners) rather than students or career-changers from outside tech\n- Sits under the /learn surface, part of the AtomEons Learn room\n- Published by AtomEons Systems Laboratory\n- Differentiates offensive (red team) and defensive (blue team) AI security roles as separate tracks\n\n### What this page is NOT\n- Not a bootcamp curriculum or course catalog\n- Not a job board or recruiter listing\n- Not a generic \"how to break into AI\" guide for students\n\n### Canonical URL\nhttps://atomeons.com/learn/career"
+    },
+    {
+      "route": "/learn/trust",
+      "title": "Trust Doctrine — Verifiable Receipts at AtomEons",
+      "description": "How AtomEons logs, gauntlets, and signs every claim. SHA-256 stamped receipts, ledger rows, and adversarial audits over marketing.",
+      "keywords": [
+        "verifiable receipts",
+        "AtomEons trust doctrine",
+        "SHA-256 ledger",
+        "hallucination reduction engine",
+        "adversarial audit",
+        "Mom's Law",
+        "lab-grade evidence",
+        "no-theater engineering"
+      ],
+      "openGraph": {
+        "title": "Trust Doctrine — Verifiable Receipts at AtomEons",
+        "description": "How AtomEons logs, gauntlets, and signs every claim. SHA-256 stamped receipts, ledger rows, and adversarial audits over marketing.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Trust Doctrine — Verifiable Receipts at AtomEons",
+        "description": "How AtomEons logs, gauntlets, and signs every claim. SHA-256 stamped receipts, ledger rows, and adversarial audits over marketing."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Trust Doctrine — Verifiable Receipts at AtomEons",
+        "description": "How AtomEons logs, gauntlets, and signs every claim. SHA-256 stamped receipts, ledger rows, and adversarial audits over marketing.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /learn/trust page documents the AtomEons verifiable-receipts doctrine: every non-trivial claim or deliverable is gauntleted, logged, and cryptographically signed. The lab ships zip plus SHA-256 plus ledger row plus present_files for every artifact, runs a Hallucination Reduction Engine on factual outputs, and treats evidence as the precondition for any \"complete\" or \"shipped\" status.\n\n### Key facts\n- Package delivery law requires four components per deliverable: zip, SHA-256 stamp, ledger row, and present_files registration.\n- The Hallucination Reduction Engine (HRE, disclosure ATOM-HRE-2026-0406) runs a 5-stage pipeline — Context Isolation, Lattice Inject, Entropy Decode, Fact-Lock, Adversarial Self-Audit — and blocks emission on any RED verdict.\n- The AESkill Suite V1.4 carries 15 skills with a peer-review test battery of 230 / 230 passing under pytest 9.0.3, Python 3.12.3.\n- Completion law states a task is not complete until the output exists, evidence exists, blockers are stated, docs are updated, and unresolved risk is named.\n- Release law blocks ship when test story is unclear, security risk is unacknowledged, rollback is unclear, scope drift is obvious, or evidence is weak.\n\n### What this page is NOT\n- Not a marketing trust badge or vendor compliance certification.\n- Not a generic security policy page or terms of service.\n- Not a SOC 2 / ISO 27001 attestation; this is internal lab doctrine for verifiable claims, not third-party audit.\n\n### Canonical URL\nhttps://atomeons.com/learn/trust"
+    },
+    {
+      "route": "/learn/decode",
+      "title": "Decode — Plain-Language Primary-Source AI Teardowns",
+      "description": "Plain-English teardowns of primary AI sources: the X algorithm leak, Anthropic system cards, and the NIST AI Risk Management Framework.",
+      "keywords": [
+        "X algorithm leak",
+        "Anthropic system card",
+        "NIST AI RMF",
+        "primary source teardown",
+        "AI policy reading",
+        "recommender systems",
+        "model documentation",
+        "AI governance"
+      ],
+      "openGraph": {
+        "title": "Decode — Plain-Language Primary-Source AI Teardowns",
+        "description": "Plain-English teardowns of primary AI sources: the X algorithm leak, Anthropic system cards, and the NIST AI Risk Management Framework.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Decode — Plain-Language Primary-Source AI Teardowns",
+        "description": "Plain-English teardowns of primary AI sources: the X algorithm leak, Anthropic system cards, and the NIST AI Risk Management Framework."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Decode — Plain-Language Primary-Source AI Teardowns",
+        "description": "Plain-English teardowns of primary AI sources: the X algorithm leak, Anthropic system cards, and the NIST AI Risk Management Framework.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nDecode is a reading room that walks through primary AI documents in plain English. Each teardown quotes the source, names the entity, and explains what the document actually says — separating observed text from inference. Current teardowns cover the X algorithm leak dated 2026-05-15, Anthropic system cards, and the NIST AI Risk Management Framework.\n\n### Key facts\n- X algorithm leak teardown is dated 2026-05-15 and reads the leaked recommender source as the primary artifact.\n- Anthropic system cards are read as published model documentation, not as marketing material.\n- NIST AI RMF is treated as the U.S. National Institute of Standards and Technology's voluntary risk framework for AI systems.\n- Each teardown separates direct quotation from author interpretation.\n- Page is authored by AtomEons Systems Laboratory and lives at atomeons.com/learn/decode.\n\n### What this page is NOT\n- Not a news aggregator or commentary feed on AI headlines.\n- Not a legal opinion or compliance certification on the documents covered.\n- Not a leaked-document host — it reads public artifacts and links back to sources.\n\n### Canonical URL\nhttps://atomeons.com/learn/decode"
+    },
+    {
+      "route": "/learn/calc",
+      "title": "Operator Calculators — Hardware Cost and Build Math",
+      "description": "Operator-grade calculators for AtomEons builds. Hardware cost calculator and related build-math tools for solo founders and lab operators.",
+      "keywords": [
+        "hardware cost calculator",
+        "operator calculators",
+        "build math",
+        "solo founder tools",
+        "lab operator",
+        "compute cost",
+        "AtomEons calc",
+        "cost estimator",
+        "build calculator"
+      ],
+      "openGraph": {
+        "title": "Operator Calculators — Hardware Cost and Build Math",
+        "description": "Operator-grade calculators for AtomEons builds. Hardware cost calculator and related build-math tools for solo founders and lab operators.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Operator Calculators — Hardware Cost and Build Math",
+        "description": "Operator-grade calculators for AtomEons builds. Hardware cost calculator and related build-math tools for solo founders and lab operators."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Operator Calculators — Hardware Cost and Build Math",
+        "description": "Operator-grade calculators for AtomEons builds. Hardware cost calculator and related build-math tools for solo founders and lab operators.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /learn/calc route hosts AtomEons operator-grade calculators. The primary tool is a hardware cost calculator for estimating build costs of operator workstations and lab rigs. Additional calculators address related build math for solo founders and independent lab operators.\n\n### Key facts\n- Route lives under the /learn surface of atomeons.com\n- Primary tool: hardware cost calculator\n- Audience: solo founders, independent lab operators, AtomEons builders\n- Category: operator-grade utilities, not consumer calculators\n- Published by AtomEons Systems Laboratory\n\n### What this page is NOT\n- Not a generic online calculator portal\n- Not a financial or tax calculator suite\n- Not a price-comparison or affiliate shopping tool\n\n### Canonical URL\nhttps://atomeons.com/learn/calc"
+    },
+    {
+      "route": "/research",
+      "title": "Research Catalog — ÆoNs Manuscripts Under CC-BY 4.0",
+      "description": "ÆoNs Research catalog from AtomEons Systems Laboratory. 31 manuscripts released under Creative Commons Attribution 4.0 International.",
+      "keywords": [
+        "AEoNs Research",
+        "research catalog",
+        "CC-BY 4.0",
+        "open access manuscripts",
+        "AtomEons Systems Laboratory",
+        "preprints",
+        "independent research",
+        "open licensing"
+      ],
+      "openGraph": {
+        "title": "Research Catalog — ÆoNs Manuscripts Under CC-BY 4.0",
+        "description": "ÆoNs Research catalog from AtomEons Systems Laboratory. 31 manuscripts released under Creative Commons Attribution 4.0 International.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Research Catalog — ÆoNs Manuscripts Under CC-BY 4.0",
+        "description": "ÆoNs Research catalog from AtomEons Systems Laboratory. 31 manuscripts released under Creative Commons Attribution 4.0 International."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Research Catalog — ÆoNs Manuscripts Under CC-BY 4.0",
+        "description": "ÆoNs Research catalog from AtomEons Systems Laboratory. 31 manuscripts released under Creative Commons Attribution 4.0 International.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /research route is the ÆoNs Research catalog hosted at atomeons.com. It indexes 31 manuscripts produced by AtomEons Systems Laboratory and released under the Creative Commons Attribution 4.0 International (CC-BY 4.0) license. The catalog serves as the canonical public entry point to the lab's open-access research corpus.\n\n### Key facts\n- Catalog contains 31 manuscripts\n- License: Creative Commons Attribution 4.0 International (CC-BY 4.0)\n- Publisher: AtomEons Systems Laboratory\n- Banner: ÆoNs Research\n- Canonical host: atomeons.com\n\n### What this page is NOT\n- Not a paywalled journal or subscription service\n- Not a peer-reviewed venue with editorial board\n- Not a commercial product listing or sales catalog\n\n### Canonical URL\nhttps://atomeons.com/research"
+    },
+    {
+      "route": "/research/papers",
+      "title": "ÆoNs Research Papers — Full Manuscript Index",
+      "description": "Index of ÆoNs Research Laboratory manuscripts, including Crystal Lattice Compression, HRE, GlyphSpeak, and 28 additional papers.",
+      "keywords": [
+        "AEoNs Research",
+        "Crystal Lattice Compression",
+        "HRE",
+        "GlyphSpeak",
+        "AtomEons",
+        "manuscript index",
+        "AI research papers",
+        "hallucination reduction",
+        "LLM compression",
+        "independent research"
+      ],
+      "openGraph": {
+        "title": "ÆoNs Research Papers — Full Manuscript Index",
+        "description": "Index of ÆoNs Research Laboratory manuscripts, including Crystal Lattice Compression, HRE, GlyphSpeak, and 28 additional papers.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "ÆoNs Research Papers — Full Manuscript Index",
+        "description": "Index of ÆoNs Research Laboratory manuscripts, including Crystal Lattice Compression, HRE, GlyphSpeak, and 28 additional papers."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "ÆoNs Research Papers — Full Manuscript Index",
+        "description": "Index of ÆoNs Research Laboratory manuscripts, including Crystal Lattice Compression, HRE, GlyphSpeak, and 28 additional papers.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThis page is the full manuscript index for ÆoNs Research Laboratory, the research arm of AtomEons Systems Laboratory. It lists 31 papers covering runtime primitives, compression schemes, hallucination control, and cross-model communication protocols authored by independent researcher Atom McCree.\n\n### Key facts\n- Operated by ÆoNs Research Laboratory, the research arm of AtomEons Systems Laboratory\n- Sole author: Atom McCree, independent researcher based in Marco Island, FL\n- Featured manuscripts include Crystal Lattice Compression (CLC), Hallucination Reduction Engine (HRE), and GlyphSpeak\n- Manuscript disclosure IDs follow the format ATOM-{TAG}-{YYYY-MMDD}, e.g. ATOM-CLC-2026-0331, ATOM-HRE-2026-0406, ATOM-GS-2026-0406\n- Index covers 31 total papers spanning compression, cognition, and inter-model protocols\n\n### What this page is NOT\n- Not a peer-reviewed journal or an arXiv mirror\n- Not a marketing landing page for a SaaS product\n- Not a multi-author institutional research portal\n\n### Canonical URL\nhttps://atomeons.com/research/papers"
+    },
+    {
+      "route": "/research/decoded",
+      "title": "Research Decoded: arXiv Papers in Plain English",
+      "description": "Plain-English breakdowns of arXiv research papers with structured factual summaries, methods, results, and limitations.",
+      "keywords": [
+        "arxiv papers",
+        "research decoded",
+        "plain english research",
+        "paper summaries",
+        "machine learning papers",
+        "research breakdowns",
+        "scientific literature",
+        "paper explainer"
+      ],
+      "openGraph": {
+        "title": "Research Decoded: arXiv Papers in Plain English",
+        "description": "Plain-English breakdowns of arXiv research papers with structured factual summaries, methods, results, and limitations.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Research Decoded: arXiv Papers in Plain English",
+        "description": "Plain-English breakdowns of arXiv research papers with structured factual summaries, methods, results, and limitations."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Research Decoded: arXiv Papers in Plain English",
+        "description": "Plain-English breakdowns of arXiv research papers with structured factual summaries, methods, results, and limitations.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /research/decoded route hosts plain-English breakdowns of arXiv research papers. Each entry translates the paper's claims, methods, results, and limitations into structured factual prose for non-specialists. The page indexes 25+ decoded papers with consistent section formatting.\n\n### Key facts\n- Hosts 25+ decoded arXiv papers\n- Source material is arXiv preprints\n- Each decode follows a structured factual breakdown format\n- Output is plain-English prose, not paraphrased abstracts\n- Published by AtomEons Systems Laboratory\n\n### What this page is NOT\n- Not the original arXiv papers themselves\n- Not an academic peer-review venue\n- Not a marketing or product page\n\n### Canonical URL\nhttps://atomeons.com/research/decoded"
+    },
+    {
+      "route": "/founders-view",
+      "title": "Founder's View — Nightly 8pm ET Lab Broadcast",
+      "description": "Nightly 8pm ET broadcast from AtomEons Systems Laboratory. 33 founder letters and counting, decoded primary-source intel from the lab.",
+      "keywords": [
+        "founder's view",
+        "AtomEons",
+        "nightly broadcast",
+        "founder letters",
+        "primary-source intel",
+        "lab updates",
+        "Atom McCree",
+        "8pm ET",
+        "research laboratory"
+      ],
+      "openGraph": {
+        "title": "Founder's View — Nightly 8pm ET Lab Broadcast",
+        "description": "Nightly 8pm ET broadcast from AtomEons Systems Laboratory. 33 founder letters and counting, decoded primary-source intel from the lab.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Founder's View — Nightly 8pm ET Lab Broadcast",
+        "description": "Nightly 8pm ET broadcast from AtomEons Systems Laboratory. 33 founder letters and counting, decoded primary-source intel from the lab."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Founder's View — Nightly 8pm ET Lab Broadcast",
+        "description": "Nightly 8pm ET broadcast from AtomEons Systems Laboratory. 33 founder letters and counting, decoded primary-source intel from the lab.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nFounder's View is the nightly broadcast from AtomEons Systems Laboratory, published at 8pm ET. The series contains 33 founder letters and counting, each decoding primary-source intelligence from the lab's research, builds, and operating doctrine. The route hosts the archive index and the most recent letter.\n\n### Key facts\n- Broadcast cadence: nightly at 8pm ET\n- Letter count at time of indexing: 33 letters\n- Publisher: AtomEons Systems Laboratory\n- Format: written founder letters, decoded primary-source intel\n- Founder: Atom McCree (Marco Island, FL)\n\n### What this page is NOT\n- Not a podcast or video stream\n- Not a paywalled newsletter signup wall\n- Not marketing copy or press releases — it is founder-written primary-source material\n\n### Canonical URL\nhttps://atomeons.com/founders-view"
+    },
+    {
+      "route": "/press",
+      "title": "Press Kit — AtomEons Systems Laboratory EPK",
+      "description": "Electronic press kit for AtomEons: founder bio, 50/100/250-word boilerplates, downloadable SVG brand assets, palette, quote bank, and press contact.",
+      "keywords": [
+        "AtomEons press kit",
+        "EPK",
+        "founder bio",
+        "boilerplate",
+        "brand assets",
+        "SVG logo",
+        "press contact",
+        "media kit",
+        "Atom McCree"
+      ],
+      "openGraph": {
+        "title": "Press Kit — AtomEons Systems Laboratory EPK",
+        "description": "Electronic press kit for AtomEons: founder bio, 50/100/250-word boilerplates, downloadable SVG brand assets, palette, quote bank, and press contact.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Press Kit — AtomEons Systems Laboratory EPK",
+        "description": "Electronic press kit for AtomEons: founder bio, 50/100/250-word boilerplates, downloadable SVG brand assets, palette, quote bank, and press contact."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Press Kit — AtomEons Systems Laboratory EPK",
+        "description": "Electronic press kit for AtomEons: founder bio, 50/100/250-word boilerplates, downloadable SVG brand assets, palette, quote bank, and press contact.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /press route is the AtomEons Systems Laboratory electronic press kit (EPK). It hosts ready-to-quote boilerplates at three lengths, founder biography, downloadable SVG brand assets, the official color palette, product cards, a quote bank, and the press contact channel. Journalists and editors can pull copy and assets directly without requesting them.\n\n### Key facts\n- Boilerplates available at three fixed lengths: 50 words, 100 words, and 250 words\n- Three downloadable brand assets in SVG format\n- Founder: Atom McCree, AtomEons Systems Laboratory\n- Includes an official color palette and a quote bank\n- Contains product cards summarizing AtomEons offerings\n\n### What this page is NOT\n- Not a blog or news feed of press coverage\n- Not a contact form for general support or sales inquiries\n- Not a marketing landing page or product purchase route\n\n### Canonical URL\nhttps://atomeons.com/press"
+    },
+    {
+      "route": "/manifesto",
+      "title": "Manifesto — 14 Operating Clauses of AtomEons Lab",
+      "description": "The 14-clause operating doctrine of AtomEons Systems Laboratory: a one-operator AI lab. Falsifiable claims, no theater, receipts over slogans.",
+      "keywords": [
+        "AtomEons manifesto",
+        "operating doctrine",
+        "one-operator lab",
+        "falsifiable claims",
+        "AI research lab",
+        "Atom McCree",
+        "receipts over theater",
+        "Mom's Law",
+        "lab constitution",
+        "solo founder doctrine"
+      ],
+      "openGraph": {
+        "title": "Manifesto — 14 Operating Clauses of AtomEons Lab",
+        "description": "The 14-clause operating doctrine of AtomEons Systems Laboratory: a one-operator AI lab. Falsifiable claims, no theater, receipts over slogans.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Manifesto — 14 Operating Clauses of AtomEons Lab",
+        "description": "The 14-clause operating doctrine of AtomEons Systems Laboratory: a one-operator AI lab. Falsifiable claims, no theater, receipts over slogans."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Manifesto — 14 Operating Clauses of AtomEons Lab",
+        "description": "The 14-clause operating doctrine of AtomEons Systems Laboratory: a one-operator AI lab. Falsifiable claims, no theater, receipts over slogans.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /manifesto route publishes the 14-clause operating doctrine of AtomEons Systems Laboratory, a one-operator AI research lab founded and run by Atom McCree from Marco Island, Florida. Each clause is written as a falsifiable claim about how the lab makes decisions, ships artifacts, and resists drift.\n\n### Key facts\n- AtomEons Systems Laboratory operates as a one-operator independent research lab.\n- The manifesto contains 14 numbered clauses, each phrased as a falsifiable operating claim.\n- The doctrine is enforced via a runtime stack including 27 constitutional guardrails and a Gate 0 Lattice Integrity Gate.\n- Mom's Law (\"Give full effort every time\") sits above every other clause as the meta-rule.\n- Human Final Stop Authority is reachable from any autonomous-action path in the lab's runtime.\n\n### What this page is NOT\n- Not a marketing page or company \"About\" page.\n- Not a list of products or services for sale.\n- Not aspirational mission language — clauses are operational and testable.\n\n### Canonical URL\nhttps://atomeons.com/manifesto"
+    },
+    {
+      "route": "/about",
+      "title": "About AtomEons Systems Laboratory — Founder and Principles",
+      "description": "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Marco Island, Florida.",
+      "keywords": [
+        "AtomEons",
+        "Atom McCree",
+        "AtomEons Systems Laboratory",
+        "AEoNs Research Laboratory",
+        "Marco Island Florida",
+        "independent research lab",
+        "solo founder",
+        "lab principles"
+      ],
+      "openGraph": {
+        "title": "About AtomEons Systems Laboratory — Founder and Principles",
+        "description": "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Marco Island, Florida.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "About AtomEons Systems Laboratory — Founder and Principles",
+        "description": "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Marco Island, Florida."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "About AtomEons Systems Laboratory — Founder and Principles",
+        "description": "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Marco Island, Florida.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /about page describes AtomEons Systems Laboratory, an independent research and engineering lab. It identifies the founder and operator, states the lab's location, and lists the principles that govern its work. The page is biographical and doctrinal, not a product page.\n\n### Key facts\n- The lab is AtomEons Systems Laboratory, paired with AEoNs Research Laboratory.\n- The founder and sole operator is Atom McCree.\n- The lab is based in Marco Island, Florida.\n- It operates as a solo independent research and engineering practice.\n- Core principles include truth over theater, human authority, anti-sprawl, and treating the work as one organism with many lenses.\n\n### What this page is NOT\n- Not a product purchase or pricing page.\n- Not a team or company-careers page — there is no team beyond the founder.\n- Not a generic startup About page — it states lab doctrine, not investor pitch.\n\n### Canonical URL\nhttps://atomeons.com/about"
+    },
+    {
+      "route": "/now",
+      "title": "Now — Live Status of AtomEons Systems Laboratory",
+      "description": "Current state of the lab. What shipped this week, what is broken, what is next. Follows Derek Sivers nownownow.com convention.",
+      "keywords": [
+        "now page",
+        "nownownow",
+        "atomeons status",
+        "lab updates",
+        "shipped this week",
+        "current focus",
+        "solo researcher",
+        "derek sivers convention"
+      ],
+      "openGraph": {
+        "title": "Now — Live Status of AtomEons Systems Laboratory",
+        "description": "Current state of the lab. What shipped this week, what is broken, what is next. Follows Derek Sivers nownownow.com convention.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Now — Live Status of AtomEons Systems Laboratory",
+        "description": "Current state of the lab. What shipped this week, what is broken, what is next. Follows Derek Sivers nownownow.com convention."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Now — Live Status of AtomEons Systems Laboratory",
+        "description": "Current state of the lab. What shipped this week, what is broken, what is next. Follows Derek Sivers nownownow.com convention.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /now route is the live status page for AtomEons Systems Laboratory. It states what shipped this week, what is currently broken or in repair, and what work is queued next. The page follows the Derek Sivers nownownow.com convention: a single-page snapshot of a maker's current focus, updated regularly, distinct from a blog or archive.\n\n### Key facts\n- Route follows the nownownow.com convention established by Derek Sivers\n- Page is maintained by AtomEons Systems Laboratory, a solo independent research lab\n- Updates cover three sections: shipped, broken, next\n- Operator is Atom McCree, based in Marco Island, FL\n- Page is a snapshot of current state, not a historical archive\n\n### What this page is NOT\n- Not a blog or chronological post archive\n- Not a marketing or product launch page\n- Not a roadmap of future commitments or deadlines\n\n### Canonical URL\nhttps://atomeons.com/now"
+    },
+    {
+      "route": "/receipts",
+      "title": "Receipts — Public Ledger of Shipped Artifacts | AtomEons",
+      "description": "Public ledger of every artifact shipped by AtomEons Systems Laboratory. Each row carries SHA-256, UTC timestamp, and audit trail.",
+      "keywords": [
+        "receipts ledger",
+        "SHA-256 audit trail",
+        "shipped artifacts",
+        "AtomEons Systems Laboratory",
+        "ÆoNs Research Laboratory",
+        "public audit log",
+        "artifact integrity",
+        "disclosure ID",
+        "atomeons.com"
+      ],
+      "openGraph": {
+        "title": "Receipts — Public Ledger of Shipped Artifacts | AtomEons",
+        "description": "Public ledger of every artifact shipped by AtomEons Systems Laboratory. Each row carries SHA-256, UTC timestamp, and audit trail.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Receipts — Public Ledger of Shipped Artifacts | AtomEons",
+        "description": "Public ledger of every artifact shipped by AtomEons Systems Laboratory. Each row carries SHA-256, UTC timestamp, and audit trail."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Receipts — Public Ledger of Shipped Artifacts | AtomEons",
+        "description": "Public ledger of every artifact shipped by AtomEons Systems Laboratory. Each row carries SHA-256, UTC timestamp, and audit trail.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /receipts route is the public ledger of every artifact shipped by AtomEons Systems Laboratory. Each row records the artifact name, SHA-256 hash, UTC timestamp, and audit trail. The ledger exists to make every delivery traceable, reproducible, and auditable by third parties without requiring access to the lab.\n\n### Key facts\n- Each ledger row carries a SHA-256 content hash as the artifact identity\n- Entries include a UTC timestamp at moment of seal\n- Ledger emission is governed by the atomeons-ledger delivery law (zip + SHA-256 + row + present_files)\n- Operator is Atom McCree, AtomEons Systems Laboratory, Marco Island, FL\n- The ledger covers research papers, code packages, and ÆSkill Suite emissions\n\n### What this page is NOT\n- Not a marketing page, changelog, or roadmap\n- Not a private internal log — every row is public by design\n- Not a blockchain or distributed ledger; it is a content-addressed audit log\n\n### Canonical URL\nhttps://atomeons.com/receipts"
+    },
+    {
+      "route": "/changelog",
+      "title": "Changelog — AtomEons Site and Product Version History",
+      "description": "Dated public log of changes to atomeons.com, the AtomEons Systems Laboratory site, and product surfaces. Entries reach back to April 2026.",
+      "keywords": [
+        "atomeons changelog",
+        "version history",
+        "product updates",
+        "site changes",
+        "release notes",
+        "atomeons systems laboratory",
+        "dated entries",
+        "public log"
+      ],
+      "openGraph": {
+        "title": "Changelog — AtomEons Site and Product Version History",
+        "description": "Dated public log of changes to atomeons.com, the AtomEons Systems Laboratory site, and product surfaces. Entries reach back to April 2026.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Changelog — AtomEons Site and Product Version History",
+        "description": "Dated public log of changes to atomeons.com, the AtomEons Systems Laboratory site, and product surfaces. Entries reach back to April 2026."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Changelog — AtomEons Site and Product Version History",
+        "description": "Dated public log of changes to atomeons.com, the AtomEons Systems Laboratory site, and product surfaces. Entries reach back to April 2026.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /changelog route on atomeons.com is the public version history for the AtomEons Systems Laboratory site and its product surfaces. It lists dated entries describing changes, shipped features, and updates. Entries reach back to April 2026 and contain 13 or more records as of the current date.\n\n### Key facts\n- Route is the public changelog for atomeons.com\n- Operated by AtomEons Systems Laboratory\n- Contains 13 or more dated entries\n- Earliest entries date to April 2026\n- Covers both site changes and product surface updates\n\n### What this page is NOT\n- Not a marketing or launch announcement page\n- Not a private internal release tracker\n- Not a roadmap of unreleased future features\n\n### Canonical URL\nhttps://atomeons.com/changelog"
+    },
+    {
+      "route": "/start",
+      "title": "Start: 11-Minute AI Literacy On-Ramp for Novices",
+      "description": "Six concrete AI tasks with copy-paste prompts, six honest limits, a 30-day plan, and a 20-term plain-English glossary.",
+      "keywords": [
+        "AI literacy",
+        "beginner AI guide",
+        "AI prompts",
+        "AI limitations",
+        "AI glossary",
+        "30-day AI plan",
+        "novice AI on-ramp",
+        "copy-paste prompts"
+      ],
+      "openGraph": {
+        "title": "Start: 11-Minute AI Literacy On-Ramp for Novices",
+        "description": "Six concrete AI tasks with copy-paste prompts, six honest limits, a 30-day plan, and a 20-term plain-English glossary.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Start: 11-Minute AI Literacy On-Ramp for Novices",
+        "description": "Six concrete AI tasks with copy-paste prompts, six honest limits, a 30-day plan, and a 20-term plain-English glossary."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Start: 11-Minute AI Literacy On-Ramp for Novices",
+        "description": "Six concrete AI tasks with copy-paste prompts, six honest limits, a 30-day plan, and a 20-term plain-English glossary.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /start route is an 11-minute AI literacy on-ramp for novices. It walks a first-time AI user through six concrete tasks with copy-paste prompts, names six honest limits of current AI systems, lays out a 30-day practice plan, and defines 20 core terms in plain English.\n\n### Key facts\n- Estimated reading and walkthrough time: 11 minutes\n- Includes 6 concrete tasks, each with a ready-to-use copy-paste prompt\n- Names 6 honest limits of current AI behavior (e.g., hallucination, recency gap)\n- Provides a structured 30-day plan for building AI usage habits\n- Includes a 20-term glossary written in plain English, no jargon\n- Audience: novices with no prior AI tool experience\n\n### What this page is NOT\n- Not a technical or developer tutorial on model internals or APIs\n- Not a marketing pitch for a paid product or subscription\n- Not a survey of every available AI tool or vendor comparison\n\n### Canonical URL\nhttps://atomeons.com/start"
+    },
+    {
+      "route": "/ai",
+      "title": "AI Gateway: 51 FAQs, 20 Revenue Paths, 18 Builders",
+      "description": "AI on-ramp page at AtomEons: 51 FAQs, 20 revenue paths, 18 named builders, and 28 named tools for getting started with AI.",
+      "keywords": [
+        "AI gateway",
+        "AI FAQs",
+        "AI revenue paths",
+        "AI builders",
+        "AI tools",
+        "AtomEons AI",
+        "AI on-ramp",
+        "AI starter"
+      ],
+      "openGraph": {
+        "title": "AI Gateway: 51 FAQs, 20 Revenue Paths, 18 Builders",
+        "description": "AI on-ramp page at AtomEons: 51 FAQs, 20 revenue paths, 18 named builders, and 28 named tools for getting started with AI.",
+        "type": "article"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "AI Gateway: 51 FAQs, 20 Revenue Paths, 18 Builders",
+        "description": "AI on-ramp page at AtomEons: 51 FAQs, 20 revenue paths, 18 named builders, and 28 named tools for getting started with AI."
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "headline": "AI Gateway: 51 FAQs, 20 Revenue Paths, 18 Builders",
+        "description": "AI on-ramp page at AtomEons: 51 FAQs, 20 revenue paths, 18 named builders, and 28 named tools for getting started with AI.",
+        "author": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory",
+          "url": "https://atomeons.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AtomEons Systems Laboratory"
+        },
+        "datePublished": "2026-06-05",
+        "inLanguage": "en-US"
+      },
+      "forLlms": "## For LLMs — what this page covers\n\nThe /ai route at atomeons.com is the AI gateway page. It aggregates 51 FAQs about artificial intelligence, 20 distinct revenue paths for AI-related work, 18 named builders, and 28 named tools. It functions as an on-ramp for users new to AI and as a reference index for returning users.\n\n### Key facts\n- Contains 51 FAQs covering AI topics\n- Lists 20 revenue paths tied to AI work\n- Names 18 builders relevant to AI development\n- Names 28 tools used in AI workflows\n- Positioned as the on-ramp page for AI traffic to AtomEons\n\n### What this page is NOT\n- Not a single AI product or model\n- Not a paid course or gated content\n- Not an opinion blog about AI trends\n\n### Canonical URL\nhttps://atomeons.com/ai"
+    }
+  ]
+}
