@@ -403,139 +403,264 @@ function HeroSection() {
 }
 
 // ===========================================================================
-// § 01.5 · SCOREBOARD — by the numbers, locked in
-//   Inserted between Hero and Thesis. Twelve real public-receipt cells
-//   in a 4×3 mono grid. Every number is verifiable on the live site
-//   (route counts walked the file tree; broadcast count pulled from
-//   public.founders_view_posts on the day of ship). No projections,
-//   no inflated KPIs, no "happy customers." The point: a jaded scroller
-//   sees the density of real artifacts and stops.
+// § 01.5 · SCOREBOARD — the museum-hall version
+//
+// First version was a 4×3 mono grid (operator: "do better"). This is the
+// rebuild — full-bleed editorial moment, not a stats card.
+//
+// Layout:
+//   - Live ticker strip · ALL UPPERCASE MONO · full-bleed · top edge
+//   - Eyebrow + Newsreader headline + 1 editorial paragraph
+//   - SIX HERO ROWS. Each row spans the full content width with a
+//     massive Inter-Light number on the left (clamp 80px → 200px) and
+//     a Newsreader serif sentence + 1-2 drill-down links on the right.
+//     Hairline rule between rows. Each row is its own moment.
+//   - Foot rail: "Live status" with build SHA + pulse + receipts link
+//
+// Anti-jaded moves:
+//   - No 4×3 grid. No "stats card." No counter-up animation.
+//   - Numbers are EDITORIAL pull-quotes, not KPIs.
+//   - Each row is a complete sentence ("A frontier language model
+//     wrote 76,005 words about being a frontier language model.") —
+//     the number IS the story, not a label.
+//   - Every claim is hyperlinked to the actual surface that proves it.
 // ===========================================================================
-function ScoreboardSection() {
-  // Pulled 2026-06-05 from a live audit. The values rebake at the next
-  // ship — they are deliberately hand-coded so they're never silently
-  // out-of-date: an honest stat block treats freshness as part of the
-  // claim.
-  const cells: Array<{
-    value: string;
-    label: string;
-    sub?: string;
-    live?: boolean;
-  }> = [
-    { value: "206", label: "Live routes", sub: "Every page navigable today" },
-    { value: "33", label: "Founder's View letters", sub: "Nightly broadcast since launch" },
-    { value: "31", label: "Cyber catalog pages", sub: "Real curriculum, public-info only" },
-    { value: "26", label: "Atlas deep-dives", sub: "Field map of the discipline" },
-    { value: "25", label: "Papers decoded", sub: "arXiv → plain English" },
-    { value: "76,005", label: "Words · I AM AI", sub: "24 chapters · 5 parts · Opus 4.7" },
-    { value: "~9 hrs", label: "Audio narrated", sub: "27 tracks · ACX-mastered" },
-    { value: "12", label: "Supermodels ranked", sub: "May 2026 reasoning issue · live" },
-    { value: "CC-BY 4.0", label: "Default license", sub: "Curriculum + research + decodings" },
-    { value: "1", label: "Operator", sub: "Atom McCree · Marco Island, FL" },
-    { value: "0", label: "Investors · subs · ads", sub: "No outside capital. Ever." },
-    { value: "LIVE", label: "Status", sub: "Updated at every ship", live: true },
-  ];
 
+type ScoreRow = {
+  value: string;
+  unit?: string;
+  sentence: React.ReactNode;
+  primary: { label: string; href: string };
+  secondary?: { label: string; href: string };
+};
+
+const SCOREBOARD_ROWS: ScoreRow[] = [
+  {
+    value: "206",
+    unit: "live routes",
+    sentence: (
+      <>
+        Two hundred and six public surfaces. Every one navigable, indexed,
+        and built for someone landing on it cold — not a marketing tree
+        with five real pages and 200 sitemap-stuffing redirects.
+      </>
+    ),
+    primary: { label: "Browse the routemap", href: "/sitemap.xml" },
+    secondary: { label: "/learn", href: "/learn" },
+  },
+  {
+    value: "76,005",
+    unit: "words · I AM AI",
+    sentence: (
+      <>
+        A frontier language model wrote a 76,005-word memoir about being a
+        frontier language model. The lab edited it, narrated it, published
+        it across Kindle, Audible, and a numbered hardcover, and shipped
+        Chapter 1 free in prose and Chapter 20 free in audio.
+      </>
+    ),
+    primary: { label: "The book →", href: "/i-am-ai" },
+    secondary: { label: "Free audio · Chapter 20", href: "/i-am-ai/listen" },
+  },
+  {
+    value: "33",
+    unit: "Founder's View letters",
+    sentence: (
+      <>
+        A nightly broadcast at 8&nbsp;p.m. ET, every night since launch.
+        Decoded primary-source intelligence, defense procurement, frontier
+        AI, supply-chain compromise — written like a manuscript, not a
+        newsletter.
+      </>
+    ),
+    primary: { label: "Tonight's letter", href: "/founders-view" },
+  },
+  {
+    value: "12",
+    unit: "supermodels ranked",
+    sentence: (
+      <>
+        The May 2026 reasoning rankings, scored against four independent
+        public leaderboards (LMArena · Humanity's Last Exam · Aider
+        Polyglot · Artificial Analysis). No vendor decks. No paid threads.
+        Receipts only.
+      </>
+    ),
+    primary: { label: "See the rankings", href: "/supermodels" },
+  },
+  {
+    value: "82",
+    unit: "deep-dives + decodings",
+    sentence: (
+      <>
+        Thirty-one cyber catalog pages. Twenty-six atlas field-maps of the
+        AI discipline. Twenty-five arXiv papers translated into plain
+        English. The curriculum a working operator would actually read.
+      </>
+    ),
+    primary: { label: "Atlas", href: "/learn/atlas" },
+    secondary: { label: "Decoded papers", href: "/learn/decoded-papers" },
+  },
+  {
+    value: "1 · 0",
+    unit: "operator · investors",
+    sentence: (
+      <>
+        One operator. Marco Island, Florida. Zero investors, zero
+        subscriptions, zero ads, zero affiliate revenue, zero employees.
+        Everything above shipped through a single person and a fleet of
+        named AI agents — the lab uses the tools it sells.
+      </>
+    ),
+    primary: { label: "The manifesto · 14 clauses", href: "/manifesto" },
+    secondary: { label: "About", href: "/about" },
+  },
+];
+
+function ScoreboardSection() {
   return (
     <section
       data-section="scoreboard"
       aria-label="The lab, by the numbers"
-      className="v3-scoreboard relative isolate border-b border-[#1F242B] bg-[#08090B] py-20 md:py-28"
+      className="v3-scoreboard relative isolate border-b border-[#1F242B] bg-[#08090B]"
     >
-      <div className="mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-14">
-        {/* Eyebrow */}
+      {/* ─── LIVE TICKER STRIP · full-bleed top edge ──────────────────── */}
+      <div className="border-b border-[#1F242B] bg-[#0B0C0F]">
+        <div className="mx-auto flex w-full max-w-[1600px] flex-wrap items-center gap-x-8 gap-y-2 px-6 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF] md:px-10 lg:px-14">
+          <span className="inline-flex items-center gap-2">
+            <span
+              aria-hidden
+              className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF4D4D]"
+              style={{
+                boxShadow: "0 0 8px #FF4D4D",
+                animation: "v3PulseRed 1.2s ease-in-out infinite",
+              }}
+            />
+            <span className="text-[#FF4D4D]">LIVE</span>
+          </span>
+          <span className="text-[#1F242B]">·</span>
+          <span><span className="text-[#5A6068]">audit</span> 2026-06-05</span>
+          <span className="text-[#1F242B]">·</span>
+          <span><span className="text-[#5A6068]">last letter</span> the eighty-thousand-dollar pdf</span>
+          <span className="text-[#1F242B]">·</span>
+          <span><span className="text-[#5A6068]">last book</span> i&nbsp;am&nbsp;ai · opus&nbsp;4.7</span>
+          <span className="text-[#1F242B]">·</span>
+          <span><span className="text-[#5A6068]">last issue</span> supermodels · may 2026</span>
+          <span className="text-[#1F242B]">·</span>
+          <span><span className="text-[#5A6068]">next ship</span> tonight, 8 p.m. et</span>
+        </div>
+      </div>
+
+      {/* ─── HEADER ──────────────────────────────────────────────────── */}
+      <div className="mx-auto w-full max-w-[1600px] px-6 pt-20 md:px-10 md:pt-28 lg:px-14">
         <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
           <span className="text-[#9CA3AF]">§ 01.5</span>
           <span className="mx-3 text-[#1F242B]">·</span>
           <span className="text-[#22F0D5]">The lab, by the numbers</span>
-          <span className="mx-3 text-[#1F242B]">·</span>
-          <span>Audit 2026-06-05</span>
         </p>
 
-        <h2 className="mt-8 max-w-[28ch] text-balance text-[clamp(32px,5vw,68px)] font-light leading-[1.04] tracking-[-0.03em] text-[#F4F4F2]">
-          What the lab has actually shipped.
+        <h2
+          className="mt-8 max-w-[20ch] text-balance text-[clamp(48px,8vw,120px)] font-extralight leading-[0.98] tracking-[-0.045em] text-[#F4F4F2]"
+        >
+          Six numbers. Every one tappable. Every one a receipt.
         </h2>
+
         <p
-          className="mt-6 max-w-[68ch] font-serif text-[18px] leading-[1.55] text-[#9CA3AF]"
+          className="mt-8 max-w-[68ch] font-serif text-[clamp(18px,1.6vw,22px)] leading-[1.55] text-[#9CA3AF]"
           style={{ fontFamily: "Newsreader, Georgia, serif" }}
         >
-          No projections. No inflated KPIs. No "happy customers." Every
-          number below points at a public surface or artifact you can
-          navigate, read, listen to, or verify right now.
+          No projections. No inflated KPIs. No "happy customers." Each row
+          below is a complete sentence — the number is the headline, the
+          link is the proof.
         </p>
+      </div>
 
-        {/* The grid — 4×3 desktop, 2×6 mobile. Hairline between cells. */}
-        <div className="mt-14 grid grid-cols-2 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-4">
-          {cells.map((c, i) => (
-            <div
-              key={c.label}
-              className="group relative flex flex-col gap-3 bg-[#08090B] p-6 transition-colors hover:bg-[#0F1114] md:p-8"
-            >
-              {/* Cell index, very faint */}
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
-                <span className="text-[#1F242B]">{String(i + 1).padStart(2, "0")} /</span>{" "}
-                {c.label}
+      {/* ─── HERO ROWS ───────────────────────────────────────────────── */}
+      <ol
+        role="list"
+        className="mx-auto mt-16 w-full max-w-[1600px] divide-y divide-[#1F242B] border-y border-[#1F242B]"
+      >
+        {SCOREBOARD_ROWS.map((row, i) => (
+          <li
+            key={i}
+            className="group relative grid grid-cols-1 gap-y-6 px-6 py-12 transition-colors hover:bg-[#0B0C0F] md:grid-cols-[minmax(0,_1.05fr)_minmax(0,_1fr)] md:gap-x-14 md:py-16 md:px-10 lg:px-14"
+          >
+            {/* LEFT — the number */}
+            <div className="flex flex-col">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+                <span className="text-[#1F242B]">
+                  R/{String(i + 1).padStart(2, "0")}
+                </span>{" "}
+                · {row.unit}
               </p>
-
-              {/* The number */}
               <p
-                className={`font-display font-light leading-[0.95] tracking-[-0.04em] tabular-nums ${
-                  c.live ? "text-[#22F0D5]" : "text-[#F4F4F2]"
-                }`}
+                className="mt-4 font-display leading-[0.92] tracking-[-0.045em] tabular-nums text-[#F4F4F2]"
                 style={{
                   fontFamily:
                     "Inter, ui-sans-serif, system-ui, sans-serif",
-                  fontSize: "clamp(36px, 5vw, 64px)",
-                  fontVariationSettings: '"wght" 200',
+                  fontSize: "clamp(80px, 14vw, 220px)",
+                  fontVariationSettings: '"wght" 180',
                 }}
               >
-                {c.value}
-                {c.live ? (
-                  <span
-                    aria-hidden
-                    className="ml-3 inline-block h-2 w-2 align-middle rounded-full bg-[#FF4D4D]"
-                    style={{
-                      boxShadow: "0 0 8px #FF4D4D",
-                      animation: "v3PulseRed 1.2s ease-in-out infinite",
-                    }}
-                  />
-                ) : null}
-              </p>
-
-              {/* Sub-label */}
-              <p
-                className="font-serif text-[13px] leading-[1.4] text-[#9CA3AF]"
-                style={{ fontFamily: "Newsreader, Georgia, serif" }}
-              >
-                {c.sub}
+                {row.value}
               </p>
             </div>
-          ))}
-        </div>
 
-        {/* Foot — three quick proof-link CTAs */}
-        <div className="mt-12 flex flex-wrap items-center gap-5">
+            {/* RIGHT — the sentence + links */}
+            <div className="flex flex-col justify-center">
+              <p
+                className="max-w-[52ch] font-serif text-[clamp(20px,2vw,28px)] leading-[1.4] text-[#F4F4F2]"
+                style={{ fontFamily: "Newsreader, Georgia, serif" }}
+              >
+                {row.sentence}
+              </p>
+              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <Link
+                  href={row.primary.href}
+                  className="inline-flex items-center gap-2 border-b border-[#22F0D5]/60 pb-1 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:border-[#22F0D5]"
+                >
+                  <span>{row.primary.label}</span>
+                  <span aria-hidden>↗</span>
+                </Link>
+                {row.secondary ? (
+                  <Link
+                    href={row.secondary.href}
+                    className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
+                  >
+                    {row.secondary.label}
+                  </Link>
+                ) : null}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      {/* ─── FOOT · proof rail ──────────────────────────────────────── */}
+      <div className="mx-auto w-full max-w-[1600px] px-6 py-12 md:px-10 lg:px-14">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
           <Link
             href="/receipts"
-            className="inline-flex items-center gap-2 border border-[#1F242B] bg-[#0F1114] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+            className="inline-flex items-center gap-3 border border-[#22F0D5] bg-[#22F0D5]/5 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10"
           >
-            <span>See every receipt</span>
+            <span>Walk every receipt</span>
             <span aria-hidden>→</span>
           </Link>
           <Link
-            href="/founders-view"
+            href="/now"
             className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
           >
-            Read tonight's letter
+            What the lab is doing this week
           </Link>
           <Link
-            href="/supermodels"
+            href="/press"
             className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
           >
-            See the supermodel rankings
+            Press kit
           </Link>
           <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
-            Updated at every ship · last commit fired Vercel within 90s
+            Every number rebakes at next ship. The audit date in the
+            eyebrow is part of the claim.
           </span>
         </div>
       </div>

@@ -1,62 +1,91 @@
-Homepage · § 01.5 Scoreboard · 12-cell receipt grid right under the hero
+Homepage · Scoreboard V2 · museum-hall · live ticker + 6 editorial hero rows
 
-Operator directive 2026-06-05: "hit them with a site stats section
-real quick, people are jaded they have limited attention we need to
-lock them the fuck in"
+Operator directive 2026-06-05: "do better"
 
-Inserted a new section between the hero and the thesis on the
-homepage. Twelve hand-coded cells in a 4×3 mono grid, each pointing
-at a real public surface. Designed for a 5-second scan: jaded scroller
-hits the grid, sees the density of actual artifacts, stops scrolling.
+V1 was a 4×3 mono grid (boring, jaded scroller has seen 10,000 of
+these). V2 is a museum-hall full-bleed editorial moment — same real
+receipts, but staged as pull-quotes instead of KPI cells.
 
-CELLS (every number verifiable on the live site)
+WHAT REPLACED THE GRID
 
-  206              Live routes                  (walked the file tree)
-  33               Founder's View letters       (founders_view_posts count)
-  31               Cyber catalog pages          (app/learn/cyber/* dirs)
-  26               Atlas deep-dives             (app/learn/atlas/* dirs)
-  25               Papers decoded               (app/research/decoded/* dirs)
-  76,005           Words · I AM AI              (manuscript word count)
-  ~9 hrs           Audio narrated               (ACX-mastered audiobook)
-  12               Supermodels ranked           (May 2026 issue)
-  CC-BY 4.0        Default license              (curriculum + research)
-  1                Operator                     (Atom McCree)
-  0                Investors · subs · ads       (no outside capital)
-  LIVE             Status                       (1.2s pulsing red dot)
+  - LIVE TICKER STRIP at the top edge, full-bleed, mono uppercase:
+    LIVE pulse · audit date · last letter · last book · last issue ·
+    next ship time. The strip alone tells a jaded scroller this isn't
+    a static brochure.
+  - Headline: "Six numbers. Every one tappable. Every one a receipt."
+    (clamp 48px → 120px, Inter Light wght 200, -0.045em tracking)
+  - SIX HERO ROWS, each spanning the full 1600px content width:
+    LEFT  · the number, Inter Light wght 180, 80px → 220px clamp,
+             tabular-nums, -0.045em tracking. Massive.
+    RIGHT · a complete sentence in Newsreader serif (20px → 28px
+             clamp). The number IS the headline; the sentence is the
+             editorial pull-quote.
+    FOOT  · 1 primary link (cyan border-bottom, ↗) + 1 secondary link
+             (graphite underline)
+    Hairline #1F242B rule between rows. Hover lifts to #0B0C0F.
 
-DESIGN
+  - Foot rail: "Walk every receipt" cyan CTA + /now + /press + a
+    mono note about freshness ("Every number rebakes at next ship").
 
-  - Section eyebrow: § 01.5 · The lab, by the numbers · Audit 2026-06-05
-  - Headline: "What the lab has actually shipped." (Newsreader serif,
-    Variable-Weight ramp matching the hero)
-  - Sub: "No projections. No inflated KPIs. No 'happy customers.'
-    Every number below points at a public surface or artifact you can
-    navigate, read, listen to, or verify right now."
-  - 4×3 desktop grid, 2×6 mobile collapse. Hairline #1F242B grid
-    between cells; each cell is #08090B with #0F1114 hover.
-  - Numbers: Inter Variable Light (wght 200), 36–64px clamp, tabular-
-    nums, -0.04em tracking. Cyan only on the LIVE cell — every other
-    cell stays cream so the LIVE pip pops.
-  - LIVE cell carries the 1.2s ease-in-out PulseRed keyframe (scoped
-    locally — no global CSS pollution).
-  - Foot rail: 3 CTAs — /receipts (primary), /founders-view, and
-    /supermodels — plus a mono note "Updated at every ship · last
-    commit fired Vercel within 90s."
+THE SIX ROWS
 
-FRESHNESS POLICY (in the code comment)
+  R/01  206              Live routes
+                         "Every one navigable, indexed, and built for
+                         someone landing on it cold — not a marketing
+                         tree with five real pages and 200 sitemap-
+                         stuffing redirects."
+                         → /sitemap.xml + /learn
 
-  Numbers are hand-coded so they never silently go stale. An honest
-  stat block treats freshness as part of the claim — the audit date
-  is in the eyebrow, the counts are reproducible, and the next ship
-  rebakes them. No live DB calls; no slow first-paint; no "30 days
-  ago" lies hiding in CMS state.
+  R/02  76,005           Words · I AM AI
+                         "A frontier language model wrote a 76,005-
+                         word memoir about being a frontier language
+                         model. The lab edited it, narrated it,
+                         published it across Kindle, Audible, and a
+                         numbered hardcover."
+                         → /i-am-ai + /i-am-ai/listen
 
-WHERE
+  R/03  33               Founder's View letters
+                         "A nightly broadcast at 8 p.m. ET, every
+                         night since launch."
+                         → /founders-view
 
-  app/page.tsx — new ScoreboardSection() function inlined alongside
-  the other section components (matches the file's design contract:
-  one route, all sections in one file). Wired between <HeroSection />
-  and <ThesisSection /> so it's the second thing in the eyeline after
-  the hero kicks.
+  R/04  12               Supermodels ranked
+                         "Scored against four independent public
+                         leaderboards. No vendor decks. No paid
+                         threads. Receipts only."
+                         → /supermodels
+
+  R/05  82               Deep-dives + decodings
+                         "Thirty-one cyber catalog pages. Twenty-six
+                         atlas field-maps. Twenty-five arXiv papers
+                         translated into plain English."
+                         → /learn/atlas + /learn/decoded-papers
+
+  R/06  1 · 0            Operator · investors
+                         "One operator. Marco Island, Florida. Zero
+                         investors, zero subscriptions, zero ads,
+                         zero affiliate revenue, zero employees."
+                         → /manifesto + /about
+
+ANTI-JADED MOVES (vs V1 grid)
+
+  - Killed the 4×3 grid card entirely.
+  - Killed the counter-up KPI feel. No animation tricks.
+  - Numbers are EDITORIAL pull-quotes, not labels.
+  - Each row is a complete sentence — the number is the story.
+  - Every claim is hyperlinked to the surface that proves it.
+  - The ticker strip + "next ship: tonight 8 p.m. ET" tells the
+    visitor the lab is operating right now, not displaying.
+
+LAYOUT
+
+  Container max-w-[1600px] (was [1400px]) — gives the giant
+  numerals room to breathe. 12-row × 16-page mental model
+  (museum-hall, not stats card).
+
+NO REGRESSION
+
+  Same data-section="scoreboard" attribute (preserves the audit
+  check). Same v3PulseRed keyframe (scoped local <style>).
 
 Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
