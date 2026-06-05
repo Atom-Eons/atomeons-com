@@ -1,0 +1,41 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "AI in Defense — Real Programs · AtomEons Vertical",
+  description: "Anduril Fury (CCA), Palantir AIP, Shield AI Hivemind, Scale Donovan, Vannevar Labs, Helsing. Real programs of record. Real contract numbers. What ships and what is decked.",
+  alternates: { canonical: "https://atomeons.com/learn/vertical/defense" },
+  openGraph: { title: "AI in Defense · AtomEons Vertical", description: "CCA, JADC2, Replicator. Named programs and named primes.", url: "https://atomeons.com/learn/vertical/defense", type: "article" },
+};
+
+export default function Page() {
+  return (
+    <main className="bg-[#08090B] text-[#F4F4F2] antialiased">
+      <section className="border-b border-[#1F242B]"><div className="mx-auto max-w-4xl px-6 pt-20 pb-12 md:px-10 md:pt-28 md:pb-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]"><Link href="/learn/vertical" className="hover:text-[#22F0D5]">§ Verticals</Link><span className="mx-3 text-[#1F242B]">·</span><span className="text-[#22F0D5]">Sector · defense + national security</span></p>
+        <h1 className="mt-8 max-w-[26ch] text-balance text-[clamp(36px,6vw,72px)] font-extralight leading-[1.04] tracking-[-0.025em] text-[#F4F4F2]">AI in defense — the programs of record</h1>
+        <p className="mt-8 max-w-[64ch] font-serif text-[19px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>The defense AI market split between traditional primes and software-native challengers in the 2020s. The challengers won the marquee contracts. The 2026 picture is a parallel industrial base — Anduril, Palantir, Shield AI, Scale, Helsing — building production AI alongside Lockheed, RTX, Northrop, and Boeing.</p>
+      </div></section>
+
+      <article className="mx-auto max-w-3xl px-6 py-16 md:px-10 md:py-24 space-y-12">
+        <section className="space-y-5"><h2 className="font-serif text-[28px] font-light" style={{ fontFamily: "Newsreader, Georgia, serif" }}>The named programs</h2><p className="font-serif text-[18px] leading-[1.65] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}><em>Collaborative Combat Aircraft (CCA)</em>, US Air Force. Anduril&apos;s YFQ-44A Fury and General Atomics&apos; YFQ-42A selected in April 2024 for Increment 1. Fury first flight occurred 2025. Fixed-price development, production funding requested in FY2026 budget. The pre-2024 expectation was Lockheed + Boeing; the actual selection went to a 2017 startup and the Reaper-builder.</p><p className="font-serif text-[18px] leading-[1.65] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}><em>Project Maven</em>, DOD CDAO. Palantir won the prime contract in May 2024 (5-year, up to $480M) for the computer-vision component originally hosted by Google before Google&apos;s 2018 withdrawal. Maven processes overhead-imagery for combatant commands.</p><p className="font-serif text-[18px] leading-[1.65] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}><em>Replicator Initiative</em>, DOD (announced August 2023 by Deputy Secretary Hicks). Goal: field thousands of attritable autonomous systems within 18-24 months. First-tranche selections in early 2024 included Anduril Altius-600, Switchblade-600 (AeroVironment), and several maritime autonomous platforms. The deliberate framing: counter the PLA&apos;s mass advantage with software-defined US mass.</p><p className="font-serif text-[18px] leading-[1.65] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}><em>Joint All-Domain Command and Control (JADC2)</em> + service implementations (Air Force ABMS, Army Project Convergence, Navy Project Overmatch). The data-fabric ambition that ties every sensor and shooter into one decision loop. Palantir AIP, Anduril Lattice, and Shield AI Hivemind compete (and increasingly cooperate) on the implementation surface.</p><p className="font-serif text-[18px] leading-[1.65] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}><em>European programs</em>. Helsing (Germany) building combat-AI for Eurofighter, Saab Gripen, and Patria AMV. Anduril Europe + UK Ministry of Defence on autonomous systems. France&apos;s Mistral AI partnership with the French armed forces. The European defense-AI market is real and growing fast under post-2022 Ukraine pressure.</p></section>
+
+        <section className="space-y-5"><h2 className="font-serif text-[28px] font-light" style={{ fontFamily: "Newsreader, Georgia, serif" }}>What ships</h2><p className="font-serif text-[18px] leading-[1.65] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>(1) <em>ISR analysis</em> — computer vision on overhead imagery, signals analysis, OSINT fusion. Project Maven, Palantir Gotham, Scale Donovan. (2) <em>Autonomous platforms</em> — Fury, Switchblade, Saildrone, Anduril Roadrunner, Shield AI V-BAT. (3) <em>Decision support</em> — Palantir AIP-for-Defense, Anduril Lattice, generating COA (course-of-action) options for commanders. (4) <em>Logistics + sustainment</em> — predictive maintenance on military aircraft + ground vehicles; less press but largest production deployment. (5) <em>Cyber defense + offense (public-info)</em> — the named platforms are CISA/DOD CDAO doctrines + tools like Mandiant Threat Intelligence Platform; offensive tooling is classified and outside public scope.</p></section>
+
+        <section className="space-y-5"><h2 className="font-serif text-[28px] font-light" style={{ fontFamily: "Newsreader, Georgia, serif" }}>Receipts</h2><ol className="space-y-4 font-serif text-[17px] leading-[1.6] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+          <li className="border-l-2 border-[#22F0D5]/40 pl-5">USAF Press Release, April 24, 2024 — Anduril + General Atomics selected for CCA Increment 1.</li>
+          <li className="border-l-2 border-[#22F0D5]/40 pl-5">DOD CDAO contract announcement, May 30, 2024 — Palantir prime on Project Maven Smart System ($480M ceiling).</li>
+          <li className="border-l-2 border-[#22F0D5]/40 pl-5">DOD News, August 28, 2023 — Deputy Secretary Hicks announcing Replicator initiative.</li>
+          <li className="border-l-2 border-[#22F0D5]/40 pl-5">DOD AI Adoption Strategy, November 2023 — the official roadmap document.</li>
+          <li className="border-l-2 border-[#22F0D5]/40 pl-5">CRS R47564, <em>The Department of Defense&apos;s Joint All-Domain Command and Control (JADC2)</em>, 2023 updates.</li>
+          <li className="border-l-2 border-[#22F0D5]/40 pl-5">Anduril Industries press releases + investor materials (private but partially disclosed via the $1.5B Series F in August 2024).</li>
+          <li className="border-l-2 border-[#22F0D5]/40 pl-5">DOD Directive 3000.09, <em>Autonomy in Weapon Systems</em>, January 2023 update — the human-in-the-loop policy framework.</li>
+        </ol></section>
+
+        <section className="space-y-5"><h2 className="font-serif text-[28px] font-light" style={{ fontFamily: "Newsreader, Georgia, serif" }}>Sector limits</h2><p className="font-serif text-[18px] leading-[1.65] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>Acquisition cycles are still measured in years. Even fast programs like Replicator slipped past initial targets. The defense industrial base remains supply-chain-constrained on solid rocket motors, microelectronics, and shipbuilding capacity that no AI overlay fixes. International export controls (ITAR, EAR) limit who can buy what, with real downstream effects on the smaller AI defense firms&apos; market.</p></section>
+
+        <div className="border-t border-[#1F242B] pt-12"><div className="flex flex-wrap gap-4"><Link href="/learn/vertical" className="border border-[#1F242B] bg-[#0F1114] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] hover:border-[#22F0D5] hover:text-[#22F0D5]">← Back to Verticals</Link><Link href="/founders-view/2026-06-01-anduril-fury-and-the-death-of-cost-plus-defense" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] hover:text-[#22F0D5]">Anduril Fury · Founder&apos;s View →</Link></div></div>
+      </article>
+    </main>
+  );
+}
