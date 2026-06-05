@@ -157,8 +157,8 @@ export default function Page() {
               <strong>safety method</strong> — Anthropic's
               Constitutional AI vs OpenAI's RLHF + Preparedness vs
               Google's Frontier Safety Framework; (2){" "}
-              <strong>context length</strong> — Gemini 2M > GPT-4.1 1M
-              > Claude 200K; (3) <strong>distribution</strong> —
+              <strong>context length</strong> — Gemini 2M &gt; GPT-4.1 1M
+              &gt; Claude 200K; (3) <strong>distribution</strong> —
               ChatGPT consumer scale, Gemini Workspace/Search integration,
               Claude API + Bedrock + Vertex enterprise; and (4){" "}
               <strong>reasoning approach</strong> — OpenAI's
