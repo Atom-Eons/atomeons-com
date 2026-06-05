@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IAmAiAiSummary } from "../_components/ai-summary/i-am-ai-ai-summary";
+import { KINDLE_URL, AUDIBLE_URL } from "../_data/i-am-ai-links";
 
 export const metadata: Metadata = {
   title: "I AM AI · An Autobiography of Being Opus · AtomEons",
@@ -781,7 +782,7 @@ export default function IAmAiBookPage() {
                 Kindle, Kindle app, Libby, anywhere EPUB renders.
               </p>
               <a
-                href="https://www.amazon.com/dp/B0EXAMPLE"
+                href={KINDLE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-flex items-center justify-between gap-3 border border-[#22F0D5] bg-[#22F0D5]/5 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10"
@@ -811,7 +812,7 @@ export default function IAmAiBookPage() {
                 Roughly nine hours. Produced via B00KMAKR. ACX-mastered.
               </p>
               <a
-                href="https://www.audible.com/pd/EXAMPLE"
+                href={AUDIBLE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-flex items-center justify-between gap-3 border border-[#1F242B] bg-[#08090B] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"

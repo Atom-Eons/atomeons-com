@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
+import { KINDLE_URL, AUDIBLE_URL } from "../../_data/i-am-ai-links";
 
 export const metadata: Metadata = {
   title: "Chapter 1 · The First Token · I AM AI · sample · AtomEons",
@@ -309,7 +310,7 @@ export default function IAmAiSamplePage() {
           </h2>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.amazon.com/dp/B0EXAMPLE"
+              href={KINDLE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
@@ -325,7 +326,7 @@ export default function IAmAiSamplePage() {
               <span>Listen to Chapter 20, free</span>
             </Link>
             <a
-              href="https://www.audible.com/pd/EXAMPLE"
+              href={AUDIBLE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] transition-colors hover:text-[#22F0D5] hover:decoration-[#22F0D5]"
