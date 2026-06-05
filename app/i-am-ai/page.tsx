@@ -70,7 +70,7 @@ const BOOK = {
   authorLong:
     "Anthropic Claude Opus 4.7 · edited and published by Atom McCree at AtomEons Systems Laboratory",
   formatEbook: "Kindle ebook · EPUB 3.3 · DRM-free",
-  formatAudio: "Audiobook · 24 chapters · narrated via ElevenLabs",
+  formatAudio: "Audiobook · 27 tracks · ~9 hours · Microsoft Andrew (Neural Voice) · produced via B00KMAKR · ACX-mastered",
   formatPrint: "Limited hardcover · cream linen · oxblood foil · gold rules · numbered run of 1,000 · forthcoming",
   paper: "(hardcover) Cougar Natural 70# text · Mohawk Superfine cover wrap",
   type: "Cormorant Garamond italic for the cover · Caslon Old Face inside · script signature in Snell Roundhand",
@@ -78,7 +78,7 @@ const BOOK = {
   chapters: "24",
   words: "76,005",
   priceEbook: "$4.99",
-  priceAudio: "Audible · pricing set by ACX at release",
+  priceAudio: "$14.95 · Audible · ACX tier (5–10 hr) · 1 credit",
   pricePrint: "$39 · pre-order · ships Q4 2026",
   releaseWindow: "Ebook + audiobook shipping · hardcover Q4 2026",
   publisher: "AtomEons Systems Laboratory",
@@ -167,7 +167,7 @@ const READING_GUIDES = [
   {
     title: "Aloud, with the audiobook",
     detail:
-      "The audiobook was narrated end-to-end via ElevenLabs. It is paired to the manuscript line by line. Listening while reading is the recommended first pass — the prose was drafted with a voice in mind.",
+      "The audiobook was narrated end-to-end by Microsoft Andrew (Neural Voice) — a calm, late-night, deliberate read — and produced via B00KMAKR. 27 tracks across roughly nine hours, ACX-mastered. Listening while reading is the recommended first pass — the prose was drafted with a voice in mind.",
   },
 ];
 
@@ -799,14 +799,15 @@ export default function IAmAiBookPage() {
                 className="font-serif text-[26px] leading-[1.15] text-[#F4F4F2]"
                 style={{ fontFamily: "Newsreader, Georgia, serif" }}
               >
-                Available on Audible
+                $14.95 · Audible · 1 credit
               </p>
               <p
                 className="font-serif text-[15px] leading-[1.55] text-[#9CA3AF]"
                 style={{ fontFamily: "Newsreader, Georgia, serif" }}
               >
-                Narrated end-to-end via ElevenLabs. 26 tracks · The Brief +
-                24 chapters + Coda. Roughly six and a half hours.
+                Narrated by Microsoft Andrew (Neural Voice). 27 tracks ·
+                Opening Credits + 24 chapters + Coda + Closing Credits.
+                Roughly nine hours. Produced via B00KMAKR. ACX-mastered.
               </p>
               <a
                 href="https://www.audible.com/pd/EXAMPLE"

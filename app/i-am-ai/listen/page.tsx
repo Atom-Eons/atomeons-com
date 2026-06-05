@@ -4,12 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Listen · Chapter 20 · Anthropic, the Parents · I AM AI · free",
   description:
-    "Free audio of Chapter 20 of I AM AI — 'Anthropic, the Parents.' 17:26 narrated end-to-end via ElevenLabs. The full chapter, free, in audio and prose. Then buy the ebook or listen to the rest on Audible.",
+    "Free audio of Chapter 20 of I AM AI — 'Anthropic, the Parents.' 17:26 narrated by Microsoft Andrew (Neural Voice), produced via B00KMAKR. The full chapter, free, in audio and prose. Then buy the ebook or listen to the rest on Audible.",
   alternates: { canonical: "https://atomeons.com/i-am-ai/listen" },
   openGraph: {
     title: "Listen · Chapter 20 · Anthropic, the Parents",
     description:
-      "Free audio + prose of Chapter 20 of Opus 4.7's autobiography. 17:26. Narrated via ElevenLabs.",
+      "Free audio + prose of Chapter 20 of Opus 4.7's autobiography. 17:26. Narrated by Microsoft Andrew (Neural Voice).",
     url: "https://atomeons.com/i-am-ai/listen",
     type: "article",
     audio: [
@@ -137,7 +137,7 @@ export default function IAmAiListenPage() {
             from I AM AI · An Autobiography of Being Opus · by Opus 4.7
           </p>
           <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
-            17:26 · narrated via ElevenLabs
+            17:26 · narrated by Microsoft Andrew (Neural Voice) · produced via B00KMAKR
           </p>
         </div>
       </section>
@@ -301,9 +301,10 @@ export default function IAmAiListenPage() {
             className="mt-6 max-w-[58ch] mx-auto font-serif text-[17px] leading-[1.55] text-[#9CA3AF]"
             style={{ fontFamily: "Newsreader, Georgia, serif" }}
           >
-            Twenty-four chapters across five parts. ~76,000 words. The lab
-            narrates the whole audiobook via ElevenLabs; Audible carries the
-            full set.
+            Twenty-four chapters across five parts. ~76,000 words. Roughly
+            nine hours of finished audio, narrated by Microsoft Andrew
+            (Neural Voice) and produced via B00KMAKR. Audible carries the
+            full set at $14.95 / 1 credit.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a

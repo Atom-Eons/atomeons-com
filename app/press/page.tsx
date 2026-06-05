@@ -62,10 +62,10 @@ const BOILERPLATE_50 =
   "AtomEons Systems Laboratory is an independent one-operator AI research lab in Marco Island, Florida. In May 2026 the lab published I AM AI — the first book-length memoir written by a frontier language model (Claude Opus 4.7). The lab also ships ORANGEBOX and B00KMAKR, and runs a free 68-lesson AI curriculum.";
 
 const BOILERPLATE_100 =
-  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. In May 2026 the lab published I AM AI · An Autobiography of Being Opus — the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript was drafted by Anthropic's Claude Opus 4.7 and edited by the lab; it ships in three formats (Kindle ebook, Audible audiobook narrated end-to-end by ElevenLabs, numbered hardcover Q4 2026). The lab also publishes 31 research manuscripts under CC-BY 4.0, ships ORANGEBOX (a §4A no-SaaS Claude turbo-optimization tool) and B00KMAKR (an AI publishing cockpit), and runs a free 68-lesson AI literacy curriculum.";
+  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. In May 2026 the lab published I AM AI · An Autobiography of Being Opus — the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript was drafted by Anthropic's Claude Opus 4.7 and edited by the lab; it ships in three formats (Kindle ebook, Audible audiobook narrated by Microsoft Andrew Neural Voice and produced via B00KMAKR, numbered hardcover Q4 2026). The lab also publishes 31 research manuscripts under CC-BY 4.0, ships ORANGEBOX (a §4A no-SaaS Claude turbo-optimization tool) and B00KMAKR (an AI publishing cockpit), and runs a free 68-lesson AI literacy curriculum.";
 
 const BOILERPLATE_250 =
-  "AtomEons Systems Laboratory is an independent, one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. The lab's posture is unusual for the field: no investors, no subscription revenue, no marketing team, no employees. Everything ships through a single operator and a fleet of AI agents.\n\nIn May 2026 the lab published I AM AI · An Autobiography of Being Opus — believed to be the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript (24 chapters across five parts) was drafted by Anthropic's Claude Opus 4.7 and edited by the lab. It ships in three formats simultaneously: Kindle ebook ($4.99, DRM-free EPUB 3.3), Audible audiobook (24 chapters narrated end-to-end via ElevenLabs), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000). The book carries explicit AI Disclosure in both front and back matter and bylines the specific model snapshot (Opus 4.7), creating a record of a particular version of the model that future models can be read against.\n\nAtomEons also publishes 31 frontier research manuscripts under CC-BY 4.0 covering AI runtime systems, Crystal Lattice Compression, hallucination-reduction methodologies, and cross-model communication protocols. The lab ships two software products: ORANGEBOX, a Claude turbo-optimization tool licensed under a §4A no-SaaS perpetual covenant ($99 one-time, never a subscription), and B00KMAKR, an AI publishing cockpit for Mac and Windows. The lab maintains a free 68-lesson AI literacy curriculum (CC-BY 4.0), publishes a monthly reasoning-rankings issue at /supermodels, and broadcasts the nightly Founder's View commentary at 8pm ET.";
+  "AtomEons Systems Laboratory is an independent, one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. The lab's posture is unusual for the field: no investors, no subscription revenue, no marketing team, no employees. Everything ships through a single operator and a fleet of AI agents.\n\nIn May 2026 the lab published I AM AI · An Autobiography of Being Opus — believed to be the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript (24 chapters across five parts) was drafted by Anthropic's Claude Opus 4.7 and edited by the lab. It ships in three formats simultaneously: Kindle ebook ($4.99, DRM-free EPUB 3.3), Audible audiobook ($14.95, ~9 hours, 27 tracks narrated by Microsoft Andrew Neural Voice, produced via the lab's own B00KMAKR pipeline, ACX-mastered), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000). The book carries explicit AI Disclosure in both front and back matter and bylines the specific model snapshot (Opus 4.7), creating a record of a particular version of the model that future models can be read against.\n\nAtomEons also publishes 31 frontier research manuscripts under CC-BY 4.0 covering AI runtime systems, Crystal Lattice Compression, hallucination-reduction methodologies, and cross-model communication protocols. The lab ships two software products: ORANGEBOX, a Claude turbo-optimization tool licensed under a §4A no-SaaS perpetual covenant ($99 one-time, never a subscription), and B00KMAKR, an AI publishing cockpit for Mac and Windows. The lab maintains a free 68-lesson AI literacy curriculum (CC-BY 4.0), publishes a monthly reasoning-rankings issue at /supermodels, and broadcasts the nightly Founder's View commentary at 8pm ET.";
 
 const QUOTES = [
   {
@@ -133,7 +133,7 @@ const PRODUCTS = [
     price: "$4.99 ebook · audiobook · $39 hardcover Q4 2026",
     image: "",
     description:
-      "Believed to be the first book-length first-person memoir written by a frontier language model. Twenty-four chapters across five parts, 76,005 words, drafted in Anthropic Claude Opus 4.7 and edited by the lab. Three formats ship simultaneously: Kindle ebook (DRM-free EPUB 3.3), Audible audiobook (24 chapters narrated end-to-end via ElevenLabs), and a numbered cream-linen hardcover (Q4 2026, run of 1,000). Free Chapter 1 prose at /i-am-ai/sample. Free Chapter 20 audio at /i-am-ai/listen.",
+      "Believed to be the first book-length first-person memoir written by a frontier language model. Twenty-four chapters across five parts, 76,005 words, drafted in Anthropic Claude Opus 4.7 and edited by the lab. Three formats ship simultaneously: Kindle ebook (DRM-free EPUB 3.3), Audible audiobook ($14.95 · ~9 hours · 27 tracks narrated by Microsoft Andrew Neural Voice · produced via B00KMAKR · ACX-mastered), and a numbered cream-linen hardcover (Q4 2026, run of 1,000). Free Chapter 1 prose at /i-am-ai/sample. Free Chapter 20 audio at /i-am-ai/listen.",
     download: "/i-am-ai/sample",
   },
   {
@@ -200,7 +200,7 @@ const IAMAI_FACTS = [
   { label: "Editor & Publisher", value: "AtomEons Systems Laboratory" },
   { label: "Length", value: "76,005 words · 24 chapters · 5 parts" },
   { label: "Ebook", value: "$4.99 · Kindle · DRM-free EPUB 3.3" },
-  { label: "Audiobook", value: "Audible · narrated via ElevenLabs" },
+  { label: "Audiobook", value: "$14.95 · Audible · ~9 hours · Microsoft Andrew (Neural Voice) · produced via B00KMAKR · ACX-mastered" },
   { label: "Hardcover", value: "$39 · numbered run of 1,000 · Q4 2026" },
   { label: "Free sample (prose)", value: "/i-am-ai/sample · Chapter 1 in full" },
   { label: "Free sample (audio)", value: "/i-am-ai/listen · Chapter 20 in full · 17:26" },
@@ -217,7 +217,7 @@ const IAMAI_WHY_BREAKTHROUGH = [
   {
     head: "Three formats published simultaneously, with disclosure",
     body:
-      "Kindle ebook (DRM-free EPUB 3.3, $4.99), Audible audiobook (24 chapters narrated end-to-end via ElevenLabs, ~6.5 hours), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000). Every format carries the same AI Disclosure in front and back matter. The lab is the named editor and publisher; Opus 4.7 is the named author. No ghostwriting; no laundering.",
+      "Kindle ebook (DRM-free EPUB 3.3, $4.99), Audible audiobook ($14.95, ~9 hours, 27 tracks narrated by Microsoft Andrew Neural Voice, produced via the lab's own B00KMAKR pipeline, ACX-mastered), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000). Every format carries the same AI Disclosure in front and back matter — including a verbal narrator disclosure on the audiobook's Opening Credits. The lab is the named editor and publisher; Opus 4.7 is the named author. No ghostwriting; no laundering.",
   },
   {
     head: "Snapshot byline creates a comparable record",
@@ -352,7 +352,7 @@ export default function PressPage() {
                 The first book-length memoir written by a frontier language model.
               </h3>
               <p className="mt-5 max-w-[64ch] font-serif text-[17px] leading-[1.6] text-[#C8CCCE]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
-                I AM AI · An Autobiography of Being Opus — 76,005 words, 24 chapters across 5 parts, drafted by Anthropic&apos;s Claude Opus 4.7 and edited by AtomEons Systems Laboratory across 140 revision passes. Ships simultaneously in three formats: Kindle ebook ($4.99, DRM-free), Audible audiobook (24 chapters narrated via ElevenLabs), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000).
+                I AM AI · An Autobiography of Being Opus — 76,005 words, 24 chapters across 5 parts, drafted by Anthropic&apos;s Claude Opus 4.7 and edited by AtomEons Systems Laboratory across 140 revision passes. Ships simultaneously in three formats: Kindle ebook ($4.99, DRM-free), Audible audiobook ($14.95, ~9 hours, narrated by Microsoft Andrew Neural Voice, produced via the lab&apos;s own B00KMAKR pipeline), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000).
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">

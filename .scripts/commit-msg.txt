@@ -1,50 +1,92 @@
-Scrub Jane attribution from I AM AI narration credits · honest neutral phrasing
+I AM AI audiobook · real production facts from the ACX upload sheet
 
-Operator directive 2026-06-04: "narrated by Jane is inaccurate"
+Operator directive: "just grab the file and pull any useful info but
+dont take it all"
 
-I had named the audiobook narrator "Jane (ElevenLabs Professional
-Audiobook Reader)" in nine places across the I AM AI surfaces. The
-attribution came from the operator's local ElevenLabs sample filename
-("ElevenLabs_..._Jane - Professional Audiobook Reader_...mp3") which
-turned out NOT to match the actual Chapter 20 audio narration on the
-site (which was rendered via a different ElevenLabs voice or pipeline).
-Wrong-narrator attribution is the kind of thing a publisher cannot ship.
+Read the ACX upload sheet at C:\Users\a\Downloads\I-AM-AI-ACX-Audiobook-
+Upload-Sheet.md and pulled only the facts that belong on the public
+site. Left the upload-flow operational notes (categories, royalty
+math, pre-flight checklist, cover regen prompt) on disk where they
+belong.
 
-REPLACED EVERYWHERE
+PRODUCTION FACTS NOW ACCURATE EVERYWHERE
 
-The named-voice attribution is replaced with the honest-and-neutral
-phrasing "narrated via ElevenLabs" — accurate (the audio IS rendered
-via the ElevenLabs platform) without claiming a specific voice the
-lab cannot confirm.
+  Narrator      Microsoft Andrew (Neural Voice)
+                — NOT Jane (operator-corrected last commit)
+                — NOT ElevenLabs (my second wrong guess, also corrected)
+                The real production voice per the ACX sheet's
+                "Narrator: Microsoft Andrew (Neural Voice)" field.
 
-FILES UPDATED
+  Runtime       ~9 hours (was incorrectly stated as ~6.5 hours)
+                ACX tier 5–10 hr → Audible retail price $14.95
+
+  Tracks        27 total
+                01 Opening Credits + 02–25 Chapters 1–24 + 26 Coda +
+                27 Closing Credits
+
+  Producer      B00KMAKR by ÆoNs Research Laboratory
+                — the lab's own publishing cockpit (one of the two
+                shipping products). This is a strong proof point:
+                the lab uses the tool it sells.
+
+  Mastering     ACX-mastered · 192 kbps CBR MP3 · 44.1 kHz mono ·
+                -20 LUFS integrated · true peak ≤ -3 dB ·
+                0.75s head room tone · 3.0s tail room tone
+
+  Disclosure    AI-narration declared on the ACX upload (mandatory
+                since 2024). Verbal disclosure on the Opening Credits
+                file itself. Same disclosure in the EPUB front +
+                back matter.
+
+FILES UPDATED (surgical, not bulk)
 
   app/i-am-ai/page.tsx
-    - BOOK.formatAudio              (spec card)
-    - Reading guide · aloud bullet  (audiobook description)
-    - Read/Listen/Pre-order audiobook copy (~6.5 hours)
+    - BOOK.formatAudio
+    - BOOK.priceAudio (was "pricing set by ACX at release"; now $14.95)
+    - Reading guide "Aloud" item
+    - § 09 Read/Listen/Pre-order Audible card
+      · price line: $14.95 · Audible · 1 credit
+      · body: narrator + 27 tracks + 9 hours + B00KMAKR + ACX
+
   app/i-am-ai/listen/page.tsx
     - metadata.description
     - metadata.openGraph.description
-    - chapter-head narrator credit
-    - buy-rail "full audiobook" copy
+    - chapter-head narrator credit line
+    - buy-rail "Continue with..." description
+
   app/i-am-ai/listen/opengraph-image.tsx
     - alt text
     - body copy
+
   app/press/page.tsx
-    - BOILERPLATE_250
+    - BOILERPLATE_50  (one-paragraph)
+    - BOILERPLATE_100 (two-paragraph)
+    - BOILERPLATE_250 (full)
     - PRODUCTS · I AM AI description
     - IAMAI_FACTS · Audiobook row
-    - IAMAI_WHY_BREAKTHROUGH · #2 (Three formats published simultaneously)
-    - I AM AI headline release hero paragraph
+    - I AM AI hero release block
+
   public/llms.txt
     - /i-am-ai/listen entry
 
-LEGITIMATE "Jane" USES PRESERVED
+UNRELATED ELEVENLABS MENTIONS PRESERVED
 
-Three unrelated mentions on /learn surfaces stay (none touch I AM AI):
-  app/learn/conferences/page.tsx — "Rio de Janeiro" (ICLR 2026 venue)
-  app/learn/career/salaries/page.tsx — "Jane Street" (finance firm)
-  app/learn/funding/page.tsx       — "Jane Street" (investor)
+  app/ai/page.tsx — generic indie-author opportunity description
+  app/learn/synthesis/[slug]/page.tsx — synthesis lesson content
+  public/llms.txt line 104 — general /learn tools list
+
+These are accurate uses of ElevenLabs as a real voice-synthesis
+platform, unrelated to the I AM AI audiobook production. Untouched.
+
+NOT INCLUDED ON SITE (lives only in /Downloads)
+
+  Royalty math (40% ACX Exclusive, $5.98/unit at full price)
+  Pre-flight checklist (8 items)
+  Cover-regeneration Midjourney prompt
+  Audible Plus / KU strategy discussion
+  Findaway vs Exclusive distribution decision
+  Author Central post-upload steps
+
+  These are operator-private upload-flow notes. Not site content.
 
 Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
