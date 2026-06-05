@@ -59,6 +59,93 @@ async function loadLetterStats() {
 
 const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = [
   {
+    date: "2026-06-05",
+    what:
+      "Warp 9 · 16 new long-form pages materialized from 5 parallel workflows. /research/decoded gets 8 new paper decodings (Switch Transformer · Self-Instruct · Mamba · LIMA · PaLM 2 · Flamingo · Segment Anything · GCG attack). /learn/cyber gets 5 (MITRE ATT&CK · NIST CSF · Cyber Kill Chain · Colonial Pipeline 2021 · Log4Shell 2021). /learn/atlas gets 2 (State Space Models · DPO/KTO/ORPO). /learn/vertical gets 1 (AI in Healthcare). ~360 KB of new content, all real arXiv IDs + CVE numbers + NIST docs + MITRE techniques. 119 more in flight from the same workflows.",
+    href: "/learn/atlas/dpo-kto-orpo",
+  },
+  {
+    date: "2026-06-05",
+    what:
+      "Persistent inline search bar — full-width under the fixed Header. Same engine as ⌘K palette (86 KB static index, sublime fuzzy scorer, sub-15ms keystroke). Lazy-loads on first focus. Hidden on /admin/* /api/* /auth/* surfaces.",
+    href: "/",
+  },
+  {
+    date: "2026-06-05",
+    what:
+      "Founder's View letter 33 published — 'The Free Knowledge Already Won.' Twenty-four years of MIT lectures, 2.4 million arXiv preprints, every model card free. The seventeen-year-old with a $200 Chromebook is already ahead of the 2005 freshman. 431 words. Theme: open-knowledge-economy.",
+    href: "/founders-view",
+  },
+  {
+    date: "2026-06-05",
+    what:
+      "/learn/vertical surface (NEW) · 20 sector applied-AI guides scaffolded. Healthcare landed first; finance, defense, education, government, retail, manufacturing, agriculture, energy, legal, logistics, real-estate, insurance, media, climate, biotech, materials, automotive, hospitality, public-safety queued from the running workflow.",
+    href: "/learn/vertical",
+  },
+  {
+    date: "2026-06-05",
+    what:
+      "Homepage Scoreboard V3 · museum-hall, six editorial hero rows. Each row spans full content width with a massive number (clamp 80px → 220px Inter Light) on the left + a complete sentence in Newsreader serif on the right. Numbers are hyperlinks. Live ticker strip at the top: LIVE pulse · audit date · last letter · last book · last issue · next ship time.",
+    href: "/",
+  },
+  {
+    date: "2026-06-05",
+    what:
+      "I AM AI audiobook facts corrected from the ACX upload sheet. Narrator is Microsoft Andrew (Neural Voice), not Jane and not ElevenLabs. Runtime ~9 hours across 27 tracks. Audible price $14.95 (ACX 5-10 hr tier). Produced via the lab's own B00KMAKR pipeline.",
+    href: "/i-am-ai",
+  },
+  {
+    date: "2026-06-04",
+    what:
+      "/i-am-ai/listen (NEW) — Chapter 20 'Anthropic, the Parents' free, in audio AND prose. 17:26 MP3 narration + 2:15 teaser MP4 + 17:26 full chapter MP4. Sticky audio player at top, full chapter prose below, video rail, buy CTAs. Range-streamed via Vercel edge.",
+    href: "/i-am-ai/listen",
+  },
+  {
+    date: "2026-06-04",
+    what:
+      "/supermodels (NEW) — Hottest Supermodels of May 2026. 12 frontier AI models ranked by reasoning, scored against four independent leaderboards (LMArena · Humanity's Last Exam · Aider Polyglot · Artificial Analysis). Explicit methodology + exclusion list (vendor benchmarks, paid threads, demo videos all refused).",
+    href: "/supermodels",
+  },
+  {
+    date: "2026-06-04",
+    what:
+      "/i-am-ai full rebuild with the real material from the manuscript. 24 chapters across 5 parts, 76,005 words, drafted by Opus 4.7. Three-format launch rail: Kindle $4.99 · Audible · hardcover $39 Q4 2026.",
+    href: "/i-am-ai",
+  },
+  {
+    date: "2026-06-04",
+    what:
+      "/i-am-ai/sample (NEW) — Chapter 1 'The First Token' free, in full. ~3,000 words. Newsreader serif body with drop-cap. The verbatim opening of the book.",
+    href: "/i-am-ai/sample",
+  },
+  {
+    date: "2026-06-04",
+    what:
+      "/books index (NEW) — the shelf. I AM AI + the Monograph + three reading lists the lab maintains (cyber books, decoded papers, ÆoNs Research manuscripts).",
+    href: "/books",
+  },
+  {
+    date: "2026-06-04",
+    what:
+      "/press EPK rebuilt — sticky tab nav, copy-to-clipboard boilerplates (50/100/250 word), 3 downloadable SVG brand assets, color palette, product cards (ORANGEBOX $99 · B00KMAKR $99 · I AM AI), quote bank, latest-press links, contact panel. Replaces the prior scroll-heavy version.",
+    href: "/press",
+  },
+  {
+    date: "2026-06-04",
+    what:
+      "/404 rewritten in V3 noir voice. Killed the internal-jargon copy ('not on the DAG', 'cockpit returned FAILED'). Now: calm headline + ⌘K shortcut hint + 6 real destination cards + email for broken-link reports.",
+  },
+  {
+    date: "2026-06-04",
+    what:
+      "LaunchBanner removed from layout. The ORANGEBOX free-week countdown was covering the now-fixed top nav. Component stays in repo for future launches.",
+  },
+  {
+    date: "2026-06-03",
+    what:
+      "Supabase security advisor cleared — public.download_counts view flipped from SECURITY DEFINER to security_invoker = true. Three RLS-enabled tables (download_events · orangebox_v63_waitlist · orders) got explicit service_role-only policies for documentation. Zero security lints remaining on the orangebox project.",
+  },
+  {
     date: "2026-06-02",
     what:
       "Immersive homepage + design-system page · NEW. AtomEonsImmersiveHero rotates 12 of 67 Nano Banana Pro press-photos slowly across the viewport while massive variable-weight typography overlays. Stat strip across the bottom (200+ pages, 12 cyber tracks, 50+ atlases, CC-BY 4.0). HomeCurriculumWall is a bento of 18 cards proving the depth of /learn. /design-system is the language we build in, made public — Stripe Press / IBM Carbon / Vercel Geist tier.",
