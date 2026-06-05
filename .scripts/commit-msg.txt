@@ -1,93 +1,78 @@
-Scoreboard V3 · human-readable + marketing-effect copy pass
+Warp 9 scaffolding · /learn/vertical surface + nav · materializer + 4 parallel workflows in flight
 
-Operator directive 2026-06-05: "for humans needs to be readable and
-marketing effect"
+Operator directive 2026-06-05: "improve the education so we are better
+than sum of all paid ai knowledge and cyber / take us to warp speed 9"
+and "95% of 5 hour to burn in 60 min from now mark."
 
-V2 (museum-hall) had the right SHAPE but the copy was too editorial —
-50-word pull-quotes a tired scroller could not scan. V3 keeps the
-museum-hall layout (big numbers + Newsreader serif + hover lift) and
-rewrites every line for a 2-second read with a clear next action.
+WHAT'S RUNNING — 140 AGENTS · 4 WORKFLOWS PARALLEL
 
-ROW REORDER · sales-funnel
+  wab473r94 · warp-9-education       · 35 AI atlas + 25 cyber  =  60
+  wv7i4fe10 · warp-9-decoded-papers  · 30 paper decodings      =  30
+  wic30a5lw · warp-9-cyber-breaches  · 25 breach postmortems   =  25
+  wqyrh4nfe · warp-9-vertical-ai     · 20 sector applied guides=  20
+                                                          total = 135 agents
 
-  The order changed to lead with the strongest pull. I AM AI (the
-  book) is now R/01 — it is the single most marketable artifact the
-  lab has shipped this season. Routes count moved from R/01 to R/05
-  (still on the list, no longer the lead).
+  Each produces 1500-3500 words of lab-grade content + a paste-ready
+  TSX file (V3 noir palette, Server Component, Newsreader serif,
+  metadata + canonical + OG). Real citations only — every agent is
+  primed to refuse invented arXiv IDs, CVEs, NIST docs, or vendor
+  deployments. If a fact cannot be verified, the agent is told to
+  write a sourced claim or omit.
 
-  R/01  76,005   the book an AI wrote about itself
-  R/02  33       letters · one every night
-  R/03  12       AIs ranked by real reasoning
-  R/04  82       deep dives · free, CC-BY
-  R/05  206      live pages · all real
-  R/06  1 · 0    operator · investors
+  Estimated completion: 30-45 min from launch.
 
-COPY · two-clause pattern
+WHAT'S LANDING IN THIS COMMIT (scaffolding only · page content comes
+in the follow-up materialization commit)
 
-  Each sentence now follows: <STRONG ASSERTION>.<one-line proof>.
+  app/learn/vertical/page.tsx (NEW)
+    Index page for the 20 applied-AI sector guides. Each card lists:
+    sector name, 1-line blurb, regulatory housekeeping tags, V/NN
+    cell index. Grid of 20 cards in V3 noir palette. Cross-link
+    rail to /learn/atlas + /learn/cyber + /research/decoded.
 
-  R/01  "An AI wrote a memoir about itself. 76,005 words.
-         24 chapters. Read Chapter 1 free. Listen to Chapter 20 free."
+  app/_components/V3/Header.tsx
+    Added "Verticals" entry to the Learn dropdown (between Atlas
+    and Career). Hint: "AI in 20 industries · applied."
+    childHrefs[] extended to include /learn/vertical.
 
-  R/02  "A new letter every night at 8 p.m. ET. Real intelligence,
-         decoded. Defense, AI, cyber, supply chain. Written like a
-         manuscript. Free."
+  app/_components/V3/MobileNav.tsx
+    Added /learn/vertical to the mobile Learn group.
 
-  R/03  "Which AI is actually best at thinking? May 2026 rankings
-         against four independent benchmarks. No vendor decks,
-         no paid threads. Receipts only."
+  app/sitemap.ts
+    /learn/vertical at priority 0.9.
 
-  R/04  "82 long-form teach-yourself pages across cyber, AI atlas,
-         and decoded research. Free. Open license. The curriculum a
-         working operator would actually read."
+  proxy.ts
+    Five aliases route to /learn/vertical:
+      /verticals · /sectors · /industries · /applied · /ai-by-industry
 
-  R/05  "206 real pages, not a marketing tree. Every one navigable,
-         indexed, and built for someone landing on it cold.
-         Hit ⌘K and search anything."
+  .scripts/materialize-warp9.mjs (NEW)
+    Master materializer. Reads workflow JSON output, extracts ```tsx
+    blocks from each agent's markdown, validates (default export +
+    metadata export + > 1500 chars), writes to the correct route
+    path. Refuses to overwrite existing files. Reports
+    ok/skip/fail ledger to stdout. Handles all 4 workflows.
 
-  R/06  "Built by one person. No outside capital. Marco Island,
-         Florida. Zero investors. Zero subscriptions. Zero ads. The
-         lab uses the tools it sells — and sells what it uses."
+WHEN THE WORKFLOWS COMPLETE
 
-  Strong asserts render as #F4F4F2 (cream). Proof line drops to
-  #9CA3AF (graphite). Scanner's eye lands on the assert first.
+  Run: node .scripts/materialize-warp9.mjs \
+         --atlas    <wab473r94-result.json> \
+         --decoded  <wv7i4fe10-result.json> \
+         --breaches <wic30a5lw-result.json> \
+         --vertical <wqyrh4nfe-result.json>
 
-INTERACTION · the numbers are now hyperlinks
+  Expected output: ~130+ new TSX files across
+    app/learn/atlas/<slug>/page.tsx           (35 new)
+    app/learn/cyber/<slug>/page.tsx           (25 new from W1 + 25 from W3)
+    app/research/decoded/<slug>/page.tsx      (30 new)
+    app/learn/vertical/<slug>/page.tsx        (20 new)
 
-  V2 made the numbers passive. V3 wraps each number cell in
-  <Link href={row.primary.href}> with proper aria-label. Hovering
-  the row lifts both:
-    - color: #F4F4F2 → #22F0D5 (cream → cyan)
-    - font-variation-settings: wght 180 → 320 (Variable axis ramp)
-  Click anywhere on the giant 220px number, drop on the surface.
+  Total route count expected after materialization:
+    current 206 → projected ~340
 
-HEADLINE
+KNOWN TEMPORARY 404s
 
-  V2: "Six numbers. Every one tappable. Every one a receipt."
-  V3: "Six things the lab built. Tap any number." (cyan accent on
-      the verb)
-
-  Subhead V2 (54 words): "No projections. No inflated KPIs. No
-  'happy customers.' Each row below is a complete sentence — the
-  number is the headline, the link is the proof."
-
-  Subhead V3 (29 words): "Real pages. Real benchmarks. Real audio.
-  No projections, no inflated KPIs, no 'happy customers.' Each row
-  drops you straight onto the thing."
-
-CTA · directionals
-
-  Each row's primary link uses → instead of ↗ to read as "drop you
-  on the page" (in-site) rather than "open external."
-
-NO REGRESSION
-
-  - Live ticker strip unchanged
-  - Foot rail (/receipts CTA + /now + /press + freshness note)
-    unchanged
-  - PulseRed keyframe unchanged
-  - data-section="scoreboard" preserved
-  - max-w-[1600px] preserved
-  - All six surfaces verifiable on live site
+  The 20 /learn/vertical/<slug> cards on the new index page link
+  to sub-pages that 404 until the workflow returns. ~30-45 min
+  window. Acceptable tradeoff for visible nav progress.
 
 Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>

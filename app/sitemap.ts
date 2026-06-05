@@ -180,6 +180,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/i-am-ai/sample`, lastModified: now, changeFrequency: "weekly", priority: 0.92 },
     { url: `${BASE}/i-am-ai/listen`, lastModified: now, changeFrequency: "weekly", priority: 0.92 },
     { url: `${BASE}/supermodels`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${BASE}/learn/vertical`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/books`, lastModified: now, changeFrequency: "weekly", priority: 0.92 },
     { url: `${BASE}/receipts`, lastModified: now, changeFrequency: "weekly", priority: 0.88 },
     { url: `${BASE}/legal`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },

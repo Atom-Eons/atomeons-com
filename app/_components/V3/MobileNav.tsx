@@ -34,6 +34,7 @@ const SECTIONS: NavSection[] = [
     label: "Learn",
     children: [
       { href: "/learn/atlas", label: "Atlas" },
+      { href: "/learn/vertical", label: "Verticals · 20 industries" },
       { href: "/learn/career", label: "Career" },
       { href: "/learn/trust", label: "Trust" },
       { href: "/learn/decode", label: "Decode" },

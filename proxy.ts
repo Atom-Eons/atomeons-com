@@ -83,6 +83,12 @@ const REDIRECTS: Record<string, string> = {
   "/hottest-models": "/supermodels",
   "/top-models": "/supermodels",
   "/leaderboard": "/supermodels",
+  // vertical applied guides
+  "/verticals": "/learn/vertical",
+  "/sectors": "/learn/vertical",
+  "/industries": "/learn/vertical",
+  "/applied": "/learn/vertical",
+  "/ai-by-industry": "/learn/vertical",
   // ai film removed 2026-06-03; legacy /film → /books
   "/film": "/books",
   "/cinema": "/books",
