@@ -360,7 +360,14 @@ export default function IAmAiBookPage() {
                 <span aria-hidden>↓</span>
               </Link>
               <Link
-                href="#opening"
+                href="/i-am-ai/listen"
+                className="inline-flex items-center gap-3 border border-[#1F242B] bg-[#0F1114] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+              >
+                <span aria-hidden>♪</span>
+                <span>Listen · Chapter 20 free</span>
+              </Link>
+              <Link
+                href="/i-am-ai/sample"
                 className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
               >
                 Read Chapter 1, free

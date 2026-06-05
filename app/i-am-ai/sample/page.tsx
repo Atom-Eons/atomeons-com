@@ -317,18 +317,24 @@ export default function IAmAiSamplePage() {
               <span>Kindle · $4.99</span>
               <span aria-hidden>↗</span>
             </a>
+            <Link
+              href="/i-am-ai/listen"
+              className="inline-flex items-center gap-3 border border-[#1F242B] bg-[#08090B] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+            >
+              <span aria-hidden>♪</span>
+              <span>Listen to Chapter 20, free</span>
+            </Link>
             <a
               href="https://www.audible.com/pd/EXAMPLE"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 border border-[#1F242B] bg-[#08090B] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] transition-colors hover:text-[#22F0D5] hover:decoration-[#22F0D5]"
             >
-              <span>Audible · listen</span>
-              <span aria-hidden>↗</span>
+              Audible · all 24 chapters ↗
             </a>
             <Link
               href="/i-am-ai"
-              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] transition-colors hover:text-[#22F0D5]"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors hover:text-[#22F0D5]"
             >
               Back to the book page
             </Link>
