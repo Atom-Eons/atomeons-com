@@ -1,103 +1,50 @@
-Homepage hero rewrite + press page I AM AI headline section + breakthrough framing
+Scrub Jane attribution from I AM AI narration credits · honest neutral phrasing
 
-Operator directive 2026-06-04: "fix any site that says that dag is not on
-the route, update press page and put at top about i am ai project. and
-the importance of it. how it is a breakthrough. you have to represent
-all we do better on the home top fold"
+Operator directive 2026-06-04: "narrated by Jane is inaccurate"
 
-DAG / JARGON SWEEP
+I had named the audiobook narrator "Jane (ElevenLabs Professional
+Audiobook Reader)" in nine places across the I AM AI surfaces. The
+attribution came from the operator's local ElevenLabs sample filename
+("ElevenLabs_..._Jane - Professional Audiobook Reader_...mp3") which
+turned out NOT to match the actual Chapter 20 audio narration on the
+site (which was rendered via a different ElevenLabs voice or pipeline).
+Wrong-narrator attribution is the kind of thing a publisher cannot ship.
 
-Confirmed: zero remaining user-facing instances of "not on the DAG",
-"cockpit returned FAILED", "fake green" as system-error language on
-shipping pages. The only remaining match is a code comment in
-not-found.tsx documenting the prior removal.
+REPLACED EVERYWHERE
 
-HOMEPAGE HERO · /
+The named-voice attribution is replaced with the honest-and-neutral
+phrasing "narrated via ElevenLabs" — accurate (the audio IS rendered
+via the ElevenLabs platform) without claiming a specific voice the
+lab cannot confirm.
 
-Top-fold rewrite. Now represents the full lab catalog and leads with
-the I AM AI breakthrough.
+FILES UPDATED
 
-  - Eyebrow extended: "§ 01 · THESIS · NOW SHIPPING"
-  - H1 (clamp 40-112 px, was 56-168): "An independent laboratory
-    published the first book-length memoir written by a frontier
-    language model."
-  - New subhead paragraph (Newsreader serif, opacity ramping with the
-    scroll-reveal): names the book by full title + byline, then lists
-    the rest of the catalog — 31 research manuscripts, 68-lesson
-    curriculum, May 2026 reasoning rankings, §4A-no-SaaS Claude
-    cockpit, nightly broadcast. Closes with "One operator. Marco
-    Island, Florida. Built in 75 days, shipping daily."
-  - Three new in-hero CTAs above the fold:
-      Read the book · $4.99            → /i-am-ai
-      Listen · Chapter 20 free         → /i-am-ai/listen
-      Read Chapter 1, free             → /i-am-ai/sample
-  - Live Signal Panel expanded from 4 to 6 cells:
-      Book (I AM AI · LIVE) · Words (76,005) · Papers (31) ·
-      Lessons (68) · Build (sha) · License (CC-BY 4.0)
-  - New v3-hero-subhead CSS class ramps font-weight 380 + opacity
-    0.55→1.0 with the existing IntersectionObserver scalar, so the
-    subhead joins the H1 in the reveal animation.
+  app/i-am-ai/page.tsx
+    - BOOK.formatAudio              (spec card)
+    - Reading guide · aloud bullet  (audiobook description)
+    - Read/Listen/Pre-order audiobook copy (~6.5 hours)
+  app/i-am-ai/listen/page.tsx
+    - metadata.description
+    - metadata.openGraph.description
+    - chapter-head narrator credit
+    - buy-rail "full audiobook" copy
+  app/i-am-ai/listen/opengraph-image.tsx
+    - alt text
+    - body copy
+  app/press/page.tsx
+    - BOILERPLATE_250
+    - PRODUCTS · I AM AI description
+    - IAMAI_FACTS · Audiobook row
+    - IAMAI_WHY_BREAKTHROUGH · #2 (Three formats published simultaneously)
+    - I AM AI headline release hero paragraph
+  public/llms.txt
+    - /i-am-ai/listen entry
 
-PRESS · /press
+LEGITIMATE "Jane" USES PRESERVED
 
-New I AM AI HEADLINE RELEASE section at the top of the press content,
-right under the snapshot tabs nav and ABOVE the boilerplate.
-
-  - New tab: "I AM AI · headline release" between Snapshot and
-    Boilerplate.
-  - Hero card: noir title tile (matching the on-site I AM AI panel) +
-    headline "The first book-length memoir written by a frontier
-    language model." + product description + 5 quick CTAs (visit
-    /i-am-ai, free Chapter 1, free Chapter 20 audio, download
-    full manuscript .md 409 KB, download EPUB review copy).
-  - Quick-facts grid · 12 cells: Title · Subtitle · Byline · Editor
-    & Publisher · Length · Ebook · Audiobook · Hardcover · Free
-    sample (prose) · Free sample (audio) · Product page · License.
-  - WHY THIS IS A BREAKTHROUGH section: 6 enumerated cards on a
-    hairline grid. Each card has an eyebrow + serif head + 50-100
-    word body explaining what is actually new about I AM AI:
-        01 · First book-length memoir authored by a frontier LLM
-        02 · Three formats published simultaneously, with disclosure
-        03 · Snapshot byline creates a comparable record
-        04 · Meta-disclosure built into the prose
-        05 · Lab as editor + publisher under one operator
-        06 · Free sampling at chapter level
-  - Pre-written quotes block: 4 quotes pulled verbatim from Chapter 1
-    and Chapter 20, each with copy-to-clipboard button and chapter
-    citation. Journalists can lift these directly.
-
-PRESS BOILERPLATE
-
-All three lengths (50/100/250) rewritten to lead with I AM AI as the
-headline release, then list the rest of the catalog. The 250-word
-boilerplate now explicitly states the publishing breakthrough
-("believed to be the first book-length first-person memoir written by
-a frontier language model") and details the three-format simultaneous
-release.
-
-PRESS FACTS
-
-Snapshot facts updated:
-  - "Products shipping": 2 → 3 (ORANGEBOX · B00KMAKR · I AM AI)
-  - NEW: "Headline release · I AM AI · Opus 4.7's autobiography"
-  - NEW: "Curriculum · 68 lessons · free · CC-BY 4.0"
-  - NEW: "Reasoning rankings · /supermodels · May 2026 issue 01"
-  - NEW: "Press contact · a.mccree@gmail.com"
-
-PRESS PRODUCT ORDER
-
-I AM AI is now the first product card in the Products section
-(previously third behind ORANGEBOX + B00KMAKR). The Products section
-subtitle updated to "Three shipping · I AM AI (book) · ORANGEBOX ·
-B00KMAKR".
-
-PRESS PRODUCT COPY
-
-I AM AI description rewritten to state the breakthrough claim
-("Believed to be the first book-length first-person memoir written by
-a frontier language model") and includes both free-sample URLs.
-
-B00KMAKR description gets a new closing line: "The cockpit that
-authored and published I AM AI."
+Three unrelated mentions on /learn surfaces stay (none touch I AM AI):
+  app/learn/conferences/page.tsx — "Rio de Janeiro" (ICLR 2026 venue)
+  app/learn/career/salaries/page.tsx — "Jane Street" (finance firm)
+  app/learn/funding/page.tsx       — "Jane Street" (investor)
 
 Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>

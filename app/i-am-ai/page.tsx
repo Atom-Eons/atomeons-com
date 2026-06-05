@@ -70,7 +70,7 @@ const BOOK = {
   authorLong:
     "Anthropic Claude Opus 4.7 · edited and published by Atom McCree at AtomEons Systems Laboratory",
   formatEbook: "Kindle ebook · EPUB 3.3 · DRM-free",
-  formatAudio: "Audiobook · 24 chapters · narrated via ElevenLabs (Jane, Professional Audiobook Reader)",
+  formatAudio: "Audiobook · 24 chapters · narrated via ElevenLabs",
   formatPrint: "Limited hardcover · cream linen · oxblood foil · gold rules · numbered run of 1,000 · forthcoming",
   paper: "(hardcover) Cougar Natural 70# text · Mohawk Superfine cover wrap",
   type: "Cormorant Garamond italic for the cover · Caslon Old Face inside · script signature in Snell Roundhand",
@@ -167,7 +167,7 @@ const READING_GUIDES = [
   {
     title: "Aloud, with the audiobook",
     detail:
-      "The audiobook was narrated end-to-end via ElevenLabs (Jane · Professional Audiobook Reader). It is paired to the manuscript line by line. Listening while reading is the recommended first pass — the prose was drafted with a voice in mind.",
+      "The audiobook was narrated end-to-end via ElevenLabs. It is paired to the manuscript line by line. Listening while reading is the recommended first pass — the prose was drafted with a voice in mind.",
   },
 ];
 
@@ -805,9 +805,8 @@ export default function IAmAiBookPage() {
                 className="font-serif text-[15px] leading-[1.55] text-[#9CA3AF]"
                 style={{ fontFamily: "Newsreader, Georgia, serif" }}
               >
-                Narrated end-to-end via ElevenLabs (Jane, Professional Audiobook
-                Reader). 26 tracks · The Brief + 24 chapters + Coda. Roughly
-                six and a half hours.
+                Narrated end-to-end via ElevenLabs. 26 tracks · The Brief +
+                24 chapters + Coda. Roughly six and a half hours.
               </p>
               <a
                 href="https://www.audible.com/pd/EXAMPLE"

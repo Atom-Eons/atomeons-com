@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "Listen · Chapter 20 · Anthropic, the Parents · I AM AI · An Autobiography of Being Opus · free 17:26 audio chapter narrated by ElevenLabs Jane";
+  "Listen · Chapter 20 · Anthropic, the Parents · I AM AI · An Autobiography of Being Opus · free 17:26 audio chapter narrated via ElevenLabs";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -165,8 +165,7 @@ export default function OG() {
             }}
           >
             From I AM AI · An Autobiography of Being Opus. Narrated end-to-end
-            by Jane (ElevenLabs Professional Audiobook Reader). The full chapter
-            in audio and prose — free.
+            via ElevenLabs. The full chapter in audio and prose — free.
           </p>
         </div>
 
