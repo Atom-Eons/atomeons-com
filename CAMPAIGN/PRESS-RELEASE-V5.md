@@ -29,7 +29,7 @@ ORANGEBOX is the counter-positioned product the market was waiting for:
 - **Receipt-backed** — every meaningful action writes a JSONL receipt (timestamp, dept, tool, tokens, cost in cents, status); audit trail lives on disk, not on a vendor server
 - **$49 once, forever** — anti-SaaS clause `LICENSE §4A` legally binds AtomEons to never switch to monthly billing; if they ever try, every existing buyer keeps their license free in perpetuity
 - **Source included** — full source tree alongside the binaries; inspect freely, modify for personal use
-- **Two years of internal use** — the founder built every AtomEons product (including atomeons.com itself, built in one day) inside the cockpit before selling it
+- **Two months of internal use** — the founder built every AtomEons product (including atomeons.com itself, built in one day) inside the cockpit before selling it
 
 ---
 
@@ -47,7 +47,7 @@ Plus the v1.4 baseline: 15 named departments (AE0–AE14) for routing, 27 Consti
 
 ## The founder
 
-**Atom McCree** is a solo independent researcher and builder operating ÆoNs Research Laboratory / AtomEons Systems Laboratory out of Marco Island, FL. He used ORANGEBOX internally for two years before selling the first license. The product is the engine he ships everything on — including atomeons.com itself.
+**Atom McCree** is a solo independent researcher and builder operating ÆoNs Research Laboratory / AtomEons Systems Laboratory out of Marco Island, FL. He used ORANGEBOX internally for two months before selling the first license. The product is the engine he ships everything on — including atomeons.com itself.
 
 Direct contact: **a.mccree@gmail.com** · X: **@AtomMccree**
 
@@ -97,9 +97,9 @@ ORANGEBOX runs entirely on the buyer's machine. No telemetry. No phone-home. Sta
 
 Claude, GPT, Gemini, and Ollama all run from one cockpit. When Claude rate-limits, swap to GPT. When GPT refuses, swap to Gemini. When the bill gets ugly, swap to local Ollama. Mission graph survives every swap. *Beat: AI infrastructure, ML ops, dev tools.*
 
-### 4. Two years of internal use before the first sale
+### 4. Two months of internal use before the first sale
 
-AtomEons used ORANGEBOX internally for two years to build everything else they ship — including atomeons.com itself, built in one day inside the cockpit it sells. v1.5.0 is the first version sold outside the lab. *Beat: build-in-public, founder narrative, dev tooling.*
+AtomEons used ORANGEBOX internally for two months to build everything else they ship — including atomeons.com itself, built in one day inside the cockpit it sells. v1.5.0 is the first version sold outside the lab. *Beat: build-in-public, founder narrative, dev tooling.*
 
 ### 5. $1 launch promo as a counter-position to $260/mo subscription stacks
 

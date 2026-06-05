@@ -66,7 +66,7 @@ After that I can post directly.
 3. X3 — anti-SaaS: $49 once, locked in LICENSE §4A
 4. X4 — claude-code-crowd: "for people running real projects with claude code"
 5. X5 — comparison ladder: $52K PM vs $2,400 stack vs $49 once
-6. X6 — origin: two years of solo R&D in marco island, FL
+6. X6 — origin: two months of solo R&D in marco island, FL
 7. X7 — Codexa Local NEW v1.4 (no second computer needed)
 8. X8 — "the price of one video game" — accessibility framing
 9. X9 — Marco Island solo lab: no team / no funding / no roadmap deck

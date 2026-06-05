@@ -18,7 +18,7 @@ I built a desktop cockpit that makes Claude Code dramatically better — $49 onc
 
 **Body:**
 ```
-Long-time Claude Code daily driver here. Two years ago I started losing the thread on multi-week projects — Claude rediscovering "what 'done' meant" between sessions, routing decisions evaporating, no place to run a real mission graph that survives a context reset.
+Long-time Claude Code daily driver here. Two months ago I started losing the thread on multi-week projects — Claude rediscovering "what 'done' meant" between sessions, routing decisions evaporating, no place to run a real mission graph that survives a context reset.
 
 So I built ORANGEBOX Command. It's a Windows desktop app (Tauri 2.x, MSI installer) that pairs with Claude Code via 60+ MCP tools. Think Claude Code with: real project memory (4-layer model), a mission-graph DAG, 15 named departments to route work to, a triad model lane router (STRATEGY / ENGINEERING / EXPERIENCE), and receipt + proof artifact rails so nothing ever gets marked "green" without evidence.
 
@@ -53,12 +53,12 @@ Happy to answer anything about the architecture, the MCP integration, the Consti
 
 **Title:**
 ```
-Two years of solo R&D → $49 desktop app that makes Claude Code feel 5x more capable
+Two months of solo R&D → $49 desktop app that makes Claude Code feel 5x more capable
 ```
 
 **Body:**
 ```
-Solo founder. Marco Island, FL. Two years working on this. Shipping today.
+Solo founder. Marco Island, FL. Two months working on this. Shipping today.
 
 ORANGEBOX Command is a Windows desktop cockpit that pairs with Claude Code (and Claude Desktop, GPT, Gemini, local Ollama) via 60+ MCP tools. It gives your AI projects:
 

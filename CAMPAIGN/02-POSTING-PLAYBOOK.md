@@ -108,7 +108,7 @@ Karma rules:
 
 ### r/SideProject
 
-Title: Two years of solo R&D → $49 desktop app that makes Claude Code feel 5x more capable
+Title: Two months of solo R&D → $49 desktop app that makes Claude Code feel 5x more capable
 
 ### r/IndieHackers
 

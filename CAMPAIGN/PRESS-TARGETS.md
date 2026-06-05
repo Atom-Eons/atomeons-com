@@ -63,9 +63,9 @@ For each target: **why they'd care**, **best contact**, **pitch template**.
 
 ### 8. The Pragmatic Engineer — Gergely Orosz
 - **Beat:** dev tooling deep-dives, indie builders.
-- **Angle:** "Solo dev shipped a cockpit they used internally for 2 years before selling. Stack: Tauri 2.x + MCP + Stripe + Next.js 16."
+- **Angle:** "Solo dev shipped a cockpit they used internally for 2 months before selling. Stack: Tauri 2.x + MCP + Stripe + Next.js 16."
 - **Contact:** `@gergelyorosz` on X · `gergely@pragmaticengineer.com`
-- **Subject:** `Solo dev shipped a $1 AI cockpit after 2 years of internal use — stack writeup if you want it`
+- **Subject:** `Solo dev shipped a $1 AI cockpit after 2 months of internal use — stack writeup if you want it`
 
 ---
 
@@ -81,7 +81,7 @@ For each target: **why they'd care**, **best contact**, **pitch template**.
 - **Tagline:** `The AI cockpit you actually own — $49 once, $1 launch promo`
 - **Hunter:** find a high-karma hunter in advance (chrismessina if available, or anyone with 5k+ followers)
 - **Schedule:** launch at midnight ET = 21:00 PT = top of PH ranking competition
-- **First-comment template:** "Hey PH! I'm Atom — built this in 2 years of internal use. AMA. $1 till 6am ET as a thank-you for early adopters."
+- **First-comment template:** "Hey PH! I'm Atom — built this in 2 months of internal use. AMA. $1 till 6am ET as a thank-you for early adopters."
 
 ### 11. r/LocalLLaMA (Reddit)
 - **Title:** `ORANGEBOX v1.5.0 — local-first AI cockpit, swap between Claude / GPT / Gemini / Ollama mid-session, $1 launch promo`
@@ -184,7 +184,7 @@ While [RECENT NEWS THEY COVERED, e.g. "Anthropic split Claude Pro into interacti
 
 It runs entirely local, swap-lanes between Claude / GPT / Gemini / Ollama mid-session via 60+ MCP tools, and the license has a §4A clause that legally bans us from ever switching to monthly billing.
 
-I used it internally for 2 years before selling the first license. atomeons.com itself was built in one day inside the cockpit it sells.
+I used it internally for 2 months before selling the first license. atomeons.com itself was built in one day inside the cockpit it sells.
 
 Full press kit: https://atomeons.com/press
 Press release attached.

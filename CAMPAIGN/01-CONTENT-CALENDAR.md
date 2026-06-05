@@ -19,7 +19,7 @@ never UTM-stripped. Vercel Analytics tracks referrers.
 ✅ X3 — anti-SaaS: $49 once, locked LICENSE §4A
 ✅ X4 — claude-code-crowd
 ✅ X5 — comparison ladder
-✅ X6 — origin (two years marco island)
+✅ X6 — origin (two months marco island)
 ✅ X7 — Codexa Local NEW v1.4
 ✅ X8 — price of one video game
 ✅ X9 — solo lab no team no funding
@@ -44,7 +44,7 @@ never UTM-stripped. Vercel Analytics tracks referrers.
 | Slot | Surface | Angle | Status |
 |---|---|---|---|
 | 09:00 | X | response-to-feedback thread (re HN comments) | queued |
-| 11:00 | Reddit | r/SideProject: "$49 once, two years to ship" | queued |
+| 11:00 | Reddit | r/SideProject: "$49 once, two months to ship" | queued |
 | 13:00 | X | "what 3 days of HN traffic looks like" — vercel screenshot | queued |
 | 14:00 | FB | Atom McCree: build-in-public update | queued |
 | 16:00 | IG | @atomraps creative cross: music + code | queued |

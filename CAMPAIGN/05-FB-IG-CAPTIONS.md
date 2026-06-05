@@ -9,7 +9,7 @@ Image source: https://atomeons.com/orangebox/opengraph-image (auto-generated, re
 
 ### F1 — Day-of-launch
 ```
-Two years building. One day shipping the website.
+Two months building. One day shipping the website.
 
 ORANGEBOX Command v1.4.0 is live — a private AI operations cockpit that turns Claude Code from a chat tool into a real project surface.
 
@@ -72,7 +72,7 @@ Marco Island, Florida. 2026.
 
 No team. No funding. No agency. No growth deck. No Series A pitch.
 
-Just two years of one researcher running real projects through real AI, refusing to use the chat box as the operating system.
+Just two months of one researcher running real projects through real AI, refusing to use the chat box as the operating system.
 
 The result is for sale. $49.
 
@@ -92,7 +92,7 @@ $49. Once. Forever.
 
 ORANGEBOX Command — the private AI cockpit for Claude Code, ChatGPT, Gemini operators.
 
-Two years of R&D. One day to ship the website. Local-first. Zero telemetry. No subscription, ever.
+Two months of R&D. One day to ship the website. Local-first. Zero telemetry. No subscription, ever.
 
 Link in bio → atomeons.com/orangebox
 
@@ -116,7 +116,7 @@ What's inside the $49 zip ↓
 
 Mission-graph DAG. 15 departments. 60+ MCP tools. Receipts on every action. Local-first. Zero telemetry.
 
-Two years to build. One day to ship the site. ORANGEBOX Command v1.4.0 — for the operators who refuse to lose the thread.
+Two months to build. One day to ship the site. ORANGEBOX Command v1.4.0 — for the operators who refuse to lose the thread.
 
 Link in bio.
 

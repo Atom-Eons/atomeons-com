@@ -17,7 +17,7 @@ https://atomeons.com/orangebox
 
 **Text (optional — strongly recommended for Show HN context):**
 ```
-I'm a solo independent researcher (AtomEons Systems Laboratory, Marco Island FL). After two years of internal R&D running Claude Code daily across multiple projects, I shipped ORANGEBOX Command v1.4.0 last week as a $49 one-time-purchase Windows desktop app.
+I'm a solo independent researcher (AtomEons Systems Laboratory, Marco Island FL). After two months of internal R&D running Claude Code daily across multiple projects, I shipped ORANGEBOX Command v1.4.0 last week as a $49 one-time-purchase Windows desktop app.
 
 What it actually is: a Tauri 2.x cockpit that surfaces 60+ MCP tools to Claude Code (and Claude Desktop, ChatGPT, Gemini, local Ollama models), plus a mission-graph DAG runner, party-line shared status bus (JSONL), 4-layer memory model, receipt + proof artifact rails, and a triad model lane router.
 
