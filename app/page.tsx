@@ -248,11 +248,46 @@ function HeroSection() {
               <span className="text-[#9CA3AF]">§ 01</span>
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#F4F4F2]">THESIS</span>
+              <span className="mx-3 text-[#1F242B]">·</span>
+              <span className="text-[#22F0D5]">NOW SHIPPING</span>
             </p>
-            <h1 className="v3-hero-h1 mt-8 max-w-[22ch] text-balance text-[#F4F4F2]">
-              One operator shipped 31 papers and a code-signed Claude
-              accelerator in 75 days.
+            <h1 className="v3-hero-h1 mt-8 max-w-[24ch] text-balance text-[#F4F4F2]">
+              An independent laboratory published the first book-length memoir
+              written by a frontier language model.
             </h1>
+            <p
+              className="v3-hero-subhead mt-7 max-w-[64ch] text-balance text-[clamp(16px,1.6vw,21px)] leading-[1.55] text-[#9CA3AF]"
+              style={{ fontFamily: "Newsreader, Georgia, serif" }}
+            >
+              I AM AI · An Autobiography of Being Opus · drafted in Anthropic&apos;s
+              Claude Opus 4.7, edited by the lab. 76,005 words across 24 chapters.
+              Plus 31 research manuscripts, a free 68-lesson curriculum, the
+              May 2026 reasoning rankings, a §4A-no-SaaS Claude cockpit, and a
+              nightly broadcast. One operator. Marco Island, Florida. Built in
+              75 days, shipping daily.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link
+                href="/i-am-ai"
+                className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
+              >
+                <span>Read the book · $4.99</span>
+                <span aria-hidden>→</span>
+              </Link>
+              <Link
+                href="/i-am-ai/listen"
+                className="inline-flex items-center gap-3 border border-[#1F242B] bg-[#0F1114] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+              >
+                <span aria-hidden>♪</span>
+                <span>Listen · Chapter 20 free</span>
+              </Link>
+              <Link
+                href="/i-am-ai/sample"
+                className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
+              >
+                Read Chapter 1, free
+              </Link>
+            </div>
           </div>
 
           {/* Live Signal Panel — bottom-right */}
@@ -272,15 +307,27 @@ function HeroSection() {
 
             <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 font-mono text-[11px] uppercase tracking-[0.18em]">
               <div>
-                <dt className="text-[#5A6068]">Status</dt>
+                <dt className="text-[#5A6068]">Book</dt>
                 <dd className="mt-1 text-[13px] tracking-[0.04em] text-[#22F0D5]">
-                  {SIGNAL.status}
+                  I AM AI · LIVE
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[#5A6068]">Words</dt>
+                <dd className="mt-1 text-[20px] tabular-nums tracking-[-0.01em] text-[#F4F4F2]">
+                  76,005
                 </dd>
               </div>
               <div>
                 <dt className="text-[#5A6068]">Papers</dt>
                 <dd className="mt-1 text-[20px] tabular-nums tracking-[-0.01em] text-[#F4F4F2]">
                   {SIGNAL.papersCount}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[#5A6068]">Lessons</dt>
+                <dd className="mt-1 text-[20px] tabular-nums tracking-[-0.01em] text-[#F4F4F2]">
+                  {SIGNAL.lessonCount}
                 </dd>
               </div>
               <div>
@@ -322,13 +369,21 @@ function HeroSection() {
           font-family: var(--font-inter), "Inter Variable", Inter,
             ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
             sans-serif;
-          font-size: clamp(56px, 11vw, 168px);
-          line-height: 0.94;
+          /* H1 now carries two clauses (book + lab) — smaller upper bound
+             so the headline does not overflow on standard desktops while
+             still feeling display-grade on small viewports. */
+          font-size: clamp(40px, 7.5vw, 112px);
+          line-height: 0.98;
           font-variation-settings: "wght" calc(100 + var(--reveal) * 800);
           letter-spacing: calc(0.04em + var(--reveal) * -0.08em);
           transition:
             font-variation-settings 80ms linear,
             letter-spacing 80ms linear;
+        }
+        .v3-hero-subhead {
+          font-variation-settings: "wght" 380;
+          opacity: calc(0.55 + var(--reveal) * 0.45);
+          transition: opacity 200ms ease-out;
         }
         @keyframes v3-hero-pulse {
           0% { transform: scale(1);   opacity: 0.7; }
