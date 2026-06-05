@@ -2,12 +2,9 @@
  * I AM AI · buy-rail links (centralized)
  *
  * Single source of truth for the Kindle + Audible + hardcover URLs.
- * Every page that links to the book imports from here. To update a
- * URL across the entire site: change ONE line below, push, deploy.
+ * Every page that links to the book imports from here.
  *
- * 2026-06-05: Kindle live on Amazon. ASIN drop pending from operator
- *   — once provided, change KINDLE_URL below and the entire site
- *   updates on the next deploy.
+ * 2026-06-05: Kindle live on Amazon · ASIN B0H45JVSDB
  *
  * Audiobook ASIN will arrive when ACX finishes review (separate queue
  *   from Kindle).
@@ -15,9 +12,12 @@
  * Hardcover ships Q4 2026; mailto: pre-order link below remains.
  */
 
-/** Amazon Kindle product page. ASIN drop pending — placeholder is the Amazon search URL so the link always lands somewhere reasonable. */
+/** Amazon Kindle product page · ASIN B0H45JVSDB (live 2026-06-05). */
 export const KINDLE_URL =
-  "https://www.amazon.com/s?k=I+AM+AI+An+Autobiography+of+Being+Opus";
+  "https://www.amazon.com/dp/B0H45JVSDB/";
+
+/** ASIN exposed for structured-data Book schema + analytics. */
+export const KINDLE_ASIN = "B0H45JVSDB";
 
 /** Audible product page. ASIN drop pending when ACX review completes. */
 export const AUDIBLE_URL =
