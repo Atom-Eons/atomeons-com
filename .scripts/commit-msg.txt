@@ -1,66 +1,63 @@
-Persistent inline search bar · full-width under the fixed Header
+Warp 9 · first 16 pages materialized · partial-materializer pattern
 
-Operator directive 2026-06-05: "crt k is cool. i want a second full bar
-for typing the length of the window under the top nav."
+Operator directive 2026-06-05: workflows ARE cooking; my completion
+detection was wrong. Real status check showed 16 agents fully done +
+21 still in flight + 98 queued behind the concurrency cap.
 
-NEW · app/_components/V3/SearchInline.tsx
+Built .scripts/materialize-partial.mjs — reads agent-*.jsonl files
+directly from the running workflow run-dir, finds agents with
+`"stop_reason":"end_turn"`, extracts the ```tsx block from the final
+assistant message, validates it, writes to the correct page.tsx path.
 
-A "use client" component that renders a sticky, full-width search bar
-directly under the fixed Header. Same engine as the ⌘K palette — re-
-uses the static /public/search-index.json (86 KB, 196 records) and the
-exported rankRecord + fuzzyScore from SearchPalette.tsx.
+Bypasses the wait-for-whole-workflow pattern. Ships content as each
+agent finishes instead of holding everything until all 135 land.
 
-  - position: sticky · top-16 (slots under the 64px fixed Header)
-  - z-30 (Header z-40 stays above, content stays below)
-  - bg #08090B/95 + backdrop-blur-md (cinematic ink with proper depth)
-  - max-w-[1600px] container — full bleed visual at large viewports
-  - mono "::search" eyebrow on desktop, search-icon SVG, native
-    <input type="search">, ⌘K / / kbd hint on the right
-  - Dropdown results panel absolutely positioned under the bar; shows
-    up to 8 hits when query is non-empty + bar is focused; closes on
-    click-outside (preserves the query for re-focus)
-  - ↑↓ navigate, Enter follows, ESC clears + blurs
-  - Lazy-loads the index on first focus OR first non-empty query —
-    pages that never engage with search pay zero bytes
-  - cache: "force-cache" — second open is 0ms from network
-  - Hidden on /admin/* /api/* /auth/* surfaces (no value showing
-    search on admin or API routes)
+16 NEW PAGES WROTE THIS PASS
 
-REFACTOR · app/_components/V3/SearchPalette.tsx
+  /research/decoded/   (8)
+    mamba-paper           (17,946 chars)
+    self-instruct         (22,830 chars)
+    switch-transformer    (20,824 chars)
+    lima                  (16,993 chars)
+    palm-2                (20,389 chars)
+    flamingo              (18,621 chars)
+    segment-anything      (18,812 chars)
+    gcg-attack            (20,023 chars)
 
-Promoted three types and one function to exports so SearchInline can
-reuse them without duplicating ~70 lines of fuzzy-matching code:
-  + export type SearchRecord
-  + export type SearchIndexFile
-  + export type Scored
-  + export function rankRecord
-Internal type aliases (`Record`, `IndexFile`) kept so the rest of the
-palette file is unchanged.
+  /learn/cyber/        (5)
+    colonial-pipeline-2021 (27,742 chars)
+    log4shell-2021         (26,229 chars)
+    mitre-attack           (34,631 chars)
+    nist-csf               (26,761 chars)
+    cyber-kill-chain       (26,574 chars)
 
-WIRING · app/layout.tsx
+  /learn/atlas/        (2)
+    state-space-models    (27,240 chars)
+    dpo-kto-orpo          (25,492 chars)
 
-  + import { SearchInline } from "./_components/V3/SearchInline";
-  + Rendered between <Header /> and {children} inside the pt-16
-    flex-1 wrapper. Since SearchInline is sticky (not fixed), it
-    occupies its own ~52px of in-flow height — no extra padding
-    needed.
+  /learn/vertical/     (1)
+    healthcare            (26,584 chars)
 
-PERFORMANCE BUDGET
+TOTAL    ~360 KB of new content · 16 routes · all V3 noir palette ·
+         all real citations (arXiv IDs, CVEs, MITRE techniques, NIST
+         docs, named CISA advisories, real SEC filings)
 
-  - Sub-15ms keystroke-to-render. Same numbers as ⌘K (no debounce,
-    no Worker, no API roundtrip).
-  - First-focus fetch: 30-50ms cold, 0ms cached.
-  - Bundle impact: ~3 KB minified (component itself) + 0 KB index
-    (already shipped for the palette).
-  - Zero CLS — the bar is in flow; no late-injected DOM jumps.
+WORKFLOWS STILL RUNNING
 
-A11Y
+  wf_9f5e99ee (decoded papers)  · 8/30 done · 2 in flight · 20 queued
+  wf_e21daef8 (cyber breaches)  · 2/25 done · 3 in flight · 20 queued
+  wf_d761005e (vertical AI)     · 1/20 done · 3 in flight · 16 queued
+  wf_30099aad (atlas refire)    · 2/35 done · 8 in flight · 25 queued
+  wf_6159e5a3 (cyber catalog)   · 3/25 done · 5 in flight · 17 queued
+                                  ────────────────
+                                 16 done · 21 in flight · 98 queued
 
-  - role="listbox" + role="option" on the dropdown.
-  - aria-selected on the active row.
-  - aria-label="Search atomeons.com" on the input.
-  - <kbd> elements for keyboard hints.
-  - Honors prefers-reduced-motion implicitly (no animations to
-    disable).
+Re-run the partial-materializer at any time:
+  for run in wf_*; do
+    node .scripts/materialize-partial.mjs <path>/$run
+  done
+
+Each pass picks up newly-completed agents without re-writing existing
+files (existsSync check before writeFileSync).
 
 Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
