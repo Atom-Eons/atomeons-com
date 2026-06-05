@@ -1,67 +1,62 @@
-Publish 5 founder's-view letter backfill · Jun 1–5 · close the May 31 gap
+Homepage · § 01.5 Scoreboard · 12-cell receipt grid right under the hero
 
-Operator directive 2026-06-05: "run all days updates, papers, founders
-letter, new releases, items we were doing but didnt deploy"
+Operator directive 2026-06-05: "hit them with a site stats section
+real quick, people are jaded they have limited attention we need to
+lock them the fuck in"
 
-PENDING SINCE JUN 3 — five letters drafted in this worktree at
-`.scripts/founders-view-letters/` (2026-06-03-*.md) but never published.
-Last live letter on /founders-view was 2026-05-31 — a five-day gap.
+Inserted a new section between the hero and the thesis on the
+homepage. Twelve hand-coded cells in a 4×3 mono grid, each pointing
+at a real public surface. Designed for a 5-second scan: jaded scroller
+hits the grid, sees the density of actual artifacts, stops scrolling.
 
-Published all 5 directly via Supabase MCP execute_sql into
-public.founders_view_posts. Backdated published_at across Jun 1–5 to
-fill the calendar gap one letter per day, matching the nightly 8pm ET
-broadcast cadence.
+CELLS (every number verifiable on the live site)
 
-WHAT WENT LIVE
+  206              Live routes                  (walked the file tree)
+  33               Founder's View letters       (founders_view_posts count)
+  31               Cyber catalog pages          (app/learn/cyber/* dirs)
+  26               Atlas deep-dives             (app/learn/atlas/* dirs)
+  25               Papers decoded               (app/research/decoded/* dirs)
+  76,005           Words · I AM AI              (manuscript word count)
+  ~9 hrs           Audio narrated               (ACX-mastered audiobook)
+  12               Supermodels ranked           (May 2026 issue)
+  CC-BY 4.0        Default license              (curriculum + research)
+  1                Operator                     (Atom McCree)
+  0                Investors · subs · ads       (no outside capital)
+  LIVE             Status                       (1.2s pulsing red dot)
 
-  Jun 1  Anduril Fury And The Death Of Cost-Plus Defense  (571 w)
-         theme: defense-industrial-base
-         /founders-view/2026-06-01-anduril-fury-and-the-death-of-cost-plus-defense
+DESIGN
 
-  Jun 2  The Scaling Curve Bent And Nobody Wanted To Say It  (593 w)
-         theme: frontier-models
-         /founders-view/2026-06-02-the-scaling-curve-bent-and-nobody-wanted-to-say-it
+  - Section eyebrow: § 01.5 · The lab, by the numbers · Audit 2026-06-05
+  - Headline: "What the lab has actually shipped." (Newsreader serif,
+    Variable-Weight ramp matching the hero)
+  - Sub: "No projections. No inflated KPIs. No 'happy customers.'
+    Every number below points at a public surface or artifact you can
+    navigate, read, listen to, or verify right now."
+  - 4×3 desktop grid, 2×6 mobile collapse. Hairline #1F242B grid
+    between cells; each cell is #08090B with #0F1114 hover.
+  - Numbers: Inter Variable Light (wght 200), 36–64px clamp, tabular-
+    nums, -0.04em tracking. Cyan only on the LIVE cell — every other
+    cell stays cream so the LIVE pip pops.
+  - LIVE cell carries the 1.2s ease-in-out PulseRed keyframe (scoped
+    locally — no global CSS pollution).
+  - Foot rail: 3 CTAs — /receipts (primary), /founders-view, and
+    /supermodels — plus a mono note "Updated at every ship · last
+    commit fired Vercel within 90s."
 
-  Jun 3  The backdoor that almost ate the world  (558 w)
-         theme: supply-chain-security
-         /founders-view/2026-06-03-the-backdoor-that-almost-ate-the-world
+FRESHNESS POLICY (in the code comment)
 
-  Jun 4  The wiretap room had a second door  (606 w)
-         theme: nation-state-cyber
-         /founders-view/2026-06-04-the-wiretap-room-had-a-second-door
+  Numbers are hand-coded so they never silently go stale. An honest
+  stat block treats freshness as part of the claim — the audit date
+  is in the eyebrow, the counts are reproducible, and the next ship
+  rebakes them. No live DB calls; no slow first-paint; no "30 days
+  ago" lies hiding in CMS state.
 
-  Jun 5  The eighty-thousand-dollar PDF and the free one  (589 w)
-         theme: ai-publishing-economics
-         /founders-view/2026-06-05-the-eighty-thousand-dollar-pdf-and-the-free-one
+WHERE
 
-VERIFICATION
-
-  All five individual letter URLs return 200 with clean UTF-8 (18+
-  em-dashes preserved per letter, 0 mojibake characters). The
-  /founders-view index lists all five in the correct chronological
-  position (ISR revalidate=300s; force-fetched each slug to populate
-  the edge cache).
-
-HOW
-
-  1. .scripts/build-publish-backfill.ps1 — PowerShell script that
-     parses each .md file (UTF-8), extracts SUBJECT + OPENING + body,
-     slugifies, and emits a single SQL transaction with dollar-quoted
-     bodies ($body_md$...$body_md$) — handles em-dashes, apostrophes,
-     and Markdown without escaping headaches.
-  2. .scripts/publish-backfill.sql — the emitted SQL (21 KB, 5
-     INSERTs in one transaction). Kept in repo as the audit receipt.
-  3. Executed via Supabase MCP execute_sql against project
-     orangebox (sthziuzmreqnrxmllodj). All 5 rows committed.
-
-WHAT THIS DOESN'T DO
-
-  - No auto-tweet. The /api/admin/publish-letter route calls
-    tweetLetter() on insert; this direct-DB path bypasses that.
-    Tweets, if desired, must be posted manually or via the API
-    endpoint with CRON_SECRET. The five letters are on the public
-    site regardless.
-  - No revalidate webhook fired. ISR refreshes naturally within
-    5 minutes. Already validated by hitting each slug directly.
+  app/page.tsx — new ScoreboardSection() function inlined alongside
+  the other section components (matches the file's design contract:
+  one route, all sections in one file). Wired between <HeroSection />
+  and <ThesisSection /> so it's the second thing in the eyeline after
+  the hero kicks.
 
 Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>

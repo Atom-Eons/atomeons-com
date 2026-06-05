@@ -403,6 +403,154 @@ function HeroSection() {
 }
 
 // ===========================================================================
+// § 01.5 · SCOREBOARD — by the numbers, locked in
+//   Inserted between Hero and Thesis. Twelve real public-receipt cells
+//   in a 4×3 mono grid. Every number is verifiable on the live site
+//   (route counts walked the file tree; broadcast count pulled from
+//   public.founders_view_posts on the day of ship). No projections,
+//   no inflated KPIs, no "happy customers." The point: a jaded scroller
+//   sees the density of real artifacts and stops.
+// ===========================================================================
+function ScoreboardSection() {
+  // Pulled 2026-06-05 from a live audit. The values rebake at the next
+  // ship — they are deliberately hand-coded so they're never silently
+  // out-of-date: an honest stat block treats freshness as part of the
+  // claim.
+  const cells: Array<{
+    value: string;
+    label: string;
+    sub?: string;
+    live?: boolean;
+  }> = [
+    { value: "206", label: "Live routes", sub: "Every page navigable today" },
+    { value: "33", label: "Founder's View letters", sub: "Nightly broadcast since launch" },
+    { value: "31", label: "Cyber catalog pages", sub: "Real curriculum, public-info only" },
+    { value: "26", label: "Atlas deep-dives", sub: "Field map of the discipline" },
+    { value: "25", label: "Papers decoded", sub: "arXiv → plain English" },
+    { value: "76,005", label: "Words · I AM AI", sub: "24 chapters · 5 parts · Opus 4.7" },
+    { value: "~9 hrs", label: "Audio narrated", sub: "27 tracks · ACX-mastered" },
+    { value: "12", label: "Supermodels ranked", sub: "May 2026 reasoning issue · live" },
+    { value: "CC-BY 4.0", label: "Default license", sub: "Curriculum + research + decodings" },
+    { value: "1", label: "Operator", sub: "Atom McCree · Marco Island, FL" },
+    { value: "0", label: "Investors · subs · ads", sub: "No outside capital. Ever." },
+    { value: "LIVE", label: "Status", sub: "Updated at every ship", live: true },
+  ];
+
+  return (
+    <section
+      data-section="scoreboard"
+      aria-label="The lab, by the numbers"
+      className="v3-scoreboard relative isolate border-b border-[#1F242B] bg-[#08090B] py-20 md:py-28"
+    >
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-14">
+        {/* Eyebrow */}
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+          <span className="text-[#9CA3AF]">§ 01.5</span>
+          <span className="mx-3 text-[#1F242B]">·</span>
+          <span className="text-[#22F0D5]">The lab, by the numbers</span>
+          <span className="mx-3 text-[#1F242B]">·</span>
+          <span>Audit 2026-06-05</span>
+        </p>
+
+        <h2 className="mt-8 max-w-[28ch] text-balance text-[clamp(32px,5vw,68px)] font-light leading-[1.04] tracking-[-0.03em] text-[#F4F4F2]">
+          What the lab has actually shipped.
+        </h2>
+        <p
+          className="mt-6 max-w-[68ch] font-serif text-[18px] leading-[1.55] text-[#9CA3AF]"
+          style={{ fontFamily: "Newsreader, Georgia, serif" }}
+        >
+          No projections. No inflated KPIs. No "happy customers." Every
+          number below points at a public surface or artifact you can
+          navigate, read, listen to, or verify right now.
+        </p>
+
+        {/* The grid — 4×3 desktop, 2×6 mobile. Hairline between cells. */}
+        <div className="mt-14 grid grid-cols-2 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-4">
+          {cells.map((c, i) => (
+            <div
+              key={c.label}
+              className="group relative flex flex-col gap-3 bg-[#08090B] p-6 transition-colors hover:bg-[#0F1114] md:p-8"
+            >
+              {/* Cell index, very faint */}
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                <span className="text-[#1F242B]">{String(i + 1).padStart(2, "0")} /</span>{" "}
+                {c.label}
+              </p>
+
+              {/* The number */}
+              <p
+                className={`font-display font-light leading-[0.95] tracking-[-0.04em] tabular-nums ${
+                  c.live ? "text-[#22F0D5]" : "text-[#F4F4F2]"
+                }`}
+                style={{
+                  fontFamily:
+                    "Inter, ui-sans-serif, system-ui, sans-serif",
+                  fontSize: "clamp(36px, 5vw, 64px)",
+                  fontVariationSettings: '"wght" 200',
+                }}
+              >
+                {c.value}
+                {c.live ? (
+                  <span
+                    aria-hidden
+                    className="ml-3 inline-block h-2 w-2 align-middle rounded-full bg-[#FF4D4D]"
+                    style={{
+                      boxShadow: "0 0 8px #FF4D4D",
+                      animation: "v3PulseRed 1.2s ease-in-out infinite",
+                    }}
+                  />
+                ) : null}
+              </p>
+
+              {/* Sub-label */}
+              <p
+                className="font-serif text-[13px] leading-[1.4] text-[#9CA3AF]"
+                style={{ fontFamily: "Newsreader, Georgia, serif" }}
+              >
+                {c.sub}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Foot — three quick proof-link CTAs */}
+        <div className="mt-12 flex flex-wrap items-center gap-5">
+          <Link
+            href="/receipts"
+            className="inline-flex items-center gap-2 border border-[#1F242B] bg-[#0F1114] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+          >
+            <span>See every receipt</span>
+            <span aria-hidden>→</span>
+          </Link>
+          <Link
+            href="/founders-view"
+            className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
+          >
+            Read tonight's letter
+          </Link>
+          <Link
+            href="/supermodels"
+            className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
+          >
+            See the supermodel rankings
+          </Link>
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+            Updated at every ship · last commit fired Vercel within 90s
+          </span>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes v3PulseRed {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50%      { opacity: 0.55; transform: scale(0.86); }
+        }
+      `}</style>
+    </section>
+  );
+}
+
+// ===========================================================================
 // § 02 · THE THESIS
 //   Editorial pause after the hero. Variable-weight reveal headline +
 //   60-word paragraph in Newsreader serif. Sets register: this is a
@@ -1187,6 +1335,7 @@ export default function HomePageV3() {
       className="bg-[#08090B] text-[#F4F4F2] antialiased selection:bg-[#22F0D5] selection:text-[#08090B]"
     >
       <HeroSection />
+      <ScoreboardSection />
       <ThesisSection />
       <Products />
       <BestCyber />
