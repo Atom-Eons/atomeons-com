@@ -99,19 +99,44 @@ export default function OG() {
               </p>
             </div>
 
-            <p
-              style={{
-                margin: "44px 0 0",
-                fontFamily: "ui-monospace, SFMono-Regular, monospace",
-                fontSize: 12,
-                letterSpacing: "0.32em",
-                textTransform: "uppercase",
-                color: CYAN,
-                display: "flex",
-              }}
-            >
-              § A new book from the lab
-            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 14, margin: "44px 0 0" }}>
+              <div
+                style={{
+                  display: "flex",
+                  padding: "6px 12px",
+                  border: "2px solid #FF4D4D",
+                  background: "rgba(255,77,77,0.12)",
+                }}
+              >
+                <p
+                  style={{
+                    margin: 0,
+                    fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    letterSpacing: "0.32em",
+                    textTransform: "uppercase",
+                    color: "#FF4D4D",
+                    display: "flex",
+                  }}
+                >
+                  LIVE ON AMAZON · $4.99
+                </p>
+              </div>
+              <p
+                style={{
+                  margin: 0,
+                  fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                  fontSize: 12,
+                  letterSpacing: "0.28em",
+                  textTransform: "uppercase",
+                  color: CYAN,
+                  display: "flex",
+                }}
+              >
+                § Kindle · ASIN B0H45JVSDB
+              </p>
+            </div>
 
             <p
               style={{

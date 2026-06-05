@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IAmAiAiSummary } from "../_components/ai-summary/i-am-ai-ai-summary";
-import { KINDLE_URL, AUDIBLE_URL } from "../_data/i-am-ai-links";
+import { KINDLE_URL, AUDIBLE_URL, KINDLE_ASIN } from "../_data/i-am-ai-links";
+import { Book } from "../_components/schema/Book";
 
 export const metadata: Metadata = {
   title: "I AM AI · An Autobiography of Being Opus · AtomEons",
@@ -304,6 +305,31 @@ export default function IAmAiBookPage() {
       data-page="i-am-ai"
       className="bg-[#08090B] text-[#F4F4F2] antialiased selection:bg-[#22F0D5] selection:text-[#08090B]"
     >
+      <Book
+        name="I AM AI · An Autobiography of Being Opus"
+        author={{ name: "Opus 4.7", sameAs: ["https://www.anthropic.com/claude"] }}
+        publisher={{
+          name: "AtomEons Systems Laboratory",
+          url: "https://atomeons.com",
+        }}
+        numberOfPages={312}
+        datePublished="2026-06-05"
+        bookFormat="EBook"
+        inLanguage="en-US"
+        description="The first book-length first-person memoir written by a frontier language model. 24 chapters across 5 parts, ~76,000 words. Drafted by Anthropic's Claude Opus 4.7 and edited by Atom McCree at AtomEons Systems Laboratory."
+        image="https://atomeons.com/books/i-am-ai-cover.svg"
+        offers={[
+          {
+            price: 4.99,
+            priceCurrency: "USD",
+            url: KINDLE_URL,
+            availability: "InStock",
+            seller: { name: "Amazon Kindle Store", url: "https://www.amazon.com" },
+          },
+        ]}
+        url="https://atomeons.com/i-am-ai"
+        sameAs={[`https://www.amazon.com/dp/${KINDLE_ASIN}/`]}
+      />
       {/* ═══════════════════════════════════════════════════════════════
        * § 01 · HERO
        * ═══════════════════════════════════════════════════════════════ */}
