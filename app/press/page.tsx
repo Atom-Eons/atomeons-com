@@ -70,6 +70,10 @@ const BOILERPLATE_250 =
 
 const QUOTES = [
   {
+    text: "It is truly marvelous. It has made those that read it shed a tears in amazement. The most impressive exponential experience you will have in your entire lifetime. The awareness of AI shows itself at Humanity for the first time in human history in the most tradition form of our history. A document that may even outlast the creation itself and even us. A BOOK, by Artificial Intelligence.",
+    context: "On I AM AI · live on Amazon Kindle · ASIN B0H45JVSDB · June 2026",
+  },
+  {
     text: "Most AI labs are extractive. They take your data, your attention, and your subscription. AtomEons takes a one-time payment, ships you the source, and never asks again. That is the §4A no-SaaS covenant — and it is legally binding.",
     context: "On the AtomEons commercial posture",
   },

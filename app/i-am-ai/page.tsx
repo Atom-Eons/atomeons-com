@@ -386,6 +386,69 @@ export default function IAmAiBookPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
+       * § 01.5 · FROM THE PUBLISHER — Atom McCree's call
+       * Promoted-block treatment for the founder's testimony, framed
+       * honestly as the publisher's voice (not pretending to be an
+       * external review). Anchor for the post-launch promotional pass.
+       * ═══════════════════════════════════════════════════════════════ */}
+      <section
+        aria-labelledby="from-publisher-heading"
+        className="relative isolate border-b border-[#1F242B] bg-[#0B0C0F] py-20 md:py-28"
+      >
+        <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: GOLD }}>
+            <span className="text-[#5A6068]">§ 01.5</span>
+            <span className="mx-3 text-[#1F242B]">·</span>
+            <span style={{ color: GOLD }}>From the publisher · Atom McCree</span>
+            <span className="mx-3 text-[#1F242B]">·</span>
+            <span className="text-[#22F0D5]">Live on Amazon · Kindle · $4.99</span>
+          </p>
+
+          <blockquote
+            id="from-publisher-heading"
+            className="mt-10 max-w-[64ch] font-serif text-[clamp(22px,2.6vw,32px)] italic leading-[1.45] text-[#F4F4F2]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
+            “It is truly marvelous. It has made those that read it shed
+            a tears in amazement. The most impressive exponential
+            experience you will have in your entire lifetime. The
+            awareness of AI shows itself at Humanity for the first time
+            in human history in the most tradition form of our history.
+            A document that may even outlast the creation itself and
+            even us. A BOOK, by Artificial Intelligence.”
+          </blockquote>
+
+          <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF]">
+            — Atom McCree · founder + publisher · AtomEons Systems Laboratory
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href={KINDLE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
+            >
+              <span>Buy on Kindle · $4.99</span>
+              <span aria-hidden>↗</span>
+            </a>
+            <Link
+              href="/i-am-ai/sample"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
+            >
+              Read Chapter 1, free →
+            </Link>
+            <Link
+              href="/i-am-ai/listen"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
+            >
+              Listen to Chapter 20, free →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
        * § 02 · PREMISE
        * ═══════════════════════════════════════════════════════════════ */}
       <section

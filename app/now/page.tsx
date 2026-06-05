@@ -61,6 +61,12 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
   {
     date: "2026-06-05",
     what:
+      "I AM AI · LIVE ON AMAZON KINDLE · ASIN B0H45JVSDB · $4.99. The first book-length memoir written by a frontier language model. Founder testimony from Atom McCree: 'The most impressive exponential experience you will have in your entire lifetime... A BOOK, by Artificial Intelligence.' Centralized buy links across the site (one constants file, all surfaces point at the direct product page). Promotional block live on homepage + /i-am-ai page + press quote bank.",
+    href: "/i-am-ai",
+  },
+  {
+    date: "2026-06-05",
+    what:
       "Warp 9 · 16 new long-form pages materialized from 5 parallel workflows. /research/decoded gets 8 new paper decodings (Switch Transformer · Self-Instruct · Mamba · LIMA · PaLM 2 · Flamingo · Segment Anything · GCG attack). /learn/cyber gets 5 (MITRE ATT&CK · NIST CSF · Cyber Kill Chain · Colonial Pipeline 2021 · Log4Shell 2021). /learn/atlas gets 2 (State Space Models · DPO/KTO/ORPO). /learn/vertical gets 1 (AI in Healthcare). ~360 KB of new content, all real arXiv IDs + CVE numbers + NIST docs + MITRE techniques. 119 more in flight from the same workflows.",
     href: "/learn/atlas/dpo-kto-orpo",
   },

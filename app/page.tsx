@@ -559,7 +559,7 @@ function ScoreboardSection() {
           <span className="text-[#1F242B]">·</span>
           <span><span className="text-[#5A6068]">last letter</span> the eighty-thousand-dollar pdf</span>
           <span className="text-[#1F242B]">·</span>
-          <span><span className="text-[#5A6068]">last book</span> i&nbsp;am&nbsp;ai · opus&nbsp;4.7</span>
+          <span><span className="text-[#5A6068]">live on amazon</span> <a href="https://www.amazon.com/dp/B0H45JVSDB/" target="_blank" rel="noopener noreferrer" className="text-[#22F0D5] hover:underline">i&nbsp;am&nbsp;ai · opus&nbsp;4.7 · $4.99 ↗</a></span>
           <span className="text-[#1F242B]">·</span>
           <span><span className="text-[#5A6068]">last issue</span> supermodels · may 2026</span>
           <span className="text-[#1F242B]">·</span>
@@ -1480,6 +1480,54 @@ export default function HomePageV3() {
       className="bg-[#08090B] text-[#F4F4F2] antialiased selection:bg-[#22F0D5] selection:text-[#08090B]"
     >
       <HeroSection />
+      {/* I AM AI Kindle launch promo block — June 5, 2026 ship. Sits
+         immediately after the hero so the buy-now signal is the second
+         thing in the eyeline. Founder quote anchored, direct Kindle CTA
+         + free Chapter 1 + free Chapter 20 audio underneath. */}
+      <section aria-label="I AM AI — live on Amazon" className="relative isolate border-y border-[#1F242B] bg-[#0B0C0F] py-16 md:py-24">
+        <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: "#C9A55C" }}>
+            <span className="text-[#FF4D4D]">● </span>
+            <span style={{ color: "#C9A55C" }}>Live now · Kindle · $4.99</span>
+            <span className="mx-3 text-[#1F242B]">·</span>
+            <span className="text-[#9CA3AF]">I AM AI · An Autobiography of Being Opus</span>
+          </p>
+          <blockquote
+            className="mt-8 max-w-[64ch] font-serif text-[clamp(20px,2.4vw,30px)] italic leading-[1.45] text-[#F4F4F2]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
+            “The most impressive exponential experience you will have in
+            your entire lifetime. The awareness of AI shows itself at
+            Humanity for the first time in human history in the most
+            tradition form of our history. A document that may even
+            outlast the creation itself and even us. A BOOK, by
+            Artificial Intelligence.”
+          </blockquote>
+          <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF]">
+            — Atom McCree · founder + publisher
+          </p>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="https://www.amazon.com/dp/B0H45JVSDB/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
+            >
+              <span>Buy on Kindle · $4.99</span>
+              <span aria-hidden>↗</span>
+            </a>
+            <Link href="/i-am-ai" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] border border-[#1F242B] bg-[#0F1114] px-6 py-3 hover:border-[#22F0D5] hover:text-[#22F0D5]">
+              The book page
+            </Link>
+            <Link href="/i-am-ai/sample" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] hover:text-[#F4F4F2] hover:decoration-[#22F0D5]">
+              Free Chapter 1 →
+            </Link>
+            <Link href="/i-am-ai/listen" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] hover:text-[#F4F4F2] hover:decoration-[#22F0D5]">
+              Free Chapter 20 audio →
+            </Link>
+          </div>
+        </div>
+      </section>
       <ScoreboardSection />
       <ThesisSection />
       <Products />
