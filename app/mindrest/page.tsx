@@ -285,7 +285,7 @@ export default function MindrestPage() {
         </p>
         <p className="mt-8 max-w-[64ch] text-[18px] leading-[1.55] text-[#9CA3AF]">
           A free in-browser audiovisual entrainment session · binaural beats
-          + synthesized ocean swell + breathing guide · five modes including
+          + synthesized ocean swell + breathing guide · eight modes including
           a pure-meditation lane with no binaural. Plus the honest inventory
           of legal mood-shifting tools in 2026 · sensory first, pharmacology
           listed with risks named in the open.
@@ -308,7 +308,7 @@ export default function MindrestPage() {
         </h2>
         <p className="mt-3 max-w-[64ch] text-[16px] leading-[1.6] text-[#9CA3AF]">
           Binaural-beat audio + synthesized ocean swell + breathing mandala
-          · five modes (alpha · theta · beta · delta · meditation) ·
+          · eight modes (alpha · theta · beta · delta · meditation · schumann · wim hof · sleep) ·
           headphones recommended · safety-gated · auto-stops at 20 minutes
           · text-only fallback for photosensitive users.
         </p>

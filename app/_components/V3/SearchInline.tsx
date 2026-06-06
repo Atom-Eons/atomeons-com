@@ -161,7 +161,7 @@ export function SearchInline() {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setFocused(true)}
           onKeyDown={onKey}
-          placeholder="Search 196 pages — papers, lessons, products, letters, supermodels…"
+          placeholder="Search 340+ pages — papers, lessons, products, cheat sheets, supermodels…"
           aria-label="Search atomeons.com"
           className="flex-1 bg-transparent py-3 font-sans text-[15px] text-[#F4F4F2] placeholder:text-[#5A6068] focus:outline-none"
         />

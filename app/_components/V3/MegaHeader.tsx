@@ -361,9 +361,11 @@ const MEGAS: Mega[] = [
   },
   {
     key: "products",
-    label: "AIware",
+    label: "AI WARE",
     order: 7, // Wave 41 · operator order
-    // Operator: "products call aiware and put in top nav." Re-promoted + renamed.
+    // Wave 42 · 2026-06-06 · Playwright sweep caught "AIware" rendering as
+    // "Alware" in Inter sans (capital I looked like lowercase l). Switched
+    // to all-caps spaced "AI WARE" so the I is unambiguous. Same brand.
     prefixes: ["/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases", "/aiware"],
     columns: [
       {
@@ -525,7 +527,7 @@ const MEGAS: Mega[] = [
         title: "Founder + firsts",
         items: [
           { href: "/founders-view", label: "Founder's View · nightly", badge: "LIVE" },
-          { href: "/innovations", label: "Innovations · 44 firsts" },
+          { href: "/innovations", label: "Innovations · 36 firsts" },
           { href: "/soulkey", label: "SOULKEY · identity canon", hint: "Dual-rail identity architecture", badge: "NEW" },
           { href: "/press", label: "Press · media kit" },
           { href: "/skills", label: "ÆSkill canon" },
@@ -536,9 +538,9 @@ const MEGAS: Mega[] = [
     featured: {
       href: "/innovations",
       eyebrow: "§ THE BRAG PAGE",
-      title: "44 things the lab built first.",
+      title: "36 things the lab built first.",
       description:
-        "ÆSkill Suite · Crystal Lattice Compression · Hallucination Reduction Engine · OpenMind Topology · GlyphSpeak · ORANGEBOX · Mindrest · I AM AI · 36 more. Mom's Law applies.",
+        "ÆSkill Suite · Crystal Lattice Compression · Hallucination Reduction Engine · OpenMind Topology · GlyphSpeak · ORANGEBOX · Mindrest · I AM AI · 28 more. Mom's Law applies.",
       badge: "NEW",
     },
   },
@@ -802,7 +804,9 @@ export function MegaHeader() {
                Cyber + Books + Research are hidden:true · contents
                still rendered as featured columns inside Learn / Lab. */}
           <nav aria-label="Primary" className="hidden lg:flex items-stretch gap-1">
-            {MEGAS.filter((m) => !m.hidden).map((m) => {
+            {MEGAS.filter((m) => !m.hidden)
+              .sort((a, b) => (a.order ?? 99) - (b.order ?? 99))
+              .map((m) => {
               const active = isActiveMega(pathname, m);
               const isOpen = openKey === m.key;
               return (

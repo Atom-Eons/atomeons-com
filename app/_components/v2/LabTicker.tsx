@@ -65,7 +65,7 @@ export function LabTicker() {
 
   const items: string[] = [
     "LAB · ATOMEONS · MARCO ISLAND FL",
-    "ÆONS RESEARCH · 12 PAPERS · CC-BY 4.0",
+    "ÆONS RESEARCH · 31 PAPERS · CC-BY 4.0",
     "ORANGEBOX v1.0.0-beta · TURBO-OPTIMIZE CLAUDE · SHIPPED 2026-05-30",
     "B00KMAKR v3.2.0 · AI PUBLISHING COCKPIT · MAC + WINDOWS",
     "FREE LAUNCH WEEK · ENDS JUNE 6 · §4A NO-SAAS LOCK",
