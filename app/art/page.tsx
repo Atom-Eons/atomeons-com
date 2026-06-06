@@ -44,6 +44,12 @@ import {
  * geometry meets TouchDesigner-style generative depth.
  */
 
+// Wave 45 hotfix · 368 pieces × dense SVG path data (Hilbert curve · Lorenz
+// attractor with 7000-step paths) busts the 19.07 MB ISR pre-render limit.
+// Force dynamic rendering · each request server-renders on demand · slightly
+// slower first byte but pages built independently per visit.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Art · 368 generative sacred-geometry pieces",
   description:
