@@ -28,6 +28,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SearchPalette, SearchTrigger } from "./SearchPalette";
+import { RouteSigil } from "./RouteSigil";
 
 const C = {
   ink: "#08090B",
@@ -569,12 +570,18 @@ export function Header() {
         }}
       >
         <div className="mx-auto flex h-16 w-full max-w-[1400px] items-center justify-between gap-8 px-6 md:px-10">
-          {/* ─── Brand ──────────────────────────────────────────────── */}
+          {/* ─── Brand · Æ wordmark + per-route procedural sigil ──────── */}
           <Link
             href="/"
             aria-label="AtomEons — return to home"
             className="group flex items-baseline gap-2 outline-none focus-visible:opacity-80"
           >
+            {/* Unique sigil per route · deterministic from pathname ·
+                ~600 bytes inline SVG · zero JS · zero network cost.
+                Sits to the left of the wordmark as a heraldic mark. */}
+            <span aria-hidden className="flex items-baseline self-center pr-0.5">
+              <RouteSigil slug={pathname || "/"} size={22} accent="#22F0D5" />
+            </span>
             <span
               aria-hidden
               className="block transition-[font-variation-settings] duration-500"

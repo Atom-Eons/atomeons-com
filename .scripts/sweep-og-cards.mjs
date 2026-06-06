@@ -55,6 +55,13 @@ const CONFIG = [
   { route: "compare", section: "§ compare · honest matrices", title: "Where we win. Where we lose.", stamp: "MATRICES", accent: "gold", rightPrimary: "3", rightLabel: "head-to-head products" },
   { route: "use-cases", section: "§ use cases · by persona", title: "Who AtomEons is for.", stamp: "PERSONA", accent: "cyan", rightPrimary: "10", rightLabel: "personas named · workflows" },
   { route: "api", section: "§ developer API · public", title: "Build on atomeons.com.", stamp: "OPEN API", accent: "cyan", rightPrimary: "6", rightLabel: "endpoints · CORS open · CC-BY 4.0" },
+
+  // Wave 12-16 additions
+  { route: "constellation", section: "§ constellation · the lab as a graph", title: "Every route, every edge.", stamp: "INTERACTIVE", accent: "cyan", rightPrimary: "278", rightLabel: "routes · 648 edges · force-laid" },
+  { route: "datasets", section: "§ datasets · open · CC-BY 4.0", title: "Everything machine-readable.", stamp: "CC-BY 4.0", accent: "cyan", rightPrimary: "15", rightLabel: "datasets · curl-fetchable · no auth" },
+  { route: "vendor-pack", section: "§ vendor pack · CISO-ready", title: "One URL for your security team.", stamp: "PROCUREMENT", accent: "gold", rightPrimary: "5", rightLabel: "sections · 8 procurement Q&A" },
+  { route: "studio", section: "§ studio · the atelier", title: "The room where the work happens.", stamp: "PERSONAL", accent: "cyan", rightPrimary: "10", rightLabel: "objects · 5 daily rituals" },
+  { route: "signature", section: "§ signature · the operator's mark", title: "The mark behind every artifact.", stamp: "SIGNED", accent: "gold", rightPrimary: "Æ", rightLabel: "procedural · per-route · deterministic" },
 ];
 
 let written = 0;

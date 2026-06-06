@@ -1263,8 +1263,171 @@ a:hover {
 }
 
 /* =============================================================================
- * END — globals.css V6 noir-cinema
- * Signature: ATOM-NOIR-2026-0602
+ * PRINT STYLESHEET · 2026-06-05
+ *
+ * Targets the procurement / CISO / archival use case: /transparency,
+ * /trust, /receipts, /lab, /integrations, /colophon, /manifesto, etc
+ * should print cleanly as documents an enterprise team can file.
+ *
+ * Strategy:
+ *   - Invert palette: cream paper, ink-black text.
+ *   - Strip every animation, every gradient, every blend mode.
+ *   - Hide the SacredCanvas (no procedural art on paper).
+ *   - Hide Header / Footer / sticky elements that don't paginate.
+ *   - Cyan accent stays cyan but darker (#0F8E80) for ink contrast.
+ *   - Set font-size to 11pt for body, 24pt+ for h1, 16pt for h2.
+ *   - Add print URL to every <a> via content: after.
+ *   - Force page-break-after on sections to avoid orphans.
+ *   - Add a print-only footer with date + canonical URL.
+ * ============================================================================= */
+
+@media print {
+  /* Reset every theatre we don't need on paper */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    mix-blend-mode: normal !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  html, body {
+    background: #FFFFFF !important;
+    color: #08090B !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* Hide site chrome */
+  [data-component="sacred-canvas"],
+  [data-component="ambient-signature"],
+  header,
+  footer,
+  nav,
+  [role="navigation"],
+  [aria-label*="Search"],
+  [class*="StickyBuyBar"],
+  [class*="LabTicker"],
+  [class*="MadeWithOrangebox"],
+  [class*="BootBar"] {
+    display: none !important;
+  }
+
+  /* Show only main content */
+  main {
+    background: #FFFFFF !important;
+    color: #08090B !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Sections — reasonable page breaks */
+  section {
+    page-break-inside: avoid;
+    padding: 24pt 0 !important;
+    border-color: #D4D4D2 !important;
+  }
+  section + section {
+    page-break-before: auto;
+  }
+
+  /* Cards / panels — light surface on paper */
+  [class*="bg-[#0F1114]"],
+  [class*="bg-[#0B0C0F]"],
+  [class*="bg-[#08090B]"] {
+    background: #FAFAF8 !important;
+    border: 1px solid #D4D4D2 !important;
+  }
+
+  /* Text recolor */
+  [class*="text-[#F4F4F2]"],
+  [class*="text-[#9CA3AF]"],
+  [class*="text-[#5A6068]"] {
+    color: #08090B !important;
+  }
+  [class*="text-[#22F0D5]"],
+  [style*="color: #22F0D5"],
+  [style*="color:#22F0D5"] {
+    color: #0F7F73 !important;
+  }
+  [class*="text-[#C9A55C]"] {
+    color: #8B6E2F !important;
+  }
+  [class*="text-[#FF4D4D]"] {
+    color: #A12626 !important;
+  }
+
+  /* Borders */
+  [class*="border-[#1F242B]"],
+  [class*="border-[#3D2F22]"] {
+    border-color: #D4D4D2 !important;
+  }
+
+  /* Headlines */
+  h1 { font-size: 28pt !important; font-weight: 300 !important; margin: 12pt 0 !important; }
+  h2 { font-size: 16pt !important; font-weight: 400 !important; margin: 10pt 0 6pt !important; }
+  h3 { font-size: 13pt !important; font-weight: 500 !important; margin: 8pt 0 4pt !important; }
+
+  /* Show link URLs in print so the document is verifiable offline */
+  a[href^="/"]::after {
+    content: " (atomeons.com" attr(href) ")";
+    font-size: 9pt;
+    color: #5A6068;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #5A6068;
+  }
+  a[href*="mailto:"]::after,
+  a[href^="#"]::after {
+    content: "";
+  }
+
+  /* Receipts / ledger tables print clean */
+  pre {
+    border: 1px solid #D4D4D2 !important;
+    background: #FAFAF8 !important;
+    color: #08090B !important;
+    padding: 8pt !important;
+    page-break-inside: avoid;
+    font-size: 9pt !important;
+  }
+
+  /* Print-only footer with attribution */
+  main::after {
+    content: "Printed from atomeons.com · AtomEons Systems Laboratory · CC-BY 4.0 · 2026-06-05";
+    display: block;
+    margin-top: 32pt;
+    padding-top: 12pt;
+    border-top: 1px solid #D4D4D2;
+    font-size: 9pt;
+    color: #5A6068;
+    text-align: center;
+    font-family: ui-monospace, monospace;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* Page margins · respect operator's print driver settings but
+     ensure consistent text edge */
+  @page {
+    margin: 0.6in 0.7in;
+  }
+
+  /* Image rendering hint · avoid blurry image scaling for any embedded svg */
+  svg {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* =============================================================================
+ * END — globals.css V6 noir-cinema · print sheet added 2026-06-05
+ * Signature: ATOM-NOIR-2026-0602 · print-extension ATOM-PRINT-2026-0605
  * Palette: #08090B / #0F1114 / #F4F4F2 / #9CA3AF / #5A6068 / #1F242B /
  *          #22F0D5 / #FF4D4D
  * ============================================================================= */
