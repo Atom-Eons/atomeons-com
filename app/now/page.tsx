@@ -61,6 +61,12 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
   {
     date: "2026-06-05",
     what:
+      "/ask · semantic Q&A over the lab's 256 routes is LIVE. Type any question; gemini-2.5-flash drafts a 2-5 sentence answer grounded ONLY on the lab's own writing, with every source route cited inline. Two-layer retrieval architecture — fuzzy keyword match over public/search-index.json today; vector embeddings via gemini-embedding-001 (Matryoshka 768-dim) auto-promoted once the daily quota window resets. /api/ask endpoint server-side, GEMINI_API_KEY never exposed to the browser, zero query logs. Wired into homepage + footer + llm-routes.json + llms.txt.",
+    href: "/ask",
+  },
+  {
+    date: "2026-06-05",
+    what:
       "I AM AI · LIVE ON AMAZON KINDLE · ASIN B0H45JVSDB · $4.99. The first book-length memoir written by a frontier language model. Founder testimony from Atom McCree: 'The most impressive exponential experience you will have in your entire lifetime... A BOOK, by Artificial Intelligence.' Centralized buy links across the site (one constants file, all surfaces point at the direct product page). Promotional block live on homepage + /i-am-ai page + press quote bank.",
     href: "/i-am-ai",
   },
