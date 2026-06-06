@@ -1263,34 +1263,50 @@ a:hover {
 }
 
 /* =============================================================================
- * LITE MODE · 2026-06-06
+ * GPU TIER ADAPTIVE SYSTEM · 2026-06-06 · Wave 30 · JUNE ROCKET
  *
- * When the user toggles "lite mode" (operator's mini PC can't handle
- * the heavy procedural visuals), html.lite-mode is added. Every
- * client-side animated layer reads the class and bails out:
- *   - SacredCanvas         (site-wide procedural background)
- *   - LivingCursor         (custom cursor + trail)
- *   - AtomHero3D           (homepage 3D Fibonacci sphere)
- *   - ConstellationCanvas  (/constellation force graph)
- *   - All CSS animations / transitions site-wide
+ * Replaces the binary lite-mode toggle with a 3-tier auto-detect:
+ *   tier-lite      : weak hardware · no heavy visuals · static text-only
+ *   tier-standard  : mid hardware · SacredSvg ON, AtomHero3D OFF
+ *   tier-full      : strong hardware · all visual layers active
  *
- * CSS-only kills (defense in depth): hide canvases, disable animations,
- * restore native cursor. The components themselves also gate via
- * MutationObserver / event listener for proper teardown.
+ * Auto-detected by useGpuTier hook (cores · memory · rAF self-measure
+ * · WebGL renderer). Manual override via TierToggle. Defaults to lite
+ * if `prefers-reduced-motion: reduce` is set.
+ *
+ * Legacy: html.lite-mode is kept as an alias for html.tier-lite so
+ * downstream components reading the old class still work.
  * ============================================================================= */
 
+/* === TIER LITE — kill everything heavy ============================ */
+
+html.tier-lite [data-component="sacred-canvas"],
+html.tier-lite [data-component="sacred-svg"],
+html.tier-lite [data-component="living-cursor"],
+html.tier-lite canvas[aria-label*="Atom"],
+html.tier-lite canvas[aria-label*="Fibonacci"],
+html.tier-lite [data-tier-gate="standard"],
+html.tier-lite [data-tier-gate="full"],
 html.lite-mode [data-component="sacred-canvas"],
+html.lite-mode [data-component="sacred-svg"],
 html.lite-mode [data-component="living-cursor"],
 html.lite-mode canvas[aria-label*="Atom"],
-html.lite-mode canvas[aria-label*="Fibonacci"] {
+html.lite-mode canvas[aria-label*="Fibonacci"],
+html.lite-mode [data-tier-gate="standard"],
+html.lite-mode [data-tier-gate="full"] {
   display: none !important;
 }
 
+html.tier-lite,
+html.tier-lite *,
 html.lite-mode,
 html.lite-mode * {
   cursor: auto !important;
 }
 
+html.tier-lite *,
+html.tier-lite *::before,
+html.tier-lite *::after,
 html.lite-mode *,
 html.lite-mode *::before,
 html.lite-mode *::after {
@@ -1299,6 +1315,46 @@ html.lite-mode *::after {
   animation-iteration-count: 1 !important;
   transition-duration: 0.001ms !important;
   transition-delay: 0ms !important;
+}
+
+/* Lite-only filter: reduce post-process glow to half so accents
+   don't bloom on cheap displays */
+html.tier-lite [class*="glow"],
+html.tier-lite [data-effect="glow"] {
+  filter: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* === TIER STANDARD — drop the heaviest (3D sphere, mouse cursor) === */
+
+html.tier-standard [data-component="living-cursor"],
+html.tier-standard [data-tier-gate="full"],
+html.tier-standard canvas[aria-label*="Fibonacci"] {
+  display: none !important;
+}
+
+html.tier-standard,
+html.tier-standard * {
+  cursor: auto !important;
+}
+
+/* === TIER FULL — no overrides · everything on by default =========== */
+
+/* Tier badge readout (optional debugging surface · invisible by default,
+   visible when html has class `tier-debug`) */
+html.tier-debug::after {
+  content: attr(class);
+  position: fixed;
+  bottom: 8px;
+  left: 8px;
+  z-index: 99;
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  color: #22f0d5;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  pointer-events: none;
 }
 
 /* =============================================================================

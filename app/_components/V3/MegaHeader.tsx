@@ -184,6 +184,15 @@ const MEGAS: Mega[] = [
         ],
       },
       {
+        title: "Domain hubs · 2026",
+        items: [
+          { href: "/learn/health-ai", label: "Health AI · hub", badge: "NEW" },
+          { href: "/learn/money-ai", label: "Money AI · hub", badge: "NEW" },
+          { href: "/learn/video-ai", label: "Video AI · hub", badge: "NEW" },
+          { href: "/version", label: "Version · JUNE ROCKET", badge: "NEW" },
+        ],
+      },
+      {
         title: "Tools + compare",
         items: [
           { href: "/learn/calc", label: "Calculators · 12 tools" },

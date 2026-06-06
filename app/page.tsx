@@ -228,6 +228,7 @@ function HeroSection() {
           rather than masking it. */}
       <div
         aria-hidden={false}
+        data-tier-gate="full"
         className="pointer-events-auto absolute right-[clamp(16px,5vw,72px)] top-[clamp(40px,8vh,140px)] z-[2] hidden md:block"
         style={{ mixBlendMode: "screen" }}
       >

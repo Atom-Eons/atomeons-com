@@ -28,7 +28,7 @@ import { LabTicker } from "./_components/v2/LabTicker";
 import { AmbientSignature } from "./_components/AmbientSignature";
 import { SacredSvg } from "./_components/V3/SacredSvg";
 import { LivingCursor } from "./_components/V3/LivingCursor";
-import { LiteToggle } from "./_components/V3/LiteToggle";
+import { TierToggle } from "./_components/V3/TierToggle";
 import { SearchInline } from "./_components/V3/SearchInline";
 import { MarkdownAlternateLink } from "./_components/V3/MarkdownAlternateLink";
 import { CopyForLlm } from "./_components/V3/CopyForLlm";
@@ -125,14 +125,17 @@ export default function RootLayout({
           stacking context but does not paint its own bg layer — the
           canvas + page sections compose over the html bg. */}
       <head>
-        {/* No-flash lite-mode bootstrap · runs synchronously before
-            any React component mounts. If the user previously toggled
-            lite mode (localStorage atomeons.lite=true) OR has the
-            prefers-reduced-motion system preference, html.lite-mode is
-            applied immediately so heavy canvases don't flash on then off. */}
+        {/* No-flash GPU tier bootstrap · Wave 30 · JUNE ROCKET ·
+            runs synchronously before any React component mounts. Reads
+            atomeons.tier (user override) and atomeons.tier.resolved
+            (last auto-detect result) and applies html.tier-{lite|
+            standard|full} so heavy visuals never flash on a weak
+            device. Also applies html.lite-mode as a legacy alias when
+            tier === lite. Honors prefers-reduced-motion as a hard
+            floor → lite. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=localStorage.getItem('atomeons.lite');var r=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(s==='true'||(s===null&&r)){document.documentElement.classList.add('lite-mode');}}catch(e){}})();`,
+            __html: `(function(){try{var c=localStorage.getItem('atomeons.tier');var r=localStorage.getItem('atomeons.tier.resolved');var prm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var t='full';if(prm){t='lite';}else if(c==='lite'||c==='standard'||c==='full'){t=c;}else if(c==='auto'||c===null){t=(r==='lite'||r==='standard'||r==='full')?r:'lite';}var h=document.documentElement;h.classList.remove('tier-lite','tier-standard','tier-full');h.classList.add('tier-'+t);if(t==='lite'){h.classList.add('lite-mode');}}catch(e){}})();`,
           }}
         />
       </head>
@@ -153,11 +156,12 @@ export default function RootLayout({
             states for interactive elements. Pizza-pie visual addition
             2026-06-05. */}
         <LivingCursor />
-        {/* LiteToggle · bottom-right floating switch · disables heavy
-            visuals for low-end devices (mini PCs, old laptops). Adds
-            html.lite-mode class · heavy canvases bail · CSS kills
-            animations. Persists choice via localStorage. */}
-        <LiteToggle />
+        {/* TierToggle · GPU-adaptive 4-state control · Wave 30 · JUNE
+            ROCKET. Replaces the old binary LiteToggle. Auto-detects
+            hardware via useGpuTier (cores · memory · rAF self-measure
+            · WebGL renderer) and cycles AUTO → LITE → MID → FULL on
+            click. Pure CSS gates the heavy visuals per tier. */}
+        <TierToggle />
         {/* CopyForLlm · bottom-left floating button · copies the
             current page as XML-wrapped markdown for direct paste into
             Claude / ChatGPT / Gemini. 2026-06-06. */}

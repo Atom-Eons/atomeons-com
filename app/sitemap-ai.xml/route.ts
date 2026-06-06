@@ -28,7 +28,7 @@ type Entry = {
   priority: number;
 };
 
-const TODAY = "2026-06-05";
+const TODAY = "2026-06-06";
 
 const ENTRIES: Entry[] = [
   // Top of stack — must be crawled
@@ -128,6 +128,12 @@ const ENTRIES: Entry[] = [
   { loc: "/learn/cyber/mythos", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
   { loc: "/learn/cyber/models", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
   { loc: "/api/palette", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
+
+  // JUNE ROCKET · Wave 30 · 2026-06-06
+  { loc: "/version", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
+  { loc: "/learn/health-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+  { loc: "/learn/money-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+  { loc: "/learn/video-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
 ];
 
 export async function GET() {
