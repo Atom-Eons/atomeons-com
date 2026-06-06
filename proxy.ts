@@ -113,6 +113,41 @@ const REDIRECTS: Record<string, string> = {
   "/skillski": "/skilski",
 };
 
+// ─── Adaptive Dual-State Rendering · 2026-06-05 ─────────────────
+//
+// LLM-specific User-Agent patterns. Traditional search bots like
+// Googlebot/Bingbot are NOT in this list — they want HTML to render
+// rich snippets. This list is just the AI-crawlers that benefit
+// from being served clean markdown.
+const LLM_BOT_PATTERNS = [
+  /GPTBot/i, /ChatGPT-User/i, /OAI-SearchBot/i,
+  /ClaudeBot/i, /Claude-Web/i, /anthropic-ai/i, /Claude-SearchBot/i,
+  /PerplexityBot/i, /Perplexity-User/i,
+  /CCBot/i, /Bytespider/i, /Applebot-Extended/i,
+  /DuckAssistBot/i, /MetaSearchBot/i, /Meta-ExternalAgent/i,
+  /YouBot/i, /MistralAI-User/i, /\bcohere-ai\b/i,
+  /Kagibot/i, /Andibot/i, /Diffbot/i, /AI2Bot/i, /Timpibot/i,
+  /\bGoogle-Extended\b/i, /ImagesiftBot/i,
+];
+
+function isLlmBot(ua: string): boolean {
+  if (!ua) return false;
+  for (const re of LLM_BOT_PATTERNS) if (re.test(ua)) return true;
+  return false;
+}
+
+// Paths that should pass through unchanged for bots (already machine-
+// shaped, or have no useful markdown counterpart, or shouldn't be
+// per-UA-adapted)
+function botPassthrough(p: string): boolean {
+  if (p === "/") return true;
+  if (p.startsWith("/api/")) return true;
+  if (p.startsWith("/.well-known/")) return true;
+  if (p.startsWith("/_next/")) return true;
+  if (/\.(json|xml|txt|md|png|jpg|jpeg|gif|svg|webp|avif|ico|css|js|woff2?|ttf|mp3|mp4|pdf|webm)$/i.test(p)) return true;
+  return false;
+}
+
 export function proxy(req: NextRequest) {
   const { nextUrl } = req;
   const pathname = nextUrl.pathname;
@@ -136,20 +171,54 @@ export function proxy(req: NextRequest) {
 
   // ─── 2 + 3. Lowercase + trailing-slash canonicalization ────────
   // Skip the canonicalization for the bare root.
-  if (pathname === "/") return NextResponse.next();
+  if (pathname === "/") {
+    // Even at root, emit the Link header pointing at the md alias.
+    const res = NextResponse.next();
+    res.headers.set("Link", `</api/md?route=%2F>; rel="alternate"; type="text/markdown"`);
+    res.headers.set("Vary", "User-Agent");
+    return res;
+  }
 
   // Strip every trailing slash off the path before comparison
   const stripped = lower.replace(/\/+$/, "");
 
   // Fast path: already canonical → no redirect work
-  if (stripped === pathname) return NextResponse.next();
+  if (stripped !== pathname) {
+    // Otherwise 301 to the canonical lowercase + slash-stripped form.
+    // Preserve query + hash automatically because we're mutating .pathname
+    // on a URL clone.
+    const target = nextUrl.clone();
+    target.pathname = stripped;
+    return NextResponse.redirect(target, 301);
+  }
 
-  // Otherwise 301 to the canonical lowercase + slash-stripped form.
-  // Preserve query + hash automatically because we're mutating .pathname
-  // on a URL clone.
-  const target = nextUrl.clone();
-  target.pathname = stripped;
-  return NextResponse.redirect(target, 301);
+  // ─── 4. Adaptive Dual-State Rendering ──────────────────────────
+  // Path is canonical. Decide whether this is a bot wanting markdown.
+  const ua = req.headers.get("user-agent") || "";
+  const bot = isLlmBot(ua);
+  const markdownAlt = `/api/md?route=${encodeURIComponent(pathname)}`;
+  const linkHeader = `<${markdownAlt}>; rel="alternate"; type="text/markdown"`;
+
+  if (bot && !botPassthrough(pathname)) {
+    // Rewrite body to markdown · URL stays canonical
+    const url = nextUrl.clone();
+    url.pathname = "/api/md";
+    url.searchParams.set("route", pathname);
+    const res = NextResponse.rewrite(url);
+    res.headers.set("Link", linkHeader);
+    res.headers.set("X-Atomeons-Mode", "machine");
+    res.headers.set("X-Atomeons-Detected-Bot", "true");
+    res.headers.set("Vary", "User-Agent");
+    return res;
+  }
+
+  // Human (or unknown UA, or passthrough path) · serve HTML with
+  // markdown-alternative Link header
+  const res = NextResponse.next();
+  res.headers.set("Link", linkHeader);
+  res.headers.set("X-Atomeons-Mode", "human");
+  res.headers.set("Vary", "User-Agent");
+  return res;
 }
 
 export const config = {
