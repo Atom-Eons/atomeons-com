@@ -134,6 +134,10 @@ const ENTRIES: Entry[] = [
   { loc: "/learn/health-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
   { loc: "/learn/money-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
   { loc: "/learn/video-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+
+  // JUNE ROCKET · Wave 31a · /trip · audiovisual entrainment
+  { loc: "/trip", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
+  { loc: "/trip/experience", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
 ];
 
 export async function GET() {
