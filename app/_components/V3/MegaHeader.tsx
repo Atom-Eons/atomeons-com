@@ -406,7 +406,7 @@ const MEGAS: Mega[] = [
   {
     key: "products",
     label: "Products",
-    prefixes: ["/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/vendor-pack", "/use-cases"],
+    prefixes: ["/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases"],
     columns: [
       {
         title: "Software",
@@ -441,7 +441,7 @@ const MEGAS: Mega[] = [
         items: [
           { href: "/compare", label: "Compare · matrices", badge: "NEW" },
           { href: "/use-cases", label: "Use cases by persona", badge: "NEW" },
-          { href: "/vendor-pack", label: "Vendor pack · CISO bundle", badge: "NEW" },
+          { href: "/trust", label: "Trust + transparency hub", badge: "NEW" },
           { href: "/pricing", label: "Pricing" },
           { href: "/support", label: "Support · 8-channel hub" },
           { href: "/legal/refund", label: "Refund policy" },
@@ -449,12 +449,12 @@ const MEGAS: Mega[] = [
       },
     ],
     featured: {
-      href: "/vendor-pack",
-      eyebrow: "§ NEW · for procurement",
-      title: "Vendor pack",
+      href: "/orangebox",
+      eyebrow: "§ LIVE · flagship",
+      title: "ORANGEBOX v1.0.0-beta",
       description:
-        "CISO-ready bundle of every license, security, trust, and integration document. Single .txt download at /vendor-pack/bundle.txt.",
-      badge: "NEW",
+        "Turbo-optimize Claude. Local-first Windows cockpit · 27 guardrails · §4A no-SaaS perpetual license · BYO keys · zero markup · source included.",
+      badge: "LIVE",
     },
   },
   {
@@ -490,18 +490,14 @@ const MEGAS: Mega[] = [
           { href: "/library", label: "Library · operator's books", badge: "NEW" },
           { href: "/learn/cyber/books", label: "Cyber book canon" },
           { href: "/research/decoded", label: "Decoded papers · 35 entries" },
-          { href: "/watching", label: "Watching · films + TV", badge: "NEW" },
-          { href: "/listening", label: "Listening · studio music", badge: "NEW" },
         ],
       },
       {
         title: "More writing",
         items: [
           { href: "/founders-view", label: "Founder's View · nightly", badge: "LIVE" },
-          { href: "/dear-reader", label: "Dear reader · long letters", badge: "NEW" },
-          { href: "/correspondence", label: "Correspondence · email", badge: "NEW" },
           { href: "/press", label: "Press · media kit" },
-          { href: "/influences", label: "Influences · 30 named", badge: "NEW" },
+          { href: "/manifesto", label: "Manifesto · 14 clauses" },
         ],
       },
     ],
@@ -518,11 +514,13 @@ const MEGAS: Mega[] = [
     key: "lab",
     label: "Lab",
     prefixes: [
-      "/lab", "/studio", "/aesthetic", "/colophon", "/integrations", "/timeline",
-      "/trust", "/transparency", "/receipts", "/manifesto", "/vendor-pack",
-      "/library", "/listening", "/watching", "/influences", "/signature",
-      "/now", "/live", "/correspondence", "/dear-reader",
+      "/lab", "/studio", "/integrations", "/timeline",
+      "/trust", "/transparency", "/receipts", "/manifesto",
+      "/library", "/signature",
+      "/now", "/live",
       "/api", "/ask", "/datasets",
+      "/research", "/intel", "/constellation",
+      "/founders-view", "/audit-log",
     ],
     columns: [
       {
@@ -543,37 +541,32 @@ const MEGAS: Mega[] = [
       {
         title: "The room",
         items: [
-          { href: "/lab", label: "Lab · workspace", badge: "NEW" },
-          { href: "/studio", label: "Studio · the atelier", badge: "NEW" },
-          { href: "/aesthetic", label: "Aesthetic · visual language", badge: "NEW" },
-          { href: "/colophon", label: "Colophon · stack", badge: "NEW" },
-          { href: "/integrations", label: "Integrations · service map", badge: "NEW" },
-          { href: "/timeline", label: "Timeline · ship log", badge: "NEW" },
-          { href: "/signature", label: "Signature · the mark", badge: "NEW" },
+          { href: "/lab", label: "Lab · workspace + trust hub", badge: "NEW" },
+          { href: "/studio", label: "Studio · the atelier" },
+          { href: "/integrations", label: "Integrations · service map" },
+          { href: "/timeline", label: "Timeline · ship log" },
+          { href: "/signature", label: "Signature · the mark" },
           { href: "/founders-view", label: "Founder's View · nightly", badge: "LIVE" },
+          { href: "/audit-log", label: "Audit log · commits", badge: "NEW" },
         ],
       },
       {
-        title: "Trust",
+        title: "Trust + transparency",
         items: [
-          { href: "/trust", label: "Trust posture", badge: "NEW" },
-          { href: "/transparency", label: "Financial transparency", badge: "NEW" },
+          { href: "/trust", label: "Trust posture" },
+          { href: "/transparency", label: "Financial transparency" },
           { href: "/receipts", label: "Receipts ledger" },
           { href: "/manifesto", label: "Manifesto · 14 clauses" },
-          { href: "/vendor-pack", label: "Vendor pack · CISO bundle", badge: "NEW" },
           { href: "/.well-known/security.txt", label: "security.txt" },
         ],
       },
       {
-        title: "Personal",
+        title: "Operator",
         items: [
           { href: "/about", label: "About the operator" },
-          { href: "/library", label: "Library · books", badge: "NEW" },
-          { href: "/listening", label: "Listening · music", badge: "NEW" },
-          { href: "/watching", label: "Watching · films + TV", badge: "NEW" },
-          { href: "/influences", label: "Influences · named", badge: "NEW" },
-          { href: "/dear-reader", label: "Dear reader · letters", badge: "NEW" },
-          { href: "/correspondence", label: "Correspondence", badge: "NEW" },
+          { href: "/library", label: "Library · books" },
+          { href: "/press", label: "Press · media kit" },
+          { href: "/skills", label: "ÆSkill canon" },
         ],
       },
       {
@@ -581,8 +574,8 @@ const MEGAS: Mega[] = [
         items: [
           { href: "/explore", label: "Explore · rabbit hole", badge: "NEW" },
           { href: "/atlas", label: "Atlas · rich sitemap", badge: "NEW" },
-          { href: "/welcome", label: "Welcome · returning", badge: "NEW" },
-          { href: "/north-star", label: "North Star · vision", badge: "NEW" },
+          { href: "/version", label: "Version · JUNE ROCKET", badge: "NEW" },
+          { href: "/manifesto", label: "Manifesto · 14 clauses" },
           { href: "/skills", label: "ÆSkill canon", badge: "NEW" },
           { href: "/audit-log", label: "Audit log · commits", badge: "NEW" },
           { href: "/now", label: "/now · ship log", badge: "LIVE" },
@@ -596,12 +589,12 @@ const MEGAS: Mega[] = [
       },
     ],
     featured: {
-      href: "/vendor-pack",
-      eyebrow: "§ NEW · for procurement",
-      title: "Vendor pack",
+      href: "/trust",
+      eyebrow: "§ LIVE · the trust hub",
+      title: "Trust + transparency",
       description:
-        "CISO-ready bundle of every license, security, trust, and integration document. Single .txt download · /vendor-pack/bundle.txt.",
-      badge: "NEW",
+        "License posture, financial transparency, receipts ledger, audit log, security.txt, manifesto. All in one canonical place. Updated continuously.",
+      badge: "LIVE",
     },
   },
 ];

@@ -76,7 +76,7 @@ export default function LabPage() {
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">
-            § the lab · Marco Island, FL
+            § the lab · Marco Island, FL · trust + workshop
           </p>
           <h1 className="mt-6 font-serif text-[44px] font-light leading-[1.04] tracking-[-0.025em] md:text-[64px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             One room. One operator.
@@ -87,6 +87,95 @@ export default function LabPage() {
             This page does the opposite. The desk, the machines, the
             daily working pattern, named.
           </p>
+        </div>
+      </section>
+
+      {/* Wave 33 · trust + transparency + audit-log + timeline absorbed
+          into /lab per orange-judge consolidation verdict. Each is its
+          own page · this section is the canonical entry. */}
+      <section className="border-b border-[#1F242B]">
+        <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+            § the trust hub · four facets of the same thing
+          </p>
+          <p className="mt-4 max-w-2xl font-serif text-[18px] leading-[1.55] text-[#9CA3AF] md:text-[19px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+            Who built this. What it ships on. What gets disclosed. What got
+            committed when. The four canonical surfaces below.
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/trust"
+              className="block border border-[#1F242B] p-6 transition hover:border-[#22F0D5]"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                /trust · trust posture
+              </p>
+              <p className="mt-3 font-serif text-[18px] leading-[1.5] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                Licenses, security policy, who has access to what, the threat
+                model the lab takes seriously.
+              </p>
+            </Link>
+            <Link
+              href="/transparency"
+              className="block border border-[#1F242B] p-6 transition hover:border-[#22F0D5]"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                /transparency · financial
+              </p>
+              <p className="mt-3 font-serif text-[18px] leading-[1.5] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                Revenue · cost · margin · runway · investor count (zero) ·
+                published in the open since day one.
+              </p>
+            </Link>
+            <Link
+              href="/audit-log"
+              className="block border border-[#1F242B] p-6 transition hover:border-[#22F0D5]"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                /audit-log · every commit
+              </p>
+              <p className="mt-3 font-serif text-[18px] leading-[1.5] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                Last 250 commits with SHA links to github.com. The shipping
+                record nobody can fake.
+              </p>
+            </Link>
+            <Link
+              href="/timeline"
+              className="block border border-[#1F242B] p-6 transition hover:border-[#22F0D5]"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                /timeline · ship log
+              </p>
+              <p className="mt-3 font-serif text-[18px] leading-[1.5] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                Curated chronology of major artifacts shipped since the lab
+                opened in 2024.
+              </p>
+            </Link>
+            <Link
+              href="/receipts"
+              className="block border border-[#1F242B] p-6 transition hover:border-[#22F0D5]"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                /receipts · ledger
+              </p>
+              <p className="mt-3 font-serif text-[18px] leading-[1.5] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                Per-artifact receipts: zip SHA-256, present_files manifest,
+                ledger row. The B_build chain's tail.
+              </p>
+            </Link>
+            <Link
+              href="/manifesto"
+              className="block border border-[#1F242B] p-6 transition hover:border-[#22F0D5]"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+                /manifesto · 14 clauses
+              </p>
+              <p className="mt-3 font-serif text-[18px] leading-[1.5] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                The lab doctrine. What we will + will not do. License §4A
+                no-SaaS perpetual. Read it before buying anything.
+              </p>
+            </Link>
+          </div>
         </div>
       </section>
 

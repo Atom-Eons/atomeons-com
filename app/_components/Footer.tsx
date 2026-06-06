@@ -126,14 +126,13 @@ export function Footer() {
           {/* Products · Software */}
           {COL("Software", [
             { href: "/orangebox", label: "ORANGEBOX" },
-            { href: "/orangebox/changelog", label: "OB changelog", badge: "NEW" },
-            { href: "/orangebox/roadmap", label: "OB roadmap", badge: "NEW" },
-            { href: "/orangebox/competitors", label: "OB vs alternatives", badge: "NEW" },
+            { href: "/orangebox/changelog", label: "OB changelog" },
+            { href: "/orangebox/roadmap", label: "OB roadmap" },
+            { href: "/orangebox/competitors", label: "OB vs alternatives" },
             { href: "/b00kmakor", label: "B00KMAKR" },
             { href: "/skilski", label: "skil.ski" },
-            { href: "/compare", label: "Compare matrices", badge: "NEW" },
-            { href: "/use-cases", label: "Use cases", badge: "NEW" },
-            { href: "/vendor-pack", label: "Vendor pack · CISO", badge: "NEW" },
+            { href: "/compare", label: "Compare matrices" },
+            { href: "/use-cases", label: "Use cases" },
             { href: "/pricing", label: "Pricing" },
             { href: "/support", label: "Support" },
           ])}
@@ -148,31 +147,25 @@ export function Footer() {
             { href: "/research/lessons-from-sci-fi/tng", label: "TNG · the AI canon" },
             { href: "/research/lessons-from-sci-fi/chapters", label: "Chapter index" },
             { href: "/books", label: "The shelf · reading lists" },
-            { href: "/library", label: "Library · op's books", badge: "NEW" },
+            { href: "/library", label: "Library · op's books" },
             { href: "/founders-view", label: "Founder's View", badge: "LIVE" },
-            { href: "/dear-reader", label: "Dear reader", badge: "NEW" },
           ])}
 
-          {/* Lab */}
+          {/* Lab · trust + transparency + identity hub */}
           {COL("Lab", [
             { href: "/lab", label: "Lab · workspace", badge: "NEW" },
-            { href: "/studio", label: "Studio · atelier", badge: "NEW" },
-            { href: "/aesthetic", label: "Aesthetic", badge: "NEW" },
-            { href: "/colophon", label: "Colophon · stack", badge: "NEW" },
-            { href: "/integrations", label: "Integrations", badge: "NEW" },
-            { href: "/timeline", label: "Timeline", badge: "NEW" },
-            { href: "/signature", label: "Signature · mark", badge: "NEW" },
-            { href: "/trust", label: "Trust posture", badge: "NEW" },
-            { href: "/transparency", label: "Transparency", badge: "NEW" },
-            { href: "/vendor-pack", label: "Vendor pack · CISO", badge: "NEW" },
+            { href: "/studio", label: "Studio · atelier" },
+            { href: "/integrations", label: "Integrations" },
+            { href: "/timeline", label: "Timeline · ship log" },
+            { href: "/signature", label: "Signature · mark" },
+            { href: "/audit-log", label: "Audit log · commits", badge: "NEW" },
+            { href: "/trust", label: "Trust posture" },
+            { href: "/transparency", label: "Transparency" },
             { href: "/receipts", label: "Receipts ledger" },
             { href: "/manifesto", label: "Manifesto" },
-            { href: "/influences", label: "Influences", badge: "NEW" },
-            { href: "/library", label: "Library · books", badge: "NEW" },
-            { href: "/listening", label: "Listening · music", badge: "NEW" },
-            { href: "/watching", label: "Watching · films", badge: "NEW" },
-            { href: "/dear-reader", label: "Dear reader", badge: "NEW" },
-            { href: "/correspondence", label: "Correspondence", badge: "NEW" },
+            { href: "/skills", label: "ÆSkill canon", badge: "NEW" },
+            { href: "/version", label: "Version · JUNE ROCKET", badge: "NEW" },
+            { href: "/.well-known/security.txt", label: "security.txt" },
           ])}
         </div>
 

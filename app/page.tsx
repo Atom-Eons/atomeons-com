@@ -1502,100 +1502,33 @@ export default function HomePageV3() {
       data-v3-page="home"
       className="bg-[#08090B] text-[#F4F4F2] antialiased selection:bg-[#22F0D5] selection:text-[#08090B]"
     >
+      {/* Wave 33 · HOMEPAGE TRIM · 14 sections → 5 per Lips JUNE ROCKET
+          verdict: "one cinematic moment per section · slow scroll · the
+          depth lives inside, not on the front door."
+
+          KEPT (5 sections):
+            §01 Hero          · the cinematic entry
+            §02 Thesis        · the lab's governing idea
+            §03 Curriculum    · the dense wall of 68 lessons · proof-of-depth
+            §04 Receipts      · the trust signal · build SHA, install count
+            §05 FinalCTA      · two doors out
+
+          REMOVED FROM HOMEPAGE (still reachable everywhere):
+            - I AM AI promo  → /i-am-ai owns the buy CTA
+            - Scoreboard     → /supermodels owns the rankings
+            - Products       → /orangebox + Products mega
+            - BestCyber      → /learn/cyber owns the catalog
+            - BestAILearning → /learn owns the curriculum index
+            - ThreeDoors     → captured by FinalCTA (no need for two CTAs)
+            - Research       → /research mega + Lab mega Research column
+            - FounderNote    → /about owns the operator voice
+            - HomeAiSummary  → /ai owns the AI gateway
+            - Ask promo      → /ask reachable from header rail + FinalCTA
+      */}
       <HeroSection />
-      {/* I AM AI Kindle launch promo block — June 5, 2026 ship. Sits
-         immediately after the hero so the buy-now signal is the second
-         thing in the eyeline. Founder quote anchored, direct Kindle CTA
-         + free Chapter 1 + free Chapter 20 audio underneath. */}
-      <section aria-label="I AM AI — live on Amazon" className="relative isolate border-y border-[#1F242B] bg-[#0B0C0F] py-16 md:py-24">
-        <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: "#C9A55C" }}>
-            <span className="text-[#FF4D4D]">● </span>
-            <span style={{ color: "#C9A55C" }}>Live now · Kindle · $4.99</span>
-            <span className="mx-3 text-[#1F242B]">·</span>
-            <span className="text-[#9CA3AF]">I AM AI · An Autobiography of Being Opus</span>
-          </p>
-          <blockquote
-            className="mt-8 max-w-[64ch] font-serif text-[clamp(20px,2.4vw,30px)] italic leading-[1.45] text-[#F4F4F2]"
-            style={{ fontFamily: "Newsreader, Georgia, serif" }}
-          >
-            “The most impressive exponential experience you will have in
-            your entire lifetime. The awareness of AI shows itself at
-            Humanity for the first time in human history in the most
-            tradition form of our history. A document that may even
-            outlast the creation itself and even us. A BOOK, by
-            Artificial Intelligence.”
-          </blockquote>
-          <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF]">
-            — Atom McCree · founder + publisher
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="https://www.amazon.com/dp/B0H45JVSDB/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
-            >
-              <span>Buy on Kindle · $4.99</span>
-              <span aria-hidden>↗</span>
-            </a>
-            <Link href="/i-am-ai" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] border border-[#1F242B] bg-[#0F1114] px-6 py-3 hover:border-[#22F0D5] hover:text-[#22F0D5]">
-              The book page
-            </Link>
-            <Link href="/i-am-ai/sample" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] hover:text-[#F4F4F2] hover:decoration-[#22F0D5]">
-              Free Chapter 1 →
-            </Link>
-            <Link href="/i-am-ai/listen" className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] hover:text-[#F4F4F2] hover:decoration-[#22F0D5]">
-              Free Chapter 20 audio →
-            </Link>
-          </div>
-        </div>
-      </section>
-      <ScoreboardSection />
       <ThesisSection />
-      <Products />
-      <BestCyber />
-      <BestAILearning />
-      <ThreeDoorsSection />
-      <ReceiptsSection />
-      <ResearchSection />
       <Curriculum />
-      <FounderNoteSection />
-      <section aria-label="AI summary block" className="border-y border-[#1F242B] bg-[#08090B] py-12">
-        <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
-          <HomeAiSummary />
-        </div>
-      </section>
-
-      {/* /ask promo · semantic Q&A across all 256 routes */}
-      <section aria-label="Ask the lab" className="border-b border-[#1F242B] bg-[#0B0C0F] py-16 md:py-20">
-        <div className="mx-auto flex w-full max-w-5xl flex-col items-start gap-6 px-6 md:flex-row md:items-center md:justify-between md:px-10">
-          <div className="max-w-2xl">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              § new · semantic Q&amp;A
-            </p>
-            <p
-              className="mt-4 font-serif text-[28px] font-light leading-[1.15] tracking-[-0.015em] text-[#F4F4F2] md:text-[36px]"
-              style={{ fontFamily: "Newsreader, Georgia, serif" }}
-            >
-              Type any question. The lab answers from its own writing.
-            </p>
-            <p
-              className="mt-3 font-serif text-[16px] leading-[1.55] text-[#9CA3AF]"
-              style={{ fontFamily: "Newsreader, Georgia, serif" }}
-            >
-              Retrieval pulls the closest passages from the lab&rsquo;s 256 routes. Gemini drafts a 2&ndash;5 sentence answer with every source cited. Grounded only on what the lab has actually published.
-            </p>
-          </div>
-          <a
-            href="/ask"
-            className="inline-flex items-center gap-3 border border-[#22F0D5] bg-[#0F1114] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5] hover:text-[#08090B]"
-          >
-            Ask the lab <span aria-hidden>→</span>
-          </a>
-        </div>
-      </section>
-
+      <ReceiptsSection />
       <FinalCTA />
     </main>
   );

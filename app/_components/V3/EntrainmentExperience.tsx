@@ -42,7 +42,15 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 
-type Mode = "alpha" | "theta" | "beta" | "delta" | "meditation";
+type Mode =
+  | "alpha"
+  | "theta"
+  | "beta"
+  | "delta"
+  | "meditation"
+  | "schumann"
+  | "wimhof"
+  | "sleep";
 
 interface ModeConfig {
   key: Mode;
@@ -104,6 +112,36 @@ const MODES: ModeConfig[] = [
     swellSeconds: 7,
     description:
       "Pure ocean. No binaural. Just synthesized swell + breath + silence. Sit with it. Eyes open or closed.",
+  },
+  {
+    key: "schumann",
+    label: "Schumann · 7.83 Hz · Earth",
+    freq: 7.83, // Earth's fundamental atmospheric resonance
+    carrier: 200,
+    hue: 155, // sea-green
+    swellSeconds: 7,
+    description:
+      "Schumann resonance · the 7.83 Hz electromagnetic standing wave between Earth's surface and ionosphere · measured continuously since Schumann's 1952 prediction. Subjective state: between deep alpha and light theta.",
+  },
+  {
+    key: "wimhof",
+    label: "Wim Hof · brisk breath",
+    freq: 0, // no binaural · the breath is the protocol
+    carrier: 0,
+    hue: 15, // sunrise orange
+    swellSeconds: 4, // faster swell to match brisker pace
+    description:
+      "Brisk-breath rhythm · 4s in, 4s out · ocean swell paces the cycle. The full Wim Hof protocol (30 breaths + hold + recovery) is your homework · this mode keeps the rhythm and lets you count. Don't do this driving. Don't do this in water.",
+  },
+  {
+    key: "sleep",
+    label: "Sleep · delta wind-down",
+    freq: 3,
+    carrier: 200,
+    hue: 230, // deep indigo
+    swellSeconds: 14,
+    description:
+      "20-minute wind-down to sleep · delta binaural at 3 Hz · long 14-second swell · the deepest pacing. Audio + visual fade to black over the session. Don't drive after. Put the phone away.",
   },
 ];
 
@@ -449,7 +487,9 @@ export function EntrainmentExperience() {
 
   return (
     <div
-      className="mindrest-root fixed inset-0 z-30 flex flex-col overflow-hidden text-[#F4F4F2]"
+      className={`mindrest-root fixed inset-0 z-30 flex flex-col overflow-hidden text-[#F4F4F2] ${
+        mode === "sleep" && running ? "mindrest-sleep-fade" : ""
+      }`}
       data-mode={mode}
       data-running={running ? "1" : "0"}
       style={{
@@ -566,6 +606,19 @@ export function EntrainmentExperience() {
 
       {/* Scoped CSS */}
       <style jsx>{`
+        /* Sleep mode · slow visual + audio fade over 20 minutes ·
+           audio fade is the auto-stop · this is the visual companion */
+        .mindrest-sleep-fade {
+          animation: sleep-fade 1200s linear forwards;
+        }
+        @keyframes sleep-fade {
+          0% { opacity: 1; }
+          75% { opacity: 0.5; }
+          100% { opacity: 0.08; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .mindrest-sleep-fade { animation: none; }
+        }
         .breathing-circle {
           width: 140px;
           height: 140px;

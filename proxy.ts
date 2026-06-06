@@ -121,6 +121,19 @@ const REDIRECTS: Record<string, string> = {
   "/ocean": "/mindrest/experience",
   "/calm": "/mindrest",
   "/rest": "/mindrest",
+  // Wave 33 · vanity routes deleted per orange-judge verdict 2026-06-06
+  // Each redirects to a sensible parent · inbound links preserved.
+  "/colophon": "/lab",
+  "/aesthetic": "/lab",
+  "/influences": "/about",
+  "/listening": "/about",
+  "/watching": "/about",
+  "/dear-reader": "/founders-view",
+  "/correspondence": "/press",
+  "/north-star": "/manifesto",
+  "/vendor-pack": "/trust",
+  "/welcome": "/",
+  "/vendor-pack/bundle.txt": "/trust",
 };
 
 // ─── Adaptive Dual-State Rendering · 2026-06-05 ─────────────────
