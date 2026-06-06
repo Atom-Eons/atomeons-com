@@ -63,3 +63,6 @@ tailwindcss-*.log
 
 .env*.local
 app/globals.css.bak
+
+# indexer logs
+.scripts/indexer-*.log

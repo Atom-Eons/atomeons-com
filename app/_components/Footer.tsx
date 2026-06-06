@@ -75,6 +75,7 @@ export function Footer() {
             <li><Link href="/press" className="transition-colors hover:text-[#22F0D5]">Press</Link></li>
             <li><Link href="/about" className="transition-colors hover:text-[#22F0D5]">About</Link></li>
             <li><Link href="/now" className="transition-colors hover:text-[#22F0D5]">/now · this week</Link></li>
+            <li><Link href="/ask" className="transition-colors hover:text-[#22F0D5]">/ask · semantic Q&amp;A</Link></li>
           </ul>
         </div>
       </div>

@@ -1543,6 +1543,36 @@ export default function HomePageV3() {
           <HomeAiSummary />
         </div>
       </section>
+
+      {/* /ask promo · semantic Q&A across all 256 routes */}
+      <section aria-label="Ask the lab" className="border-b border-[#1F242B] bg-[#0B0C0F] py-16 md:py-20">
+        <div className="mx-auto flex w-full max-w-5xl flex-col items-start gap-6 px-6 md:flex-row md:items-center md:justify-between md:px-10">
+          <div className="max-w-2xl">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+              § new · semantic Q&amp;A
+            </p>
+            <p
+              className="mt-4 font-serif text-[28px] font-light leading-[1.15] tracking-[-0.015em] text-[#F4F4F2] md:text-[36px]"
+              style={{ fontFamily: "Newsreader, Georgia, serif" }}
+            >
+              Type any question. The lab answers from its own writing.
+            </p>
+            <p
+              className="mt-3 font-serif text-[16px] leading-[1.55] text-[#9CA3AF]"
+              style={{ fontFamily: "Newsreader, Georgia, serif" }}
+            >
+              Retrieval pulls the closest passages from the lab&rsquo;s 256 routes. Gemini drafts a 2&ndash;5 sentence answer with every source cited. Grounded only on what the lab has actually published.
+            </p>
+          </div>
+          <a
+            href="/ask"
+            className="inline-flex items-center gap-3 border border-[#22F0D5] bg-[#0F1114] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5] hover:text-[#08090B]"
+          >
+            Ask the lab <span aria-hidden>→</span>
+          </a>
+        </div>
+      </section>
+
       <FinalCTA />
     </main>
   );
