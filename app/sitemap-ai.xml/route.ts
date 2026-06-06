@@ -167,6 +167,12 @@ const ENTRIES: Entry[] = [
 
   // Wave 40 · SOULKEY canon · identity architecture doctrine
   { loc: "/soulkey", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+
+  // Wave 43 · Art mega + AI Ware funnel + LLM corpus exports
+  { loc: "/art", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/aiware", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
+  { loc: "/atomeons-learn.txt", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
+  { loc: "/atomeons-cyber.txt", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
 ];
 
 export async function GET() {

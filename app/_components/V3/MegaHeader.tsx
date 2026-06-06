@@ -98,11 +98,16 @@ type Mega = {
    */
   hidden?: boolean;
   /**
-   * Wave 41 · 2026-06-06 · render order in the top nav · lower first.
-   * Operator-specified sequence: About · Learn · CySec · Research ·
-   * Books · Tools · AIware · Mindstate.
+   * Wave 41 · render order in the top nav · lower first.
    */
   order?: number;
+  /**
+   * Wave 43 · 2026-06-06 · Disney/Apple/Stripe pattern · the top-level
+   * label is both a clickable link (to this `landingHref`) AND a hover
+   * trigger for the mega. Click = go to the section's top-of-funnel
+   * landing · hover = preview the mega.
+   */
+  landingHref?: string;
 };
 
 /**
@@ -126,7 +131,8 @@ const MEGAS: Mega[] = [
   {
     key: "learn",
     label: "Learn",
-    order: 2, // Wave 41 · operator order: About · Learn · CySec · Research · Books · Tools · AIware · Mindstate
+    order: 2,
+    landingHref: "/learn",
     prefixes: ["/learn", "/start", "/q", "/glossary", "/prompt-kit", "/tools", "/vs", "/teach", "/supermodels", "/ai"],
     columns: [
       // Wave 39 · 10 columns → 4 · per UX-product + Orange + Lips
@@ -191,9 +197,10 @@ const MEGAS: Mega[] = [
   },
   {
     key: "cyber",
-    label: "CySec",
-    order: 3, // Wave 41 · operator order
-    prefixes: ["/learn/cyber"],
+    label: "Cysec",
+    order: 3,
+    landingHref: "/learn/cyber",
+    prefixes: ["/learn/cyber", "/cysec"],
     columns: [
       // Row 1
       {
@@ -303,7 +310,8 @@ const MEGAS: Mega[] = [
   {
     key: "research",
     label: "Research",
-    order: 4, // Wave 41 · operator order
+    order: 4,
+    landingHref: "/research",
     prefixes: ["/research", "/intel", "/constellation"],
     columns: [
       {
@@ -361,11 +369,10 @@ const MEGAS: Mega[] = [
   },
   {
     key: "products",
-    label: "AI WARE",
-    order: 7, // Wave 41 · operator order
-    // Wave 42 · 2026-06-06 · Playwright sweep caught "AIware" rendering as
-    // "Alware" in Inter sans (capital I looked like lowercase l). Switched
-    // to all-caps spaced "AI WARE" so the I is unambiguous. Same brand.
+    label: "AI Ware",
+    order: 7,
+    landingHref: "/aiware",
+    // Wave 43 · Title Case + space disambiguates the I in AI vs lowercase l.
     prefixes: ["/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases", "/aiware"],
     columns: [
       {
@@ -420,7 +427,8 @@ const MEGAS: Mega[] = [
   {
     key: "books",
     label: "Books",
-    order: 5, // Wave 41 · operator order
+    order: 5,
+    landingHref: "/books",
     prefixes: ["/i-am-ai", "/research/lessons-from-sci-fi", "/books"],
     columns: [
       {
@@ -473,7 +481,8 @@ const MEGAS: Mega[] = [
   {
     key: "lab",
     label: "About",
-    order: 1, // Wave 41 · operator order · About first
+    order: 1,
+    landingHref: "/lab",
     prefixes: [
       "/lab", "/studio", "/integrations", "/timeline",
       "/trust", "/transparency", "/receipts", "/manifesto",
@@ -549,7 +558,8 @@ const MEGAS: Mega[] = [
   {
     key: "tools",
     label: "Tools",
-    order: 6, // Wave 41 · operator order
+    order: 6,
+    landingHref: "/best-practices",
     prefixes: ["/tools", "/best-practices", "/compare", "/vs", "/learn/calc", "/supermodels", "/ask", "/api", "/manual"],
     columns: [
       {
@@ -610,6 +620,7 @@ const MEGAS: Mega[] = [
     key: "mindstate",
     label: "Mindstate",
     order: 8,
+    landingHref: "/mindrest",
     prefixes: ["/mindrest", "/learn/health-ai", "/learn/music-ai"],
     columns: [
       {
@@ -660,6 +671,63 @@ const MEGAS: Mega[] = [
       description:
         "Alpha · Theta · Beta · Delta · Meditation · Schumann · Wim Hof · Sleep. Binaural beats + synthesized ocean swell + breath guide. Headphones recommended. Free.",
       badge: "LIVE",
+    },
+  },
+  // Wave 43 · NEW · Art mega · operator: "Art in top nav with all this
+  // sacred geometry art. I think you can go 100x deeper in the art."
+  {
+    key: "art",
+    label: "Art",
+    order: 9,
+    landingHref: "/art",
+    prefixes: ["/art", "/aesthetic", "/constellation"],
+    columns: [
+      {
+        title: "The gallery",
+        items: [
+          { href: "/art", label: "144 generative pieces", hint: "18 families × 8 variants", badge: "NEW" },
+          { href: "/art#flower-of-life", label: "Flower of Life · 19 circles" },
+          { href: "/art#metatron-cube", label: "Metatron's Cube · all-pairs edges" },
+          { href: "/art#sri-yantra", label: "Sri Yantra · 9 interlocking triangles" },
+          { href: "/art#penrose-tiling", label: "Penrose tiling · aperiodic 5-fold" },
+        ],
+      },
+      {
+        title: "Tessellations",
+        items: [
+          { href: "/art#truchet-tiles", label: "Truchet tiles · 1704 maze field" },
+          { href: "/art#voronoi-cells", label: "Voronoi cells · dragonfly wing" },
+          { href: "/art#wave-interference", label: "Wave interference · double-slit" },
+          { href: "/art#fractal-tree", label: "Fractal tree · Pythagoras L-system" },
+        ],
+      },
+      {
+        title: "Classics",
+        items: [
+          { href: "/art#mandala", label: "Mandala · 12-fold radial" },
+          { href: "/art#spiral", label: "Spiral · log-galaxy" },
+          { href: "/art#orbit", label: "Orbit · celestial" },
+          { href: "/art#particle-field", label: "Particle field · phyllotaxis" },
+          { href: "/art#prism", label: "Prism · spectral refraction" },
+        ],
+      },
+      {
+        title: "Where it lives",
+        items: [
+          { href: "/constellation", label: "Constellation · 278-node graph" },
+          { href: "/mindrest/experience", label: "Mindrest ocean SVG" },
+          { href: "/welcome", label: "Welcome trailer scene visuals" },
+          { href: "/", label: "Site-wide SacredSvg · 10 layers" },
+        ],
+      },
+    ],
+    featured: {
+      href: "/art",
+      eyebrow: "§ NEW · GENERATIVE",
+      title: "144 pieces. All math. All open.",
+      description:
+        "Flower of Life · Metatron · Sri Yantra · Penrose · Truchet · Voronoi · Fractal trees · Wave interference · 10 more families. Server-rendered SVG. Zero JavaScript. CC-BY 4.0.",
+      badge: "NEW",
     },
   },
 ];
@@ -809,6 +877,10 @@ export function MegaHeader() {
               .map((m) => {
               const active = isActiveMega(pathname, m);
               const isOpen = openKey === m.key;
+              // Wave 43 · Disney/Apple pattern · the label is a Link to the
+              // section's landing · the chevron is a button that toggles
+              // the mega. Hover still opens the mega for power users.
+              const landingHref = m.landingHref ?? `/${m.key}`;
               return (
                 <div
                   key={m.key}
@@ -816,12 +888,9 @@ export function MegaHeader() {
                   onMouseEnter={() => openMega(m.key)}
                   onFocus={() => openMega(m.key)}
                 >
-                  <button
-                    type="button"
-                    aria-expanded={isOpen}
-                    aria-haspopup="true"
-                    onClick={() => setOpenKey(isOpen ? null : m.key)}
-                    className="group inline-flex items-center gap-1.5 px-3 py-2 outline-none transition-colors focus-visible:opacity-80"
+                  <Link
+                    href={landingHref}
+                    className="inline-flex items-center px-3 py-2 outline-none transition-colors focus-visible:opacity-80"
                     style={{
                       color: active || isOpen ? C.paper : C.mid,
                       fontFamily: SANS, fontSize: 14,
@@ -838,6 +907,15 @@ export function MegaHeader() {
                         />
                       ) : null}
                     </span>
+                  </Link>
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-haspopup="true"
+                    aria-label={`Toggle ${m.label} menu`}
+                    onClick={() => setOpenKey(isOpen ? null : m.key)}
+                    className="inline-flex items-center pr-2 outline-none transition-colors focus-visible:opacity-80"
+                  >
                     <ChevronDown
                       size={13}
                       strokeWidth={1.8}
