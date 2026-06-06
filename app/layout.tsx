@@ -27,6 +27,7 @@ import { StickyBuyBar } from "./_components/StickyBuyBar";
 import { LabTicker } from "./_components/v2/LabTicker";
 import { AmbientSignature } from "./_components/AmbientSignature";
 import { SearchInline } from "./_components/V3/SearchInline";
+import { SacredCanvas } from "./_components/V3/SacredCanvas";
 
 /**
  * Site-wide viewport configuration.
@@ -114,8 +115,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full antialiased ${inter.variable}`}>
-      <body className="min-h-full flex flex-col bg-black text-[#F2F4F5] font-sans">
+    <html lang="en" className={`h-full antialiased ${inter.variable} bg-black`}>
+      {/* bg-black moved to <html> so the SacredCanvas (fixed, z-index 0)
+          can paint on top of the root background. Body keeps its
+          stacking context but does not paint its own bg layer — the
+          canvas + page sections compose over the html bg. */}
+      <body className="min-h-full flex flex-col text-[#F2F4F5] font-sans">
+        {/* Living sacred-geometry background — site-wide procedural
+            canvas. Fixed-position, z-index 0, pointer-events none,
+            mix-blend-mode screen. Visible in body-bg gutters and
+            transition margins; content sections with their own bg
+            color mask it where they sit. ~7KB · ~3ms/frame · 30fps
+            cap · honors prefers-reduced-motion · pauses on
+            document.hidden. */}
+        <SacredCanvas />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
