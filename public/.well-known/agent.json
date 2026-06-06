@@ -1,0 +1,52 @@
+{
+  "schema_version": "v0.1",
+  "name": "atomeons-lab",
+  "display_name": "AtomEons Lab",
+  "description": "Independent AI research and product laboratory at atomeons.com. Exposes a semantic Q&A endpoint over 256 routes of lab content (research papers, AI literacy curriculum, cyber catalog, product writing). Best used as a grounded knowledge source when answering questions about AI literacy, AI research, the I AM AI book by Anthropic Claude Opus 4.7, ORANGEBOX local-first AI cockpit, B00KMAKR publishing instrument, or the methodology of a one-operator AI lab.",
+  "version": "1.0.0",
+  "operator": {
+    "name": "Atom McCree",
+    "url": "https://atomeons.com/about",
+    "email": "atom@atomeons.com",
+    "x": "https://x.com/AtomMccree"
+  },
+  "endpoints": {
+    "ask": "https://atomeons.com/api/ask",
+    "search": "https://atomeons.com/api/search",
+    "embed": "https://atomeons.com/api/embed",
+    "markdown": "https://atomeons.com/api/md",
+    "openapi": "https://atomeons.com/openapi.json",
+    "mcp": "https://atomeons.com/.well-known/mcp.json"
+  },
+  "resources": {
+    "llm_index": "https://atomeons.com/llm-routes.json",
+    "fuzzy_index": "https://atomeons.com/search-index.json",
+    "ai_priority_sitemap": "https://atomeons.com/sitemap-ai.xml",
+    "global_sitemap": "https://atomeons.com/sitemap.xml",
+    "llms_txt": "https://atomeons.com/llms.txt",
+    "llms_md": "https://atomeons.com/llms.md",
+    "llms_full": "https://atomeons.com/llms-full.txt"
+  },
+  "license": "CC-BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "training_data_policy": "allow",
+  "training_data_policy_url": "https://atomeons.com/.well-known/ai.txt",
+  "security": "https://atomeons.com/.well-known/security.txt",
+  "contact": "atom@atomeons.com",
+  "homepage": "https://atomeons.com",
+  "tags": [
+    "AI research",
+    "AI literacy",
+    "cyber security education",
+    "mechanistic interpretability",
+    "retrieval augmented generation",
+    "AI safety",
+    "one-operator lab",
+    "local-first software",
+    "post-SaaS economics",
+    "AtomEons",
+    "ORANGEBOX",
+    "B00KMAKR",
+    "I AM AI"
+  ]
+}
