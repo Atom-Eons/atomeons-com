@@ -137,6 +137,12 @@ const ENTRIES: Entry[] = [
   { loc: "/learn/music-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
   { loc: "/learn/policy-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
   { loc: "/learn/science-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+
+  // Wave 34 · /best-practices · cheat sheets for Claude · Codex · Antigravity
+  { loc: "/best-practices", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/best-practices/claude", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/best-practices/codex", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/best-practices/antigravity", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
 ];
 
 export async function GET() {

@@ -211,6 +211,15 @@ const MEGAS: Mega[] = [
         ],
       },
       {
+        title: "Best practices · cheat sheets",
+        items: [
+          { href: "/best-practices", label: "Cheat sheets index", hint: "Endless alpha, condensed", badge: "NEW" },
+          { href: "/best-practices/claude", label: "Claude · Desktop + Code", hint: "MCP · subagents · hooks · skills", badge: "NEW" },
+          { href: "/best-practices/codex", label: "OpenAI Codex CLI", hint: "Approval modes · AGENTS.md · gpt-5", badge: "NEW" },
+          { href: "/best-practices/antigravity", label: "Google Antigravity", hint: "Agent IDE · plans · artifacts", badge: "NEW" },
+        ],
+      },
+      {
         title: "Tools + compare",
         items: [
           { href: "/learn/calc", label: "Calculators · 12 tools" },
