@@ -5,23 +5,66 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 /**
- * SearchPalette — Cmd-K / Ctrl-K · "/" instant search.
+ * SearchPalette — unified search + ask · Cmd-K · "/" · the one surface.
  *
- * Design rules — operator brief 2026-06-04 "better than modern search
- * engines":
- *   - Sub-50ms response. No server roundtrip. Static index loaded on
- *     first open, cached in memory for the session.
- *   - Sublime-style subsequence fuzzy matching — "orgbx" → "orangebox".
- *   - Ranks by: exact title prefix > title substring > heading hit >
- *     body hit, weighted by route priority.
- *   - Keyboard-first: Cmd/Ctrl-K opens, "/" opens (unless typing),
- *     ESC closes, ↑↓ navigate, Enter follows, Tab closes-and-restores.
- *   - Visual: noir palette, the lab's signal cyan for active row,
- *     thin gold rule under the input — feels lab-grade, not Algolia.
+ * UNIFIED · 2026-06-05: this palette is now BOTH the fuzzy keyword
+ * search AND the Ask-the-lab semantic Q&A. The /ask route opens the
+ * same palette in ask-mode. There is no separate AskBar UI.
  *
- * The index lives at /public/search-index.json. Generator script:
+ * Two modes in one input:
+ *   SEARCH (default)   — sub-50ms fuzzy match over /search-index.json
+ *   ASK                — POST /api/ask · gemini-2.5-flash synthesizes
+ *                        a 2-5 sentence cited answer from the lab's
+ *                        own content
+ *
+ * Mode switching:
+ *   - Cmd/Ctrl-Enter   asks the lab with the current query
+ *   - Click "Ask ↵"    button (auto-surfaces on question-shaped query)
+ *   - URL param        /ask?q=…  opens the palette in ask-mode
+ *
+ * Design rules:
+ *   - Sub-50ms search response · no server roundtrip · static index
+ *   - Sublime-style subsequence fuzzy matching · "orgbx" → "orangebox"
+ *   - Ranks: title prefix > title substring > heading > body, ×route weight
+ *   - Keyboard-first: Cmd/Ctrl-K opens, "/" opens, ESC closes,
+ *     ↑↓ navigate, Enter follows, Cmd-Enter asks, Tab closes
+ *   - Visual: noir palette · cyan active row · thin gold rule under input
+ *
+ * Index lives at /public/search-index.json. Generator script:
  *   .scripts/build-search-index.mjs (run pre-build).
  */
+
+// ── Question detector ─────────────────────────────────────────────
+const INTERROGATIVES = new Set([
+  "what","how","why","when","where","who","which","whose","whom",
+  "can","could","is","are","was","were","will","would","should","do","does","did",
+]);
+function looksLikeQuestion(q: string): boolean {
+  const t = q.trim().toLowerCase();
+  if (!t) return false;
+  if (t.endsWith("?")) return true;
+  const first = t.split(/\s+/)[0];
+  if (INTERROGATIVES.has(first)) return true;
+  if (t.split(/\s+/).length >= 6) return true;
+  return false;
+}
+
+type AskSource = {
+  route: string;
+  title: string;
+  section: string;
+  similarity: number;
+};
+
+type AskResponse = {
+  ok: boolean;
+  mode: string;
+  query: string;
+  answer: string;
+  sources: AskSource[];
+  index_built: string;
+  index_count: number;
+};
 
 export type SearchRecord = {
   r: string; // route
@@ -130,6 +173,56 @@ export function SearchPalette() {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const router = useRouter();
 
+  // Ask state · runs in parallel with fuzzy search
+  const [askLoading, setAskLoading] = useState(false);
+  const [askResponse, setAskResponse] = useState<AskResponse | null>(null);
+  const [askError, setAskError] = useState<string | null>(null);
+  const askAbortRef = useRef<AbortController | null>(null);
+
+  // Listen for global open-with-mode events (e.g. /ask page mount)
+  useEffect(() => {
+    function onOpenAsk(e: Event) {
+      const detail = (e as CustomEvent<{ query?: string }>).detail;
+      setOpen(true);
+      if (detail?.query) setQuery(detail.query);
+    }
+    window.addEventListener("atomeons:open-ask", onOpenAsk);
+    return () => window.removeEventListener("atomeons:open-ask", onOpenAsk);
+  }, []);
+
+  async function askLab(q: string) {
+    if (!q.trim()) return;
+    askAbortRef.current?.abort();
+    const ctrl = new AbortController();
+    askAbortRef.current = ctrl;
+    setAskLoading(true);
+    setAskError(null);
+    setAskResponse(null);
+    try {
+      const res = await fetch("/api/ask", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ query: q.trim(), k: 5 }),
+        signal: ctrl.signal,
+      });
+      const data = (await res.json()) as AskResponse & { error?: string };
+      if (!res.ok || !data.ok) throw new Error(data.error || `Server returned ${res.status}`);
+      setAskResponse(data);
+    } catch (e) {
+      if ((e as Error).name === "AbortError") return;
+      setAskError(e instanceof Error ? e.message : "Unknown error");
+    } finally {
+      setAskLoading(false);
+    }
+  }
+
+  function clearAsk() {
+    setAskResponse(null);
+    setAskError(null);
+    setAskLoading(false);
+    askAbortRef.current?.abort();
+  }
+
   // Open on Cmd-K / Ctrl-K, or "/" (when not typing into another input)
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -223,6 +316,12 @@ export function SearchPalette() {
   }
 
   function onInputKey(e: React.KeyboardEvent<HTMLInputElement>) {
+    // Cmd/Ctrl-Enter or Shift-Enter: ask the lab
+    if (e.key === "Enter" && (e.metaKey || e.ctrlKey || e.shiftKey)) {
+      e.preventDefault();
+      if (query.trim()) askLab(query.trim());
+      return;
+    }
     if (e.key === "ArrowDown") {
       e.preventDefault();
       setActiveIdx((i) => Math.min(i + 1, results.length - 1));
@@ -238,6 +337,17 @@ export function SearchPalette() {
       setOpen(false);
     }
   }
+
+  // Clear ask state when the query changes substantially
+  useEffect(() => {
+    if (askResponse && query !== askResponse.query) {
+      // Query drifted from what was asked · clear so UI doesn't lie
+      clearAsk();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
+
+  const isQuestion = looksLikeQuestion(query);
 
   if (!open) return null;
 
@@ -280,7 +390,7 @@ export function SearchPalette() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={onInputKey}
-            placeholder="Type to search the lab. orangebox · papers · cyber · supermodels · ↵ to open"
+            placeholder="Search or ask · orangebox · what is RAG · ⌘↵ to ask the lab"
             className="h-14 w-full bg-transparent text-[15px] text-[#F4F4F2] placeholder:text-[#5A6068] focus:outline-none"
             spellCheck={false}
             autoComplete="off"
@@ -306,6 +416,99 @@ export function SearchPalette() {
             opacity: 0.4,
           }}
         />
+
+        {/* ASK CTA · surfaces when query looks question-shaped */}
+        {isQuestion && !askResponse && !askLoading ? (
+          <button
+            type="button"
+            onClick={() => askLab(query)}
+            className="group flex w-full items-center justify-between gap-4 border-b border-[#1F242B] bg-[#0B0C0F] px-5 py-3 text-left transition-colors hover:bg-[#22F0D5]/8"
+          >
+            <span className="flex items-center gap-3">
+              <span aria-hidden className="inline-flex h-6 w-6 items-center justify-center border border-[#22F0D5] text-[#22F0D5]">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <polyline points="4 12 10 18 20 6" />
+                </svg>
+              </span>
+              <span className="font-serif text-[14px] italic text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                Ask the lab — &ldquo;{query.length > 56 ? query.slice(0, 56) + "…" : query}&rdquo;
+              </span>
+            </span>
+            <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+              <kbd className="border border-[#22F0D5]/40 px-1.5 py-0.5">⌘↵</kbd>
+              ask →
+            </span>
+          </button>
+        ) : null}
+
+        {/* ASK LOADING */}
+        {askLoading ? (
+          <div className="border-b border-[#1F242B] bg-[#0B0C0F] px-5 py-4">
+            <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+              <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5]" />
+              Asking the lab · gemini-2.5-flash grounding answer…
+            </p>
+          </div>
+        ) : null}
+
+        {/* ASK ERROR */}
+        {askError ? (
+          <div className="border-b border-[#FF4D4D]/40 bg-[#0B0C0F] px-5 py-4">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF4D4D]">Ask failed</p>
+            <p className="mt-1 font-serif text-[13px] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+              {askError}
+            </p>
+          </div>
+        ) : null}
+
+        {/* ASK ANSWER */}
+        {askResponse ? (
+          <div className="max-h-[36vh] overflow-y-auto border-b border-[#22F0D5]/40 bg-[#0B0C0F] px-5 py-4">
+            <div className="flex items-baseline justify-between gap-3">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                Gemini answer · grounded in {askResponse.sources.length} of {askResponse.index_count}
+              </p>
+              <button
+                type="button"
+                onClick={clearAsk}
+                className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] hover:text-[#22F0D5]"
+              >
+                clear
+              </button>
+            </div>
+            <p
+              className="mt-3 font-serif text-[15px] leading-[1.55] text-[#F4F4F2]"
+              style={{ fontFamily: "Newsreader, Georgia, serif" }}
+            >
+              {askResponse.answer}
+            </p>
+            {askResponse.sources.length > 0 ? (
+              <ul className="mt-3 space-y-1.5">
+                {askResponse.sources.map((s, i) => (
+                  <li key={s.route + i}>
+                    <button
+                      type="button"
+                      onClick={() => go(s.route)}
+                      className="group flex w-full items-baseline justify-between gap-3 border-b border-[#1F242B] py-1.5 text-left hover:border-[#22F0D5]/60"
+                    >
+                      <span className="flex items-baseline gap-2 truncate">
+                        <span className="font-serif text-[13px] text-[#F4F4F2] group-hover:text-[#22F0D5]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                          {s.title}
+                        </span>
+                        <span className="truncate font-mono text-[9px] uppercase tracking-[0.18em] text-[#5A6068]">
+                          {s.route}
+                        </span>
+                      </span>
+                      <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#22F0D5]">
+                        {(s.similarity * 100).toFixed(0)}%
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        ) : null}
 
         {/* RESULTS */}
         <ul
@@ -403,6 +606,10 @@ export function SearchPalette() {
             <span className="flex items-center gap-1.5">
               <kbd className="border border-[#1F242B] px-1.5 py-0.5 text-[#9CA3AF]">↵</kbd>
               open
+            </span>
+            <span className="hidden items-center gap-1.5 sm:flex">
+              <kbd className="border border-[#22F0D5]/40 px-1.5 py-0.5 text-[#22F0D5]">⌘↵</kbd>
+              ask
             </span>
             <span className="hidden items-center gap-1.5 sm:flex">
               <kbd className="border border-[#1F242B] px-1.5 py-0.5 text-[#9CA3AF]">esc</kbd>
