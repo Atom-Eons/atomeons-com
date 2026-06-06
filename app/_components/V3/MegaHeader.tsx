@@ -217,6 +217,10 @@ const MEGAS: Mega[] = [
           { href: "/best-practices/claude", label: "Claude · Desktop + Code", hint: "MCP · subagents · hooks · skills", badge: "NEW" },
           { href: "/best-practices/codex", label: "OpenAI Codex CLI", hint: "Approval modes · AGENTS.md · gpt-5", badge: "NEW" },
           { href: "/best-practices/antigravity", label: "Google Antigravity", hint: "Agent IDE · plans · artifacts", badge: "NEW" },
+          { href: "/best-practices/cursor", label: "Cursor · AI IDE", hint: ".cursorrules · @ mentions · Composer", badge: "NEW" },
+          { href: "/best-practices/copilot", label: "GitHub Copilot", hint: "Chat · Workspace · Spaces · gh copilot", badge: "NEW" },
+          { href: "/best-practices/aider", label: "Aider · open-source", hint: "Git-native · /undo · architect mode", badge: "NEW" },
+          { href: "/best-practices/mcp", label: "MCP · cross-tool", hint: "Servers · tools · resources · SDKs", badge: "NEW" },
         ],
       },
       {

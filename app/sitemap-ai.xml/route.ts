@@ -143,6 +143,12 @@ const ENTRIES: Entry[] = [
   { loc: "/best-practices/claude", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
   { loc: "/best-practices/codex", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
   { loc: "/best-practices/antigravity", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+
+  // Wave 35 · 4 more cheat sheets · Cursor · Copilot · Aider · MCP
+  { loc: "/best-practices/cursor", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/best-practices/copilot", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/best-practices/aider", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/best-practices/mcp", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
 ];
 
 export async function GET() {

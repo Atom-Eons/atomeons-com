@@ -58,6 +58,42 @@ const APPS = [
     accent: "#FF4D4D",
     docs: "https://antigravity.google",
   },
+  {
+    slug: "cursor",
+    name: "Cursor · AI IDE",
+    vendor: "Cursor",
+    blurb:
+      "The most-deployed AI IDE in 2026. Cmd+K inline edit · Cmd+L chat · Cmd+I Composer · @-mentions · .cursorrules · Background Agents · MCP · auto model-routing.",
+    accent: "#9D7FFF",
+    docs: "https://docs.cursor.com",
+  },
+  {
+    slug: "copilot",
+    name: "GitHub Copilot",
+    vendor: "GitHub · Microsoft",
+    blurb:
+      "Inline Tab · Chat · Edits · Copilot Workspace · Copilot Spaces · gh copilot CLI. Multi-model picker (GPT-5 · Claude 4.5 · Gemini 2.5 · o4-mini). The largest-deployed AI coding tool.",
+    accent: "#3FB950",
+    docs: "https://docs.github.com/copilot",
+  },
+  {
+    slug: "aider",
+    name: "Aider · OG open-source pair",
+    vendor: "Aider · open-source",
+    blurb:
+      "Git-native · model-agnostic · auto-commit + /undo safety net · architect mode · voice input · web scraping · CONVENTIONS.md · BYO key · runs anywhere. The open-source benchmark.",
+    accent: "#FF9F3F",
+    docs: "https://aider.chat",
+  },
+  {
+    slug: "mcp",
+    name: "MCP · cross-tool protocol",
+    vendor: "Model Context Protocol",
+    blurb:
+      "The open protocol Claude · Cursor · Codex · Continue · Cline · Zed · Antigravity all speak. Servers · clients · tools · resources · prompts · stdio/SSE/HTTP. Write a server once · use it everywhere.",
+    accent: "#22F0D5",
+    docs: "https://modelcontextprotocol.io",
+  },
 ];
 
 export default function BestPracticesPage() {
