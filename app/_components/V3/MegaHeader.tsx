@@ -40,6 +40,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SearchPalette, SearchTrigger } from "./SearchPalette";
 import { RouteSigil } from "./RouteSigil";
+import { AmbientToggle } from "./AmbientToggle";
 
 const C = {
   ink: "#08090B",
@@ -693,8 +694,9 @@ export function MegaHeader() {
           </nav>
 
           {/* ─── Right rail ─────────────────────────────────────────── */}
-          <div className="hidden lg:flex items-center gap-4">
-            <SearchTrigger />
+          <div className="hidden lg:flex items-center gap-3">
+            <AmbientToggle compact />
+            <SearchTrigger compact />
             <Link
               href="/account"
               className="text-[13px] outline-none transition-colors focus-visible:opacity-80"

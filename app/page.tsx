@@ -74,6 +74,8 @@ import { Products } from "./_components/V3/Products";
 import { BestCyber } from "./_components/V3/BestCyber";
 import { BestAILearning } from "./_components/V3/BestAILearning";
 import { HomeAiSummary } from "./_components/ai-summary/home-ai-summary";
+import { AtomHero3D } from "./_components/V3/AtomHero3D";
+import { Ticker } from "./_components/V3/Ticker";
 
 // ---------------------------------------------------------------------------
 // SHARED — Variable-Weight Reveal hook
@@ -214,6 +216,21 @@ function HeroSection() {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#08090B]/70 via-transparent to-[#08090B]/40"
         />
+      </div>
+
+      {/* AtomHero3D · Fibonacci-sphere of cyan particles rotating in
+          3D · Canvas2D with hand-rolled perspective projection · no
+          Three.js · mouse-reactive · click pulses · ~7 KB · added
+          2026-06-05 as the pizza-pie visual signature.
+          Position: top-right of the hero, scaled to ~480px desktop,
+          mix-blend-mode: screen so it adds cyan light to the photo
+          rather than masking it. */}
+      <div
+        aria-hidden={false}
+        className="pointer-events-auto absolute right-[clamp(16px,5vw,72px)] top-[clamp(40px,8vh,140px)] z-[2] hidden md:block"
+        style={{ mixBlendMode: "screen" }}
+      >
+        <AtomHero3D size={460} />
       </div>
 
       {/* ------------------------------------------------------------------- */}

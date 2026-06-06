@@ -27,6 +27,7 @@ import { StickyBuyBar } from "./_components/StickyBuyBar";
 import { LabTicker } from "./_components/v2/LabTicker";
 import { AmbientSignature } from "./_components/AmbientSignature";
 import { SacredCanvas } from "./_components/V3/SacredCanvas";
+import { LivingCursor } from "./_components/V3/LivingCursor";
 
 /**
  * Site-wide viewport configuration.
@@ -128,6 +129,11 @@ export default function RootLayout({
             cap · honors prefers-reduced-motion · pauses on
             document.hidden. */}
         <SacredCanvas />
+        {/* LivingCursor · custom cyan cursor with phyllotaxis trail ·
+            hidden on touch + prefers-reduced-motion · respects hover
+            states for interactive elements. Pizza-pie visual addition
+            2026-06-05. */}
+        <LivingCursor />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

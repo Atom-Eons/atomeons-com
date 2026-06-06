@@ -1263,6 +1263,63 @@ a:hover {
 }
 
 /* =============================================================================
+ * LIVING CURSOR · 2026-06-05
+ *
+ * When LivingCursor mounts it adds .custom-cursor to <html>. We hide
+ * the native cursor sitewide so the canvas-rendered cyan ring is the
+ * only visible cursor. Honors prefers-reduced-motion: the component
+ * bails out itself, so this rule never applies in that case.
+ *
+ * Inputs + textareas restore the native I-beam cursor — the custom
+ * cursor would obstruct text editing affordances.
+ * ============================================================================= */
+html.custom-cursor,
+html.custom-cursor * {
+  cursor: none !important;
+}
+html.custom-cursor input,
+html.custom-cursor textarea,
+html.custom-cursor [contenteditable="true"] {
+  cursor: text !important;
+}
+
+/* =============================================================================
+ * CYAN GLOW · interactive surface bloom · 2026-06-05
+ *
+ * Adds a subtle cyan box-shadow to primary CTAs + brand mark on hover.
+ * Pure CSS · no JS · honors prefers-reduced-motion.
+ * ============================================================================= */
+@media (prefers-reduced-motion: no-preference) {
+  a[href="/ask"]:hover,
+  a.cyan-glow:hover,
+  button.cyan-glow:hover {
+    box-shadow:
+      0 0 0 1px rgba(34, 240, 213, 0.5),
+      0 0 24px rgba(34, 240, 213, 0.35),
+      0 0 56px rgba(34, 240, 213, 0.18);
+    transition: box-shadow 200ms ease-out;
+  }
+}
+
+/* =============================================================================
+ * VARIABLE-WEIGHT REVEAL · 2026-06-05
+ *
+ * Headlines tagged with .vw-reveal start at wght 200 and animate to
+ * wght 600 as they enter the viewport. Driven by an IntersectionObserver
+ * hook (useVariableWeightReveal) that toggles .vw-reveal-on.
+ * ============================================================================= */
+.vw-reveal {
+  font-variation-settings: 'wght' 240, 'opsz' 24;
+  transition: font-variation-settings 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.vw-reveal.vw-reveal-on {
+  font-variation-settings: 'wght' 600, 'opsz' 32;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vw-reveal { font-variation-settings: 'wght' 500, 'opsz' 28; transition: none; }
+}
+
+/* =============================================================================
  * PRINT STYLESHEET · 2026-06-05
  *
  * Targets the procurement / CISO / archival use case: /transparency,
