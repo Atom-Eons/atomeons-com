@@ -173,6 +173,9 @@ const ENTRIES: Entry[] = [
   { loc: "/aiware", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
   { loc: "/atomeons-learn.txt", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
   { loc: "/atomeons-cyber.txt", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
+
+  // Wave 44 · /lofi · the lab study room
+  { loc: "/lofi", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
 ];
 
 export async function GET() {

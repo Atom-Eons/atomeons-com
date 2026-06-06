@@ -816,6 +816,18 @@ export function MegaHeader() {
     return () => { document.body.style.overflow = prev; };
   }, [mobileOpen]);
 
+  // Wave 44 · cysec-active class · operator: "crazy glitch like hacker
+  // look on cysec tab." Toggle on html when path matches cyber routes ·
+  // CSS in globals.css applies the glitch + scanlines.
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const html = document.documentElement;
+    const onCysec = pathname.startsWith("/learn/cyber") || pathname.startsWith("/cysec");
+    if (onCysec) html.classList.add("cysec-active");
+    else html.classList.remove("cysec-active");
+    return () => html.classList.remove("cysec-active");
+  }, [pathname]);
+
   return (
     <>
       <SearchPalette />
