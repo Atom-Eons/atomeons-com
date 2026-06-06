@@ -111,6 +111,16 @@ const REDIRECTS: Record<string, string> = {
   // inside the lab origin so we redirect to /skilski local landing.
   "/skill-ski": "/skilski",
   "/skillski": "/skilski",
+  // Mindrest brand · /trip rebranded 2026-06-06 · keep inbound links alive
+  "/trip": "/mindrest",
+  "/trip/experience": "/mindrest/experience",
+  "/meditate": "/mindrest",
+  "/meditation": "/mindrest",
+  "/entrainment": "/mindrest",
+  "/binaural": "/mindrest/experience",
+  "/ocean": "/mindrest/experience",
+  "/calm": "/mindrest",
+  "/rest": "/mindrest",
 };
 
 // ─── Adaptive Dual-State Rendering · 2026-06-05 ─────────────────

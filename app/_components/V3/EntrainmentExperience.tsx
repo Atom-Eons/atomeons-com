@@ -1,132 +1,174 @@
 "use client";
 
 /**
- * EntrainmentExperience — the /trip/experience client component.
+ * EntrainmentExperience — MINDREST · the /mindrest/experience client.
  *
- * Web Audio API binaural-beat synthesis + SVG mandala + breathing
- * guide. Four brain-state modes mapped to canonical research-grounded
- * frequencies:
+ * Tune your brainwaves to the ocean. Two layers · binaural beats
+ * (optional · headphones) + procedurally-synthesized ocean swell.
+ * Visual is rolling sine waves rendered in SVG with CSS-driven
+ * horizontal parallax · feels like watching the surf at night.
  *
- *   ALPHA   10 Hz   relaxed alert       (carrier 200 Hz · 200/210)
- *   THETA    6 Hz   meditative · imagery (carrier 200 Hz · 200/206)
- *   BETA    15 Hz   focused alert        (carrier 200 Hz · 200/215)
- *   DELTA    3 Hz   deep rest             (carrier 200 Hz · 200/203)
+ * Five modes:
  *
- * Two pure sine oscillators panned hard L / R · the brain perceives
- * a phantom binaural beat at the frequency difference. Headphones
- * required for the effect. Audible to the ear without headphones too
- * (the L+R sum is a steady tone).
+ *   ALPHA       10 Hz   relaxed alert       carrier 200/210
+ *   THETA        6 Hz   meditative imagery  carrier 200/206
+ *   BETA        15 Hz   focused alert       carrier 200/215
+ *   DELTA        3 Hz   deep rest           carrier 200/203
+ *   MEDITATION   off    ocean + breath only · no binaural
  *
- * Visual: SVG mandala (12-fold rotational symmetry · golden-ratio
- * concentric circles) rotates at the binaural-beat frequency / 60 so
- * one revolution = one cycle of the entrainment frequency at human
- * comfort. Hue cycles slowly. CSS @keyframes only · zero JS per frame.
+ * Audio stack:
+ *   1. Two sine oscillators detuned by binaural Hz · hard L/R panned
+ *      (skipped in MEDITATION mode)
+ *   2. Synthesized ocean swell · 2s white-noise buffer · low-pass
+ *      filter at 700 Hz · LFO modulating both gain (swell-volume) and
+ *      filter cutoff (high-frequency hiss of the wave crest) at 0.15
+ *      Hz so one full swell takes ~6.5 seconds
+ *   3. Master gain ramp-in over 4s on start · 0.8s ramp-out on stop
+ *      to avoid clicks
  *
- * Breathing guide: 4-7-8 protocol (inhale 4 · hold 7 · exhale 8 ·
- * total 19s cycle). Center circle expands + contracts. Optional.
+ * Visual stack:
+ *   1. Deep-ocean radial gradient backdrop (mode-hue tinted)
+ *   2. Five layered SVG sine curves at different periods + speeds ·
+ *      parallax depth · CSS @keyframes translateX · zero JS per frame
+ *   3. Mode label + description + breathing guide + timer + stop
  *
- * Safety gates:
- *   - Photosensitive epilepsy modal on first start
- *   - Headphones-recommended hint
- *   - 20-minute auto-stop
- *   - Stop button always visible
- *   - prefers-reduced-motion → text-only mode by default
- *   - tier-lite hardware → text-only mode automatic
- *   - NO STROBE · all motion is slow + gradient · ramps from 0 to
- *     full opacity over 4s on start to avoid sudden visual shock
+ * Safety (unchanged):
+ *   - Photosensitive epilepsy gate · headphones hint · auto-stop 20m
+ *   - prefers-reduced-motion → text-only · tier-lite → text-only
+ *   - NO STROBE · all motion is slow gradient · 4s opacity ramp
  *
- * — Wave 31a · 2026-06-06
+ * — Wave 31b · MINDREST · 2026-06-06
  */
 
 import { useState, useEffect, useRef, useCallback } from "react";
 
-type Mode = "alpha" | "theta" | "beta" | "delta";
+type Mode = "alpha" | "theta" | "beta" | "delta" | "meditation";
 
 interface ModeConfig {
   key: Mode;
   label: string;
-  freq: number; // Hz · the binaural beat frequency
-  carrier: number; // Hz · the underlying tone
-  hue: number; // 0-360 · the dominant color
+  freq: number; // Hz · binaural beat frequency (0 = no binaural)
+  carrier: number; // Hz · underlying tone
+  hue: number; // 0-360
+  swellSeconds: number; // ocean wave cycle in seconds
   description: string;
 }
 
 const MODES: ModeConfig[] = [
   {
     key: "alpha",
-    label: "Alpha · 10 Hz",
+    label: "Alpha · 10 Hz · soft tide",
     freq: 10,
     carrier: 200,
-    hue: 165, // cyan-teal
+    hue: 175, // ocean teal
+    swellSeconds: 6,
     description:
-      "Relaxed alert · the state behind closed eyes before sleep · soft focus · creative drift.",
+      "Relaxed alertness · the state behind closed eyes before sleep · soft focus · creative drift. The brain at gentle low tide.",
   },
   {
     key: "theta",
-    label: "Theta · 6 Hz",
+    label: "Theta · 6 Hz · deep current",
     freq: 6,
     carrier: 200,
-    hue: 270, // purple
+    hue: 250, // deep purple-blue
+    swellSeconds: 8,
     description:
-      "Meditative · hypnagogic · vivid mental imagery · deep relaxation · sometimes called the 'creative trance' state.",
+      "Meditative · hypnagogic · vivid mental imagery · deep relaxation. The brain in slow swell · creative trance state.",
   },
   {
     key: "beta",
-    label: "Beta · 15 Hz",
+    label: "Beta · 15 Hz · clear surface",
     freq: 15,
     carrier: 200,
-    hue: 35, // amber
+    hue: 40, // sunrise amber
+    swellSeconds: 4,
     description:
-      "Focused alertness · the working state · sharper attention · best for problem-solving sessions.",
+      "Focused alertness · the working state · sharper attention · best for problem-solving. The brain on a bright open sea.",
   },
   {
     key: "delta",
-    label: "Delta · 3 Hz",
+    label: "Delta · 3 Hz · trench dark",
     freq: 3,
     carrier: 200,
-    hue: 220, // deep blue
+    hue: 215, // deep midnight blue
+    swellSeconds: 12,
     description:
-      "Deep rest · the state of dreamless sleep · slow + still · use for unwinding before bed (don't drive after).",
+      "Deep rest · the state of dreamless sleep · slow and still. The brain in the trench. Don't drive after.",
+  },
+  {
+    key: "meditation",
+    label: "Meditation · ocean only",
+    freq: 0, // no binaural
+    carrier: 0,
+    hue: 200, // pacific blue
+    swellSeconds: 7,
+    description:
+      "Pure ocean. No binaural. Just synthesized swell + breath + silence. Sit with it. Eyes open or closed.",
   },
 ];
 
-const AUTO_STOP_MS = 20 * 60 * 1000; // 20 minutes
+const AUTO_STOP_MS = 20 * 60 * 1000;
+
+// ---------------------------------------------------------------------------
+// White-noise buffer for the ocean swell · generated once per AudioContext.
+// 2 seconds at the context sample rate · then we loop it.
+// ---------------------------------------------------------------------------
+
+function createNoiseBuffer(ctx: AudioContext): AudioBuffer {
+  const seconds = 2;
+  const length = ctx.sampleRate * seconds;
+  const buf = ctx.createBuffer(2, length, ctx.sampleRate);
+  for (let ch = 0; ch < 2; ch++) {
+    const data = buf.getChannelData(ch);
+    for (let i = 0; i < length; i++) {
+      data[i] = Math.random() * 2 - 1;
+    }
+  }
+  return buf;
+}
 
 export function EntrainmentExperience() {
   const [gateAccepted, setGateAccepted] = useState(false);
   const [textOnly, setTextOnly] = useState(false);
   const [mode, setMode] = useState<Mode>("alpha");
   const [running, setRunning] = useState(false);
-  const [elapsed, setElapsed] = useState(0); // seconds
+  const [elapsed, setElapsed] = useState(0);
   const [showBreathing, setShowBreathing] = useState(true);
 
   // Audio refs
   const audioCtxRef = useRef<AudioContext | null>(null);
+  const masterGainRef = useRef<GainNode | null>(null);
   const oscLeftRef = useRef<OscillatorNode | null>(null);
   const oscRightRef = useRef<OscillatorNode | null>(null);
-  const gainRef = useRef<GainNode | null>(null);
+  const noiseSourceRef = useRef<AudioBufferSourceNode | null>(null);
+  const noiseGainRef = useRef<GainNode | null>(null);
+  const noiseFilterRef = useRef<BiquadFilterNode | null>(null);
+  const lfoGainRef = useRef<OscillatorNode | null>(null);
+  const lfoFilterRef = useRef<OscillatorNode | null>(null);
 
   // Timing refs
   const startTimeRef = useRef<number | null>(null);
   const tickIntervalRef = useRef<number | null>(null);
   const autoStopTimeoutRef = useRef<number | null>(null);
 
-  // ---- Tier detection · respect lite hardware ----
+  // ---- Tier detection ----
   useEffect(() => {
     if (typeof window === "undefined") return;
     const html = document.documentElement;
-    if (html.classList.contains("tier-lite") || html.classList.contains("lite-mode")) {
+    if (
+      html.classList.contains("tier-lite") ||
+      html.classList.contains("lite-mode")
+    ) {
       setTextOnly(true);
     }
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mq.matches) setTextOnly(true);
   }, []);
 
-  // ---- Start / Stop audio ----
+  // ---- Build the audio graph for a given mode ----
   const startAudio = useCallback((m: Mode) => {
     if (typeof window === "undefined") return;
 
-    // Reuse context if it exists (Safari is strict about new contexts)
     if (!audioCtxRef.current) {
       const Ctor =
         window.AudioContext ||
@@ -135,62 +177,122 @@ export function EntrainmentExperience() {
       audioCtxRef.current = new Ctor();
     }
     const ctx = audioCtxRef.current;
-    if (ctx.state === "suspended") {
-      void ctx.resume();
-    }
+    if (ctx.state === "suspended") void ctx.resume();
 
     const cfg = MODES.find((x) => x.key === m)!;
 
-    // Master gain · gentle · ramps up from 0 over 4s to avoid shock
-    const gain = ctx.createGain();
-    gain.gain.setValueAtTime(0, ctx.currentTime);
-    gain.gain.linearRampToValueAtTime(0.06, ctx.currentTime + 4);
-    gain.connect(ctx.destination);
-    gainRef.current = gain;
+    // Master gain · ramps in over 4s
+    const master = ctx.createGain();
+    master.gain.setValueAtTime(0, ctx.currentTime);
+    master.gain.linearRampToValueAtTime(0.08, ctx.currentTime + 4);
+    master.connect(ctx.destination);
+    masterGainRef.current = master;
 
-    // Left oscillator · carrier
-    const oscL = ctx.createOscillator();
-    oscL.type = "sine";
-    oscL.frequency.value = cfg.carrier;
-    const panL = ctx.createStereoPanner();
-    panL.pan.value = -1;
-    oscL.connect(panL).connect(gain);
-    oscL.start();
-    oscLeftRef.current = oscL;
+    // Binaural lane (skipped in meditation mode)
+    if (cfg.freq > 0) {
+      const oscL = ctx.createOscillator();
+      oscL.type = "sine";
+      oscL.frequency.value = cfg.carrier;
+      const panL = ctx.createStereoPanner();
+      panL.pan.value = -1;
+      const gainL = ctx.createGain();
+      gainL.gain.value = 0.5;
+      oscL.connect(panL).connect(gainL).connect(master);
+      oscL.start();
+      oscLeftRef.current = oscL;
 
-    // Right oscillator · carrier + binaural offset
-    const oscR = ctx.createOscillator();
-    oscR.type = "sine";
-    oscR.frequency.value = cfg.carrier + cfg.freq;
-    const panR = ctx.createStereoPanner();
-    panR.pan.value = 1;
-    oscR.connect(panR).connect(gain);
-    oscR.start();
-    oscRightRef.current = oscR;
+      const oscR = ctx.createOscillator();
+      oscR.type = "sine";
+      oscR.frequency.value = cfg.carrier + cfg.freq;
+      const panR = ctx.createStereoPanner();
+      panR.pan.value = 1;
+      const gainR = ctx.createGain();
+      gainR.gain.value = 0.5;
+      oscR.connect(panR).connect(gainR).connect(master);
+      oscR.start();
+      oscRightRef.current = oscR;
+    }
+
+    // Ocean swell lane · synthesized
+    const noise = ctx.createBufferSource();
+    noise.buffer = createNoiseBuffer(ctx);
+    noise.loop = true;
+
+    const filter = ctx.createBiquadFilter();
+    filter.type = "lowpass";
+    filter.frequency.value = 700;
+    filter.Q.value = 0.5;
+
+    const noiseGain = ctx.createGain();
+    // Base gain · meditation mode pumps the ocean louder since there's no binaural
+    noiseGain.gain.value = m === "meditation" ? 1.6 : 1.0;
+
+    noise.connect(filter).connect(noiseGain).connect(master);
+    noise.start();
+    noiseSourceRef.current = noise;
+    noiseFilterRef.current = filter;
+    noiseGainRef.current = noiseGain;
+
+    // LFO 1 · modulates noise gain to create the swell envelope
+    const lfoGain = ctx.createOscillator();
+    lfoGain.type = "sine";
+    lfoGain.frequency.value = 1 / cfg.swellSeconds; // Hz · one swell per cycle
+    const lfoGainAmp = ctx.createGain();
+    lfoGainAmp.gain.value = m === "meditation" ? 0.7 : 0.5;
+    lfoGain.connect(lfoGainAmp).connect(noiseGain.gain);
+    lfoGain.start();
+    lfoGainRef.current = lfoGain;
+
+    // LFO 2 · modulates filter cutoff for the wave-crest hiss
+    const lfoFilter = ctx.createOscillator();
+    lfoFilter.type = "sine";
+    lfoFilter.frequency.value = 1 / cfg.swellSeconds;
+    const lfoFilterAmp = ctx.createGain();
+    lfoFilterAmp.gain.value = 250;
+    lfoFilter.connect(lfoFilterAmp).connect(filter.frequency);
+    lfoFilter.start();
+    lfoFilterRef.current = lfoFilter;
   }, []);
 
+  // ---- Tear down all audio cleanly ----
   const stopAudio = useCallback(() => {
-    const gain = gainRef.current;
+    const master = masterGainRef.current;
     const ctx = audioCtxRef.current;
-    if (!gain || !ctx) return;
-    // Ramp down · prevents click
-    gain.gain.cancelScheduledValues(ctx.currentTime);
-    gain.gain.setValueAtTime(gain.gain.value, ctx.currentTime);
-    gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.6);
+    if (!master || !ctx) return;
+    master.gain.cancelScheduledValues(ctx.currentTime);
+    master.gain.setValueAtTime(master.gain.value, ctx.currentTime);
+    master.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.8);
     window.setTimeout(() => {
+      const stop = (n: AudioScheduledSourceNode | null) => {
+        if (!n) return;
+        try {
+          n.stop();
+          n.disconnect();
+        } catch {
+          /* already stopped */
+        }
+      };
+      stop(oscLeftRef.current);
+      stop(oscRightRef.current);
+      stop(noiseSourceRef.current);
+      stop(lfoGainRef.current);
+      stop(lfoFilterRef.current);
       try {
-        oscLeftRef.current?.stop();
-        oscRightRef.current?.stop();
-        oscLeftRef.current?.disconnect();
-        oscRightRef.current?.disconnect();
-        gainRef.current?.disconnect();
+        masterGainRef.current?.disconnect();
+        noiseFilterRef.current?.disconnect();
+        noiseGainRef.current?.disconnect();
       } catch {
-        // already stopped
+        /* already disconnected */
       }
       oscLeftRef.current = null;
       oscRightRef.current = null;
-      gainRef.current = null;
-    }, 800);
+      noiseSourceRef.current = null;
+      noiseFilterRef.current = null;
+      noiseGainRef.current = null;
+      lfoGainRef.current = null;
+      lfoFilterRef.current = null;
+      masterGainRef.current = null;
+    }, 1000);
   }, []);
 
   // ---- Start / Stop session ----
@@ -200,14 +302,10 @@ export function EntrainmentExperience() {
     setElapsed(0);
     startTimeRef.current = Date.now();
     tickIntervalRef.current = window.setInterval(() => {
-      const start = startTimeRef.current;
-      if (start) {
-        setElapsed(Math.floor((Date.now() - start) / 1000));
-      }
+      const s = startTimeRef.current;
+      if (s) setElapsed(Math.floor((Date.now() - s) / 1000));
     }, 1000);
-    autoStopTimeoutRef.current = window.setTimeout(() => {
-      stop();
-    }, AUTO_STOP_MS);
+    autoStopTimeoutRef.current = window.setTimeout(() => stop(), AUTO_STOP_MS);
   }, [mode, startAudio, textOnly]);
 
   const stop = useCallback(() => {
@@ -224,40 +322,37 @@ export function EntrainmentExperience() {
     startTimeRef.current = null;
   }, [stopAudio]);
 
-  // ---- Cleanup ----
   useEffect(() => {
     return () => {
       stop();
       try {
         audioCtxRef.current?.close();
       } catch {
-        // ignore
+        /* already closed */
       }
     };
   }, [stop]);
 
-  // ---- Mode switch · stop then restart cleanly ----
+  // ---- Switch mode · stop + restart cleanly ----
   const switchMode = useCallback(
     (m: Mode) => {
       if (running) {
         stop();
         setMode(m);
-        // Restart on next tick
         window.setTimeout(() => {
           if (!textOnly) startAudio(m);
           setRunning(true);
           setElapsed(0);
           startTimeRef.current = Date.now();
           tickIntervalRef.current = window.setInterval(() => {
-            const start = startTimeRef.current;
-            if (start) {
-              setElapsed(Math.floor((Date.now() - start) / 1000));
-            }
+            const s = startTimeRef.current;
+            if (s) setElapsed(Math.floor((Date.now() - s) / 1000));
           }, 1000);
-          autoStopTimeoutRef.current = window.setTimeout(() => {
-            stop();
-          }, AUTO_STOP_MS);
-        }, 300);
+          autoStopTimeoutRef.current = window.setTimeout(
+            () => stop(),
+            AUTO_STOP_MS,
+          );
+        }, 400);
       } else {
         setMode(m);
       }
@@ -265,25 +360,23 @@ export function EntrainmentExperience() {
     [running, stop, startAudio, textOnly],
   );
 
-  // ---- Format elapsed mm:ss ----
   const mm = Math.floor(elapsed / 60).toString().padStart(2, "0");
   const ss = (elapsed % 60).toString().padStart(2, "0");
-
   const cfg = MODES.find((x) => x.key === mode)!;
 
-  // ---- Gate · safety + headphones modal ----
+  // ---- Safety gate modal ----
   if (!gateAccepted) {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 px-6">
-        <div className="max-w-[640px] border border-[#FF4D4D]/40 bg-[#0F1114] p-10 text-[#F4F4F2]">
-          <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#FF4D4D]">
-            § Safety gate · please read
+        <div className="max-w-[640px] border border-[#22F0D5]/30 bg-[#0F1114] p-10 text-[#F4F4F2]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            § MINDREST · safety + headphones
           </p>
           <h1
-            className="mt-4 text-[40px] font-light leading-tight text-[#F4F4F2]"
+            className="mt-4 text-[44px] font-light leading-tight text-[#F4F4F2]"
             style={{ fontFamily: "Newsreader, Georgia, serif" }}
           >
-            Audiovisual entrainment.
+            Tune your brainwaves to the ocean.
           </h1>
           <ul className="mt-6 space-y-3 text-[15px] leading-[1.65] text-[#9CA3AF]">
             <li className="flex gap-3">
@@ -291,7 +384,8 @@ export function EntrainmentExperience() {
               <span>
                 <strong className="text-[#F4F4F2]">Headphones recommended.</strong>{" "}
                 The binaural-beat effect only works with stereo separation.
-                Speakers will give you a steady tone, not the entrainment.
+                Speakers will give you a steady tone + ocean swell, but no
+                entrainment. Meditation mode works on any output.
               </span>
             </li>
             <li className="flex gap-3">
@@ -300,16 +394,16 @@ export function EntrainmentExperience() {
                 <strong className="text-[#F4F4F2]">
                   Photosensitive epilepsy.
                 </strong>{" "}
-                The mandala rotates slowly and uses no strobe, but if you have a
-                history of seizures choose <em>text-only mode</em> below.
+                The ocean rolls slowly · no strobe · no flicker. If you have a
+                history of seizures, choose <em>text-only mode</em> below.
               </span>
             </li>
             <li className="flex gap-3">
               <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF4D4D]" />
               <span>
-                <strong className="text-[#F4F4F2]">Do not drive after.</strong>{" "}
-                Theta and delta modes can leave you genuinely drowsy. Especially
-                delta.
+                <strong className="text-[#F4F4F2]">Don&apos;t drive after.</strong>{" "}
+                Theta, delta, and the meditation mode can leave you genuinely
+                drowsy. Especially delta.
               </span>
             </li>
             <li className="flex gap-3">
@@ -317,16 +411,14 @@ export function EntrainmentExperience() {
               <span>
                 <strong className="text-[#F4F4F2]">Not medical advice.</strong>{" "}
                 Audiovisual entrainment has EEG evidence but no clinical claim
-                is made on this page. See a clinician for anxiety, depression,
-                PTSD, ADHD.
+                is made here. See a clinician for anxiety, depression, PTSD.
               </span>
             </li>
             <li className="flex gap-3">
               <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-[#C9A55C]" />
               <span>
                 <strong className="text-[#F4F4F2]">Auto-stops at 20 min.</strong>{" "}
-                Stop button always visible. You can leave the page any time and
-                audio + visual end cleanly.
+                Stop button always visible. Leaving the page ends audio cleanly.
               </span>
             </li>
           </ul>
@@ -337,7 +429,7 @@ export function EntrainmentExperience() {
               className="inline-flex items-center gap-2 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition hover:bg-[#22F0D5]/20"
             >
               <span aria-hidden>♪</span>
-              <span>Start with headphones</span>
+              <span>Enter the ocean</span>
             </button>
             <button
               type="button"
@@ -357,20 +449,23 @@ export function EntrainmentExperience() {
 
   return (
     <div
-      className="entrainment-root fixed inset-0 z-30 flex flex-col bg-black text-[#F4F4F2]"
+      className="mindrest-root fixed inset-0 z-30 flex flex-col overflow-hidden text-[#F4F4F2]"
       data-mode={mode}
       data-running={running ? "1" : "0"}
+      style={{
+        background: `radial-gradient(ellipse at 50% 30%, hsla(${cfg.hue}, 60%, 16%, 0.9) 0%, #050810 55%, #000000 100%)`,
+        transition: "background 1.6s ease-out",
+      }}
     >
-      {/* Visual layer · disabled in text-only */}
+      {/* Ocean wave visual layer */}
       {!textOnly && (
-        <div className="entrainment-visual pointer-events-none absolute inset-0 flex items-center justify-center">
-          <Mandala mode={mode} running={running} />
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <OceanWaves mode={mode} running={running} />
         </div>
       )}
 
-      {/* Center column · breathing + readout */}
+      {/* Center column */}
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 text-center">
-        {/* Breathing guide */}
         {showBreathing && running && (
           <div
             className="breathing-circle mb-10"
@@ -378,30 +473,26 @@ export function EntrainmentExperience() {
           />
         )}
 
-        {/* Active mode label */}
         <p
           className="font-mono text-[11px] uppercase tracking-[0.32em]"
-          style={{ color: `hsl(${cfg.hue} 70% 60%)` }}
+          style={{ color: `hsl(${cfg.hue} 70% 70%)` }}
         >
           {cfg.label}
         </p>
 
-        {/* Mode description */}
         <p
-          className="mt-4 max-w-[44ch] text-[18px] leading-[1.55] text-[#9CA3AF]"
+          className="mt-4 max-w-[44ch] text-[19px] leading-[1.55] text-[#E4E6E8]"
           style={{ fontFamily: "Newsreader, Georgia, serif" }}
         >
           {cfg.description}
         </p>
 
-        {/* Timer */}
         {running && (
           <p className="mt-8 font-mono text-[14px] uppercase tracking-[0.32em] text-[#5A6068]">
             {mm}:{ss} · auto-stops at 20:00
           </p>
         )}
 
-        {/* Start / stop */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           {!running ? (
             <button
@@ -409,13 +500,13 @@ export function EntrainmentExperience() {
               onClick={start}
               className="inline-flex items-center gap-2 border-2 px-6 py-3 font-mono text-[12px] uppercase tracking-[0.22em] transition"
               style={{
-                borderColor: `hsl(${cfg.hue} 70% 60%)`,
-                color: `hsl(${cfg.hue} 70% 60%)`,
-                background: `hsla(${cfg.hue}, 70%, 60%, 0.10)`,
+                borderColor: `hsl(${cfg.hue} 70% 65%)`,
+                color: `hsl(${cfg.hue} 70% 75%)`,
+                background: `hsla(${cfg.hue}, 70%, 65%, 0.10)`,
               }}
             >
               <span aria-hidden>▶</span>
-              <span>Start session</span>
+              <span>Begin session</span>
             </button>
           ) : (
             <button
@@ -432,7 +523,7 @@ export function EntrainmentExperience() {
             onClick={() => setShowBreathing((b) => !b)}
             className="inline-flex items-center gap-2 border border-[#1F242B] px-4 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] transition hover:border-[#9CA3AF] hover:text-[#F4F4F2]"
           >
-            {showBreathing ? "Hide breathing" : "Show breathing"}
+            {showBreathing ? "Hide breath" : "Show breath"}
           </button>
           <button
             type="button"
@@ -446,7 +537,7 @@ export function EntrainmentExperience() {
 
       {/* Bottom mode strip */}
       <div className="relative z-10 border-t border-[#1F242B] bg-black/60 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-[1000px] flex-wrap items-center justify-center gap-2 px-4 py-4">
+        <div className="mx-auto flex max-w-[1100px] flex-wrap items-center justify-center gap-2 px-4 py-4">
           {MODES.map((m) => (
             <button
               key={m.key}
@@ -455,15 +546,15 @@ export function EntrainmentExperience() {
               className="inline-flex flex-col items-start border px-4 py-2 transition"
               style={{
                 borderColor:
-                  m.key === mode ? `hsl(${m.hue} 70% 60%)` : "#1F242B",
+                  m.key === mode ? `hsl(${m.hue} 70% 65%)` : "#1F242B",
                 background:
-                  m.key === mode ? `hsla(${m.hue}, 70%, 60%, 0.08)` : "transparent",
+                  m.key === mode ? `hsla(${m.hue}, 70%, 65%, 0.10)` : "transparent",
               }}
             >
               <span
                 className="font-mono text-[11px] uppercase tracking-[0.22em]"
                 style={{
-                  color: m.key === mode ? `hsl(${m.hue} 70% 60%)` : "#9CA3AF",
+                  color: m.key === mode ? `hsl(${m.hue} 70% 75%)` : "#9CA3AF",
                 }}
               >
                 {m.label}
@@ -473,28 +564,24 @@ export function EntrainmentExperience() {
         </div>
       </div>
 
-      {/* Component-scoped CSS */}
+      {/* Scoped CSS */}
       <style jsx>{`
         .breathing-circle {
-          width: 120px;
-          height: 120px;
+          width: 140px;
+          height: 140px;
           border-radius: 999px;
           background: radial-gradient(
             circle,
-            hsla(${cfg.hue}, 70%, 60%, 0.4) 0%,
-            hsla(${cfg.hue}, 70%, 60%, 0.05) 60%,
+            hsla(${cfg.hue}, 70%, 70%, 0.45) 0%,
+            hsla(${cfg.hue}, 70%, 70%, 0.06) 60%,
             transparent 100%
           );
           animation: breathe 19s ease-in-out infinite;
         }
-        /* 4-7-8 protocol expressed as % of 19s cycle:
-           inhale 0-21%   (0-4s)    → scale 0.6 → 1.0
-           hold   21-58%  (4-11s)   → scale 1.0
-           exhale 58-100% (11-19s)  → scale 1.0 → 0.6 */
         @keyframes breathe {
           0% {
-            transform: scale(0.6);
-            opacity: 0.55;
+            transform: scale(0.55);
+            opacity: 0.5;
           }
           21% {
             transform: scale(1);
@@ -505,16 +592,15 @@ export function EntrainmentExperience() {
             opacity: 1;
           }
           100% {
-            transform: scale(0.6);
-            opacity: 0.55;
+            transform: scale(0.55);
+            opacity: 0.5;
           }
         }
-        /* Reduced motion · static fully-expanded circle */
         @media (prefers-reduced-motion: reduce) {
           .breathing-circle {
             animation: none;
-            transform: scale(0.85);
-            opacity: 0.75;
+            transform: scale(0.8);
+            opacity: 0.7;
           }
         }
       `}</style>
@@ -523,123 +609,109 @@ export function EntrainmentExperience() {
 }
 
 // ---------------------------------------------------------------------------
-// Mandala · 12-fold rotational symmetry · pure CSS rotation · GPU composited.
-// Concentric circles at golden-ratio spacing · hue derived from active mode.
-// Animation speed proportional to mode frequency / 60 so one revolution feels
-// natural at human comfort. Never strobes · ramps in over 4 seconds.
+// OceanWaves · 5 layered SVG sine curves at different speeds + amplitudes.
+// Each curve translates horizontally via CSS @keyframes · GPU composited.
+// Hue locked to active mode · opacity ramps up over 4s on start.
+// Built once · animated entirely in CSS · zero JS per frame.
 // ---------------------------------------------------------------------------
 
-function Mandala({ mode, running }: { mode: Mode; running: boolean }) {
+interface WaveLayer {
+  amp: number; // amplitude in svg units
+  period: number; // x-period in svg units
+  yOffset: number; // vertical position (0-200 in svg space)
+  speed: number; // seconds per full translate cycle
+  opacity: number;
+  strokeWidth: number;
+  direction: 1 | -1;
+}
+
+const WAVE_LAYERS: WaveLayer[] = [
+  { amp: 12, period: 220, yOffset: 60, speed: 32, opacity: 0.18, strokeWidth: 1, direction: 1 },
+  { amp: 18, period: 280, yOffset: 95, speed: 26, opacity: 0.32, strokeWidth: 1.2, direction: -1 },
+  { amp: 24, period: 340, yOffset: 130, speed: 22, opacity: 0.45, strokeWidth: 1.4, direction: 1 },
+  { amp: 32, period: 420, yOffset: 162, speed: 18, opacity: 0.62, strokeWidth: 1.6, direction: -1 },
+  { amp: 40, period: 500, yOffset: 190, speed: 14, opacity: 0.85, strokeWidth: 2, direction: 1 },
+];
+
+function buildSinePath(layer: WaveLayer, repeats: number = 4): string {
+  const totalWidth = layer.period * repeats;
+  const step = layer.period / 24;
+  let d = `M ${-layer.period} ${layer.yOffset} `;
+  for (let x = -layer.period; x <= totalWidth + layer.period; x += step) {
+    const y =
+      layer.yOffset + Math.sin((x / layer.period) * Math.PI * 2) * layer.amp;
+    d += `L ${x.toFixed(1)} ${y.toFixed(2)} `;
+  }
+  return d;
+}
+
+function OceanWaves({ mode, running }: { mode: Mode; running: boolean }) {
   const cfg = MODES.find((x) => x.key === mode)!;
-  const revolutionSeconds = Math.max(8, 60 / cfg.freq); // 6 → 10s · 3 → 20s
   return (
     <div
-      className="mandala-wrapper"
+      className="ocean-wrapper absolute inset-0"
       data-running={running ? "1" : "0"}
       aria-hidden="true"
     >
       <svg
-        viewBox="-200 -200 400 400"
-        width="min(80vw, 80vh)"
-        height="min(80vw, 80vh)"
-        className="mandala-svg"
+        viewBox="0 0 1200 220"
+        preserveAspectRatio="none"
+        className="ocean-svg"
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          height: "70vh",
+        }}
       >
-        {/* Outer 12 petals */}
-        <g className="ring-12">
-          {Array.from({ length: 12 }).map((_, i) => {
-            const a = (i / 12) * Math.PI * 2;
-            const x = Math.cos(a) * 160;
-            const y = Math.sin(a) * 160;
-            return (
-              <circle
-                key={i}
-                cx={x}
-                cy={y}
-                r={28}
+        {WAVE_LAYERS.map((layer, i) => {
+          const id = `wave-${i}`;
+          return (
+            <g key={id} className={`wave-layer wave-layer-${i}`}>
+              <path
+                d={buildSinePath(layer)}
                 fill="none"
-                stroke={`hsla(${cfg.hue}, 70%, 60%, 0.32)`}
-                strokeWidth={1}
+                stroke={`hsla(${cfg.hue}, 70%, ${65 - i * 4}%, ${layer.opacity})`}
+                strokeWidth={layer.strokeWidth}
+                strokeLinecap="round"
               />
-            );
-          })}
-        </g>
-        {/* Inner 8 petals (counter-rotates) */}
-        <g className="ring-8">
-          {Array.from({ length: 8 }).map((_, i) => {
-            const a = (i / 8) * Math.PI * 2 + Math.PI / 16;
-            const x = Math.cos(a) * 96;
-            const y = Math.sin(a) * 96;
-            return (
-              <circle
-                key={i}
-                cx={x}
-                cy={y}
-                r={20}
-                fill="none"
-                stroke={`hsla(${(cfg.hue + 60) % 360}, 70%, 60%, 0.28)`}
-                strokeWidth={1}
-              />
-            );
-          })}
-        </g>
-        {/* Center radiance */}
-        <circle
-          cx={0}
-          cy={0}
-          r={40}
-          fill="none"
-          stroke={`hsla(${cfg.hue}, 70%, 70%, 0.5)`}
-          strokeWidth={1.5}
-        />
-        <circle
-          cx={0}
-          cy={0}
-          r={4}
-          fill={`hsla(${cfg.hue}, 70%, 70%, 0.8)`}
-        />
+            </g>
+          );
+        })}
       </svg>
+      {/* Top fade · keeps text legible against the wave swell */}
+      <div
+        className="ocean-top-fade pointer-events-none absolute inset-x-0 top-0 h-[40vh]"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%)",
+        }}
+      />
       <style jsx>{`
-        .mandala-wrapper {
+        .ocean-wrapper {
           opacity: 0;
           transition: opacity 4s ease-out;
         }
-        .mandala-wrapper[data-running="1"] {
+        .ocean-wrapper[data-running="1"] {
           opacity: 1;
         }
-        .mandala-svg {
-          filter: blur(0.2px);
-        }
-        .ring-12 {
-          transform-origin: center;
-          animation: rotate-cw ${revolutionSeconds}s linear infinite;
+        .wave-layer {
           will-change: transform;
         }
-        .ring-8 {
-          transform-origin: center;
-          animation: rotate-ccw ${revolutionSeconds * 0.618}s linear infinite;
-          will-change: transform;
-        }
-        @keyframes rotate-cw {
-          from {
-            transform: rotate(0deg);
+        ${WAVE_LAYERS.map(
+          (layer, i) => `
+          .wave-layer-${i} {
+            animation: wave-${i} ${layer.speed}s linear infinite;
           }
-          to {
-            transform: rotate(360deg);
+          @keyframes wave-${i} {
+            from { transform: translateX(0); }
+            to   { transform: translateX(${layer.direction * -layer.period}px); }
           }
-        }
-        @keyframes rotate-ccw {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(-360deg);
-          }
-        }
+        `,
+        ).join("\n")}
         @media (prefers-reduced-motion: reduce) {
-          .ring-12,
-          .ring-8 {
-            animation: none;
-          }
+          ${WAVE_LAYERS.map((_, i) => `.wave-layer-${i} { animation: none; }`).join("\n")}
         }
       `}</style>
     </div>

@@ -189,7 +189,7 @@ const MEGAS: Mega[] = [
           { href: "/learn/health-ai", label: "Health AI · hub", badge: "NEW" },
           { href: "/learn/money-ai", label: "Money AI · hub", badge: "NEW" },
           { href: "/learn/video-ai", label: "Video AI · hub", badge: "NEW" },
-          { href: "/trip", label: "Trip · entrainment", hint: "Legal mood + binaural session", badge: "NEW" },
+          { href: "/mindrest", label: "Mindrest · ocean session", hint: "Brainwaves + binaural + meditation", badge: "NEW" },
           { href: "/version", label: "Version · JUNE ROCKET", badge: "NEW" },
         ],
       },

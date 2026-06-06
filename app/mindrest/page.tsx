@@ -2,31 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 /**
- * /trip · the legal-mood-enhancement landing + inventory hub.
+ * /mindrest · the calm-brand landing for legal mood enhancement +
+ * audiovisual entrainment. Renamed from /trip on 2026-06-06 to
+ * shed the drug-coded framing. The sensory toolbox is real · the
+ * pharmacological inventory is honest · the experience is the ocean.
  *
- * Public information only. Lab is not a clinician. The page leads
- * with sensory + experiential tools (the lab's clear recommendation)
- * and ends with a regulatory inventory of pharmacological options
- * that are legal somewhere in the United States · with the
- * caveats, risks, and contraindications named honestly.
+ * Inbound /trip /meditate /meditation /entrainment /ocean /calm /rest
+ * are 301-redirected here by proxy.ts.
  *
- * NO ENCOURAGEMENT of illegal activity. NO PURCHASE LINKS for any
- * federally-controlled substance. EVERY pharmacological section
- * names the regulatory status + risk profile in the open.
- *
- * — Wave 31a · 2026-06-06
+ * — Wave 31b · 2026-06-06
  */
 
 export const metadata: Metadata = {
-  title: "Trip · Legal mood enhancement",
+  title: "Mindrest · Tune your brainwaves to the ocean",
   description:
-    "Audiovisual entrainment + the public-information inventory of legal mood-enhancing tools in 2026. Sensory and experiential first (AVE machines, breathwork, float tanks, VR meditation, Apollo Neuro, Muse). Pharmacological inventory with regulatory status and risk profiles named honestly. Not medical advice.",
-  alternates: { canonical: "https://atomeons.com/trip" },
+    "Mindrest · the lab's legal mood-enhancement surface. Audiovisual entrainment session (binaural beats + synthesized ocean swell + breathing guide · 5 modes · in-browser) plus a public-information inventory of legal mood-shifting tools. Sensory first. Pharmacological options with risk profiles named. Not medical advice.",
+  alternates: { canonical: "https://atomeons.com/mindrest" },
   openGraph: {
-    title: "Trip · Legal mood enhancement · AtomEons",
+    title: "Mindrest · Tune your brainwaves to the ocean",
     description:
-      "An honest inventory of what's legal for shifting your brain state · sensory tools first · pharmacological options with risks named · plus a live audiovisual-entrainment session.",
-    url: "https://atomeons.com/trip",
+      "A free in-browser audiovisual entrainment session · ocean swell · binaural beats · meditation mode · plus the honest inventory of legal mood-shifting tools in 2026.",
+    url: "https://atomeons.com/mindrest",
     type: "article",
   },
 };
@@ -35,7 +31,7 @@ const SENSORY = [
   {
     name: "Audiovisual entrainment (AVE)",
     detail:
-      "Binaural beats + slow-pulse light at target brainwave frequencies. EEG evidence for measurable shifts in alpha and theta amplitude. We built a free in-browser session at /trip/experience.",
+      "Binaural beats + slow-pulse light at target brainwave frequencies. EEG evidence for measurable shifts in alpha and theta amplitude. We built a free in-browser version at /mindrest/experience.",
     products: [
       "Mindplace Limina · Roxiva · DAVID Delight Pro (consumer AVE machines · $200-1500)",
       "Brain.fm · Endel · ÆOH (functional-music apps with entrainment claims · $50-100/yr)",
@@ -50,6 +46,16 @@ const SENSORY = [
       "Wim Hof Method app · Othership · Open · Pranayama by Saagara",
       "In-person: holotropic breathwork facilitators (find a certified one)",
       "Free: YouTube has every protocol unlocked",
+    ],
+  },
+  {
+    name: "Meditation",
+    detail:
+      "The oldest tool. Vipassana, Zen, Transcendental Meditation, Loving-kindness · each has a different mechanism and a different feel. 10-20 minutes a day for 30 days produces measurable changes in default-mode network activity (fMRI evidence).",
+    products: [
+      "Waking Up (Sam Harris) · the most rigorous app · $100/yr",
+      "Insight Timer · free · 100K+ guided sessions",
+      "10% Happier · TM (paid course) · Plum Village (free · Thích Nhất Hạnh tradition)",
     ],
   },
   {
@@ -149,7 +155,7 @@ const PHARM_FEDERAL = [
   },
   {
     name: "CBD (cannabidiol)",
-    status: "Legal federally under 2018 Farm Bill (hemp-derived · &lt;0.3% THC)",
+    status: "Legal federally under 2018 Farm Bill (hemp-derived · <0.3% THC)",
     detail:
       "Non-intoxicating cannabinoid · anxiolytic + sleep effects documented in placebo-controlled trials. 25-50mg sublingual is the sweet spot for anxiety; 50-100mg for sleep.",
     risk:
@@ -179,7 +185,7 @@ const PHARM_STATE = [
     status:
       "Recreationally legal in 24 US states + DC as of 2026 · medical in 38 · federally illegal",
     detail:
-      "The dominant psychedelic-adjacent legal option in legal-state US. Edibles, vapes, flower all available at dispensaries with state-issued ID. Effects depend heavily on dose, strain (indica/sativa/hybrid), and route.",
+      "The dominant psychedelic-adjacent legal option in legal-state US. Edibles, vapes, flower all available at dispensaries with state-issued ID. Effects depend heavily on dose, strain, and route.",
     risk:
       "Drug-test detectable for 30+ days · driving impairment · psychosis risk in adolescents and those with predisposition · cognitive blunting with daily heavy use · withdrawal exists.",
   },
@@ -232,6 +238,12 @@ const RESOURCES = [
       "The breath + cold protocol. Free Stage 1 on YouTube. The book is the deeper systematic version.",
   },
   {
+    name: "Sam Harris · Waking Up",
+    url: "https://www.wakingup.com",
+    detail:
+      "The most rigorous meditation app · taught by a neuroscientist who actually practices. The 28-day intro alone is worth the year subscription.",
+  },
+  {
     name: "Mihaly Csikszentmihalyi · Flow",
     url: "https://www.amazon.com/dp/0061339202",
     detail:
@@ -251,59 +263,65 @@ const RESOURCES = [
   },
 ];
 
-export default function TripPage() {
+export default function MindrestPage() {
   return (
     <main className="mx-auto max-w-[1100px] px-6 py-20 text-[#F4F4F2] md:px-10 md:py-24">
       <header className="border-b border-[#1F242B] pb-12">
         <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
-          DOMAIN HUB · LEGAL MOOD ENHANCEMENT · 2026
+          MINDREST · ÆONS · 2026
         </p>
         <h1
           className="mt-6 text-balance text-[clamp(48px,8vw,96px)] font-light leading-[0.92]"
           style={{ fontFamily: "Newsreader, Georgia, serif", fontWeight: 300 }}
         >
-          Trip.
+          Mindrest.
         </h1>
-        <p className="mt-6 max-w-[64ch] text-[18px] leading-[1.55] text-[#9CA3AF]">
-          A working inventory of legal ways to shift your brain state in 2026.
-          Sensory + experiential tools first (the lab&apos;s clear preference).
-          Pharmacological options with regulatory status and risk profile named
-          in the open. Plus a free in-browser audiovisual entrainment session
-          you can run right now.
+        <p
+          className="mt-4 text-[clamp(20px,2.4vw,28px)] font-light italic leading-[1.35] text-[#9CA3AF]"
+          style={{ fontFamily: "Newsreader, Georgia, serif" }}
+        >
+          Tune your brainwaves to the ocean.
+        </p>
+        <p className="mt-8 max-w-[64ch] text-[18px] leading-[1.55] text-[#9CA3AF]">
+          A free in-browser audiovisual entrainment session · binaural beats
+          + synthesized ocean swell + breathing guide · five modes including
+          a pure-meditation lane with no binaural. Plus the honest inventory
+          of legal mood-shifting tools in 2026 · sensory first, pharmacology
+          listed with risks named in the open.
         </p>
         <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.28em] text-[#FF4D4D]">
           NOT MEDICAL ADVICE · For anxiety, depression, PTSD, ADHD, trauma · see a licensed clinician · this is public information only
         </p>
       </header>
 
-      {/* The experience CTA — top of the page since that's the live tool */}
+      {/* Live experience CTA */}
       <section className="mt-12 border-l-4 border-[#22F0D5] bg-[#0F1114] p-8">
         <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
-          § LIVE · in your browser · no signup
+          § LIVE · in your browser · no signup · free
         </p>
         <h2
           className="mt-3 text-[32px] font-light leading-tight"
           style={{ fontFamily: "Newsreader, Georgia, serif" }}
         >
-          Audiovisual entrainment session.
+          Begin a session.
         </h2>
         <p className="mt-3 max-w-[64ch] text-[16px] leading-[1.6] text-[#9CA3AF]">
-          Binaural-beat audio + breathing mandala · four brain-state modes
-          (alpha · theta · beta · delta) · headphones recommended · safety-
-          gated · auto-stops at 20 minutes · text-only fallback for
-          photosensitive users.
+          Binaural-beat audio + synthesized ocean swell + breathing mandala
+          · five modes (alpha · theta · beta · delta · meditation) ·
+          headphones recommended · safety-gated · auto-stops at 20 minutes
+          · text-only fallback for photosensitive users.
         </p>
         <Link
-          href="/trip/experience"
+          href="/mindrest/experience"
           className="mt-6 inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition hover:bg-[#22F0D5]/20"
         >
           <span aria-hidden>♪</span>
-          <span>Open the session</span>
+          <span>Enter the ocean</span>
           <span aria-hidden>→</span>
         </Link>
       </section>
 
-      {/* Sensory + experiential — the lab's primary recommendation */}
+      {/* Sensory + experiential */}
       <section className="mt-16">
         <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#9CA3AF]">
           § Sensory + experiential · the lab&apos;s primary recommendation
@@ -333,7 +351,7 @@ export default function TripPage() {
         </ul>
       </section>
 
-      {/* Pharmacological · legal federally */}
+      {/* Pharm federal */}
       <section className="mt-20">
         <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#9CA3AF]">
           § Pharmacological · legal federally in the US
@@ -365,16 +383,16 @@ export default function TripPage() {
         </ul>
       </section>
 
-      {/* Pharmacological · state-dependent */}
+      {/* Pharm state */}
       <section className="mt-20">
         <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#9CA3AF]">
           § Pharmacological · state-dependent or gray-area
         </h2>
         <p className="mt-4 max-w-[72ch] text-[15px] leading-[1.65] text-[#9CA3AF]">
-          Verify your state&apos;s law before any of these. Things change. The
-          regulatory map for cannabis alone has shifted seven times since 2020
-          and the next federal ruling could reshape several of these overnight.
-          We list them with risk profiles · we do not promote use.
+          Verify your state&apos;s law before any of these. The regulatory map
+          has shifted multiple times since 2020 · the next federal ruling could
+          reshape several overnight. We list them with risk profiles · we do
+          not promote use.
         </p>
         <ul className="mt-10 space-y-8">
           {PHARM_STATE.map((p) => (
@@ -434,11 +452,11 @@ export default function TripPage() {
           breath, cold, motion, sound, and light can do most of the work for
           free. Start at the top of this page. Breathwork costs nothing.
           Audiovisual entrainment costs nothing. A cold shower costs nothing.
-          Run, dance, sit in a sauna · these are the legal, durable, no-
-          dependency tools. Reach for chemistry only when the sensory toolbox
-          is exhausted and you&apos;ve named a specific need. And see a real
-          clinician for anything that resembles a real problem · this page is
-          a map, not a treatment plan.
+          Meditation costs nothing. Run, dance, sit in a sauna · these are
+          the legal, durable, no-dependency tools. Reach for chemistry only
+          when the sensory toolbox is exhausted and you&apos;ve named a
+          specific need. And see a real clinician for anything that
+          resembles a real problem · this page is a map, not a treatment plan.
         </p>
       </section>
 
@@ -449,14 +467,14 @@ export default function TripPage() {
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           <Link
-            href="/trip/experience"
+            href="/mindrest/experience"
             className="block border border-[#22F0D5]/40 bg-[#22F0D5]/5 p-5 transition hover:border-[#22F0D5]"
           >
             <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
               Experience · LIVE
             </p>
             <p className="mt-2 text-[14px] text-[#F4F4F2]">
-              Open the in-browser entrainment session now.
+              Open the in-browser ocean session now.
             </p>
           </Link>
           <Link
@@ -497,7 +515,7 @@ export default function TripPage() {
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
         <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
-          /trip · public information only · not medical advice · updated 2026-06-06
+          /mindrest · public information only · not medical advice · updated 2026-06-06
         </p>
         <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
           Sources: vendor literature · peer-reviewed studies · DEA scheduling · state cannabis registries · FDA OTC guidance
