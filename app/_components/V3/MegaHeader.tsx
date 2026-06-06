@@ -590,9 +590,14 @@ export function MegaHeader() {
       <header
         className="fixed left-0 right-0 top-0 z-40 w-full"
         style={{
-          backgroundColor: `${C.panel}F2`,
-          backdropFilter: "saturate(140%) blur(16px)",
-          WebkitBackdropFilter: "saturate(140%) blur(16px)",
+          // Lowered opacity 2026-06-06 per operator brief — the
+          // SacredCanvas + content behind needs to bleed through. Was
+          // 0xF2 (95% opaque). Now 0x66 (40% opaque) · the strong
+          // backdrop-filter blur keeps text legible while letting the
+          // world behind show through.
+          backgroundColor: `${C.panel}66`,
+          backdropFilter: "saturate(150%) blur(22px)",
+          WebkitBackdropFilter: "saturate(150%) blur(22px)",
           borderBottom: `1px solid ${C.hair}`,
         }}
       >

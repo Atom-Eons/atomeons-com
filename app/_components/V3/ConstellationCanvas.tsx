@@ -66,6 +66,12 @@ export function ConstellationCanvas() {
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
+    // Bail out for lite-mode (low-end-device toggle).
+    if (document.documentElement.classList.contains("lite-mode")) {
+      setStats({ nodes: 0, edges: 0 });
+      return;
+    }
+
     let nodes: Node[] = [];
     let edges: Edge[] = [];
     let nodeMap = new Map<string, Node>();

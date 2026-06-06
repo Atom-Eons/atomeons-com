@@ -1263,6 +1263,45 @@ a:hover {
 }
 
 /* =============================================================================
+ * LITE MODE · 2026-06-06
+ *
+ * When the user toggles "lite mode" (operator's mini PC can't handle
+ * the heavy procedural visuals), html.lite-mode is added. Every
+ * client-side animated layer reads the class and bails out:
+ *   - SacredCanvas         (site-wide procedural background)
+ *   - LivingCursor         (custom cursor + trail)
+ *   - AtomHero3D           (homepage 3D Fibonacci sphere)
+ *   - ConstellationCanvas  (/constellation force graph)
+ *   - All CSS animations / transitions site-wide
+ *
+ * CSS-only kills (defense in depth): hide canvases, disable animations,
+ * restore native cursor. The components themselves also gate via
+ * MutationObserver / event listener for proper teardown.
+ * ============================================================================= */
+
+html.lite-mode [data-component="sacred-canvas"],
+html.lite-mode [data-component="living-cursor"],
+html.lite-mode canvas[aria-label*="Atom"],
+html.lite-mode canvas[aria-label*="Fibonacci"] {
+  display: none !important;
+}
+
+html.lite-mode,
+html.lite-mode * {
+  cursor: auto !important;
+}
+
+html.lite-mode *,
+html.lite-mode *::before,
+html.lite-mode *::after {
+  animation-duration: 0.001ms !important;
+  animation-delay: 0ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  transition-delay: 0ms !important;
+}
+
+/* =============================================================================
  * OLED + HUD REFINEMENT · 2026-06-05
  *
  * Operator brief: "true-black OLED visual aesthetic. Utilizing dark

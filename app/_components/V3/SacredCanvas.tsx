@@ -53,6 +53,9 @@ export function SacredCanvas() {
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
+    // Bail out for lite-mode (low-end-device toggle).
+    if (document.documentElement.classList.contains("lite-mode")) return;
+
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     let width = 0;
     let height = 0;

@@ -70,6 +70,9 @@ export function AtomHero3D({ size = 420, className }: { size?: number; className
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
+    // Bail out for lite-mode (low-end-device toggle).
+    if (document.documentElement.classList.contains("lite-mode")) return;
+
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     let W = 0, H = 0;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

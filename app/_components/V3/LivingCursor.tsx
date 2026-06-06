@@ -26,9 +26,10 @@ export function LivingCursor() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    // Bail out: touch, reduced motion
+    // Bail out: touch, reduced motion, or lite-mode toggle
     if (window.matchMedia("(pointer: coarse)").matches) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (document.documentElement.classList.contains("lite-mode")) return;
 
     const canvas = canvasRef.current;
     if (!canvas) return;

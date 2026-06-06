@@ -28,6 +28,7 @@ import { LabTicker } from "./_components/v2/LabTicker";
 import { AmbientSignature } from "./_components/AmbientSignature";
 import { SacredCanvas } from "./_components/V3/SacredCanvas";
 import { LivingCursor } from "./_components/V3/LivingCursor";
+import { LiteToggle } from "./_components/V3/LiteToggle";
 
 /**
  * Site-wide viewport configuration.
@@ -120,6 +121,18 @@ export default function RootLayout({
           can paint on top of the root background. Body keeps its
           stacking context but does not paint its own bg layer — the
           canvas + page sections compose over the html bg. */}
+      <head>
+        {/* No-flash lite-mode bootstrap · runs synchronously before
+            any React component mounts. If the user previously toggled
+            lite mode (localStorage atomeons.lite=true) OR has the
+            prefers-reduced-motion system preference, html.lite-mode is
+            applied immediately so heavy canvases don't flash on then off. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('atomeons.lite');var r=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(s==='true'||(s===null&&r)){document.documentElement.classList.add('lite-mode');}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col text-[#F2F4F5] font-sans">
         {/* Living sacred-geometry background — site-wide procedural
             canvas. Fixed-position, z-index 0, pointer-events none,
@@ -134,6 +147,11 @@ export default function RootLayout({
             states for interactive elements. Pizza-pie visual addition
             2026-06-05. */}
         <LivingCursor />
+        {/* LiteToggle · bottom-right floating switch · disables heavy
+            visuals for low-end devices (mini PCs, old laptops). Adds
+            html.lite-mode class · heavy canvases bail · CSS kills
+            animations. Persists choice via localStorage. */}
+        <LiteToggle />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
