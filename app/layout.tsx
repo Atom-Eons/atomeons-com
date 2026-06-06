@@ -35,6 +35,7 @@ import { CopyForLlm } from "./_components/V3/CopyForLlm";
 import { FirstTimeChip } from "./_components/V3/FirstTimeChip";
 import { NotificationBar } from "./_components/V3/NotificationBar";
 import { AppToolbar } from "./_components/V3/AppToolbar";
+import { MatrixRain } from "./_components/V3/MatrixRain";
 
 /**
  * Site-wide viewport configuration.
@@ -149,6 +150,9 @@ export default function RootLayout({
             Claude web, ChatGPT browse) discover the markdown twin
             without UA-sniffing or HTML parsing. 2026-06-06. */}
         <MarkdownAlternateLink />
+        {/* MatrixRain · Wave 45 · activates only on theme-warez or
+            cysec-active routes. Honors reduced-motion. Halts on tab hide. */}
+        <MatrixRain />
         {/* SacredSvg · GPU-cheap rewrite of the old SacredCanvas.
             Static SVG rendered once, CSS keyframes rotate the layer
             groups via the GPU compositor. ZERO JavaScript per frame

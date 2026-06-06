@@ -22,6 +22,13 @@ import {
   FractalTree,
   WaveInterference,
 } from "../_components/V3/Illustrations2";
+import {
+  PythagorasTree,
+  HilbertCurve,
+  SierpinskiTriangle,
+  KochSnowflake,
+  LorenzAttractor,
+} from "../_components/V3/Illustrations3";
 
 /**
  * /art · the AtomEons generative-art gallery.
@@ -38,14 +45,14 @@ import {
  */
 
 export const metadata: Metadata = {
-  title: "Art · 144 generative sacred-geometry pieces",
+  title: "Art · 368 generative sacred-geometry pieces",
   description:
-    "AtomEons procedural art gallery · 18 families × 8 variants = 144 unique pieces · Flower of Life · Metatron's Cube · Sri Yantra · Penrose tiling · Truchet tiles · Voronoi cells · fractal trees · wave interference · phyllotaxis spirals · mandalas · all pure SVG · zero JavaScript · open-license CC-BY 4.0.",
+    "AtomEons procedural art gallery · 23 families × 16 variants = 368 unique pieces · Flower of Life · Metatron · Sri Yantra · Penrose tiling · Truchet · Voronoi · Pythagoras tree · Hilbert curve · Sierpinski · Koch · Lorenz attractor · fractal trees · wave interference · phyllotaxis · mandalas · all pure SVG · zero JavaScript · open-license CC-BY 4.0.",
   alternates: { canonical: "https://atomeons.com/art" },
   openGraph: {
-    title: "Art · 144 generative pieces · AtomEons",
+    title: "Art · 368 generative pieces · AtomEons",
     description:
-      "TouchDesigner-grade sacred geometry · all SVG · all sourced · all open.",
+      "TouchDesigner-grade sacred geometry + chaos + fractals · all SVG · all sourced · all open.",
     url: "https://atomeons.com/art",
     type: "article",
   },
@@ -80,9 +87,15 @@ const FAMILIES: FamilyEntry[] = [
   { name: "Penrose Tiling", family: "tessellation", component: PenroseTiling, hueBase: 320, about: "Kite + dart aperiodic tiles · Roger Penrose · 1974 · five-fold quasi-crystal symmetry." },
   { name: "Fractal Tree", family: "recursive", component: FractalTree, hueBase: 130, about: "L-system recursive branching · the Pythagoras tree · biological self-similarity." },
   { name: "Wave Interference", family: "physics", component: WaveInterference, hueBase: 195, about: "Two-source ripple field · the double-slit experiment visualized." },
+  // Wave 45 · 5 new fractals + chaos
+  { name: "Pythagoras Tree", family: "recursive", component: PythagorasTree, hueBase: 130, about: "Recursive squared branching · the right-triangle relation rendered as growth." },
+  { name: "Hilbert Curve", family: "space-filling", component: HilbertCurve, hueBase: 195, about: "Space-filling fractal · maps a line to fill a square at the limit. The data-locality classic." },
+  { name: "Sierpinski Triangle", family: "self-similar", component: SierpinskiTriangle, hueBase: 50, about: "Recursive triangle removal · 1915 Wacław Sierpiński · self-similarity made geometric." },
+  { name: "Koch Snowflake", family: "self-similar", component: KochSnowflake, hueBase: 200, about: "Infinite perimeter, finite area · 1904 Helge von Koch · the first published fractal curve." },
+  { name: "Lorenz Attractor", family: "chaos", component: LorenzAttractor, hueBase: 285, about: "Edward Lorenz 1963 · the butterfly · the equations that introduced chaos theory to the world." },
 ];
 
-const VARIANTS_PER_FAMILY = 8;
+const VARIANTS_PER_FAMILY = 16;
 
 export default function ArtPage() {
   const totalPieces = FAMILIES.length * VARIANTS_PER_FAMILY;
@@ -132,19 +145,19 @@ export default function ArtPage() {
           <p className="mt-3 max-w-[80ch] text-[14px] leading-[1.6] text-[#9CA3AF]">
             {fam.about}
           </p>
-          <div className="mt-8 grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+          <div className="mt-8 grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
             {Array.from({ length: VARIANTS_PER_FAMILY }).map((_, i) => {
               const seed = i;
-              const hue = (fam.hueBase + i * 45) % 360;
+              const hue = (fam.hueBase + i * 22.5) % 360;
               const Family = fam.component;
               return (
                 <div
                   key={i}
-                  className="aspect-square border border-[#1F242B] bg-[#0B0C0F] p-3 transition hover:border-[#22F0D5]/60"
+                  className="aspect-square border border-[#1F242B] bg-[#0B0C0F] p-2.5 transition hover:border-[#22F0D5]/60"
                 >
-                  <Family seed={seed} hue={hue} size={240} />
-                  <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.22em] text-[#5A6068]">
-                    seed {seed} · hue {hue}°
+                  <Family seed={seed} hue={hue} size={220} />
+                  <p className="mt-1.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#5A6068]">
+                    {fam.name.toLowerCase().replace(/\s+/g, "-")}-{seed.toString().padStart(2, "0")} · hue {hue.toFixed(0)}°
                   </p>
                 </div>
               );
