@@ -76,6 +76,7 @@ import { BestAILearning } from "./_components/V3/BestAILearning";
 import { HomeAiSummary } from "./_components/ai-summary/home-ai-summary";
 import { AtomHero3D } from "./_components/V3/AtomHero3D";
 import { Ticker } from "./_components/V3/Ticker";
+import { HudFrame } from "./_components/V3/HudFrame";
 
 // ---------------------------------------------------------------------------
 // SHARED — Variable-Weight Reveal hook
@@ -232,6 +233,10 @@ function HeroSection() {
       >
         <AtomHero3D size={460} />
       </div>
+
+      {/* HudFrame · corner brackets + scan-line overlay · command-HUD
+          feel · added 2026-06-05 alongside the OLED + HUD pass. */}
+      <HudFrame scanlines accent="#22F0D5" bracketSize={22} />
 
       {/* ------------------------------------------------------------------- */}
       {/* Top rail — mono eyebrow + nav anchor (right)                        */}

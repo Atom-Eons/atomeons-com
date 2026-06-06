@@ -1263,6 +1263,88 @@ a:hover {
 }
 
 /* =============================================================================
+ * OLED + HUD REFINEMENT · 2026-06-05
+ *
+ * Operator brief: "true-black OLED visual aesthetic. Utilizing dark
+ * glass effects, deep contrast, and minimalist Jony-Ive-tier
+ * typography. Command HUD feel — completely stripped of traditional
+ * web bloat — while the underlying code remains perfectly semantic
+ * for the machines."
+ *
+ * Approach (additive · doesn't replace V3 palette tokens · just
+ * pushes the visible surface toward pure black):
+ *   - <html> background hardened to #000000 (was bg-black already)
+ *   - Body bg-transparent so the SacredCanvas reads cleaner
+ *   - Sections at #08090B stay (they're visibly almost-black on most
+ *     displays; on an OLED panel the html #000 gutters give the true-
+ *     black framing)
+ *   - Hairline borders bumped up in contrast on hover (#1F242B → #2A323A)
+ *   - Glass effects on key panels (backdrop-filter blur + saturate)
+ *   - Larger display sizes for hero headlines (clamp max 140px)
+ *   - Tighter display letter-spacing
+ *   - Scan-line overlay class for HUD-grade surfaces
+ * ============================================================================= */
+
+html {
+  background-color: #000000 !important;  /* true OLED black at root */
+}
+
+/* Glass panel utility · backdrop-filter blur + slight saturate */
+.glass-panel {
+  background-color: rgba(15, 17, 20, 0.72);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(31, 36, 43, 0.85);
+}
+
+/* Glass · darker variant for elevated controls */
+.glass-elev {
+  background-color: rgba(11, 12, 15, 0.78);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+/* Scan-line overlay class · subtle CRT-style horizontal lines */
+.hud-scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 3px,
+    rgba(34, 240, 213, 0.022) 3px,
+    rgba(34, 240, 213, 0.022) 4px
+  );
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+/* Command-HUD displayed numeric/telemetry value · big tabular cyan */
+.hud-readout {
+  font-family: ui-monospace, "JetBrains Mono", SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: #22F0D5;
+  text-shadow: 0 0 12px rgba(34, 240, 213, 0.35);
+}
+
+/* Hero display headline · Jony-Ive-tier tight tracking · larger
+   clamp ceiling than current */
+.hero-display {
+  font-family: Newsreader, Georgia, ui-serif, serif;
+  font-weight: 300;
+  letter-spacing: -0.028em;
+  line-height: 0.96;
+  font-size: clamp(56px, 9.4vw, 140px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hud-scanlines::after { display: none; }
+}
+
+/* =============================================================================
  * LIVING CURSOR · 2026-06-05
  *
  * When LivingCursor mounts it adds .custom-cursor to <html>. We hide
