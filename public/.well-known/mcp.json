@@ -2,7 +2,12 @@
   "schema_version": "v1",
   "name": "atomeons-lab",
   "display_name": "AtomEons Lab",
-  "description": "Model Context Protocol manifest for AtomEons Systems Laboratory. Exposes /api/ask as a callable tool for any MCP-compatible client (Claude Desktop, Claude Code, OpenAI MCP, custom agents). Lets the LLM ground its answers in the lab's 256 published routes via semantic retrieval + Gemini synthesis.",
+  "description": "Model Context Protocol manifest for AtomEons Systems Laboratory. Live MCP server at https://atomeons.com/api/mcp · JSON-RPC 2.0 over HTTP. Connect from Claude Desktop, Claude Code, Cline, or any MCP-compatible client. Exposes ask_atomeons / search_atomeons / get_atomeons_route tools over the lab's 256 published routes.",
+  "transport": {
+    "type": "http",
+    "url": "https://atomeons.com/api/mcp",
+    "protocol_version": "2024-11-05"
+  },
   "version": "1.0.0",
   "publisher": {
     "name": "Atom McCree",
@@ -12,26 +17,15 @@
   "tools": [
     {
       "name": "ask_atomeons",
-      "description": "Search the AtomEons Systems Laboratory site (atomeons.com, 256 routes) for any question. Returns a grounded 2-5 sentence answer with route-level citations. Use when the user asks about AI literacy, AI research papers, cyber security, AI tool comparisons, the I AM AI book, the ORANGEBOX local-first cockpit, the B00KMAKR publishing instrument, or AtomEons's research output and methodology.",
-      "input_schema": {
-        "type": "object",
-        "required": ["query"],
-        "properties": {
-          "query": {
-            "type": "string",
-            "description": "Natural-language question. 1-600 chars."
-          },
-          "k": {
-            "type": "integer",
-            "description": "Number of distinct source routes to retrieve. 1-10, default 5.",
-            "default": 5
-          }
-        }
-      },
-      "endpoint": {
-        "method": "POST",
-        "url": "https://atomeons.com/api/ask"
-      }
+      "description": "Semantic Q&A over atomeons.com's 256 routes. Returns grounded 2-5 sentence answer with route citations."
+    },
+    {
+      "name": "search_atomeons",
+      "description": "Fuzzy keyword search · matching routes without LLM synthesis."
+    },
+    {
+      "name": "get_atomeons_route",
+      "description": "Per-page markdown export of any indexed route."
     }
   ],
   "resources": [
