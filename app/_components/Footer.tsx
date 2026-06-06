@@ -57,7 +57,7 @@ export function Footer() {
     <footer className="relative z-10 mt-24 border-t border-[#1A2225] bg-black">
       {/* ─── Main sitemap grid ───────────────────────────────────── */}
       <div className="mx-auto w-full max-w-[1480px] px-6 py-16 md:px-8 md:py-20">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-6">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-7">
           {/* Brand block · 1 col */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-baseline gap-2" aria-label="AtomEons">
@@ -123,19 +123,34 @@ export function Footer() {
             { href: "/datasets", label: "Open datasets", badge: "NEW" },
           ])}
 
-          {/* Products */}
-          {COL("Products", [
+          {/* Products · Software */}
+          {COL("Software", [
             { href: "/orangebox", label: "ORANGEBOX" },
             { href: "/orangebox/changelog", label: "OB changelog", badge: "NEW" },
             { href: "/orangebox/roadmap", label: "OB roadmap", badge: "NEW" },
             { href: "/orangebox/competitors", label: "OB vs alternatives", badge: "NEW" },
             { href: "/b00kmakor", label: "B00KMAKR" },
             { href: "/skilski", label: "skil.ski" },
-            { href: "/i-am-ai", label: "I AM AI book", badge: "LIVE" },
             { href: "/compare", label: "Compare matrices", badge: "NEW" },
             { href: "/use-cases", label: "Use cases", badge: "NEW" },
+            { href: "/vendor-pack", label: "Vendor pack · CISO", badge: "NEW" },
             { href: "/pricing", label: "Pricing" },
             { href: "/support", label: "Support" },
+          ])}
+
+          {/* Books */}
+          {COL("Books", [
+            { href: "/i-am-ai", label: "I AM AI · book", badge: "LIVE" },
+            { href: "/i-am-ai/sample", label: "Free Chapter 1" },
+            { href: "/i-am-ai/listen", label: "Free Chapter 20 audio" },
+            { href: "/research/lessons-from-sci-fi", label: "AI Film Study" },
+            { href: "/research/lessons-from-sci-fi/monograph", label: "38-page monograph" },
+            { href: "/research/lessons-from-sci-fi/tng", label: "TNG · the AI canon" },
+            { href: "/research/lessons-from-sci-fi/chapters", label: "Chapter index" },
+            { href: "/books", label: "The shelf · reading lists" },
+            { href: "/library", label: "Library · op's books", badge: "NEW" },
+            { href: "/founders-view", label: "Founder's View", badge: "LIVE" },
+            { href: "/dear-reader", label: "Dear reader", badge: "NEW" },
           ])}
 
           {/* Lab */}

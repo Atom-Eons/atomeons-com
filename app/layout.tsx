@@ -26,7 +26,6 @@ import { AtomBoot } from "./_components/AtomBoot";
 import { StickyBuyBar } from "./_components/StickyBuyBar";
 import { LabTicker } from "./_components/v2/LabTicker";
 import { AmbientSignature } from "./_components/AmbientSignature";
-import { SearchInline } from "./_components/V3/SearchInline";
 import { SacredCanvas } from "./_components/V3/SacredCanvas";
 
 /**
@@ -291,8 +290,11 @@ export default function RootLayout({
             that gets accounted for naturally by the scroll position
             (no extra padding needed since the bar is part of children
             flow, not fixed-out-of-flow like the Header). */}
+        {/* SearchInline removed 2026-06-05 · was a dead duplicate of the
+            SearchTrigger in MegaHeader. The canonical search is now the
+            unified SearchPalette (⌘K · "/" · the magnifying-glass button
+            in the nav · the Ask the lab CTA all open the same surface). */}
         <div className="flex-1 pt-16">
-          <SearchInline />
           {children}
         </div>
         <Footer />
