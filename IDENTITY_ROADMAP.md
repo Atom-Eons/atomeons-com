@@ -93,6 +93,40 @@ References:
 - <https://www.w3.org/TR/vc-data-model-2.0/>
 - <https://www.w3.org/TR/did-core/>
 
+### Phase 6 · SITE LEARNER RECORDS (operator-deferred · Wave 41 scoped)
+
+Operator brief 2026-06-06: "i more want each completion of things to mark
+the record if you so desire as a site learner. its a big project you can
+scope and slate for later."
+
+The opt-in completion-tracking layer that sits ABOVE the receipt rail:
+
+- [ ] `learners` table in Supabase:
+  - `subject_did` (FK to users or sovereign DID)
+  - `enrolled_paths` array (ai-pilot, cyber-pro, etc · future expanded)
+  - `completed_milestones` jsonb · per-path completion timestamps
+  - `signed_receipts` array · references to receipts table
+  - `public_resume_published` boolean · user opt-in
+- [ ] `milestones` taxonomy · canonical list of trackable completion events:
+  - Read a flagship lesson (e.g. /learn/lesson/scared-or-skeptical)
+  - Finished an Atlas deep-dive
+  - Passed a cheat-sheet (e.g. /best-practices/claude)
+  - Submitted a path leg (4 legs per track currently · expandable)
+  - Self-assessment exam submitted
+  - Innovation contribution (operator-graded)
+- [ ] `/api/learner/mark-complete` · client posts after lesson finish ·
+  authenticated by Google sub or wallet sig per the user's mode
+- [ ] `/api/learner/me` · returns this user's progress JSON
+- [ ] `/profile/[did]` or `/learner/[id]` · public learner page (opt-in)
+- [ ] Email-trigger via Loops when a learner crosses 100% of a track
+- [ ] Hook into existing /paths/ai-pilot + /paths/cyber-pro enrollment
+- [ ] Optional public proof published as a VerifiableCredential (loops
+  back into Phase 4)
+
+Operator framing: "find who are AI pilots and cyber pros · onboarding
+ramp to find the best of the best · educate the rest." This phase
+delivers the alumni-registry mechanic for the Library of Alexandria.
+
 ### Phase 5 · LICENSES + ANCHORS
 
 - [ ] Decide chain · L2 (Base / Optimism) recommended for cost.

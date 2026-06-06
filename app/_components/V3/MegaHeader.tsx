@@ -93,15 +93,16 @@ type Mega = {
   featured?: Featured;
   /**
    * Wave 32 · NAV COLLAPSE · 2026-06-06
-   * Hidden from top-level nav but content still accessible via:
-   *   - direct routes (/learn/cyber/* etc · still work)
-   *   - sub-nav columns inside Learn / Lab megas (cross-linked)
-   *   - sitemap.xml + sitemap-ai.xml
-   *   - the /ask palette
-   * Panel verdict (UX-product + Lips): 7 → 4 top-level items.
-   * Cyber + Books fold under Learn · Research folds under Lab.
+   * Hidden megas don't render at top-level but content still
+   * accessible via direct routes + cross-links + sitemap + /ask.
    */
   hidden?: boolean;
+  /**
+   * Wave 41 · 2026-06-06 · render order in the top nav · lower first.
+   * Operator-specified sequence: About · Learn · CySec · Research ·
+   * Books · Tools · AIware · Mindstate.
+   */
+  order?: number;
 };
 
 /**
@@ -125,6 +126,7 @@ const MEGAS: Mega[] = [
   {
     key: "learn",
     label: "Learn",
+    order: 2, // Wave 41 · operator order: About · Learn · CySec · Research · Books · Tools · AIware · Mindstate
     prefixes: ["/learn", "/start", "/q", "/glossary", "/prompt-kit", "/tools", "/vs", "/teach", "/supermodels", "/ai"],
     columns: [
       // Wave 39 · 10 columns → 4 · per UX-product + Orange + Lips
@@ -190,7 +192,7 @@ const MEGAS: Mega[] = [
   {
     key: "cyber",
     label: "CySec",
-    // Wave 39 · operator: "just call it cysec that is coo." Top-level visible.
+    order: 3, // Wave 41 · operator order
     prefixes: ["/learn/cyber"],
     columns: [
       // Row 1
@@ -301,7 +303,7 @@ const MEGAS: Mega[] = [
   {
     key: "research",
     label: "Research",
-    // Wave 39 · operator re-promotes Research to top-level (6-item nav).
+    order: 4, // Wave 41 · operator order
     prefixes: ["/research", "/intel", "/constellation"],
     columns: [
       {
@@ -359,9 +361,10 @@ const MEGAS: Mega[] = [
   },
   {
     key: "products",
-    label: "Products",
-    hidden: true, // Wave 39 · folded into ABOUT Æ mega · operator: 3 top-level items
-    prefixes: ["/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases"],
+    label: "AIware",
+    order: 7, // Wave 41 · operator order
+    // Operator: "products call aiware and put in top nav." Re-promoted + renamed.
+    prefixes: ["/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases", "/aiware"],
     columns: [
       {
         title: "Software",
@@ -415,7 +418,7 @@ const MEGAS: Mega[] = [
   {
     key: "books",
     label: "Books",
-    // Wave 39 · operator re-promotes Books to top-level (6-item nav).
+    order: 5, // Wave 41 · operator order
     prefixes: ["/i-am-ai", "/research/lessons-from-sci-fi", "/books"],
     columns: [
       {
@@ -468,9 +471,7 @@ const MEGAS: Mega[] = [
   {
     key: "lab",
     label: "About",
-    // Wave 39 · 6-item nav · About is the "about the lab" container ·
-    // workshop · trust · operator · founder. Products + Research + Books
-    // are their own top-level megas now.
+    order: 1, // Wave 41 · operator order · About first
     prefixes: [
       "/lab", "/studio", "/integrations", "/timeline",
       "/trust", "/transparency", "/receipts", "/manifesto",
@@ -546,7 +547,8 @@ const MEGAS: Mega[] = [
   {
     key: "tools",
     label: "Tools",
-    prefixes: ["/tools", "/best-practices", "/compare", "/vs", "/learn/calc", "/supermodels", "/ask", "/api", "/mindrest", "/manual"],
+    order: 6, // Wave 41 · operator order
+    prefixes: ["/tools", "/best-practices", "/compare", "/vs", "/learn/calc", "/supermodels", "/ask", "/api", "/manual"],
     columns: [
       {
         title: "Live tools",
@@ -598,6 +600,64 @@ const MEGAS: Mega[] = [
       description:
         "Free decision tool · 5 questions · 30 seconds · canonical recommendation for which AI model to use right now. Built to be shared.",
       badge: "NEW",
+    },
+  },
+  // Wave 41 · NEW · Mindstate mega · operator: "put mindstate in the
+  // top bar nav too." Library of Alexandria for legal mood + cognition.
+  {
+    key: "mindstate",
+    label: "Mindstate",
+    order: 8,
+    prefixes: ["/mindrest", "/learn/health-ai", "/learn/music-ai"],
+    columns: [
+      {
+        title: "Mindrest sessions",
+        items: [
+          { href: "/mindrest", label: "Mindrest hub", hint: "Legal mood + entrainment inventory", badge: "NEW" },
+          { href: "/mindrest/experience", label: "Live session · 8 modes", badge: "LIVE" },
+          { href: "/mindrest#schumann", label: "Schumann · 7.83 Hz · Earth" },
+          { href: "/mindrest#wimhof", label: "Wim Hof · brisk breath" },
+          { href: "/mindrest#sleep", label: "Sleep · delta wind-down" },
+        ],
+      },
+      {
+        title: "Adjacent practice",
+        items: [
+          { href: "/learn/health-ai", label: "Health AI · medicine + longevity", badge: "NEW" },
+          { href: "/q/what-is-the-vagus-nerve", label: "Vagus nerve primer" },
+          { href: "/q/what-is-cold-exposure", label: "Cold exposure" },
+          { href: "/q/what-is-the-flow-state", label: "Flow state · Csíkszentmihályi" },
+          { href: "/mindrest#meditation", label: "Meditation modes" },
+        ],
+      },
+      {
+        title: "Audio + ambient",
+        items: [
+          { href: "/learn/music-ai", label: "Music AI · Suno + Udio + ElevenLabs", badge: "NEW" },
+          { href: "/mindrest#ocean", label: "Ocean swell synthesis" },
+          { href: "/mindrest#alpha", label: "Alpha · 10 Hz · soft tide" },
+          { href: "/mindrest#theta", label: "Theta · 6 Hz · deep current" },
+          { href: "/mindrest#beta", label: "Beta · 15 Hz · clear surface" },
+        ],
+      },
+      {
+        title: "The body",
+        items: [
+          { href: "/q/what-is-cold-exposure", label: "Cold plunge + sauna" },
+          { href: "/q/what-is-breathwork", label: "Breathwork protocols" },
+          { href: "/q/what-is-the-flow-state", label: "Movement → flow" },
+          { href: "/q/what-is-grounding", label: "Earthing · grounding" },
+          { href: "/learn/health-ai", label: "Longevity science" },
+        ],
+      },
+    ],
+    featured: {
+      href: "/mindrest/experience",
+      eyebrow: "§ LIVE · entrainment",
+      title: "Eight modes in your browser.",
+      description:
+        "Alpha · Theta · Beta · Delta · Meditation · Schumann · Wim Hof · Sleep. Binaural beats + synthesized ocean swell + breath guide. Headphones recommended. Free.",
+      badge: "LIVE",
     },
   },
 ];
@@ -1021,8 +1081,10 @@ function MobileDrawer({ pathname, onClose }: { pathname: string; onClose: () => 
       }}
     >
       <div className="mx-auto w-full max-w-[800px] px-5 py-8">
-        {/* Wave 32 · NAV COLLAPSE · hidden megas dropped from mobile nav too */}
-        {MEGAS.filter((m) => !m.hidden).map((m) => {
+        {/* Wave 41 · mobile nav also sorts by order */}
+        {MEGAS.filter((m) => !m.hidden)
+          .sort((a, b) => (a.order ?? 99) - (b.order ?? 99))
+          .map((m) => {
           const isExpanded = expanded === m.key;
           const isActive = isActiveMega(pathname, m);
           return (
