@@ -71,10 +71,10 @@ export default function LivePage() {
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ verify any cell</p>
           <div className="mt-8 grid gap-3 md:grid-cols-2">
             {[
-              { ep: "/api/heartbeat", what: "uptime + last deploy timestamp" },
-              { ep: "/api/sales-count", what: "ORANGEBOX + B00KMAKR counter" },
-              { ep: "/api/ask (GET)", what: "index size + generator model" },
-              { ep: "/api/search?q=…", what: "fuzzy search over 247 routes" },
+              { ep: "/api/sales-count", what: "live · net buyers · revenue · current price · server time" },
+              { ep: "/api/ask (GET)", what: "live · index size · retrieval mode · generator model" },
+              { ep: "/api/search?q=…", what: "fuzzy search over 247 routes · JSON" },
+              { ep: "/api/embed (GET)", what: "embedding model + 768-dim spec" },
               { ep: "/sitemap.xml", what: "global route map" },
               { ep: "/.well-known/mcp.json", what: "MCP tool + resource manifest" },
             ].map((row) => (

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CountdownTimer } from "./CountdownTimer";
 import { TrackedDownloadAnchor } from "../_components/TrackedDownloadAnchor";
+import { ProductJsonLd } from "../_components/schema/ProductJsonLd";
 
 /**
  * /orangebox — public landing page · GREEN-LIT REBUILD 2026-05-30
@@ -345,6 +346,19 @@ export default function OrangeboxPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {/* Product + Offer + (conditional) AggregateRating · enables price
+          + availability + review-count badges in AI search engine answer
+          boxes (Google AI Overview, Perplexity Shopping, ChatGPT search). */}
+      <ProductJsonLd
+        name="ORANGEBOX Version 1"
+        description="Local-first turbo-optimization system for Anthropic Claude. Persistent memory across sessions, 10-80x context compression (Crystal Lattice), reusable skill primers, tamper-evident JSON receipts, 14-department named-role routing (AE0-AE14), BYO-key multi-LLM (Claude / GPT / Gemini / Ollama / OpenRouter / Groq / Cohere / Mistral / Perplexity). Code-signed Windows installer. License §4A legally bars subscription conversion."
+        image="https://atomeons.com/orangebox/opengraph-image"
+        url="https://atomeons.com/orangebox"
+        priceUSD={99}
+        availability="InStock"
+        category="DesktopApplication"
+        identifier="ATOMEONS-ORANGEBOX-V1"
       />
 
       {/* warm radial bloom */}

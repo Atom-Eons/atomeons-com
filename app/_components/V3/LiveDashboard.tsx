@@ -19,32 +19,31 @@ type Cell = {
 
 const CELLS: Cell[] = [
   {
-    label: "Heartbeat · last deploy",
-    endpoint: "/api/heartbeat",
+    label: "Lab · server time",
+    endpoint: "/api/sales-count",
     pulse: true,
     format: (raw: unknown) => {
-      const r = raw as { deployed_at?: string; ok?: boolean };
-      if (r?.deployed_at) {
-        const d = new Date(r.deployed_at);
-        return d.toISOString().replace("T", " ").slice(0, 19) + " UTC";
-      }
-      return r?.ok ? "online" : "—";
+      const r = raw as { ts?: string };
+      if (!r?.ts) return "—";
+      const d = new Date(r.ts);
+      return d.toISOString().replace("T", " ").slice(11, 19) + " UTC";
     },
   },
   {
-    label: "ORANGEBOX · sales",
+    label: "Net buyers",
     endpoint: "/api/sales-count",
     format: (raw: unknown) => {
-      const r = raw as { orangebox?: number };
-      return r?.orangebox !== undefined ? String(r.orangebox) : "—";
+      const r = raw as { net_buyers?: number };
+      return r?.net_buyers !== undefined ? String(r.net_buyers) : "—";
     },
   },
   {
-    label: "B00KMAKR · sales",
+    label: "Current price · USD",
     endpoint: "/api/sales-count",
     format: (raw: unknown) => {
-      const r = raw as { b00kmakor?: number };
-      return r?.b00kmakor !== undefined ? String(r.b00kmakor) : "—";
+      const r = raw as { current_price_usd?: number; is_free_promo?: boolean };
+      if (r?.is_free_promo) return "FREE PROMO";
+      return r?.current_price_usd !== undefined ? `$${r.current_price_usd}` : "—";
     },
   },
   {
@@ -57,7 +56,7 @@ const CELLS: Cell[] = [
     },
   },
   {
-    label: "/ask · mode",
+    label: "/ask · retrieval mode",
     endpoint: "/api/ask",
     format: (raw: unknown) => {
       const r = raw as { mode?: string };

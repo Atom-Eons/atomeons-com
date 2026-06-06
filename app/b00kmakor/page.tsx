@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PriceTag } from "@/app/_components/PriceTag";
 import { B00KMakrCountdown } from "./CountdownTimer";
 import B00KMakrBuy from "./B00KMakrBuy";
+import { ProductJsonLd } from "@/app/_components/schema/ProductJsonLd";
 
 /**
  * /b00kmakor — B00KMAKR v3.2.0 product page.
@@ -198,6 +199,17 @@ export default function B00KMakorPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
+      {/* Product + Offer JSON-LD · enables price badges in AI answer boxes */}
+      <ProductJsonLd
+        name="B00KMAKR v3.2.0"
+        description="Mac + Windows native authoring instrument. AI-assisted book production pipeline (manuscript → EPUB · cover · paperback dims · audiobook generation). Dynamic pricing model, $99 default tier, FREE during launch week. License §4A no-SaaS covenant."
+        image="https://atomeons.com/b00kmakor/opengraph-image"
+        url="https://atomeons.com/b00kmakor"
+        priceUSD={99}
+        availability="InStock"
+        category="DesktopApplication"
+        identifier="ATOMEONS-B00KMAKR-V3"
       />
 
       {/* background bloom */}

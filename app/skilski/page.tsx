@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ProductJsonLd } from "@/app/_components/schema/ProductJsonLd";
 
 export const metadata = {
   title: "skil.ski — the universal skill registry for AI agents",
@@ -82,6 +83,18 @@ export default function Skilski() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {/* Product JSON-LD · service rather than physical good · zero-rake
+          launch year posture explicit in description */}
+      <ProductJsonLd
+        name="skil.ski"
+        description="Universal skill registry for AI agents. 2,127 verified skills across 13 sectors. One Model Context Protocol (MCP) endpoint serves Claude, GPT, Gemini, Cursor, Codex. Save = bookmark. Add to Lodge = make active on MCP. Operator-Verified flagships + free community Oskis. 0% marketplace rake during launch year."
+        image="https://atomeons.com/skilski/opengraph-image"
+        url="https://atomeons.com/skilski"
+        priceUSD={0}
+        availability="InStock"
+        category="WebApplication"
+        identifier="ATOMEONS-SKILSKI-V1"
       />
       {/* breadcrumb */}
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
