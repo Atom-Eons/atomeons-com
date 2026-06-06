@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "./_components/V3/Header";
+import { MegaHeader } from "./_components/V3/MegaHeader";
 
 /**
  * Inter Variable — full weight axis (100–900). Powers the
@@ -17,7 +17,7 @@ const inter = Inter({
   variable: "--font-inter",
   axes: ["opsz"],
 });
-import Footer from "./_components/V3/Footer";
+import { Footer } from "./_components/Footer";
 import { MadeWithOrangebox } from "./_components/MadeWithOrangebox";
 import { XAdsPixel } from "./_components/XAdsPixel";
 import { Analytics } from "@vercel/analytics/next";
@@ -281,7 +281,7 @@ export default function RootLayout({
             component itself stays in the repo (app/_components/
             LaunchBanner.tsx) so a future launch can re-enable it by
             uncommenting one import + one element. */}
-        <Header />
+        <MegaHeader />
         {/* pt-16 reserves the 64px the fixed Header occupies. The
             LaunchBanner above the Header is part of the normal flow
             (not fixed), so no extra offset is needed for it — when it
