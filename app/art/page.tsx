@@ -125,9 +125,9 @@ export default function ArtPage() {
           {totalPieces} generative pieces. All math. All open.
         </p>
         <p className="mt-6 max-w-[64ch] text-[18px] leading-[1.55] text-[#9CA3AF]">
-          Eighteen procedural-illustration families · eight variants each.
-          Pure SVG. Server-rendered. Deterministic per seed. No external
-          dependency. Every piece is mathematics rendered honestly.
+          Twenty-three procedural-illustration families · sixteen variants
+          each. Pure SVG. Server-rendered. Deterministic per seed. No
+          external dependency. Every piece is mathematics rendered honestly.
         </p>
         <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5]">
           {FAMILIES.length} families · {VARIANTS_PER_FAMILY} variants each · {totalPieces} total · CC-BY 4.0
