@@ -117,6 +117,17 @@ const ENTRIES: Entry[] = [
   { loc: "/use-cases", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
   { loc: "/compare", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
   { loc: "/api", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
+
+  // Big Dog · Orange Wave 28 additions
+  { loc: "/explore", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/atlas", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/skills", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
+  { loc: "/audit-log", lastmod: TODAY, changefreq: "daily", priority: 0.85 },
+  { loc: "/welcome", lastmod: TODAY, changefreq: "monthly", priority: 0.8 },
+  { loc: "/north-star", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
+  { loc: "/learn/cyber/mythos", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
+  { loc: "/learn/cyber/models", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
+  { loc: "/api/palette", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
 ];
 
 export async function GET() {
