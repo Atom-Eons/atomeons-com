@@ -525,10 +525,10 @@ const MEGAS: Mega[] = [
         items: [
           { href: "/founders-view", label: "Founder's View · nightly", badge: "LIVE" },
           { href: "/innovations", label: "Innovations · 44 firsts" },
+          { href: "/soulkey", label: "SOULKEY · identity canon", hint: "Dual-rail identity architecture", badge: "NEW" },
           { href: "/press", label: "Press · media kit" },
           { href: "/skills", label: "ÆSkill canon" },
           { href: "/manifesto", label: "Manifesto · 14 clauses" },
-          { href: "/colophon", label: "Stack + colophon" },
         ],
       },
     ],

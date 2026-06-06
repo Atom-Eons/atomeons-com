@@ -164,6 +164,9 @@ const ENTRIES: Entry[] = [
   { loc: "/paths/ai-pilot", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
   { loc: "/paths/cyber-pro", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
   { loc: "/manual", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
+
+  // Wave 40 · SOULKEY canon · identity architecture doctrine
+  { loc: "/soulkey", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
 ];
 
 export async function GET() {
