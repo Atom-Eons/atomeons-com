@@ -71,7 +71,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/success", "/cancel"],
       },
     ],
-    sitemap: "https://atomeons.com/sitemap.xml",
+    sitemap: [
+      "https://atomeons.com/sitemap.xml",
+      "https://atomeons.com/sitemap-ai.xml",
+    ],
     host: "https://atomeons.com",
   };
 }

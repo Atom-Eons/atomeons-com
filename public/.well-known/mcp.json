@@ -1,0 +1,60 @@
+{
+  "schema_version": "v1",
+  "name": "atomeons-lab",
+  "display_name": "AtomEons Lab",
+  "description": "Model Context Protocol manifest for AtomEons Systems Laboratory. Exposes /api/ask as a callable tool for any MCP-compatible client (Claude Desktop, Claude Code, OpenAI MCP, custom agents). Lets the LLM ground its answers in the lab's 256 published routes via semantic retrieval + Gemini synthesis.",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "Atom McCree",
+    "url": "https://atomeons.com",
+    "email": "atom@atomeons.com"
+  },
+  "tools": [
+    {
+      "name": "ask_atomeons",
+      "description": "Search the AtomEons Systems Laboratory site (atomeons.com, 256 routes) for any question. Returns a grounded 2-5 sentence answer with route-level citations. Use when the user asks about AI literacy, AI research papers, cyber security, AI tool comparisons, the I AM AI book, the ORANGEBOX local-first cockpit, the B00KMAKR publishing instrument, or AtomEons's research output and methodology.",
+      "input_schema": {
+        "type": "object",
+        "required": ["query"],
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Natural-language question. 1-600 chars."
+          },
+          "k": {
+            "type": "integer",
+            "description": "Number of distinct source routes to retrieve. 1-10, default 5.",
+            "default": 5
+          }
+        }
+      },
+      "endpoint": {
+        "method": "POST",
+        "url": "https://atomeons.com/api/ask"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "llm_routes_index",
+      "description": "Structured JSON index of the 31 highest-value lab routes with title, description, keywords, OpenGraph, and JSON-LD. Crawlable by any AI search ingestion pipeline.",
+      "uri": "https://atomeons.com/llm-routes.json",
+      "mime_type": "application/json"
+    },
+    {
+      "name": "search_index",
+      "description": "Fuzzy-search index over 247 routes. Used by /api/ask Layer A (fuzzy retrieval) and the on-site command palette. Same shape: { records: [{ r, t, d, h, b, k, c, w }] }.",
+      "uri": "https://atomeons.com/search-index.json",
+      "mime_type": "application/json"
+    },
+    {
+      "name": "llms_full_text",
+      "description": "Full-corpus dump of lab content for AI ingestion: every lesson drill prompt + every glossary term + recent letters + persona paths + levels + trust posture. Regenerated on every request. 15-min edge cache.",
+      "uri": "https://atomeons.com/llms-full.txt",
+      "mime_type": "text/plain"
+    }
+  ],
+  "license": "CC-BY 4.0",
+  "homepage": "https://atomeons.com",
+  "contact": "atom@atomeons.com"
+}

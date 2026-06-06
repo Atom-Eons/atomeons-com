@@ -171,16 +171,91 @@ export default function RootLayout({
                 name: "AtomEons Systems Laboratory",
                 url: "https://atomeons.com",
               },
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate:
-                    "https://atomeons.com/search?q={search_term_string}",
+              potentialAction: [
+                {
+                  "@type": "SearchAction",
+                  target: {
+                    "@type": "EntryPoint",
+                    urlTemplate:
+                      "https://atomeons.com/search?q={search_term_string}",
+                  },
+                  "query-input": "required name=search_term_string",
                 },
-                "query-input": "required name=search_term_string",
-              },
+                // AskAction tells AI assistants + agent frameworks
+                // that atomeons.com has a natural-language Q&A endpoint
+                // they can call directly. Schema.org spec for Q&A.
+                {
+                  "@type": "AskAction",
+                  target: {
+                    "@type": "EntryPoint",
+                    urlTemplate: "https://atomeons.com/api/ask",
+                    encodingType: "application/json",
+                    contentType: "application/json",
+                    httpMethod: "POST",
+                  },
+                  result: { "@type": "Answer" },
+                  description:
+                    "POST a JSON body { query: string, k?: number } to receive a grounded 2-5 sentence answer with route-level citations from atomeons.com's 256 published routes.",
+                },
+              ],
               license: "https://creativecommons.org/licenses/by/4.0/",
+            }),
+          }}
+        />
+        {/* SpeakableSpecification + Person schema for Atom McCree.
+            Speakable tells voice assistants (Google Assistant,
+            Alexa, Siri Read-Aloud) which CSS selectors are meant to
+            be read aloud. The Person schema gives LLMs a stable
+            identity to anchor to when grounding "who is Atom McCree"
+            type queries. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Atom McCree",
+              givenName: "Atom",
+              familyName: "McCree",
+              alternateName: ["Ætom ÆoNs", "Atom"],
+              url: "https://atomeons.com/about",
+              image: "https://atomeons.com/icon",
+              email: "atom@atomeons.com",
+              jobTitle: "Founder · Independent AI Researcher",
+              worksFor: {
+                "@type": "Organization",
+                name: "AtomEons Systems Laboratory",
+                url: "https://atomeons.com",
+              },
+              homeLocation: {
+                "@type": "Place",
+                name: "Marco Island, FL, USA",
+              },
+              sameAs: [
+                "https://x.com/AtomMccree",
+                "https://github.com/Atom-Eons",
+                "https://atomeons.com/about",
+                "https://atomeons.com/founders-view",
+                "https://atomeons.com/press",
+                "https://www.amazon.com/dp/B0H45JVSDB/",
+              ],
+              knowsAbout: [
+                "Large Language Models",
+                "AI Safety",
+                "Prompt Engineering",
+                "Mechanistic Interpretability",
+                "Retrieval-Augmented Generation",
+                "AI Cyber Security",
+                "Independent Research",
+                "Post-SaaS Software Economics",
+                "Local-First Software",
+              ],
+              author: {
+                "@type": "Book",
+                name: "I AM AI · An Autobiography of Being Opus",
+                url: "https://atomeons.com/i-am-ai",
+                isbn: "B0H45JVSDB",
+              },
             }),
           }}
         />

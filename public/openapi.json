@@ -1,0 +1,197 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AtomEons Lab API",
+    "version": "1.0.0",
+    "description": "Public read-only API for AtomEons Systems Laboratory at atomeons.com. The /ask endpoint performs semantic retrieval over the lab's 256 routes and returns a Gemini-synthesized answer with route-level citations. Other endpoints (/sales-count, /heartbeat) expose live operational telemetry.",
+    "contact": {
+      "name": "Atom McCree",
+      "email": "atom@atomeons.com",
+      "url": "https://atomeons.com/press"
+    },
+    "license": {
+      "name": "CC-BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://atomeons.com",
+      "description": "Production"
+    }
+  ],
+  "paths": {
+    "/api/ask": {
+      "get": {
+        "operationId": "askHealthCheck",
+        "summary": "Health check + index state",
+        "description": "Returns the size of the fuzzy and vector indexes plus the generator model in use. Useful for client wiring.",
+        "responses": {
+          "200": {
+            "description": "Index state",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok": { "type": "boolean" },
+                    "mode": { "type": "string", "enum": ["fuzzy", "vector"] },
+                    "fuzzy_index": {
+                      "type": "object",
+                      "properties": {
+                        "count": { "type": "integer" },
+                        "built": { "type": "string", "format": "date" }
+                      }
+                    },
+                    "vector_index": {
+                      "type": ["object", "null"],
+                      "properties": {
+                        "count": { "type": "integer" },
+                        "built": { "type": "string", "format": "date" },
+                        "model": { "type": "string" },
+                        "dim": { "type": "integer" }
+                      }
+                    },
+                    "generate_model": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "askLab",
+        "summary": "Semantic Q&A over atomeons.com",
+        "description": "Retrieves the closest passages from the lab's 256 routes via fuzzy or vector match, then synthesizes a 2-5 sentence answer grounded only on those passages with inline route citations. Returns the answer plus the source routes used.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["query"],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 600,
+                    "description": "The user's natural-language question."
+                  },
+                  "k": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10,
+                    "default": 5,
+                    "description": "Number of distinct routes to retrieve."
+                  }
+                }
+              },
+              "examples": {
+                "prompt_injection": {
+                  "value": {
+                    "query": "what is prompt injection and how does the lab defend against it",
+                    "k": 5
+                  }
+                },
+                "orangebox_price": {
+                  "value": {
+                    "query": "what is orangebox and how much does it cost",
+                    "k": 3
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Grounded answer + sources",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok": { "type": "boolean" },
+                    "mode": { "type": "string", "enum": ["fuzzy", "vector"] },
+                    "query": { "type": "string" },
+                    "answer": {
+                      "type": "string",
+                      "description": "2-5 sentence answer with inline (atomeons.com/route) citations."
+                    },
+                    "sources": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "route": { "type": "string", "description": "Site-relative route path." },
+                          "title": { "type": "string" },
+                          "section": { "type": "string" },
+                          "similarity": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Match strength 0-1. Vector cosine sim or fuzzy score normalized."
+                          }
+                        }
+                      }
+                    },
+                    "index_built": { "type": "string", "format": "date" },
+                    "index_count": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          },
+          "400": { "description": "Invalid JSON or query out of bounds" },
+          "500": { "description": "Upstream Gemini call failed" },
+          "503": { "description": "Server is missing API key configuration" }
+        }
+      }
+    },
+    "/api/sales-count": {
+      "get": {
+        "operationId": "salesCount",
+        "summary": "Live ORANGEBOX + B00KMAKR sales counter",
+        "responses": {
+          "200": {
+            "description": "Counts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "orangebox": { "type": "integer" },
+                    "b00kmakor": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/heartbeat": {
+      "get": {
+        "operationId": "heartbeat",
+        "summary": "Uptime + last-deploy heartbeat",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok": { "type": "boolean" },
+                    "deployed_at": { "type": "string", "format": "date-time" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

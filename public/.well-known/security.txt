@@ -1,0 +1,38 @@
+# RFC 9116 · Security policy for atomeons.com
+# AtomEons Systems Laboratory · Marco Island, FL
+
+Contact: mailto:atom@atomeons.com
+Contact: https://atomeons.com/press
+Expires: 2027-06-05T23:59:59.000Z
+Encryption: https://atomeons.com/.well-known/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://atomeons.com/.well-known/security.txt
+Policy: https://atomeons.com/legal/privacy
+Acknowledgments: https://atomeons.com/press
+
+# Scope
+# - atomeons.com (main site)
+# - skil.ski (marketplace surface)
+# - any /api/* endpoint published from atomeons.com
+#
+# In-scope vulnerabilities:
+# - Authentication / authorization bypass
+# - Server-side request forgery
+# - Remote code execution
+# - SQL injection (we do not run SQL servers, but report anyway)
+# - Stored XSS / DOM XSS that affects real users
+# - Sensitive-data exposure (download tokens, secrets, PII)
+# - Insecure deserialization
+# - Prompt-injection that escalates beyond /api/ask's grounded scope
+#
+# Out of scope:
+# - Self-XSS, missing security headers without a working exploit,
+#   "best practice" findings, brute-force / DoS, EXIF tracking,
+#   subdomain-takeover claims for domains we do not own.
+#
+# No bug bounty cash today (one-operator lab). We do offer:
+# - Public acknowledgment on /press
+# - A free ORANGEBOX Version 1 license for confirmed high-severity
+#   reports with a working PoC
+#
+# Please give us 90 days to remediate before disclosure.
