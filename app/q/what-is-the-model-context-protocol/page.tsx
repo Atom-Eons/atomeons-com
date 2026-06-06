@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeakableJsonLd } from "@/app/_components/schema/SpeakableJsonLd";
 
 const QUESTION = "What is the Model Context Protocol (MCP)?";
 const SHORT_ANSWER =
@@ -93,6 +94,12 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+      <SpeakableJsonLd
+        url="https://atomeons.com/q/what"
+        name="What is What?"
+        description="Voice-readable short answer plus technical context."
+        cssSelectors={[".speakable-answer"]}
       />
       <article className="mx-auto max-w-3xl px-6 py-16">
         <nav className="mb-8 text-xs uppercase tracking-widest text-neutral-500">

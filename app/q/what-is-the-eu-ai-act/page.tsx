@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeakableJsonLd } from "@/app/_components/schema/SpeakableJsonLd";
 
 const QUESTION = "What is the EU AI Act?";
 const SHORT_ANSWER =
@@ -44,6 +45,12 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <SpeakableJsonLd
+        url="https://atomeons.com/q/what"
+        name="What is What?"
+        description="Voice-readable short answer plus technical context."
+        cssSelectors={[".speakable-answer"]}
+      />
 
       <article className="mx-auto max-w-3xl px-6 py-16 md:py-24">
         <nav className="mb-10 text-xs uppercase tracking-[0.18em] text-[#7a7a7a]">
@@ -62,7 +69,7 @@ export default function Page() {
           <h2 className="text-xs uppercase tracking-[0.22em] text-[#ff7a00] mb-3">
             The short answer
           </h2>
-          <p className="text-lg leading-relaxed text-[#e8e8e8]">
+          <p className="speakable-answer text-lg leading-relaxed text-[#e8e8e8]">
             The EU AI Act (<strong>Regulation (EU) 2024/1689</strong>) is the European
             Union's horizontal regulation on artificial intelligence, adopted by the
             European Parliament on <strong>13 March 2024</strong> and entered into force

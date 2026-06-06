@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeakableJsonLd } from "@/app/_components/schema/SpeakableJsonLd";
 
 const QUESTION = "What is the Cyber Kill Chain?";
 const SHORT_ANSWER =
@@ -58,6 +59,12 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <SpeakableJsonLd
+        url="https://atomeons.com/q/what"
+        name="What is What?"
+        description="Voice-readable short answer plus technical context."
+        cssSelectors={[".speakable-answer"]}
+      />
 
       <article className="mx-auto max-w-3xl px-6 py-16">
         <nav className="mb-8 text-xs uppercase tracking-[0.2em] text-[#7a7a7a]">
@@ -74,7 +81,7 @@ export default function Page() {
           <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#ff6b1a]">
             The short answer
           </h2>
-          <p className="text-lg leading-relaxed text-[#e8e8e8]">{SHORT_ANSWER}</p>
+          <p className="speakable-answer text-lg leading-relaxed text-[#e8e8e8]">{SHORT_ANSWER}</p>
         </section>
 
         <section className="mb-12">

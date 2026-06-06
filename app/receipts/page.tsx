@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ClaimReviewJsonLd } from "@/app/_components/schema/ClaimReviewJsonLd";
 
 export const metadata: Metadata = {
   title: "Receipts · AtomEons Systems Laboratory",
@@ -156,6 +157,49 @@ function ReceiptRow({ r }: { r: Receipt }) {
 export default function ReceiptsPage() {
   return (
     <main className="bg-[#08090B] text-[#F4F4F2]">
+      {/* ClaimReview JSON-LD · top-line lab claims marked for fact-check
+          ingestion. Each claim is anchored against its evidence file in
+          the SHIPPED array below. */}
+      <ClaimReviewJsonLd
+        pageUrl="https://atomeons.com/receipts"
+        claims={[
+          {
+            text: "AtomEons Systems Laboratory is a one-operator independent AI research lab in Marco Island, FL, with no VC funding, no subscription products, no affiliate revenue, and zero employees.",
+            reviewedAt: "2026-06-05",
+            reviewUrl: "https://atomeons.com/transparency",
+            rating: "True",
+            ratingExplanation: "Verified against atomeons.com/transparency (monthly cost ledger) and atomeons.com/manifesto (14-clause founding doctrine).",
+          },
+          {
+            text: "ORANGEBOX Version 1 is sold under a §4A no-SaaS perpetual license that legally bars subscription conversion.",
+            reviewedAt: "2026-06-05",
+            reviewUrl: "https://atomeons.com/legal/terms",
+            rating: "True",
+            ratingExplanation: "Verifiable in the public Terms at atomeons.com/legal/terms §4A.",
+          },
+          {
+            text: "I AM AI · An Autobiography of Being Opus is live on Amazon Kindle as ASIN B0H45JVSDB at $4.99.",
+            reviewedAt: "2026-06-05",
+            reviewUrl: "https://www.amazon.com/dp/B0H45JVSDB/",
+            rating: "True",
+            ratingExplanation: "Direct product link on Amazon shows live listing at $4.99 USD with the stated ASIN.",
+          },
+          {
+            text: "The lab publishes 31+ research manuscripts under Creative Commons BY 4.0.",
+            reviewedAt: "2026-06-05",
+            reviewUrl: "https://atomeons.com/research/papers",
+            rating: "True",
+            ratingExplanation: "Papers index at /research/papers enumerates current corpus with full text and CC-BY 4.0 footer per paper.",
+          },
+          {
+            text: "atomeons.com hosts 256+ public routes covering AI literacy, cyber security, decoded papers, and product writing.",
+            reviewedAt: "2026-06-05",
+            reviewUrl: "https://atomeons.com/sitemap.xml",
+            rating: "True",
+            ratingExplanation: "Sitemap.xml enumerates the route count and resolves every URL to 200 OK.",
+          },
+        ]}
+      />
       <section className="mx-auto max-w-6xl px-6 pt-24 pb-12 md:px-10 md:pt-32">
         <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#5A6068]">
           <span className="text-[#9CA3AF]">§ Audit ledger</span>

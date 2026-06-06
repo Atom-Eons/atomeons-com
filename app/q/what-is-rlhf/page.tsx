@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeakableJsonLd } from "@/app/_components/schema/SpeakableJsonLd";
 
 const QUESTION = "What is RLHF?";
 const SHORT_ANSWER =
@@ -60,6 +61,12 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <SpeakableJsonLd
+        url="https://atomeons.com/q/what"
+        name="What is What?"
+        description="Voice-readable short answer plus technical context."
+        cssSelectors={[".speakable-answer"]}
+      />
 
       <article className="mx-auto max-w-3xl px-6 py-16">
         <nav className="mb-8 text-sm text-[#888]">
@@ -78,7 +85,7 @@ export default function Page() {
           <h2 className="text-sm uppercase tracking-widest text-[#ff7a1a] mb-3">
             The short answer
           </h2>
-          <p className="text-lg leading-relaxed text-[#e8e8e8]">
+          <p className="speakable-answer text-lg leading-relaxed text-[#e8e8e8]">
             RLHF (Reinforcement Learning from Human Feedback) is a machine learning
             technique that fine-tunes large language models using human preference
             data instead of hand-written labels. It works by training a reward

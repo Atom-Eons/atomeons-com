@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeakableJsonLd } from "@/app/_components/schema/SpeakableJsonLd";
 
 const QUESTION = "What is a mixture-of-experts model?";
 const SHORT_ANSWER =
@@ -64,6 +65,12 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(qaPageJsonLd) }}
       />
+      <SpeakableJsonLd
+        url="https://atomeons.com/q/what"
+        name="What is What?"
+        description="Voice-readable short answer plus technical context."
+        cssSelectors={[".speakable-answer"]}
+      />
 
       <article className="mx-auto max-w-3xl px-6 py-16">
         <nav className="mb-10 text-xs uppercase tracking-[0.2em] text-[#8a8a86]">
@@ -82,7 +89,7 @@ export default function Page() {
           <h2 className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-[#ff6a00]">
             The short answer
           </h2>
-          <p className="text-lg leading-relaxed text-[#e8e8e6]">
+          <p className="speakable-answer text-lg leading-relaxed text-[#e8e8e6]">
             A mixture-of-experts (MoE) model is a neural network that routes
             each input token to a small subset of specialized sub-networks
             called &ldquo;experts,&rdquo; instead of running every parameter for

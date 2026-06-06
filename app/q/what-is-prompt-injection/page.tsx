@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeakableJsonLd } from "@/app/_components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "What Is Prompt Injection?",
@@ -41,6 +42,14 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      {/* Speakable spec for voice assistants — read aloud the short
+          answer paragraph (.speakable-answer). */}
+      <SpeakableJsonLd
+        url="https://atomeons.com/q/what-is-prompt-injection"
+        name="What is prompt injection?"
+        description="Short voice answer + technical context for prompt injection · the LLM analogue of SQL injection · OWASP LLM01:2025."
+        cssSelectors={[".speakable-answer"]}
+      />
 
       <article className="mx-auto max-w-3xl px-6 py-16 md:py-24">
         <nav className="mb-10 text-xs uppercase tracking-[0.2em] text-[#888]">
@@ -63,7 +72,7 @@ export default function Page() {
           <h2 className="text-xs uppercase tracking-[0.2em] text-[#ff6b1a] mb-3">
             The short answer
           </h2>
-          <p className="text-lg leading-relaxed text-[#d8d8d8]">
+          <p className="speakable-answer text-lg leading-relaxed text-[#d8d8d8]">
             {shortAnswer}
           </p>
         </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeakableJsonLd } from "@/app/_components/schema/SpeakableJsonLd";
 
 const QUESTION = "What is an AI evaluation benchmark?";
 const SHORT_ANSWER =
@@ -65,6 +66,12 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(qaJsonLd) }}
       />
+      <SpeakableJsonLd
+        url="https://atomeons.com/q/what"
+        name="What is What?"
+        description="Voice-readable short answer plus technical context."
+        cssSelectors={[".speakable-answer"]}
+      />
 
       <article className="mx-auto max-w-3xl px-6 py-16">
         <nav className="mb-8 text-xs uppercase tracking-[0.18em] text-[#7a7a7a]">
@@ -83,7 +90,7 @@ export default function Page() {
           <div className="text-[10px] uppercase tracking-[0.22em] text-[#00e5ff] mb-3">
             The short answer
           </div>
-          <p className="text-lg leading-relaxed text-[#e8e8e8]">{SHORT_ANSWER}</p>
+          <p className="speakable-answer text-lg leading-relaxed text-[#e8e8e8]">{SHORT_ANSWER}</p>
         </div>
 
         <section className="mt-12">

@@ -30,3 +30,9 @@ export { FAQPage } from "./FAQPage";
 export { BreadcrumbList } from "./BreadcrumbList";
 export { WebSite } from "./WebSite";
 export { SoftwareApplication } from "./SoftwareApplication";
+
+// Wave 4+5 additions — 2026-06-05
+export { ProductJsonLd } from "./ProductJsonLd";
+export { SpeakableJsonLd } from "./SpeakableJsonLd";
+export { HowToJsonLd } from "./HowToJsonLd";
+export { ClaimReviewJsonLd } from "./ClaimReviewJsonLd";

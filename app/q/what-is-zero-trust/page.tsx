@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeakableJsonLd } from "@/app/_components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "What is zero-trust architecture?",
@@ -38,6 +39,12 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <SpeakableJsonLd
+        url="https://atomeons.com/q/what"
+        name="What is What?"
+        description="Voice-readable short answer plus technical context."
+        cssSelectors={[".speakable-answer"]}
+      />
 
       <article className="mx-auto max-w-3xl px-6 py-16 md:py-24">
         <nav className="mb-10 text-sm text-[#888]">
@@ -59,7 +66,7 @@ export default function Page() {
 
         <section className="mb-14">
           <h2 className="mb-4 font-serif text-2xl text-white">The short answer</h2>
-          <p className="text-lg leading-relaxed text-[#d8d8d8]">
+          <p className="speakable-answer text-lg leading-relaxed text-[#d8d8d8]">
             Zero-trust architecture (ZTA) is a cybersecurity model defined in{" "}
             <strong className="text-white">NIST Special Publication 800-207</strong>{" "}
             that eliminates implicit trust based on network location and instead

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeakableJsonLd } from "@/app/_components/schema/SpeakableJsonLd";
 
 export const metadata: Metadata = {
   title: "What Is NIST CSF 2.0?",
@@ -76,6 +77,12 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <SpeakableJsonLd
+        url="https://atomeons.com/q/what"
+        name="What is What?"
+        description="Voice-readable short answer plus technical context."
+        cssSelectors={[".speakable-answer"]}
+      />
 
       <article className="mx-auto max-w-3xl px-6 py-16">
         <nav className="mb-8 text-xs uppercase tracking-[0.18em] text-[#7a7a7a]">
@@ -102,7 +109,7 @@ export default function Page() {
           <h2 className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-[#00e0c8]">
             The short answer
           </h2>
-          <p className="text-lg leading-relaxed text-[#e6e6e6]">
+          <p className="speakable-answer text-lg leading-relaxed text-[#e6e6e6]">
             {SHORT_ANSWER}
           </p>
         </section>
