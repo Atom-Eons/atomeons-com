@@ -159,6 +159,11 @@ const ENTRIES: Entry[] = [
 
   // Wave 38 · /innovations · brag page · inventions + discoveries
   { loc: "/innovations", lastmod: TODAY, changefreq: "weekly", priority: 0.92 },
+
+  // Wave 39 · learning paths + manual
+  { loc: "/paths/ai-pilot", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
+  { loc: "/paths/cyber-pro", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
+  { loc: "/manual", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
 ];
 
 export async function GET() {

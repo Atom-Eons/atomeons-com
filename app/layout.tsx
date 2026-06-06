@@ -33,6 +33,8 @@ import { SearchInline } from "./_components/V3/SearchInline";
 import { MarkdownAlternateLink } from "./_components/V3/MarkdownAlternateLink";
 import { CopyForLlm } from "./_components/V3/CopyForLlm";
 import { FirstTimeChip } from "./_components/V3/FirstTimeChip";
+import { NotificationBar } from "./_components/V3/NotificationBar";
+import { AppToolbar } from "./_components/V3/AppToolbar";
 
 /**
  * Site-wide viewport configuration.
@@ -324,7 +326,14 @@ export default function RootLayout({
             component itself stays in the repo (app/_components/
             LaunchBanner.tsx) so a future launch can re-enable it by
             uncommenting one import + one element. */}
+        {/* Wave 39 · NotificationBar above the MegaHeader · operator-pushable
+            top strip · reads /notification.json · 2-sentence max */}
+        <NotificationBar />
         <MegaHeader />
+        {/* Wave 39 · AppToolbar sticky below the MegaHeader · functional
+            toolbar with Tour · Theme cycle (noir/white/warez/thin) ·
+            FX toggle · Music · Mindrest · Manual */}
+        <AppToolbar />
         {/* pt-16 reserves the 64px the fixed Header occupies. The
             LaunchBanner above the Header is part of the normal flow
             (not fixed), so no extra offset is needed for it — when it

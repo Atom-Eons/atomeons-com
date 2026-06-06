@@ -1341,6 +1341,121 @@ html.tier-standard * {
 
 /* === TIER FULL — no overrides · everything on by default =========== */
 
+/* =============================================================================
+ * THEMES · Wave 39 · 2026-06-06 · operator: "white version, warez hacker
+ * version, thin internet version" · cycled via AppToolbar
+ * ============================================================================= */
+
+/* WHITE THEME · light mode · same accent · inverted lightness */
+html.theme-white {
+  background: #f7f6f4 !important;
+}
+html.theme-white body {
+  background: #f7f6f4;
+  color: #08090b;
+}
+html.theme-white .bg-\[\#08090B\],
+html.theme-white .bg-\[\#0F1114\],
+html.theme-white .bg-\[\#0B0C0F\] {
+  background: #ffffff !important;
+}
+html.theme-white .text-\[\#F4F4F2\] {
+  color: #08090b !important;
+}
+html.theme-white .text-\[\#9CA3AF\] {
+  color: #4a525a !important;
+}
+html.theme-white .text-\[\#5A6068\] {
+  color: #6b7280 !important;
+}
+html.theme-white .border-\[\#1F242B\],
+html.theme-white .border-\[\#0F1114\] {
+  border-color: #d6d3cd !important;
+}
+html.theme-white [data-component="sacred-svg"],
+html.theme-white [data-component="sacred-canvas"] {
+  filter: invert(1) brightness(1.5) opacity(0.3);
+}
+
+/* WAREZ THEME · green-on-black hacker terminal */
+html.theme-warez {
+  background: #000000 !important;
+}
+html.theme-warez body {
+  background: #000000;
+  color: #00ff7f;
+  font-family: ui-monospace, "JetBrains Mono", "IBM Plex Mono", monospace !important;
+}
+html.theme-warez * {
+  font-family: ui-monospace, "JetBrains Mono", "IBM Plex Mono", monospace !important;
+}
+html.theme-warez .text-\[\#F4F4F2\],
+html.theme-warez .text-\[\#22F0D5\] {
+  color: #00ff7f !important;
+  text-shadow: 0 0 4px rgba(0, 255, 127, 0.4);
+}
+html.theme-warez .text-\[\#9CA3AF\] {
+  color: #00b85c !important;
+}
+html.theme-warez .text-\[\#5A6068\] {
+  color: #007a3d !important;
+}
+html.theme-warez .border-\[\#1F242B\],
+html.theme-warez .border-\[\#0F1114\] {
+  border-color: rgba(0, 255, 127, 0.25) !important;
+}
+html.theme-warez .border-\[\#22F0D5\] {
+  border-color: #00ff7f !important;
+}
+html.theme-warez [data-component="sacred-svg"] {
+  filter: hue-rotate(150deg) brightness(0.6);
+}
+
+/* THIN THEME · low-bandwidth · no decorations · text only */
+html.theme-thin [data-component="sacred-svg"],
+html.theme-thin [data-component="sacred-canvas"],
+html.theme-thin [data-component="living-cursor"],
+html.theme-thin canvas[aria-label*="Atom"],
+html.theme-thin canvas[aria-label*="Fibonacci"],
+html.theme-thin [data-illustration],
+html.theme-thin [data-tier-gate],
+html.theme-thin svg[aria-hidden="true"] {
+  display: none !important;
+}
+html.theme-thin {
+  background: #ffffff !important;
+}
+html.theme-thin body {
+  background: #ffffff;
+  color: #111111;
+  font-family: Georgia, serif !important;
+}
+html.theme-thin * {
+  background: transparent !important;
+  border-color: #cccccc !important;
+  color: inherit !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  animation: none !important;
+  transition: none !important;
+  cursor: auto !important;
+}
+html.theme-thin a {
+  color: #0033cc !important;
+  text-decoration: underline !important;
+}
+
+/* VISUALS-OFF · independent of theme · disables heavy SVG illustrations */
+html.visuals-off [data-illustration],
+html.visuals-off [data-component="sacred-svg"],
+html.visuals-off [data-component="living-cursor"],
+html.visuals-off canvas[aria-label*="Atom"],
+html.visuals-off canvas[aria-label*="Fibonacci"],
+html.visuals-off [data-tier-gate="full"] {
+  display: none !important;
+}
+
 /* Tier badge readout (optional debugging surface · invisible by default,
    visible when html has class `tier-debug`) */
 html.tier-debug::after {

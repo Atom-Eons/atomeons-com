@@ -104,152 +104,93 @@ type Mega = {
   hidden?: boolean;
 };
 
+/**
+ * THE NAV LAW · Wave 39 · 2026-06-06 · 4-agent checkpoint consensus
+ *
+ *   1. No mega may hold more than 5 columns.
+ *   2. No column may hold more than 7 items.
+ *   3. One in, one out · adding a nav item REQUIRES naming what to cut
+ *      from the same column. If you cannot name the cut, the new item
+ *      does not ship to nav · it lives at its route + sitemap only.
+ *   4. Footer is NOT a 1:1 mirror of top nav · footer serves scrolled
+ *      readers + crawlers + return visitors · top nav serves first-hover.
+ *   5. No duplicate routes within the same mega. Cross-mega duplicates
+ *      allowed only when context shifts meaning.
+ *   6. NEW badges expire 30 days after first ship. If everything is
+ *      NEW, nothing is NEW.
+ *
+ * Enforced by review on every PR that touches this file.
+ */
 const MEGAS: Mega[] = [
   {
     key: "learn",
     label: "Learn",
     prefixes: ["/learn", "/start", "/q", "/glossary", "/prompt-kit", "/tools", "/vs", "/teach", "/supermodels", "/ai"],
     columns: [
-      // Row 1
+      // Wave 39 · 10 columns → 4 · per UX-product + Orange + Lips
+      // consensus. Cuts: Domain hubs column (content index pretending
+      // to be nav) · Tools+compare merged · Synthesis MED merged into
+      // Deep dives · vertical-specific links pruned.
       {
         title: "Start here",
         items: [
-          { href: "/start", label: "Start · 11-min on-ramp", hint: "For under-10 ChatGPT users" },
+          { href: "/start", label: "New here? Start in 11 minutes", hint: "The fastest path from zero to useful" },
           { href: "/learn", label: "The curriculum index", hint: "Five levels · five paths" },
-          { href: "/learn/library", label: "Lesson library", hint: "Every lesson, grouped by level" },
-          { href: "/learn/decision-tree", label: "Decision tree", hint: "Pick your next lesson" },
+          { href: "/learn/exam", label: "Self-assess · find your level" },
+          { href: "/learn/decision-tree", label: "Decision tree · pick a lesson" },
           { href: "/ai", label: "AI gateway · 51 FAQs" },
-          { href: "/learn/cyber", label: "Cyber · 40-page catalog", hint: "World-class cybersec resource", badge: "NEW" },
-          { href: "/books", label: "Books · I AM AI + Sci-Fi", hint: "The lab's published canon", badge: "NEW" },
-          { href: "/mindrest", label: "Mindrest · entrainment", hint: "Brainwaves to ocean waves", badge: "NEW" },
+          { href: "/welcome", label: "Take the 90-second tour", badge: "NEW" },
         ],
       },
       {
-        title: "The 5 levels",
+        title: "Five levels + personas",
         items: [
           { href: "/learn/lesson/scared-or-skeptical", label: "01 · Novice" },
           { href: "/learn/lesson/what-ai-actually-does", label: "02 · Learner" },
           { href: "/learn/lesson/your-first-real-prompt", label: "03 · User" },
-          { href: "/learn", label: "04 · Operator" },
-          { href: "/learn", label: "05 · Pilot" },
-          { href: "/learn/exam", label: "Self-assess · find your level", badge: "NEW" },
-        ],
-      },
-      {
-        title: "Persona paths",
-        items: [
           { href: "/learn/worker", label: "Worker · AI at the job" },
           { href: "/learn/builder", label: "Builder · ship features" },
-          { href: "/learn/student", label: "Student · academic AI" },
-          { href: "/learn/operator", label: "Operator · run AI in prod" },
-          { href: "/learn/curious", label: "Curious · just exploring" },
           { href: "/learn/playbooks", label: "18 playbooks by job" },
         ],
       },
       {
-        title: "Atlas · 32 deep dives",
+        title: "Deep dives",
         items: [
-          { href: "/learn/atlas", label: "Atlas index" },
-          { href: "/learn/atlas/mech-interp", label: "Mechanistic interpretability" },
-          { href: "/learn/atlas/agent-harnesses", label: "Agent harnesses" },
-          { href: "/learn/atlas/rag-architectures", label: "RAG architectures" },
-          { href: "/learn/atlas/long-context-engineering", label: "Long-context engineering" },
-          { href: "/learn/atlas/scaling-laws", label: "Scaling laws" },
-          { href: "/learn/atlas/synthetic-data", label: "Synthetic data" },
-          { href: "/learn/atlas/state-space-models", label: "State-space models · Mamba" },
-        ],
-      },
-      // Row 2
-      {
-        title: "Synthesis · MED",
-        items: [
-          { href: "/learn/synthesis", label: "All MED pages" },
-          { href: "/learn/synthesis/context-windows-minimum-effective-dose", label: "Context windows · MED" },
-          { href: "/learn/synthesis/tokens-and-api-costs-minimum-effective-dose", label: "Tokens + API costs · MED" },
-          { href: "/learn/synthesis/prompt-engineering-the-eighty-twenty", label: "Prompt engineering · 80/20" },
-          { href: "/q", label: "Q-pages · 20 'what is X'" },
+          { href: "/learn/atlas", label: "Atlas · 32 deep dives" },
+          { href: "/learn/synthesis", label: "Synthesis · minimum effective dose" },
+          { href: "/best-practices", label: "Tool guides · 7 cheat sheets", hint: "Claude · Codex · Cursor · Copilot · Aider · MCP · Antigravity", badge: "NEW" },
           { href: "/glossary", label: "Glossary · plain English" },
+          { href: "/q", label: "Q-pages · 'what is X'" },
           { href: "/prompt-kit", label: "Prompt kit · 27 drills" },
+          { href: "/learn/cyber", label: "Cyber · 40-page catalog" },
         ],
       },
       {
-        title: "Hands-on",
+        title: "Hands-on + career",
         items: [
-          { href: "/learn/labs", label: "Labs · 12 exercises", hint: "Browser-runnable", badge: "NEW" },
-          { href: "/learn/projects", label: "Projects · 7 build-alongs", badge: "NEW" },
-          { href: "/learn/exam", label: "Self-assessment · 25 Q", badge: "NEW" },
-          { href: "/teach", label: "Teach · methodology", badge: "NEW" },
-          { href: "/learn/cases", label: "Case studies" },
-          { href: "/learn/failures", label: "Failure modes · named" },
-          { href: "/learn/mistakes", label: "Common mistakes" },
-        ],
-      },
-      {
-        title: "Career + verticals",
-        items: [
-          { href: "/learn/career", label: "Career index" },
-          { href: "/learn/career/pathways", label: "Pathways" },
-          { href: "/learn/career/salaries", label: "Salaries" },
+          { href: "/learn/labs", label: "Labs · 12 exercises", hint: "Browser-runnable" },
+          { href: "/learn/projects", label: "Projects · 7 build-alongs" },
+          { href: "/learn/career", label: "Career · pathways + salaries" },
           { href: "/learn/career/resume", label: "AI-ready resume" },
-          { href: "/learn/career/interviews", label: "Interviews" },
-          { href: "/learn/vertical/healthcare", label: "Healthcare AI" },
-          { href: "/learn/vertical/finance", label: "Finance AI" },
-          { href: "/learn/vertical/defense", label: "Defense AI" },
-        ],
-      },
-      {
-        title: "Domain hubs · 2026",
-        items: [
-          { href: "/learn/health-ai", label: "Health AI · hub", badge: "NEW" },
-          { href: "/learn/money-ai", label: "Money AI · hub", badge: "NEW" },
-          { href: "/learn/video-ai", label: "Video AI · hub", badge: "NEW" },
-          { href: "/learn/music-ai", label: "Music + audio AI", badge: "NEW" },
-          { href: "/learn/policy-ai", label: "Policy + AI law", badge: "NEW" },
-          { href: "/learn/science-ai", label: "Science AI · discovery", badge: "NEW" },
-          { href: "/mindrest", label: "Mindrest · ocean session", hint: "Brainwaves + binaural + meditation", badge: "NEW" },
-          { href: "/version", label: "Version · JUNE ROCKET", badge: "NEW" },
-        ],
-      },
-      {
-        title: "Best practices · cheat sheets",
-        items: [
-          { href: "/best-practices", label: "Cheat sheets index", hint: "Endless alpha, condensed", badge: "NEW" },
-          { href: "/best-practices/claude", label: "Claude · Desktop + Code", hint: "MCP · subagents · hooks · skills", badge: "NEW" },
-          { href: "/best-practices/codex", label: "OpenAI Codex CLI", hint: "Approval modes · AGENTS.md · gpt-5", badge: "NEW" },
-          { href: "/best-practices/antigravity", label: "Google Antigravity", hint: "Agent IDE · plans · artifacts", badge: "NEW" },
-          { href: "/best-practices/cursor", label: "Cursor · AI IDE", hint: ".cursorrules · @ mentions · Composer", badge: "NEW" },
-          { href: "/best-practices/copilot", label: "GitHub Copilot", hint: "Chat · Workspace · Spaces · gh copilot", badge: "NEW" },
-          { href: "/best-practices/aider", label: "Aider · open-source", hint: "Git-native · /undo · architect mode", badge: "NEW" },
-          { href: "/best-practices/mcp", label: "MCP · cross-tool", hint: "Servers · tools · resources · SDKs", badge: "NEW" },
-        ],
-      },
-      {
-        title: "Tools + compare",
-        items: [
           { href: "/learn/calc", label: "Calculators · 12 tools" },
-          { href: "/learn/calc/tools/cost-calculator", label: "Cost calculator" },
-          { href: "/learn/calc/tools/token-counter", label: "Token counter" },
-          { href: "/learn/calc/tools/model-comparator", label: "Model comparator" },
-          { href: "/tools", label: "AI task router · 23 jobs" },
-          { href: "/vs", label: "AI tool comparisons" },
-          { href: "/supermodels", label: "Supermodels leaderboard" },
-          { href: "/learn/leaderboard", label: "Frontier leaderboard" },
+          { href: "/tools/model-picker", label: "Which model should I use?", badge: "NEW" },
+          { href: "/paths/ai-pilot", label: "AI Pilot graduation track", hint: "Email-only · free · alumni list", badge: "NEW" },
         ],
       },
     ],
     featured: {
-      href: "/ask",
-      eyebrow: "§ NEW · live",
-      title: "Ask the lab",
+      href: "/paths/ai-pilot",
+      eyebrow: "§ GRADUATION TRACK",
+      title: "Become an AI Pilot.",
       description:
-        "Type any question. gemini-2.5-flash drafts a 2-5 sentence answer grounded only on lab content, with every source cited inline. Now unified with the ⌘K nav search.",
-      badge: "LIVE",
+        "Four legs · email-only · free. Finish them and the lab adds you to the AI Pilot alumni list. The Library of Alexandria needs librarians.",
+      badge: "NEW",
     },
   },
   {
     key: "cyber",
-    label: "Cyber",
-    hidden: true, // Wave 32 · folded under Learn mega
+    label: "CySec",
+    // Wave 39 · operator: "just call it cysec that is coo." Top-level visible.
     prefixes: ["/learn/cyber"],
     columns: [
       // Row 1
@@ -360,7 +301,7 @@ const MEGAS: Mega[] = [
   {
     key: "research",
     label: "Research",
-    hidden: true, // Wave 32 · folded under Lab mega
+    // Wave 39 · operator re-promotes Research to top-level (6-item nav).
     prefixes: ["/research", "/intel", "/constellation"],
     columns: [
       {
@@ -419,6 +360,7 @@ const MEGAS: Mega[] = [
   {
     key: "products",
     label: "Products",
+    hidden: true, // Wave 39 · folded into ABOUT Æ mega · operator: 3 top-level items
     prefixes: ["/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases"],
     columns: [
       {
@@ -473,7 +415,7 @@ const MEGAS: Mega[] = [
   {
     key: "books",
     label: "Books",
-    hidden: true, // Wave 32 · folded under Learn mega
+    // Wave 39 · operator re-promotes Books to top-level (6-item nav).
     prefixes: ["/i-am-ai", "/research/lessons-from-sci-fi", "/books"],
     columns: [
       {
@@ -525,7 +467,10 @@ const MEGAS: Mega[] = [
   },
   {
     key: "lab",
-    label: "Lab",
+    label: "About",
+    // Wave 39 · 6-item nav · About is the "about the lab" container ·
+    // workshop · trust · operator · founder. Products + Research + Books
+    // are their own top-level megas now.
     prefixes: [
       "/lab", "/studio", "/integrations", "/timeline",
       "/trust", "/transparency", "/receipts", "/manifesto",
@@ -534,29 +479,23 @@ const MEGAS: Mega[] = [
       "/api", "/ask", "/datasets",
       "/research", "/intel", "/constellation",
       "/founders-view", "/audit-log",
+      "/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases",
+      "/innovations", "/version", "/books", "/i-am-ai",
+      "/press", "/skills", "/about",
     ],
+    // Wave 39 · 4 columns · About = the lab itself. Research/Books/Tools/
+    // Products are now their own top-level surfaces. About stays about
+    // the lab + the operator + trust + products (the lab makes them).
     columns: [
       {
-        title: "Research · ÆoNs",
+        title: "The lab",
         items: [
-          { href: "/research", label: "Research home" },
-          { href: "/research/papers", label: "Papers · 31 ÆoNs papers", hint: "All CC-BY 4.0" },
-          { href: "/research/decoded", label: "Decoded papers · 35", hint: "Primary-source reads · transformers, RLHF, AlphaFold, mamba, etc" },
-          { href: "/research/lessons-from-sci-fi", label: "Lessons from Sci-Fi · 38-page monograph" },
-          { href: "/intel", label: "Alpha intel", hint: "Live signal feed" },
-          { href: "/constellation", label: "Constellation · graph", hint: "278 routes · 648 edges" },
-        ],
-      },
-      {
-        title: "The room",
-        items: [
-          { href: "/lab", label: "Lab · workspace + trust hub", badge: "NEW" },
-          { href: "/studio", label: "Studio · the atelier" },
-          { href: "/integrations", label: "Integrations · service map" },
+          { href: "/lab", label: "Lab · the workshop" },
+          { href: "/about", label: "About the operator" },
+          { href: "/studio", label: "Studio · atelier" },
           { href: "/timeline", label: "Timeline · ship log" },
+          { href: "/audit-log", label: "Audit log · every commit" },
           { href: "/signature", label: "Signature · the mark" },
-          { href: "/founders-view", label: "Founder's View · nightly", badge: "LIVE" },
-          { href: "/audit-log", label: "Audit log · commits", badge: "NEW" },
         ],
       },
       {
@@ -567,44 +506,98 @@ const MEGAS: Mega[] = [
           { href: "/receipts", label: "Receipts ledger" },
           { href: "/manifesto", label: "Manifesto · 14 clauses" },
           { href: "/.well-known/security.txt", label: "security.txt" },
+          { href: "/version", label: "Version · JUNE ROCKET" },
         ],
       },
       {
-        title: "Operator",
+        title: "Products",
         items: [
-          { href: "/about", label: "About the operator" },
-          { href: "/library", label: "Library · books" },
+          { href: "/orangebox", label: "ORANGEBOX v6 · cockpit" },
+          { href: "/b00kmakor", label: "B00KMAKR · publishing" },
+          { href: "/skilski", label: "skil.ski · skill registry" },
+          { href: "/compare", label: "Product comparisons" },
+          { href: "/pricing", label: "Pricing" },
+          { href: "/use-cases", label: "Use cases" },
+        ],
+      },
+      {
+        title: "Founder + firsts",
+        items: [
+          { href: "/founders-view", label: "Founder's View · nightly", badge: "LIVE" },
+          { href: "/innovations", label: "Innovations · 44 firsts" },
           { href: "/press", label: "Press · media kit" },
           { href: "/skills", label: "ÆSkill canon" },
-        ],
-      },
-      {
-        title: "Live + data + dev",
-        items: [
-          { href: "/explore", label: "Explore · rabbit hole", badge: "NEW" },
-          { href: "/atlas", label: "Atlas · rich sitemap", badge: "NEW" },
-          { href: "/version", label: "Version · JUNE ROCKET", badge: "NEW" },
           { href: "/manifesto", label: "Manifesto · 14 clauses" },
-          { href: "/skills", label: "ÆSkill canon", badge: "NEW" },
-          { href: "/audit-log", label: "Audit log · commits", badge: "NEW" },
-          { href: "/innovations", label: "Innovations · brag page", hint: "Things the lab built first", badge: "NEW" },
-          { href: "/now", label: "/now · ship log", badge: "LIVE" },
-          { href: "/live", label: "/live · dashboard", badge: "LIVE" },
-          { href: "/ask", label: "Ask the lab", badge: "LIVE" },
-          { href: "/api", label: "Developer API" },
-          { href: "/datasets", label: "Open datasets" },
-          { href: "/constellation", label: "Constellation · graph" },
-          { href: "/press", label: "Press · media kit" },
+          { href: "/colophon", label: "Stack + colophon" },
         ],
       },
     ],
     featured: {
-      href: "/trust",
-      eyebrow: "§ LIVE · the trust hub",
-      title: "Trust + transparency",
+      href: "/innovations",
+      eyebrow: "§ THE BRAG PAGE",
+      title: "44 things the lab built first.",
       description:
-        "License posture, financial transparency, receipts ledger, audit log, security.txt, manifesto. All in one canonical place. Updated continuously.",
-      badge: "LIVE",
+        "ÆSkill Suite · Crystal Lattice Compression · Hallucination Reduction Engine · OpenMind Topology · GlyphSpeak · ORANGEBOX · Mindrest · I AM AI · 36 more. Mom's Law applies.",
+      badge: "NEW",
+    },
+  },
+  // Wave 39 · NEW · TOOLS mega · operator brief: "About, Learn, CySec,
+  // Research, Books, Tools" · functional toolbar lives here.
+  {
+    key: "tools",
+    label: "Tools",
+    prefixes: ["/tools", "/best-practices", "/compare", "/vs", "/learn/calc", "/supermodels", "/ask", "/api", "/mindrest", "/manual"],
+    columns: [
+      {
+        title: "Live tools",
+        items: [
+          { href: "/ask", label: "Ask the lab", hint: "Type any question · grounded RAG", badge: "LIVE" },
+          { href: "/tools/model-picker", label: "Which model should I use?", badge: "NEW" },
+          { href: "/compare/ai-tool-sizes", label: "AI tool install sizes" },
+          { href: "/supermodels", label: "Supermodels · reasoning leaderboard" },
+          { href: "/api", label: "Developer API · /api/ask · /api/palette · /api/mcp" },
+        ],
+      },
+      {
+        title: "Cheat sheets",
+        items: [
+          { href: "/best-practices", label: "All 7 cheat sheets", badge: "NEW" },
+          { href: "/best-practices/claude", label: "Claude · Desktop + Code" },
+          { href: "/best-practices/codex", label: "OpenAI Codex CLI" },
+          { href: "/best-practices/cursor", label: "Cursor · AI IDE" },
+          { href: "/best-practices/copilot", label: "GitHub Copilot" },
+          { href: "/best-practices/aider", label: "Aider · open-source" },
+          { href: "/best-practices/mcp", label: "MCP · cross-tool" },
+        ],
+      },
+      {
+        title: "Calculators",
+        items: [
+          { href: "/learn/calc", label: "All 12 calculators" },
+          { href: "/learn/calc/tools/cost-calculator", label: "Cost calculator" },
+          { href: "/learn/calc/tools/token-counter", label: "Token counter" },
+          { href: "/learn/calc/tools/model-comparator", label: "Model comparator" },
+          { href: "/vs", label: "AI tool comparisons" },
+        ],
+      },
+      {
+        title: "Mindstate + utility",
+        items: [
+          { href: "/mindrest", label: "Mindrest · entrainment hub", badge: "NEW" },
+          { href: "/mindrest/experience", label: "Mindrest session · 8 modes" },
+          { href: "/manual", label: "User manual · the whole site", badge: "NEW" },
+          { href: "/welcome", label: "90-second tour" },
+          { href: "/constellation", label: "Constellation · graph" },
+        ],
+      },
+    ],
+    featured: {
+      href: "/tools/model-picker",
+      eyebrow: "§ FREE · NO SIGNUP",
+      title: "Which AI model should you use?",
+      description:
+        "Free decision tool · 5 questions · 30 seconds · canonical recommendation for which AI model to use right now. Built to be shared.",
+      badge: "NEW",
     },
   },
 ];
@@ -793,22 +786,9 @@ export function MegaHeader() {
               );
             })}
 
-            <Link
-              href="/founders-view"
-              className="inline-flex items-center px-3 py-2 outline-none transition-colors focus-visible:opacity-80"
-              style={{
-                color: pathname.startsWith("/founders-view") ? C.paper : C.mid,
-                fontFamily: SANS, fontSize: 14,
-                fontVariationSettings: "'wght' 520",
-              }}
-            >
-              <span className="relative">
-                Founder&apos;s View
-                {pathname.startsWith("/founders-view") ? (
-                  <span aria-hidden className="absolute left-0 right-0 -bottom-[22px] h-px" style={{ background: C.signal }} />
-                ) : null}
-              </span>
-            </Link>
+            {/* Wave 39 · Founder's View hard-link removed · folds into
+                ABOUT Æ mega · Trust + founder column. Top nav now shows
+                only the 3 visible megas: ABOUT Æ · LEARN · CYSEC CYBER. */}
           </nav>
 
           {/* ─── Right rail ─────────────────────────────────────────── */}
