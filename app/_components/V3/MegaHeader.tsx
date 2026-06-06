@@ -369,10 +369,13 @@ const MEGAS: Mega[] = [
   },
   {
     key: "products",
-    label: "AI Ware",
+    label: "AI Ware",
     order: 7,
     landingHref: "/aiware",
-    // Wave 43 · Title Case + space disambiguates the I in AI vs lowercase l.
+    // Wave 46 · 2026-06-06 · operator caught label wrapping to 2 lines
+    // at 1280-1400px viewport widths · flexbox broke between "AI" and
+    // "Ware" at the space. Non-breaking space (U+00A0) prevents the
+    // break. Still reads as "AI Ware" · disambiguated I.
     prefixes: ["/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases", "/aiware"],
     columns: [
       {
@@ -902,7 +905,7 @@ export function MegaHeader() {
                 >
                   <Link
                     href={landingHref}
-                    className="inline-flex items-center px-3 py-2 outline-none transition-colors focus-visible:opacity-80"
+                    className="inline-flex items-center whitespace-nowrap px-2.5 py-2 outline-none transition-colors focus-visible:opacity-80"
                     style={{
                       color: active || isOpen ? C.paper : C.mid,
                       fontFamily: SANS, fontSize: 14,
@@ -926,7 +929,7 @@ export function MegaHeader() {
                     aria-haspopup="true"
                     aria-label={`Toggle ${m.label} menu`}
                     onClick={() => setOpenKey(isOpen ? null : m.key)}
-                    className="inline-flex items-center pr-2 outline-none transition-colors focus-visible:opacity-80"
+                    className="inline-flex items-center pr-1.5 outline-none transition-colors focus-visible:opacity-80"
                   >
                     <ChevronDown
                       size={13}

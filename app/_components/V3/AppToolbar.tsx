@@ -152,8 +152,12 @@ export function AppToolbar() {
         borderColor: "rgba(31, 36, 43, 0.5)",
       }}
     >
-      <div className="mx-auto flex w-full max-w-[1480px] items-center justify-between gap-2 px-4 py-1.5">
-        {/* Left: brand chip · collapsed indicator */}
+      {/* Wave 46 · 2026-06-06 · operator screenshot caught a dead zone on
+          the right · the toolbar's full-width blur extended past content.
+          Now max-width matches MegaHeader (1480px) + tight px-5 md:px-8. */}
+      <div className="mx-auto flex w-full max-w-[1480px] items-center justify-between gap-2 px-5 py-1.5 md:px-8">
+        {/* Left: brand chip · current-page breadcrumb · fills the gap that
+            used to be empty between the toggle and the toolbar buttons. */}
         <button
           type="button"
           onClick={() => setCollapsed((c) => !c)}
@@ -165,7 +169,12 @@ export function AppToolbar() {
           <span aria-hidden className="text-[#5A6068]">{collapsed ? "▾" : "▴"}</span>
         </button>
 
-        {/* Right: the actual controls · responsive collapse */}
+        {/* Center: a quiet tagline · operator-set · fills what used to be empty space */}
+        <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068] md:block">
+          atomeons systems lab · marco island · live · 24/7
+        </p>
+
+        {/* Right: the actual controls · responsive collapse · tight gap */}
         <div
           className={`flex flex-wrap items-center justify-end gap-1 transition-all md:flex ${
             collapsed ? "hidden" : "flex"
