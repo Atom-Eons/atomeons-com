@@ -149,6 +149,10 @@ const ENTRIES: Entry[] = [
   { loc: "/best-practices/copilot", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
   { loc: "/best-practices/aider", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
   { loc: "/best-practices/mcp", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+
+  // Wave 36 · /tools/model-picker · /compare/ai-tool-sizes · live citation artifacts
+  { loc: "/tools/model-picker", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+  { loc: "/compare/ai-tool-sizes", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
 ];
 
 export async function GET() {

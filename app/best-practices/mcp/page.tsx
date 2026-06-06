@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Section, Table } from "../claude/page";
 import { BackToHub } from "../cursor/page";
+import { McpSequenceDiagram } from "../../_components/V3/TeachableGraphics";
 
 export const metadata: Metadata = {
   title: "Model Context Protocol · Cheat Sheet",
@@ -250,6 +251,8 @@ export default function McpBestPracticesPage() {
           Last verified · 2026-06-06 · sources at bottom
         </p>
       </header>
+
+      <McpSequenceDiagram />
 
       <Section title="§ Six primitives">
         <ul className="mt-4 space-y-4">

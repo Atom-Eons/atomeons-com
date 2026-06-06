@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AutoGlyph } from "../_components/V3/Illustrations";
 
 /**
  * /best-practices · hub for the three AI coding-tool cheat sheets.
@@ -128,26 +129,33 @@ export default function BestPracticesPage() {
             className="block border p-8 transition hover:border-[#22F0D5]"
             style={{ borderColor: "#1F242B" }}
           >
-            <div className="flex flex-wrap items-baseline justify-between gap-3">
-              <h2
-                className="text-[32px] font-light leading-tight text-[#F4F4F2]"
-                style={{ fontFamily: "Newsreader, Georgia, serif" }}
-              >
-                {a.name}
-              </h2>
-              <p
-                className="font-mono text-[10px] uppercase tracking-[0.32em]"
-                style={{ color: a.accent }}
-              >
-                {a.vendor}
-              </p>
+            <div className="flex flex-wrap items-start justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex flex-wrap items-baseline justify-between gap-3">
+                  <h2
+                    className="text-[32px] font-light leading-tight text-[#F4F4F2]"
+                    style={{ fontFamily: "Newsreader, Georgia, serif" }}
+                  >
+                    {a.name}
+                  </h2>
+                  <p
+                    className="font-mono text-[10px] uppercase tracking-[0.32em]"
+                    style={{ color: a.accent }}
+                  >
+                    {a.vendor}
+                  </p>
+                </div>
+                <p className="mt-4 max-w-[80ch] text-[15px] leading-[1.65] text-[#9CA3AF]">
+                  {a.blurb}
+                </p>
+                <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                  Open the cheat sheet →
+                </p>
+              </div>
+              <div className="hidden shrink-0 md:block" style={{ opacity: 0.55 }} aria-hidden>
+                <AutoGlyph slug={`/best-practices/${a.slug}`} size={120} />
+              </div>
             </div>
-            <p className="mt-4 max-w-[80ch] text-[15px] leading-[1.65] text-[#9CA3AF]">
-              {a.blurb}
-            </p>
-            <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              Open the cheat sheet →
-            </p>
           </Link>
         ))}
       </section>

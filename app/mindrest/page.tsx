@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BrainwaveBandsDiagram } from "../_components/V3/TeachableGraphics";
 
 /**
  * /mindrest · the calm-brand landing for legal mood enhancement +
@@ -320,6 +321,9 @@ export default function MindrestPage() {
           <span aria-hidden>→</span>
         </Link>
       </section>
+
+      {/* Wave 36 · teachable brainwave bands diagram */}
+      <BrainwaveBandsDiagram />
 
       {/* Sensory + experiential */}
       <section className="mt-16">
