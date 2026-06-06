@@ -26,9 +26,12 @@ import { AtomBoot } from "./_components/AtomBoot";
 import { StickyBuyBar } from "./_components/StickyBuyBar";
 import { LabTicker } from "./_components/v2/LabTicker";
 import { AmbientSignature } from "./_components/AmbientSignature";
-import { SacredCanvas } from "./_components/V3/SacredCanvas";
+import { SacredSvg } from "./_components/V3/SacredSvg";
 import { LivingCursor } from "./_components/V3/LivingCursor";
 import { LiteToggle } from "./_components/V3/LiteToggle";
+import { SearchInline } from "./_components/V3/SearchInline";
+import { MarkdownAlternateLink } from "./_components/V3/MarkdownAlternateLink";
+import { CopyForLlm } from "./_components/V3/CopyForLlm";
 
 /**
  * Site-wide viewport configuration.
@@ -134,14 +137,17 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col text-[#F2F4F5] font-sans">
-        {/* Living sacred-geometry background — site-wide procedural
-            canvas. Fixed-position, z-index 0, pointer-events none,
-            mix-blend-mode screen. Visible in body-bg gutters and
-            transition margins; content sections with their own bg
-            color mask it where they sit. ~7KB · ~3ms/frame · 30fps
-            cap · honors prefers-reduced-motion · pauses on
-            document.hidden. */}
-        <SacredCanvas />
+        {/* MarkdownAlternateLink · per-page <link rel="alternate"
+            type="text/markdown"> tag pointing at /api/md?route=<path>.
+            React 19 auto-hoists this to <head>. Lets AI agents (Cursor,
+            Claude web, ChatGPT browse) discover the markdown twin
+            without UA-sniffing or HTML parsing. 2026-06-06. */}
+        <MarkdownAlternateLink />
+        {/* SacredSvg · GPU-cheap rewrite of the old SacredCanvas.
+            Static SVG rendered once, CSS keyframes rotate the layer
+            groups via the GPU compositor. ZERO JavaScript per frame
+            after first paint. Works on weak hardware. 2026-06-06. */}
+        <SacredSvg />
         {/* LivingCursor · custom cyan cursor with phyllotaxis trail ·
             hidden on touch + prefers-reduced-motion · respects hover
             states for interactive elements. Pizza-pie visual addition
@@ -152,6 +158,10 @@ export default function RootLayout({
             html.lite-mode class · heavy canvases bail · CSS kills
             animations. Persists choice via localStorage. */}
         <LiteToggle />
+        {/* CopyForLlm · bottom-left floating button · copies the
+            current page as XML-wrapped markdown for direct paste into
+            Claude / ChatGPT / Gemini. 2026-06-06. */}
+        <CopyForLlm />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -314,11 +324,14 @@ export default function RootLayout({
             that gets accounted for naturally by the scroll position
             (no extra padding needed since the bar is part of children
             flow, not fixed-out-of-flow like the Header). */}
-        {/* SearchInline removed 2026-06-05 · was a dead duplicate of the
-            SearchTrigger in MegaHeader. The canonical search is now the
-            unified SearchPalette (⌘K · "/" · the magnifying-glass button
-            in the nav · the Ask the lab CTA all open the same surface). */}
+        {/* SearchInline RESTORED 2026-06-06 per operator correction.
+            The operator-built full-width search bar under the nav is
+            canonical · the compact icon in MegaHeader was the dead-
+            looking element + has been removed from the right rail.
+            SearchInline now reflects the unified search palette engine
+            (same scorer · same index · adds ask mode via ⌘↵). */}
         <div className="flex-1 pt-16">
+          <SearchInline />
           {children}
         </div>
         <Footer />

@@ -74,7 +74,7 @@ import { Products } from "./_components/V3/Products";
 import { BestCyber } from "./_components/V3/BestCyber";
 import { BestAILearning } from "./_components/V3/BestAILearning";
 import { HomeAiSummary } from "./_components/ai-summary/home-ai-summary";
-import { AtomHero3D } from "./_components/V3/AtomHero3D";
+import { AtomHeroCss as AtomHero3D } from "./_components/V3/AtomHeroCss";
 import { Ticker } from "./_components/V3/Ticker";
 import { HudFrame } from "./_components/V3/HudFrame";
 

@@ -211,14 +211,19 @@ const MEGAS: Mega[] = [
     label: "Cyber",
     prefixes: ["/learn/cyber"],
     columns: [
+      // Row 1
       {
         title: "Start here",
         items: [
-          { href: "/learn/cyber", label: "Cyber index", hint: "40-page public-info catalog" },
+          { href: "/learn/cyber", label: "Cyber index · 40-page catalog" },
+          { href: "/learn/cyber/start", label: "Day-zero brief" },
           { href: "/learn/cyber/path", label: "Path · zero to operator" },
-          { href: "/learn/cyber/start", label: "Start · day-zero brief" },
-          { href: "/learn/cyber/certs", label: "Certifications guide" },
-          { href: "/learn/cyber/books", label: "Cyber book canon" },
+          { href: "/learn/cyber/models", label: "Industry models · the reference", badge: "NEW" },
+          { href: "/learn/cyber/mythos", label: "Mythos · defense-tech doctrine", badge: "NEW" },
+          { href: "/learn/cyber/modern", label: "Modern cyber landscape" },
+          { href: "/learn/cyber/timeline", label: "Timeline · 60 years" },
+          { href: "/learn/cyber/doctrine", label: "Cyber doctrine · operator stance" },
+          { href: "/learn/cyber/legal", label: "Cyber + the law" },
         ],
       },
       {
@@ -229,37 +234,86 @@ const MEGAS: Mega[] = [
           { href: "/learn/cyber/cyber-kill-chain", label: "Cyber Kill Chain" },
           { href: "/learn/cyber/zero-trust", label: "Zero Trust architecture" },
           { href: "/learn/cyber/post-quantum-crypto", label: "Post-quantum crypto" },
+          { href: "/q/what-is-mitre-attack", label: "What is MITRE ATT&CK?" },
+          { href: "/q/what-is-nist-csf", label: "What is NIST CSF?" },
+          { href: "/q/what-is-zero-trust", label: "What is Zero Trust?" },
         ],
       },
       {
-        title: "Defense + attack",
+        title: "Defense surfaces",
         items: [
           { href: "/learn/cyber/active-directory-defense", label: "Active Directory defense" },
           { href: "/learn/cyber/email-security-stack", label: "Email security stack" },
-          { href: "/learn/cyber/llm-warfare", label: "LLM-era cyber warfare" },
           { href: "/learn/cyber/iot-embedded", label: "IoT + embedded security" },
+          { href: "/learn/cyber/mobile-security", label: "Mobile security" },
           { href: "/learn/cyber/ot-ics", label: "OT / ICS security" },
+          { href: "/learn/cyber/cyberwar", label: "Cyber warfare doctrine" },
         ],
       },
       {
-        title: "Case studies + careers",
+        title: "AI security",
+        items: [
+          { href: "/learn/cyber/ai-security", label: "AI security · flagship" },
+          { href: "/learn/cyber/llm-warfare", label: "LLM-era cyber warfare" },
+          { href: "/q/what-is-prompt-injection", label: "Prompt injection · OWASP LLM01" },
+          { href: "/learn/trust/prompt-injection", label: "Prompt injection · defenses" },
+          { href: "/learn/calc/tools/jailbreak-checker", label: "Jailbreak checker tool" },
+          { href: "/learn/trust/threat-model", label: "LLM threat modeling" },
+        ],
+      },
+      // Row 2
+      {
+        title: "Breaches + threats",
         items: [
           { href: "/learn/cyber/breaches", label: "Breaches index" },
           { href: "/learn/cyber/colonial-pipeline-2021", label: "Colonial Pipeline 2021" },
           { href: "/learn/cyber/log4shell-2021", label: "Log4Shell 2021" },
           { href: "/learn/cyber/threat-actors", label: "Threat actor profiles" },
-          { href: "/learn/cyber/heroes", label: "Cyber heroes" },
-          { href: "/learn/cyber/employers", label: "Where to work" },
+          { href: "/q/what-is-the-cyber-kill-chain", label: "What is the kill chain?" },
+          { href: "/q/what-is-an-sbom", label: "Software bills of materials" },
+        ],
+      },
+      {
+        title: "Careers + programs",
+        items: [
+          { href: "/learn/cyber/employers", label: "Where to work · employers" },
+          { href: "/learn/cyber/certs", label: "Certifications guide" },
+          { href: "/learn/cyber/programs", label: "Degree programs" },
+          { href: "/learn/cyber/contracts", label: "Federal cyber contracts" },
+          { href: "/learn/cyber/serve", label: "Public service paths" },
           { href: "/learn/cyber/hackerone", label: "HackerOne + bug bounty" },
+        ],
+      },
+      {
+        title: "Community + heroes",
+        items: [
+          { href: "/learn/cyber/heroes", label: "Cyber heroes" },
+          { href: "/learn/cyber/karp", label: "Karp profile" },
+          { href: "/learn/cyber/luckey", label: "Luckey profile" },
+          { href: "/learn/cyber/conferences", label: "DEF CON · BSides · Black Hat" },
+          { href: "/learn/cyber/podcasts", label: "Cyber podcasts" },
+          { href: "/learn/cyber/youtube", label: "Cyber YouTube channels" },
+        ],
+      },
+      {
+        title: "Tools + reading",
+        items: [
+          { href: "/learn/cyber/tools", label: "Tools index" },
+          { href: "/learn/cyber/platforms", label: "Pentest platforms · HTB · THM" },
+          { href: "/learn/cyber/labs", label: "Hands-on labs" },
+          { href: "/learn/cyber/open-source", label: "Open-source security stacks" },
+          { href: "/learn/cyber/books", label: "Cyber book canon" },
+          { href: "/learn/trust/compliance", label: "Compliance · SOC 2 · ISO" },
+          { href: "/learn/trust/data-residency", label: "Data residency · sovereignty" },
         ],
       },
     ],
     featured: {
-      href: "/learn/cyber/ai-security",
-      eyebrow: "§ flagship",
-      title: "AI security",
+      href: "/learn/cyber",
+      eyebrow: "§ flagship · public-info only",
+      title: "The ultimate cyber resource",
       description:
-        "The cross-section of AI and cyber · prompt injection · jailbreaks · adversarial inputs · supply-chain attacks against models.",
+        "40 lab-curated pages spanning frameworks, defense, offense, AI security, breaches, careers, and community. Public info only · no tradecraft that crosses any laws · CC-BY 4.0 · designed for the operators training the future.",
     },
   },
   {
@@ -699,9 +753,12 @@ export function MegaHeader() {
           </nav>
 
           {/* ─── Right rail ─────────────────────────────────────────── */}
+          {/* Compact SearchTrigger removed 2026-06-06 per operator —
+              the canonical search is the full-width SearchInline bar
+              below the header, restored in layout.tsx. ⌘K still opens
+              the palette from anywhere. */}
           <div className="hidden lg:flex items-center gap-3">
             <AmbientToggle compact />
-            <SearchTrigger compact />
             <Link
               href="/account"
               className="text-[13px] outline-none transition-colors focus-visible:opacity-80"
