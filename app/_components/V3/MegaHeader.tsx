@@ -91,6 +91,17 @@ type Mega = {
   prefixes: string[];   // pathnames matching any prefix light up this top-level
   columns: MegaColumn[];
   featured?: Featured;
+  /**
+   * Wave 32 · NAV COLLAPSE · 2026-06-06
+   * Hidden from top-level nav but content still accessible via:
+   *   - direct routes (/learn/cyber/* etc · still work)
+   *   - sub-nav columns inside Learn / Lab megas (cross-linked)
+   *   - sitemap.xml + sitemap-ai.xml
+   *   - the /ask palette
+   * Panel verdict (UX-product + Lips): 7 → 4 top-level items.
+   * Cyber + Books fold under Learn · Research folds under Lab.
+   */
+  hidden?: boolean;
 };
 
 const MEGAS: Mega[] = [
@@ -108,6 +119,9 @@ const MEGAS: Mega[] = [
           { href: "/learn/library", label: "Lesson library", hint: "Every lesson, grouped by level" },
           { href: "/learn/decision-tree", label: "Decision tree", hint: "Pick your next lesson" },
           { href: "/ai", label: "AI gateway · 51 FAQs" },
+          { href: "/learn/cyber", label: "Cyber · 40-page catalog", hint: "World-class cybersec resource", badge: "NEW" },
+          { href: "/books", label: "Books · I AM AI + Sci-Fi", hint: "The lab's published canon", badge: "NEW" },
+          { href: "/mindrest", label: "Mindrest · entrainment", hint: "Brainwaves to ocean waves", badge: "NEW" },
         ],
       },
       {
@@ -189,6 +203,9 @@ const MEGAS: Mega[] = [
           { href: "/learn/health-ai", label: "Health AI · hub", badge: "NEW" },
           { href: "/learn/money-ai", label: "Money AI · hub", badge: "NEW" },
           { href: "/learn/video-ai", label: "Video AI · hub", badge: "NEW" },
+          { href: "/learn/music-ai", label: "Music + audio AI", badge: "NEW" },
+          { href: "/learn/policy-ai", label: "Policy + AI law", badge: "NEW" },
+          { href: "/learn/science-ai", label: "Science AI · discovery", badge: "NEW" },
           { href: "/mindrest", label: "Mindrest · ocean session", hint: "Brainwaves + binaural + meditation", badge: "NEW" },
           { href: "/version", label: "Version · JUNE ROCKET", badge: "NEW" },
         ],
@@ -219,6 +236,7 @@ const MEGAS: Mega[] = [
   {
     key: "cyber",
     label: "Cyber",
+    hidden: true, // Wave 32 · folded under Learn mega
     prefixes: ["/learn/cyber"],
     columns: [
       // Row 1
@@ -329,6 +347,7 @@ const MEGAS: Mega[] = [
   {
     key: "research",
     label: "Research",
+    hidden: true, // Wave 32 · folded under Lab mega
     prefixes: ["/research", "/intel", "/constellation"],
     columns: [
       {
@@ -441,6 +460,7 @@ const MEGAS: Mega[] = [
   {
     key: "books",
     label: "Books",
+    hidden: true, // Wave 32 · folded under Learn mega
     prefixes: ["/i-am-ai", "/research/lessons-from-sci-fi", "/books"],
     columns: [
       {
@@ -506,6 +526,21 @@ const MEGAS: Mega[] = [
     ],
     columns: [
       {
+        title: "Research · ÆoNs",
+        items: [
+          { href: "/research", label: "Research home" },
+          { href: "/research/papers", label: "Papers · 31 published", hint: "All CC-BY 4.0" },
+          { href: "/research/decoded", label: "Decoded papers · 35", hint: "Primary-source reads" },
+          { href: "/research/lessons-from-sci-fi", label: "Lessons from Sci-Fi" },
+          { href: "/research/decoded/attention-is-all-you-need", label: "Attention Is All You Need" },
+          { href: "/research/decoded/scaling-monosemanticity", label: "Scaling Monosemanticity" },
+          { href: "/research/decoded/constitutional-ai", label: "Constitutional AI" },
+          { href: "/research/decoded/mamba", label: "Mamba · state space" },
+          { href: "/intel", label: "Alpha intel", hint: "Live signal feed" },
+          { href: "/intel/x-algorithm", label: "X algorithm decoded" },
+        ],
+      },
+      {
         title: "The room",
         items: [
           { href: "/lab", label: "Lab · workspace", badge: "NEW" },
@@ -515,6 +550,7 @@ const MEGAS: Mega[] = [
           { href: "/integrations", label: "Integrations · service map", badge: "NEW" },
           { href: "/timeline", label: "Timeline · ship log", badge: "NEW" },
           { href: "/signature", label: "Signature · the mark", badge: "NEW" },
+          { href: "/founders-view", label: "Founder's View · nightly", badge: "LIVE" },
         ],
       },
       {
@@ -705,8 +741,12 @@ export function MegaHeader() {
           </Link>
 
           {/* ─── Desktop primary nav ───────────────────────────────── */}
+          {/*  Wave 32 · NAV COLLAPSE · 2026-06-06  ·  panel verdict
+               (UX-product + Lips): 7 → 4 top-level items.
+               Cyber + Books + Research are hidden:true · contents
+               still rendered as featured columns inside Learn / Lab. */}
           <nav aria-label="Primary" className="hidden lg:flex items-stretch gap-1">
-            {MEGAS.map((m) => {
+            {MEGAS.filter((m) => !m.hidden).map((m) => {
               const active = isActiveMega(pathname, m);
               const isOpen = openKey === m.key;
               return (
@@ -998,7 +1038,8 @@ function MobileDrawer({ pathname, onClose }: { pathname: string; onClose: () => 
       }}
     >
       <div className="mx-auto w-full max-w-[800px] px-5 py-8">
-        {MEGAS.map((m) => {
+        {/* Wave 32 · NAV COLLAPSE · hidden megas dropped from mobile nav too */}
+        {MEGAS.filter((m) => !m.hidden).map((m) => {
           const isExpanded = expanded === m.key;
           const isActive = isActiveMega(pathname, m);
           return (

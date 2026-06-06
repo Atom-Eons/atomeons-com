@@ -138,6 +138,11 @@ const ENTRIES: Entry[] = [
   // JUNE ROCKET · Wave 31b · /mindrest · ocean entrainment (renamed from /trip)
   { loc: "/mindrest", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
   { loc: "/mindrest/experience", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
+
+  // JUNE ROCKET · Wave 32 · 3 more domain hubs (robotics skipped per operator)
+  { loc: "/learn/music-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+  { loc: "/learn/policy-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+  { loc: "/learn/science-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
 ];
 
 export async function GET() {
