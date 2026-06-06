@@ -32,6 +32,7 @@ import { TierToggle } from "./_components/V3/TierToggle";
 import { SearchInline } from "./_components/V3/SearchInline";
 import { MarkdownAlternateLink } from "./_components/V3/MarkdownAlternateLink";
 import { CopyForLlm } from "./_components/V3/CopyForLlm";
+import { FirstTimeChip } from "./_components/V3/FirstTimeChip";
 
 /**
  * Site-wide viewport configuration.
@@ -162,6 +163,11 @@ export default function RootLayout({
             · WebGL renderer) and cycles AUTO → LITE → MID → FULL on
             click. Pure CSS gates the heavy visuals per tier. */}
         <TierToggle />
+        {/* FirstTimeChip · Wave 37 · 2026-06-06 · invites first-time
+            visitors to /welcome. Reads localStorage atomeons.trained ·
+            shows nothing if visitor has already done the tour or
+            dismissed the prompt. Top-left · subtle · Hick-respectful. */}
+        <FirstTimeChip />
         {/* CopyForLlm · bottom-left floating button · copies the
             current page as XML-wrapped markdown for direct paste into
             Claude / ChatGPT / Gemini. 2026-06-06. */}

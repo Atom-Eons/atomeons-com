@@ -153,6 +153,12 @@ const ENTRIES: Entry[] = [
   // Wave 36 · /tools/model-picker · /compare/ai-tool-sizes · live citation artifacts
   { loc: "/tools/model-picker", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
   { loc: "/compare/ai-tool-sizes", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
+
+  // Wave 37 · /welcome · Apple-grade first-time-visitor scroll trainer
+  { loc: "/welcome", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
+
+  // Wave 38 · /innovations · brag page · inventions + discoveries
+  { loc: "/innovations", lastmod: TODAY, changefreq: "weekly", priority: 0.92 },
 ];
 
 export async function GET() {

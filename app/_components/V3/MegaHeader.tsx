@@ -587,6 +587,7 @@ const MEGAS: Mega[] = [
           { href: "/manifesto", label: "Manifesto · 14 clauses" },
           { href: "/skills", label: "ÆSkill canon", badge: "NEW" },
           { href: "/audit-log", label: "Audit log · commits", badge: "NEW" },
+          { href: "/innovations", label: "Innovations · brag page", hint: "Things the lab built first", badge: "NEW" },
           { href: "/now", label: "/now · ship log", badge: "LIVE" },
           { href: "/live", label: "/live · dashboard", badge: "LIVE" },
           { href: "/ask", label: "Ask the lab", badge: "LIVE" },

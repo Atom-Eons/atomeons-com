@@ -111,6 +111,11 @@ const REDIRECTS: Record<string, string> = {
   // inside the lab origin so we redirect to /skilski local landing.
   "/skill-ski": "/skilski",
   "/skillski": "/skilski",
+  // Innovations brag page aliases · Wave 38 · 2026-06-06
+  "/inventions": "/innovations",
+  "/discoveries": "/innovations",
+  "/firsts": "/innovations",
+  "/brag": "/innovations",
   // Mindrest brand · /trip rebranded 2026-06-06 · keep inbound links alive
   "/trip": "/mindrest",
   "/trip/experience": "/mindrest/experience",
@@ -132,7 +137,9 @@ const REDIRECTS: Record<string, string> = {
   "/correspondence": "/press",
   "/north-star": "/manifesto",
   "/vendor-pack": "/trust",
-  "/welcome": "/",
+  // Wave 37 · /welcome restored as the first-time-visitor scroll trainer
+  // (not a duplicate of the home page · a proper guided introduction).
+  // The proxy entry below is intentionally removed.
   "/vendor-pack/bundle.txt": "/trust",
 };
 
