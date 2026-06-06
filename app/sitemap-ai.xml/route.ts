@@ -97,6 +97,26 @@ const ENTRIES: Entry[] = [
   { loc: "/tools", lastmod: TODAY, changefreq: "weekly", priority: 0.8 },
   { loc: "/vs", lastmod: TODAY, changefreq: "monthly", priority: 0.8 },
   { loc: "/supermodels", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
+
+  // Lab signature surfaces — Wave 12-16
+  { loc: "/constellation", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
+  { loc: "/datasets", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
+  { loc: "/vendor-pack", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
+  { loc: "/studio", lastmod: TODAY, changefreq: "monthly", priority: 0.75 },
+  { loc: "/signature", lastmod: TODAY, changefreq: "monthly", priority: 0.75 },
+  { loc: "/trust", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
+  { loc: "/transparency", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
+  { loc: "/lab", lastmod: TODAY, changefreq: "monthly", priority: 0.75 },
+  { loc: "/integrations", lastmod: TODAY, changefreq: "monthly", priority: 0.8 },
+  { loc: "/aesthetic", lastmod: TODAY, changefreq: "monthly", priority: 0.7 },
+  { loc: "/colophon", lastmod: TODAY, changefreq: "monthly", priority: 0.7 },
+  { loc: "/timeline", lastmod: TODAY, changefreq: "weekly", priority: 0.8 },
+  { loc: "/influences", lastmod: TODAY, changefreq: "monthly", priority: 0.7 },
+  { loc: "/live", lastmod: TODAY, changefreq: "daily", priority: 0.85 },
+  { loc: "/teach", lastmod: TODAY, changefreq: "monthly", priority: 0.8 },
+  { loc: "/use-cases", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
+  { loc: "/compare", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
+  { loc: "/api", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
 ];
 
 export async function GET() {

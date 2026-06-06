@@ -76,6 +76,9 @@ export function Footer() {
             <li><Link href="/about" className="transition-colors hover:text-[#22F0D5]">About</Link></li>
             <li><Link href="/now" className="transition-colors hover:text-[#22F0D5]">/now · this week</Link></li>
             <li><Link href="/ask" className="transition-colors hover:text-[#22F0D5]">/ask · semantic Q&amp;A</Link></li>
+            <li><Link href="/constellation" className="transition-colors hover:text-[#22F0D5]">/constellation · graph</Link></li>
+            <li><Link href="/datasets" className="transition-colors hover:text-[#22F0D5]">/datasets · public data</Link></li>
+            <li><Link href="/vendor-pack" className="transition-colors hover:text-[#22F0D5]">/vendor-pack · CISO bundle</Link></li>
           </ul>
         </div>
       </div>

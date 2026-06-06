@@ -61,6 +61,12 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
   {
     date: "2026-06-05",
     what:
+      "/constellation · the masterwork visual. Interactive force-laid graph of 278 routes and 648 cross-route links. Pre-built edge index from grep over source. Canvas2D · drag to pan · wheel to zoom · click any node to navigate. The lab as a graph. /datasets · single discoverable index of 15 public CC-BY 4.0 JSON/text/XML files. /vendor-pack · CISO-ready 5-section bundle with downloadable .txt at /vendor-pack/bundle.txt for procurement teams. /studio + /signature · personal scrapbooks · the atelier prose + the procedural mark system. /api/mcp · real Model Context Protocol HTTP server (JSON-RPC 2.0 · 3 tools · 4 resources · 2 prompts) — Claude Desktop config: {\"mcpServers\":{\"atomeons\":{\"url\":\"https://atomeons.com/api/mcp\"}}}. RouteSigil component wired into Header so every page shows its unique deterministic geometric mark. Print stylesheet added · /transparency /trust /receipts /lab now print as CISO-fileable documents.",
+    href: "/constellation",
+  },
+  {
+    date: "2026-06-05",
+    what:
       "/ask · semantic Q&A over the lab's 256 routes is LIVE. Type any question; gemini-2.5-flash drafts a 2-5 sentence answer grounded ONLY on the lab's own writing, with every source route cited inline. Two-layer retrieval architecture — fuzzy keyword match over public/search-index.json today; vector embeddings via gemini-embedding-001 (Matryoshka 768-dim) auto-promoted once the daily quota window resets. /api/ask endpoint server-side, GEMINI_API_KEY never exposed to the browser, zero query logs. Wired into homepage + footer + llm-routes.json + llms.txt.",
     href: "/ask",
   },
