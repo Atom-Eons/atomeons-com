@@ -51,7 +51,7 @@ export default function AskPage() {
             inline so you can verify.
           </p>
           <p className="mt-4 max-w-2xl font-mono text-[12px] uppercase tracking-[0.18em] text-[#5A6068]">
-            retrieval = fuzzy + vector · generator = gemini-2.0-flash-exp · grounded only on lab content
+            retrieval = fuzzy + vector · generator = gemini-2.5-flash · grounded only on lab content
           </p>
         </div>
       </section>

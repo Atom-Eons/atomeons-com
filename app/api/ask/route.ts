@@ -36,7 +36,7 @@ export const maxDuration = 30;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const EMBED_MODEL = "gemini-embedding-001";
 const EMBED_DIM = 768;
-const GENERATE_MODEL = "gemini-2.0-flash-exp";
+const GENERATE_MODEL = "gemini-2.5-flash";
 
 // ────────────────────────────────────────────────────────────────────
 // Layer A — fuzzy index (always available)
