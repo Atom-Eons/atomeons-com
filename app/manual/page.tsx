@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PrintButton } from "./PrintButton";
 
 /**
  * /manual · the comprehensive user manual.
@@ -248,13 +249,7 @@ export default function ManualPage() {
           reference. Updated continuously · last verified 2026-06-06.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <button
-            type="button"
-            onClick={() => window.print()}
-            className="inline-flex items-center gap-2 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition hover:bg-[#22F0D5]/20"
-          >
-            ⌘P · Save as PDF
-          </button>
+          <PrintButton />
           <Link
             href="/welcome"
             className="inline-flex items-center gap-2 border border-[#1F242B] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] transition hover:border-[#9CA3AF] hover:text-[#F4F4F2]"
