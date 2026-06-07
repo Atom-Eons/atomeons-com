@@ -180,6 +180,10 @@ const ENTRIES: Entry[] = [
   // Wave 45 · two more LLM corpora · third + fourth sibling
   { loc: "/atomeons-research.txt", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
   { loc: "/atomeons-products.txt", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
+
+  // Wave 47 · launcher reframe · / is now the launcher · /cinema preserved
+  { loc: "/launcher", lastmod: TODAY, changefreq: "weekly", priority: 1.0 },
+  { loc: "/cinema", lastmod: TODAY, changefreq: "monthly", priority: 0.7 },
 ];
 
 export async function GET() {

@@ -37,6 +37,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { getSiloFromPath } from "../../_lib/silos";
+import { SiloShell } from "./SiloShell";
+import { SiloSwitcher } from "./SiloSwitcher";
 import { ChevronDown } from "lucide-react";
 import { SearchPalette, SearchTrigger } from "./SearchPalette";
 import { RouteSigil } from "./RouteSigil";
@@ -831,9 +834,36 @@ export function MegaHeader() {
     return () => html.classList.remove("cysec-active");
   }, [pathname]);
 
+  // Wave 47 · 2026-06-07 · launcher reframe · MegaHeader is now context-
+  // aware. When pathname is inside a silo (Learn/Cysec/etc), the full
+  // 9-mega chrome is hidden and SiloShell renders instead. Operator:
+  // "smaller main nav up top like software." html[data-silo] attribute
+  // set for per-silo theming.
+  const siloKey = getSiloFromPath(pathname);
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const html = document.documentElement;
+    if (siloKey) html.setAttribute("data-silo", siloKey);
+    else html.removeAttribute("data-silo");
+    return () => html.removeAttribute("data-silo");
+  }, [siloKey]);
+
+  // If we're inside a silo · short-circuit to the slim SiloShell instead
+  // of the full mega chrome. SearchPalette + SiloSwitcher stay mounted.
+  if (siloKey) {
+    return (
+      <>
+        <SearchPalette />
+        <SiloSwitcher />
+        <SiloShell siloKey={siloKey} />
+      </>
+    );
+  }
+
   return (
     <>
       <SearchPalette />
+      <SiloSwitcher />
       <header
         className="fixed left-0 right-0 top-0 z-40 w-full"
         style={{
