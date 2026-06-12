@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AutoGlyph } from "../_components/V3/Illustrations";
+import { DiscordCTA } from "../_components/V3/DiscordCTA";
 
 /**
  * /innovations · the inventions + discoveries brag page.
@@ -653,6 +654,8 @@ export default function InnovationsPage() {
           </li>
         </ul>
       </section>
+
+      <DiscordCTA context="innovations-reader" />
 
       <section className="mt-20 border-t border-[#1F242B] pt-12">
         <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#9CA3AF]">

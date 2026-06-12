@@ -226,7 +226,12 @@ export function Footer() {
       {/* ─── Bottom bar · operator + legal + verify ───────────────── */}
       <div className="border-t border-[#1A2225]">
         <div className="mx-auto flex w-full max-w-[1480px] flex-col items-start gap-3 px-6 py-6 text-[12px] text-[#6B7779] md:flex-row md:items-center md:justify-between md:px-8">
-          <p>© 2026 AtomEons Systems Laboratory · Atom McCree · Marco Island, FL · operator-owned · no VC</p>
+          <p>
+            © 2026 AtomEons Systems Laboratory · Atom McCree · Marco Island, FL · operator-owned · no VC
+            <br className="md:hidden" />
+            <span className="hidden md:inline"> · </span>
+            <span>Website created by Atom McCree + AI</span>
+          </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <Link href="/legal/terms" className="transition-colors hover:text-[#E7EBED]">Terms</Link>
             <Link href="/legal/privacy" className="transition-colors hover:text-[#E7EBED]">Privacy</Link>
@@ -238,6 +243,38 @@ export function Footer() {
               className="transition-colors hover:text-[#E7EBED]"
             >
               @AtomMccree
+            </a>
+            <a
+              href="https://www.instagram.com/atomeons/"
+              target="_blank"
+              rel="noopener"
+              className="transition-colors hover:text-[#E7EBED]"
+            >
+              instagram
+            </a>
+            <a
+              href="https://www.twitch.tv/atomeons"
+              target="_blank"
+              rel="noopener"
+              className="transition-colors hover:text-[#E7EBED]"
+            >
+              twitch
+            </a>
+            <a
+              href="https://discord.gg/4wx3AGga"
+              target="_blank"
+              rel="noopener"
+              className="transition-colors hover:text-[#E7EBED]"
+            >
+              discord
+            </a>
+            <a
+              href="https://atommccree.com"
+              target="_blank"
+              rel="me noopener"
+              className="transition-colors hover:text-[#E7EBED]"
+            >
+              atommccree.com
             </a>
             <a
               href="https://github.com/Atom-Eons/atomeons-com"

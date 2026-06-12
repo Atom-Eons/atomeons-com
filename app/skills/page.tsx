@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DiscordCTA } from "../_components/V3/DiscordCTA";
 
 export const metadata: Metadata = {
   title: "ÆSkill Suite V1.4 · the operator doctrine · public canon",
@@ -242,6 +243,10 @@ export default function SkillsPage() {
           </div>
         </div>
       </section>
+
+      <div className="mx-auto max-w-5xl px-6 pb-16">
+        <DiscordCTA context="general" />
+      </div>
     </main>
   );
 }

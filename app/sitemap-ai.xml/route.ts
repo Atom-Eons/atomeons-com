@@ -192,6 +192,9 @@ const ENTRIES: Entry[] = [
   { loc: "/kids", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
   { loc: "/plain", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
   { loc: "/who-are-you", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+
+  // Wave 70 · DISCORD · hardcore-user community funnel
+  { loc: "/discord", lastmod: TODAY, changefreq: "monthly", priority: 0.9 },
 ];
 
 export async function GET() {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AutoGlyph } from "../_components/V3/Illustrations";
+import { DiscordCTA } from "../_components/V3/DiscordCTA";
 
 /**
  * /best-practices · hub for the three AI coding-tool cheat sheets.
@@ -175,6 +176,8 @@ export default function BestPracticesPage() {
           sheets each stand on their own and cite their own source docs.
         </p>
       </section>
+
+      <DiscordCTA context="cheat-sheet-reader" />
 
       <section className="mt-20 border-t border-[#1F242B] pt-12">
         <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#9CA3AF]">

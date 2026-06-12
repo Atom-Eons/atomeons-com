@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DiscordCTA } from "../../_components/V3/DiscordCTA";
 
 /**
  * /research/decoded — arXiv papers translated to plain English.
@@ -234,6 +235,10 @@ export default function DecodedIndex() {
           </ol>
         </div>
       </section>
+
+      <div className="mx-auto max-w-5xl px-6 pb-16">
+        <DiscordCTA context="research-reader" />
+      </div>
     </main>
   );
 }

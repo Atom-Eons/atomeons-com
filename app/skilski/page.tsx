@@ -393,9 +393,26 @@ export default function Skilski() {
             >
               see pricing
             </a>
+            <a
+              href="https://www.instagram.com/skil.ski/"
+              target="_blank"
+              rel="noopener"
+              className="font-mono text-sm uppercase tracking-[0.18em] text-[#22F0D5] hover:underline"
+              aria-label="follow skil.ski on Instagram"
+            >
+              @skil.ski on instagram
+            </a>
           </div>
           <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.18em] text-[#6B7779]">
-            skil.ski · 2026 AtomEons Systems Laboratory · marco island, fl
+            skil.ski · 2026 AtomEons Systems Laboratory · marco island, fl ·{" "}
+            <a
+              href="https://www.instagram.com/skil.ski/"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-[#22F0D5]"
+            >
+              instagram.com/skil.ski
+            </a>
           </p>
         </div>
       </section>

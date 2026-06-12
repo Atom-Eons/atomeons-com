@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DiscordCTA } from "../_components/V3/DiscordCTA";
 
 export const metadata: Metadata = {
   title: "The lab · physical workspace · daily routine",
@@ -260,6 +261,10 @@ export default function LabPage() {
           </div>
         </div>
       </section>
+
+      <div className="mx-auto max-w-5xl px-6 pb-16">
+        <DiscordCTA context="general" />
+      </div>
     </main>
   );
 }

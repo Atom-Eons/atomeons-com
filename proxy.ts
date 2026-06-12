@@ -118,6 +118,12 @@ const REDIRECTS: Record<string, string> = {
   "/discoveries": "/innovations",
   "/firsts": "/innovations",
   "/brag": "/innovations",
+  // Discord aliases · Wave 70 · 2026-06-12 · all common synonyms route
+  // to the operator-curated /discord landing
+  "/chat": "/discord",
+  "/community": "/discord",
+  "/server": "/discord",
+  "/dc": "/discord",
   // Mindrest brand · /trip rebranded 2026-06-06 · keep inbound links alive
   "/trip": "/mindrest",
   "/trip/experience": "/mindrest/experience",

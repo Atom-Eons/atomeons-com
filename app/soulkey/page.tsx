@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AutoGlyph } from "../_components/V3/Illustrations";
+import { DiscordCTA } from "../_components/V3/DiscordCTA";
 
 /**
  * /soulkey · the canonical AtomEons identity architecture.
@@ -567,6 +568,8 @@ export default function SoulkeyPage() {
           ))}
         </ol>
       </section>
+
+      <DiscordCTA context="soulkey-reader" />
 
       {/* STANDARDS CITED */}
       <section className="mt-20 border-t border-[#1F242B] pt-12">

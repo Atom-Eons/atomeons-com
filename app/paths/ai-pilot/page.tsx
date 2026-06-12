@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EnrollForm } from "../../_components/V3/EnrollForm";
+import { DiscordCTA } from "../../_components/V3/DiscordCTA";
 import { AutoGlyph } from "../../_components/V3/Illustrations";
 
 /**
@@ -135,6 +136,8 @@ export default function AiPilotTrackPage() {
           permanent name in the alumni registry.
         </p>
       </section>
+
+      <DiscordCTA context="path-graduate" />
 
       <section className="mt-20 border-t border-[#1F242B] pt-12">
         <div className="grid gap-4 md:grid-cols-2">
