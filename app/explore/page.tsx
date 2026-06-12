@@ -112,8 +112,8 @@ const TRACKS: Track[] = [
       {
         hero: {
           href: "/orangebox",
-          title: "ORANGEBOX Version 1",
-          description: "Local-first Claude cockpit · $99 perpetual · §4A no-SaaS license · 14-department architecture · code-signed Windows installer.",
+          title: "ORANGE³ · v1.0.0",
+          description: "Sovereign agentic OS for Claude · FREE always · §4A no-SaaS license · 14-department architecture · code-signed Windows installer.",
         },
         followups: [
           { href: "/orangebox-primer", label: "Vendor security primer · for CISOs" },

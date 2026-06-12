@@ -82,9 +82,9 @@ const SHIPPED: Receipt[] = [
     metric: "Builds shipped (Orangebox)",
     value: "v1.0.0-beta",
     evidence: "github.com/AtomEons/orangebox/releases",
-    href: "https://github.com/AtomEons/orangebox/releases",
+    href: "https://github.com/AtomEons/ORANGEBOX",
     detail:
-      "Windows installer, code-signed cert, SHA-256 stamped binary. Free this week, then $99 perpetual under §4A no-SaaS.",
+      "Windows installer, code-signed cert, SHA-256 stamped binary. FREE always under §4A no-SaaS perpetual license.",
   },
 ];
 

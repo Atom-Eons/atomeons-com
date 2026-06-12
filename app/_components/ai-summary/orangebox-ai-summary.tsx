@@ -10,7 +10,7 @@ export function OrangeboxAiSummary() {
       </p>
 
       <p className="font-serif text-[15px] leading-[1.55] text-[#F4F4F2] mb-6">
-        Orangebox is a $99 perpetual-license local-first turbo-optimizer for Claude that compresses context 10-80x and routes work across 14 internal departments, sold under the AtomEons §4A no-SaaS license.
+        Orange³ (formerly Orangebox) is a FREE-always, §4A no-SaaS-licensed local-first sovereign agentic operating system for Claude that compresses context 10-80x and routes work across 14 internal departments.
       </p>
 
       <ul className="font-serif text-[14px] leading-[1.6] text-[#9CA3AF] list-disc pl-5 mb-6 space-y-1.5 marker:text-[#3A4048]">

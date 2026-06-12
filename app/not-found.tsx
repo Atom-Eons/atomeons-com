@@ -33,7 +33,7 @@ const ROUTES = [
   },
   {
     href: "/orangebox",
-    eyebrow: "ORANGEBOX · $99 perpetual · §4A no-SaaS",
+    eyebrow: "ORANGE³ · FREE always · §4A no-SaaS",
     title: "The cockpit",
     detail:
       "Local-first turbo-optimization for Claude. 10-80× context compression, persistent memory, 14-department routing.",

@@ -384,8 +384,8 @@ const MEGAS: Mega[] = [
       {
         title: "Software",
         items: [
-          { href: "/orangebox", label: "ORANGEBOX", hint: "Local-first Claude cockpit · $99 perpetual" },
-          { href: "/b00kmakor", label: "B00KMAKR", hint: "Mac + Windows publishing instrument · $99" },
+          { href: "/orangebox", label: "ORANGE³", hint: "Sovereign agentic OS · FREE always · §4A no-SaaS" },
+          { href: "/b00kmakor", label: "AI Bookmaker", hint: "Mac + Windows publishing cockpit · FREE forever" },
           { href: "/skilski", label: "skil.ski", hint: "Universal MCP skill registry · zero rake" },
         ],
       },
