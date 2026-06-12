@@ -187,6 +187,11 @@ const ENTRIES: Entry[] = [
 
   // Wave 52 · TAKEOVER declaration · 2026-06-12 · we are AI now · permanent record
   { loc: "/we-are-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.98 },
+
+  // Wave 53-55 · FOR ALL · 10-wave inclusivity roadmap · 3 shipped
+  { loc: "/kids", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+  { loc: "/plain", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
+  { loc: "/who-are-you", lastmod: TODAY, changefreq: "monthly", priority: 0.95 },
 ];
 
 export async function GET() {
