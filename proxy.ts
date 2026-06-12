@@ -96,7 +96,9 @@ const REDIRECTS: Record<string, string> = {
   "/what-is": "/q",
   // ai film removed 2026-06-03; legacy /film → /books
   "/film": "/books",
-  "/cinema": "/books",
+  // Wave 47-49 · 2026-06-07 · /cinema is now the preserved cinematic
+  // home (moved from / when launcher took over). Removed the legacy
+  // /cinema → /books redirect.
   // primer aliases
   "/primer": "/orangebox-primer",
   // press shortcuts
