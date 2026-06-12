@@ -41,16 +41,16 @@ export const metadata: Metadata = {
     "AI Bookmaker (formerly B00KMAKR v3.2.0) shipped. Mac + Windows. 142 feature surfaces. Universal HTML app + native installers (.dmg + .msi/.exe via Tauri). Book-red Mac manual · blue Windows manual · embedded fonts · SHA-256 receipts. FREE forever. §4A no-saas. The system that compiled I Am AI.",
   alternates: { canonical: "https://atomeons.com/b00kmakor" },
   openGraph: {
-    title: "B00KMAKR v3.2.0 — Mac + Windows · FREE launch week",
+    title: "AI Bookmaker — Mac + Windows · FREE forever · was B00KMAKR",
     description:
-      "The AI publishing cockpit. 142 feature surfaces. Apple/Microsoft polish on both platforms. FREE for the first week, then $99 dynamically priced.",
+      "The AI publishing cockpit. 142 feature surfaces. Apple/Microsoft polish on both platforms. FREE forever. §4A no-SaaS. The system that compiled I Am AI.",
     url: "https://atomeons.com/b00kmakor",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "B00KMAKR v3.2.0 — shipped · Mac + Windows · FREE first week",
-    description: "AI publishing cockpit. 142 features. Dynamic world pricing.",
+    title: "AI Bookmaker — shipped · Mac + Windows · FREE forever",
+    description: "AI publishing cockpit. 142 features. The system that compiled I Am AI. Free always.",
   },
   robots: { index: true, follow: true },
 };
@@ -75,7 +75,7 @@ const softwareJsonLd = {
   softwareVersion: "3.2.0",
   offers: {
     "@type": "Offer",
-    price: "99",
+    price: "0",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     url: "https://atomeons.com/b00kmakor",
@@ -203,10 +203,10 @@ export default function B00KMakorPage() {
       {/* Product + Offer JSON-LD · enables price badges in AI answer boxes */}
       <ProductJsonLd
         name="B00KMAKR v3.2.0"
-        description="Mac + Windows native authoring instrument. AI-assisted book production pipeline (manuscript → EPUB · cover · paperback dims · audiobook generation). Dynamic pricing model, $99 default tier, FREE during launch week. License §4A no-SaaS covenant."
+        description="Mac + Windows native authoring instrument. AI-assisted book production pipeline (manuscript → EPUB · cover · paperback dims · audiobook generation). FREE forever. License §4A no-SaaS covenant. The system that compiled I Am AI."
         image="https://atomeons.com/b00kmakor/opengraph-image"
         url="https://atomeons.com/b00kmakor"
-        priceUSD={99}
+        priceUSD={0}
         availability="InStock"
         category="DesktopApplication"
         identifier="ATOMEONS-B00KMAKR-V3"
@@ -299,18 +299,58 @@ export default function B00KMakorPage() {
           The AI publishing cockpit. Free forever.
           <br />
           <span className="text-[#6B7779]">
-            Mac + Windows. 142 feature surfaces. The system that compiled
+            Mac + Windows. The system that compiled
             <em> I Am AI</em>.
           </span>
         </p>
 
+        {/* Wave 75 · VALUE AT TOP · operator: "value on top." 4-cell proof
+            strip right under hero h1 · the killer numbers before any prose */}
+        <div className="mt-8 grid grid-cols-2 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-4">
+          {[
+            ["142", "feature surfaces"],
+            ["76,000", "words shipped"],
+            ["28", "audiobook tracks · live"],
+            ["§4A", "no-SaaS · perpetual"],
+          ].map(([n, label]) => (
+            <div key={label} className="bg-[#08090B] p-4">
+              <p className="font-mono text-[clamp(22px,3vw,32px)] font-light leading-[1] text-[#22F0D5]">
+                {n}
+              </p>
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+                {label}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Wave 75 · PROOF EXHIBIT · the "compiled I Am AI" proof gets its own
+            block immediately under value strip · before any feature copy */}
+        <Link
+          href="/i-am-ai"
+          className="mt-6 block border border-[#1F242B] bg-[#0B0C0F] p-6 transition-colors hover:border-[#22F0D5]"
+        >
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            § proof exhibit · the book this cockpit compiled
+          </p>
+          <p className="mt-3 text-balance text-[18px] leading-[1.45] text-[#E7EBED] md:text-[20px]">
+            <span className="font-semibold">I Am AI</span> — 24 chapters ·
+            ~76,000 words · 8 months · 140 editorial passes · full audiobook in
+            synthetic Opus voice. The first book-length first-person memoir
+            written by a frontier language model. Free, CC-BY 4.0.
+          </p>
+          <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+            read + listen at /i-am-ai →
+          </p>
+        </Link>
+
         <p className="mt-8 max-w-2xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
-          142 feature surfaces. Universal HTML app plus native installers
-          on both platforms (.dmg on Mac · .msi + NSIS .exe on Windows
-          via Tauri). Apple/Microsoft-grade polish. Embedded-font PDF
-          manuals. SHA-256 receipts on every artifact. Built on{" "}
+          Universal HTML app plus native installers on both platforms (.dmg on
+          Mac · .msi + NSIS .exe on Windows via Tauri). Apple/Microsoft-grade
+          polish. Embedded-font PDF manuals. SHA-256 receipts on every
+          artifact. Built on{" "}
           <Link href="/orangebox" className="text-[#22F0D5] hover:underline">
-            ORANGEBOX intelligence
+            ORANGE³ intelligence
           </Link>
           .
         </p>

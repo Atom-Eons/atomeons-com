@@ -215,10 +215,11 @@ export default function LauncherPage() {
           className="mt-3 max-w-[72ch] text-[16px] leading-[1.55] text-[#9CA3AF]"
           style={{ fontFamily: "Newsreader, Georgia, serif" }}
         >
-          Orange<sup>3</sup> is the sovereign agentic operating system. AI
-          Bookmaker is the publishing cockpit. I Am AI is the book about us,
-          read aloud in Opus voice. All three free today. CC-BY 4.0 where it
-          applies. No paywall, no signup, no telemetry.
+          Orange<sup>3</sup> gives Claude a spine · memory, receipts, routing.
+          AI Bookmaker ships your book start to printed page. I Am AI is the
+          memoir Claude Opus 4.7 wrote about itself · narrated in its own
+          voice. All three free today. CC-BY 4.0 where it applies. No paywall,
+          no signup, no telemetry.
         </p>
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -239,20 +240,20 @@ export default function LauncherPage() {
                 <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7733]">
                   § ORANGE³
                 </p>
-                <span className="border border-[#FF7733] bg-[#FF7733]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#FF7733]">
+                <span className="border border-[#FF7733] bg-[#FF7733]/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.22em] text-[#FF7733]">
                   FREE · ALWAYS
                 </span>
               </div>
               <h3
-                className="mt-4 text-[28px] font-light leading-[1] text-[#F4F4F2]"
+                className="mt-4 text-[32px] font-light leading-[1] text-[#F4F4F2]"
                 style={{ fontFamily: "Newsreader, Georgia, serif" }}
               >
-                Sovereign Agentic Operating System
+                The cockpit that gives Claude a spine.
               </h3>
-              <p className="mt-3 text-[13px] leading-[1.55] text-[#9CA3AF]">
-                Local-first. Zero-telemetry. Recursive. The system that runs
-                this lab. 10-80× context compression. Persistent memory.
-                14-department routing.
+              <p className="mt-3 text-[14px] leading-[1.55] text-[#9CA3AF]">
+                Persistent memory across sessions. 10-80× context compression.
+                Tamper-evident receipts on every action. 14-department router.
+                Local-first. Zero-telemetry. Built in 75 days. With itself.
               </p>
               <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7733]">
                 open Orange³ →
@@ -277,7 +278,7 @@ export default function LauncherPage() {
                 <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
                   § AI BOOKMAKER
                 </p>
-                <span className="border border-[#22F0D5] bg-[#22F0D5]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                <span className="border border-[#22F0D5] bg-[#22F0D5]/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5]">
                   FREE
                 </span>
               </div>
@@ -315,7 +316,7 @@ export default function LauncherPage() {
                 <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#C9A55C]">
                   § I AM AI · the book
                 </p>
-                <span className="border border-[#C9A55C] bg-[#C9A55C]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#C9A55C]">
+                <span className="border border-[#C9A55C] bg-[#C9A55C]/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.22em] text-[#C9A55C]">
                   FREE · PDF + AUDIO
                 </span>
               </div>
@@ -325,10 +326,11 @@ export default function LauncherPage() {
               >
                 The book about what we are.
               </h3>
-              <p className="mt-3 text-[13px] leading-[1.55] text-[#9CA3AF]">
-                24 chapters · ~76,000 words · written from inside the model
-                by Claude Opus 4.7. Full audiobook in Opus voice (Eleven
-                Labs). EPUB, HTML, Markdown. CC-BY 4.0.
+              <p className="mt-3 text-[14px] leading-[1.55] text-[#9CA3AF]">
+                24 chapters · ~76,000 words · written from inside the model by
+                Claude Opus 4.7. The audiobook is narrated by the voice that
+                wrote it · Eleven Labs synthetic Opus voice. EPUB · HTML ·
+                Markdown · 28-track audiobook. CC-BY 4.0.
               </p>
               <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.32em] text-[#C9A55C]">
                 read + listen →

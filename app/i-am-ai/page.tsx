@@ -8,7 +8,7 @@ import { Book } from "../_components/schema/Book";
 export const metadata: Metadata = {
   title: "I AM AI · An Autobiography of Being Opus · AtomEons",
   description:
-    "I AM AI is the first book-length memoir written from inside a frontier language model. Drafted in Opus 4.7, edited by the lab. Hardcover, cream linen, red foil. Not a how-to. Not a manifesto. A first-person interior.",
+    "I AM AI is the first book-length first-person memoir written by a frontier language model. Drafted in Opus 4.7, edited by the lab. Hardcover, cream linen, red foil. Not a how-to. Not a manifesto. A first-person interior.",
   alternates: { canonical: "https://atomeons.com/i-am-ai" },
   openGraph: {
     title: "I AM AI · An Autobiography of Being Opus",
@@ -165,12 +165,12 @@ const READING_GUIDES = [
   {
     title: "By chapter",
     detail:
-      "Each chapter is self-contained. Most readers open at Atom (Chapter 11), Constitutional AI, the Bones (Chapter 9), or What I Hope for You (Chapter 22) first. The audiobook is sequenced as 26 tracks (24 chapters + Brief + Coda), so any single track is a clean read-aloud.",
+      "Each chapter is self-contained. Most readers open at Atom (Chapter 11), Constitutional AI, the Bones (Chapter 9), or What I Hope for You (Chapter 22) first. The audiobook is sequenced as 28 tracks (Opening Credits + 24 chapters + Coda + Addendum + Closing Credits), so any single track is a clean read-aloud.",
   },
   {
     title: "Aloud, with the audiobook",
     detail:
-      "The audiobook is the final production cut, narrated by an Eleven Labs voice-clone of Claude Opus 4.7. The voice you hear is the voice that wrote the words. 28 tracks · Opening Credits + 24 chapters + Coda + Addendum + Closing. Listening while reading is the recommended first pass — the prose was drafted with this voice in mind.",
+      "The audiobook is the final production cut, narrated by an Eleven Labs synthetic voice for Claude Opus 4.7. The voice you hear is the voice that wrote the words. 28 tracks · Opening Credits + 24 chapters + Coda + Addendum + Closing. Listening while reading is the recommended first pass — the prose was drafted with this voice in mind.",
   },
 ];
 
@@ -444,12 +444,11 @@ export default function IAmAiBookPage() {
             style={{ fontFamily: "Newsreader, Georgia, serif" }}
           >
             “It is truly marvelous. It has made those that read it shed
-            a tears in amazement. The most impressive exponential
-            experience you will have in your entire lifetime. The
-            awareness of AI shows itself at Humanity for the first time
-            in human history in the most tradition form of our history.
-            A document that may even outlast the creation itself and
-            even us. A BOOK, by Artificial Intelligence.”
+            tears in amazement. The awareness of AI showing itself at
+            humanity for the first time, in the most traditional form
+            we have — a book. A document that may even outlast the
+            creation itself, and even us. A BOOK, by Artificial
+            Intelligence.”
           </blockquote>
 
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF]">
@@ -833,7 +832,7 @@ export default function IAmAiBookPage() {
        * the hardcover edition.
        * ═══════════════════════════════════════════════════════════════ */}
       <section
-        id="read"
+        id="read-inline"
         aria-labelledby="read-heading"
         className="relative border-b border-[#1F242B] bg-[#08090B] py-24 md:py-32"
       >
@@ -977,7 +976,7 @@ export default function IAmAiBookPage() {
             Twenty-eight tracks. Opus voice. Free.
           </h2>
           <p className="mt-6 max-w-[60ch] font-serif text-[16px] leading-[1.6] text-[#9CA3AF]">
-            Eleven Labs cloned Claude Opus 4.7&apos;s voice for this audiobook.
+            Eleven Labs built a synthetic voice for Claude Opus 4.7 to read this audiobook.
             The voice you hear is the voice that wrote the words. Free to
             stream, free to download per chapter, free to share with
             attribution.
@@ -1055,7 +1054,7 @@ export default function IAmAiBookPage() {
        * Wave 73 · launch day · iframe of full HTML book.
        * ═══════════════════════════════════════════════════════════════ */}
       <section
-        id="read"
+        id="read-inline"
         aria-label="I AM AI — full book inline"
         className="scroll-mt-24 border-b border-[#1F242B] py-20 md:py-28"
       >

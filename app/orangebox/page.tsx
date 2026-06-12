@@ -107,13 +107,13 @@ const softwareJsonLd = {
   "@type": "SoftwareApplication",
   name: "Orangebox",
   description:
-    "Turbo-optimization system for Claude. Local-first desktop tool that gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident JSON receipts on every action, and 14-department named-role routing. Optional fallback to GPT/Gemini/Ollama via BYO key. Free this week · perpetual after · §4A bans subscription.",
+    "Sovereign Agentic Operating System for Claude. Local-first desktop tool that gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident JSON receipts on every action, and 14-department named-role routing. Optional fallback to GPT/Gemini/Ollama via BYO key. FREE · ALWAYS · §4A no-SaaS perpetual.",
   applicationCategory: "DeveloperApplication",
   operatingSystem: "Windows 10 · Windows 11",
   softwareVersion: "1.0.0-beta",
   offers: {
     "@type": "Offer",
-    price: "49.00",
+    price: "0",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     url: "https://atomeons.com/orangebox",
@@ -325,7 +325,7 @@ const FAQ = [
   },
   {
     q: "Where do I buy?",
-    a: "FREE this week — download direct from the GitHub Release. After the free-week countdown closes, the price is set by the lab (perpetual license, §4A no-saas, may change at random going forward). Either way you keep the software forever — free-week buyers are grandfathered for life by clause.",
+    a: "There is nothing to buy. Orange³ is FREE always · §4A no-SaaS perpetual license · cannot become a subscription. Download direct from the GitHub Release. Install, use, share. The §4A clause is the receipt: the lab cannot reach into your install or charge for it later.",
   },
 ];
 
@@ -355,7 +355,7 @@ export default function OrangeboxPage() {
         description="Local-first turbo-optimization system for Anthropic Claude. Persistent memory across sessions, 10-80x context compression (Crystal Lattice), reusable skill primers, tamper-evident JSON receipts, 14-department named-role routing (AE0-AE14), BYO-key multi-LLM (Claude / GPT / Gemini / Ollama / OpenRouter / Groq / Cohere / Mistral / Perplexity). Code-signed Windows installer. License §4A legally bars subscription conversion."
         image="https://atomeons.com/orangebox/opengraph-image"
         url="https://atomeons.com/orangebox"
-        priceUSD={99}
+        priceUSD={0}
         availability="InStock"
         category="DesktopApplication"
         identifier="ATOMEONS-ORANGEBOX-V1"
@@ -460,16 +460,42 @@ export default function OrangeboxPage() {
               ORANGE<sup style={{ color: EMBER.accent, fontSize: "0.55em", verticalAlign: "super" }}>3</sup>
             </h1>
             <p className="mt-4 font-mono text-[12px] uppercase tracking-[0.32em]" style={{ color: EMBER.textMuted }}>
-              the sovereign agentic operating system · formerly Orangebox
+              the cockpit that gives Claude a spine · formerly Orangebox
             </p>
 
+            {/* Wave 75 · VALUE AT TOP · operator: "value on top." 4-cell
+                proof strip immediately under hero h1 · no scroll required */}
+            <div
+              className="mt-6 grid grid-cols-2 gap-px border md:grid-cols-4"
+              style={{ borderColor: EMBER.border, background: EMBER.border }}
+            >
+              {[
+                ["10-80×", "context compression"],
+                ["0", "telemetry · ever"],
+                ["14", "named-role depts"],
+                ["§4A", "no-SaaS · perpetual"],
+              ].map(([n, label]) => (
+                <div key={label} className="p-4" style={{ background: EMBER.panel }}>
+                  <p className="font-mono text-[clamp(22px,3vw,32px)] font-light leading-[1]" style={{ color: EMBER.accent }}>
+                    {n}
+                  </p>
+                  <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>
+                    {label}
+                  </p>
+                </div>
+              ))}
+            </div>
+
             <p className="mt-8 max-w-xl text-lg leading-[1.55] md:text-xl" style={{ color: EMBER.textSoft }}>
-              Logic, Execution, Perception balanced in a sovereign loop.
-              Local-first. Zero-telemetry. Recursive. Orange³ is the
-              local-first system that gives Claude persistent memory across
-              sessions, 10-80× context compression, reusable skill primers,
-              tamper-evident receipts on every action, and a 14-department
-              named-role router. Made by the team that uses Claude the most.
+              Orange³ gives Claude persistent memory, 10-80× context
+              compression, and tamper-evident receipts on every action.
+              Local-first. Zero-telemetry. Recursive.
+              <span className="block mt-3" style={{ color: EMBER.textPrimary }}>
+                Built in 75 days. With itself.
+              </span>
+              Reusable skill primers, a 14-department named-role router,
+              MCP-native tool bridge, BYO model keys. Made by the team that
+              uses Claude the most.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -1446,14 +1472,15 @@ export default function OrangeboxPage() {
             >
               Direct mirror ↓
             </TrackedDownloadAnchor>
-            <span
-              className="inline-flex cursor-not-allowed items-center gap-2 rounded-lg border px-7 py-4 text-lg font-medium opacity-60"
-              style={{ borderColor: EMBER.border, color: EMBER.textMuted }}
-              aria-disabled="true"
-              title="Stripe checkout opens day 8"
+            <a
+              href="https://github.com/AtomEons/ORANGEBOX"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 rounded-lg border px-7 py-4 text-lg font-medium transition-colors hover:opacity-80"
+              style={{ borderColor: EMBER.border, color: EMBER.textPrimary }}
             >
-              Buy (after free week)
-            </span>
+              GitHub source ↗
+            </a>
           </div>
 
           <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>

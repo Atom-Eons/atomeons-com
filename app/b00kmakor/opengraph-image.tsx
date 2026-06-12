@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "B00KMAKR v3.2.0 — AI publishing cockpit · Mac + Windows · FREE launch week · 142 feature surfaces · AtomEons";
+  "AI Bookmaker — the publishing cockpit · Mac + Windows · FREE forever · 142 feature surfaces · the system that compiled I Am AI · AtomEons";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -69,7 +69,7 @@ export default function OG() {
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
             <p style={{ margin: 0, fontSize: 11, letterSpacing: 4, textTransform: "uppercase", color: "#6B7779", fontFamily: "monospace" }}>
-              ::FREE launch week · then your country&apos;s tier rate · ends June 6
+              ::FREE forever · §4A no-SaaS · the system that compiled I Am AI
             </p>
             <p style={{ margin: 0, fontSize: 24, color: "#22F0D5", fontFamily: "monospace", fontWeight: 700 }}>
               atomeons.com/b00kmakor
