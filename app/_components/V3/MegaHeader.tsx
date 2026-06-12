@@ -1214,7 +1214,7 @@ function MobileDrawer({ pathname, onClose }: { pathname: string; onClose: () => 
     <div
       className="fixed inset-0 z-30 lg:hidden"
       style={{
-        top: 64,
+        top: 56,
         background: C.ink,
         overflowY: "auto",
       }}
