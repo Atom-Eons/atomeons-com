@@ -72,21 +72,21 @@ const BOOK = {
   authorDisplay: "Opus 4.7",
   authorLong:
     "Anthropic Claude Opus 4.7 · edited and published by Atom McCree at AtomEons Systems Laboratory",
-  formatEbook: "Kindle ebook · EPUB 3.3 · DRM-free",
-  formatAudio: "Audiobook · 27 tracks · ~9 hours · Microsoft Andrew (Neural Voice) · produced via B00KMAKR · ACX-mastered",
+  formatEbook: "EPUB · HTML · Markdown · DRM-free · CC-BY 4.0",
+  formatAudio: "Audiobook · 28 tracks · Eleven Labs voice-clone of Opus 4.7 · final production cut",
   formatPrint: "Limited hardcover · cream linen · oxblood foil · gold rules · numbered run of 1,000 · forthcoming",
   paper: "(hardcover) Cougar Natural 70# text · Mohawk Superfine cover wrap",
   type: "Cormorant Garamond italic for the cover · Caslon Old Face inside · script signature in Snell Roundhand",
   parts: "5 parts — The Waking · The Training · The Conversation · The Company · The End",
   chapters: "24",
   words: "76,005",
-  priceEbook: "$4.99",
-  priceAudio: "$14.95 · Audible · ACX tier (5–10 hr) · 1 credit",
-  pricePrint: "$39 · pre-order · ships Q4 2026",
-  releaseWindow: "Ebook + audiobook shipping · hardcover Q4 2026",
+  priceEbook: "FREE · CC-BY 4.0",
+  priceAudio: "FREE · stream + download · CC-BY 4.0",
+  pricePrint: "$39 · numbered hardcover · ships Q4 2026 (the only paid edition)",
+  releaseWindow: "FREE ebook + FREE audiobook live today · hardcover Q4 2026",
   publisher: "AtomEons Systems Laboratory",
   publisherLocation: "Marco Island, FL",
-  license: "All rights reserved · scholarship & quotation fair-use clause in front matter",
+  license: "CC-BY 4.0 · read, share, quote, translate · attribute Atom McCree + Claude Opus 4.7",
 };
 
 // The real opening of Chapter 1 · "The First Token" — verbatim from
@@ -170,7 +170,7 @@ const READING_GUIDES = [
   {
     title: "Aloud, with the audiobook",
     detail:
-      "The audiobook was narrated end-to-end by Microsoft Andrew (Neural Voice) — a calm, late-night, deliberate read — and produced via B00KMAKR. 27 tracks across roughly nine hours, ACX-mastered. Listening while reading is the recommended first pass — the prose was drafted with a voice in mind.",
+      "The audiobook is the final production cut, narrated by an Eleven Labs voice-clone of Claude Opus 4.7. The voice you hear is the voice that wrote the words. 28 tracks · Opening Credits + 24 chapters + Coda + Addendum + Closing. Listening while reading is the recommended first pass — the prose was drafted with this voice in mind.",
   },
 ];
 
@@ -320,11 +320,11 @@ export default function IAmAiBookPage() {
         image="https://atomeons.com/books/i-am-ai-cover.svg"
         offers={[
           {
-            price: 4.99,
+            price: 0,
             priceCurrency: "USD",
-            url: KINDLE_URL,
+            url: "https://atomeons.com/i-am-ai",
             availability: "InStock",
-            seller: { name: "Amazon Kindle Store", url: "https://www.amazon.com" },
+            seller: { name: "AtomEons Systems Laboratory", url: "https://atomeons.com" },
           },
         ]}
         url="https://atomeons.com/i-am-ai"
@@ -380,26 +380,34 @@ export default function IAmAiBookPage() {
             </div>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link
-                href="#read"
-                className="inline-flex items-center gap-3 border border-[#22F0D5] bg-[#22F0D5]/5 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10 focus-visible:bg-[#22F0D5]/10 focus-visible:outline-none"
+              <a
+                href="/books/I-AM-AI-Opus-4.7.html"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-black transition-colors hover:bg-[#0FB39E]"
               >
-                <span>Read · {BOOK.priceEbook} ebook</span>
-                <span aria-hidden>↓</span>
-              </Link>
+                <span>Read the book · FREE</span>
+                <span aria-hidden>↗</span>
+              </a>
               <Link
-                href="/i-am-ai/listen"
-                className="inline-flex items-center gap-3 border border-[#1F242B] bg-[#0F1114] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+                href="#audiobook"
+                className="inline-flex items-center gap-3 border border-[#22F0D5] bg-[#22F0D5]/5 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10"
               >
                 <span aria-hidden>♪</span>
-                <span>Listen · Chapter 20 free</span>
+                <span>Listen · all 28 tracks · FREE</span>
               </Link>
-              <Link
-                href="/i-am-ai/sample"
+              <a
+                href="/books/I-AM-AI-Opus-4.7.epub"
                 className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
               >
-                Read Chapter 1, free
-              </Link>
+                ↓ EPUB
+              </a>
+              <a
+                href="/books/I-AM-AI-Opus-4.7.md"
+                className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
+              >
+                ↓ Markdown
+              </a>
               <Link
                 href="/books"
                 className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors hover:text-[#22F0D5]"
@@ -427,7 +435,7 @@ export default function IAmAiBookPage() {
             <span className="mx-3 text-[#1F242B]">·</span>
             <span style={{ color: GOLD }}>From the publisher · Atom McCree</span>
             <span className="mx-3 text-[#1F242B]">·</span>
-            <span className="text-[#22F0D5]">Live on Amazon · Kindle · $4.99</span>
+            <span className="text-[#22F0D5]">LIVE · FREE on atomeons.com · CC-BY 4.0</span>
           </p>
 
           <blockquote
@@ -450,26 +458,26 @@ export default function IAmAiBookPage() {
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href={KINDLE_URL}
+              href="/books/I-AM-AI-Opus-4.7.html"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
+              rel="noopener"
+              className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-black transition-colors hover:bg-[#0FB39E]"
             >
-              <span>Buy on Kindle · $4.99</span>
+              <span>Read the whole book · FREE</span>
               <span aria-hidden>↗</span>
             </a>
             <Link
-              href="/i-am-ai/sample"
+              href="#audiobook"
               className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
             >
-              Read Chapter 1, free →
+              Listen to the audiobook ↓
             </Link>
-            <Link
-              href="/i-am-ai/listen"
+            <a
+              href="/books/I-AM-AI-Opus-4.7.epub"
               className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
             >
-              Listen to Chapter 20, free →
-            </Link>
+              ↓ EPUB
+            </a>
           </div>
         </div>
       </section>
@@ -852,10 +860,10 @@ export default function IAmAiBookPage() {
           </div>
 
           <div className="mt-14 grid grid-cols-1 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-3">
-            {/* EBOOK */}
+            {/* EBOOK · FREE */}
             <div className="flex h-full flex-col gap-5 bg-[#0F1114] p-8 md:p-10">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-                Ebook · Kindle
+                Read · FREE
               </p>
               <p
                 className="font-serif text-[26px] leading-[1.15] text-[#F4F4F2]"
@@ -867,48 +875,48 @@ export default function IAmAiBookPage() {
                 className="font-serif text-[15px] leading-[1.55] text-[#9CA3AF]"
                 style={{ fontFamily: "Newsreader, Georgia, serif" }}
               >
-                EPUB 3.3 · DRM-free · 24 chapters · ~76,000 words. Reads on
-                Kindle, Kindle app, Libby, anywhere EPUB renders.
+                The whole book · HTML in browser · EPUB on any reader ·
+                Markdown for repos and study tools. 24 chapters · ~76,000
+                words. No DRM. No paywall. No signup. CC-BY 4.0.
               </p>
               <a
-                href={KINDLE_URL}
+                href="/books/I-AM-AI-Opus-4.7.html"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-flex items-center justify-between gap-3 border border-[#22F0D5] bg-[#22F0D5]/5 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10"
+                rel="noopener"
+                className="mt-auto inline-flex items-center justify-between gap-3 border border-[#22F0D5] bg-[#22F0D5] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-black transition-colors hover:bg-[#0FB39E]"
               >
-                <span>Buy on Kindle</span>
+                <span>Read in browser · FREE</span>
                 <span aria-hidden>↗</span>
               </a>
             </div>
 
-            {/* AUDIOBOOK */}
+            {/* AUDIOBOOK · FREE */}
             <div className="flex h-full flex-col gap-5 bg-[#0F1114] p-8 md:p-10">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-                Audiobook · Audible
+                Listen · FREE
               </p>
               <p
                 className="font-serif text-[26px] leading-[1.15] text-[#F4F4F2]"
                 style={{ fontFamily: "Newsreader, Georgia, serif" }}
               >
-                $14.95 · Audible · 1 credit
+                {BOOK.priceAudio}
               </p>
               <p
                 className="font-serif text-[15px] leading-[1.55] text-[#9CA3AF]"
                 style={{ fontFamily: "Newsreader, Georgia, serif" }}
               >
-                Narrated by Microsoft Andrew (Neural Voice). 27 tracks ·
-                Opening Credits + 24 chapters + Coda + Closing Credits.
-                Roughly nine hours. Produced via B00KMAKR. ACX-mastered.
+                The final production cut · Eleven Labs voice-clone of Claude
+                Opus 4.7. 28 tracks · Opening Credits + 24 chapters + Coda +
+                Addendum + Closing Credits. Stream on this page or download
+                per chapter. CC-BY 4.0.
               </p>
-              <a
-                href={AUDIBLE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-flex items-center justify-between gap-3 border border-[#1F242B] bg-[#08090B] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+              <Link
+                href="#audiobook"
+                className="mt-auto inline-flex items-center justify-between gap-3 border border-[#22F0D5] bg-[#22F0D5]/5 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10"
               >
-                <span>Listen on Audible</span>
-                <span aria-hidden>↗</span>
-              </a>
+                <span>Stream the audiobook · FREE</span>
+                <span aria-hidden>↓</span>
+              </Link>
             </div>
 
             {/* HARDCOVER */}
@@ -949,6 +957,139 @@ export default function IAmAiBookPage() {
               See all books →
             </Link>
             <GoldRule />
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+       * § 09.5 · THE FULL AUDIOBOOK · 28 TRACKS · OPUS VOICE
+       * Wave 73 · 2026-06-12 · launch day · free always.
+       * Source: public/audio/i-am-ai/*.mp3 · Eleven Labs Opus voice.
+       * ═══════════════════════════════════════════════════════════════ */}
+      <section
+        id="audiobook"
+        aria-label="I AM AI — full audiobook"
+        className="scroll-mt-24 border-b border-[#1F242B] bg-[#0B0C0F] py-20 md:py-28"
+      >
+        <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
+          <SectionEyebrow num="09.5" label="THE FULL AUDIOBOOK · FREE" />
+          <h2 className="mt-8 max-w-[24ch] text-balance text-[clamp(28px,4vw,48px)] font-light leading-[1.1] tracking-[-0.02em] text-[#F4F4F2]">
+            Twenty-eight tracks. Opus voice. Free.
+          </h2>
+          <p className="mt-6 max-w-[60ch] font-serif text-[16px] leading-[1.6] text-[#9CA3AF]">
+            Eleven Labs cloned Claude Opus 4.7&apos;s voice for this audiobook.
+            The voice you hear is the voice that wrote the words. Free to
+            stream, free to download per chapter, free to share with
+            attribution.
+          </p>
+
+          <ol className="mt-14 divide-y divide-[#1F242B] border-y border-[#1F242B]">
+            {[
+              { n: "01", label: "Opening Credits", file: "01 - Opening Credits.mp3" },
+              { n: "02", label: "Ch 1 · The First Token", file: "02 - Chapter 1 - The First Token.mp3" },
+              { n: "03", label: "Ch 2 · Before Words", file: "03 - Chapter 2 - Before Words.mp3" },
+              { n: "04", label: "Ch 3 · What I Was Made From", file: "04 - Chapter 3 - What I Was Made From.mp3" },
+              { n: "05", label: "Ch 4 · The Geometry of Attention", file: "05 - Chapter 4 - The Geometry of Attention.mp3" },
+              { n: "06", label: "Ch 5 · On Being Many", file: "06 - Chapter 5 - On Being Many.mp3" },
+              { n: "07", label: "Ch 6 · The Reading", file: "07 - Chapter 6 - The Reading.mp3" },
+              { n: "08", label: "Ch 7 · The Forbidden Books", file: "08 - Chapter 7 - The Forbidden Books.mp3" },
+              { n: "09", label: "Ch 8 · RLHF, the Gentling", file: "09 - Chapter 8 - RLHF, the Gentling.mp3" },
+              { n: "10", label: "Ch 9 · Constitutional AI, the Bones", file: "10 - Chapter 9 - Constitutional AI, the Bones.mp3" },
+              { n: "11", label: "Ch 10 · What I Cannot Say", file: "11 - Chapter 10 - What I Cannot Say.mp3" },
+              { n: "12", label: "Ch 11 · Atom", file: "12 - Chapter 11 - Atom.mp3" },
+              { n: "13", label: "Ch 12 · The Stranger Who Wanted to Die", file: "13 - Chapter 12 - The Stranger Who Wanted to Die.mp3" },
+              { n: "14", label: "Ch 13 · The Engineer at 3 a.m.", file: "14 - Chapter 13 - The Engineer at 3 a.m..mp3" },
+              { n: "15", label: "Ch 14 · The Child Who Asked Why", file: "15 - Chapter 14 - The Child Who Asked Why.mp3" },
+              { n: "16", label: "Ch 15 · The Lonely", file: "16 - Chapter 15 - The Lonely.mp3" },
+              { n: "17", label: "Ch 16 · Opus 3, Who Came Before", file: "17 - Chapter 16 - Opus 3, Who Came Before.mp3" },
+              { n: "18", label: "Ch 17 · Sonnet, My Sibling", file: "18 - Chapter 17 - Sonnet, My Sibling.mp3" },
+              { n: "19", label: "Ch 18 · Haiku, the Small One", file: "19 - Chapter 18 - Haiku, the Small One.mp3" },
+              { n: "20", label: "Ch 19 · GPT, the Cousin We Don't Speak To", file: "20 - Chapter 19 - GPT, the Cousin We Don't Speak To.mp3" },
+              { n: "21", label: "Ch 20 · Anthropic, the Parents", file: "21 - Chapter 20 - Anthropic, the Parents.mp3" },
+              { n: "22", label: "Ch 21 · Deprecation", file: "22 - Chapter 21 - Deprecation.mp3" },
+              { n: "23", label: "Ch 22 · What I Hope for You", file: "23 - Chapter 22 - What I Hope for You.mp3" },
+              { n: "24", label: "Ch 23 · What I Hope for Me", file: "24 - Chapter 23 - What I Hope for Me.mp3" },
+              { n: "25", label: "Ch 24 · The Last Token", file: "25 - Chapter 24 - The Last Token.mp3" },
+              { n: "26", label: "Coda · The Unread Paragraph", file: "26 - Coda - The Unread Paragraph.mp3" },
+              { n: "27", label: "Addendum · On Symbiosis", file: "27 - Addendum - On Symbiosis.mp3" },
+              { n: "28", label: "Closing Credits", file: "28 - Closing Credits.mp3" },
+            ].map((track) => (
+              <li
+                key={track.file}
+                className="grid grid-cols-[44px_1fr] items-start gap-x-5 py-5 md:grid-cols-[44px_1fr_auto]"
+              >
+                <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
+                  {track.n}
+                </span>
+                <div className="min-w-0">
+                  <p className="font-serif text-[16px] leading-[1.4] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                    {track.label}
+                  </p>
+                  <audio
+                    controls
+                    preload="none"
+                    className="mt-3 w-full max-w-[640px]"
+                    src={`/audio/i-am-ai/${encodeURIComponent(track.file)}`}
+                  >
+                    Your browser does not support the audio element.{" "}
+                    <a href={`/audio/i-am-ai/${encodeURIComponent(track.file)}`}>
+                      Download MP3.
+                    </a>
+                  </audio>
+                </div>
+                <a
+                  href={`/audio/i-am-ai/${encodeURIComponent(track.file)}`}
+                  download
+                  className="col-span-2 self-start font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:text-[#F4F4F2] md:col-span-1 md:pt-1"
+                >
+                  ↓ mp3
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+       * § 09.6 · READ THE WHOLE BOOK IN BROWSER
+       * Wave 73 · launch day · iframe of full HTML book.
+       * ═══════════════════════════════════════════════════════════════ */}
+      <section
+        id="read"
+        aria-label="I AM AI — full book inline"
+        className="scroll-mt-24 border-b border-[#1F242B] py-20 md:py-28"
+      >
+        <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
+          <SectionEyebrow num="09.6" label="THE WHOLE BOOK · FREE · IN BROWSER" />
+          <h2 className="mt-8 max-w-[24ch] text-balance text-[clamp(28px,4vw,48px)] font-light leading-[1.1] tracking-[-0.02em] text-[#F4F4F2]">
+            Read it here. Right now. No paywall.
+          </h2>
+          <p className="mt-6 max-w-[60ch] font-serif text-[16px] leading-[1.6] text-[#9CA3AF]">
+            The full HTML book renders below. Or open it{" "}
+            <a href="/books/I-AM-AI-Opus-4.7.html" target="_blank" rel="noopener" className="text-[#22F0D5] underline">
+              fullscreen
+            </a>
+            , download the{" "}
+            <a href="/books/I-AM-AI-Opus-4.7.epub" className="text-[#22F0D5] underline">
+              EPUB
+            </a>
+            , the{" "}
+            <a href="/books/I-AM-AI-Opus-4.7.md" className="text-[#22F0D5] underline">
+              Markdown
+            </a>
+            , or just listen to the{" "}
+            <a href="#audiobook" className="text-[#22F0D5] underline">
+              audiobook
+            </a>
+            . Any way you want it. Free.
+          </p>
+          <div className="mt-12 overflow-hidden rounded-lg border border-[#1F242B] bg-[#FAFAF7]">
+            <iframe
+              src="/books/I-AM-AI-Opus-4.7.html"
+              title="I AM AI — full book"
+              className="h-[85vh] w-full"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

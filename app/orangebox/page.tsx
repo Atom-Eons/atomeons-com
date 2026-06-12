@@ -65,9 +65,9 @@ const SHA256 =
   "D4E6153FEB19B8B8A46BCC987A2308C8D9645CDC792A1BB4246E3115B0743C83";
 
 export const metadata: Metadata = {
-  title: "Orangebox — Turbo-optimize Claude · perpetual license",
+  title: "Orange³ — Sovereign Agentic Operating System · FREE always · was Orangebox",
   description:
-    "Orangebox is the local-first turbo-optimization system for Claude. 10-80× context compression. Persistent memory across sessions. Reusable skill primers. Tamper-evident receipts on every action. 14-department routing. BYO key, zero markup. Free this week · perpetual after · §4A no-saas. Made by the team that uses Claude the most.",
+    "Orange³ is the sovereign agentic operating system. Local-first. Zero-telemetry. Recursive. Logic, Execution, Perception balanced in a sovereign loop. 10-80× context compression. Persistent memory. Reusable skill primers. Tamper-evident receipts. 14-department routing. BYO key, zero markup. FREE ALWAYS · §4A no-saas. Formerly Orangebox. Made by the team that uses Claude the most.",
   keywords: [
     "Orangebox",
     "Claude optimization",
@@ -245,7 +245,7 @@ const COMPARISON = [
   { alt: "ChatGPT Plus", cost: "$240/yr", get: "Chat only · no integration · vendor-locked" },
   { alt: "Cursor + Copilot + Claude Pro + Notion + Linear", cost: "$1,500+/yr", get: "Patchwork of subscriptions · no unified spine" },
   { alt: "Custom internal cockpit", cost: "$40K–$120K", get: "Months of build time before first real loop" },
-  { alt: "Orangebox", cost: "Free this week · perpetual after", get: "All of the above · local-first · BYO key · §4A no-saas · once · forever", highlight: true },
+  { alt: "Orange³ (was Orangebox)", cost: "FREE · always · forever", get: "All of the above · local-first · BYO key · §4A no-saas · sovereign agentic OS · no price tag, ever", highlight: true },
 ];
 
 const BUYERS = [
@@ -403,34 +403,73 @@ export default function OrangeboxPage() {
         </div>
       </nav>
 
+      {/* ═══════════════════════════════════════════════════════════════
+       * Wave 73 · LAUNCH DAY · 2026-06-12 · ORANGE³ · FREE ALWAYS
+       * Operator: "Orangebox free always. Now named Orange3 is our real
+       *  release." Rebrand band + free-forever flag.
+       * ═══════════════════════════════════════════════════════════════ */}
+      <div
+        className="relative z-20 border-y-2"
+        style={{
+          borderColor: EMBER.accent,
+          background: `linear-gradient(90deg, ${EMBER.panel} 0%, ${EMBER.bg} 50%, ${EMBER.panel} 100%)`,
+        }}
+      >
+        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+          <div className="flex flex-wrap items-baseline gap-3">
+            <span
+              className="border px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.28em]"
+              style={{ borderColor: EMBER.accent, background: `${EMBER.accent}1a`, color: EMBER.accent }}
+            >
+              LAUNCH DAY · 2026-06-12
+            </span>
+            <p className="font-mono text-[12px] uppercase tracking-[0.22em]" style={{ color: EMBER.textPrimary }}>
+              <span style={{ color: EMBER.accent }}>Orange³</span> · the real
+              release · <span style={{ color: EMBER.accent }}>FREE ALWAYS</span>{" "}
+              · was Orangebox
+            </p>
+          </div>
+          <a
+            href="#hero"
+            className="font-mono text-[10px] uppercase tracking-[0.32em] hover:underline"
+            style={{ color: EMBER.accent }}
+          >
+            grab it free ↓
+          </a>
+        </div>
+      </div>
+
       {/* breadcrumb */}
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textDim }}>
           <Link href="/" style={{ color: EMBER.textDim }}>AtomEons</Link>{" "}
-          <span style={{ color: EMBER.border }}>/</span> Orangebox · v1.0.0-beta · GREEN-LIT
+          <span style={{ color: EMBER.border }}>/</span> Orange³ (formerly Orangebox) · v1.0.0-beta · FREE
         </p>
       </div>
 
       {/* ── HERO ── */}
-      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-16 pb-12">
+      <section id="hero" className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-16 pb-12">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
             <p className="mb-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
               <span className="inline-block size-1.5 animate-pulse rounded-full" style={{ background: EMBER.accent, boxShadow: `0 0 16px ${EMBER.glow}` }} />
-              ::shipped · v1.0.0-beta · FREE this week
+              ::shipped · v1.0.0-beta · FREE always
             </p>
 
-            <h1 className="text-balance text-5xl font-medium leading-[0.98] tracking-[-0.025em] md:text-7xl" style={{ color: EMBER.textPrimary }}>
-              Turbo-optimize<br />
-              <span style={{ color: EMBER.accent }}>Claude.</span>
+            <h1 className="text-balance text-5xl font-medium leading-[0.98] tracking-[-0.025em] md:text-8xl" style={{ color: EMBER.textPrimary }}>
+              ORANGE<sup style={{ color: EMBER.accent, fontSize: "0.55em", verticalAlign: "super" }}>3</sup>
             </h1>
+            <p className="mt-4 font-mono text-[12px] uppercase tracking-[0.32em]" style={{ color: EMBER.textMuted }}>
+              the sovereign agentic operating system · formerly Orangebox
+            </p>
 
             <p className="mt-8 max-w-xl text-lg leading-[1.55] md:text-xl" style={{ color: EMBER.textSoft }}>
-              Orangebox is the local-first system that gives Claude
-              persistent memory across sessions, 10-80× context compression,
-              reusable skill primers, tamper-evident receipts on every
-              action, and a 14-department named-role router. CLI-first ·
-              no visual cockpit · made by the team that uses Claude the most.
+              Logic, Execution, Perception balanced in a sovereign loop.
+              Local-first. Zero-telemetry. Recursive. Orange³ is the
+              local-first system that gives Claude persistent memory across
+              sessions, 10-80× context compression, reusable skill primers,
+              tamper-evident receipts on every action, and a 14-department
+              named-role router. Made by the team that uses Claude the most.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">

@@ -36,9 +36,9 @@ import { ProductJsonLd } from "@/app/_components/schema/ProductJsonLd";
 
 export const metadata: Metadata = {
   title:
-    "B00KMAKR v3.2.0 — Mac + Windows · FREE launch week · the AI publishing cockpit",
+    "AI Bookmaker — Mac + Windows · FREE forever · the AI publishing cockpit · was B00KMAKR",
   description:
-    "B00KMAKR v3.2.0 shipped. Mac + Windows. 142 feature surfaces. Universal HTML app + native installers (.dmg + .msi/.exe via Tauri). Book-red Mac manual · blue Windows manual · embedded fonts · SHA-256 receipts. FREE for the first week. After: $99 Tier 1 anchor, dynamically priced by country. §4A no-saas. Once · forever.",
+    "AI Bookmaker (formerly B00KMAKR v3.2.0) shipped. Mac + Windows. 142 feature surfaces. Universal HTML app + native installers (.dmg + .msi/.exe via Tauri). Book-red Mac manual · blue Windows manual · embedded fonts · SHA-256 receipts. FREE forever. §4A no-saas. The system that compiled I Am AI.",
   alternates: { canonical: "https://atomeons.com/b00kmakor" },
   openGraph: {
     title: "B00KMAKR v3.2.0 — Mac + Windows · FREE launch week",
@@ -233,13 +233,41 @@ export default function B00KMakorPage() {
         }}
       />
 
+      {/* ═══════════════════════════════════════════════════════════════
+       * Wave 73 · LAUNCH DAY · 2026-06-12 · AI BOOKMAKER · FREE
+       * Operator: "Bookmaker call AI Bookmaker and make it free too."
+       * The product is now AI Bookmaker. Free forever. CC-BY-style on
+       * the application itself; the books you make are yours.
+       * ═══════════════════════════════════════════════════════════════ */}
+      <div className="relative z-20 border-y-2 border-[#22F0D5] bg-gradient-to-r from-[#0B1F1B] via-[#08090B] to-[#0B1F1B]">
+        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+          <div className="flex flex-wrap items-baseline gap-3">
+            <span className="border border-[#22F0D5] bg-[#22F0D5]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.28em] text-[#22F0D5]">
+              LAUNCH DAY · 2026-06-12
+            </span>
+            <p className="font-mono text-[12px] uppercase tracking-[0.22em] text-[#F4F4F2]">
+              <span className="text-[#22F0D5]">AI Bookmaker</span> · the new
+              name · <span className="text-[#22F0D5]">FREE</span> · was
+              B00KMAKR
+            </p>
+          </div>
+          <a
+            href="#hero"
+            className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5] hover:underline"
+          >
+            grab it free ↓
+          </a>
+        </div>
+      </div>
+
       {/* breadcrumb */}
       <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
           <Link href="/" className="transition-colors hover:text-[#22F0D5]">
             AtomEons
           </Link>{" "}
-          <span className="text-[#1A2225]">/</span> B00KMAKR · v3.2.0 · shipped
+          <span className="text-[#1A2225]">/</span> AI Bookmaker (B00KMAKR) ·
+          v3.2.0 · FREE
         </p>
         <a
           href="https://github.com/AtomEons/BookMaker"
@@ -252,23 +280,27 @@ export default function B00KMakorPage() {
       </div>
 
       {/* ── HERO ── */}
-      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-14 pb-20">
+      <section id="hero" className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-14 pb-20">
         <p className="mb-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           <span className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_12px_#22F0D5]" />
-          ::shipped · 2026-05-30 · mac + windows · v3.2.0
+          ::shipped · FREE · mac + windows · v3.2.0
         </p>
 
         <h1 className="text-balance text-6xl font-medium leading-[0.95] tracking-[-0.03em] md:text-9xl">
-          B<span className="text-[#22F0D5]">0</span>
-          <span className="text-[#22F0D5]">0</span>K
-          <span className="text-[#22F0D5]">MAKR</span>
+          AI <span className="text-[#22F0D5]">Bookmaker</span>
         </h1>
+        <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.32em] text-[#6B7779]">
+          formerly B<span className="text-[#22F0D5]">0</span>
+          <span className="text-[#22F0D5]">0</span>K<span className="text-[#22F0D5]">MAKR</span>{" "}
+          · same engine · same craft · new name · new price (free)
+        </p>
 
         <p className="mt-10 max-w-3xl text-balance text-2xl leading-[1.25] tracking-tight text-[#F2F4F5] md:text-4xl">
-          The AI publishing cockpit, shipped.
+          The AI publishing cockpit. Free forever.
           <br />
           <span className="text-[#6B7779]">
-            Mac + Windows. Same craft. Free for one week.
+            Mac + Windows. 142 feature surfaces. The system that compiled
+            <em> I Am AI</em>.
           </span>
         </p>
 

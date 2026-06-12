@@ -40,6 +40,13 @@ const REDIRECTS: Record<string, string> = {
   "/oranged": "/orangebox",
   "/orangbox": "/orangebox",
   "/orabgebox": "/orangebox",
+  // Wave 73 · 2026-06-12 · Orange³ rebrand
+  "/orange3": "/orangebox",
+  "/orange-3": "/orangebox",
+  "/orangecubed": "/orangebox",
+  "/sovereign": "/orangebox",
+  "/sovereign-os": "/orangebox",
+  "/sovereign-agentic-os": "/orangebox",
   // legacy BLUEB0X naming (the v1.3 audit flagged these as stale)
   "/blueb0x": "/orangebox",
   "/bluebox": "/orangebox",
@@ -62,6 +69,14 @@ const REDIRECTS: Record<string, string> = {
   "/opus": "/i-am-ai",
   "/opus47": "/i-am-ai",
   "/autobiography": "/i-am-ai",
+  // Wave 73 · 2026-06-12 · AI Bookmaker rebrand (was B00KMAKR)
+  "/ai-bookmaker": "/b00kmakor",
+  "/ai-book-maker": "/b00kmakor",
+  "/aibookmaker": "/b00kmakor",
+  "/bookmaker": "/b00kmakor",
+  "/book-maker": "/b00kmakor",
+  "/b00kmakr": "/b00kmakor",
+  "/bookmakr": "/b00kmakor",
   // free-sample alias + the manuscript Markdown
   "/chapter-1": "/i-am-ai/sample",
   "/chapter1": "/i-am-ai/sample",

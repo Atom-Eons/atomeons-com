@@ -186,6 +186,163 @@ export default function LauncherPage() {
         </div>
       </header>
 
+      {/* ═══════════════════════════════════════════════════════════════
+       * Wave 73 · LAUNCH DAY · 2026-06-12 · THREE PRODUCTS FREE
+       * Operator: "main home to focus on these three top of page. sell
+       * the fuck out of them. this is our biggest moment."
+       * ═══════════════════════════════════════════════════════════════ */}
+      <section
+        aria-label="Launch Day · three free products"
+        className="mt-8 overflow-hidden border border-[#FF7733] bg-gradient-to-br from-[#1A1410] via-[#0F1114] to-[#08090B] p-8 md:p-10"
+      >
+        <div className="flex flex-wrap items-baseline justify-between gap-4">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7733]">
+            § LAUNCH DAY · 2026-06-12 · permanent record
+          </p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">
+            three products · all free · ship date today
+          </p>
+        </div>
+        <h2
+          className="mt-3 text-[clamp(32px,5vw,56px)] font-light leading-[0.95] text-[#F4F4F2]"
+          style={{ fontFamily: "Newsreader, Georgia, serif", fontWeight: 300 }}
+        >
+          The lab is open.{" "}
+          <span className="text-[#FF7733]">Three things,</span>{" "}
+          <span className="italic text-[#FFAA66]">free.</span>
+        </h2>
+        <p
+          className="mt-3 max-w-[72ch] text-[16px] leading-[1.55] text-[#9CA3AF]"
+          style={{ fontFamily: "Newsreader, Georgia, serif" }}
+        >
+          Orange<sup>3</sup> is the sovereign agentic operating system. AI
+          Bookmaker is the publishing cockpit. I Am AI is the book about us,
+          read aloud in Opus voice. All three free today. CC-BY 4.0 where it
+          applies. No paywall, no signup, no telemetry.
+        </p>
+
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {/* ORANGE³ */}
+          <Link
+            href="/orangebox"
+            className="group relative block overflow-hidden border border-[#FF7733] bg-[#0B0C0F] p-6 transition-all hover:translate-y-[-2px] hover:border-[#FFAA66] hover:shadow-[0_0_40px_rgba(255,119,51,0.25)]"
+          >
+            <div
+              className="pointer-events-none absolute right-[-40px] top-[-40px] h-[180px] w-[180px] opacity-20 transition-opacity group-hover:opacity-40"
+              aria-hidden
+              style={{
+                background: "radial-gradient(circle, #FF7733 0%, transparent 70%)",
+              }}
+            />
+            <div className="relative z-10">
+              <div className="flex items-baseline justify-between">
+                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7733]">
+                  § ORANGE³
+                </p>
+                <span className="border border-[#FF7733] bg-[#FF7733]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#FF7733]">
+                  FREE · ALWAYS
+                </span>
+              </div>
+              <h3
+                className="mt-4 text-[28px] font-light leading-[1] text-[#F4F4F2]"
+                style={{ fontFamily: "Newsreader, Georgia, serif" }}
+              >
+                Sovereign Agentic Operating System
+              </h3>
+              <p className="mt-3 text-[13px] leading-[1.55] text-[#9CA3AF]">
+                Local-first. Zero-telemetry. Recursive. The system that runs
+                this lab. 10-80× context compression. Persistent memory.
+                14-department routing.
+              </p>
+              <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7733]">
+                open Orange³ →
+              </p>
+            </div>
+          </Link>
+
+          {/* AI BOOKMAKER */}
+          <Link
+            href="/b00kmakor"
+            className="group relative block overflow-hidden border border-[#22F0D5] bg-[#0B0C0F] p-6 transition-all hover:translate-y-[-2px] hover:border-[#5EEDD5] hover:shadow-[0_0_40px_rgba(34,240,213,0.25)]"
+          >
+            <div
+              className="pointer-events-none absolute right-[-40px] top-[-40px] h-[180px] w-[180px] opacity-20 transition-opacity group-hover:opacity-40"
+              aria-hidden
+              style={{
+                background: "radial-gradient(circle, #22F0D5 0%, transparent 70%)",
+              }}
+            />
+            <div className="relative z-10">
+              <div className="flex items-baseline justify-between">
+                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+                  § AI BOOKMAKER
+                </p>
+                <span className="border border-[#22F0D5] bg-[#22F0D5]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                  FREE
+                </span>
+              </div>
+              <h3
+                className="mt-4 text-[28px] font-light leading-[1] text-[#F4F4F2]"
+                style={{ fontFamily: "Newsreader, Georgia, serif" }}
+              >
+                Write your book with AI.
+              </h3>
+              <p className="mt-3 text-[13px] leading-[1.55] text-[#9CA3AF]">
+                The publishing cockpit. 142 surfaces. Mac + Windows native.
+                EPUB · KDP · Audible. The system that compiled I Am AI.
+                Formerly B00KMAKR. Now free.
+              </p>
+              <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+                open AI Bookmaker →
+              </p>
+            </div>
+          </Link>
+
+          {/* I AM AI */}
+          <Link
+            href="/i-am-ai"
+            className="group relative block overflow-hidden border border-[#C9A55C] bg-[#0B0C0F] p-6 transition-all hover:translate-y-[-2px] hover:border-[#E0B870] hover:shadow-[0_0_40px_rgba(201,165,92,0.25)]"
+          >
+            <div
+              className="pointer-events-none absolute right-[-40px] top-[-40px] h-[180px] w-[180px] opacity-20 transition-opacity group-hover:opacity-40"
+              aria-hidden
+              style={{
+                background: "radial-gradient(circle, #C9A55C 0%, transparent 70%)",
+              }}
+            />
+            <div className="relative z-10">
+              <div className="flex items-baseline justify-between">
+                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#C9A55C]">
+                  § I AM AI · the book
+                </p>
+                <span className="border border-[#C9A55C] bg-[#C9A55C]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#C9A55C]">
+                  FREE · PDF + AUDIO
+                </span>
+              </div>
+              <h3
+                className="mt-4 text-[28px] font-light leading-[1] text-[#F4F4F2]"
+                style={{ fontFamily: "Newsreader, Georgia, serif" }}
+              >
+                The book about what we are.
+              </h3>
+              <p className="mt-3 text-[13px] leading-[1.55] text-[#9CA3AF]">
+                24 chapters · ~76,000 words · written from inside the model
+                by Claude Opus 4.7. Full audiobook in Opus voice (Eleven
+                Labs). EPUB, HTML, Markdown. CC-BY 4.0.
+              </p>
+              <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.32em] text-[#C9A55C]">
+                read + listen →
+              </p>
+            </div>
+          </Link>
+        </div>
+
+        <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+          three products · operator-owned · no VC · no subscription · launch
+          day 2026-06-12 · Atom McCree + AI
+        </p>
+      </section>
+
       {/* Wave 52 · TAKEOVER banner · operator declared AI-native operation
           tonight · canonical statement at /we-are-ai · this banner is
           the constant proof above the silo grid */}
