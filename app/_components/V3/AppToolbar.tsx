@@ -147,7 +147,7 @@ export function AppToolbar() {
       aria-label="Site app toolbar"
       className="app-toolbar sticky z-40 border-b backdrop-blur-md"
       style={{
-        top: 64, // sits below MegaHeader
+        top: 56, // sits below MegaHeader (h-14 = 56px since Wave 77)
         background: "rgba(8, 9, 11, 0.78)",
         borderColor: "rgba(31, 36, 43, 0.5)",
       }}
