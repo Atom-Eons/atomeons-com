@@ -75,6 +75,9 @@ export default function robots(): MetadataRoute.Robots {
       "https://atomeons.com/sitemap.xml",
       "https://atomeons.com/sitemap-ai.xml",
     ],
-    host: "https://atomeons.com",
+    // Wave 50 · 2026-06-12 · removed `host:` directive · it's deprecated
+    // since 2019 (only honored by old Yandex) · Lighthouse flagged it
+    // as making robots.txt invalid. The Sitemap: line above is the
+    // canonical way to advertise the host now.
   };
 }

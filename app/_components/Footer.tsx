@@ -60,7 +60,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-7">
           {/* Brand block · 1 col */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-baseline gap-2" aria-label="Æ ATOMEONS · home">
+            <Link href="/" className="inline-flex items-baseline gap-2">
               <span aria-hidden className="flex items-baseline self-center">
                 <RouteSigil slug="/" size={22} accent="#22F0D5" />
               </span>

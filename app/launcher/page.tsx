@@ -14,6 +14,7 @@ import {
   WaveInterference,
 } from "../_components/V3/Illustrations2";
 import { SILOS, type Silo } from "../_lib/silos";
+import { ContinueCard } from "../_components/V3/ContinueCard";
 
 /**
  * /launcher · the home reframe · the lab as software.
@@ -184,6 +185,9 @@ export default function LauncherPage() {
           </div>
         </div>
       </header>
+
+      {/* Wave 51 · Continue card · resume where the visitor left off */}
+      <ContinueCard />
 
       {/* 9 silo tiles · 3 columns desktop · 2 tablet · 1 mobile */}
       <section className="mt-12">

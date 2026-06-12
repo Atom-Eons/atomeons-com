@@ -33,6 +33,8 @@ import { SearchInline } from "./_components/V3/SearchInline";
 import { MarkdownAlternateLink } from "./_components/V3/MarkdownAlternateLink";
 import { CopyForLlm } from "./_components/V3/CopyForLlm";
 import { FirstTimeChip } from "./_components/V3/FirstTimeChip";
+import { ContinueRecorder } from "./_components/V3/ContinueCard";
+import { SiloSwitcher } from "./_components/V3/SiloSwitcher";
 import { NotificationBar } from "./_components/V3/NotificationBar";
 import { AppToolbar } from "./_components/V3/AppToolbar";
 import { MatrixRain } from "./_components/V3/MatrixRain";
@@ -174,6 +176,13 @@ export default function RootLayout({
             shows nothing if visitor has already done the tour or
             dismissed the prompt. Top-left · subtle · Hick-respectful. */}
         <FirstTimeChip />
+        {/* Wave 51 · silent recorder · stamps localStorage on every
+            nav so the launcher's Continue card can resume. */}
+        <ContinueRecorder />
+        {/* Wave 47-49 · global Cmd-Shift-S silo switcher overlay.
+            Mounted here so it's available on every page including the
+            launcher itself. */}
+        <SiloSwitcher />
         {/* CopyForLlm · bottom-left floating button · copies the
             current page as XML-wrapped markdown for direct paste into
             Claude / ChatGPT / Gemini. 2026-06-06. */}
