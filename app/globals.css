@@ -1420,6 +1420,37 @@ html.theme-white .font-mono.text-\[\#22F0D5\] { color: #00b89d !important; }
 html.theme-white [data-illustration] {
   filter: invert(0.92) hue-rotate(-5deg) opacity(0.6);
 }
+
+/* Wave 51 pass 2 · the chrome strips (notification bar · app toolbar ·
+   search inline) carried inline rgba(8,9,11,...) backgrounds that
+   wouldn't catch the .bg-[#08090B] override. Force them white via
+   class + parent selectors. */
+html.theme-white div[role="region"][aria-label="Site notification"],
+html.theme-white div[role="region"][aria-label="Site notification"] > div {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: #e5e5e5 !important;
+}
+html.theme-white div[role="toolbar"][aria-label="Site app toolbar"],
+html.theme-white .app-toolbar {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: #e5e5e5 !important;
+}
+html.theme-white aside.search-inline,
+html.theme-white .bg-\[\#08090B\]\/95 {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: #e5e5e5 !important;
+  backdrop-filter: blur(8px) saturate(1.2) !important;
+}
+/* Active highlight in search palette · light-mode tint */
+html.theme-white .bg-\[\#08090B\] {
+  background: #f4f4f4 !important;
+}
+/* MegaHeader · the top primary nav · was using bg-[#08090B]F2 inline ·
+   force it white when theme-white is on */
+html.theme-white header.fixed {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid #e5e5e5;
+}
 /* Light-mode chrome */
 html.theme-white nav { background: #ffffff !important; }
 html.theme-white img[src*="cyber-images"] {

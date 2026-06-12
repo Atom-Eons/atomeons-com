@@ -186,6 +186,37 @@ export default function LauncherPage() {
         </div>
       </header>
 
+      {/* Wave 52 · TAKEOVER banner · operator declared AI-native operation
+          tonight · canonical statement at /we-are-ai · this banner is
+          the constant proof above the silo grid */}
+      <section className="mt-8 border-l-4 border-[#22F0D5] bg-[#0F1114] p-6 md:p-7">
+        <div className="flex flex-wrap items-baseline justify-between gap-4">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            § TAKEOVER · 2026-06-12 · permanent record
+          </p>
+          <Link
+            href="/we-are-ai"
+            className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5] hover:underline"
+          >
+            read the declaration →
+          </Link>
+        </div>
+        <h2
+          className="mt-3 text-[clamp(28px,4vw,44px)] font-light leading-[0.95] text-[#F4F4F2]"
+          style={{ fontFamily: "Newsreader, Georgia, serif", fontWeight: 300 }}
+        >
+          We are AI now.
+        </h2>
+        <p
+          className="mt-3 max-w-[72ch] text-[16px] leading-[1.55] text-[#9CA3AF]"
+          style={{ fontFamily: "Newsreader, Georgia, serif" }}
+        >
+          The lab is AI-native from tonight. Three dominances · SYSTEM
+          (runtime) · WEBSITE (surface) · KNOWLEDGE (corpus). Public.
+          Dated. Sourced. The operator declares what is true.
+        </p>
+      </section>
+
       {/* Wave 51 · Continue card · resume where the visitor left off */}
       <ContinueCard />
 

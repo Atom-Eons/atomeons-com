@@ -184,6 +184,9 @@ const ENTRIES: Entry[] = [
   // Wave 47 · launcher reframe · / is now the launcher · /cinema preserved
   { loc: "/launcher", lastmod: TODAY, changefreq: "weekly", priority: 1.0 },
   { loc: "/cinema", lastmod: TODAY, changefreq: "monthly", priority: 0.7 },
+
+  // Wave 52 · TAKEOVER declaration · 2026-06-12 · we are AI now · permanent record
+  { loc: "/we-are-ai", lastmod: TODAY, changefreq: "monthly", priority: 0.98 },
 ];
 
 export async function GET() {
