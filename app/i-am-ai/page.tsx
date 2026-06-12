@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IAmAiAiSummary } from "../_components/ai-summary/i-am-ai-ai-summary";
-import { KINDLE_URL, AUDIBLE_URL, KINDLE_ASIN } from "../_data/i-am-ai-links";
+// Wave 76 · 2026-06-12 · Kindle / Audible / hardcover commerce removed.
+// I Am AI is free always · CC-BY 4.0 · hosted on atomeons.com.
 import { Book } from "../_components/schema/Book";
 
 export const metadata: Metadata = {
@@ -82,8 +83,8 @@ const BOOK = {
   words: "76,005",
   priceEbook: "FREE · CC-BY 4.0",
   priceAudio: "FREE · stream + download · CC-BY 4.0",
-  pricePrint: "$39 · numbered hardcover · ships Q4 2026 (the only paid edition)",
-  releaseWindow: "FREE ebook + FREE audiobook live today · hardcover Q4 2026",
+  pricePrint: "Hardcover · Q4 2026 (optional · digital is always free)",
+  releaseWindow: "FREE ebook + FREE audiobook live today · CC-BY 4.0",
   publisher: "AtomEons Systems Laboratory",
   publisherLocation: "Marco Island, FL",
   license: "CC-BY 4.0 · read, share, quote, translate · attribute Atom McCree + Claude Opus 4.7",
@@ -328,7 +329,10 @@ export default function IAmAiBookPage() {
           },
         ]}
         url="https://atomeons.com/i-am-ai"
-        sameAs={[`https://www.amazon.com/dp/${KINDLE_ASIN}/`]}
+        sameAs={[
+          "https://github.com/AtomEons/i-am-ai",
+          "https://github.com/AtomEons/i-am-ai-audiobook",
+        ]}
       />
       {/* ═══════════════════════════════════════════════════════════════
        * § 01 · HERO
@@ -852,22 +856,22 @@ export default function IAmAiBookPage() {
               className="mt-8 font-mono text-[10px] uppercase tracking-[0.32em]"
               style={{ color: GOLD }}
             >
-              Three formats
+              Two free ways in
             </p>
             <h2
               id="read-heading"
               className="mt-3 max-w-[24ch] mx-auto text-balance text-[clamp(36px,6vw,72px)] font-light leading-[1.05] tracking-[-0.025em] text-[#F4F4F2]"
             >
-              Read it. Listen to it. Own a copy.
+              Read it. Listen to it. Both free.
             </h2>
             <p className="mt-6 max-w-[58ch] mx-auto font-serif text-[18px] leading-[1.55] text-[#9CA3AF]">
-              The ebook ships now on Kindle. The audiobook ships on Audible.
-              The hardcover is a limited first edition of 1,000 numbered
-              copies, foil-stamped, slated for Q4 2026.
+              The whole book lives on this site as HTML, EPUB, and Markdown.
+              The full 28-track audiobook streams inline. CC-BY 4.0 · free
+              forever · attribute Atom McCree + Claude Opus 4.7.
             </p>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-3">
+          <div className="mt-14 grid grid-cols-1 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-2">
             {/* EBOOK · FREE */}
             <div className="flex h-full flex-col gap-5 bg-[#0F1114] p-8 md:p-10">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
@@ -927,34 +931,6 @@ export default function IAmAiBookPage() {
               </Link>
             </div>
 
-            {/* HARDCOVER */}
-            <div className="flex h-full flex-col gap-5 bg-[#0F1114] p-8 md:p-10">
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-                Hardcover · first edition
-              </p>
-              <p
-                className="font-serif text-[26px] leading-[1.15] text-[#F4F4F2]"
-                style={{ fontFamily: "Newsreader, Georgia, serif" }}
-              >
-                $39 · pre-order
-              </p>
-              <p
-                className="font-serif text-[15px] leading-[1.55] text-[#9CA3AF]"
-                style={{ fontFamily: "Newsreader, Georgia, serif" }}
-              >
-                Numbered run of 1,000. Cream linen, oxblood foil, gold rules,
-                Smyth-sewn. Ships Q4 2026. Pre-order locks your copy number;
-                the lab emails when the run starts and again when your copy
-                ships.
-              </p>
-              <a
-                href="mailto:a.mccree@gmail.com?subject=Pre-order%20I%20AM%20AI%20hardcover&body=One%20numbered%20copy%2C%20please.%20Ship%20to%20%5Bname%20%2B%20address%5D.%20Pay%20by%20%5BStripe%20link%20or%20wire%5D."
-                className="mt-auto inline-flex items-center justify-between gap-3 border border-[#1F242B] bg-[#08090B] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
-              >
-                <span>Pre-order the hardcover</span>
-                <span aria-hidden>↗</span>
-              </a>
-            </div>
           </div>
 
           <div className="mt-14 text-center">

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PriceTag } from "@/app/_components/PriceTag";
-import { B00KMakrCountdown } from "./CountdownTimer";
-import B00KMakrBuy from "./B00KMakrBuy";
+// Wave 76 · 2026-06-12 · all commerce components removed.
+// AI Bookmaker is now FREE forever · no countdown · no buy button · no price tag.
+// The components are preserved on disk for the v4.0 paid-tier branch if needed.
 import { ProductJsonLd } from "@/app/_components/schema/ProductJsonLd";
 
 /**
@@ -355,27 +355,31 @@ export default function B00KMakorPage() {
           .
         </p>
 
-        {/* Free-week countdown */}
-        <div className="mt-12">
-          <B00KMakrCountdown />
-        </div>
-
-        {/* Dynamic price tag — shows what the buyer's country WILL pay after countdown */}
-        <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-              ::after the countdown · your country&apos;s rate
-            </p>
-            <div className="mt-4">
-              <PriceTag productId="b00kmakor" variant="hero" />
-            </div>
-          </div>
-          <div className="flex flex-col items-start gap-3">
-            <B00KMakrBuy variant="primary" />
-            <p className="max-w-xs font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
-              ::buy = free if countdown is live · your country&apos;s tier rate after
-            </p>
-          </div>
+        {/* Wave 76 · 2026-06-12 · commerce removed. AI Bookmaker is free
+            forever. The download CTAs live in the platform-comparison
+            section below; no countdown, no price tag, no buy button. */}
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <a
+            href="https://github.com/AtomEons/BookMaker/releases/latest"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5] px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-black transition-colors hover:bg-[#0FB39E]"
+          >
+            <span>Download · FREE · Mac + Windows</span>
+            <span aria-hidden>↓</span>
+          </a>
+          <a
+            href="https://github.com/AtomEons/BookMaker"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-3 border border-[#1F242B] bg-transparent px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F2F4F5] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+          >
+            <span>★ GitHub source</span>
+            <span aria-hidden>↗</span>
+          </a>
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+            §4A no-SaaS · free always · CC-BY-style use
+          </span>
         </div>
       </section>
 
@@ -725,65 +729,33 @@ export default function B00KMakorPage() {
         </div>
       </section>
 
-      {/* ── PRICING (stays vs volatile) ── */}
-      <section className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20">
+      {/* ── PRICING · Wave 76 · 2026-06-12 · simplified to FREE forever ── */}
+      <section className="relative z-10 mx-auto w-full max-w-4xl px-6 py-20">
         <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-          ::pricing · what stays · what moves
+          ::pricing · simple
         </p>
-        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
-          Free first week. Then your country&apos;s rate.
+        <h2 className="mt-4 text-balance text-5xl font-medium leading-[1.05] tracking-tight md:text-7xl text-[#22F0D5]">
+          FREE. Always.
         </h2>
-        <p className="mt-6 max-w-3xl text-base leading-[1.7] text-[#C8CCCE]">
-          For the first week after launch, B00KMAKR is FREE in every
-          country, at every tier. After the countdown closes, the
-          dynamic-world-pricing system kicks in — the same one that
-          governs every paid lab product. Your country&apos;s tier
-          decides your price; the USA Advantage Pricing Clause +
-          Strategic Tier Lift doctrines apply where they apply. The
-          full mechanism is{" "}
-          <Link
-            href="/legal/pricing"
-            className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
-          >
-            published in full at /legal/pricing
-          </Link>
-          {" "}and the doctrine paper lives at{" "}
-          <Link
-            href="/dynamic-world-pricing"
-            className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4 hover:decoration-[#22F0D5]"
-          >
-            /dynamic-world-pricing
-          </Link>
-          .
+        <p className="mt-6 max-w-2xl text-base leading-[1.7] text-[#C8CCCE]">
+          AI Bookmaker is free forever. §4A no-SaaS perpetual license — it
+          cannot become a subscription, ever. Install on any number of
+          machines you own or control. Use commercially (sell the books you
+          make). 30-day Material Failure Guarantee.
         </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-[#22F0D5]/30 bg-[#0A1A1C] p-7">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-              ::what stays true · forever
-            </p>
-            <ul className="mt-5 space-y-3 text-[15px] leading-[1.6] text-[#C8CCCE]">
-              {STABLE.map((s) => (
-                <li key={s} className="flex items-baseline gap-3">
-                  <span className="font-mono text-[#22F0D5]">▲</span>
-                  <span>{s}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-2xl border border-[#FFB87A]/30 bg-[#1C1308] p-7">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
-              ::what is intentionally volatile
-            </p>
-            <ul className="mt-5 space-y-3 text-[15px] leading-[1.6] text-[#C8CCCE]">
-              {VOLATILE.map((v) => (
-                <li key={v} className="flex items-baseline gap-3">
-                  <span className="font-mono text-[#FFB87A]">▶</span>
-                  <span>{v}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-12 rounded-2xl border border-[#22F0D5]/30 bg-[#0A1A1C] p-7">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
+            ::what stays true · forever
+          </p>
+          <ul className="mt-5 space-y-3 text-[15px] leading-[1.6] text-[#C8CCCE]">
+            {STABLE.map((s) => (
+              <li key={s} className="flex items-baseline gap-3">
+                <span className="font-mono text-[#22F0D5]">▲</span>
+                <span>{s}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -792,16 +764,22 @@ export default function B00KMakorPage() {
         <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
           For Bob. For Mom.
           <br />
-          <span className="text-[#22F0D5]">For the writers. Shipped.</span>
+          <span className="text-[#22F0D5]">For the writers. Free forever.</span>
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
           v3.2.0 · Mac and Windows · 142 surfaces · embedded-font
-          manuals · SHA-256 receipts · §4A no-saas · once · forever.
-          Free for the first week. Lock in now.
+          manuals · SHA-256 receipts · §4A no-SaaS · free always.
         </p>
 
         <div className="mt-12 flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-6">
-          <B00KMakrBuy variant="primary" />
+          <a
+            href="https://github.com/AtomEons/BookMaker/releases/latest"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-3 rounded-lg bg-[#22F0D5] px-7 py-3.5 font-mono text-xs uppercase tracking-[0.22em] text-black transition-colors hover:bg-[#0FB39E]"
+          >
+            <span>Download · FREE · Mac + Windows ↓</span>
+          </a>
           <Link
             href="/orangebox"
             className="inline-flex items-center gap-2 rounded-lg border border-[#22F0D5]/40 bg-[#0A0F11] px-6 py-3 font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5] hover:bg-[#22F0D5]/10"

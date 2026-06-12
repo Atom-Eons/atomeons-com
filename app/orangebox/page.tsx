@@ -57,8 +57,8 @@ const ASSETS = {
     "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/brand/theorangebox.png",
   exe: "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/v1.0.0-beta/OrangeboxSetup-1.0.0-win-x64.exe",
   cert: "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/v1.0.0-beta/AtomEons-CodeSigning.cer",
-  github: "https://github.com/AtomEons/orangebox",
-  ghRelease: "https://github.com/AtomEons/orangebox/releases/latest",
+  github: "https://github.com/AtomEons/ORANGEBOX",
+  ghRelease: "https://github.com/AtomEons/ORANGEBOX",
 } as const;
 
 const SHA256 =
@@ -321,7 +321,7 @@ const FAQ = [
   },
   {
     q: "How do I report a bug?",
-    a: "Open an issue on the public GitHub repo at github.com/AtomEons/orangebox, or email support@atomeons.com.",
+    a: "Open an issue on the public GitHub repo at github.com/AtomEons/ORANGEBOX, or email support@atomeons.com.",
   },
   {
     q: "Where do I buy?",
@@ -1156,64 +1156,39 @@ export default function OrangeboxPage() {
         </div>
       </section>
 
-      {/* ── PRICING ── */}
-      <section id="pricing" className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
+      {/* ── PRICING · Wave 76 · 2026-06-12 · single FREE ALWAYS card ── */}
+      <section id="pricing" className="relative z-10 mx-auto w-full max-w-4xl px-6 py-24 text-center">
         <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
-          ::pricing
+          ::pricing · simple
         </p>
-        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
-          Perpetual. Forever.
+        <h2 className="mt-4 text-balance text-5xl font-medium leading-[1.05] tracking-tight md:text-8xl" style={{ color: EMBER.accent }}>
+          FREE. Always.
         </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.7] md:text-lg" style={{ color: EMBER.textSoft }}>
+          Orange³ is free forever. §4A no-SaaS perpetual license · cannot
+          become a subscription, ever · no kill-switch, no activation, no
+          license-server. Use commercially, modify, redistribute. Just don&apos;t
+          turn it into SaaS.
+        </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {/* FREE BETA */}
-          <div className="rounded-2xl border p-7" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: EMBER.accentSoft }}>::launch week</p>
-            <h3 className="mt-4 text-3xl font-medium" style={{ color: EMBER.textPrimary }}>FREE preview</h3>
-            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>v1.0.0-beta · self-signed · this week only</p>
-            <ul className="mt-6 space-y-2 text-[14px] leading-[1.6]" style={{ color: EMBER.textSoft }}>
-              <li>▲ Full product</li>
-              <li>▲ Authenticode signed + Sectigo timestamp</li>
-              <li>▲ No signup, no email</li>
-              <li>▲ Free-week installs work forever</li>
-            </ul>
-          </div>
-
-          {/* $99 */}
-          <div
-            className="rounded-2xl border p-7"
-            style={{
-              borderColor: EMBER.accent,
-              background: `linear-gradient(135deg, ${EMBER.panel} 0%, ${EMBER.elevated} 100%)`,
-              boxShadow: `0 0 60px -10px ${EMBER.accent}66`,
-            }}
-          >
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: EMBER.accent }}>::week 2 onward</p>
-            <h3 className="mt-4 text-3xl font-medium" style={{ color: EMBER.textPrimary }}>Perpetual license</h3>
-            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>v1.0.1+ · Microsoft-signed · once · forever</p>
-            <ul className="mt-6 space-y-2 text-[14px] leading-[1.6]" style={{ color: EMBER.textSoft }}>
-              <li>▲ One-time payment</li>
-              <li>▲ All v1.x updates free</li>
-              <li>▲ Anti-SaaS Commitment</li>
-              <li>▲ 14-day refund window</li>
-              <li>▲ Microsoft-signed (Azure Trusted Signing)</li>
-            </ul>
-            <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textMuted }}>
-              ::Stripe checkout opens day 8
-            </p>
-          </div>
-
-          {/* TEAM (roadmap) */}
-          <div className="rounded-2xl border p-7 opacity-70" style={{ borderColor: EMBER.separator, background: EMBER.panel }}>
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: EMBER.textDim }}>::roadmap</p>
-            <h3 className="mt-4 text-3xl font-medium" style={{ color: EMBER.textSoft }}>Team / Hosted</h3>
-            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textDim }}>v2.x · v3.x · separate purchase events</p>
-            <ul className="mt-6 space-y-2 text-[14px] leading-[1.6]" style={{ color: EMBER.textMuted }}>
-              <li>○ Team multi-seat license (v2.x)</li>
-              <li>○ Optional hosted worker rail (v3.x)</li>
-              <li>○ Existing v1.x buyers stay at their original price for v1.x</li>
-            </ul>
-          </div>
+        <div
+          className="mx-auto mt-12 max-w-xl rounded-2xl border p-7 text-left"
+          style={{
+            borderColor: EMBER.accent,
+            background: `linear-gradient(135deg, ${EMBER.panel} 0%, ${EMBER.elevated} 100%)`,
+            boxShadow: `0 0 60px -10px ${EMBER.accent}66`,
+          }}
+        >
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: EMBER.accent }}>::what you get</p>
+          <h3 className="mt-4 text-3xl font-medium" style={{ color: EMBER.textPrimary }}>v1.0.0 · perpetual · free</h3>
+          <ul className="mt-6 space-y-2 text-[14px] leading-[1.6]" style={{ color: EMBER.textSoft }}>
+            <li>▲ Full product · no feature flags · no paywalls</li>
+            <li>▲ Authenticode signed + Sectigo timestamp</li>
+            <li>▲ No signup · no email · no telemetry</li>
+            <li>▲ All v1.x updates free</li>
+            <li>▲ §4A no-SaaS · works forever, no matter what</li>
+            <li>▲ BYO model keys · pay providers directly</li>
+          </ul>
         </div>
 
         {/* Comparison */}
