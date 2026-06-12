@@ -397,6 +397,15 @@ export default function IAmAiBookPage() {
                 <span>Listen · all 28 tracks · FREE</span>
               </Link>
               <a
+                href="https://github.com/AtomEons/i-am-ai"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-3 border border-[#1F242B] bg-transparent px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
+              >
+                <span>★ GitHub source</span>
+                <span aria-hidden>↗</span>
+              </a>
+              <a
                 href="/books/I-AM-AI-Opus-4.7.epub"
                 className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
               >
