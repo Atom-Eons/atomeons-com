@@ -13,7 +13,7 @@ export default function Page() {
     <main className="bg-[#08090B] text-[#F4F4F2] antialiased">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-4xl px-6 pt-20 pb-12 md:px-10 md:pt-28 md:pb-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]"><Link href="/learn/atlas" className="hover:text-[#22F0D5]">§ Atlas</Link><span className="mx-3 text-[#1F242B]">·</span><span className="text-[#22F0D5]">Retrieval · LLM application architecture</span></p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]"><Link href="/learn/atlas" className="hover:text-[#22F0D5]">§ Atlas</Link><span className="mx-3 text-[#1F242B]">·</span><span className="text-[#22F0D5]">Retrieval · LLM application architecture</span></p>
           <h1 className="mt-8 max-w-[26ch] text-balance text-[clamp(36px,6vw,72px)] font-extralight leading-[1.04] tracking-[-0.025em] text-[#F4F4F2]">RAG architectures — and why most of them fail</h1>
           <p className="mt-8 max-w-[64ch] font-serif text-[19px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>Retrieval-augmented generation puts the right documents in front of the model at the right moment. The architecture is simple; the failure modes are subtle; the production patterns that work are not the ones the demos show.</p>
         </div>
@@ -28,7 +28,7 @@ export default function Page() {
           <li className="border-l-2 border-[#22F0D5]/40 pl-5">Lewis, Perez, Piktus et al. <em>Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</em>. NeurIPS 2020. arXiv:2005.11401 — the original paper.</li>
           <li className="border-l-2 border-[#22F0D5]/40 pl-5">Liu, Lin, Hewitt et al. <em>Lost in the Middle: How Language Models Use Long Contexts</em>. TACL, arXiv:2307.03172, 2023.</li>
           <li className="border-l-2 border-[#22F0D5]/40 pl-5">Gao, Ma, Lin, Callan. <em>Precise Zero-Shot Dense Retrieval without Relevance Labels</em>. ACL 2023, arXiv:2212.10496 — HyDE.</li>
-          <li className="border-l-2 border-[#22F0D5]/40 pl-5">Anthropic. <em>Introducing Contextual Retrieval</em>, September 2024 — <span className="font-mono text-[12px] text-[#5A6068]">anthropic.com/news/contextual-retrieval</span>. 49% reduction in failed retrievals when chunks are prefixed with their document context.</li>
+          <li className="border-l-2 border-[#22F0D5]/40 pl-5">Anthropic. <em>Introducing Contextual Retrieval</em>, September 2024 — <span className="font-mono text-[12px] text-[#7a818a]">anthropic.com/news/contextual-retrieval</span>. 49% reduction in failed retrievals when chunks are prefixed with their document context.</li>
           <li className="border-l-2 border-[#22F0D5]/40 pl-5">MTEB — Massive Text Embedding Benchmark, Muennighoff et al. EMNLP 2023, arXiv:2210.07316. The standard leaderboard for embedding models.</li>
           <li className="border-l-2 border-[#22F0D5]/40 pl-5">BEIR — Thakur et al. <em>BEIR: A Heterogeneous Benchmark for Zero-Shot Evaluation of Information Retrieval Models</em>. NeurIPS 2021, arXiv:2104.08663.</li>
           <li className="border-l-2 border-[#22F0D5]/40 pl-5">Hofstätter et al. <em>Improving Efficient Neural Ranking Models with Cross-Architecture Knowledge Distillation</em>, arXiv:2010.02666 — the rerank-after-retrieve pattern.</li>

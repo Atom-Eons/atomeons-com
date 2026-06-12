@@ -406,7 +406,7 @@ export default function ClaudeBestPracticesPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /best-practices/claude · Last verified 2026-06-06 · sources above
         </p>
       </footer>
@@ -442,10 +442,10 @@ export function Table({
     <table className="mt-4 w-full border-collapse text-[14px]">
       <thead>
         <tr className="border-b border-[#1F242B] text-left">
-          <th className="py-2 pr-4 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <th className="py-2 pr-4 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
             {headers[0]}
           </th>
-          <th className="py-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <th className="py-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
             {headers[1]}
           </th>
         </tr>

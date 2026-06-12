@@ -290,7 +290,7 @@ export function WelcomeTrailer({ videoSrc }: WelcomeTrailerProps) {
           />
         </div>
 
-        <p className="mt-16 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+        <p className="mt-16 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
           Or press ⌘K to search · ⌘↵ to ask the lab
         </p>
       </section>

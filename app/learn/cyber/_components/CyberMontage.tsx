@@ -29,12 +29,13 @@ export function CyberMontage() {
   const [withSound, setWithSound] = useState(false);
 
   useEffect(() => {
-    Promise.all([
-      fetch("/video/cyber-montage.mp4", { method: "HEAD" }).then((r) => r.ok),
-      fetch("/audio/cyber-narration.mp3", { method: "HEAD" }).then((r) => r.ok),
-    ])
-      .then(([v, a]) => setAvailable(v && a))
-      .catch(() => setAvailable(false));
+    // Wave 50 · 2026-06-12 · removed the HEAD probe to /video/cyber-montage.mp4
+    // because it logged a noisy 404 in the browser console (Lighthouse audit
+    // flagged it as `errors-in-console`). The video isn't generated yet ·
+    // when operator drops a real file at public/video/cyber-montage.mp4 plus
+    // public/audio/cyber-narration.mp3, flip CYBER_MONTAGE_AVAILABLE to true.
+    const CYBER_MONTAGE_AVAILABLE = false;
+    setAvailable(CYBER_MONTAGE_AVAILABLE);
   }, []);
 
   useEffect(() => {

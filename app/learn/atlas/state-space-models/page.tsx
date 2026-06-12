@@ -12,7 +12,7 @@ const palette = {
   panel: "#0F1114",
   paper: "#F4F4F2",
   muted: "#9CA3AF",
-  dim: "#5A6068",
+  dim: "#7a818a",
   rule: "#1F242B",
   accent: "#22F0D5",
 };

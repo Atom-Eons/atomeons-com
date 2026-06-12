@@ -184,23 +184,23 @@ export function Hero() {
       {/* Hairline frame — establishes the editorial register at the edge */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-6 top-6 h-px bg-[#5A6068]/30 md:inset-x-10 md:top-10"
+        className="pointer-events-none absolute inset-x-6 top-6 h-px bg-[#7a818a]/30 md:inset-x-10 md:top-10"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-6 bottom-6 h-px bg-[#5A6068]/30 md:inset-x-10 md:bottom-10"
+        className="pointer-events-none absolute inset-x-6 bottom-6 h-px bg-[#7a818a]/30 md:inset-x-10 md:bottom-10"
       />
 
       {/* ───── Eyebrow — top-left, monospaced, location-anchored ───── */}
       <header className="relative z-10 flex items-start justify-between gap-6 px-6 pt-10 md:px-10 md:pt-14">
         <p className="font-mono text-[10px] uppercase leading-[1.6] tracking-[0.28em] text-[#9CA3AF] md:text-[11px]">
           <span className="text-[#F4F4F2]">ÆoNs Research Laboratory</span>
-          <span className="mx-2 text-[#5A6068]">·</span>
+          <span className="mx-2 text-[#7a818a]">·</span>
           <span>Marco Island, FL</span>
-          <span className="mx-2 text-[#5A6068]">·</span>
+          <span className="mx-2 text-[#7a818a]">·</span>
           <span>Est. 2024</span>
         </p>
-        <p className="hidden font-mono text-[10px] uppercase leading-[1.6] tracking-[0.28em] text-[#5A6068] md:block md:text-[11px]">
+        <p className="hidden font-mono text-[10px] uppercase leading-[1.6] tracking-[0.28em] text-[#7a818a] md:block md:text-[11px]">
           § 00 · Hero
         </p>
       </header>
@@ -247,7 +247,7 @@ export function Hero() {
             One operator, Marco Island. Open research papers,
             production-grade tooling, a curriculum that grades against
             the work — not the credential.
-            <span className="mx-1 text-[#5A6068]">/</span>
+            <span className="mx-1 text-[#7a818a]">/</span>
             Scroll for the thesis.
           </p>
         </div>
@@ -276,34 +276,34 @@ export function Hero() {
             {/* Rows — monospace key/value, lab-instrument register */}
             <dl className="mt-3 space-y-2.5 font-mono text-[11px] leading-[1.4]">
               <div className="flex items-baseline justify-between gap-3">
-                <dt className="uppercase tracking-[0.22em] text-[#5A6068]">
+                <dt className="uppercase tracking-[0.22em] text-[#7a818a]">
                   Build
                 </dt>
                 <dd className="truncate text-[#F4F4F2]">{BUILD_TAG}</dd>
               </div>
               <div className="flex items-baseline justify-between gap-3">
-                <dt className="uppercase tracking-[0.22em] text-[#5A6068]">
+                <dt className="uppercase tracking-[0.22em] text-[#7a818a]">
                   Commit
                 </dt>
                 <dd className="text-[#F4F4F2]">
-                  <span className="text-[#5A6068]">@</span>
+                  <span className="text-[#7a818a]">@</span>
                   {COMMIT_SHA}
                 </dd>
               </div>
               <div className="flex items-baseline justify-between gap-3">
-                <dt className="uppercase tracking-[0.22em] text-[#5A6068]">
+                <dt className="uppercase tracking-[0.22em] text-[#7a818a]">
                   Installs
                 </dt>
                 <dd className="text-[#22F0D5] tabular-nums">
                   {installs === null ? (
-                    <span className="text-[#5A6068]">— —</span>
+                    <span className="text-[#7a818a]">— —</span>
                   ) : (
                     installs.toLocaleString("en-US")
                   )}
                 </dd>
               </div>
               <div className="flex items-baseline justify-between gap-3">
-                <dt className="uppercase tracking-[0.22em] text-[#5A6068]">
+                <dt className="uppercase tracking-[0.22em] text-[#7a818a]">
                   Locus
                 </dt>
                 <dd className="text-[#F4F4F2]">25.94°N 81.72°W</dd>
@@ -311,7 +311,7 @@ export function Hero() {
             </dl>
 
             {/* Footer note — sourced, lab-grade, no marketing copy */}
-            <p className="mt-4 border-t border-[#1F242B] pt-3 font-mono text-[9px] uppercase leading-[1.6] tracking-[0.22em] text-[#5A6068]">
+            <p className="mt-4 border-t border-[#1F242B] pt-3 font-mono text-[9px] uppercase leading-[1.6] tracking-[0.22em] text-[#7a818a]">
               live stripe count · 60s refresh
             </p>
           </div>
@@ -324,10 +324,10 @@ export function Hero() {
         className="pointer-events-none absolute bottom-6 left-1/2 z-10 -translate-x-1/2 md:bottom-10"
       >
         <div className="flex flex-col items-center gap-2">
-          <span className="font-mono text-[9px] uppercase tracking-[0.32em] text-[#5A6068]">
+          <span className="font-mono text-[9px] uppercase tracking-[0.32em] text-[#7a818a]">
             Scroll · § 01
           </span>
-          <span className="block h-10 w-px bg-gradient-to-b from-[#5A6068] to-transparent" />
+          <span className="block h-10 w-px bg-gradient-to-b from-[#7a818a] to-transparent" />
         </div>
       </div>
     </section>

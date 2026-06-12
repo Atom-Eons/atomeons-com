@@ -102,9 +102,9 @@ export default function AuditLogPage() {
           <div className="mt-8 flex flex-wrap gap-2">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">commits indexed · {commits.length}</p>
             <span className="text-[#1F242B]">·</span>
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">days · {days.length}</p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">days · {days.length}</p>
             <span className="text-[#1F242B]">·</span>
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">latest · {commits[0]?.date.slice(0, 10) ?? "—"}</p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">latest · {commits[0]?.date.slice(0, 10) ?? "—"}</p>
           </div>
         </div>
       </section>
@@ -129,7 +129,7 @@ export default function AuditLogPage() {
                 <div className="grid gap-8 md:grid-cols-[140px_1fr]">
                   <div>
                     <p className="sticky top-24 font-mono text-[22px] tabular-nums text-[#22F0D5]">{day}</p>
-                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{items.length} commit{items.length > 1 ? "s" : ""}</p>
+                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{items.length} commit{items.length > 1 ? "s" : ""}</p>
                   </div>
                   <ol className="space-y-4">
                     {items.map((c) => (
@@ -143,7 +143,7 @@ export default function AuditLogPage() {
                           >
                             {c.shortSha}
                           </a>
-                          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                             {c.date.slice(11, 19) || ""}
                           </p>
                           {c.author && c.author !== "Atom McCree" ? (
@@ -188,7 +188,7 @@ git show <shortSha>`}</pre>
               { href: "/timeline", label: "Ship timeline · narrative" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[15px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

@@ -47,7 +47,7 @@ export default function ComparePage() {
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {COMPARES.map((c) => (
               <Link key={c.href} href={c.href} className="group border border-[#1F242B] bg-[#0F1114] p-6 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{c.href}
                 </p>
                 <h2 className="mt-3 font-serif text-[22px] font-light leading-[1.2] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{c.title}</h2>
@@ -64,7 +64,7 @@ export default function ComparePage() {
           <ol className="mt-8 space-y-3">
             {PRINCIPLES.map((p, i) => (
               <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-3">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</span>
                 <p className="font-serif text-[15px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{p}</p>
               </li>
             ))}
@@ -82,7 +82,7 @@ export default function ComparePage() {
               { href: "/use-cases", label: "Use cases by persona" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

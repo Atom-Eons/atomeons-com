@@ -148,7 +148,7 @@ export function AmbientToggle({ compact = false }: { compact?: boolean }) {
         aria-pressed={on}
         title={on ? "Mute ambient" : "Ambient: 432 Hz · φ · π · e drone"}
         className="flex h-9 w-9 items-center justify-center border border-[#1F242B] transition-colors hover:border-[#22F0D5]"
-        style={{ color: on ? "#22F0D5" : "#5A6068" }}
+        style={{ color: on ? "#22F0D5" : "#7a818a" }}
       >
         {on ? (
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
@@ -176,7 +176,7 @@ export function AmbientToggle({ compact = false }: { compact?: boolean }) {
       className="inline-flex items-center gap-2 border border-[#1F242B] bg-[#0F1114] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] transition-colors hover:border-[#22F0D5]"
       style={{ color: on ? "#22F0D5" : "#9CA3AF" }}
     >
-      <span aria-hidden className="inline-block size-1.5 rounded-full" style={{ background: on ? "#22F0D5" : "#5A6068" }} />
+      <span aria-hidden className="inline-block size-1.5 rounded-full" style={{ background: on ? "#22F0D5" : "#7a818a" }} />
       {on ? "Ambient · on" : "Ambient · off"}
     </button>
   );

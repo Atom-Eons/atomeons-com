@@ -180,12 +180,12 @@ export default function DatasetsPage() {
               <li key={d.url} className="border border-[#1F242B] bg-[#0F1114] p-6 md:p-8">
                 <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-[#1F242B] pb-3">
                   <div className="flex items-baseline gap-4">
-                    <p className="font-mono text-[11px] tabular-nums text-[#5A6068]">DS-{String(i + 1).padStart(2, "0")}</p>
+                    <p className="font-mono text-[11px] tabular-nums text-[#7a818a]">DS-{String(i + 1).padStart(2, "0")}</p>
                     <h2 className="font-mono text-[18px] text-[#22F0D5]">{d.name}</h2>
                   </div>
                   <div className="flex items-baseline gap-3">
-                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{d.mime}</p>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{d.size}</p>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{d.mime}</p>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{d.size}</p>
                   </div>
                 </div>
                 <p className="mt-4 font-serif text-[15px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{d.description}</p>
@@ -220,7 +220,7 @@ export default function DatasetsPage() {
           <ol className="mt-8 space-y-3">
             {PRINCIPLES.map((p, i) => (
               <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-3">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</span>
                 <p className="font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{p}</p>
               </li>
             ))}
@@ -237,7 +237,7 @@ export default function DatasetsPage() {
               { href: "/ask", label: "Try /ask" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

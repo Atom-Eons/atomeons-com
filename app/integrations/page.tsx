@@ -148,7 +148,7 @@ export default function IntegrationsPage() {
           <ul className="mt-8 space-y-3">
             {NOT_USED.map((n, i) => (
               <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-3">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">×</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">×</span>
                 <p className="font-serif text-[15px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                   {n}
                 </p>
@@ -164,7 +164,7 @@ export default function IntegrationsPage() {
               { href: "/legal/privacy", label: "Privacy policy" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{l.href}
                 </p>
                 <p className="mt-2 font-serif text-[16px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>

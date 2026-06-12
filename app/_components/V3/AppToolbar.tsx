@@ -163,14 +163,14 @@ export function AppToolbar() {
           onClick={() => setCollapsed((c) => !c)}
           aria-expanded={!collapsed}
           aria-label="Toggle toolbar"
-          className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068] transition hover:text-[#22F0D5]"
+          className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] transition hover:text-[#22F0D5]"
         >
           <span className="text-[#22F0D5]">§</span> Toolbar
-          <span aria-hidden className="text-[#5A6068]">{collapsed ? "▾" : "▴"}</span>
+          <span aria-hidden className="text-[#7a818a]">{collapsed ? "▾" : "▴"}</span>
         </button>
 
         {/* Center: a quiet tagline · operator-set · fills what used to be empty space */}
-        <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068] md:block">
+        <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] md:block">
           atomeons systems lab · marco island · live · 24/7
         </p>
 
@@ -192,18 +192,18 @@ export function AppToolbar() {
             onClick={toggleVisuals}
             label={visuals ? "FX ON" : "FX OFF"}
             hint="Supergraphics · atom sphere · sigils · gradients"
-            accent={visuals ? "#22F0D5" : "#5A6068"}
+            accent={visuals ? "#22F0D5" : "#7a818a"}
             active={visuals}
           />
           <ToolbarToggle
             onClick={toggleMusic}
             label={music ? "♪ ON" : "♪ OFF"}
             hint="Ambient music · /public/ambient.mp3"
-            accent={music ? "#FF4D4D" : "#5A6068"}
+            accent={music ? "#FF4D4D" : "#7a818a"}
             active={music}
           />
           <ToolbarButton href="/mindrest/experience" label="Mindrest" hint="8-mode entrainment session" accent="#C9A55C" />
-          <ToolbarButton href="/manual" label="Manual" hint="Full user manual · PDF-printable" accent="#5A6068" />
+          <ToolbarButton href="/manual" label="Manual" hint="Full user manual · PDF-printable" accent="#7a818a" />
         </div>
       </div>
 

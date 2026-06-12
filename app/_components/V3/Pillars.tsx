@@ -142,7 +142,7 @@ export default function Pillars() {
         // We bind named CSS vars on the section so utility classes can pick them up.
         ['--ink' as never]: '#F4F4F2',
         ['--ink-soft' as never]: '#9CA3AF',
-        ['--ink-faint' as never]: '#5A6068',
+        ['--ink-faint' as never]: '#7a818a',
         ['--surface' as never]: '#08090B',
         ['--surface-rise' as never]: '#0F1114',
         ['--surface-edge' as never]: '#1F242B',

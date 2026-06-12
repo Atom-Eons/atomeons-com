@@ -235,7 +235,7 @@ export default function IAmAiSamplePage() {
     >
       {/* Top return rail */}
       <div className="mx-auto max-w-3xl px-6 pt-10 md:px-10">
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
           <Link href="/" className="transition-colors hover:text-[#22F0D5]">
             AtomEons
           </Link>
@@ -335,12 +335,12 @@ export default function IAmAiSamplePage() {
             </a>
             <Link
               href="/i-am-ai"
-              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors hover:text-[#22F0D5]"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors hover:text-[#22F0D5]"
             >
               Back to the book page
             </Link>
           </div>
-          <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             Free Chapter 1 published under fair-use sample clause. © 2026 AtomEons Systems Laboratory.
           </p>
         </div>

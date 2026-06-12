@@ -20,7 +20,7 @@ export default function AgentHarnessesPage() {
     <main className="bg-[#08090B] text-[#F4F4F2] antialiased">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-4xl px-6 pt-20 pb-12 md:px-10 md:pt-28 md:pb-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <Link href="/learn/atlas" className="hover:text-[#22F0D5] transition-colors">§ Atlas</Link>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#22F0D5]">Agentic systems · runtime</span>
@@ -120,19 +120,19 @@ export default function AgentHarnessesPage() {
           <h2 className="font-serif text-[28px] font-light text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>Receipts</h2>
           <ol className="space-y-4 font-serif text-[17px] leading-[1.6] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
-              LangGraph documentation and source — <span className="font-mono text-[12px] text-[#5A6068]">github.com/langchain-ai/langgraph</span> · MIT licensed · maintained by LangChain Inc.
+              LangGraph documentation and source — <span className="font-mono text-[12px] text-[#7a818a]">github.com/langchain-ai/langgraph</span> · MIT licensed · maintained by LangChain Inc.
             </li>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
-              CrewAI documentation and source — <span className="font-mono text-[12px] text-[#5A6068]">github.com/crewAIInc/crewAI</span> · MIT licensed.
+              CrewAI documentation and source — <span className="font-mono text-[12px] text-[#7a818a]">github.com/crewAIInc/crewAI</span> · MIT licensed.
             </li>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
               AutoGen — Wu, Bansal, Zhang, et al., <em>AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation</em>, Microsoft Research, arXiv:2308.08155 (2023).
             </li>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
-              Claude Code — Anthropic, <span className="font-mono text-[12px] text-[#5A6068]">docs.claude.com/en/docs/claude-code</span> · CLI agent harness.
+              Claude Code — Anthropic, <span className="font-mono text-[12px] text-[#7a818a]">docs.claude.com/en/docs/claude-code</span> · CLI agent harness.
             </li>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
-              Aider — Paul Gauthier, <span className="font-mono text-[12px] text-[#5A6068]">aider.chat</span> · publishes the Aider Polyglot leaderboard for code-edit benchmarks.
+              Aider — Paul Gauthier, <span className="font-mono text-[12px] text-[#7a818a]">aider.chat</span> · publishes the Aider Polyglot leaderboard for code-edit benchmarks.
             </li>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
               ReAct — Yao, Zhao, Yu, et al., <em>ReAct: Synergizing Reasoning and Acting in Language Models</em>, arXiv:2210.03629 (2022). The first formalization of the reason-then-act tool loop that all modern harnesses inherit.

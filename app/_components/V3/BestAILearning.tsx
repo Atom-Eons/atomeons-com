@@ -11,7 +11,7 @@ export function BestAILearning() {
       <div className="mx-auto max-w-7xl">
         {/* Eyebrow + Heading + Sublede */}
         <header className="mb-12 max-w-3xl md:mb-16">
-          <p className="mb-5 font-mono text-[11px] uppercase tracking-[0.18em] text-[#5A6068]">
+          <p className="mb-5 font-mono text-[11px] uppercase tracking-[0.18em] text-[#7a818a]">
             § 04 &middot; /learn &middot; 68 lessons, sourced, anti-hype.
           </p>
           <h2
@@ -36,11 +36,11 @@ export function BestAILearning() {
           <article className="group relative col-span-1 flex flex-col justify-between bg-[#0F1114] p-8 md:col-span-4 md:row-span-2 md:p-10">
             <div className="flex items-start justify-between">
               <BookOpen
-                className="h-5 w-5 text-[#5A6068] transition-colors group-hover:text-[#22F0D5]"
+                className="h-5 w-5 text-[#7a818a] transition-colors group-hover:text-[#22F0D5]"
                 strokeWidth={1.5}
                 aria-hidden="true"
               />
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                 01
               </span>
             </div>
@@ -61,11 +61,11 @@ export function BestAILearning() {
           <article className="group relative col-span-1 flex flex-col justify-between bg-[#0F1114] p-8 md:col-span-4 md:row-span-2 md:p-10">
             <div className="flex items-start justify-between">
               <Library
-                className="h-5 w-5 text-[#5A6068] transition-colors group-hover:text-[#F4F4F2]"
+                className="h-5 w-5 text-[#7a818a] transition-colors group-hover:text-[#F4F4F2]"
                 strokeWidth={1.5}
                 aria-hidden="true"
               />
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                 02
               </span>
             </div>
@@ -86,11 +86,11 @@ export function BestAILearning() {
           <article className="relative col-span-1 flex flex-col justify-between bg-[#0F1114] p-8 md:col-span-4 md:row-span-4 md:p-10">
             <div className="flex items-start justify-between">
               <Quote
-                className="h-5 w-5 text-[#5A6068]"
+                className="h-5 w-5 text-[#7a818a]"
                 strokeWidth={1.5}
                 aria-hidden="true"
               />
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                 03
               </span>
             </div>
@@ -105,7 +105,7 @@ export function BestAILearning() {
                 <cite className="block font-mono text-[11px] uppercase not-italic tracking-[0.18em] text-[#9CA3AF]">
                   &mdash; Atom McCree
                 </cite>
-                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                   Founder &middot; AtomEons Systems Lab
                 </p>
               </footer>
@@ -116,11 +116,11 @@ export function BestAILearning() {
           <article className="group relative col-span-1 flex flex-col justify-between bg-[#0F1114] p-8 md:col-span-4 md:row-span-2 md:p-10">
             <div className="flex items-start justify-between">
               <FileCheck2
-                className="h-5 w-5 text-[#5A6068] transition-colors group-hover:text-[#F4F4F2]"
+                className="h-5 w-5 text-[#7a818a] transition-colors group-hover:text-[#F4F4F2]"
                 strokeWidth={1.5}
                 aria-hidden="true"
               />
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                 04
               </span>
             </div>
@@ -140,10 +140,10 @@ export function BestAILearning() {
           {/* Cell 5 — Comparison table */}
           <article className="relative col-span-1 flex flex-col justify-between bg-[#0F1114] p-8 md:col-span-4 md:row-span-2 md:p-10">
             <div className="flex items-start justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                 Comparison
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                 05
               </span>
             </div>
@@ -154,7 +154,7 @@ export function BestAILearning() {
                 </dt>
                 <dd className="font-mono text-base text-[#F4F4F2]">
                   $399
-                  <span className="ml-2 text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+                  <span className="ml-2 text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                     cert
                   </span>
                 </dd>
@@ -165,7 +165,7 @@ export function BestAILearning() {
                 </dt>
                 <dd className="font-mono text-base text-[#F4F4F2]">
                   $0
-                  <span className="ml-2 text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+                  <span className="ml-2 text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                     2019 recorded
                   </span>
                 </dd>
@@ -204,7 +204,7 @@ export function BestAILearning() {
               >
                 /learn
               </span>
-              <span className="hidden font-mono text-[11px] uppercase tracking-[0.18em] text-[#5A6068] sm:inline">
+              <span className="hidden font-mono text-[11px] uppercase tracking-[0.18em] text-[#7a818a] sm:inline">
                 127 pages &middot; free &middot; updated live
               </span>
             </div>

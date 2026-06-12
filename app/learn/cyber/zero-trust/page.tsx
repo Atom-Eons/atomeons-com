@@ -19,7 +19,7 @@ export default function ZeroTrustPage() {
     <main className="bg-[#08090B] text-[#F4F4F2] antialiased">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-4xl px-6 pt-20 pb-12 md:px-10 md:pt-28 md:pb-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <Link href="/learn/cyber" className="hover:text-[#22F0D5] transition-colors">§ Cyber</Link>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#22F0D5]">Architecture · defensive doctrine</span>
@@ -133,7 +133,7 @@ export default function ZeroTrustPage() {
           <h2 className="font-serif text-[28px] font-light text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>Receipts</h2>
           <ol className="space-y-4 font-serif text-[17px] leading-[1.6] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
-              NIST Special Publication 800-207, <em>Zero Trust Architecture</em>, August 2020. <span className="font-mono text-[12px] text-[#5A6068]">doi.org/10.6028/NIST.SP.800-207</span>
+              NIST Special Publication 800-207, <em>Zero Trust Architecture</em>, August 2020. <span className="font-mono text-[12px] text-[#7a818a]">doi.org/10.6028/NIST.SP.800-207</span>
             </li>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
               Executive Order 14028, <em>Improving the Nation's Cybersecurity</em>, May 12, 2021 — mandates federal ZTA migration.
@@ -154,7 +154,7 @@ export default function ZeroTrustPage() {
               NIST SP 800-63B Rev. 4 (Draft), <em>Digital Identity Guidelines — Authentication and Authenticator Management</em> — formal requirement structure for phishing-resistant MFA.
             </li>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
-              FIDO Alliance Passkeys specification — <span className="font-mono text-[12px] text-[#5A6068]">fidoalliance.org/passkeys</span> — the WebAuthn-based phishing-resistant authentication standard.
+              FIDO Alliance Passkeys specification — <span className="font-mono text-[12px] text-[#7a818a]">fidoalliance.org/passkeys</span> — the WebAuthn-based phishing-resistant authentication standard.
             </li>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
               CISA Cybersecurity Advisory on Salt Typhoon, AA24-290A (October 2024) — public attribution detailing why classical perimeter+VPN telecom architectures failed catastrophically against Chinese MSS access.

@@ -340,7 +340,7 @@ export default function MobileNav() {
                                   {child.pip === "soon" && (
                                     <span
                                       aria-hidden="true"
-                                      className="inline-block h-1.5 w-1.5 rounded-full border border-[#5A6068]"
+                                      className="inline-block h-1.5 w-1.5 rounded-full border border-[#7a818a]"
                                     />
                                   )}
                                   <span
@@ -353,7 +353,7 @@ export default function MobileNav() {
                                     {child.label}
                                   </span>
                                   {child.pip === "soon" && (
-                                    <span className="ml-1 text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+                                    <span className="ml-1 text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                                       soon
                                     </span>
                                   )}
@@ -382,7 +382,7 @@ export default function MobileNav() {
 
             {/* Footer rule */}
             <div className="border-t border-[#1F242B] px-5 py-3">
-              <p className="text-[10px] uppercase tracking-[0.22em] text-[#5A6068] font-[family-name:var(--font-jetbrains-mono)]">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[#7a818a] font-[family-name:var(--font-jetbrains-mono)]">
                 AtomEons Systems Laboratory
               </p>
             </div>

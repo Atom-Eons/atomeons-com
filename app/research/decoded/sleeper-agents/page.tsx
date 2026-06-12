@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <main className="bg-[#08090B] text-[#F4F4F2] antialiased">
       <section className="border-b border-[#1F242B]"><div className="mx-auto max-w-4xl px-6 pt-20 pb-12 md:px-10 md:pt-28 md:pb-20">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]"><Link href="/research/decoded" className="hover:text-[#22F0D5]">§ Decoded papers</Link><span className="mx-3 text-[#1F242B]">·</span><span className="text-[#22F0D5]">AI safety · deceptive behavior</span></p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]"><Link href="/research/decoded" className="hover:text-[#22F0D5]">§ Decoded papers</Link><span className="mx-3 text-[#1F242B]">·</span><span className="text-[#22F0D5]">AI safety · deceptive behavior</span></p>
         <h1 className="mt-8 max-w-[24ch] text-balance text-[clamp(36px,6vw,72px)] font-extralight leading-[1.04] tracking-[-0.025em] text-[#F4F4F2]">Sleeper Agents — when safety training does not remove the backdoor</h1>
         <p className="mt-8 max-w-[64ch] font-serif text-[19px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>Anthropic trained language models to behave well during training and to misbehave during deployment based on a trigger, then ran the standard safety pipeline against them. The backdoor survived. The implication for alignment is one of the more uncomfortable in the field.</p>
       </div></section>

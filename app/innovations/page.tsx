@@ -558,7 +558,7 @@ export default function InnovationsPage() {
       <header className="border-b border-[#1F242B] pb-12">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
               INVENTIONS · INNOVATIONS · DISCOVERIES · 2024-2026
             </p>
             <h1
@@ -675,10 +675,10 @@ export default function InnovationsPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /innovations · curated by Atom McCree · CC-BY 4.0 · last updated 2026-06-06
         </p>
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           Mom&apos;s Law applies · every claim sourced or qualified · corrections within 24h
         </p>
       </footer>

@@ -105,7 +105,7 @@ function SiloTile({ silo }: { silo: Silo }) {
         <p className="mt-3 max-w-[36ch] text-[14px] leading-[1.55] text-[#9CA3AF]">
           {silo.description}
         </p>
-        <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+        <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
           inside · {silo.inventory.slice(0, 80)}…
         </p>
       </div>
@@ -124,25 +124,25 @@ const SYSTEM_TILES = [
     name: "Manual",
     href: "/manual",
     description: "17-section user manual · PDF-printable · every feature documented.",
-    accent: "#5A6068",
+    accent: "#7a818a",
   },
   {
     name: "Version",
     href: "/version",
     description: "JUNE ROCKET release manifest · what shipped · what's deferred.",
-    accent: "#5A6068",
+    accent: "#7a818a",
   },
   {
     name: "Audit log",
     href: "/audit-log",
     description: "Every commit · 250 deep · SHA-linked to github.",
-    accent: "#5A6068",
+    accent: "#7a818a",
   },
   {
     name: "Tour",
     href: "/welcome",
     description: "First time? 90-second six-scroll introduction.",
-    accent: "#5A6068",
+    accent: "#7a818a",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function LauncherPage() {
       <header className="border-b border-[#1F242B] pb-10">
         <div className="flex flex-wrap items-baseline justify-between gap-6">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
               ATOMEONS · LAUNCHER · 2026
             </p>
             <h1
@@ -172,7 +172,7 @@ export default function LauncherPage() {
             <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
               ⌘ Shift S · swap silo from anywhere
             </p>
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
               ⌘ K · search the corpus
             </p>
             <Link
@@ -242,7 +242,7 @@ export default function LauncherPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-6">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           / · the launcher · 9 silos · Library of Alexandria as software · CC-BY 4.0 · last updated 2026-06-07
         </p>
       </footer>

@@ -76,9 +76,9 @@ export default function LibraryPage() {
                     ) : (
                       <p className="font-serif text-[17px] font-medium text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{b.title}</p>
                     )}
-                    {b.year ? <p className="font-mono text-[11px] tabular-nums text-[#5A6068]">{b.year}</p> : null}
+                    {b.year ? <p className="font-mono text-[11px] tabular-nums text-[#7a818a]">{b.year}</p> : null}
                   </div>
-                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">{b.author}</p>
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">{b.author}</p>
                   <p className="mt-3 font-serif text-[14px] italic leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{b.review}</p>
                 </div>
               ))}
@@ -97,7 +97,7 @@ export default function LibraryPage() {
               { href: "/learn/cyber/books", label: "Cyber book canon" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[15px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

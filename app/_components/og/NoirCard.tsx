@@ -29,7 +29,7 @@ const COLORS = {
   panel: "#0B0C0F",
   cream: "#F4F4F2",
   graphite: "#9CA3AF",
-  iron: "#5A6068",
+  iron: "#7a818a",
   hair: "#1F242B",
   cyan: "#22F0D5",
   pulse: "#FF4D4D",

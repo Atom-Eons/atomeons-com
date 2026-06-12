@@ -67,7 +67,7 @@ export default function StudioPage() {
           <ol className="mt-10 space-y-7">
             {OBJECTS.map((o, i) => (
               <li key={i} className="border-l-2 border-[#1F242B] pl-6">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{String(i + 1).padStart(2, "0")}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</p>
                 <p className="mt-2 font-serif text-[18px] font-medium text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{o.what}</p>
                 <p className="mt-3 font-serif text-[15px] italic leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{o.note}</p>
               </li>
@@ -121,7 +121,7 @@ export default function StudioPage() {
               { href: "/signature", label: "Signature · the mark" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[15px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

@@ -24,7 +24,7 @@ export default function MechanisticInterpretabilityPage() {
     <main className="bg-[#08090B] text-[#F4F4F2] antialiased">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-4xl px-6 pt-20 pb-12 md:px-10 md:pt-28 md:pb-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <Link href="/learn/atlas" className="hover:text-[#22F0D5] transition-colors">
               § Atlas
             </Link>
@@ -154,7 +154,7 @@ export default function MechanisticInterpretabilityPage() {
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
               Olah, Cammarata, et al., <em>Zoom In: An Introduction to
               Circuits</em>, Distill 2020 — the founding paper of the modern
-              field. <span className="font-mono text-[12px] text-[#5A6068]">distill.pub/2020/circuits/zoom-in</span>
+              field. <span className="font-mono text-[12px] text-[#7a818a]">distill.pub/2020/circuits/zoom-in</span>
             </li>
             <li className="border-l-2 border-[#22F0D5]/40 pl-5">
               Elhage et al., <em>A Mathematical Framework for Transformer
@@ -201,7 +201,7 @@ export default function MechanisticInterpretabilityPage() {
               ARENA program (alignment research engineer accelerator) —
               the largest public curriculum for training new interpretability
               researchers, maintained by alignment community contributors.
-              {" "}<span className="font-mono text-[12px] text-[#5A6068]">arena.education</span>
+              {" "}<span className="font-mono text-[12px] text-[#7a818a]">arena.education</span>
             </li>
           </ol>
         </section>

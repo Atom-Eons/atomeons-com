@@ -26,7 +26,7 @@ import { useEffect, useRef, useState } from "react";
  *   --noir-plate     #0F1114  tile-default
  *   --noir-cream     #F4F4F2  text-primary
  *   --noir-graphite  #9CA3AF  text-secondary
- *   --noir-iron      #5A6068  text-mute
+ *   --noir-iron      #7a818a  text-mute
  *   --noir-hairline  #1F242B  border
  *   --signal-cyan    #22F0D5  bio-accent (preserved equity)
  *   --signal-red     #FF4D4D  live-state pulse
@@ -213,7 +213,7 @@ export function FounderQuote() {
         <div className="flex items-center justify-between gap-6 border-b border-[#1F242B] pb-6">
           <p
             ref={headingRef}
-            className="v3-founder-gauge font-mono text-[11px] uppercase tracking-[0.32em] text-[#5A6068]"
+            className="v3-founder-gauge font-mono text-[11px] uppercase tracking-[0.32em] text-[#7a818a]"
           >
             <span className="text-[#9CA3AF]">§ 07</span>
             <span className="mx-3 text-[#1F242B]">·</span>
@@ -270,25 +270,25 @@ export function FounderQuote() {
         {/* --------------------------------------------------------------- */}
         <dl className="mt-20 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-[#1F242B] pt-8 font-mono text-[10px] uppercase tracking-[0.28em] sm:grid-cols-4 md:mt-24">
           <div>
-            <dt className="text-[#5A6068]">Signed</dt>
+            <dt className="text-[#7a818a]">Signed</dt>
             <dd className="mt-2 text-[13px] tracking-[0.18em] text-[#F4F4F2]">
               {QUOTE.author.name}
             </dd>
           </div>
           <div>
-            <dt className="text-[#5A6068]">Location</dt>
+            <dt className="text-[#7a818a]">Location</dt>
             <dd className="mt-2 text-[13px] tracking-[0.18em] text-[#F4F4F2]">
               {QUOTE.author.location}
             </dd>
           </div>
           <div>
-            <dt className="text-[#5A6068]">Date</dt>
+            <dt className="text-[#7a818a]">Date</dt>
             <dd className="mt-2 text-[13px] tabular-nums tracking-[0.18em] text-[#F4F4F2]">
               {dateDisplay}
             </dd>
           </div>
           <div>
-            <dt className="text-[#5A6068]">Commit</dt>
+            <dt className="text-[#7a818a]">Commit</dt>
             <dd className="mt-2 text-[13px] tracking-[0.18em] text-[#22F0D5]">
               {QUOTE.author.sha}
             </dd>

@@ -162,7 +162,7 @@ export default function ArtPage() {
                   className="aspect-square border border-[#1F242B] bg-[#0B0C0F] p-2.5 transition hover:border-[#22F0D5]/60"
                 >
                   <Family seed={seed} hue={hue} size={220} />
-                  <p className="mt-1.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#5A6068]">
+                  <p className="mt-1.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#7a818a]">
                     {fam.name.toLowerCase().replace(/\s+/g, "-")}-{seed.toString().padStart(2, "0")} · hue {hue.toFixed(0)}°
                   </p>
                 </div>
@@ -208,10 +208,10 @@ export default function ArtPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /art · {totalPieces} pieces · CC-BY 4.0 · last updated 2026-06-06
         </p>
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           Source · app/_components/V3/Illustrations.tsx + /Illustrations2.tsx · open this in your editor
         </p>
       </footer>

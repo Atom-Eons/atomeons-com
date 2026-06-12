@@ -114,7 +114,7 @@ export default function OG() {
             <p style={{
               margin: 0, fontFamily: "ui-monospace, SFMono-Regular, monospace",
               fontSize: 11, letterSpacing: "0.28em", textTransform: "uppercase",
-              color: "#5A6068",
+              color: "#7a818a",
             }}>
               POST /api/ask · 2-5 sentences · zero query logs
             </p>

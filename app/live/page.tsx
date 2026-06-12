@@ -57,7 +57,7 @@ export default function LivePage() {
               { step: "03", title: "Honest offline", body: "If an endpoint times out or returns 5xx, the cell shows offline. No cached-as-if-live, no fake heartbeat." },
             ].map((s) => (
               <div key={s.step} className="border-l-2 border-[#1F242B] pl-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{s.step}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{s.step}</p>
                 <h3 className="mt-3 font-serif text-[22px] font-light leading-[1.2] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{s.title}</h3>
                 <p className="mt-3 font-serif text-[14px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{s.body}</p>
               </div>
@@ -91,7 +91,7 @@ export default function LivePage() {
               { href: "/ask", label: "/ask · semantic Q&A" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{l.href}
                 </p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>

@@ -233,7 +233,7 @@ export default function ExplorePage() {
                   {track.paths.map((path, pi) => (
                     <div key={pi}>
                       <Link href={path.hero.href} className="group block">
-                        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                           atomeons.com{path.hero.href}
                         </p>
                         <h3 className="mt-2 font-serif text-[26px] font-medium leading-[1.2] text-[#F4F4F2] transition-colors group-hover:text-[#22F0D5]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
@@ -250,12 +250,12 @@ export default function ExplorePage() {
                             <li key={fi}>
                               <Link href={f.href} className="group block py-1.5">
                                 <span className="flex items-baseline gap-3">
-                                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">→</span>
+                                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">→</span>
                                   <span className="font-serif text-[15px] font-medium text-[#F4F4F2] transition-colors group-hover:text-[#22F0D5]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                                     {f.label}
                                   </span>
                                   {f.hint ? (
-                                    <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">· {f.hint}</span>
+                                    <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">· {f.hint}</span>
                                   ) : null}
                                 </span>
                               </Link>
@@ -287,7 +287,7 @@ export default function ExplorePage() {
               { href: "/now", label: "/now · this week's ship log" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[14px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

@@ -114,7 +114,7 @@ export function EnrollForm({ path }: EnrollFormProps) {
           placeholder="you@example.com"
           disabled={state === "submitting" || state === "ok"}
           aria-label="Email address"
-          className="flex-1 border border-[#1F242B] bg-[#08090B] px-4 py-3 font-mono text-[13px] text-[#F4F4F2] placeholder-[#5A6068] outline-none focus:border-[#22F0D5]"
+          className="flex-1 border border-[#1F242B] bg-[#08090B] px-4 py-3 font-mono text-[13px] text-[#F4F4F2] placeholder-[#7a818a] outline-none focus:border-[#22F0D5]"
         />
         <button
           type="submit"
@@ -140,7 +140,7 @@ export function EnrollForm({ path }: EnrollFormProps) {
         </p>
       )}
 
-      <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+      <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
         Privacy · email only · no password · no tracking pixels ·
         unsubscribe anytime · lab uses Loops.so for transactional mail
       </p>

@@ -111,7 +111,7 @@ const RELEASES: Release[] = [
 
 const STATUS_STYLES: Record<Release["status"], { color: string; label: string }> = {
   shipped: { color: "#22F0D5", label: "SHIPPED" },
-  skipped: { color: "#5A6068", label: "SKIPPED" },
+  skipped: { color: "#7a818a", label: "SKIPPED" },
   withdrawn: { color: "#FF4D4D", label: "WITHDRAWN" },
 };
 

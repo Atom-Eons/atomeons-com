@@ -34,7 +34,7 @@
  *   #0F1114  plate      cards, panels
  *   #F4F4F2  cream      text-primary
  *   #9CA3AF  graphite   text-secondary
- *   #5A6068  iron       text-mute, micro-labels
+ *   #7a818a  iron       text-mute, micro-labels
  *   #1F242B  hairline   borders, separators
  *   #22F0D5  signal-cyan  bio-accent (preserved equity)
  *   #FF4D4D  signal-red   live-state pulse
@@ -249,9 +249,9 @@ function HeroSection() {
             <span className="mx-3 text-[#1F242B]">·</span>
             <span>Marco Island, FL</span>
             <span className="mx-3 text-[#1F242B]">·</span>
-            <span className="text-[#5A6068]">Est. 2024</span>
+            <span className="text-[#7a818a]">Est. 2024</span>
           </p>
-          <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068] sm:block">
+          <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] sm:block">
             <span>{SIGNAL.lat}</span>
             <span className="mx-2 text-[#1F242B]">/</span>
             <span>{SIGNAL.lon}</span>
@@ -268,7 +268,7 @@ function HeroSection() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
           {/* Display sentence — Variable-Weight Reveal */}
           <div ref={targetRef} className="v3-hero-heading">
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
               <span className="text-[#9CA3AF]">§ 01</span>
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#F4F4F2]">THESIS</span>
@@ -320,7 +320,7 @@ function HeroSection() {
             className="relative w-full shrink-0 border border-[#1F242B] bg-[#0F1114]/85 p-5 backdrop-blur-md lg:w-[320px]"
           >
             <div className="flex items-center justify-between">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                 LAB · LIVE
               </p>
               <span className="relative flex h-2 w-2" aria-hidden>
@@ -331,37 +331,37 @@ function HeroSection() {
 
             <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 font-mono text-[11px] uppercase tracking-[0.18em]">
               <div>
-                <dt className="text-[#5A6068]">Book</dt>
+                <dt className="text-[#7a818a]">Book</dt>
                 <dd className="mt-1 text-[13px] tracking-[0.04em] text-[#22F0D5]">
                   I AM AI · LIVE
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">Words</dt>
+                <dt className="text-[#7a818a]">Words</dt>
                 <dd className="mt-1 text-[20px] tabular-nums tracking-[-0.01em] text-[#F4F4F2]">
                   76,005
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">Papers</dt>
+                <dt className="text-[#7a818a]">Papers</dt>
                 <dd className="mt-1 text-[20px] tabular-nums tracking-[-0.01em] text-[#F4F4F2]">
                   {SIGNAL.papersCount}
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">Lessons</dt>
+                <dt className="text-[#7a818a]">Lessons</dt>
                 <dd className="mt-1 text-[20px] tabular-nums tracking-[-0.01em] text-[#F4F4F2]">
                   {SIGNAL.lessonCount}
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">Build</dt>
+                <dt className="text-[#7a818a]">Build</dt>
                 <dd className="mt-1 text-[13px] tabular-nums tracking-[0.04em] text-[#F4F4F2]">
                   {SIGNAL.buildSha}
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">License</dt>
+                <dt className="text-[#7a818a]">License</dt>
                 <dd className="mt-1 text-[13px] tracking-[0.04em] text-[#F4F4F2]">
                   CC-BY 4.0
                 </dd>
@@ -578,21 +578,21 @@ function ScoreboardSection() {
             <span className="text-[#FF4D4D]">LIVE</span>
           </span>
           <span className="text-[#1F242B]">·</span>
-          <span><span className="text-[#5A6068]">audit</span> 2026-06-05</span>
+          <span><span className="text-[#7a818a]">audit</span> 2026-06-05</span>
           <span className="text-[#1F242B]">·</span>
-          <span><span className="text-[#5A6068]">last letter</span> the eighty-thousand-dollar pdf</span>
+          <span><span className="text-[#7a818a]">last letter</span> the eighty-thousand-dollar pdf</span>
           <span className="text-[#1F242B]">·</span>
-          <span><span className="text-[#5A6068]">live on amazon</span> <a href="https://www.amazon.com/dp/B0H45JVSDB/" target="_blank" rel="noopener noreferrer" className="text-[#22F0D5] hover:underline">i&nbsp;am&nbsp;ai · opus&nbsp;4.7 · $4.99 ↗</a></span>
+          <span><span className="text-[#7a818a]">live on amazon</span> <a href="https://www.amazon.com/dp/B0H45JVSDB/" target="_blank" rel="noopener noreferrer" className="text-[#22F0D5] hover:underline">i&nbsp;am&nbsp;ai · opus&nbsp;4.7 · $4.99 ↗</a></span>
           <span className="text-[#1F242B]">·</span>
-          <span><span className="text-[#5A6068]">last issue</span> supermodels · may 2026</span>
+          <span><span className="text-[#7a818a]">last issue</span> supermodels · may 2026</span>
           <span className="text-[#1F242B]">·</span>
-          <span><span className="text-[#5A6068]">next ship</span> tonight, 8 p.m. et</span>
+          <span><span className="text-[#7a818a]">next ship</span> tonight, 8 p.m. et</span>
         </div>
       </div>
 
       {/* ─── HEADER ──────────────────────────────────────────────────── */}
       <div className="mx-auto w-full max-w-[1600px] px-6 pt-20 md:px-10 md:pt-28 lg:px-14">
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
           <span className="text-[#9CA3AF]">§ 01.5</span>
           <span className="mx-3 text-[#1F242B]">·</span>
           <span className="text-[#22F0D5]">The lab, by the numbers</span>
@@ -630,7 +630,7 @@ function ScoreboardSection() {
               className="flex flex-col focus-visible:outline-none"
               aria-label={`${row.value} — ${row.primary.label}`}
             >
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                 <span className="text-[#1F242B]">
                   R/{String(i + 1).padStart(2, "0")}
                 </span>{" "}
@@ -701,7 +701,7 @@ function ScoreboardSection() {
           >
             Press kit
           </Link>
-          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             Every number rebakes at next ship. The audit date in the
             eyebrow is part of the claim.
           </span>
@@ -741,7 +741,7 @@ function ThesisSection() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
           {/* Heading column */}
           <div ref={targetRef} className="v3-thesis-heading">
-            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#7a818a]">
               <span className="text-[#9CA3AF]">§ 02</span>
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#F4F4F2]">THE THESIS</span>
@@ -773,7 +773,7 @@ function ThesisSection() {
 
             <div className="mt-12 grid grid-cols-3 gap-px border-y border-[#1F242B] bg-[#1F242B]">
               <div className="bg-[#08090B] p-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                   Domain
                 </p>
                 <p className="mt-2 font-mono text-[13px] tracking-[0.04em] text-[#F4F4F2]">
@@ -781,7 +781,7 @@ function ThesisSection() {
                 </p>
               </div>
               <div className="bg-[#08090B] p-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                   Education
                 </p>
                 <p className="mt-2 font-mono text-[13px] tracking-[0.04em] text-[#F4F4F2]">
@@ -789,7 +789,7 @@ function ThesisSection() {
                 </p>
               </div>
               <div className="bg-[#08090B] p-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                   Surface
                 </p>
                 <p className="mt-2 font-mono text-[13px] tracking-[0.04em] text-[#22F0D5]">
@@ -894,14 +894,14 @@ function ThreeDoorsSection() {
       {/* Section header */}
       <div className="mx-auto w-full max-w-[1480px] px-6 pt-24 md:px-10 md:pt-32 lg:px-14">
         <div className="flex flex-wrap items-baseline justify-between gap-6 border-b border-[#1F242B] pb-8">
-          <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#5A6068]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§ 03</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#F4F4F2]">THREE DOORS</span>
             <span className="mx-3 text-[#1F242B]">·</span>
-            <span className="text-[#5A6068]">PICK ANY ONE</span>
+            <span className="text-[#7a818a]">PICK ANY ONE</span>
           </p>
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span>Scroll through · or click to enter</span>
           </p>
         </div>
@@ -945,7 +945,7 @@ function ThreeDoorsSection() {
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-20">
                   {/* Left: number + display label */}
                   <div>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+                    <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
                       <span className="text-[#9CA3AF]">§ 03.{door.index}</span>
                       <span className="mx-3 text-[#1F242B]">·</span>
                       <span className="text-[#F4F4F2]">{door.family.toUpperCase()}</span>
@@ -1091,12 +1091,12 @@ function ReceiptsSection() {
       <div className="mx-auto w-full max-w-[1480px] px-6 pt-24 md:px-10 md:pt-32 lg:px-14">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#7a818a]">
               <span className="text-[#9CA3AF]">§ 04</span>
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#F4F4F2]">LIVE RECEIPTS</span>
               <span className="mx-3 text-[#1F242B]">·</span>
-              <span className="text-[#5A6068]">UPDATED THIS BUILD</span>
+              <span className="text-[#7a818a]">UPDATED THIS BUILD</span>
             </p>
             <h2 className="mt-8 max-w-[22ch] text-balance text-[clamp(36px,6vw,72px)] font-extralight leading-[1.04] tracking-[-0.02em] text-[#F4F4F2]">
               <span className="font-light">Every claim below</span>
@@ -1123,7 +1123,7 @@ function ReceiptsSection() {
           {RECEIPTS.map((r) => {
             const Inner = (
               <div className="relative h-full bg-[#0F1114] px-6 py-12 transition-colors duration-200 group-hover/receipt:bg-[#08090B] md:px-10 md:py-16 lg:px-12">
-                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
                   {r.label}
                 </p>
                 <p className="mt-6 flex items-baseline gap-1 font-mono text-[clamp(56px,8vw,120px)] leading-none tabular-nums tracking-[-0.04em] text-[#F4F4F2]">
@@ -1138,7 +1138,7 @@ function ReceiptsSection() {
                 {r.href ? (
                   <p
                     aria-hidden
-                    className="mt-8 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068] transition-colors duration-200 group-hover/receipt:text-[#22F0D5]"
+                    className="mt-8 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] transition-colors duration-200 group-hover/receipt:text-[#22F0D5]"
                   >
                     <span>{r.href}</span>
                     <span className="text-[14px] leading-none">→</span>
@@ -1168,7 +1168,7 @@ function ReceiptsSection() {
 
       {/* Bottom rail — receipts colophon */}
       <div className="mx-auto w-full max-w-[1480px] px-6 py-10 md:px-10 md:py-14 lg:px-14">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           <span className="text-[#9CA3AF]">All values</span>
           <span className="mx-2 text-[#1F242B]">·</span>
           <span>current-build true or em-dash</span>
@@ -1262,12 +1262,12 @@ function ResearchSection() {
         {/* Header */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#7a818a]">
               <span className="text-[#9CA3AF]">§ 05</span>
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#F4F4F2]">CURRENT RESEARCH</span>
               <span className="mx-3 text-[#1F242B]">·</span>
-              <span className="text-[#5A6068]">{SIGNAL.papersCount} PUBLISHED</span>
+              <span className="text-[#7a818a]">{SIGNAL.papersCount} PUBLISHED</span>
             </p>
             <h2 className="mt-10 max-w-[24ch] text-balance text-[clamp(40px,6vw,84px)] font-extralight leading-[1.05] tracking-[-0.025em] text-[#F4F4F2]">
               <span className="font-thin">Each paper preregistered.</span>
@@ -1302,14 +1302,14 @@ function ResearchSection() {
               >
                 {/* Top rail — index + domain */}
                 <div className="flex items-baseline justify-between gap-4">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                     <span className="text-[#9CA3AF]">
                       § 05.0{i + 1}
                     </span>
                     <span className="mx-2 text-[#1F242B]">·</span>
                     <span>{p.domain}</span>
                   </p>
-                  <p className="font-mono text-[10px] tabular-nums tracking-[0.18em] text-[#5A6068]">
+                  <p className="font-mono text-[10px] tabular-nums tracking-[0.18em] text-[#7a818a]">
                     {p.date}
                   </p>
                 </div>
@@ -1326,7 +1326,7 @@ function ResearchSection() {
 
                 {/* Bottom rail — ID, SHA, arrow */}
                 <div className="mt-10 flex flex-wrap items-baseline justify-between gap-4 border-t border-[#1F242B] pt-5">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                     <span>{p.id}</span>
                     <span className="mx-2 text-[#1F242B]">·</span>
                     <span className="tabular-nums text-[#9CA3AF]">
@@ -1335,7 +1335,7 @@ function ResearchSection() {
                   </p>
                   <span
                     aria-hidden
-                    className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.28em] text-[#5A6068] transition-colors duration-200 group-hover/paper:text-[#22F0D5] group-focus-visible/paper:text-[#22F0D5]"
+                    className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.28em] text-[#7a818a] transition-colors duration-200 group-hover/paper:text-[#22F0D5] group-focus-visible/paper:text-[#22F0D5]"
                   >
                     <span className="hidden sm:inline">Read</span>
                     <span className="text-[14px] leading-none">→</span>
@@ -1348,7 +1348,7 @@ function ResearchSection() {
 
         {/* Bottom rail — license + archive */}
         <div className="mt-12 flex flex-wrap items-baseline justify-between gap-4 border-t border-[#1F242B] py-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">CC-BY 4.0</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span>SHA-256 stamped at emit</span>
@@ -1415,12 +1415,12 @@ function FounderNoteSection() {
       {/* Top rail */}
       <div className="relative z-10 mx-auto w-full max-w-[1480px] px-6 pt-14 md:px-10 md:pt-20 lg:px-14">
         <div className="flex items-baseline justify-between gap-6">
-          <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#5A6068]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§ 07</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#F4F4F2]">FOUNDER NOTE</span>
           </p>
-          <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068] sm:block">
+          <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] sm:block">
             Marco Island, FL · {SIGNAL.lat} {SIGNAL.lon}
           </p>
         </div>
@@ -1429,7 +1429,7 @@ function FounderNoteSection() {
       {/* Stage */}
       <div className="relative z-10 mx-auto flex w-full max-w-[1480px] flex-1 flex-col justify-center px-6 py-24 md:px-10 md:py-32 lg:px-14">
         <div className="max-w-[68ch]">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
             On the bench, this week
           </p>
 
@@ -1448,7 +1448,7 @@ function FounderNoteSection() {
               <p className="font-serif text-[18px] italic leading-[1.4] text-[#9CA3AF]">
                 — Atom McCree
               </p>
-              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                 <span className="mx-2 text-[#1F242B]">·</span>
                 <span>Marco Island, FL</span>
                 <span className="mx-2 text-[#1F242B]">·</span>

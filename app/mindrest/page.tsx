@@ -364,7 +364,7 @@ export default function MindrestPage() {
   return (
     <main className="mx-auto max-w-[1100px] px-6 py-20 text-[#F4F4F2] md:px-10 md:py-24">
       <header className="border-b border-[#1F242B] pb-12">
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
           MINDREST · BRAINWAVES + ADAPTOGENS + OPTIMIZATION · 2026
         </p>
         <h1
@@ -542,10 +542,10 @@ export default function MindrestPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /mindrest · public information only · not medical advice · updated 2026-06-06
         </p>
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           Sources cited inline · Examine.com for primary research · PubMed for trial detail
         </p>
       </footer>
@@ -751,7 +751,7 @@ function SenolyticSection({
             <p className="mt-2 text-[14px] leading-[1.65] text-[#9CA3AF]">
               {s.detail}
             </p>
-            <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+            <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
               Cite · {s.cite}
             </p>
           </li>

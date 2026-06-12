@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <main className="bg-[#08090B] text-[#F4F4F2] antialiased">
       <section className="border-b border-[#1F242B]"><div className="mx-auto max-w-4xl px-6 pt-20 pb-12 md:px-10 md:pt-28 md:pb-20">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]"><Link href="/learn/vertical" className="hover:text-[#22F0D5]">§ Verticals</Link><span className="mx-3 text-[#1F242B]">·</span><span className="text-[#22F0D5]">Sector · defense + national security</span></p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]"><Link href="/learn/vertical" className="hover:text-[#22F0D5]">§ Verticals</Link><span className="mx-3 text-[#1F242B]">·</span><span className="text-[#22F0D5]">Sector · defense + national security</span></p>
         <h1 className="mt-8 max-w-[26ch] text-balance text-[clamp(36px,6vw,72px)] font-extralight leading-[1.04] tracking-[-0.025em] text-[#F4F4F2]">AI in defense — the programs of record</h1>
         <p className="mt-8 max-w-[64ch] font-serif text-[19px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>The defense AI market split between traditional primes and software-native challengers in the 2020s. The challengers won the marquee contracts. The 2026 picture is a parallel industrial base — Anduril, Palantir, Shield AI, Scale, Helsing — building production AI alongside Lockheed, RTX, Northrop, and Boeing.</p>
       </div></section>

@@ -124,7 +124,7 @@ export default function TrustPage() {
                 <p className="mt-2 font-serif text-[14px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                   {p.body}
                 </p>
-                <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{p.href} →
                 </p>
               </Link>
@@ -141,7 +141,7 @@ export default function TrustPage() {
           <ul className="mt-8 space-y-4">
             {WILL_NOT.map((row, i) => (
               <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-4">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</span>
                 <p className="font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                   {row}
                 </p>
@@ -182,7 +182,7 @@ export default function TrustPage() {
               { href: "/.well-known/security.txt", label: "security.txt" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{l.href}
                 </p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>

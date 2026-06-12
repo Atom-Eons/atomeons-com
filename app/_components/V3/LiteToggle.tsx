@@ -73,7 +73,7 @@ export function LiteToggle() {
       title={lite ? "Lite mode · click to enable full visuals" : "Full visuals · click to switch to lite mode"}
       className="group fixed bottom-4 right-4 z-[120] flex items-center gap-2 border bg-[#0F1114]/80 px-3 py-2 backdrop-blur-md transition-all hover:bg-[#0F1114]"
       style={{
-        borderColor: lite ? "#5A6068" : "#22F0D5",
+        borderColor: lite ? "#7a818a" : "#22F0D5",
         boxShadow: lite ? "none" : "0 0 24px rgba(34, 240, 213, 0.25)",
       }}
     >
@@ -82,7 +82,7 @@ export function LiteToggle() {
         aria-hidden
         className="inline-block size-2 rounded-full transition-colors"
         style={{
-          background: lite ? "#5A6068" : "#22F0D5",
+          background: lite ? "#7a818a" : "#22F0D5",
           boxShadow: lite ? "none" : "0 0 8px #22F0D5",
         }}
       />

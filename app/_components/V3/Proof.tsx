@@ -19,7 +19,7 @@ import Link from "next/link";
  *    (300 → 800) — the signature move at a sub-hero scale. Tracking tightens
  *    in lockstep so the number *thickens* into place.
  *  - Mono labels (Berkeley Mono, JetBrains Mono Variable fallback) in
- *    #5A6068 / uppercase / 11px / 0.18em tracking — instrument-panel register.
+ *    #7a818a / uppercase / 11px / 0.18em tracking — instrument-panel register.
  *  - Bio-cyan #22F0D5 is reserved for the "live" badge dot. Used once.
  *  - Red #FF4D4D is reserved for the live-signal pulse on the build hash.
  *    Used once.
@@ -110,7 +110,7 @@ export default function Proof() {
         <header className="grid grid-cols-12 items-baseline gap-x-6 gap-y-3">
           <p
             id="proof-eyebrow"
-            className="col-span-12 font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#5A6068] md:col-span-3"
+            className="col-span-12 font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#7a818a] md:col-span-3"
           >
             § 04 · Live Receipts
           </p>
@@ -138,11 +138,11 @@ export default function Proof() {
               {/* corner tick — instrument-panel motif */}
               <span
                 aria-hidden
-                className="pointer-events-none absolute right-3 top-3 inline-block h-2 w-2 border-r border-t border-[#5A6068]"
+                className="pointer-events-none absolute right-3 top-3 inline-block h-2 w-2 border-r border-t border-[#7a818a]"
               />
 
               <div className="flex items-baseline gap-3">
-                <span className="font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#5A6068]">
+                <span className="font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#7a818a]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#9CA3AF]">
@@ -158,7 +158,7 @@ export default function Proof() {
                   {r.v}
                 </span>
                 {r.unit ? (
-                  <span className="mb-3 font-mono text-[12px] uppercase tracking-[0.18em] text-[#5A6068]">
+                  <span className="mb-3 font-mono text-[12px] uppercase tracking-[0.18em] text-[#7a818a]">
                     {r.unit}
                   </span>
                 ) : null}
@@ -174,7 +174,7 @@ export default function Proof() {
                 <Link
                   href={r.source.href}
                   prefetch={false}
-                  className="group/src inline-flex items-center gap-2 font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#5A6068] transition-colors hover:text-[#22F0D5]"
+                  className="group/src inline-flex items-center gap-2 font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#7a818a] transition-colors hover:text-[#22F0D5]"
                 >
                   <span aria-hidden>source</span>
                   <span className="text-[#9CA3AF] transition-colors group-hover/src:text-[#22F0D5]">
@@ -190,7 +190,7 @@ export default function Proof() {
 
                 <span
                   aria-hidden
-                  className="font-mono text-[10px] uppercase leading-none tracking-[0.18em] text-[#5A6068]"
+                  className="font-mono text-[10px] uppercase leading-none tracking-[0.18em] text-[#7a818a]"
                 >
                   /{r.k}
                 </span>
@@ -201,7 +201,7 @@ export default function Proof() {
 
         {/* Live signal row — the one place bio-cyan + red appear */}
         <div className="mt-10 flex flex-wrap items-center justify-between gap-y-4 border-t border-[#1F242B] pt-8">
-          <div className="flex items-center gap-3 font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#5A6068]">
+          <div className="flex items-center gap-3 font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#7a818a]">
             <span className="relative inline-flex h-2 w-2">
               <span className="absolute inset-0 animate-ping rounded-full bg-[#FF4D4D] opacity-70" />
               <span className="relative inline-block h-2 w-2 rounded-full bg-[#FF4D4D]" />
@@ -209,12 +209,12 @@ export default function Proof() {
             <span>live · build </span>
             <span className="text-[#9CA3AF]">2129832</span>
             <span className="hidden text-[#1F242B] md:inline">/</span>
-            <span className="hidden text-[#5A6068] md:inline">
+            <span className="hidden text-[#7a818a] md:inline">
               counted 2026-06-02 16:00 EDT · Marco Island, FL
             </span>
           </div>
 
-          <div className="flex items-center gap-3 font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#5A6068]">
+          <div className="flex items-center gap-3 font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#7a818a]">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#22F0D5]" />
             <span>integrity · sha-256 stamped at deploy</span>
           </div>
@@ -223,7 +223,7 @@ export default function Proof() {
         {/* CC BY 4.0 disclosure — the academic credibility wedge */}
         <aside className="mt-20 grid grid-cols-12 items-start gap-x-6 gap-y-6 border-t border-[#1F242B] pt-16">
           <div className="col-span-12 md:col-span-3">
-            <p className="font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#5A6068]">
+            <p className="font-mono text-[11px] uppercase leading-none tracking-[0.18em] text-[#7a818a]">
               § 04.b · License
             </p>
             <p className="mt-4 inline-flex items-center gap-2 border border-[#22F0D5]/40 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-[#22F0D5]">

@@ -177,7 +177,7 @@ export default function MusicAiPage() {
   return (
     <main className="mx-auto max-w-[1100px] px-6 py-20 text-[#F4F4F2] md:px-10 md:py-24">
       <header className="border-b border-[#1F242B] pb-12">
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
           DOMAIN HUB · MUSIC + AUDIO · AI · 2026
         </p>
         <h1
@@ -237,7 +237,7 @@ export function DomainSections(props: DomainSectionsProps) {
               <p className="mt-2 text-[15px] leading-[1.65] text-[#9CA3AF]">
                 {p.what}
               </p>
-              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                 {p.where}
               </p>
             </li>
@@ -377,10 +377,10 @@ export function CrossLinks({ current }: { current: string }) {
 export function Footer({ route }: { route: string }) {
   return (
     <footer className="mt-20 border-t border-[#1F242B] pt-8">
-      <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+      <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
         Domain hub · {route} · Public information only · Updated 2026-06-06
       </p>
-      <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+      <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
         Sources: papers cited above · vendor announcements · public press · court filings where applicable
       </p>
     </footer>

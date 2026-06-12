@@ -73,7 +73,7 @@ export default function ConstellationPage() {
               { step: "03", title: "Layout", body: "Categories sit at fixed angles around the clock face. Within a category, weight pulls a node toward center. ~120 rounds of force relaxation soften the cluster into legibility." },
             ].map((s) => (
               <div key={s.step} className="border-l-2 border-[#1F242B] pl-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{s.step}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{s.step}</p>
                 <h3 className="mt-3 font-serif text-[24px] font-light leading-[1.2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{s.title}</h3>
                 <p className="mt-3 font-serif text-[14px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{s.body}</p>
               </div>
@@ -115,7 +115,7 @@ export default function ConstellationPage() {
               { href: "/graph-index.json", label: "Download the raw graph" },
             ].map((l) => (
               <a key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[15px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </a>
             ))}

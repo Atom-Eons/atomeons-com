@@ -85,7 +85,7 @@ export default async function ProofResumePage({ params }: PageProps) {
             Subject DID / address
           </p>
           <p className="mt-2 break-all font-mono text-[13px] text-[#F4F4F2]">{id}</p>
-          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             Controlled key verified · {isExample ? "did:key:z6Mk..." : "(verification pending Phase 4)"}
           </p>
         </div>
@@ -136,7 +136,7 @@ export default async function ProofResumePage({ params }: PageProps) {
                 <p className="mt-3 font-mono text-[11px] text-[#9CA3AF]">
                   Evidence · {c.evidenceHash}
                 </p>
-                <p className="mt-1 font-mono text-[10px] text-[#5A6068]">
+                <p className="mt-1 font-mono text-[10px] text-[#7a818a]">
                   Issued · {c.validFrom}
                 </p>
               </li>
@@ -195,7 +195,7 @@ export default async function ProofResumePage({ params }: PageProps) {
         <button
           type="button"
           disabled
-          className="mt-6 inline-flex items-center gap-2 border border-[#5A6068] bg-[#08090B] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]"
+          className="mt-6 inline-flex items-center gap-2 border border-[#7a818a] bg-[#08090B] px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]"
           aria-label="Verification scaffold · Phase 4 wire-up pending"
         >
           Verify · Phase 4 pending
@@ -203,7 +203,7 @@ export default async function ProofResumePage({ params }: PageProps) {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /proof/{id} · canonical shape · CC-BY 4.0 · see /soulkey for the architecture
         </p>
         <div className="mt-4">

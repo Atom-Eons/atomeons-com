@@ -571,13 +571,13 @@ export default function CyberModelsPage() {
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <div className="flex items-baseline gap-3">
                       <h2 className="font-serif text-[26px] font-light text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{m.name}</h2>
-                      {m.abbr ? <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">[{m.abbr}]</span> : null}
+                      {m.abbr ? <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">[{m.abbr}]</span> : null}
                     </div>
                     <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: FAMILY_COLOR[m.family] }}>
                       {FAMILY_LABEL[m.family]} · {m.year}
                     </p>
                   </div>
-                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">by · {m.builder}</p>
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">by · {m.builder}</p>
                   <p className="mt-4 font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{m.oneliner}</p>
 
                   <div className="mt-6 grid gap-6 md:grid-cols-3">
@@ -643,7 +643,7 @@ export default function CyberModelsPage() {
               { href: "/learn/cyber/mitre-attack", label: "MITRE ATT&CK · deeper" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[15px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

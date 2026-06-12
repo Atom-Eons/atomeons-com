@@ -125,7 +125,7 @@ export default function ModelPickerPage() {
       <header className="border-b border-[#1F242B] pb-12">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
               FREE TOOL · MODEL PICKER · 2026-06-06
             </p>
             <h1
@@ -190,9 +190,9 @@ export default function ModelPickerPage() {
           <table className="w-full border-collapse text-[13px]">
             <thead>
               <tr className="border-b border-[#1F242B] text-left">
-                <th className="py-2 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Tier</th>
-                <th className="py-2 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Models</th>
-                <th className="py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">When</th>
+                <th className="py-2 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Tier</th>
+                <th className="py-2 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Models</th>
+                <th className="py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">When</th>
               </tr>
             </thead>
             <tbody>
@@ -244,7 +244,7 @@ export default function ModelPickerPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /tools/model-picker · pure static · no inference · sources updated weekly · last 2026-06-06
         </p>
       </footer>

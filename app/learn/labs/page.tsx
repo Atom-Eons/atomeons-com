@@ -162,19 +162,19 @@ export default function LabsPage() {
               <li key={l.slug} className="border border-[#1F242B] bg-[#0F1114] p-5 md:p-6">
                 <div className="flex flex-wrap items-baseline justify-between gap-4">
                   <div className="flex items-baseline gap-4">
-                    <p className="font-mono text-[11px] tabular-nums text-[#5A6068]">{String(i + 1).padStart(2, "0")}</p>
+                    <p className="font-mono text-[11px] tabular-nums text-[#7a818a]">{String(i + 1).padStart(2, "0")}</p>
                     <h2 className="font-serif text-[22px] font-light leading-[1.2] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.title}</h2>
                   </div>
                   <div className="flex items-baseline gap-3">
                     <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: LEVEL_COLOR[l.level] }}>{l.level}</p>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{l.time}</p>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{l.time}</p>
                     {l.status === "queued" ? (
                       <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF4D4D]">QUEUED</p>
                     ) : null}
                   </div>
                 </div>
                 <p className="mt-3 font-serif text-[15px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.description}</p>
-                <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">runs · {l.hosted}</p>
+                <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">runs · {l.hosted}</p>
               </li>
             ))}
           </ol>
@@ -186,7 +186,7 @@ export default function LabsPage() {
               { href: "/learn/exam", label: "Self-assessment" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

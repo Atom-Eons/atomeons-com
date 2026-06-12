@@ -269,7 +269,7 @@ export default function PressPage() {
   return (
     <main className="relative z-10 bg-[#08090B] text-[#F4F4F2]">
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
-        <p className="font-mono text-[11px] tracking-[0.08em] text-[#5A6068]">
+        <p className="font-mono text-[11px] tracking-[0.08em] text-[#7a818a]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}
           <span className="text-[#1F242B]">/</span> Press
         </p>
@@ -292,7 +292,7 @@ export default function PressPage() {
           <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-5 border-t border-[#1F242B] pt-8 md:grid-cols-4">
             {FACTS.map((f) => (
               <div key={f.label}>
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{f.label}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{f.label}</p>
                 <p className="mt-1 text-[15px] text-[#F4F4F2]">{f.value}</p>
               </div>
             ))}
@@ -405,7 +405,7 @@ export default function PressPage() {
             <div className="mt-5 grid grid-cols-1 gap-x-8 gap-y-5 border-t border-[#1F242B] pt-7 md:grid-cols-3">
               {IAMAI_FACTS.map((f) => (
                 <div key={f.label}>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                     {f.label}
                   </p>
                   <p className="mt-1 text-[14px] leading-[1.5] text-[#F4F4F2]">{f.value}</p>
@@ -451,7 +451,7 @@ export default function PressPage() {
               {IAMAI_QUOTES.map((q, i) => (
                 <div key={i} className="rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6">
                   <div className="flex items-start justify-between gap-3">
-                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                       {q.context}
                     </p>
                     <PressCopyButton text={q.text} />
@@ -502,7 +502,7 @@ export default function PressPage() {
                   <span className="text-7xl text-[#F4F4F2]" style={{ fontVariationSettings: '"wght" 720' }}>Æ</span>
                 </div>
               </div>
-              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Photo on request</p>
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Photo on request</p>
             </div>
 
             <div>
@@ -552,7 +552,7 @@ export default function PressPage() {
                 </div>
                 <div className="mt-4 flex items-baseline justify-between gap-3">
                   <p className="text-[14px] font-medium text-[#F4F4F2]">{a.name}</p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{a.format}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{a.format}</p>
                 </div>
                 <p className="mt-1 text-[12px] leading-[1.55] text-[#9CA3AF]">{a.notes}</p>
                 <a
@@ -670,7 +670,7 @@ export default function PressPage() {
                   <PressCopyButton text={q.text} />
                 </div>
                 <p className="mt-4 max-w-[58ch] text-[15px] leading-[1.65] text-[#C8CCCE]">&ldquo;{q.text}&rdquo;</p>
-                <p className="mt-4 font-mono text-[11px] text-[#5A6068]">— Atom McCree · Founder · AtomEons Systems Laboratory</p>
+                <p className="mt-4 font-mono text-[11px] text-[#7a818a]">— Atom McCree · Founder · AtomEons Systems Laboratory</p>
               </div>
             ))}
           </div>
@@ -732,7 +732,7 @@ export default function PressPage() {
                 </ul>
               </div>
             </div>
-            <p className="mt-8 border-t border-[#1F242B] pt-6 text-[12px] leading-[1.55] text-[#5A6068]">
+            <p className="mt-8 border-t border-[#1F242B] pt-6 text-[12px] leading-[1.55] text-[#7a818a]">
               Press preference: pre-publication fact-check pings are welcome. Embargoes honored. Custom interview scheduling on request. Operator is in Marco Island, FL · GMT-5 (EDT in summer, EST in winter).
             </p>
           </div>

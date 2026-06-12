@@ -89,7 +89,7 @@ export function BestCyber() {
               >
                 <div className="flex items-center justify-between">
                   <Icon aria-hidden="true" className="h-5 w-5 text-[#9CA3AF] transition-colors group-hover:text-[#22F0D5]" strokeWidth={1.5} />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#5A6068]">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#7a818a]">
                     {href}
                   </span>
                 </div>
@@ -97,7 +97,7 @@ export function BestCyber() {
                   {title}
                 </h3>
                 <p className="text-sm leading-relaxed text-[#9CA3AF]">{desc}</p>
-                <span className="mt-auto inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                <span className="mt-auto inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                   Open
                   <ArrowRight aria-hidden="true" className="h-3 w-3" strokeWidth={1.75} />
                 </span>
@@ -108,7 +108,7 @@ export function BestCyber() {
 
         {/* Comparison panel */}
         <div className="mt-20">
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#5A6068]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#7a818a]">
             What the same curriculum costs elsewhere
           </p>
           <div className="mt-4 overflow-hidden border border-[#1F242B]">

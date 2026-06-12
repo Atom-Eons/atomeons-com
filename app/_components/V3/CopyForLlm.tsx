@@ -102,7 +102,7 @@ export function CopyForLlm() {
     <button
       type="button"
       onClick={copy}
-      aria-label={`Copy this page as XML-wrapped markdown for pasting into an AI assistant. Current path: ${pathname}`}
+      aria-label={`Copy for LLM · ${pathname} · ⌥C`}
       title="Copies markdown extract wrapped in <lab_page>…</lab_page> for pasting into Claude / ChatGPT / Gemini"
       className="group fixed bottom-4 left-4 z-[120] hidden items-center gap-2 border bg-[#0F1114]/85 px-3 py-2 backdrop-blur-md transition-all hover:bg-[#0F1114] md:flex"
       style={{

@@ -64,7 +64,7 @@ export default function LegalIndexPage() {
   return (
     <main className="bg-[#08090B] text-[#F4F4F2]">
       <section className="mx-auto max-w-5xl px-6 pt-24 pb-12 md:px-10 md:pt-32">
-        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#7a818a]">
           <span className="text-[#9CA3AF]">§ Legal pack</span>
         </p>
         <h1 className="mt-8 max-w-[20ch] text-balance text-[clamp(40px,6vw,80px)] font-extralight leading-[1.05] tracking-[-0.03em] text-[#F4F4F2]">
@@ -98,7 +98,7 @@ export default function LegalIndexPage() {
                   <h2 className="mt-3 font-serif text-[28px] leading-[1.15] tracking-[-0.005em] text-[#F4F4F2] transition-colors group-hover:text-[#22F0D5] md:text-[32px]">
                     {doc.title}
                   </h2>
-                  <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-[#5A6068]">
+                  <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-[#7a818a]">
                     Last reviewed · {doc.lastReview}
                   </p>
                 </header>

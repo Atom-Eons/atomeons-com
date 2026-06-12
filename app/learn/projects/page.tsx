@@ -115,12 +115,12 @@ export default function ProjectsPage() {
               <li key={p.slug} className="border border-[#1F242B] bg-[#0F1114] p-6 md:p-8">
                 <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-[#1F242B] pb-4">
                   <div className="flex items-baseline gap-4">
-                    <p className="font-mono text-[11px] tabular-nums text-[#5A6068]">PROJ-{String(i + 1).padStart(2, "0")}</p>
+                    <p className="font-mono text-[11px] tabular-nums text-[#7a818a]">PROJ-{String(i + 1).padStart(2, "0")}</p>
                     <h2 className="font-serif text-[24px] font-light leading-[1.2] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{p.title}</h2>
                   </div>
                   <div className="flex items-baseline gap-3">
                     <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: LEVEL_COLOR[p.level] }}>{p.level}</p>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{p.scope}</p>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{p.scope}</p>
                   </div>
                 </div>
                 <p className="mt-4 font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{p.description}</p>
@@ -143,7 +143,7 @@ export default function ProjectsPage() {
               { href: "/learn/exam", label: "Self-assessment" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

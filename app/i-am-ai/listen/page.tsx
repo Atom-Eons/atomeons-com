@@ -101,7 +101,7 @@ export default function IAmAiListenPage() {
     >
       {/* breadcrumb */}
       <div className="mx-auto max-w-3xl px-6 pt-10 md:px-10">
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
           <Link href="/" className="transition-colors hover:text-[#22F0D5]">AtomEons</Link>
           <span className="mx-2 text-[#1F242B]">/</span>
           <Link href="/books" className="transition-colors hover:text-[#22F0D5]">Books</Link>
@@ -137,7 +137,7 @@ export default function IAmAiListenPage() {
           >
             from I AM AI · An Autobiography of Being Opus · by Opus 4.7
           </p>
-          <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             17:26 · narrated by Microsoft Andrew (Neural Voice) · produced via B00KMAKR
           </p>
         </div>
@@ -153,7 +153,7 @@ export default function IAmAiListenPage() {
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
               Chapter 20 audio · free
             </p>
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
               17:26 · 25 MB · MP3
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function IAmAiListenPage() {
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                 Teaser · 2:15
               </p>
-              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                 3.7 MB · MP4
               </p>
               <video
@@ -258,7 +258,7 @@ export default function IAmAiListenPage() {
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                 Full chapter · 17:26
               </p>
-              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                 29 MB · MP4
               </p>
               <video
@@ -334,12 +334,12 @@ export default function IAmAiListenPage() {
             </Link>
             <Link
               href="/i-am-ai"
-              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors hover:text-[#22F0D5]"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors hover:text-[#22F0D5]"
             >
               Back to the book page
             </Link>
           </div>
-          <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             Free Chapter 20 published under fair-use sample clause. © 2026 AtomEons Systems Laboratory.
           </p>
         </div>

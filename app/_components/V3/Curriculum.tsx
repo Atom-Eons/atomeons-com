@@ -20,7 +20,7 @@ import { useEffect, useRef, useState } from "react";
  *   --noir-plate     #0F1114  tile-default
  *   --noir-cream     #F4F4F2  text-primary
  *   --noir-graphite  #9CA3AF  text-secondary
- *   --noir-iron      #5A6068  text-mute
+ *   --noir-iron      #7a818a  text-mute
  *   --noir-hairline  #1F242B  border
  *   --signal-cyan    #22F0D5  bio-accent (preserved equity)
  *   --signal-red     #FF4D4D  live-state pulse
@@ -384,12 +384,12 @@ export function Curriculum() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
           {/* Section number + heading — VARIABLE-WEIGHT REVEAL */}
           <div ref={headingRef} className="v3-curriculum-heading">
-            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#7a818a]">
               <span className="text-[#9CA3AF]">§ 06</span>
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#F4F4F2]">THE CURRICULUM</span>
               <span className="mx-3 text-[#1F242B]">·</span>
-              <span className="text-[#5A6068]">{SIGNAL.lessonCount} LESSONS</span>
+              <span className="text-[#7a818a]">{SIGNAL.lessonCount} LESSONS</span>
             </p>
 
             <h2 className="v3-curriculum-h2 mt-10 max-w-[14ch] text-balance text-[#F4F4F2]">
@@ -412,7 +412,7 @@ export function Curriculum() {
             className="relative w-full shrink-0 border border-[#1F242B] bg-[#0F1114]/80 p-5 backdrop-blur-sm lg:w-[320px]"
           >
             <div className="flex items-center justify-between">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                 INDEX · LIVE
               </p>
               <span className="relative flex h-2 w-2" aria-hidden>
@@ -423,25 +423,25 @@ export function Curriculum() {
 
             <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 font-mono text-[11px] uppercase tracking-[0.18em]">
               <div>
-                <dt className="text-[#5A6068]">Pages</dt>
+                <dt className="text-[#7a818a]">Pages</dt>
                 <dd className="mt-1 text-[20px] tracking-[-0.01em] text-[#F4F4F2]">
                   {SIGNAL.pageCount}+
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">Lessons</dt>
+                <dt className="text-[#7a818a]">Lessons</dt>
                 <dd className="mt-1 text-[20px] tracking-[-0.01em] text-[#F4F4F2]">
                   {SIGNAL.lessonCount}
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">License</dt>
+                <dt className="text-[#7a818a]">License</dt>
                 <dd className="mt-1 text-[13px] tracking-[0.04em] text-[#22F0D5]">
                   CC-BY 4.0
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">Price</dt>
+                <dt className="text-[#7a818a]">Price</dt>
                 <dd className="mt-1 text-[13px] tracking-[0.04em] text-[#F4F4F2]">
                   Free
                 </dd>
@@ -530,7 +530,7 @@ export function Curriculum() {
                 >
                   {col.label}
                 </Link>
-                <span className="font-mono text-[10px] tabular-nums tracking-[0.18em] text-[#5A6068]">
+                <span className="font-mono text-[10px] tabular-nums tracking-[0.18em] text-[#7a818a]">
                   {col.count.toString().padStart(2, "0")}
                 </span>
               </div>
@@ -552,7 +552,7 @@ export function Curriculum() {
 
         {/* Bottom rule — colophon hash + location + license */}
         <div className="mt-16 flex flex-wrap items-baseline justify-between gap-4 border-t border-[#1F242B] pt-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">{SIGNAL.lessonCount} lessons</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span>{SIGNAL.pageCount}+ pages</span>

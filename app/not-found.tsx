@@ -72,7 +72,7 @@ export default function NotFound() {
         className="border-b border-[#1F242B]"
       >
         <div className="mx-auto w-full max-w-4xl px-6 pt-24 pb-16 md:px-10 md:pt-32 md:pb-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">Status</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#22F0D5]">404 · page not found</span>
@@ -132,7 +132,7 @@ export default function NotFound() {
         className="border-b border-[#1F242B] bg-[#0F1114] py-20 md:py-28"
       >
         <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#22F0D5]">Six destinations that do exist</span>
@@ -154,7 +154,7 @@ export default function NotFound() {
                   href={r.href}
                   className="group flex h-full flex-col gap-3 p-7 transition-colors hover:bg-[#08090B] md:p-9"
                 >
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                     {r.eyebrow}
                   </p>
                   <h3
@@ -169,7 +169,7 @@ export default function NotFound() {
                   >
                     {r.detail}
                   </p>
-                  <p className="mt-auto pt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                  <p className="mt-auto pt-1 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                     atomeons.com{r.href}
                   </p>
                 </Link>

@@ -387,7 +387,7 @@ export function ConstellationCanvas() {
 
       {/* Controls overlay */}
       <div className="pointer-events-none absolute bottom-4 left-4 select-none">
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
           drag · pan · wheel · zoom · click · navigate
         </p>
       </div>
@@ -401,7 +401,7 @@ export function ConstellationCanvas() {
             top: Math.min(hover.y + 16, window.innerHeight - 100),
           }}
         >
-          <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#7a818a]">
             atomeons.com{hover.node.r}
           </p>
           <p

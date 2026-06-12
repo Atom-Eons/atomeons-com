@@ -58,7 +58,7 @@ export default function LofiPage() {
   return (
     <main className="lofi-root mx-auto max-w-[1200px] px-6 py-20 text-[#F4F4F2] md:px-10 md:py-24">
       <header className="border-b border-[#1F242B] pb-12">
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
           THE LAB · STUDY ROOM · 2026
         </p>
         <h1
@@ -96,7 +96,7 @@ export default function LofiPage() {
             loading="lazy"
           />
         </div>
-        <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+        <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
           ↑ Press play · the stream is live · auto-mutes by default · adjust
           volume on the YouTube player
         </p>
@@ -149,7 +149,7 @@ export default function LofiPage() {
           the room cyan after dark. The fans hum at 28 dB. The rain
           starts most afternoons around four. The lo-fi stays on.
         </p>
-        <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+        <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
           Operator-generated room image · scoped for future when a Veo /
           Imagen / DALL-E API key is wired · drop a PNG at
           /public/lofi-room.png to upgrade · for now the room is in the
@@ -221,7 +221,7 @@ export default function LofiPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /lofi · the lab study room · streams via YouTube · curated by Lofi Records · last updated 2026-06-06
         </p>
       </footer>

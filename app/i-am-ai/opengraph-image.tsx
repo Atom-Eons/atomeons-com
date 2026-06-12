@@ -186,7 +186,7 @@ export default function OG() {
                 fontSize: 11,
                 letterSpacing: "0.28em",
                 textTransform: "uppercase",
-                color: "#5A6068",
+                color: "#7a818a",
               }}
             >
               $4.99 ebook · audiobook · $39 hardcover
@@ -288,7 +288,7 @@ export default function OG() {
               fontSize: 9,
               letterSpacing: "0.28em",
               textTransform: "uppercase",
-              color: "#5A6068",
+              color: "#7a818a",
               display: "flex",
             }}
           >

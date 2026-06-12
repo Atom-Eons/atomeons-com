@@ -378,7 +378,7 @@ export function SearchPalette() {
             height="16"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#5A6068"
+            stroke="#7a818a"
             strokeWidth="2"
             className="flex-shrink-0"
           >
@@ -391,7 +391,7 @@ export function SearchPalette() {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={onInputKey}
             placeholder="Search or ask · orangebox · what is RAG · ⌘↵ to ask the lab"
-            className="h-14 w-full bg-transparent text-[15px] text-[#F4F4F2] placeholder:text-[#5A6068] focus:outline-none"
+            className="h-14 w-full bg-transparent text-[15px] text-[#F4F4F2] placeholder:text-[#7a818a] focus:outline-none"
             spellCheck={false}
             autoComplete="off"
             autoCorrect="off"
@@ -471,7 +471,7 @@ export function SearchPalette() {
               <button
                 type="button"
                 onClick={clearAsk}
-                className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] hover:text-[#22F0D5]"
+                className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] hover:text-[#22F0D5]"
               >
                 clear
               </button>
@@ -495,7 +495,7 @@ export function SearchPalette() {
                         <span className="font-serif text-[13px] text-[#F4F4F2] group-hover:text-[#22F0D5]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                           {s.title}
                         </span>
-                        <span className="truncate font-mono text-[9px] uppercase tracking-[0.18em] text-[#5A6068]">
+                        <span className="truncate font-mono text-[9px] uppercase tracking-[0.18em] text-[#7a818a]">
                           {s.route}
                         </span>
                       </span>
@@ -517,7 +517,7 @@ export function SearchPalette() {
           className="max-h-[60vh] overflow-y-auto"
         >
           {loading && !index ? (
-            <li className="px-5 py-8 text-center font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+            <li className="px-5 py-8 text-center font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
               Loading index…
             </li>
           ) : results.length === 0 ? (
@@ -525,7 +525,7 @@ export function SearchPalette() {
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF]">
                 No results for &quot;{query}&quot;
               </p>
-              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                 Try: orangebox · cyber · papers · supermodels · I AM AI · monograph
               </p>
             </li>
@@ -570,7 +570,7 @@ export function SearchPalette() {
                       >
                         {r.t || r.r}
                       </p>
-                      <p className="mt-0.5 truncate font-mono text-[10px] uppercase tracking-[0.16em] text-[#5A6068]">
+                      <p className="mt-0.5 truncate font-mono text-[10px] uppercase tracking-[0.16em] text-[#7a818a]">
                         atomeons.com{r.r}
                         {r.matchedField !== "title" &&
                         r.matchedField !== "default" ? (
@@ -597,7 +597,7 @@ export function SearchPalette() {
 
         {/* FOOTER */}
         <div className="flex items-center justify-between gap-4 border-t border-[#1F242B] px-5 py-2.5">
-          <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             <span className="flex items-center gap-1.5">
               <kbd className="border border-[#1F242B] px-1.5 py-0.5 text-[#9CA3AF]">↑</kbd>
               <kbd className="border border-[#1F242B] px-1.5 py-0.5 text-[#9CA3AF]">↓</kbd>
@@ -616,7 +616,7 @@ export function SearchPalette() {
               close
             </span>
           </div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             {index ? `${index.count} pages indexed` : "loading…"}
           </p>
         </div>
@@ -676,7 +676,7 @@ export function SearchTrigger({ compact = false }: { compact?: boolean }) {
           height="13"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#5A6068"
+          stroke="#7a818a"
           strokeWidth="2"
           className="flex-shrink-0 transition-colors group-hover:stroke-[#22F0D5]"
         >
@@ -687,7 +687,7 @@ export function SearchTrigger({ compact = false }: { compact?: boolean }) {
           Search the lab
         </span>
       </span>
-      <kbd className="hidden flex-shrink-0 border border-[#1F242B] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.16em] text-[#5A6068] transition-colors group-hover:border-[#22F0D5]/40 group-hover:text-[#9CA3AF] sm:inline-block">
+      <kbd className="hidden flex-shrink-0 border border-[#1F242B] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.16em] text-[#7a818a] transition-colors group-hover:border-[#22F0D5]/40 group-hover:text-[#9CA3AF] sm:inline-block">
         {isMac ? "⌘K" : "Ctrl-K"}
       </kbd>
     </button>

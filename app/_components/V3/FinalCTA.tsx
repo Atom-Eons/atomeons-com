@@ -46,7 +46,7 @@ import { useEffect, useRef, useState } from "react";
  *   --noir-plate     #0F1114  panel
  *   --noir-cream     #F4F4F2  text-primary
  *   --noir-graphite  #9CA3AF  text-secondary
- *   --noir-iron      #5A6068  text-mute
+ *   --noir-iron      #7a818a  text-mute
  *   --noir-hairline  #1F242B  border
  *   --signal-cyan    #22F0D5  bio-accent (preserved equity, primary CTA)
  *   --signal-red     #FF4D4D  live-state pulse
@@ -200,14 +200,14 @@ export function FinalCTA() {
       {/* ----------------------------------------------------------------- */}
       <div className="relative z-10 mx-auto w-full max-w-[1480px] px-6 pt-14 md:px-10 md:pt-20 lg:px-14">
         <div className="flex items-baseline justify-between gap-6">
-          <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#5A6068]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§ 08</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#F4F4F2]">ENTER</span>
             <span className="mx-3 text-[#1F242B]">·</span>
-            <span className="text-[#5A6068]">END OF PAGE</span>
+            <span className="text-[#7a818a]">END OF PAGE</span>
           </p>
-          <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068] sm:block">
+          <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] sm:block">
             <span>ÆONS RESEARCH LABORATORY</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#9CA3AF]">{SIGNAL.status}</span>
@@ -224,7 +224,7 @@ export function FinalCTA() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_320px] lg:items-end lg:gap-20">
           {/* ---------- LEFT: headline + actions ------------------------- */}
           <div ref={headingRef} className="v3-finalcta-heading">
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
               The next action
             </p>
 
@@ -281,10 +281,10 @@ export function FinalCTA() {
               <Link
                 href="/research"
                 aria-label="Read the most recent paper — ÆoNs Research archive"
-                className="group/cta2 relative inline-flex min-h-[78px] flex-1 items-center justify-between border border-[#1F242B] bg-transparent px-7 py-5 text-[#F4F4F2] outline-none transition-[border-color,background-color] duration-200 hover:border-[#5A6068] hover:bg-[#0F1114]/60 focus-visible:border-[#F4F4F2] focus-visible:bg-[#0F1114]/60"
+                className="group/cta2 relative inline-flex min-h-[78px] flex-1 items-center justify-between border border-[#1F242B] bg-transparent px-7 py-5 text-[#F4F4F2] outline-none transition-[border-color,background-color] duration-200 hover:border-[#7a818a] hover:bg-[#0F1114]/60 focus-visible:border-[#F4F4F2] focus-visible:bg-[#0F1114]/60"
               >
                 <span className="flex flex-col items-start gap-1">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
                     Or
                   </span>
                   <span className="text-[20px] leading-[1.15] tracking-[-0.005em] text-[#F4F4F2] sm:text-[22px]">
@@ -293,7 +293,7 @@ export function FinalCTA() {
                 </span>
                 <span
                   aria-hidden
-                  className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.28em] text-[#5A6068] transition-colors duration-200 group-hover/cta2:text-[#F4F4F2] group-focus-visible/cta2:text-[#F4F4F2]"
+                  className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.28em] text-[#7a818a] transition-colors duration-200 group-hover/cta2:text-[#F4F4F2] group-focus-visible/cta2:text-[#F4F4F2]"
                 >
                   <span className="hidden sm:inline">/research</span>
                   <span className="text-[18px] leading-none">↗</span>
@@ -303,7 +303,7 @@ export function FinalCTA() {
 
             {/* Discreet footnote, mono, below the actions. The "what */}
             {/* you get" honest one-liner. No exclamation, no promise. */}
-            <p className="mt-7 max-w-[60ch] font-mono text-[10.5px] uppercase tracking-[0.22em] text-[#5A6068]">
+            <p className="mt-7 max-w-[60ch] font-mono text-[10.5px] uppercase tracking-[0.22em] text-[#7a818a]">
               <span className="text-[#9CA3AF]">No demo gate.</span>
               <span className="mx-2 text-[#1F242B]">·</span>
               <span>No waitlist.</span>
@@ -324,7 +324,7 @@ export function FinalCTA() {
             className="relative w-full shrink-0 border border-[#1F242B] bg-[#0F1114]/80 p-5 backdrop-blur-sm lg:w-[320px]"
           >
             <div className="flex items-center justify-between">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                 LAB · LIVE
               </p>
               <span className="relative flex h-2 w-2" aria-hidden>
@@ -335,25 +335,25 @@ export function FinalCTA() {
 
             <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 font-mono text-[11px] uppercase tracking-[0.18em]">
               <div>
-                <dt className="text-[#5A6068]">Status</dt>
+                <dt className="text-[#7a818a]">Status</dt>
                 <dd className="mt-1 text-[13px] tracking-[0.04em] text-[#22F0D5]">
                   {SIGNAL.status}
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">Installs</dt>
+                <dt className="text-[#7a818a]">Installs</dt>
                 <dd className="mt-1 text-[20px] tracking-[-0.01em] tabular-nums text-[#F4F4F2]">
                   {SIGNAL.installCount}
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">Build</dt>
+                <dt className="text-[#7a818a]">Build</dt>
                 <dd className="mt-1 text-[13px] tabular-nums tracking-[0.04em] text-[#F4F4F2]">
                   {SIGNAL.buildSha}
                 </dd>
               </div>
               <div>
-                <dt className="text-[#5A6068]">Updated</dt>
+                <dt className="text-[#7a818a]">Updated</dt>
                 <dd className="mt-1 text-[13px] tabular-nums tracking-[0.04em] text-[#F4F4F2]">
                   {SIGNAL.buildDate}
                 </dd>
@@ -380,7 +380,7 @@ export function FinalCTA() {
       {/* ----------------------------------------------------------------- */}
       <div className="relative z-10 mx-auto w-full max-w-[1480px] px-6 pb-14 md:px-10 md:pb-20 lg:px-14">
         <div className="flex flex-wrap items-baseline justify-between gap-4 border-t border-[#1F242B] pt-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">Marco Island, FL</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span>
@@ -391,7 +391,7 @@ export function FinalCTA() {
             <span className="mx-3 text-[#1F242B]">·</span>
             <span>CC-BY 4.0</span>
           </p>
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span>Build</span>
             <span className="mx-2 text-[#1F242B]">/</span>
             <span className="tabular-nums text-[#9CA3AF]">{SIGNAL.buildSha}</span>

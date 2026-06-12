@@ -67,7 +67,7 @@ export default function OG() {
             { k: "Reading lists", v: "3", note: "Cyber · Decoded · Manuscripts" },
           ].map((m, i) => (
             <div key={m.k} style={{ display: "flex", flexDirection: "column", flex: 1, padding: "20px 22px", borderLeft: i === 0 ? "none" : "1px solid #1F242B", background: "#0F1114" }}>
-              <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "#5A6068" }}>{m.k}</p>
+              <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "#7a818a" }}>{m.k}</p>
               <p style={{ margin: "10px 0 0", fontFamily: "Georgia, ui-serif, serif", fontSize: 30, fontWeight: 400, lineHeight: 1.05, letterSpacing: "-0.015em", color: "#F4F4F2" }}>{m.v}</p>
               <p style={{ margin: "8px 0 0", fontFamily: "ui-monospace, monospace", fontSize: 11, letterSpacing: "0.18em", color: "#9CA3AF" }}>{m.note}</p>
             </div>
@@ -75,7 +75,7 @@ export default function OG() {
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginTop: "auto", paddingTop: 24, borderTop: "1px solid #1F242B" }}>
-          <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 11, letterSpacing: "0.28em", textTransform: "uppercase", color: "#5A6068" }}>
+          <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 11, letterSpacing: "0.28em", textTransform: "uppercase", color: "#7a818a" }}>
             atomeons.com/books
           </p>
           <p style={{ margin: 0, fontSize: 22, fontWeight: 600, letterSpacing: "-0.015em", color: "#22F0D5" }}>

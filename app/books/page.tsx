@@ -130,7 +130,7 @@ function StatusPip({ status }: { status: Book["status"] }) {
       <span
         aria-hidden
         className="inline-block h-1.5 w-1.5 rounded-full"
-        style={{ border: "1px solid #5A6068" }}
+        style={{ border: "1px solid #7a818a" }}
       />
       <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">
         Forthcoming
@@ -144,10 +144,10 @@ function BookCard({ b }: { b: Book }) {
     <article className="group relative flex flex-col gap-8 border border-[#1F242B] bg-[#0F1114] p-8 transition-colors hover:border-[#22F0D5]/40 md:flex-row md:gap-12 md:p-12">
       <div className="flex flex-col items-start gap-4 md:basis-1/3">
         <StatusPip status={b.status} />
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
           {b.format}
         </p>
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
           {b.pages} pages
         </p>
       </div>
@@ -204,7 +204,7 @@ export default function BooksPage() {
     <main className="bg-[#08090B] text-[#F4F4F2]">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-6xl px-6 pt-24 pb-16 md:px-10 md:pt-32 md:pb-24">
-          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§ The shelf</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span>Long-form work from the lab</span>
@@ -257,7 +257,7 @@ export default function BooksPage() {
                   href={r.href}
                   className="group flex h-full flex-col gap-5 p-8 transition-colors hover:bg-[#08090B] md:p-10"
                 >
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                     {r.itemsLabel}
                   </p>
                   <h3
@@ -272,7 +272,7 @@ export default function BooksPage() {
                   >
                     {r.summary}
                   </p>
-                  <p className="mt-auto font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                  <p className="mt-auto font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                     {r.curator} · {r.href}
                   </p>
                 </Link>

@@ -113,7 +113,10 @@ export function AmbientSignature() {
         onClick={toggleMute}
         aria-label={muted ? "Unmute ambient signature" : "Mute ambient signature"}
         aria-pressed={muted}
-        className="fixed bottom-3 right-3 z-50 flex h-7 w-7 items-center justify-center rounded-full border border-[#1F242B] bg-[#08090B]/80 text-[#5A6068] backdrop-blur-sm transition-colors hover:border-[#22F0D5]/40 hover:text-[#22F0D5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22F0D5]/40"
+        // Wave 50 · 2026-06-12 · target-size · was h-7 w-7 (28px) · failed
+        // WCAG 2.5.5. Now h-9 w-9 (36px) · still subtle in the corner ·
+        // meets minimum touch target spec.
+        className="fixed bottom-3 right-3 z-50 flex h-9 w-9 items-center justify-center rounded-full border border-[#1F242B] bg-[#08090B]/80 text-[#7a818a] backdrop-blur-sm transition-colors hover:border-[#22F0D5]/40 hover:text-[#22F0D5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22F0D5]/40"
         title={muted ? "Signature off" : playing ? "Signature on" : "Signature paused"}
       >
         <svg aria-hidden width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

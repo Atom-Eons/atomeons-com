@@ -80,7 +80,7 @@ export function FirstTimeChip() {
         type="button"
         onClick={dismiss}
         aria-label="Dismiss first-time prompt"
-        className="border-l px-3 font-mono text-[14px] text-[#5A6068] transition hover:bg-[#FF4D4D]/10 hover:text-[#FF4D4D]"
+        className="border-l px-3 font-mono text-[14px] text-[#7a818a] transition hover:bg-[#FF4D4D]/10 hover:text-[#FF4D4D]"
         style={{ borderColor: "rgba(34, 240, 213, 0.2)" }}
       >
         ×

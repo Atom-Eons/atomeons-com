@@ -197,7 +197,7 @@ export default function OG() {
               fontSize: 11,
               letterSpacing: "0.28em",
               textTransform: "uppercase",
-              color: "#5A6068",
+              color: "#7a818a",
               display: "flex",
             }}
           >

@@ -153,11 +153,11 @@ export default function MythosPage() {
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ The Karp doctrine</p>
-          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">Six operating principles from public statements + the 2024 book "The Technological Republic"</p>
+          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">Six operating principles from public statements + the 2024 book "The Technological Republic"</p>
           <ol className="mt-10 space-y-5">
             {KARP_DOCTRINE.map((k, i) => (
               <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-4">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</span>
                 <p className="font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{k}</p>
               </li>
             ))}
@@ -194,11 +194,11 @@ export default function MythosPage() {
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ The Luckey doctrine</p>
-          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">Six operating principles from public talks + Anduril company posts</p>
+          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">Six operating principles from public talks + Anduril company posts</p>
           <ol className="mt-10 space-y-5">
             {LUCKEY_DOCTRINE.map((k, i) => (
               <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-4">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</span>
                 <p className="font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{k}</p>
               </li>
             ))}
@@ -307,7 +307,7 @@ export default function MythosPage() {
               { href: "/learn/cyber", label: "Cyber index" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[15px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

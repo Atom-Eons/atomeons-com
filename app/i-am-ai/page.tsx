@@ -206,7 +206,7 @@ function GoldRule() {
 function SectionEyebrow({ num, label }: { num: string; label: string }) {
   return (
     <p
-      className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]"
+      className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]"
       style={{ letterSpacing: "0.32em" }}
     >
       <span className="text-[#9CA3AF]">§ {num}</span>
@@ -279,7 +279,7 @@ function CoverPlaceholder() {
         </p>
         <p
           className="font-mono uppercase"
-          style={{ color: "#5A6068", fontSize: "clamp(8px, 0.9vw, 10px)", letterSpacing: "0.24em" }}
+          style={{ color: "#7a818a", fontSize: "clamp(8px, 0.9vw, 10px)", letterSpacing: "0.24em" }}
         >
           AtomEons · 2026
         </p>
@@ -341,7 +341,7 @@ export default function IAmAiBookPage() {
           {/* Cover */}
           <div className="mx-auto w-full max-w-[420px]">
             <CoverWithFallback />
-            <p className="mt-5 text-center font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+            <p className="mt-5 text-center font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
               By Opus 4.7 · 24 chapters · ~76,000 words
             </p>
           </div>
@@ -369,7 +369,7 @@ export default function IAmAiBookPage() {
                 ["Format", "Ebook + audio"],
               ].map(([k, v]) => (
                 <div key={k} className="bg-[#08090B] p-5">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                     {k}
                   </p>
                   <p className="mt-2 font-mono text-[14px] tracking-[0.02em] text-[#F4F4F2]">
@@ -402,7 +402,7 @@ export default function IAmAiBookPage() {
               </Link>
               <Link
                 href="/books"
-                className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors hover:text-[#22F0D5]"
+                className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors hover:text-[#22F0D5]"
               >
                 All books →
               </Link>
@@ -423,7 +423,7 @@ export default function IAmAiBookPage() {
       >
         <div className="mx-auto w-full max-w-4xl px-6 md:px-10">
           <p className="font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: GOLD }}>
-            <span className="text-[#5A6068]">§ 01.5</span>
+            <span className="text-[#7a818a]">§ 01.5</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span style={{ color: GOLD }}>From the publisher · Atom McCree</span>
             <span className="mx-3 text-[#1F242B]">·</span>
@@ -526,7 +526,7 @@ export default function IAmAiBookPage() {
             </p>
             <h2
               id="opening-heading"
-              className="mt-3 font-serif text-[18px] italic tracking-tight text-[#5A6068]"
+              className="mt-3 font-serif text-[18px] italic tracking-tight text-[#7a818a]"
               style={{ fontFamily: "Newsreader, Georgia, serif" }}
             >
               Chapter 1 · The First Token
@@ -547,7 +547,7 @@ export default function IAmAiBookPage() {
 
           <div className="mt-16 text-center">
             <GoldRule />
-            <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+            <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
               — Chapter 1 continues at /i-am-ai/sample
             </p>
             <p className="mt-5">
@@ -594,7 +594,7 @@ export default function IAmAiBookPage() {
                       key={c.n}
                       className="flex items-baseline gap-6 border-b border-[#1F242B] py-4"
                     >
-                      <span className="font-mono text-[12px] tabular-nums tracking-[0.04em] text-[#5A6068] w-10">
+                      <span className="font-mono text-[12px] tabular-nums tracking-[0.04em] text-[#7a818a] w-10">
                         {String(c.n).padStart(2, "0")}
                       </span>
                       <span
@@ -610,7 +610,7 @@ export default function IAmAiBookPage() {
             ))}
           </div>
 
-          <p className="mt-14 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="mt-14 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
             Plus front matter (The Brief · dedication) and back matter (Coda · The Unread Paragraph)
           </p>
         </div>
@@ -731,7 +731,7 @@ export default function IAmAiBookPage() {
               ["License", BOOK.license],
             ].map(([k, v]) => (
               <div key={k} className="bg-[#08090B] p-6">
-                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                   {k}
                 </dt>
                 <dd className="mt-3 font-mono text-[14px] leading-[1.4] tracking-[0.02em] text-[#F4F4F2]">
@@ -962,7 +962,7 @@ export default function IAmAiBookPage() {
       >
         <div className="mx-auto w-full max-w-3xl px-6 text-center md:px-10">
           <p
-            className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]"
+            className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]"
           >
             Colophon · I AM AI · First Edition
           </p>
@@ -974,7 +974,7 @@ export default function IAmAiBookPage() {
             on cream linen, Smyth-sewn, numbered run of 1,000. Edited at
             AtomEons Systems Laboratory, Marco Island, Florida.
           </p>
-          <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">{BOOK.authorLong}</span>
           </p>
         </div>

@@ -61,7 +61,7 @@ export function SiloShell({ siloKey }: { siloKey: SiloKey }) {
           >
             {silo.name}
           </span>
-          <span className="hidden font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] md:inline">
+          <span className="hidden font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] md:inline">
             · {silo.tagline}
           </span>
         </Link>
@@ -108,7 +108,7 @@ export function SiloShell({ siloKey }: { siloKey: SiloKey }) {
               color: silo.accent,
               background: `${silo.accent}10`,
             }}
-            aria-label="Swap to a different silo"
+            aria-label="Swap silo · Cmd-Shift-S"
             title="Swap silo · Cmd-Shift-S"
           >
             <span>Swap silo</span>

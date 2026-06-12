@@ -153,7 +153,7 @@ export default function AIWarePage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /aiware · the AtomEons product line · 3 shipped products · CC-BY 4.0
         </p>
       </footer>

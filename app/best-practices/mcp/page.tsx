@@ -357,7 +357,7 @@ export default function McpBestPracticesPage() {
       <BackToHub />
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /best-practices/mcp · Last verified 2026-06-06 · sources above
         </p>
       </footer>

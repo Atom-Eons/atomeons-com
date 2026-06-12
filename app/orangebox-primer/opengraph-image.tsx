@@ -60,14 +60,14 @@ export default function OG() {
             { k: "License", v: "§4A" },
           ].map((m, i) => (
             <div key={m.k} style={{ display: "flex", flexDirection: "column", flex: 1, padding: "20px 20px", borderLeft: i === 0 ? "none" : "1px solid #1F242B", background: "#0F1114" }}>
-              <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "#5A6068" }}>{m.k}</p>
+              <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "#7a818a" }}>{m.k}</p>
               <p style={{ margin: "10px 0 0", fontFamily: "ui-monospace, monospace", fontSize: 38, fontWeight: 400, lineHeight: 1, letterSpacing: "-0.03em", color: "#F4F4F2" }}>{m.v}</p>
             </div>
           ))}
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginTop: "auto", paddingTop: 24, borderTop: "1px solid #1F242B" }}>
-          <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "#5A6068" }}>
+          <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "#7a818a" }}>
             SHA-256 stamped binary · code-signed cert · BYO API key · zero markup
           </p>
           <p style={{ margin: 0, fontSize: 22, fontWeight: 600, letterSpacing: "-0.015em", color: "#22F0D5" }}>

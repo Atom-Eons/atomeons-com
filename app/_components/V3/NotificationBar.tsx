@@ -115,7 +115,9 @@ export function NotificationBar() {
           setDismissed(true);
         }}
         aria-label="Dismiss notification"
-        className="shrink-0 font-mono text-[14px] leading-none text-[#5A6068] transition hover:text-[#FF4D4D]"
+        // Wave 50 · 2026-06-12 · target-size · was 14px (failed WCAG 2.5.5).
+        // Now 32px hit area · still visually tiny · meets minimum touch target.
+        className="shrink-0 inline-flex items-center justify-center h-[28px] w-[28px] -mr-1 font-mono text-[14px] leading-none text-[#7a818a] transition hover:text-[#FF4D4D]"
       >
         ×
       </button>

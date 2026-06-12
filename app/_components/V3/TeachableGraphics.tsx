@@ -15,7 +15,7 @@ const COLORS = {
   ink: "#0F1114",
   paper: "#F4F4F2",
   dim: "#9CA3AF",
-  mute: "#5A6068",
+  mute: "#7a818a",
   hair: "#1F242B",
   cyan: "#22F0D5",
   amber: "#C9A55C",

@@ -122,7 +122,7 @@ export function SiloSwitcher() {
           ))}
         </div>
 
-        <p className="mt-6 text-center font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="mt-6 text-center font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           / · launcher home  ·  Cmd-K · search  ·  Cmd-Shift-S · swap silo
         </p>
       </div>

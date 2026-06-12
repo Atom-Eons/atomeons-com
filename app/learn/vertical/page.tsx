@@ -59,7 +59,7 @@ export default function VerticalIndexPage() {
     <main className="bg-[#08090B] text-[#F4F4F2] antialiased">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-6xl px-6 pt-24 pb-16 md:px-10 md:pt-32 md:pb-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§ Verticals</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#22F0D5]">AI in twenty real industries</span>
@@ -88,7 +88,7 @@ export default function VerticalIndexPage() {
                   href={`/learn/vertical/${s.slug}`}
                   className="group flex h-full flex-col gap-4 p-7 transition-colors hover:bg-[#08090B] md:p-9"
                 >
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                     <span className="text-[#1F242B]">V/{String(i + 1).padStart(2, "0")}</span> · {s.housekeeping}
                   </p>
                   <h2
@@ -103,7 +103,7 @@ export default function VerticalIndexPage() {
                   >
                     {s.blurb}
                   </p>
-                  <p className="mt-auto pt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                  <p className="mt-auto pt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                     /learn/vertical/{s.slug}
                   </p>
                 </Link>

@@ -135,19 +135,19 @@ export function LiveDashboard() {
             <div className="flex items-center justify-between">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">{c.label}</p>
               {c.pulse ? (
-                <span className={s.offline ? "size-2 rounded-full bg-[#5A6068]" : "size-2 animate-pulse rounded-full bg-[#22F0D5]"} aria-hidden />
+                <span className={s.offline ? "size-2 rounded-full bg-[#7a818a]" : "size-2 animate-pulse rounded-full bg-[#22F0D5]"} aria-hidden />
               ) : null}
             </div>
             <p
               className={
                 s.offline
-                  ? "mt-4 font-mono text-[14px] uppercase tracking-[0.22em] text-[#5A6068]"
+                  ? "mt-4 font-mono text-[14px] uppercase tracking-[0.22em] text-[#7a818a]"
                   : "mt-4 font-mono text-[20px] tabular-nums text-[#F4F4F2]"
               }
             >
               {s.value}
             </p>
-            <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+            <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
               {c.endpoint}
             </p>
           </div>

@@ -123,7 +123,7 @@ function ReceiptRow({ r }: { r: Receipt }) {
     <article className="border-t border-[#1F242B] py-10">
       <div className="grid gap-6 md:grid-cols-[1fr_1fr] md:gap-12">
         <header>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             {r.metric}
           </p>
           <p className="mt-3 font-mono text-[clamp(40px,6vw,72px)] leading-none tabular-nums tracking-[-0.03em] text-[#F4F4F2]">
@@ -201,7 +201,7 @@ export default function ReceiptsPage() {
         ]}
       />
       <section className="mx-auto max-w-6xl px-6 pt-24 pb-12 md:px-10 md:pt-32">
-        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#7a818a]">
           <span className="text-[#9CA3AF]">§ Audit ledger</span>
           <span className="mx-3 text-[#1F242B]">·</span>
           <span>Current build</span>
@@ -233,7 +233,7 @@ export default function ReceiptsPage() {
 
       <section className="mx-auto max-w-6xl px-6 pb-24 md:px-10 md:pb-32">
         <header className="mt-16 border-b border-[#1F242B] pb-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             Deliberately absent
           </p>
           <h2 className="mt-3 text-2xl font-medium leading-tight tracking-tight md:text-3xl">
@@ -247,7 +247,7 @@ export default function ReceiptsPage() {
 
       <section className="border-t border-[#1F242B] bg-[#08090B] py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-6 md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             Falsify
           </p>
           <p className="mt-4 font-serif text-[20px] leading-[1.5] text-[#F4F4F2]">

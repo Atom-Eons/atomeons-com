@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-8">
           {/* Lab column */}
           <div>
-            <h3 className="font-display text-xs font-medium uppercase tracking-[0.18em] text-[#5A6068]">
+            <h3 className="font-display text-xs font-medium uppercase tracking-[0.18em] text-[#7a818a]">
               Lab
             </h3>
             <ul className="mt-5 space-y-3">
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Products column */}
           <div>
-            <h3 className="font-display text-xs font-medium uppercase tracking-[0.18em] text-[#5A6068]">
+            <h3 className="font-display text-xs font-medium uppercase tracking-[0.18em] text-[#7a818a]">
               Products
             </h3>
             <ul className="mt-5 space-y-3">
@@ -105,7 +105,7 @@ export default function Footer() {
 
           {/* Learn column */}
           <div>
-            <h3 className="font-display text-xs font-medium uppercase tracking-[0.18em] text-[#5A6068]">
+            <h3 className="font-display text-xs font-medium uppercase tracking-[0.18em] text-[#7a818a]">
               Learn
             </h3>
             <ul className="mt-5 space-y-3">
@@ -124,7 +124,7 @@ export default function Footer() {
 
           {/* Legal column */}
           <div>
-            <h3 className="font-display text-xs font-medium uppercase tracking-[0.18em] text-[#5A6068]">
+            <h3 className="font-display text-xs font-medium uppercase tracking-[0.18em] text-[#7a818a]">
               Legal
             </h3>
             <ul className="mt-5 space-y-3">
@@ -140,7 +140,7 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h3 className="font-display mt-10 text-xs font-medium uppercase tracking-[0.18em] text-[#5A6068]">
+            <h3 className="font-display mt-10 text-xs font-medium uppercase tracking-[0.18em] text-[#7a818a]">
               Contact
             </h3>
             <ul className="mt-5 space-y-3">
@@ -193,24 +193,24 @@ export default function Footer() {
             >
               Æ
             </span>
-            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#5A6068]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#7a818a]">
               Built in Marco Island, FL · 2024
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#5A6068]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#7a818a]">
               © 2024 AtomEons Systems Laboratory
             </p>
             <Link
               href="/legal/terms"
-              className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#5A6068] transition-colors duration-200 hover:text-[#22F0D5]"
+              className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#7a818a] transition-colors duration-200 hover:text-[#22F0D5]"
             >
               Terms
             </Link>
             <Link
               href="/legal/privacy"
-              className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#5A6068] transition-colors duration-200 hover:text-[#22F0D5]"
+              className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#7a818a] transition-colors duration-200 hover:text-[#22F0D5]"
             >
               Privacy
             </Link>

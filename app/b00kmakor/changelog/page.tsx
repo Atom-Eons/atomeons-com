@@ -78,7 +78,7 @@ const RELEASES: Release[] = [
 
 const STATUS_COLOR: Record<Release["status"], string> = {
   shipped: "#22F0D5",
-  skipped: "#5A6068",
+  skipped: "#7a818a",
   withdrawn: "#FF4D4D",
 };
 
@@ -122,13 +122,13 @@ export default function B00kmakrChangelogPage() {
                 <ul className="mt-5 space-y-2.5">
                   {r.highlights.map((h, i) => (
                     <li key={i} className="flex items-baseline gap-3">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">·</span>
+                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">·</span>
                       <p className="font-serif text-[15px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{h}</p>
                     </li>
                   ))}
                 </ul>
                 {r.notes ? (
-                  <p className="mt-5 border-t border-[#1F242B] pt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                  <p className="mt-5 border-t border-[#1F242B] pt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                     note · {r.notes}
                   </p>
                 ) : null}
@@ -143,7 +143,7 @@ export default function B00kmakrChangelogPage() {
               { href: "/b00kmakor/competitors", label: "Competitor comparison" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

@@ -99,7 +99,7 @@ export function AskBar({
         </p>
 
         <div className="mt-6 flex items-stretch gap-3 border border-[#1F242B] bg-[#08090B] px-4 py-2 focus-within:border-[#22F0D5] transition-colors">
-          <span aria-hidden className="flex items-center text-[#5A6068]">
+          <span aria-hidden className="flex items-center text-[#7a818a]">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="7" />
               <path d="M21 21l-4.3-4.3" />
@@ -115,7 +115,7 @@ export function AskBar({
             spellCheck={false}
             disabled={loading}
             aria-label="Ask the lab"
-            className="flex-1 bg-transparent py-3 font-sans text-[15px] text-[#F4F4F2] placeholder:text-[#5A6068] focus:outline-none disabled:opacity-60"
+            className="flex-1 bg-transparent py-3 font-sans text-[15px] text-[#F4F4F2] placeholder:text-[#7a818a] focus:outline-none disabled:opacity-60"
           />
           <button
             type="submit"
@@ -174,7 +174,7 @@ export function AskBar({
             {answer.answer}
           </p>
 
-          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Sources</p>
+          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Sources</p>
           <ul className="mt-3 space-y-2">
             {answer.sources.map((s, i) => (
               <li key={s.route + ":" + i} className="flex flex-wrap items-baseline justify-between gap-4 border-t border-[#1F242B] pt-2">
@@ -186,7 +186,7 @@ export function AskBar({
                   >
                     {s.title}
                   </Link>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                     atomeons.com{s.route}
                   </p>
                 </div>
@@ -209,7 +209,7 @@ export function AskBar({
             >
               Ask another
             </button>
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
               The model only saw the passages above. If an answer feels incomplete, follow a source for more context.
             </p>
           </div>

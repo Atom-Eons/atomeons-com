@@ -74,7 +74,7 @@ export default function TransparencyPage() {
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-[#1F242B] pb-4">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ recurring monthly costs</p>
-            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#5A6068]">cutoff 2026-06-01 · USD</p>
+            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#7a818a]">cutoff 2026-06-01 · USD</p>
           </div>
           <ul className="mt-8 divide-y divide-[#1F242B]">
             {COSTS.map((c, i) => (
@@ -84,13 +84,13 @@ export default function TransparencyPage() {
                     {c.what}
                   </p>
                   {c.note ? (
-                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">{c.note}</p>
+                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">{c.note}</p>
                   ) : null}
                 </div>
                 <p
                   className={
                     c.monthly === 0
-                      ? "font-mono text-[14px] uppercase tracking-[0.12em] text-[#5A6068]"
+                      ? "font-mono text-[14px] uppercase tracking-[0.12em] text-[#7a818a]"
                       : "font-mono text-[16px] tabular-nums text-[#F4F4F2]"
                   }
                 >
@@ -103,7 +103,7 @@ export default function TransparencyPage() {
               <p className="font-mono text-[20px] font-semibold tabular-nums text-[#22F0D5]">${TOTAL.toFixed(2)}</p>
             </li>
           </ul>
-          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
             does NOT include · Stripe transaction fees (variable, ~3% per sale) · payroll (zero · no employees) · office rent (operator works from home) · insurance · taxes · accountant
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function TransparencyPage() {
           <ol className="mt-8 space-y-4">
             {REVENUE_RULES.map((r, i) => (
               <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-3.5">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</span>
                 <p className="font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                   {r}
                 </p>
@@ -136,7 +136,7 @@ export default function TransparencyPage() {
               against the providers' billing portals. If a buyer wants to know
               exactly how their $99 pays for hosting, this is the page.
             </p>
-            <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+            <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
               Operator-funded · founder-bootstrapped · zero equity sold
             </p>
           </div>
@@ -148,7 +148,7 @@ export default function TransparencyPage() {
               { href: "/manifesto", label: "Operating manifesto" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{l.href}
                 </p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>

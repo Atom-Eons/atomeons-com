@@ -51,7 +51,7 @@ const C = {
   inset: "#0B0C0F",
   paper: "#F4F4F2",
   mid: "#9CA3AF",
-  muted: "#5A6068",
+  muted: "#7a818a",
   hair: "#1F242B",
   signal: "#22F0D5",
   pulse: "#FF4D4D",

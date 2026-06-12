@@ -27,7 +27,7 @@ import { useEffect, useId, useMemo, useRef, useState } from "react";
  *   #08090B  noir.base       page-deep
  *   #0F1114  noir.plate      surface
  *   #1F242B  noir.hairline   border
- *   #5A6068  noir.iron       text-mute
+ *   #7a818a  noir.iron       text-mute
  *   #9CA3AF  noir.graphite   text-secondary
  *   #F4F4F2  noir.cream      text-primary
  *   #22F0D5  signal.cyan     single bio-accent (preserved equity)
@@ -424,7 +424,7 @@ export function InteriorHero({
                 The single bio-cyan tick on the rule is the only color. */}
             <div className="absolute right-[6%] top-[18%] hidden translate-x-[3px] md:block">
               <span className="block h-[1px] w-12 bg-[#22F0D5]" />
-              <span className="mt-2 block font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+              <span className="mt-2 block font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
                 ÆONS
               </span>
             </div>
@@ -441,7 +441,7 @@ export function InteriorHero({
           <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9CA3AF]">
             <span className="text-[#F4F4F2]">{resolvedEyebrow}</span>
             <span className="mx-3 text-[#1F242B]">·</span>
-            <span className="text-[#5A6068]">MARCO ISLAND · EST. 2024</span>
+            <span className="text-[#7a818a]">MARCO ISLAND · EST. 2024</span>
           </p>
 
           <nav aria-label="Breadcrumb" className="md:justify-self-end">
@@ -540,7 +540,7 @@ export function InteriorHero({
         {/* --- BOTTOM RAIL — live signal strip ------------------------- */}
         <div className="mt-auto pt-20 md:pt-24">
           <div className="grid grid-cols-1 items-end gap-6 border-t border-[#1F242B] pt-5 md:grid-cols-[1fr_auto] md:gap-10">
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
               <span className="text-[#9CA3AF]">/{signalSlug}</span>
               <span className="mx-3 text-[#1F242B]">·</span>
               <span>build —</span>
@@ -551,7 +551,7 @@ export function InteriorHero({
             </p>
 
             <div
-              className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068] md:justify-self-end"
+              className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] md:justify-self-end"
               aria-label="Live build signal"
             >
               <span className="text-[#9CA3AF]">LIVE</span>

@@ -528,7 +528,7 @@ export function EntrainmentExperience() {
         </p>
 
         {running && (
-          <p className="mt-8 font-mono text-[14px] uppercase tracking-[0.32em] text-[#5A6068]">
+          <p className="mt-8 font-mono text-[14px] uppercase tracking-[0.32em] text-[#7a818a]">
             {mm}:{ss} · auto-stops at 20:00
           </p>
         )}

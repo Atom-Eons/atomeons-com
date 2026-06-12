@@ -367,7 +367,7 @@ export default function SoulkeyPage() {
               >
                 {m.blurb}
               </p>
-              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                 Primary ID · {m.primary_id}
               </p>
               <p className="mt-3 text-[13px] leading-[1.6] text-[#9CA3AF]">
@@ -428,10 +428,10 @@ export default function SoulkeyPage() {
         <table className="mt-8 w-full border-collapse text-[13px]">
           <thead>
             <tr className="border-b border-[#1F242B] text-left">
-              <th className="py-2 pr-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <th className="py-2 pr-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                 Table
               </th>
-              <th className="py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <th className="py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                 Columns
               </th>
             </tr>
@@ -555,12 +555,12 @@ export default function SoulkeyPage() {
               <ul className="mt-3 space-y-2 text-[14px] leading-[1.6] text-[#9CA3AF]">
                 {p.items.map((item) => (
                   <li key={item} className="flex gap-3">
-                    <span className={`mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full ${i === 0 ? "bg-[#22F0D5]" : "bg-[#5A6068]"}`} />
+                    <span className={`mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full ${i === 0 ? "bg-[#22F0D5]" : "bg-[#7a818a]"}`} />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                 {i === 0 ? "STATUS · shipped this wave" : `STATUS · scoped · awaiting operator wire-up`}
               </p>
             </li>
@@ -638,10 +638,10 @@ export default function SoulkeyPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /soulkey · canonical doctrine · CC-BY 4.0 · last updated 2026-06-06
         </p>
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           Disclosure ID · ATOM-SOULKEY-2026-0606 · architecture authored by Atom McCree
         </p>
       </footer>

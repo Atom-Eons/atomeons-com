@@ -19,7 +19,7 @@
  *   --color-noir-elev    : #0F1114    elevated surface
  *   --color-noir-paper   : #F4F4F2    inverted surface + primary text on ink
  *   --color-noir-mute    : #9CA3AF    secondary text
- *   --color-noir-dim     : #5A6068    tertiary text + dividers on paper
+ *   --color-noir-dim     : #7a818a    tertiary text + dividers on paper
  *   --color-noir-hair    : #1F242B    hairline borders on ink
  *   --color-noir-cyan    : #22F0D5    bio-cyan — preserved brand equity,
  *                                     single live-signal accent only
@@ -49,7 +49,7 @@
   --color-noir-elev:   #0F1114;
   --color-noir-paper:  #F4F4F2;
   --color-noir-mute:   #9CA3AF;
-  --color-noir-dim:    #5A6068;
+  --color-noir-dim:    #7a818a;
   --color-noir-hair:   #1F242B;
   --color-noir-cyan:   #22F0D5;
   --color-noir-pulse:  #FF4D4D;
@@ -246,7 +246,7 @@ a:hover {
 /* Foreground */
 .noir-text       { color: #F4F4F2; }
 .noir-text-mute  { color: #9CA3AF; }
-.noir-text-dim   { color: #5A6068; }
+.noir-text-dim   { color: #7a818a; }
 
 /* Hairlines — the single recurring border weight across the entire system.
  * 1px solid #1F242B on noir-ink. Use border-noir-hair Tailwind utility from
@@ -388,7 +388,7 @@ a:hover {
 .noir-signal-panel__label {
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: #5A6068;
+  color: #7a818a;
 }
 
 .noir-signal-panel__value {
@@ -554,14 +554,14 @@ a:hover {
   line-height: 16px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #5A6068;
+  color: #7a818a;
   margin-bottom: 16px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #5A6068;
+  border-bottom: 1px solid #7a818a;
 }
 
 .noir-colophon__hairline {
-  border-top: 1px solid #5A6068;
+  border-top: 1px solid #7a818a;
 }
 
 /* =============================================================================
@@ -675,7 +675,7 @@ a:hover {
   line-height: 16px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #5A6068;
+  color: #7a818a;
 }
 
 .noir-receipt-cell__delta {
@@ -708,7 +708,7 @@ a:hover {
 
 .noir-paper-card:hover {
   background: #0F1114;
-  border-color: #5A6068;
+  border-color: #7a818a;
   text-decoration: none;
 }
 
@@ -721,7 +721,7 @@ a:hover {
   line-height: 16px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #5A6068;
+  color: #7a818a;
   margin-bottom: 32px;
   padding-bottom: 16px;
   border-bottom: 1px solid #1F242B;
@@ -750,7 +750,7 @@ a:hover {
 .noir-paper-card__hash {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: #5A6068;
+  color: #7a818a;
   letter-spacing: 0.04em;
   font-variant-numeric: tabular-nums;
 }
@@ -1375,7 +1375,7 @@ html.theme-white .text-\[\#F4F4F2\] {
 html.theme-white .text-\[\#9CA3AF\] {
   color: #4a3f2d !important;
 }
-html.theme-white .text-\[\#5A6068\] {
+html.theme-white .text-\[\#7a818a\] {
   color: #7a6c54 !important;
 }
 html.theme-white .text-\[\#22F0D5\] {
@@ -1458,7 +1458,7 @@ html.theme-warez .text-\[\#9CA3AF\] {
   color: #00b85c !important;
   text-shadow: 0 0 2px rgba(0, 184, 92, 0.3);
 }
-html.theme-warez .text-\[\#5A6068\] {
+html.theme-warez .text-\[\#7a818a\] {
   color: #007a3d !important;
 }
 html.theme-warez .text-\[\#FF4D4D\] {
@@ -1935,7 +1935,7 @@ html.custom-cursor [contenteditable="true"] {
   /* Text recolor */
   [class*="text-[#F4F4F2]"],
   [class*="text-[#9CA3AF]"],
-  [class*="text-[#5A6068]"] {
+  [class*="text-[#7a818a]"] {
     color: #08090B !important;
   }
   [class*="text-[#22F0D5]"],
@@ -1965,12 +1965,12 @@ html.custom-cursor [contenteditable="true"] {
   a[href^="/"]::after {
     content: " (atomeons.com" attr(href) ")";
     font-size: 9pt;
-    color: #5A6068;
+    color: #7a818a;
   }
   a[href^="http"]::after {
     content: " (" attr(href) ")";
     font-size: 9pt;
-    color: #5A6068;
+    color: #7a818a;
   }
   a[href*="mailto:"]::after,
   a[href^="#"]::after {
@@ -1995,7 +1995,7 @@ html.custom-cursor [contenteditable="true"] {
     padding-top: 12pt;
     border-top: 1px solid #D4D4D2;
     font-size: 9pt;
-    color: #5A6068;
+    color: #7a818a;
     text-align: center;
     font-family: ui-monospace, monospace;
     letter-spacing: 0.18em;
@@ -2017,6 +2017,6 @@ html.custom-cursor [contenteditable="true"] {
 /* =============================================================================
  * END — globals.css V6 noir-cinema · print sheet added 2026-06-05
  * Signature: ATOM-NOIR-2026-0602 · print-extension ATOM-PRINT-2026-0605
- * Palette: #08090B / #0F1114 / #F4F4F2 / #9CA3AF / #5A6068 / #1F242B /
+ * Palette: #08090B / #0F1114 / #F4F4F2 / #9CA3AF / #7a818a / #1F242B /
  *          #22F0D5 / #FF4D4D
  * ============================================================================= */

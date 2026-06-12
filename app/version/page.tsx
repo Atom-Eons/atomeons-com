@@ -135,7 +135,7 @@ export default function VersionPage() {
     <main className="mx-auto max-w-[1100px] px-6 py-20 text-[#F4F4F2] md:px-10 md:py-24">
       {/* Header */}
       <header className="border-b border-[#1F242B] pb-12">
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
           VERSION · MANIFEST · 2026-06-06
         </p>
         <h1
@@ -165,7 +165,7 @@ export default function VersionPage() {
               key={s.title}
               className="grid grid-cols-[auto_1fr] gap-6 border-l-2 border-[#22F0D5]/40 pl-6"
             >
-              <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>
@@ -290,13 +290,13 @@ export default function VersionPage() {
         <table className="mt-8 w-full border-collapse text-[14px]">
           <thead>
             <tr className="border-b border-[#1F242B] text-left">
-              <th className="py-3 pr-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <th className="py-3 pr-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
                 Version
               </th>
-              <th className="py-3 pr-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <th className="py-3 pr-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
                 Date
               </th>
-              <th className="py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+              <th className="py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
                 One-line
               </th>
             </tr>
@@ -362,10 +362,10 @@ export default function VersionPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           ÆoNs Research Laboratory · Marco Island, FL · 25.93°N 81.71°W
         </p>
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           Author · Atom McCree · CC-BY 4.0 · License § 4A no-SaaS
         </p>
       </footer>

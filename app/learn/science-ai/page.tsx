@@ -178,7 +178,7 @@ export default function ScienceAiPage() {
   return (
     <main className="mx-auto max-w-[1100px] px-6 py-20 text-[#F4F4F2] md:px-10 md:py-24">
       <header className="border-b border-[#1F242B] pb-12">
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
           DOMAIN HUB · SCIENCE · AI · 2026
         </p>
         <h1

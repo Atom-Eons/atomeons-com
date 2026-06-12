@@ -137,13 +137,13 @@ export function SearchInline() {
         {/* Eyebrow label */}
         <span
           aria-hidden
-          className="hidden shrink-0 items-center font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068] md:flex"
+          className="hidden shrink-0 items-center font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] md:flex"
         >
           ::search
         </span>
 
         {/* Search icon */}
-        <span aria-hidden className="flex shrink-0 items-center text-[#5A6068]">
+        <span aria-hidden className="flex shrink-0 items-center text-[#7a818a]">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="7" />
             <path d="M21 21l-4.3-4.3" />
@@ -163,11 +163,11 @@ export function SearchInline() {
           onKeyDown={onKey}
           placeholder="Search 340+ pages — papers, lessons, products, cheat sheets, supermodels…"
           aria-label="Search atomeons.com"
-          className="flex-1 bg-transparent py-3 font-sans text-[15px] text-[#F4F4F2] placeholder:text-[#5A6068] focus:outline-none"
+          className="flex-1 bg-transparent py-3 font-sans text-[15px] text-[#F4F4F2] placeholder:text-[#7a818a] focus:outline-none"
         />
 
         {/* Keyboard hint */}
-        <span className="hidden shrink-0 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] sm:flex">
+        <span className="hidden shrink-0 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] sm:flex">
           <kbd className="border border-[#1F242B] px-1.5 py-0.5">⌘K</kbd>
           <span className="text-[#1F242B]">·</span>
           <kbd className="border border-[#1F242B] px-1.5 py-0.5">/</kbd>
@@ -185,7 +185,7 @@ export function SearchInline() {
           <ul role="list" className="mx-auto w-full max-w-[1600px] divide-y divide-[#1F242B] px-6 md:px-10 lg:px-14">
             {results.length === 0 ? (
               <li className="py-6">
-                <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">
+                <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
                   No matches for &quot;{query}&quot;
                 </p>
                 <p
@@ -218,7 +218,7 @@ export function SearchInline() {
                         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                           {r.c}
                           <span className="mx-2 text-[#1F242B]">·</span>
-                          <span className="text-[#5A6068]">via {r.matchedField}</span>
+                          <span className="text-[#7a818a]">via {r.matchedField}</span>
                         </p>
                         <p className="font-serif text-[17px] leading-[1.3] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                           {r.t}

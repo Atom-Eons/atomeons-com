@@ -174,8 +174,8 @@ export default function ApiDocsPage() {
             </div>
 
             {e.notes ? (
-              <div className="mt-6 border-l-2 border-[#5A6068] pl-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">notes</p>
+              <div className="mt-6 border-l-2 border-[#7a818a] pl-5">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">notes</p>
                 <p className="mt-3 font-serif text-[14px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{e.notes}</p>
               </div>
             ) : null}
@@ -215,7 +215,7 @@ export default function ApiDocsPage() {
               { href: "/.well-known/agent.json", label: "Agent discovery" },
             ].map((l) => (
               <a key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </a>
             ))}

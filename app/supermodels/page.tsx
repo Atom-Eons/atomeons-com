@@ -449,7 +449,7 @@ function ReceiptRow({ label, value }: { label: string; value?: string }) {
   if (!value) return null;
   return (
     <div className="flex items-baseline gap-3 border-t border-[#1F242B] py-2">
-      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] min-w-[120px]">
+      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] min-w-[120px]">
         {label}
       </span>
       <span className="font-mono text-[13px] tracking-[0.02em] text-[#F4F4F2]">{value}</span>
@@ -544,7 +544,7 @@ function EntryCard({ e }: { e: Entry }) {
         </div>
 
         <div className="border border-[#1F242B] bg-[#08090B] p-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             Receipts
           </p>
           <div className="mt-4">
@@ -555,7 +555,7 @@ function EntryCard({ e }: { e: Entry }) {
             <ReceiptRow label="Price / M tokens" value={e.receipts.pricePerM} />
             <ReceiptRow label="Speed" value={e.receipts.speedTps} />
           </div>
-          <p className="mt-5 border-t border-[#1F242B] pt-3 font-mono text-[9px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="mt-5 border-t border-[#1F242B] pt-3 font-mono text-[9px] uppercase tracking-[0.22em] text-[#7a818a]">
             Cutoff {ISSUE_CUTOFF}
           </p>
         </div>
@@ -583,7 +583,7 @@ export default function SupermodelsPage() {
         <div className="mx-auto w-full max-w-[1400px] px-6 pt-20 pb-24 md:px-10 md:pt-28 md:pb-32 lg:px-14">
           <div className="flex flex-wrap items-baseline justify-between gap-6">
             <CoverStamp />
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
               ÆONS RESEARCH · ISSUE 01 · MAY 2026
             </p>
           </div>
@@ -610,7 +610,7 @@ export default function SupermodelsPage() {
               ["Cutoff", ISSUE_CUTOFF],
             ].map(([k, v]) => (
               <div key={k} className="bg-[#08090B] p-5">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
                   {k}
                 </p>
                 <p className="mt-2 font-mono text-[14px] tracking-[0.02em] text-[#F4F4F2]">
@@ -654,7 +654,7 @@ export default function SupermodelsPage() {
       >
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 px-6 md:grid-cols-[280px_1fr] md:gap-20 md:px-10">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
               <span className="text-[#9CA3AF]">§ 01</span>
               <span className="mx-3 text-[#1F242B]">·</span>
               <span className="text-[#22F0D5]">METHODOLOGY</span>
@@ -693,7 +693,7 @@ export default function SupermodelsPage() {
         className="border-b border-[#1F242B] py-24 md:py-32"
       >
         <div className="mx-auto w-full max-w-6xl px-6 md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§ 02</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#22F0D5]">THE RANKING</span>
@@ -727,7 +727,7 @@ export default function SupermodelsPage() {
         className="border-b border-[#1F242B] bg-[#0F1114] py-24 md:py-32"
       >
         <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§ 03</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#FF4D4D]">THE SHADE THROWN</span>
@@ -753,7 +753,7 @@ export default function SupermodelsPage() {
               </li>
             ))}
           </ul>
-          <p className="mt-12 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="mt-12 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             Identities withheld where the source asked. Lab keeps the receipts.
           </p>
         </div>
@@ -768,7 +768,7 @@ export default function SupermodelsPage() {
         className="border-b border-[#1F242B] py-24 md:py-32"
       >
         <div className="mx-auto w-full max-w-6xl px-6 md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§ 04</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#FF4D4D]">WHAT WE REFUSED TO COUNT</span>
@@ -812,7 +812,7 @@ export default function SupermodelsPage() {
         className="border-b border-[#1F242B] bg-[#0F1114] py-20 md:py-28"
       >
         <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">§ 05</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#22F0D5]">SOURCES</span>
@@ -856,7 +856,7 @@ export default function SupermodelsPage() {
        * ═══════════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24">
         <div className="mx-auto w-full max-w-3xl px-6 text-center md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
             Masthead · The Hottest Supermodels of May 2026
           </p>
           <p
@@ -884,7 +884,7 @@ export default function SupermodelsPage() {
             </Link>
             <Link
               href="/"
-              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors hover:text-[#22F0D5]"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors hover:text-[#22F0D5]"
             >
               ← Lab home
             </Link>

@@ -58,7 +58,7 @@ export default function SignaturePage() {
               <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                 root sigil · derived from "/"
               </p>
-              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                 the lab itself
               </p>
             </div>
@@ -67,7 +67,7 @@ export default function SignaturePage() {
               <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                 this page's sigil · derived from "/signature"
               </p>
-              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
                 no two pages share this mark
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function SignaturePage() {
           <ol className="mt-10 space-y-6">
             {STATEMENT.map((s, i) => (
               <li key={i} className="border-l-2 border-[#1F242B] pl-6">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{String(i + 1).padStart(2, "0")}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</p>
                 <p className="mt-2 font-serif text-[18px] leading-[1.6] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{s}</p>
               </li>
             ))}
@@ -138,7 +138,7 @@ const innerScale  = 0.42 + ((h >> 16) % 100)/100 * 0.22;`}</pre>
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
                 <span className="flex items-baseline gap-2.5">
                   <RouteSigil slug={l.href} size={16} accent="#22F0D5" />
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">{l.href}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">{l.href}</p>
                 </span>
                 <p className="mt-2 font-serif text-[15px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>

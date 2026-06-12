@@ -109,14 +109,14 @@ export default function ExamPage() {
               <ol className="mt-8 space-y-3">
                 {byLevel[level].map((q, i) => (
                   <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-3">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Q{String(i + 1)}</span>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Q{String(i + 1)}</span>
                     <p className="font-serif text-[15px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{q.q}</p>
                   </li>
                 ))}
               </ol>
 
               <div className="mt-8 flex flex-wrap items-baseline justify-between gap-4 border-t border-[#1F242B] pt-4">
-                <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#5A6068]">if 4/5 ✓ — your level is at least {level}</p>
+                <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">if 4/5 ✓ — your level is at least {level}</p>
                 <Link href={info.nextLesson.split(" ·")[0]} className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] underline decoration-[#1F242B] underline-offset-4 hover:decoration-[#22F0D5]">
                   next → {info.nextLesson}
                 </Link>
@@ -136,7 +136,7 @@ export default function ExamPage() {
               { href: "/learn/projects", label: "Build-along projects" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

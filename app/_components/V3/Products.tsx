@@ -172,7 +172,7 @@ function ProductCard({ product }: { product: Product }) {
         <div
           className={[
             "font-mono text-sm tracking-tight",
-            isLive ? "text-[#22F0D5]" : "text-[#5A6068]",
+            isLive ? "text-[#22F0D5]" : "text-[#7a818a]",
           ].join(" ")}
         >
           {product.price}
@@ -212,7 +212,7 @@ export function Products() {
     >
       <div className="mx-auto w-full max-w-6xl px-6">
         <header className="flex flex-col gap-3 pb-12 md:pb-16">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#5A6068]">
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#7a818a]">
             What the lab ships.
           </p>
           <h2

@@ -234,7 +234,7 @@ export default function ManualPage() {
   return (
     <main className="mx-auto max-w-[900px] px-6 py-20 text-[#F4F4F2] md:px-10 md:py-24">
       <header className="border-b border-[#1F242B] pb-12">
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
           USER MANUAL · ATOMEONS · 2026-06-06
         </p>
         <h1
@@ -301,10 +301,10 @@ export default function ManualPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /manual · curated by Atom McCree · CC-BY 4.0 · last updated 2026-06-06
         </p>
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           Print: ⌘P · Save as PDF · Background graphics on for full styling
         </p>
       </footer>

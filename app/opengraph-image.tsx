@@ -175,7 +175,7 @@ export default function OG() {
                   fontSize: 10,
                   letterSpacing: "0.22em",
                   textTransform: "uppercase",
-                  color: "#5A6068",
+                  color: "#7a818a",
                 }}
               >
                 {m.k}
@@ -215,7 +215,7 @@ export default function OG() {
                 fontSize: 11,
                 letterSpacing: "0.28em",
                 textTransform: "uppercase",
-                color: "#5A6068",
+                color: "#7a818a",
               }}
             >
               CC-BY 4.0 · §4A no-SaaS · source on request

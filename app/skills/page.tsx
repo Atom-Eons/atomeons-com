@@ -140,18 +140,18 @@ export default function SkillsPage() {
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: TIER_COLOR[tier] }}>
                   § {tier} · {TIER_LABEL[tier]}
                 </p>
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#5A6068]">{list.length} skill{list.length > 1 ? "s" : ""}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">{list.length} skill{list.length > 1 ? "s" : ""}</p>
               </div>
               <ol className="mt-10 space-y-7">
                 {list.map((s) => (
                   <li key={s.name} className="border-l-2 border-[#1F242B] pl-6">
                     <div className="flex flex-wrap items-baseline justify-between gap-3">
                       <h2 className="font-mono text-[18px] text-[#22F0D5]">{s.name}</h2>
-                      <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">{s.role}</p>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{s.role}</p>
                     </div>
                     <p className="mt-3 font-serif text-[15px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{s.what}</p>
                     {s.disclosure ? (
-                      <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">disclosure · {s.disclosure}</p>
+                      <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">disclosure · {s.disclosure}</p>
                     ) : null}
                   </li>
                 ))}
@@ -200,11 +200,11 @@ export default function SkillsPage() {
               <li key={i} className="grid items-baseline gap-4 py-4 md:grid-cols-[260px_200px_1fr]">
                 <p className="font-serif text-[16px] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{v.what}</p>
                 <p className="font-mono text-[13px] text-[#22F0D5]">{v.value}</p>
-                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#5A6068]">{v.note}</p>
+                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#7a818a]">{v.note}</p>
               </li>
             ))}
           </ul>
-          <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">
+          <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             test battery anchor · ATOM-AESUITE-TEST-2026-0420
           </p>
         </div>
@@ -235,7 +235,7 @@ export default function SkillsPage() {
               { href: "/trust", label: "Trust posture" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[15px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}

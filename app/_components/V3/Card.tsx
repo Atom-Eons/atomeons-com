@@ -40,7 +40,7 @@ import type { ReactNode } from "react";
  *   --noir-plate     #0F1114  card-default
  *   --noir-cream     #F4F4F2  text-primary
  *   --noir-graphite  #9CA3AF  text-secondary
- *   --noir-iron      #5A6068  text-mute
+ *   --noir-iron      #7a818a  text-mute
  *   --noir-hairline  #1F242B  border
  *   --signal-cyan    #22F0D5  bio-accent (preserved equity)
  *   --signal-red     #FF4D4D  live-state pulse (kicker variant only)
@@ -215,7 +215,7 @@ function FootRow({ receipts }: { receipts?: ReadonlyArray<string> }) {
     );
   }
   return (
-    <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+    <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
       {receipts.map((r, i) => (
         <span key={`${i}-${r}`} className="tabular-nums">
           {i > 0 && HAIRLINE_DOT}
@@ -243,7 +243,7 @@ function EyebrowRow({
   return (
     <div className="flex items-center justify-between gap-3">
       {eyebrow ? (
-        <p className="font-mono text-[10.5px] uppercase tracking-[0.32em] text-[#5A6068]">
+        <p className="font-mono text-[10.5px] uppercase tracking-[0.32em] text-[#7a818a]">
           {eyebrow}
         </p>
       ) : (
@@ -306,7 +306,7 @@ export function Card(props: CardProps) {
         {!footer && receipts && receipts.length > 0 ? (
           <span
             aria-hidden
-            className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#5A6068] transition-colors duration-200 group-hover/card:text-[#22F0D5] group-focus-visible/card:text-[#22F0D5]"
+            className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#7a818a] transition-colors duration-200 group-hover/card:text-[#22F0D5] group-focus-visible/card:text-[#22F0D5]"
           >
             →
           </span>

@@ -104,7 +104,7 @@ export default function OrangeboxPrimerPage() {
           ].map(([label, value]) => (
             <div key={label}>
               <div
-                style={{ color: "#5A6068", fontFamily: "ui-monospace, monospace" }}
+                style={{ color: "#7a818a", fontFamily: "ui-monospace, monospace" }}
                 className="mb-1 text-[10px] uppercase tracking-widest"
               >
                 {label}
@@ -325,7 +325,7 @@ export default function OrangeboxPrimerPage() {
           className="mb-6 overflow-x-auto rounded p-6 text-xs leading-relaxed"
         >
           <div style={{ color: "#22F0D5" }}>
-            RECEIPT <span style={{ color: "#5A6068" }}>// ATOM-OB-RX-06.03.2026-14:22:18Z</span>
+            RECEIPT <span style={{ color: "#7a818a" }}>// ATOM-OB-RX-06.03.2026-14:22:18Z</span>
           </div>
           <div style={{ color: "#9CA3AF" }} className="mt-2">
             operator     : a.mccree
@@ -545,7 +545,7 @@ export default function OrangeboxPrimerPage() {
         <div
           className="mx-auto max-w-6xl px-6 py-10 text-xs"
           style={{
-            color: "#5A6068",
+            color: "#7a818a",
             fontFamily: "ui-monospace, monospace",
           }}
         >

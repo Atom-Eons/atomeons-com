@@ -42,7 +42,7 @@ export default function AiToolSizesPage() {
       <header className="border-b border-[#1F242B] pb-12">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#5A6068]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
               COMPARISON · INSTALL SIZE · 2026-06-06
             </p>
             <h1
@@ -70,12 +70,12 @@ export default function AiToolSizesPage() {
         <table className="w-full border-collapse text-[13px]">
           <thead>
             <tr className="border-b border-[#1F242B] text-left">
-              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Tool</th>
-              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Install size</th>
-              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Lane</th>
-              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Price</th>
-              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Verified</th>
-              <th className="py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#5A6068]">Source</th>
+              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Tool</th>
+              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Install size</th>
+              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Lane</th>
+              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Price</th>
+              <th className="py-3 pr-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Verified</th>
+              <th className="py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Source</th>
             </tr>
           </thead>
           <tbody>
@@ -160,7 +160,7 @@ export default function AiToolSizesPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A6068]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           /compare/ai-tool-sizes · honest · sourced · dated 2026-06-06 · updated weekly
         </p>
       </footer>
