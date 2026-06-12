@@ -1350,17 +1350,28 @@ html.tier-standard * {
  * Operator: "white version of site is bad design." Killed the gold +
  * vellum + ball aesthetic. New target: Anthropic / Linear / Stripe
  * docs feel · pure white · neutral grays · single cyan accent kept ·
- * generous whitespace · zero decorative overlay. Scientific publication. */
-html.theme-white {
+ * generous whitespace · zero decorative overlay. Scientific publication.
+ *
+ * Hotfix · the html tag carries bg-black via tailwind className · we
+ * must beat that specificity AND kill the SacredSvg multiply blend
+ * which was darkening the page · plus the body bg-transparent bleeds
+ * the html bg through. */
+html.theme-white,
+html.theme-white body {
   background: #ffffff !important;
+  background-color: #ffffff !important;
   background-image: none !important;
 }
 html.theme-white body {
-  background: #ffffff;
-  color: #0a0a0a;
-  /* Inter for body in light mode · serif only for display */
+  color: #0a0a0a !important;
   font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif !important;
   -webkit-font-smoothing: antialiased;
+}
+/* Kill SacredSvg entirely in white mode · it was making everything dark */
+html.theme-white [data-component="sacred-svg"],
+html.theme-white [data-component="sacred-canvas"],
+html.theme-white [data-component="living-cursor"] {
+  display: none !important;
 }
 /* Dark plates → subtle warm panels */
 html.theme-white .bg-\[\#08090B\],
@@ -1405,14 +1416,9 @@ html.theme-white .font-mono {
   letter-spacing: 0.18em;
 }
 html.theme-white .font-mono.text-\[\#22F0D5\] { color: #00b89d !important; }
-/* SacredSvg in light mode · barely-there cyan ghost */
-html.theme-white [data-component="sacred-svg"],
-html.theme-white [data-component="sacred-canvas"] {
-  filter: invert(1) brightness(1.1) opacity(0.06) !important;
-  mix-blend-mode: multiply !important;
-}
+/* SacredSvg killed above · illustrations get a light-mode-friendly filter */
 html.theme-white [data-illustration] {
-  filter: invert(0.92) hue-rotate(-5deg) opacity(0.8);
+  filter: invert(0.92) hue-rotate(-5deg) opacity(0.6);
 }
 /* Light-mode chrome */
 html.theme-white nav { background: #ffffff !important; }
