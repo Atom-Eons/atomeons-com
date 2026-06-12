@@ -60,7 +60,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-7">
           {/* Brand block · 1 col */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-baseline gap-2" aria-label="AtomEons">
+            <Link href="/" className="inline-flex items-baseline gap-2" aria-label="Æ ATOMEONS · home">
               <span aria-hidden className="flex items-baseline self-center">
                 <RouteSigil slug="/" size={22} accent="#22F0D5" />
               </span>
@@ -252,7 +252,7 @@ export function Footer() {
               rel="me noopener"
               target="_blank"
               className="transition-colors hover:text-[#E7EBED]"
-              aria-label="LinkedIn developer app verification"
+              aria-label="LinkedIn verify · developer app verification"
             >
               LinkedIn verify
             </a>

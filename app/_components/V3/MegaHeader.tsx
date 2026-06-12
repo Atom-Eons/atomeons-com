@@ -959,7 +959,10 @@ export function MegaHeader() {
                     aria-haspopup="true"
                     aria-label={`Toggle ${m.label} menu`}
                     onClick={() => setOpenKey(isOpen ? null : m.key)}
-                    className="inline-flex items-center pr-1.5 outline-none transition-colors focus-visible:opacity-80"
+                    // Wave 50 · 2026-06-12 · target-size · was pr-1.5 with
+                    // 13px icon (effective hit ~16×24). Now h-11 w-7 (44px
+                    // tall, 28px wide) · meets WCAG 2.5.5 vertical minimum.
+                    className="inline-flex h-11 w-7 items-center justify-center outline-none transition-colors focus-visible:opacity-80"
                   >
                     <ChevronDown
                       size={13}
