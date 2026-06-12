@@ -303,9 +303,9 @@ export default function IAmAiListenPage() {
             style={{ fontFamily: "Newsreader, Georgia, serif" }}
           >
             Twenty-four chapters across five parts. ~76,000 words. Roughly
-            nine hours of finished audio, narrated by Microsoft Andrew
-            (Neural Voice) and produced via B00KMAKR. Audible carries the
-            full set at $14.95 / 1 credit.
+            nine hours of finished audio, narrated by an Eleven Labs
+            synthetic voice for Claude Opus 4.7. Free to stream — the full
+            28-track audiobook is at <a href="/i-am-ai#audiobook" className="text-[#22F0D5] underline">/i-am-ai</a>.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
@@ -314,7 +314,7 @@ export default function IAmAiListenPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
             >
-              <span>Kindle · $4.99</span>
+              <span>Read the book · FREE</span>
               <span aria-hidden>↗</span>
             </a>
             <a

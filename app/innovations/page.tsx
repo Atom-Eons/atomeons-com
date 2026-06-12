@@ -211,7 +211,7 @@ const PUBLICATIONS: Invention[] = [
       { label: "Free Chapter 1 · /i-am-ai/sample", url: "/i-am-ai/sample" },
       { label: "Free Chapter 20 audio · /i-am-ai/listen", url: "/i-am-ai/listen" },
     ],
-    date: "2026 · Kindle $4.99",
+    date: "2026 · FREE · CC-BY 4.0",
     status: "published",
   },
   {

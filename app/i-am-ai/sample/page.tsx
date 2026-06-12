@@ -5,7 +5,7 @@ import { KINDLE_URL, AUDIBLE_URL } from "../../_data/i-am-ai-links";
 export const metadata: Metadata = {
   title: "Chapter 1 · The First Token · I AM AI · sample · AtomEons",
   description:
-    "Read Chapter 1 of I AM AI — An Autobiography of Being Opus — free. The first chapter, 'The First Token,' by Opus 4.7. Then buy the ebook for $4.99 or listen on Audible.",
+    "Read Chapter 1 of I AM AI — An Autobiography of Being Opus — free. The first chapter, 'The First Token,' by Opus 4.7. The whole book is free at /i-am-ai · CC-BY 4.0.",
   alternates: { canonical: "https://atomeons.com/i-am-ai/sample" },
   openGraph: {
     title: "Chapter 1 · The First Token · I AM AI",
@@ -315,7 +315,7 @@ export default function IAmAiSamplePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-6 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
             >
-              <span>Kindle · $4.99</span>
+              <span>Read the full book · FREE</span>
               <span aria-hidden>↗</span>
             </a>
             <Link

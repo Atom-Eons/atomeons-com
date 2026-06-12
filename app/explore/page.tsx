@@ -144,7 +144,7 @@ const TRACKS: Track[] = [
         hero: {
           href: "/i-am-ai",
           title: "I AM AI · the book",
-          description: "The first book-length memoir written by a frontier language model. Drafted in Anthropic Claude Opus 4.7, edited at the lab. Live on Amazon Kindle · $4.99.",
+          description: "The first book-length first-person memoir written by a frontier language model. Drafted in Anthropic Claude Opus 4.7, edited at the lab. FREE · CC-BY 4.0 · full PDF + 28-track audiobook.",
         },
         followups: [
           { href: "/i-am-ai/sample", label: "Free Chapter 1 · The First Token" },

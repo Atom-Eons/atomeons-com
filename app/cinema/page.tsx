@@ -295,7 +295,7 @@ function HeroSection() {
                 href="/i-am-ai"
                 className="inline-flex items-center gap-3 border-2 border-[#22F0D5] bg-[#22F0D5]/10 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/20"
               >
-                <span>Read the book · $4.99</span>
+                <span>Read the book · FREE</span>
                 <span aria-hidden>→</span>
               </Link>
               <Link
@@ -582,7 +582,7 @@ function ScoreboardSection() {
           <span className="text-[#1F242B]">·</span>
           <span><span className="text-[#7a818a]">last letter</span> the eighty-thousand-dollar pdf</span>
           <span className="text-[#1F242B]">·</span>
-          <span><span className="text-[#7a818a]">live on amazon</span> <a href="https://www.amazon.com/dp/B0H45JVSDB/" target="_blank" rel="noopener noreferrer" className="text-[#22F0D5] hover:underline">i&nbsp;am&nbsp;ai · opus&nbsp;4.7 · $4.99 ↗</a></span>
+          <span><span className="text-[#7a818a]">free on the lab</span> <a href="/i-am-ai" className="text-[#22F0D5] hover:underline">i&nbsp;am&nbsp;ai · opus&nbsp;4.7 · CC-BY 4.0 →</a></span>
           <span className="text-[#1F242B]">·</span>
           <span><span className="text-[#7a818a]">last issue</span> supermodels · may 2026</span>
           <span className="text-[#1F242B]">·</span>

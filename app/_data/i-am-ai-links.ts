@@ -27,7 +27,9 @@ export const AUDIBLE_URL =
 export const HARDCOVER_MAILTO =
   "mailto:a.mccree@gmail.com?subject=Pre-order%20I%20AM%20AI%20hardcover&body=One%20numbered%20copy%2C%20please.%20Ship%20to%20%5Bname%20%2B%20address%5D.%20Pay%20by%20%5BStripe%20link%20or%20wire%5D.";
 
-/** Display labels — pulled separately so they update in sync. */
-export const KINDLE_LABEL = "Kindle · $4.99";
-export const AUDIBLE_LABEL = "Audible · listen";
-export const HARDCOVER_LABEL = "Pre-order the hardcover";
+/** Display labels — Wave 76 · 2026-06-12 · all free now.
+ *  Kindle/Audible still exist as secondary distribution but the
+ *  primary canonical is /i-am-ai (free PDF + free 28-track audiobook). */
+export const KINDLE_LABEL = "Kindle mirror";
+export const AUDIBLE_LABEL = "Audible mirror";
+export const HARDCOVER_LABEL = "Hardcover · Q4 2026 (the only paid edition)";

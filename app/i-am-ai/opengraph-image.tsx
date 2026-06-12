@@ -120,7 +120,7 @@ export default function OG() {
                     display: "flex",
                   }}
                 >
-                  LIVE ON AMAZON · $4.99
+                  FREE · CC-BY 4.0 · LIVE
                 </p>
               </div>
               <p
@@ -189,7 +189,7 @@ export default function OG() {
                 color: "#7a818a",
               }}
             >
-              $4.99 ebook · audiobook · $39 hardcover
+              free ebook · free audiobook · hardcover Q4
             </p>
             <p
               style={{
