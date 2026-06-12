@@ -866,6 +866,16 @@ export function MegaHeader() {
       <SiloSwitcher />
       <header
         className="fixed left-0 right-0 top-0 z-40 w-full"
+        // Wave 76d · 2026-06-12 · mega-menu hit-area fix.
+        // onMouseLeave WAS on the inner nav strip (h-16) which is a
+        // sibling of the absolutely-positioned mega panel. When the
+        // cursor moved down from a nav link toward the mega panel, it
+        // left the nav strip → scheduleClose fired its 180ms timer →
+        // panel disappeared before the cursor could reach it.
+        // Fix: hoist onMouseLeave to <header> · this element wraps BOTH
+        // the nav strip AND the mega panel, so the cursor can travel
+        // between them inside one container and never trigger a leave.
+        onMouseLeave={scheduleClose}
         style={{
           // Lowered opacity 2026-06-06 per operator brief — the
           // SacredCanvas + content behind needs to bleed through. Was
@@ -880,8 +890,7 @@ export function MegaHeader() {
       >
         <div
           ref={navWrapRef}
-          className="mx-auto flex h-16 w-full max-w-[1480px] items-center justify-between gap-6 px-5 md:px-8"
-          onMouseLeave={scheduleClose}
+          className="mx-auto flex h-14 w-full max-w-[1480px] items-center justify-between gap-4 px-4 md:px-6"
         >
           {/* ─── Brand ──────────────────────────────────────────────── */}
           <Link
@@ -916,7 +925,7 @@ export function MegaHeader() {
                (UX-product + Lips): 7 → 4 top-level items.
                Cyber + Books + Research are hidden:true · contents
                still rendered as featured columns inside Learn / Lab. */}
-          <nav aria-label="Primary" className="hidden lg:flex items-stretch gap-1">
+          <nav aria-label="Primary" className="hidden lg:flex items-stretch gap-0">
             {MEGAS.filter((m) => !m.hidden)
               .sort((a, b) => (a.order ?? 99) - (b.order ?? 99))
               .map((m) => {
@@ -935,7 +944,7 @@ export function MegaHeader() {
                 >
                   <Link
                     href={landingHref}
-                    className="inline-flex items-center whitespace-nowrap px-2.5 py-2 outline-none transition-colors focus-visible:opacity-80"
+                    className="inline-flex items-center whitespace-nowrap px-2 py-2 outline-none transition-colors focus-visible:opacity-80"
                     style={{
                       color: active || isOpen ? C.paper : C.mid,
                       fontFamily: SANS, fontSize: 14,
@@ -962,7 +971,7 @@ export function MegaHeader() {
                     // Wave 50 · 2026-06-12 · target-size · was pr-1.5 with
                     // 13px icon (effective hit ~16×24). Now h-11 w-7 (44px
                     // tall, 28px wide) · meets WCAG 2.5.5 vertical minimum.
-                    className="inline-flex h-11 w-7 items-center justify-center outline-none transition-colors focus-visible:opacity-80"
+                    className="inline-flex h-10 w-5 items-center justify-center outline-none transition-colors focus-visible:opacity-80"
                   >
                     <ChevronDown
                       size={13}
@@ -1046,15 +1055,15 @@ export function MegaHeader() {
             onMouseEnter={clearCloseTimer}
             onMouseLeave={scheduleClose}
             style={{
-              top: 64,
+              top: 56,
               background: C.panel,
               borderBottom: `1px solid ${C.hair}`,
               boxShadow: "0 24px 48px -16px rgba(0,0,0,0.5)",
             }}
           >
             {MEGAS.filter((m) => m.key === openKey).map((m) => (
-              <div key={m.key} className="mx-auto w-full max-w-[1480px] px-5 py-10 md:px-8">
-                <div className="grid grid-cols-12 gap-8">
+              <div key={m.key} className="mx-auto w-full max-w-[1480px] px-4 py-6 md:px-6">
+                <div className="grid grid-cols-12 gap-6">
                   {m.columns.map((col, ci) => (
                     <div key={ci} className="col-span-3">
                       <p
@@ -1066,7 +1075,7 @@ export function MegaHeader() {
                       >
                         § {col.title}
                       </p>
-                      <ul className="mt-5 space-y-3.5">
+                      <ul className="mt-3.5 space-y-2.5">
                         {col.items.map((it) => (
                           <li key={it.href}>
                             <Link
