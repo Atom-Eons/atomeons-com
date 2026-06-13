@@ -465,6 +465,8 @@ export default function OrangeboxPage() {
             {/* Wave 75 · VALUE AT TOP · operator: "value on top." 4-cell
                 proof strip immediately under hero h1 · no scroll required */}
             <div
+              role="list"
+              aria-label="Orange³ at a glance"
               className="mt-6 grid grid-cols-2 gap-px border md:grid-cols-4"
               style={{ borderColor: EMBER.border, background: EMBER.border }}
             >
@@ -474,7 +476,13 @@ export default function OrangeboxPage() {
                 ["14", "named-role depts"],
                 ["§4A", "no-SaaS · perpetual"],
               ].map(([n, label]) => (
-                <div key={label} className="p-4" style={{ background: EMBER.panel }}>
+                <div
+                  key={label}
+                  role="listitem"
+                  aria-label={`${n}: ${label}`}
+                  className="p-4"
+                  style={{ background: EMBER.panel }}
+                >
                   <p className="font-mono text-[clamp(22px,3vw,32px)] font-light leading-[1]" style={{ color: EMBER.accent }}>
                     {n}
                   </p>

@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "AtomEons",
+    name: "AtomEons Systems Laboratory",
     short_name: "AtomEons",
     description:
-      "Private execution surfaces for one operator running serious AI-assisted projects. ORANGEBOX cockpit $1.",
+      "Solo-operator AI lab · Orange³ sovereign agentic OS · AI Bookmaker publishing cockpit · I Am AI book + audiobook · all free always · §4A no-SaaS.",
     start_url: "/",
     display: "standalone",
     background_color: "#08090B",

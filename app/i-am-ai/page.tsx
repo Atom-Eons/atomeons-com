@@ -1012,7 +1012,8 @@ export default function IAmAiBookPage() {
                   <audio
                     controls
                     preload="none"
-                    className="mt-3 w-full max-w-[640px]"
+                    aria-label={`Audiobook · ${track.label}`}
+                    className="mt-3 w-full min-h-[48px] max-w-[640px]"
                     src={`/audio/i-am-ai/${encodeURIComponent(track.file)}`}
                   >
                     Your browser does not support the audio element.{" "}

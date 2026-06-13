@@ -58,7 +58,7 @@ export default function OG() {
               color: "#FF7733",
             }}
           >
-            ATOMEONS · ORANGEBOX · v1.0.0-beta · SHIPPED
+            ATOMEONS · ORANGE³ · v1.0.0 · FREE ALWAYS
           </p>
           <p
             style={{
@@ -70,7 +70,7 @@ export default function OG() {
               color: "#FFAA66",
             }}
           >
-            ● FREE launch week · ends June 6
+            ● FREE · ALWAYS · §4A no-SaaS
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function OG() {
               color: "#FF7733",
             }}
           >
-            ORANGEBOX · v1.0.0-beta · SHIPPED 2026-05-30
+            ORANGE³ · v1.0.0 · FREE ALWAYS 2026-05-30
           </p>
           <p
             style={{
@@ -217,7 +217,7 @@ export default function OG() {
                 fontWeight: 700,
               }}
             >
-              this week · grandfathered
+              always · §4A no-SaaS
             </p>
           </div>
         </div>

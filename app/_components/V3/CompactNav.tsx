@@ -328,7 +328,7 @@ export function CompactNav() {
                   <Link
                     href={g.href}
                     aria-current={active ? "page" : undefined}
-                    className="relative inline-flex items-center px-3 py-2 outline-none transition-opacity focus-visible:opacity-80"
+                    className="relative inline-flex items-center px-3 py-2 outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
                     style={{
                       color: active || isOpenItem ? C.paper : C.paperDim,
                       fontFamily: "ui-monospace, SFMono-Regular, monospace",
@@ -372,7 +372,8 @@ export function CompactNav() {
                     onChange={(e) => setSearchQ(e.target.value)}
                     placeholder="search the lab · ⌘K"
                     autoFocus
-                    className="h-7 w-[260px] rounded-sm border bg-transparent px-3 outline-none transition-colors"
+                    aria-label="Search the lab"
+                    className="h-7 w-[min(260px,calc(100vw-160px))] rounded-sm border bg-transparent px-3 outline-none transition-colors"
                     style={{
                       borderColor: C.signal,
                       color: C.paper,
@@ -394,7 +395,7 @@ export function CompactNav() {
                   onClick={() => { setSearchOpen(true); setTimeout(() => searchInputRef.current?.focus(), 30); }}
                   onMouseEnter={() => setHint("search the lab · 340+ pages · ⌘K from anywhere")}
                   aria-label="open search"
-                  className="inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:opacity-80"
+                  className="inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
                   style={{ color: C.paper, opacity: 0.85 }}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
@@ -412,7 +413,7 @@ export function CompactNav() {
               onMouseEnter={() => setHint(fxOn ? "FX on · ambient effects live · click to disable" : "FX off · click to re-enable ambient effects")}
               aria-label={fxOn ? "Disable visual effects" : "Enable visual effects"}
               aria-pressed={fxOn}
-              className="inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:opacity-80"
+              className="inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
               style={{
                 color: fxOn ? C.signal : "#3A3A3A",
                 filter: fxOn ? `drop-shadow(0 0 4px ${C.signal})` : "none",
@@ -433,7 +434,7 @@ export function CompactNav() {
               onClick={cycleTheme}
               onMouseEnter={() => setHint(`theme: ${THEME_LABEL[theme]} · click to cycle (noir → white → warez)`)}
               aria-label={`Theme: ${THEME_LABEL[theme]} — click to cycle`}
-              className="inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:opacity-80"
+              className="inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
               style={{ color: C.paper, opacity: 0.85 }}
             >
               <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden style={{ transform: "rotate(-90deg)" }}>
@@ -454,7 +455,7 @@ export function CompactNav() {
             <Link
               href="/ask"
               onMouseEnter={() => setHint("ask the lab · AI-powered answers from the corpus")}
-              className="ml-1 hidden md:inline-flex h-8 items-center gap-1.5 px-3 outline-none transition-colors focus-visible:opacity-80"
+              className="ml-1 hidden md:inline-flex h-8 items-center gap-1.5 px-3 outline-none transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
               style={{
                 background: C.signal,
                 color: C.ink,
@@ -502,12 +503,13 @@ export function CompactNav() {
               left: "50%",
               transform: "translateX(-50%)",
               width: 380,
-              background: "rgba(8,9,11,0.96)",
+              // Wave 82 perf · was rgba+backdrop-blur(12px) · GPU compositor
+              // thrash on every hover · near-black background gives identical
+              // optical result without per-hover filter context creation
+              background: "#0A0B0E",
               border: `1px solid rgba(34,240,213,0.18)`,
               borderRadius: 8,
               boxShadow: "0 8px 32px rgba(0,0,0,0.6)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
               animation: "ae-pop 140ms cubic-bezier(0.16, 1, 0.3, 1)",
             }}
           >
@@ -642,6 +644,13 @@ export function CompactNav() {
         html.fx-off [data-component="living-cursor"] {
           animation: none !important;
           display: none !important;
+        }
+        /* Wave 82 a11y · prefers-reduced-motion guards
+           (WCAG 2.3.3 Animation from Interactions · 2.3.1 Three Flashes) */
+        @media (prefers-reduced-motion: reduce) {
+          .ae-fx-breathe { animation: none; opacity: 1; }
+          .ae-hint-fade  { animation: none; }
+          .ae-scan-line  { animation: none; }
         }
       `}</style>
     </>

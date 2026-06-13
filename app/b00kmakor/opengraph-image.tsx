@@ -33,7 +33,7 @@ export default function OG() {
           }}
         >
           <p style={{ margin: 0, fontFamily: "monospace", fontSize: 12, letterSpacing: 5, textTransform: "uppercase", color: "#22F0D5" }}>
-            ATOMEONS · B00KMAKR · AI PUBLISHING COCKPIT
+            ATOMEONS · AI BOOKMAKER · PUBLISHING COCKPIT
           </p>
           <p style={{ margin: 0, fontFamily: "monospace", fontSize: 12, letterSpacing: 5, textTransform: "uppercase", color: "#FFB87A" }}>
             ● shipped · v3.2.0 · mac + win
@@ -42,7 +42,7 @@ export default function OG() {
 
         <div style={{ display: "flex", flexDirection: "column", marginTop: 30 }}>
           <p style={{ margin: 0, fontFamily: "monospace", fontSize: 14, letterSpacing: 6, textTransform: "uppercase", color: "#FFB87A", fontWeight: 700 }}>
-            B00KMAKR · v3.2.0
+            AI BOOKMAKER · v3.2.0 · FREE FOREVER
           </p>
           <p style={{ margin: "16px 0 0", fontSize: 84, fontWeight: 500, lineHeight: 0.97, letterSpacing: -3, color: "#F2F4F5", maxWidth: 1080 }}>
             One window.

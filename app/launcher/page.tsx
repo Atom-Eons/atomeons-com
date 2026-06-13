@@ -437,7 +437,7 @@ export default function LauncherPage() {
 
       <footer className="mt-20 border-t border-[#1F242B] pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
-          / · the launcher · 9 silos · Library of Alexandria as software · CC-BY 4.0 · last updated 2026-06-07
+          / · the launcher · 9 silos · Library of Alexandria as software · CC-BY 4.0 · last updated 2026-06-12
         </p>
       </footer>
     </main>

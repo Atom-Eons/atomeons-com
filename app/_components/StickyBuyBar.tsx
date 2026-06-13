@@ -54,12 +54,12 @@ export function StickyBuyBar() {
       <div className="mx-auto flex w-full max-w-6xl items-center gap-3 px-4 py-2.5 sm:px-6 sm:py-3">
         <div className="min-w-0 flex-1">
           <p className="truncate font-mono text-[10px] uppercase tracking-[0.18em] text-[#22F0D5]">
-            ::v1.0.0-beta · FREE this week · §4A no-saas
+            ::Orange³ v1.0.0 · FREE always · §4A no-SaaS
           </p>
           <p className="truncate text-sm text-[#F2F4F5]">
-            <span className="font-bold text-[#22F0D5]">Turbo-optimize Claude</span>
+            <span className="font-bold text-[#22F0D5]">Sovereign agentic OS for Claude</span>
             <span className="ml-1 text-[#9BA5A7]">
-              · perpetual · grandfathered for life
+              · local-first · zero-telemetry
             </span>
           </p>
         </div>
