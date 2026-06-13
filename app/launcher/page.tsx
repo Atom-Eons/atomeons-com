@@ -166,7 +166,7 @@ export default function LauncherPage() {
               className="mt-3 text-[clamp(18px,2vw,22px)] font-light italic leading-[1.35] text-[#9CA3AF]"
               style={{ fontFamily: "Newsreader, Georgia, serif" }}
             >
-              The lab runs like software. Each section is its own world. Enter, return when ready.
+              The lab runs like software. Each silo is its own world. Enter one. Come back for the rest.
             </p>
           </div>
           <div className="flex flex-col items-end gap-2 text-right">
@@ -208,8 +208,8 @@ export default function LauncherPage() {
           style={{ fontFamily: "Newsreader, Georgia, serif", fontWeight: 300 }}
         >
           The lab is open.{" "}
-          <span className="text-[#FF7733]">Three things,</span>{" "}
-          <span className="italic text-[#FFAA66]">free.</span>
+          <span className="text-[#FF7733]">Three things.</span>{" "}
+          <span className="italic text-[#FFAA66]">All free.</span>
         </h2>
         <p
           className="mt-3 max-w-[72ch] text-[16px] leading-[1.55] text-[#9CA3AF]"

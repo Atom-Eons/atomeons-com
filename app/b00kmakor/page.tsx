@@ -60,14 +60,14 @@ const breadcrumbJsonLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "AtomEons", item: "https://atomeons.com" },
-    { "@type": "ListItem", position: 2, name: "B00KMAKR", item: "https://atomeons.com/b00kmakor" },
+    { "@type": "ListItem", position: 2, name: "AI Bookmaker", item: "https://atomeons.com/b00kmakor" },
   ],
 };
 
 const softwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "B00KMAKR",
+  name: "AI Bookmaker",
   description:
     "AI publishing cockpit. Universal HTML app plus native installers for macOS (.dmg) and Windows (.msi / .exe via Tauri). 142 feature surfaces across writing, marketing, and shipping pipelines.",
   applicationCategory: "WritingApplication",

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { MegaHeader } from "./_components/V3/MegaHeader";
+import { CompactNav } from "./_components/V3/CompactNav";
 
 /**
  * Inter Variable — full weight axis (100–900). Powers the
@@ -197,7 +197,7 @@ export default function RootLayout({
               alternateName: ["AtomEons", "ÆoNs Research"],
               url: "https://atomeons.com",
               logo: "https://atomeons.com/icon",
-              email: "a.mccree@gmail.com",
+              email: "atom@atomeons.com",
               founder: {
                 "@type": "Person",
                 name: "Atom McCree",
@@ -347,8 +347,8 @@ export default function RootLayout({
             (palette is reachable via ⌘K from anywhere · the inline bar
             ate vertical space on every page).
             Net: ONE chrome strip · the MegaHeader · h-14 (56px). */}
-        <MegaHeader />
-        <div className="flex-1 pt-14">
+        <CompactNav />
+        <div className="flex-1 pt-20">
           {children}
         </div>
         <Footer />

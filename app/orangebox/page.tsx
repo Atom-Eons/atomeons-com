@@ -105,7 +105,7 @@ export const metadata: Metadata = {
 const softwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Orangebox",
+  name: "Orange³",
   description:
     "Sovereign Agentic Operating System for Claude. Local-first desktop tool that gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident JSON receipts on every action, and 14-department named-role routing. Optional fallback to GPT/Gemini/Ollama via BYO key. FREE · ALWAYS · §4A no-SaaS perpetual.",
   applicationCategory: "DeveloperApplication",
@@ -132,7 +132,7 @@ const breadcrumbJsonLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "AtomEons", item: "https://atomeons.com" },
-    { "@type": "ListItem", position: 2, name: "Orangebox", item: "https://atomeons.com/orangebox" },
+    { "@type": "ListItem", position: 2, name: "Orange³", item: "https://atomeons.com/orangebox" },
   ],
 };
 
@@ -459,7 +459,7 @@ export default function OrangeboxPage() {
               ORANGE<sup style={{ color: EMBER.accent, fontSize: "0.55em", verticalAlign: "super" }}>3</sup>
             </h1>
             <p className="mt-4 font-mono text-[12px] uppercase tracking-[0.32em]" style={{ color: EMBER.textMuted }}>
-              the cockpit that gives Claude a spine · formerly Orangebox
+              the cockpit that gives Claude a spine
             </p>
 
             {/* Wave 75 · VALUE AT TOP · operator: "value on top." 4-cell
@@ -1075,7 +1075,7 @@ export default function OrangeboxPage() {
           }}
         >
           <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
-            ::download · free this week
+            ::download · free always
           </p>
           <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
             No signup. No email. Just the .exe.
@@ -1420,7 +1420,7 @@ export default function OrangeboxPage() {
             ::ship
           </p>
           <h2 className="mt-4 text-balance text-5xl font-medium leading-[0.98] tracking-tight md:text-7xl" style={{ color: EMBER.textPrimary }}>
-            Download free this week.
+            Download Orange³. Free always.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-[1.55]" style={{ color: EMBER.textSoft }}>
             No signup. No email. Just the .exe + the SHA-256 + the cert.

@@ -120,8 +120,8 @@ export async function POST(req: Request) {
     email_via: emailResult.via,
     email_ok: emailResult.ok,
     ...(emailResult.error ? { email_error: emailResult.error } : {}),
-    // Operator-discoverable in case the email send fails — buyer can
-    // copy this URL directly from the success state UI.
-    download_url: downloadUrl,
+    // Wave 81 · security · download URL no longer returned in response
+    // body. Token reaches the user via email only. Operator can resend
+    // via /api/admin/resend (CRON_SECRET auth) if email fails.
   });
 }

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   description:
     "Archived development snapshot of the ORANGEBOX Command v6.1.0 'Agent Mode' page. The current product, pricing, and roadmap live at /orangebox. This surface is preserved for historical reference: 11 lanes, multi-turn agent loop with nine tools, tab autocomplete, repo indexer (303 files / 1,533 symbols / 6.7s benchmark), background job queue, twenty receipt sources, $1 + free-7-days launch pricing. Snapshot date 2026-05-17.",
   alternates: { canonical: "https://atomeons.com/orangebox/legacy" },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
   openGraph: {
     title: "ORANGEBOX v6.1.0 Agent Mode — archived snapshot",
     description:

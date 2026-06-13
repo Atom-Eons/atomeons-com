@@ -125,11 +125,11 @@ export function Footer() {
 
           {/* Products · Software */}
           {COL("Software", [
-            { href: "/orangebox", label: "ORANGEBOX" },
+            { href: "/orangebox", label: "Orange³" },
             { href: "/orangebox/changelog", label: "OB changelog" },
             { href: "/orangebox/roadmap", label: "OB roadmap" },
             { href: "/orangebox/competitors", label: "OB vs alternatives" },
-            { href: "/b00kmakor", label: "B00KMAKR" },
+            { href: "/b00kmakor", label: "AI Bookmaker" },
             { href: "/skilski", label: "skil.ski" },
             { href: "/compare", label: "Compare matrices" },
             { href: "/use-cases", label: "Use cases" },

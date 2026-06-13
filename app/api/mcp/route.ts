@@ -212,7 +212,23 @@ async function callGetRoute(args: { route?: unknown }, baseUrl: string) {
 }
 
 async function readResource(uri: string) {
-  const res = await fetch(uri);
+  // Wave 81 · security · SSRF mitigation. Public MCP endpoint MUST NOT
+  // fetch arbitrary URIs · only canonical lab URLs and same-origin paths.
+  // Reject anything that doesn't resolve under atomeons.com.
+  let parsed: URL;
+  try {
+    parsed = new URL(uri);
+  } catch {
+    throw new Error("Resource uri must be an absolute https URL");
+  }
+  if (parsed.protocol !== "https:") {
+    throw new Error("Resource uri must use https");
+  }
+  const allowedHosts = new Set(["atomeons.com", "www.atomeons.com"]);
+  if (!allowedHosts.has(parsed.hostname)) {
+    throw new Error(`Resource uri host not allowed: ${parsed.hostname}`);
+  }
+  const res = await fetch(parsed.toString());
   if (!res.ok) throw new Error(`Resource ${uri} returned ${res.status}`);
   const contentType = res.headers.get("content-type") || "text/plain";
   const text = await res.text();

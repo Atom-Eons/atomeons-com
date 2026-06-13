@@ -194,13 +194,13 @@ export default function Footer() {
               Æ
             </span>
             <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#7a818a]">
-              Built in Marco Island, FL · 2024
+              Built in Marco Island, FL · 2026 · Atom McCree + AI
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#7a818a]">
-              © 2024 AtomEons Systems Laboratory
+              © 2026 AtomEons Systems Laboratory
             </p>
             <Link
               href="/legal/terms"
