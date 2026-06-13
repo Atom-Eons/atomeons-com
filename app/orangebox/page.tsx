@@ -1089,8 +1089,8 @@ export default function OrangeboxPage() {
             No signup. No email. Just the .exe.
           </h2>
           <p className="mt-6 max-w-2xl text-[16px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
-            v1.0.0-beta is FREE this week. Direct download. Self-Authenticode
-            signed. Sectigo-timestamped. SHA-256 verified.
+            Orange³ v1.0.0 is FREE always. Direct download. Self-Authenticode
+            signed. Sectigo-timestamped. SHA-256 verified. §4A no-SaaS.
           </p>
 
           <div
