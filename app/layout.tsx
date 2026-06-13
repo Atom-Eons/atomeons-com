@@ -339,31 +339,16 @@ export default function RootLayout({
             component itself stays in the repo (app/_components/
             LaunchBanner.tsx) so a future launch can re-enable it by
             uncommenting one import + one element. */}
-        {/* Wave 39 · NotificationBar above the MegaHeader · operator-pushable
-            top strip · reads /notification.json · 2-sentence max */}
-        <NotificationBar />
+        {/* Wave 77d · CHROME CONSOLIDATION · operator: "navigation mess ·
+            more intelligence · there is a way to have it all."
+            Killed: NotificationBar (stale launch messaging — TAKEOVER is
+            canonical at /we-are-ai · $1 strip outdated), AppToolbar
+            (5 buttons folded into MegaHeader future pass), SearchInline
+            (palette is reachable via ⌘K from anywhere · the inline bar
+            ate vertical space on every page).
+            Net: ONE chrome strip · the MegaHeader · h-14 (56px). */}
         <MegaHeader />
-        {/* Wave 39 · AppToolbar sticky below the MegaHeader · functional
-            toolbar with Tour · Theme cycle (noir/white/warez/thin) ·
-            FX toggle · Music · Mindrest · Manual */}
-        <AppToolbar />
-        {/* pt-16 reserves the 64px the fixed Header occupies. The
-            LaunchBanner above the Header is part of the normal flow
-            (not fixed), so no extra offset is needed for it — when it
-            scrolls past, the Header continues to hover at top:0.
-            SearchInline is sticky top-16 below the Header — when it's
-            in the document flow it occupies ~52px additional height
-            that gets accounted for naturally by the scroll position
-            (no extra padding needed since the bar is part of children
-            flow, not fixed-out-of-flow like the Header). */}
-        {/* SearchInline RESTORED 2026-06-06 per operator correction.
-            The operator-built full-width search bar under the nav is
-            canonical · the compact icon in MegaHeader was the dead-
-            looking element + has been removed from the right rail.
-            SearchInline now reflects the unified search palette engine
-            (same scorer · same index · adds ask mode via ⌘↵). */}
-        <div className="flex-1 pt-16">
-          <SearchInline />
+        <div className="flex-1 pt-14">
           {children}
         </div>
         <Footer />

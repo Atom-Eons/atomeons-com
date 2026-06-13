@@ -395,7 +395,6 @@ export default function OrangeboxPage() {
           </Link>
           <div className="hidden items-center gap-7 md:flex">
             <a href="#download" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textSoft }}>Download</a>
-            <a href="#pricing" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textSoft }}>Pricing</a>
             <a href="#how-it-works" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textSoft }}>How it works</a>
             <a href="#faq" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.textSoft }}>FAQ</a>
             <a href={ASSETS.github} target="_blank" rel="noopener" className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>GitHub ↗</a>
@@ -1471,7 +1470,7 @@ export default function OrangeboxPage() {
             <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent }}>Product</p>
             <ul className="mt-4 space-y-2 text-[14px]" style={{ color: EMBER.textSoft }}>
               <li><a href="#download">Download</a></li>
-              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#how-it-works">How it works</a></li>
               <li><a href="#roadmap">Roadmap</a></li>
             </ul>
           </div>
