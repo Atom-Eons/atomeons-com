@@ -54,7 +54,7 @@ const HOUSE_RULES = [
   "No spam · no airdrops · no NFT pitches · no get-rich-quick.",
   "Respect operator scope · this is one operator's community, not a startup employee lounge.",
   "Be kind. The internet has enough cruelty. Don't add to it here.",
-  "When in doubt, ask. Most slack rules are clarified, not enforced.",
+  "When in doubt, ask. Most rules here are conversation-starters, not trip-wires.",
 ];
 
 const WHAT_INSIDE = [

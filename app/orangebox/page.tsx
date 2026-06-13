@@ -24,12 +24,11 @@ import { ProductJsonLd } from "../_components/schema/ProductJsonLd";
  * Copy is lifted verbatim from §8 + WEBSITE_PASSOVER §21 FAQ.
  * Palette is lifted verbatim from §11 + native.rs constants.
  *
- * Day 0 CTA wiring per §18 / §10.1:
- *   Primary "Download free this week" → GitHub Release (when operator
- *     creates the org/repo per §19 Day 0). Until then it 404s — and the
- *     direct-mirror Vercel Blob fallback right below it works tonight.
- *   Secondary "Buy ($99 from next week)" → disabled / coming-soon until
- *     Stripe link is configured (Day 3-4).
+ * Wave 73-84 post-launch state (2026-06-12):
+ *   - Product renamed to Orange³, FREE ALWAYS, §4A no-SaaS perpetual
+ *   - GitHub repo at /AtomEons/ORANGEBOX (public)
+ *   - All commerce + countdown components removed
+ *   - Direct .exe download served via Vercel Blob (canonical path)
  */
 
 const EMBER = {
