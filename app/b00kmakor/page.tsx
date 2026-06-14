@@ -481,7 +481,7 @@ export default function B00KMakorPage() {
           ::your staff · 15 named agents · AE0-AE14
         </p>
         <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
-          A Random House team, on call.
+          A publishing house team, on call.
         </h2>
         <p className="mt-6 max-w-2xl text-base leading-[1.7] text-[#C8CCCE]">
           AI Bookmaker ships with fifteen specialized agents — each with
@@ -964,19 +964,6 @@ export default function B00KMakorPage() {
           make). 30-day Material Failure Guarantee.
         </p>
 
-        <div className="mt-12 rounded-2xl border border-[#22F0D5]/30 bg-[#0A1A1C] p-7">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-            ::what stays true · forever
-          </p>
-          <ul className="mt-5 space-y-3 text-[15px] leading-[1.6] text-[#C8CCCE]">
-            {STABLE.map((s) => (
-              <li key={s} className="flex items-baseline gap-3">
-                <span className="font-mono text-[#22F0D5]">▲</span>
-                <span>{s}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
       </section>
 
       {/* ── FINAL CTA ── */}
