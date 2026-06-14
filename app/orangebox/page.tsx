@@ -808,21 +808,50 @@ export default function OrangeboxPage() {
           pressure-tests outputs before promotion. Every action has a
           known author. Every promotion has a known reviewer.
         </p>
-        <div className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
+        {/* Wave 87 · 2026-06-12 · depth doctrine · roster cards w/ specialty
+            Source: doctrine/AE_DEPARTMENTS.md (15 named roles, charter rules) */}
+        <div className="mt-8 grid gap-px overflow-hidden rounded-2xl md:grid-cols-3" style={{ background: EMBER.separator }}>
           {[
-            "AE0 Brain", "AE1 Product", "AE2 Research", "AE3 Design", "AE4 Marketing",
-            "AE5 Sales", "AE6 Code", "AE7 Review", "AE8 Launch", "AE9 Legal",
-            "AE10 Ops", "AE11 Security", "AE12 Data", "AE13 Automation", "AE14 Bench",
-          ].map((d) => (
-            <span
-              key={d}
-              className="rounded-md border px-2.5 py-2 text-center font-mono text-[11px] uppercase tracking-[0.18em]"
-              style={{ borderColor: EMBER.separator, color: EMBER.textSoft, background: EMBER.elevated }}
-            >
-              {d}
-            </span>
+            ["AE0", "Brain", "top routing · dispatch decisions"],
+            ["AE1", "Product", "specs · acceptance criteria · scope gates"],
+            ["AE2", "Research", "docs · market intel · technical research"],
+            ["AE3", "Design", "UX · UI · design systems · accessibility"],
+            ["AE4", "Marketing", "copy · SEO · positioning · brand voice"],
+            ["AE5", "Sales", "pricing · packaging · checkout · conversion"],
+            ["AE6", "Code", "implementation · refactors · LSP · tests"],
+            ["AE7", "Review", "adversarial review · regression risk · gates"],
+            ["AE8", "Launch", "release readiness · smoke · DNS · rollback"],
+            ["AE9", "Legal", "licenses · attribution · compliance · privacy"],
+            ["AE10", "Ops", "MCP health · memory bus · cost · routing"],
+            ["AE11", "Security", "auth · secrets · supply chain · threat model"],
+            ["AE12", "Data", "schemas · migrations · analytics · privacy"],
+            ["AE13", "Automation", "agent workflows · scheduled jobs · n8n"],
+            ["AE14", "Bench", "benchmarks · drift · promotion safety"],
+          ].map(([code, name, body]) => (
+            <div key={code} className="p-5" style={{ background: EMBER.elevated }}>
+              <div className="flex items-baseline gap-2">
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: EMBER.accent, opacity: 0.7 }}>
+                  {code}
+                </span>
+                <h3 className="font-mono text-[14px] font-medium tracking-tight" style={{ color: EMBER.textPrimary }}>
+                  {name}
+                </h3>
+              </div>
+              <p className="mt-2 text-[13px] leading-[1.55]" style={{ color: EMBER.textSoft }}>
+                {body}
+              </p>
+            </div>
           ))}
         </div>
+        <p className="mt-6 max-w-3xl text-[14px] leading-[1.6]" style={{ color: EMBER.textMuted }}>
+          Plus a <strong>review-pressure overlay</strong> of named roles —{" "}
+          <span style={{ color: EMBER.accent }}>LIPS</span> (UX feel) ·{" "}
+          <span style={{ color: EMBER.accent }}>MIRRORS</span> (anti-theater) ·{" "}
+          <span style={{ color: EMBER.accent }}>CHECKMATE</span> (security gate) ·{" "}
+          <span style={{ color: EMBER.accent }}>ORANGE</span> (focus + subtraction) ·{" "}
+          <span style={{ color: EMBER.accent }}>MISFITS</span> (frontier exploration)
+          {" "}— that pressure-tests every output before promotion.
+        </p>
       </section>
 
       {/* ── RECEIPT RAIL ── */}
@@ -862,6 +891,68 @@ export default function OrangeboxPage() {
   "approved":   true
 }`}
         </pre>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+       * Wave 87 · 2026-06-12 · DEPTH PASS · doctrine: surface new shipped
+       * features. Source: docs/SCOPE_4100_DAYS.md §1 "8 MCPs you brought"
+       * + scripts/v4/* connectors-registry · all 8 wired or pending verify
+       * ═══════════════════════════════════════════════════════════════ */}
+      <section id="mcp-universe" className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em]" style={{ color: EMBER.accent }}>
+          ::8 MCPs · the connector universe · integrated 2026-05
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl" style={{ color: EMBER.textPrimary }}>
+          8 new MCPs, on tap.
+        </h2>
+        <p className="mt-6 max-w-3xl text-[17px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
+          The Model Context Protocol surface is exploding. Orange³ ships
+          first-class connector-registry entries for the 8 MCPs operators
+          are reaching for. 5 are install-safe today, 3 are flagged{" "}
+          <code style={{ color: EMBER.amber }}>verification_required</code>{" "}
+          pending evidence — we don&apos;t touch your host Claude Code MCP
+          config without explicit go.
+        </p>
+
+        <div className="mt-8 grid gap-px overflow-hidden rounded-2xl md:grid-cols-2" style={{ background: EMBER.separator }}>
+          {[
+            { name: "Meta Ads MCP", body: "Native ad spend management on Facebook + Instagram. 29 tools. Pairs with our native CAPI dispatch.", status: "verify" },
+            { name: "TikTok Ads MCP", body: "Agentic creative + budget + targeting for TikTok ad accounts. B-path alongside our native /tiktok-ads/ helpers.", status: "verify" },
+            { name: "Google Ads MCP", body: "Open-source · multiple OSS packages (e.g. cohnen/google-ads-mcp). Surfaces as install target.", status: "ready" },
+            { name: "Pipeboard MCP suite", body: "Unified MCP for Reddit · Snap · Meta · Google · TikTok ad surfaces. Held for one round of verification.", status: "verify" },
+            { name: "Firecrawl MCP", body: "Web scraping with bot-protection bypass. API-key auth. Pairs with our research lane.", status: "ready" },
+            { name: "Claude Flow", body: "Multi-agent orchestration swarms. Sits beside aeons-lead + subagents as a swarm topology option.", status: "ready" },
+            { name: "Repomix MCP", body: "Pack a codebase into AI-friendly single file. Complements our existing repo-indexer.mjs.", status: "ready" },
+            { name: "StackGen MCP", body: "K8s + Datadog + AWS via natural language. Real product · need to pin exact MCP package before install.", status: "verify" },
+          ].map((m) => (
+            <div key={m.name} className="p-6" style={{ background: EMBER.elevated }}>
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="font-mono text-[14px] font-medium" style={{ color: EMBER.textPrimary }}>
+                  {m.name}
+                </h3>
+                <span
+                  className="shrink-0 rounded border px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.22em]"
+                  style={{
+                    borderColor: m.status === "ready" ? EMBER.accent : EMBER.amber,
+                    color: m.status === "ready" ? EMBER.accent : EMBER.amber,
+                  }}
+                >
+                  {m.status === "ready" ? "install-safe" : "verify first"}
+                </span>
+              </div>
+              <p className="mt-3 text-[13px] leading-[1.55]" style={{ color: EMBER.textSoft }}>
+                {m.body}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-[13px] leading-[1.6]" style={{ color: EMBER.textMuted }}>
+          Plus <strong>70+ existing connectors</strong> in the Connector
+          Fabric (Anthropic · OpenAI · Google · Ollama · Perplexity · Groq ·
+          Cohere · Mistral · Pinecone · Cloudflare · Midjourney · Runway ·
+          Eleven Labs · Linear · Notion · Supabase · Stripe · Vercel · GitHub ·
+          70+ total). Set-and-forget auth vault · AES-256-GCM · 3-tier master key.
+        </p>
       </section>
 
       {/* ── MODEL FALLBACK (subordinate · Claude is the lead) ── */}
