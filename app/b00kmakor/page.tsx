@@ -392,39 +392,31 @@ export default function B00KMakorPage() {
         </div>
       </section>
 
-      {/* ── PLAIN-LANGUAGE INTRO ── */}
-      <section className="relative z-10 mx-auto w-full max-w-3xl px-6 py-20">
-        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-          ::what it actually is
-        </p>
-        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
-          A publishing house that lives on your computer.
-        </h2>
-        <div className="mt-8 space-y-5 text-base leading-[1.7] text-[#C8CCCE] md:text-[17px]">
-          <p>
-            You open B00KMAKR like any other app. Inside is a cockpit —
-            a single window where you write the book, market the book,
-            and ship the book. Every chapter is a node on a mission
-            graph the cockpit keeps for you. Your voice survives every
-            session. Your continuity is audited every time you change
-            something. When the manuscript is ready, the cockpit
-            packages it for KDP, builds the cover, lays out the
-            120-day launch calendar, and queues the daily action items.
+      {/* ── 142 FEATURE SURFACES · Wave 85 · moved above the fold-2 ── */}
+      <section className="relative z-10 mx-auto w-full max-w-5xl px-6 py-16 md:py-20">
+        <div className="rounded-3xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#0A1A1C] to-[#0A0F11] p-10 md:p-14">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+            ::depth · the operator&apos;s count
           </p>
-          <p>
-            There is no cloud requirement. No subscription. No login.
-            The whole publishing house runs on your machine, on your
-            terms. The data goes where you tell it. The license is
-            yours forever after one payment. The source is in the
-            bundle.
-          </p>
-          <p>
-            v3.2.0 ships in two builds. Mac. Windows. Same cockpit,
-            same brain router, same 142 feature surfaces, same craft.
-            Two manuals (book-red for Mac, blue for Windows so you can
-            tell at a glance). Two packages, two installer paths each,
-            both verified by SHA-256, both with embedded-font PDFs that
-            look the same on every screen.
+          <div className="mt-6 flex flex-wrap items-baseline gap-6">
+            <p className="text-8xl font-semibold tabular-nums leading-none text-[#22F0D5] md:text-9xl">
+              142
+            </p>
+            <p className="max-w-md text-balance text-xl leading-[1.25] tracking-tight text-[#F2F4F5] md:text-2xl">
+              feature surfaces, audited and counted, across both builds.
+            </p>
+          </div>
+          <p className="mt-8 max-w-3xl text-base leading-[1.65] text-[#C8CCCE] md:text-[17px]">
+            AI Bookmaker is not a stripped-down demo. It is a real
+            cockpit with 142 distinct feature surfaces — chapter graph,
+            voice memory, continuity audit, KDP packager, cover lab,
+            campaign builder, ARC outreach queue, ranking pusher,
+            receipts ledger, plus the long tail of small craft pieces
+            (style fingerprint, drop-cap toggles, manuscript trim
+            presets, ISBN strategy switches, footnote modes, EPUB
+            validators, leader-dotted TOC generators). Each one is
+            documented in the PDF manual. Each one is testable. Each
+            one is the same on Mac and Windows.
           </p>
         </div>
       </section>
@@ -552,35 +544,6 @@ export default function B00KMakorPage() {
               </p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* ── 142 FEATURE SURFACES ── */}
-      <section className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20">
-        <div className="rounded-3xl border border-[#22F0D5]/30 bg-gradient-to-br from-[#0A1A1C] to-[#0A0F11] p-10 md:p-14">
-          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            ::depth · the operator&apos;s count
-          </p>
-          <div className="mt-6 flex flex-wrap items-baseline gap-6">
-            <p className="text-8xl font-semibold tabular-nums leading-none text-[#22F0D5] md:text-9xl">
-              142
-            </p>
-            <p className="max-w-md text-balance text-xl leading-[1.25] tracking-tight text-[#F2F4F5] md:text-2xl">
-              feature surfaces, audited and counted, across both builds.
-            </p>
-          </div>
-          <p className="mt-8 max-w-3xl text-base leading-[1.65] text-[#C8CCCE] md:text-[17px]">
-            B00KMAKR is not a stripped-down demo. It is a real cockpit
-            with 142 distinct feature surfaces — chapter graph, voice
-            memory, continuity audit, KDP packager, cover lab,
-            campaign builder, ARC outreach queue, ranking pusher,
-            receipts ledger, plus the long tail of small craft pieces
-            (style fingerprint, drop-cap toggles, manuscript trim
-            presets, ISBN strategy switches, footnote modes, EPUB
-            validators, leader-dotted TOC generators). Each one is
-            documented in the PDF manual. Each one is testable. Each
-            one is the same on Mac and Windows.
-          </p>
         </div>
       </section>
 
