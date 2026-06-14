@@ -421,6 +421,254 @@ export default function B00KMakorPage() {
         </div>
       </section>
 
+      {/* ═══════════════════════════════════════════════════════════════
+       * Wave 86 · 2026-06-12 · DEPTH PASS · doctrine: every product page
+       * surfaces real named features, agent roster, lifecycle stages.
+       * Source-of-truth: C:\AtomEons\B00KMAKR\PROJECT-SCOPE.md
+       * Operator: "this bookmaker page is lame. its such a cool app.
+       *  figure out why, read in full. make it so all waves do it."
+       * ═══════════════════════════════════════════════════════════════ */}
+
+      {/* ── THE 12 STAGES · the book lifecycle ── */}
+      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+          ::the journey · 12 stages · idea to ship
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+          A working publishing house, one cockpit.
+        </h2>
+        <p className="mt-6 max-w-2xl text-base leading-[1.7] text-[#C8CCCE]">
+          From the first line of premise to the moment the book is on a
+          Barnes &amp; Noble shelf. The cockpit walks you through every
+          stage. Skip what you don&apos;t need.
+        </p>
+
+        <ol className="mt-10 grid gap-px overflow-hidden rounded-2xl bg-[#1A2225] md:grid-cols-2 lg:grid-cols-3">
+          {[
+            ["01", "Idea", "8-step brief stepper · genre presets · 90-second sample tour · smart manuscript intake (auto-detects chapters from 6 patterns)"],
+            ["02", "Voice", "VoicePack 8-dimension radar · sample bank · voice-aware Writ0r prompts (the AI writes IN your voice, not in a generic AI voice)"],
+            ["03", "Structure", "Save the Cat · Hero's Journey · 3-Act · Fichtean · Snowflake · drag-and-drop corkboard · per-character arc grid · stakes-ladder SVG"],
+            ["04", "Drafting", "Chapter Bay 2.0 · provenance-colored editing · paragraph-level tagging · cost estimator before every paid call · pacing analyzer · continuity scanner"],
+            ["05", "Practice", "Monk mode · Pomodoro sprint timer · daily streak · word-target deadline calculator · WebSpeech read-aloud · paginated reading mode"],
+            ["06", "Cover", "27 genre-tuned cover variants · custom upload · text-layer edit · 3-variant side-by-side polling tool"],
+            ["07", "Production", "6 trim sizes · 6 typography templates · Vellum-grade drop caps + fleurons + mirrored running heads · EPUB 3 generation · ISBN walkthrough · spine calculator"],
+            ["08", "Marketing", "Bob Kit (cafe pitch · business cards · review cards · sign-up sheets · open-mic intro) · Goodreads ARM 8-week defensive plan · 12-month launch calendar · Substack inbox preview · A/B blurb tester · Press kit · Library outreach"],
+            ["09", "Audio", "ACX-ready chapter scripts · narrator brief · audiobook self-record studio (push-to-talk mic + teleprompter) · royalty calculator (Audible 40% / non-exclusive 25%)"],
+            ["10", "BI", "ROI calculator · per-retailer royalty (KDP 70/35 · Apple · Kobo · Bookshop) · KU page-read estimator · Bundle planner · BookBub eligibility + ROI · BSR decoder · AMS ROI tracker"],
+            ["11", "Scale", "Series mode (Book N inherits voicepack + brief + characters) · sequel continuity scoring · foreign rights tracker · reader analytics across stores"],
+            ["12", "Ship", "One-click Ship-Pack: manuscript · cover · EPUB · marketing kit · author website · lead magnet · beta packet · AI disclosure · receipts · all in one labeled zip"],
+          ].map(([n, title, body]) => (
+            <div key={n} className="bg-[#0A0F11] p-6 md:p-7">
+              <div className="flex items-baseline gap-3">
+                <span className="font-mono text-2xl font-semibold tabular-nums text-[#22F0D5]">
+                  {n}
+                </span>
+                <h3 className="text-lg font-medium tracking-tight text-[#F2F4F5]">
+                  {title}
+                </h3>
+              </div>
+              <p className="mt-3 text-[13px] leading-[1.6] text-[#C8CCCE]">
+                {body}
+              </p>
+            </div>
+          ))}
+        </ol>
+      </section>
+
+      {/* ── THE 15-AGENT STAFF · AE0-AE14 routing identities ── */}
+      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+          ::your staff · 15 named agents · AE0-AE14
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+          A Random House team, on call.
+        </h2>
+        <p className="mt-6 max-w-2xl text-base leading-[1.7] text-[#C8CCCE]">
+          AI Bookmaker ships with fifteen specialized agents — each with
+          their own prompt, evidence rules, and acceptance gates. They are
+          the staff of a publishing house, packaged for one writer.
+        </p>
+
+        <div className="mt-10 grid gap-px overflow-hidden rounded-2xl bg-[#1A2225] md:grid-cols-2 lg:grid-cols-3">
+          {[
+            ["AE0", "Router", "routes the next move based on book state"],
+            ["AE1", "PE", "production editor · the calendar keeper"],
+            ["AE2", "Acquirer", "premise + market fit · genre placement"],
+            ["AE3", "Dev-Ed", "outline architect · structural editor"],
+            ["AE4", "Writ0r", "chapter drafter · writes IN your voice"],
+            ["AE5", "Line-Ed", "sentence rhythm · prose tightening"],
+            ["AE6", "Copy-Ed", "grammar · usage · style consistency"],
+            ["AE7", "Proof", "final pass · typos · last-mile QA"],
+            ["AE8", "Cover-Design", "27 genre variants · custom upload"],
+            ["AE9", "Compositor", "interior typography · drop caps · spine"],
+            ["AE10", "Pitch", "query letter · log line · agent submission"],
+            ["AE11", "Meta", "ISBN · keywords · categories · BISAC codes"],
+            ["AE12", "PR", "press kit · podcast pitches · review asks"],
+            ["AE13", "Clear", "sensitivity reader · legal review · D7 disclosure"],
+            ["AE14", "Liaison", "activity ledger · receipt timeline · sync"],
+          ].map(([code, name, body]) => (
+            <div key={code} className="bg-[#0A0F11] p-5">
+              <div className="flex items-baseline gap-2">
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/70">
+                  {code}
+                </span>
+                <h3 className="font-mono text-[14px] font-medium tracking-tight text-[#F2F4F5]">
+                  {name}
+                </h3>
+              </div>
+              <p className="mt-2 text-[13px] leading-[1.55] text-[#9BA5A7]">
+                {body}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 max-w-2xl text-[14px] leading-[1.6] text-[#9BA5A7]">
+          Each agent is constrained by 27 constitutional guardrails inherited
+          verbatim from Orange³. Guardrail 12: no simulation of real people.
+          Every emission passes a 9-gate stack ending with Human Final Stop.
+          Mom can use it. Boss can audit it.
+        </p>
+      </section>
+
+      {/* ── 24 KILLER FEATURES · by name ── */}
+      <section className="relative z-10 mx-auto w-full max-w-6xl px-6 py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
+          ::feature roll · 24 of the 142 · the ones you tell people about
+        </p>
+        <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+          The ones with names.
+        </h2>
+        <p className="mt-6 max-w-2xl text-base leading-[1.7] text-[#C8CCCE]">
+          These are the named-by-craft features. The other 118 are the long
+          tail — drop-cap toggles, ISBN strategy switches, footnote modes,
+          leader-dotted TOC generators — all documented in the PDF manual,
+          all testable, all the same on Mac and Windows.
+        </p>
+
+        <div className="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            ["Bob Kit", "Elevator pitch · cafe pitch · printable business cards (3.5×2\") · review cards (receipt size) · sign-up sheet · open-mic intro · bookstore email · library invite · thank-you template. For Bob who asks each person at the outdoor cafe if they want to buy his book."],
+            ["VoicePack 8-dim radar", "Eight measurable axes of your voice: lexical density, sentence variance, dialogue %, sensory density, pace, tense distribution, register, rhetorical mode. The AI writes inside your radar."],
+            ["12-month launch calendar", "16 milestones from M-12 (pre-write) to M+3 (post-launch). 8-category color coding: pre-write · pre-launch · launch day · review push · backlist · etc."],
+            ["Goodreads ARM 8-week plan", "Defensive plan with 9 milestones. The plan Mom's friend should have run before her book vanished into Goodreads."],
+            ["Series Mode", "Book N inherits Book 1's voicepack, brief, character names. Run a series like a TV writers' room."],
+            ["Sequel continuity scoring", "Cross-book character-detail QA. Catches \"her eyes were green in Book 1, blue in Book 2\" before the reviewer does."],
+            ["Provenance-colored editing", "Per-paragraph color: yours · writ0r-revised · writ0r · ai-edited-human-prose. USCO 2025 Part 2 compliance built into the cockpit."],
+            ["AI disclosure auto-generation", "Jurisdiction-aware: CA SB 942 + EU AI Act Art. 50 + USCO 2025 Part 2 + Utah SB 149. Baked into the copyright page generator."],
+            ["Snapshots ribbon", "Auto-snapshot every 5 minutes if 50+ words changed. Star to keep. Restore-with-safety-snapshot. Cap 50."],
+            ["Continuity scanner", "Cross-chapter character-detail QA. Find the moment her brother became her cousin in chapter 14."],
+            ["Pacing analyzer", "Dialogue % · sensory density per 100 words · sentence-length variance σ per chapter. Tiered thresholds with verdict."],
+            ["Save the Cat · Hero's Journey", "5 plot beat templates: Save the Cat, 3-Act, Hero's Journey, Fichtean, Snowflake. Map beats to YOUR chapter count."],
+            ["Audiobook self-record studio", "Push-to-talk microphone + chapter teleprompter. Record your own audiobook in your own voice. ACX-ready masters out."],
+            ["27 genre-tuned cover variants", "9 genres × 3 styles each. Custom upload + text-layer edit. 3-variant side-by-side polling for your readers."],
+            ["Vellum-grade interior", "Drop caps + fleurons + mirrored running heads + folio + @page rules. The book looks like Penguin shipped it."],
+            ["Print spine calculator", "Paper-weight × page-count × binding → spine width in inches and mm. KDP 79-page minimum check. Visual spine mockup."],
+            ["One-click Ship-Pack", "Everything in one labeled zip: manuscript · cover PNG · EPUB · marketing kit · author website · lead magnet · beta packet · AI disclosure · calculator state · doctrine · receipts · self-test."],
+            ["A/B blurb tester", "Conversion math + Evan-Miller 100-conversion sample-size threshold. Pick the back-cover blurb with statistical significance."],
+            ["BookBub Featured Deal estimator", "7 eligibility criteria + ROI across 8 genres. Break-even units before submission."],
+            ["BSR decoder", "Amazon BSR power-law fit → units/day. BSR 1 → 80,000/day · BSR 100K → 45/day."],
+            ["AMS ROI tracker", "ACOS · ROAS · CTR · CVR · CPC + verdict + tactical guidance. Verified against Amazon dashboard formulas."],
+            ["KU page-read estimator", "KENPC × $0.0044 × borrows. Tells you what Kindle Unlimited is worth before you enroll."],
+            ["Bundle planner", "3+ books · discount % · royalty per unit · net lift after cannibalization · above-$9.99 warning."],
+            ["Foreign rights tracker", "Per-territory status: available · shopped · under contract · sold. The spreadsheet your agent should have."],
+          ].map(([name, body]) => (
+            <div key={name} className="rounded-lg border border-[#1F242B] bg-[#0A0F11] p-5">
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#22F0D5]">
+                {name}
+              </p>
+              <p className="mt-2 text-[13px] leading-[1.55] text-[#C8CCCE]">
+                {body}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#9BA5A7]">
+          + 118 long-tail surfaces · all documented · all in the PDF manual · all testable
+        </p>
+      </section>
+
+      {/* ── DOCTRINE BAKED IN ── */}
+      <section className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20">
+        <div className="rounded-3xl border border-[#FFB87A]/25 bg-gradient-to-br from-[#1A1308] to-[#0A0F11] p-10 md:p-14">
+          <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FFB87A]">
+            ::doctrine · baked in · cannot be removed
+          </p>
+          <h2 className="mt-4 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+            The receipts run deeper than the cockpit.
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+                27 constitutional guardrails
+              </p>
+              <p className="mt-3 text-[14px] leading-[1.6] text-[#C8CCCE]">
+                Authority · Integrity · Boundary · Honesty · Operator-Experience
+                classes. Inherited verbatim from Orange³. <em>Guardrail 12:</em>{" "}
+                no simulation of real people. <em>D7:</em> AI disclosure on
+                every output that touches publishing.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+                9-gate emission stack
+              </p>
+              <p className="mt-3 text-[14px] leading-[1.6] text-[#C8CCCE]">
+                Gate 0 LBCE (lattice integrity) → Gate 7 receipt → Gate 9
+                Human Final Stop. Nothing publishes without operator approval.
+                No autonomous payments. No autonomous submissions.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+                Per-paragraph provenance
+              </p>
+              <p className="mt-3 text-[14px] leading-[1.6] text-[#C8CCCE]">
+                Every paragraph tagged: <code className="font-mono text-[12px] text-[#FFB87A]">author</code> ·{" "}
+                <code className="font-mono text-[12px] text-[#FFB87A]">writ0r-revised</code> ·{" "}
+                <code className="font-mono text-[12px] text-[#FFB87A]">writ0r</code> ·{" "}
+                <code className="font-mono text-[12px] text-[#FFB87A]">ai-edited-human-prose</code>.
+                USCO 2025 Part 2 compliance built in.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+                AI disclosure auto-generation
+              </p>
+              <p className="mt-3 text-[14px] leading-[1.6] text-[#C8CCCE]">
+                Jurisdiction-aware copyright page: <strong>CA SB 942</strong> ·{" "}
+                <strong>EU AI Act Art. 50</strong> ·{" "}
+                <strong>USCO 2025 Part 2</strong> ·{" "}
+                <strong>Utah SB 149</strong>. The cockpit writes the disclosure
+                so you don&apos;t have to lawyer it yourself.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+                Local-only VoicePack
+              </p>
+              <p className="mt-3 text-[14px] leading-[1.6] text-[#C8CCCE]">
+                8-dim profile + sample SHA-256 persist on your machine. Raw
+                prose never POSTed off-machine. Your voice stays yours.
+              </p>
+            </div>
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FFB87A]">
+                Receipts &gt; slogans
+              </p>
+              <p className="mt-3 text-[14px] leading-[1.6] text-[#C8CCCE]">
+                Gate-7 receipts written to{" "}
+                <code className="font-mono text-[12px] text-[#FFB87A]">~/B00KMAKR-Data/receipts/</code>{" "}
+                on every meaningful action. Self-audit any decision your
+                publishing house made for you, six months later.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── MAC vs WINDOWS COMPARISON ── */}
       <section className="relative z-10 mx-auto w-full max-w-5xl px-6 py-20">
         <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
