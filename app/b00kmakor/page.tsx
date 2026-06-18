@@ -296,11 +296,11 @@ export default function B00KMakorPage() {
         </p>
 
         <p className="mt-10 max-w-3xl text-balance text-2xl leading-[1.25] tracking-tight text-[#F2F4F5] md:text-4xl">
-          The AI publishing cockpit. Free forever.
+          Write your book. Ship it. Free forever.
           <br />
           <span className="text-[#6B7779]">
-            Mac + Windows. The system that compiled
-            <em> I Am AI</em>.
+            Mac + Windows · 142 features · 15 named agents · the system
+            that compiled <em>I Am AI</em>.
           </span>
         </p>
 

@@ -291,7 +291,7 @@ export default function LauncherPage() {
               <p className="mt-3 text-[13px] leading-[1.55] text-[#9CA3AF]">
                 The publishing cockpit. 142 surfaces. Mac + Windows native.
                 EPUB · KDP · Audible. The system that compiled I Am AI.
-                Formerly B00KMAKR. Now free.
+                AI Bookmaker · free always.
               </p>
               <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
                 open AI Bookmaker →

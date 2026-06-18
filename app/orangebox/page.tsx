@@ -57,7 +57,7 @@ const ASSETS = {
   exe: "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/v1.0.0-beta/OrangeboxSetup-1.0.0-win-x64.exe",
   cert: "https://idv0aauaxicyf09e.public.blob.vercel-storage.com/orangebox/v1.0.0-beta/AtomEons-CodeSigning.cer",
   github: "https://github.com/AtomEons/ORANGEBOX",
-  ghRelease: "https://github.com/AtomEons/ORANGEBOX",
+  ghRelease: "https://github.com/AtomEons/ORANGEBOX/releases",
 } as const;
 
 const SHA256 =
@@ -86,17 +86,17 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://atomeons.com/orangebox" },
   openGraph: {
-    title: "Orangebox — Turbo-optimize Claude · perpetual license",
+    title: "Orange³ — Sovereign Agentic OS · FREE always",
     description:
-      "Built in 75 days. With itself. 10-80× context compression for Claude. Persistent memory. Skill primers. Receipts. Once · forever · §4A no-saas.",
+      "Built in 75 days. With itself. 10-80× context compression for Claude. Persistent memory. Skill primers. Receipts. FREE always · §4A no-SaaS · was Orangebox.",
     url: "https://atomeons.com/orangebox",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orangebox — turbo-optimize Claude · perpetual license",
+    title: "Orange³ — Sovereign Agentic OS · FREE always",
     description:
-      "10-80× context compression. Persistent memory. Skill primers. Tamper-evident receipts. No subscription.",
+      "10-80× context compression. Persistent memory. Skill primers. Tamper-evident receipts. FREE always. §4A no-SaaS.",
   },
   robots: { index: true, follow: true },
 };
@@ -288,7 +288,7 @@ const FAQ = [
   },
   {
     q: "How do updates work?",
-    a: "v1.x point releases are free to existing buyers. Major version upgrades (v2, v3) will be separate purchase events at the time they ship. Your v1 license never expires.",
+    a: "v1.x point releases are free always. Major version upgrades (v2, v3) ship free at the time they release. Your v1 install never expires and never gates behind a paywall.",
   },
   {
     q: "Can I install on multiple computers?",
@@ -304,7 +304,7 @@ const FAQ = [
   },
   {
     q: "Will my purchase still work if AtomEons goes away?",
-    a: "Yes. Orangebox is a perpetual license. The application runs entirely on your local machine. There is no online activation, no license-server check, no kill-switch.",
+    a: "Yes. Orange³ is free always under the §4A no-SaaS covenant. The application runs entirely on your local machine. There is no online activation, no license-server check, no kill-switch.",
   },
   {
     q: "What models does Orangebox support?",
@@ -312,7 +312,7 @@ const FAQ = [
   },
   {
     q: "How is Orangebox different from Cursor / Copilot / Claude Code?",
-    a: "Cursor and Copilot are SaaS — your code uploads to their servers and you pay monthly forever. Claude Code is subscription-locked. Orangebox is local-first (your code stays on your disk), tuned for Claude with optional fallback to other providers via BYO key, and a one-time perpetual purchase. License §4A legally bans switching to subscription.",
+    a: "Cursor and Copilot are SaaS — your code uploads to their servers and you pay monthly forever. Claude Code is subscription-locked. Orange³ is local-first (your code stays on your disk), tuned for Claude with optional fallback to other providers via BYO key, and free always. License §4A legally bans switching to subscription.",
   },
   {
     q: "Is the source code available?",
@@ -350,14 +350,14 @@ export default function OrangeboxPage() {
           + availability + review-count badges in AI search engine answer
           boxes (Google AI Overview, Perplexity Shopping, ChatGPT search). */}
       <ProductJsonLd
-        name="ORANGEBOX Version 1"
-        description="Local-first turbo-optimization system for Anthropic Claude. Persistent memory across sessions, 10-80x context compression (Crystal Lattice), reusable skill primers, tamper-evident JSON receipts, 14-department named-role routing (AE0-AE14), BYO-key multi-LLM (Claude / GPT / Gemini / Ollama / OpenRouter / Groq / Cohere / Mistral / Perplexity). Code-signed Windows installer. License §4A legally bars subscription conversion."
+        name="Orange³ Version 1"
+        description="Local-first sovereign agentic operating system for Anthropic Claude. Persistent memory across sessions, 10-80x context compression (Crystal Lattice), reusable skill primers, tamper-evident JSON receipts, 14-department named-role routing (AE0-AE14), BYO-key multi-LLM (Claude / GPT / Gemini / Ollama / OpenRouter / Groq / Cohere / Mistral / Perplexity). Code-signed Windows installer. FREE always · §4A no-SaaS · was Orangebox."
         image="https://atomeons.com/orangebox/opengraph-image"
         url="https://atomeons.com/orangebox"
         priceUSD={0}
         availability="InStock"
         category="DesktopApplication"
-        identifier="ATOMEONS-ORANGEBOX-V1"
+        identifier="ATOMEONS-ORANGE3-V1"
       />
 
       {/* warm radial bloom */}
@@ -379,7 +379,7 @@ export default function OrangeboxPage() {
           <Link href="/orangebox" className="flex items-center gap-3">
             <Image
               src={ASSETS.logo}
-              alt="Orangebox"
+              alt="Orange³"
               width={28}
               height={28}
               className="rounded-md"
@@ -389,7 +389,7 @@ export default function OrangeboxPage() {
               className="font-mono text-[11px] uppercase tracking-[0.28em]"
               style={{ color: EMBER.accent }}
             >
-              Orangebox
+              Orange³
             </span>
           </Link>
           <div className="hidden items-center gap-7 md:flex">
@@ -1326,9 +1326,9 @@ export default function OrangeboxPage() {
             ::the anti-saas commitment
           </p>
           <p className="mt-4 text-balance text-2xl leading-[1.35] tracking-tight md:text-3xl" style={{ color: EMBER.textPrimary }}>
-            Orangebox is a one-time perpetual purchase. Existing buyers keep their
-            license even if future editions add optional paid services.
-            You are buying software, not renting the right to remember your own work.
+            Orange³ is free always under §4A no-SaaS. No kill-switch.
+            No license-server. No activation phone-home. You own the
+            cockpit and the right to remember your own work.
           </p>
         </div>
 

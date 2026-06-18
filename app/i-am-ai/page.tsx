@@ -1040,7 +1040,7 @@ export default function IAmAiBookPage() {
        * Wave 73 · launch day · iframe of full HTML book.
        * ═══════════════════════════════════════════════════════════════ */}
       <section
-        id="read-inline"
+        id="read-in-browser"
         aria-label="I AM AI — full book inline"
         className="scroll-mt-24 border-b border-[#1F242B] py-20 md:py-28"
       >

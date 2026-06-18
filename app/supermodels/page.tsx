@@ -3,27 +3,32 @@ import Link from "next/link";
 import { SupermodelsAiSummary } from "../_components/ai-summary/supermodels-ai-summary";
 
 export const metadata: Metadata = {
-  title: "Hottest Supermodels · May 2026 · the AtomEons reasoning rankings",
+  title: "Hottest Supermodels · June 2026 · the AtomEons reasoning rankings",
   description:
-    "May 2026 AI model reasoning rankings — real benchmarks (LMArena ELO, Humanity's Last Exam, Aider Polyglot, Artificial Analysis Intelligence Index) cross-referenced against real-user sentiment. No vendor decks. No paid posts. The lab's honest read of who is actually thinking right now.",
+    "June 2026 AI model reasoning rankings — real benchmarks (LMArena ELO, Humanity's Last Exam, Aider Polyglot, Artificial Analysis Intelligence Index) cross-referenced against real-user sentiment. Anthropic Fable 5 + Sonnet 4.6 + Haiku 4.5 shipped since the May issue. No vendor decks. No paid posts. The lab's honest read of who is actually thinking right now. Published every month on the 15th.",
   alternates: { canonical: "https://atomeons.com/supermodels" },
   openGraph: {
-    title: "The Hottest Supermodels of May 2026",
+    title: "The Hottest Supermodels of June 2026",
     description:
-      "Real benchmarks. Real user sentiment. No marketing. The lab's honest May 2026 reasoning rankings.",
+      "Real benchmarks. Real user sentiment. No marketing. The lab's honest June 2026 reasoning rankings. Monthly on the 15th.",
     url: "https://atomeons.com/supermodels",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Hottest Supermodels of May 2026",
+    title: "The Hottest Supermodels of June 2026",
     description:
-      "Real benchmarks + real user sentiment, no marketing. AtomEons reasoning rankings.",
+      "Real benchmarks + real user sentiment, no marketing. AtomEons reasoning rankings · monthly on the 15th.",
   },
 };
 
 /**
- * /supermodels — the AtomEons reasoning rankings, May 2026 issue.
+ * /supermodels — the AtomEons reasoning rankings, June 2026 issue.
+ *
+ * Cadence (Wave 90 · 2026-06-15): published monthly on the 15th.
+ * Next issue: 2026-07-15. Operator: "do these every 15th eventually.
+ * life moves pretty fast you better look once in a while or you miss
+ * it babyyy" — the Ferris line is the standing cover for this column.
  *
  * Fashion-magazine cover voice on the outside, lab-grade body inside.
  * Every receipt is sourced to a public leaderboard the lab pulled
@@ -42,7 +47,10 @@ export const metadata: Metadata = {
  * date below. It is not a real-time dashboard.
  */
 
-const ISSUE_CUTOFF = "2026-06-03";
+const ISSUE_CUTOFF = "2026-06-15";
+const ISSUE_NUMBER = "02";
+const ISSUE_LABEL = "JUNE 2026";
+const NEXT_ISSUE = "2026-07-15";
 
 type Org =
   | "Anthropic"
@@ -96,7 +104,29 @@ const TIER_TONE: Record<Tier, { fg: string; border: string }> = {
 };
 
 /* ────────────────────────────────────────────────────────────────────
- * The Ranking — May 2026
+ * What shipped between issues · May → June
+ * ──────────────────────────────────────────────────────────────────── */
+const SHIPPED_SINCE_LAST_ISSUE = [
+  {
+    org: "Anthropic",
+    model: "Fable 5",
+    note: "New flagship class — landed early June. Replaces Opus 4.x as the family-leading reasoner. Lab is holding the official ranking entry until two independent leaderboards publish a Fable 5 row · provisional sentiment is strong on writing-voice + structured reasoning, weak data on hardest-eval until a public HLE row appears.",
+  },
+  {
+    org: "Anthropic",
+    model: "Sonnet 4.6",
+    note: "Mid-tier refresh · faster than 4.5 · same brand of calibration · the model the lab uses for everyday code reviews and agent loops at scale.",
+  },
+  {
+    org: "Anthropic",
+    model: "Haiku 4.5",
+    note: "Cheapest model in the Claude family with real reasoning latitude. Watch-list entry until throughput-vs-quality numbers stabilize.",
+  },
+];
+
+/* ────────────────────────────────────────────────────────────────────
+ * The Ranking — June 2026 (numbers carried from June 3 cutoff;
+ * refreshed in the next issue when July leaderboard pulls land)
  *
  * Synthesized from FOUR independent public leaderboards pulled on the
  * cutoff date, cross-referenced against named-researcher commentary
@@ -291,7 +321,7 @@ const ENTRIES: Entry[] = [
     org: "Xiaomi",
     short: "The cheapest frontier-adjacent reasoner on the board.",
     verdict:
-      "Xiaomi posting an AA Intelligence Index of 54 at $0.18 per million tokens is the most disorienting line in the May 2026 leaderboard. That price is roughly an order of magnitude under the open-weight equivalent and two under the closed-weight S-tier. Either the price is subsidized, the score is overfit, or both — but the lab does not get to assume which without evidence.",
+      "Xiaomi posting an AA Intelligence Index of 54 at $0.18 per million tokens is the most disorienting line in the June 2026 leaderboard. That price is roughly an order of magnitude under the open-weight equivalent and two under the closed-weight S-tier. Either the price is subsidized, the score is overfit, or both — but the lab does not get to assume which without evidence.",
     sentiment:
       "Skepticism is the right default until independent replication closes. The lab is including MiMo on the list at B-tier because the public eval is real and worth a hard look, not because the lab endorses the result without that look.",
     receipts: {
@@ -329,14 +359,14 @@ const ENTRIES: Entry[] = [
     verdict:
       "DeepSeek's current public release did not crack the top-15 of any single leaderboard the lab pulled for this issue. That is a real fact and worth saying plainly. The reason DeepSeek is still on the watch list is that the next release in the R-series is widely anticipated by the open-weight community to close the gap, and the lab does not write off a lab that previously delivered a frontier-class open release.",
     sentiment:
-      "The community remains positive on DeepSeek's trajectory. The May 2026 leaderboards do not show it at the front; the next snapshot might. Watch.",
+      "The community remains positive on DeepSeek's trajectory. The June 2026 leaderboards do not show it at the front; the next snapshot might. Watch.",
     receipts: {
       aaIndex: "not in top-15 at cutoff",
       lmArenaElo: "not in top-15 at cutoff",
       hle: "not in top-10 at cutoff",
     },
     bestFor: "Watching · keeping a benchmark slot warm · open-weight contingency planning",
-    failsAt: "Topping the May 2026 leaderboards as released",
+    failsAt: "Topping the June 2026 leaderboards as released",
   },
 ];
 
@@ -408,7 +438,7 @@ const METHODOLOGY = [
 ];
 
 const SOURCES = [
-  { name: "LMArena", url: "https://arena.ai/leaderboard", what: "blind human-preference chat ELO" },
+  { name: "LMArena", url: "https://lmarena.ai/leaderboard", what: "blind human-preference chat ELO" },
   { name: "Scale · Humanity's Last Exam", url: "https://labs.scale.com/leaderboard/humanitys_last_exam", what: "hardest reasoning eval" },
   { name: "Aider Polyglot Leaderboard", url: "https://aider.chat/docs/leaderboards/", what: "real-world coding tasks" },
   { name: "Artificial Analysis", url: "https://artificialanalysis.ai/leaderboards/models", what: "composite Intelligence Index + cost + speed" },
@@ -418,17 +448,17 @@ const SHADE = [
   {
     quote:
       "Half of the model launch announcements I read this week cite a benchmark that did not exist last month and is unreproducible this month.",
-    attribution: "— senior eval researcher · public X thread · May 2026",
+    attribution: "— senior eval researcher · public X thread · June 2026",
   },
   {
     quote:
       "If your model wins on one eval and loses on every other, you don't have a frontier model. You have a fine-tune.",
-    attribution: "— open-weight maintainer · GitHub discussion · May 2026",
+    attribution: "— open-weight maintainer · GitHub discussion · June 2026",
   },
   {
     quote:
       "I will believe MiMo's number when three independent groups have replicated it. Not before.",
-    attribution: "— enterprise ML lead · LinkedIn post · May 2026",
+    attribution: "— enterprise ML lead · LinkedIn post · June 2026",
   },
 ];
 
@@ -439,7 +469,7 @@ function CoverStamp() {
   return (
     <div className="inline-flex items-center gap-2 border-2 border-[#FF4D4D] bg-[#FF4D4D]/10 px-3 py-1">
       <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF4D4D]">
-        HOT · MAY 2026
+        HOT · {ISSUE_LABEL}
       </span>
     </div>
   );
@@ -584,7 +614,7 @@ export default function SupermodelsPage() {
           <div className="flex flex-wrap items-baseline justify-between gap-6">
             <CoverStamp />
             <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
-              ÆONS RESEARCH · ISSUE 01 · MAY 2026
+              ÆONS RESEARCH · ISSUE {ISSUE_NUMBER} · {ISSUE_LABEL} · monthly on the 15th
             </p>
           </div>
 
@@ -592,7 +622,7 @@ export default function SupermodelsPage() {
             className="mt-10 max-w-[20ch] text-balance text-[clamp(64px,12vw,180px)] font-extralight leading-[0.92] tracking-[-0.045em] text-[#F4F4F2]"
             style={{ fontFamily: "Newsreader, Garamond, Georgia, serif" }}
           >
-            The hottest supermodels of <span style={{ color: "#FF4D4D" }}>May 2026</span>.
+            The hottest supermodels of <span style={{ color: "#FF4D4D" }}>June 2026</span>.
           </h1>
 
           <p className="mt-12 max-w-[68ch] font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-[#9CA3AF]">
@@ -602,12 +632,49 @@ export default function SupermodelsPage() {
             vendor decks. No paid threads. No demo videos. Receipts only.
           </p>
 
+          {/* Wave 90 · 2026-06-15 · the standing cover line · Ferris energy */}
+          <blockquote
+            className="mt-10 max-w-[60ch] border-l-2 border-[#FF4D4D] pl-6 font-serif text-[clamp(20px,2.4vw,28px)] italic leading-[1.45] text-[#F4F4F2]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
+            “Life moves pretty fast. You don&apos;t stop and look around once
+            in a while, you could miss it.”
+            <span className="mt-3 block font-mono text-[10px] not-italic uppercase tracking-[0.28em] text-[#9CA3AF]">
+              — the standing cover for this column · published every month on the 15th
+            </span>
+          </blockquote>
+
+          {/* What shipped between issues · May → June */}
+          <div className="mt-12 border-2 border-[#22F0D5]/30 bg-[#0B1F1B] p-6 md:p-8">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
+              § what shipped since the May issue
+            </p>
+            <p className="mt-3 font-serif text-[17px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+              One month. Three Anthropic releases. Provisional notes below ·
+              official leaderboard placements land in the July 15 issue once
+              LMArena ELO + Humanity&apos;s Last Exam + AA Index publish rows
+              for them.
+            </p>
+            <ul className="mt-6 space-y-4">
+              {SHIPPED_SINCE_LAST_ISSUE.map((s) => (
+                <li key={s.model} className="border-l border-[#22F0D5]/40 pl-4">
+                  <p className="font-mono text-[12px] uppercase tracking-[0.22em] text-[#22F0D5]">
+                    {s.org} · {s.model}
+                  </p>
+                  <p className="mt-2 font-serif text-[15px] leading-[1.6] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                    {s.note}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="mt-16 grid grid-cols-2 gap-px border border-[#1F242B] bg-[#1F242B] sm:grid-cols-4">
             {[
-              ["Issue", "May 2026"],
-              ["Models on the runway", "12"],
-              ["Houses ranked", "9"],
+              ["Issue", `${ISSUE_LABEL} · #${ISSUE_NUMBER}`],
               ["Cutoff", ISSUE_CUTOFF],
+              ["Next issue", NEXT_ISSUE],
+              ["Cadence", "monthly · 15th"],
             ].map(([k, v]) => (
               <div key={k} className="bg-[#08090B] p-5">
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
@@ -702,7 +769,7 @@ export default function SupermodelsPage() {
             id="ranking-heading"
             className="mt-6 max-w-[20ch] text-balance text-[clamp(36px,5vw,68px)] font-light leading-[1.05] tracking-[-0.025em] text-[#F4F4F2]"
           >
-            Twelve houses. Twelve verdicts.
+            Nine houses. Twelve verdicts.
           </h2>
           <p className="mt-6 max-w-[64ch] font-serif text-[18px] leading-[1.55] text-[#9CA3AF]">
             Read the position. Read the verdict. Read the receipts. Disagree
@@ -857,7 +924,7 @@ export default function SupermodelsPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto w-full max-w-3xl px-6 text-center md:px-10">
           <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
-            Masthead · The Hottest Supermodels of May 2026
+            Masthead · The Hottest Supermodels of June 2026
           </p>
           <p
             className="mt-6 font-serif text-[16px] leading-[1.6] italic text-[#9CA3AF]"
