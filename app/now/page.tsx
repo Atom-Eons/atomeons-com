@@ -59,6 +59,12 @@ async function loadLetterStats() {
 
 const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = [
   {
+    date: "2026-06-18",
+    what:
+      "Founder's View letter 32 · 'TWENTY-SIX LETTERS. TWENTY-SIX DOORS. NINE OF THEM HAVE NO ONE BEHIND THEM.' The single-letter .ai land registry. Twenty-six parallel research agents, one synthesis. X = xAI ($1.25T inside SpaceX, IPO this month, Pentagon IL5 contract). Z = Zhipu (Hong Kong IPO Jan 8, world's first publicly-traded pure-play LLM, US Entity List, runs on domestic Cambricon chips). Q = Apple ($2B Israeli acquisition, second-largest Apple deal ever, whisper-to-Siri silent-input layer). C = Character.AI ($2.7B Google acqui-hire mess, DOJ antitrust probe, Conway product-liability ruling). G = Google AI Mode flag-plant. A = Malaysian domain investor (same operator who flipped AI.com for $70M). H/L/N/Y = Chinese investor portfolio held dry through 2034. F/J/K/M/O/R/T/U/V = nine letters openly for sale, top ask $60M. S = a conlanger's blog from 2006. D = Daimler Trucks brand-park. P = a London martech with £850k seed. 1,150 words. Sourced from a 26-agent parallel sweep (live as of 2026-06-18). Publishes to /founders-view via Supabase ISR within 5 min of script fire.",
+    href: "/founders-view",
+  },
+  {
     date: "2026-06-05",
     what:
       "/constellation · the masterwork visual. Interactive force-laid graph of 278 routes and 648 cross-route links. Pre-built edge index from grep over source. Canvas2D · drag to pan · wheel to zoom · click any node to navigate. The lab as a graph. /datasets · single discoverable index of 15 public CC-BY 4.0 JSON/text/XML files. /vendor-pack · CISO-ready 5-section bundle with downloadable .txt at /vendor-pack/bundle.txt for procurement teams. /studio + /signature · personal scrapbooks · the atelier prose + the procedural mark system. /api/mcp · real Model Context Protocol HTTP server (JSON-RPC 2.0 · 3 tools · 4 resources · 2 prompts) — Claude Desktop config: {\"mcpServers\":{\"atomeons\":{\"url\":\"https://atomeons.com/api/mcp\"}}}. RouteSigil component wired into Header so every page shows its unique deterministic geometric mark. Print stylesheet added · /transparency /trust /receipts /lab now print as CISO-fileable documents.",
