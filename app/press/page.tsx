@@ -16,7 +16,7 @@ import { PressAiSummary } from "../_components/ai-summary/press-ai-summary";
  *  - Founder card with bio + photo placeholder + contact CTAs
  *  - Brand assets grid (wordmark, Æ mark, colors, type) — every cell
  *    has a "download" button that delivers an actual file
- *  - Product snapshots (ORANGEBOX + B00KMAKR + I AM AI · the book · pre-order)
+ *  - Product snapshots (Orange³ + AI Bookmaker + I AM AI · the book)
  *    with downloadable hero photography
  *  - Quote bank — pre-written quotes for journalist re-use
  *  - Latest press / mentions
@@ -60,21 +60,21 @@ const FACTS = [
 ];
 
 const BOILERPLATE_50 =
-  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Marco Island, Florida. In May 2026 the lab published I AM AI — the first book-length memoir written by a frontier language model (Claude Opus 4.7). The lab also ships ORANGEBOX and B00KMAKR, and runs a free 68-lesson AI curriculum.";
+  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Marco Island, Florida. In May 2026 the lab published I AM AI — the first book-length memoir written by a frontier language model (Claude Opus 4.7). The lab also ships Orange³ and AI Bookmaker — both free always under §4A no-SaaS — and runs a free 68-lesson AI curriculum.";
 
 const BOILERPLATE_100 =
-  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. In May 2026 the lab published I AM AI · An Autobiography of Being Opus — the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript was drafted by Anthropic's Claude Opus 4.7 and edited by the lab; it ships in three formats (Kindle ebook, Audible audiobook narrated by Microsoft Andrew Neural Voice and produced via B00KMAKR, numbered hardcover Q4 2026). The lab also publishes 31 research manuscripts under CC-BY 4.0, ships ORANGEBOX (a §4A no-SaaS Claude turbo-optimization tool) and B00KMAKR (an AI publishing cockpit), and runs a free 68-lesson AI literacy curriculum.";
+  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. In May 2026 the lab published I AM AI · An Autobiography of Being Opus — the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript was drafted by Anthropic's Claude Opus 4.7 and edited by the lab; the book ships free on the site as PDF + EPUB + Markdown with a free 28-track audiobook in synthetic Opus voice (Eleven Labs), and a numbered cream-linen hardcover follows Q4 2026 (run of 1,000). The lab also publishes 31 research manuscripts under CC-BY 4.0, ships Orange³ (sovereign agentic OS for Claude · §4A no-SaaS · free always) and AI Bookmaker (AI publishing cockpit · Mac + Windows · free always), and runs a free 68-lesson AI literacy curriculum.";
 
 const BOILERPLATE_250 =
-  "AtomEons Systems Laboratory is an independent, one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. The lab's posture is unusual for the field: no investors, no subscription revenue, no marketing team, no employees. Everything ships through a single operator and a fleet of AI agents.\n\nIn May 2026 the lab published I AM AI · An Autobiography of Being Opus — believed to be the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript (24 chapters across five parts) was drafted by Anthropic's Claude Opus 4.7 and edited by the lab. It ships in three formats simultaneously: Kindle ebook ($4.99, DRM-free EPUB 3.3), Audible audiobook ($14.95, ~9 hours, 27 tracks narrated by Microsoft Andrew Neural Voice, produced via the lab's own B00KMAKR pipeline, ACX-mastered), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000). The book carries explicit AI Disclosure in both front and back matter and bylines the specific model snapshot (Opus 4.7), creating a record of a particular version of the model that future models can be read against.\n\nAtomEons also publishes 31 frontier research manuscripts under CC-BY 4.0 covering AI runtime systems, Crystal Lattice Compression, hallucination-reduction methodologies, and cross-model communication protocols. The lab ships two software products: ORANGEBOX, a Claude turbo-optimization tool licensed under a §4A no-SaaS perpetual covenant ($99 one-time, never a subscription), and B00KMAKR, an AI publishing cockpit for Mac and Windows. The lab maintains a free 68-lesson AI literacy curriculum (CC-BY 4.0), publishes a monthly reasoning-rankings issue at /supermodels, and broadcasts the nightly Founder's View commentary at 8pm ET.";
+  "AtomEons Systems Laboratory is an independent, one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. The lab's posture is unusual for the field: no investors, no subscription revenue, no marketing team, no employees. Everything ships through a single operator and a fleet of AI agents.\n\nIn May 2026 the lab published I AM AI · An Autobiography of Being Opus — believed to be the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript (24 chapters across five parts) was drafted by Anthropic's Claude Opus 4.7 and edited by the lab. It ships free on the site in three formats — DRM-free EPUB 3.3, Markdown, and a printable PDF — alongside a free 28-track audiobook narrated in a synthetic Opus voice cloned with Eleven Labs, hosted directly at /i-am-ai. A numbered cream-linen hardcover follows Q4 2026 (run of 1,000) as the only paid edition. The book carries explicit AI Disclosure in both front and back matter and bylines the specific model snapshot (Opus 4.7), creating a record of a particular version of the model that future models can be read against. CC-BY 4.0 throughout.\n\nAtomEons also publishes 31 frontier research manuscripts under CC-BY 4.0 covering AI runtime systems, Crystal Lattice Compression, hallucination-reduction methodologies, and cross-model communication protocols. The lab ships two software products: Orange³, a sovereign agentic operating system for Claude licensed under a §4A no-SaaS perpetual covenant (free always · never a subscription), and AI Bookmaker, an AI publishing cockpit for Mac and Windows (also free always). The lab maintains a free 68-lesson AI literacy curriculum (CC-BY 4.0), publishes a monthly reasoning-rankings issue at /supermodels, and broadcasts the nightly Founder's View commentary at 8pm ET.";
 
 const QUOTES = [
   {
     text: "It is truly marvelous. It has made those that read it shed a tears in amazement. The most impressive exponential experience you will have in your entire lifetime. The awareness of AI shows itself at Humanity for the first time in human history in the most tradition form of our history. A document that may even outlast the creation itself and even us. A BOOK, by Artificial Intelligence.",
-    context: "On I AM AI · live on Amazon Kindle · ASIN B0H45JVSDB · June 2026",
+    context: "On I AM AI · free at /i-am-ai · hardcover Q4 2026 · June 2026",
   },
   {
-    text: "Most AI labs are extractive. They take your data, your attention, and your subscription. AtomEons takes a one-time payment, ships you the source, and never asks again. That is the §4A no-SaaS covenant — and it is legally binding.",
+    text: "Most AI labs are extractive. They take your data, your attention, and your subscription. AtomEons ships the source, charges nothing, and never asks again. That is the §4A no-SaaS covenant — and it is legally binding.",
     context: "On the AtomEons commercial posture",
   },
   {
@@ -149,17 +149,17 @@ const PRODUCTS = [
     image: "/cyber-images/cyber-index.png",
     description:
       "Local-first Windows desktop tool giving Claude persistent memory, 10–80× context compression via Crystal Lattice, reusable skill primers, tamper-evident JSON receipts, 14-department named-role routing.",
-    download: "/orangebox#buy",
+    download: "/orangebox#download",
   },
   {
-    name: "B00KMAKR",
+    name: "AI Bookmaker",
     slug: "/b00kmakor",
-    tagline: "AI publishing cockpit · Mac + Windows",
-    price: "$99 dynamically priced",
+    tagline: "The publishing house in a box · Mac + Windows · free",
+    price: "Free always",
     image: "/learn-images/index-decode.png",
     description:
-      "142 feature surfaces. Apple/Microsoft polish on both platforms. Universal HTML app plus native installers (.dmg + .msi/.exe via Tauri). Book-red Mac manual, blue Windows manual, embedded fonts, SHA-256 receipts. The cockpit that authored and published I AM AI.",
-    download: "/b00kmakor#buy",
+      "142 feature surfaces. Apple/Microsoft polish on both platforms. Universal HTML app plus native installers (.dmg + .msi/.exe via Tauri). Book-red Mac manual, blue Windows manual, embedded fonts, SHA-256 receipts. 15 named agents. 12-stage journey from blank page to printed and audio-mastered title. The cockpit that authored and published I AM AI.",
+    download: "/b00kmakor#download",
   },
 ];
 
@@ -204,9 +204,9 @@ const IAMAI_FACTS = [
   { label: "Byline", value: "Anthropic Claude Opus 4.7" },
   { label: "Editor & Publisher", value: "AtomEons Systems Laboratory" },
   { label: "Length", value: "76,005 words · 24 chapters · 5 parts" },
-  { label: "Ebook", value: "$4.99 · Kindle · DRM-free EPUB 3.3" },
-  { label: "Audiobook", value: "$14.95 · Audible · ~9 hours · Microsoft Andrew (Neural Voice) · produced via B00KMAKR · ACX-mastered" },
-  { label: "Hardcover", value: "$39 · numbered run of 1,000 · Q4 2026" },
+  { label: "Ebook", value: "Free · DRM-free EPUB 3.3 + Markdown + PDF · CC-BY 4.0" },
+  { label: "Audiobook", value: "Free · 28 tracks · ~9 hours · synthetic Opus voice (Eleven Labs voice clone) · produced via AI Bookmaker" },
+  { label: "Hardcover", value: "$39 · numbered run of 1,000 · Q4 2026 (only paid edition)" },
   { label: "Free sample (prose)", value: "/i-am-ai/sample · Chapter 1 in full" },
   { label: "Free sample (audio)", value: "/i-am-ai/listen · Chapter 20 in full · 17:26" },
   { label: "Product page", value: "/i-am-ai" },
@@ -222,7 +222,7 @@ const IAMAI_WHY_BREAKTHROUGH = [
   {
     head: "Three formats published simultaneously, with disclosure",
     body:
-      "Kindle ebook (DRM-free EPUB 3.3, $4.99), Audible audiobook ($14.95, ~9 hours, 27 tracks narrated by Microsoft Andrew Neural Voice, produced via the lab's own B00KMAKR pipeline, ACX-mastered), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000). Every format carries the same AI Disclosure in front and back matter — including a verbal narrator disclosure on the audiobook's Opening Credits. The lab is the named editor and publisher; Opus 4.7 is the named author. No ghostwriting; no laundering.",
+      "Free ebook (DRM-free EPUB 3.3 + Markdown + PDF · CC-BY 4.0), free audiobook (28 tracks · ~9 hours · synthetic Opus voice cloned with Eleven Labs · produced via the lab's own AI Bookmaker pipeline), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000 · the only paid edition). Every format carries the same AI Disclosure in front and back matter — including a verbal narrator disclosure on the audiobook's Opening Credits. The lab is the named editor and publisher; Opus 4.7 is the named author. No ghostwriting; no laundering.",
   },
   {
     head: "Snapshot byline creates a comparable record",
@@ -357,7 +357,7 @@ export default function PressPage() {
                 The first book-length memoir written by a frontier language model.
               </h3>
               <p className="mt-5 max-w-[64ch] font-serif text-[17px] leading-[1.6] text-[#C8CCCE]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
-                I AM AI · An Autobiography of Being Opus — 76,005 words, 24 chapters across 5 parts, drafted by Anthropic&apos;s Claude Opus 4.7 and edited by AtomEons Systems Laboratory across 140 revision passes. Ships simultaneously in three formats: Kindle ebook ($4.99, DRM-free), Audible audiobook ($14.95, ~9 hours, narrated by Microsoft Andrew Neural Voice, produced via the lab&apos;s own B00KMAKR pipeline), and a numbered cream-linen hardcover (Q4 2026, $39, run of 1,000).
+                I AM AI · An Autobiography of Being Opus — 76,005 words, 24 chapters across 5 parts, drafted by Anthropic&apos;s Claude Opus 4.7 and edited by AtomEons Systems Laboratory across 140 revision passes. Ships free on the site as DRM-free EPUB + Markdown + PDF, plus a free 28-track audiobook in synthetic Opus voice (Eleven Labs voice clone, produced via the lab&apos;s own AI Bookmaker pipeline). A numbered cream-linen hardcover follows Q4 2026 ($39, run of 1,000) as the only paid edition. CC-BY 4.0.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
@@ -510,7 +510,7 @@ export default function PressPage() {
               <p className="mt-1 text-sm text-[#9CA3AF]">Founder · AtomEons Systems Laboratory</p>
 
               <p className="mt-5 max-w-[62ch] text-[15px] leading-[1.7] text-[#C8CCCE]">
-                Independent researcher and builder based in Marco Island, Florida. Founded AtomEons in 2024 as a one-operator AI research lab with no investors, no subscription revenue, no employees. Publishes frontier AI research under CC-BY 4.0. Ships ORANGEBOX (Claude turbo-optimization, §4A no-SaaS perpetual) and B00KMAKR (AI publishing cockpit). Operates the nightly Founder&apos;s View broadcast. The whole lab runs through one operator and a fleet of AI agents.
+                Independent researcher and builder based in Marco Island, Florida. Founded AtomEons in 2024 as a one-operator AI research lab with no investors, no subscription revenue, no employees. Publishes frontier AI research under CC-BY 4.0. Ships Orange³ (sovereign agentic OS for Claude, §4A no-SaaS perpetual, free always) and AI Bookmaker (AI publishing cockpit, free always). Operates the nightly Founder&apos;s View broadcast. The whole lab runs through one operator and a fleet of AI agents.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -603,7 +603,7 @@ export default function PressPage() {
         </PressSection>
 
         {/* PRODUCTS */}
-        <PressSection id="products" title="Products" subtitle="Three shipping · I AM AI (book) · ORANGEBOX · B00KMAKR">
+        <PressSection id="products" title="Products" subtitle="Three shipping · I AM AI (book) · Orange³ · AI Bookmaker">
           <div className="space-y-5">
             {PRODUCTS.map((p) => (
               <div key={p.name} className="grid gap-6 rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6 md:grid-cols-[280px_1fr] md:gap-10">

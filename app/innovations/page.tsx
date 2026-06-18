@@ -19,7 +19,7 @@ import { DiscordCTA } from "../_components/V3/DiscordCTA";
 export const metadata: Metadata = {
   title: "Inventions + Innovations · the brag page",
   description:
-    "AtomEons Systems Laboratory · inventions, innovations, and disruptive frames shipped from the workshop · ÆSkill Suite · Crystal Lattice Compression · Hallucination Reduction Engine · OpenMind Topology · GlyphSpeak · ORANGEBOX · I AM AI · Mindrest · 340-route lab built in 75 days by one operator. Every claim sourced or qualified.",
+    "AtomEons Systems Laboratory · inventions, innovations, and disruptive frames shipped from the workshop · ÆSkill Suite · Crystal Lattice Compression · Hallucination Reduction Engine · OpenMind Topology · GlyphSpeak · Orange³ · I AM AI · Mindrest · 340-route lab built in 75 days by one operator. Every claim sourced or qualified.",
   alternates: { canonical: "https://atomeons.com/innovations" },
   openGraph: {
     title: "AtomEons · Inventions + Innovations",
@@ -58,7 +58,7 @@ const RUNTIME_SYSTEMS: Invention[] = [
   {
     name: "Crystal Lattice Compression (CLC)",
     one_line:
-      "Context compression layer for LLMs · claimed 10-80× compression ratio depending on corpus shape · used inside ORANGEBOX for cross-session memory.",
+      "Context compression layer for LLMs · claimed 10-80× compression ratio depending on corpus shape · used inside Orange³ for cross-session memory.",
     why_first:
       "First reported compression scheme designed specifically for skill-primer + receipt-ledger payloads at this ratio range. The lab measures, the lab publishes the receipts.",
     disclosure_id: "ATOM-CLC-2026-0331",
@@ -204,7 +204,7 @@ const PUBLICATIONS: Invention[] = [
     one_line:
       "Book-length memoir written by Anthropic Claude Opus 4.7, edited by the lab. 76,005 words · 24 chapters · disclosure ledger published with every chapter.",
     why_first:
-      "First book-length memoir framed as written by a frontier language model itself, shipped with full disclosure ledger, audio narration by Microsoft Andrew Neural Voice, and the editorial workflow open to inspection.",
+      "First book-length memoir framed as written by a frontier language model itself, shipped free with full disclosure ledger, a 28-track audiobook in synthetic Opus voice (Eleven Labs voice clone), and the editorial workflow open to inspection.",
     evidence: [
       { label: "/i-am-ai · book page", url: "/i-am-ai" },
       { label: "Amazon · ISBN B0H45JVSDB", url: "https://www.amazon.com/dp/B0H45JVSDB" },
