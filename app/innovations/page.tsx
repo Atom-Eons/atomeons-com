@@ -64,7 +64,7 @@ const RUNTIME_SYSTEMS: Invention[] = [
     disclosure_id: "ATOM-CLC-2026-0331",
     evidence: [
       { label: "Disclosure registered 2026-03-31 (operator notes)" },
-      { label: "Used in ORANGEBOX runtime · /orangebox", url: "/orangebox" },
+      { label: "Used in Orange³ runtime · /orangebox", url: "/orangebox" },
     ],
     date: "2026-03-31",
     status: "in-use",
@@ -145,7 +145,7 @@ const RUNTIME_SYSTEMS: Invention[] = [
 
 const PRODUCTS: Invention[] = [
   {
-    name: "ORANGEBOX v6 · native cockpit for Claude",
+    name: "Orange³ v1.0.0 · sovereign agentic OS for Claude",
     one_line:
       "4.46 MB native Tauri app · turbo-optimize Claude · 27 guardrails · 14-department named-role routing (AE0-AE14) · BYO API keys · zero markup · zero telemetry · source included.",
     why_first:
@@ -159,7 +159,7 @@ const PRODUCTS: Invention[] = [
     status: "shipped",
   },
   {
-    name: "B00KMAKR · AI publishing cockpit",
+    name: "AI Bookmaker · the publishing house in a box",
     one_line:
       "Mac + Windows desktop tool for AI-augmented book publishing · dynamic-world pricing · used by the lab to publish I AM AI in 75 days.",
     why_first:

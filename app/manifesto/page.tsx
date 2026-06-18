@@ -15,7 +15,7 @@ import { LabHero } from "../_components/v2/LabHero";
 export const metadata: Metadata = {
   title: "Manifesto — what the lab insists on",
   description:
-    "AtomEons Systems Laboratory manifesto. The 14 explicit clauses: receipts over slogans, one operator, no venture funding, $99 once, License §4A no-SaaS, source included, local-first by construction, zero telemetry, the 44M frame, equal-opportunity-indignation broadcast, named tools, named builders, CC-BY 4.0 research, Marco Island independent. Every clause is published, falsifiable, and CC-BY 4.0 quotable.",
+    "AtomEons Systems Laboratory manifesto. The 14 explicit clauses: receipts over slogans, one operator, no venture funding, Free always, License §4A no-SaaS, source included, local-first by construction, zero telemetry, the 44M frame, equal-opportunity-indignation broadcast, named tools, named builders, CC-BY 4.0 research, Marco Island independent. Every clause is published, falsifiable, and CC-BY 4.0 quotable.",
   keywords: [
     "AtomEons manifesto",
     "AtomEons doctrine",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AtomEons Manifesto — 14 clauses, every one published",
     description:
-      "What the lab insists on. Receipts over slogans. One operator. No venture funding. $99 once. §4A no-SaaS. Source included. Local-first.",
+      "What the lab insists on. Receipts over slogans. One operator. No venture funding. Free always. §4A no-SaaS. Source included. Local-first.",
     url: "https://atomeons.com/manifesto",
     type: "article",
     publishedTime: "2026-05-23T00:00:00Z",
@@ -89,22 +89,22 @@ const CLAUSES: Clause[] = [
   {
     num: "04",
     kind: "commerce",
-    title: "$99 once, forever. License §4A bans SaaS.",
-    body: "ORANGEBOX Command costs $99 USD one time. Subscription is the wrong relationship for an operator-grade cockpit and License §4A binds the lab against ever switching to it. If we ever try, every existing buyer keeps their license free in perpetuity. The clause is enforceable, published, and shipped inside the bundle as documentation.",
-    receipt: "/pricing · /legal/terms · LICENSE.txt §4A in every download bundle",
+    title: "Free always. License §4A bans SaaS.",
+    body: "Orange³ is free, always. Subscription is the wrong relationship for an operator-grade cockpit and License §4A binds the lab against ever switching to it. If we ever try, every install keeps working free in perpetuity. The clause is enforceable, published, and shipped inside the bundle as documentation.",
+    receipt: "/legal/terms · LICENSE.txt §4A in every download bundle",
   },
   {
     num: "05",
     kind: "commerce",
     title: "Two refund paths, both full, both 30 days.",
-    body: "Material Failure Guarantee: refund if ORANGEBOX fails to install or launch on a clean Windows 10/11 + Node 20+ machine. Workflow-Fit Refund: refund if the product doesn't fit your workflow, no questions asked. Both run for 30 days from the date of payment. Both are full refunds. No partial credits. No store credit. No silent denial.",
-    receipt: "/legal/refund · /support · processed back to original payment in 5 biz days",
+    body: "Material Failure Guarantee: Orange³ is free, but the lab still stands behind it. If Orange³ fails to install or launch on a clean Windows 10/11 + Node 20+ machine, the lab triages and fixes within 30 days. No refunds owed (nothing was paid), but the failure is logged and the next patch resolves it. The receipts stay public.",
+    receipt: "/legal/refund · /support · public failure log inside the receipt rail",
   },
   {
     num: "06",
     kind: "commerce",
     title: "Source included for every buyer.",
-    body: "Every ORANGEBOX bundle ships the full source tree alongside the binary. The buyer can inspect every line. The buyer can modify for personal or single-business use. The buyer cannot redistribute or resell. The point: trust by inspection, not by trust. If the cockpit ever does something the operator does not understand, the operator can find the line.",
+    body: "Every Orange³ bundle ships the full source tree alongside the binary. The operator can inspect every line. The operator can modify for personal or single-business use. The point: trust by inspection, not by trust. If the cockpit ever does something the operator does not understand, the operator can find the line.",
     receipt: "/legal/terms clause 1 · ships in the bundle alongside the binary",
   },
   {
@@ -178,7 +178,7 @@ const articleJsonLd = {
   "@type": "Article",
   headline: "AtomEons Manifesto — what the lab insists on",
   description:
-    "The 14 explicit clauses of AtomEons Systems Laboratory. Receipts over slogans. One operator. No venture funding. $99 once. License §4A bans SaaS. Source included. Local-first. Zero telemetry. The 44M on-ramp. Equal-opportunity indignation. Named tools, named builders, no affiliate revenue. Falsifiable. Marco Island independent.",
+    "The 14 explicit clauses of AtomEons Systems Laboratory. Receipts over slogans. One operator. No venture funding. Free always. License §4A bans SaaS. Source included. Local-first. Zero telemetry. The 44M on-ramp. Equal-opportunity indignation. Named tools, named builders, no affiliate revenue. Falsifiable. Marco Island independent.",
   author: {
     "@type": "Person",
     name: "Atom McCree",

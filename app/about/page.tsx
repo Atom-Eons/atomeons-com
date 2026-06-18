@@ -80,7 +80,7 @@ export default function About() {
         Atom McCree built AtomEons Systems Laboratory in Marco Island,
         Florida, to solve one problem: no existing AI tool let the
         operator stay outside the model&apos;s context while still running
-        a real project through it. The cockpit — ORANGEBOX — is what came
+        a real project through it. The cockpit — Orange³ — is what came
         out of that gap.
       </p>
 
@@ -164,14 +164,14 @@ export default function About() {
           Currently shipping
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-          ORANGEBOX, prototype.
+          Orange³, v1.0.0.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
-          The turbo-optimization system for Claude. v1.0.0-beta shipped
-          2026-05-30 — persistent memory, 10-80× context compression,
+          The sovereign agentic operating system for Claude. v1.0.0 shipped
+          2026-06-12 — persistent memory, 10-80× context compression,
           skill primers, tamper-evident receipts, 14-department routing.
-          FREE this week · perpetual after. License §4A bans subscription.
-          30-day Material Failure Guarantee. ORANGEBOX.
+          Free always. License §4A bans subscription. 30-day Material
+          Failure Guarantee. Orange³.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
@@ -179,13 +179,13 @@ export default function About() {
             className="rounded-md border border-[#22F0D5] bg-[#22F0D5] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
             style={{ color: "#000", WebkitTextFillColor: "#000" }}
           >
-            See ORANGEBOX →
+            See Orange³ →
           </Link>
           <Link
-            href="/orangebox#buy"
+            href="/orangebox#download"
             className="rounded-md border border-[#1F242B] bg-[#0F1114] px-4 py-2 text-sm font-semibold text-[#f7f0e4]"
           >
-            Buy · $1
+            Download · free
           </Link>
         </div>
       </section>
@@ -248,10 +248,10 @@ export default function About() {
         </p>
         <p className="mt-1 text-sm text-[#a7b8ad]">
           AtomEons does not run a support desk. I ship, then ship again.
-          Read the manual that comes inside ORANGEBOX before asking.
+          Read the manual that comes inside Orange³ before asking.
         </p>
         <p className="mt-3 text-sm text-[#f7f0e4]">
-          If you have a real question about what ORANGEBOX does or does
+          If you have a real question about what Orange³ does or does
           not do, send it. I read every email. I do not promise to reply.
         </p>
       </section>
