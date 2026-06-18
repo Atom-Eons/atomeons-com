@@ -31,7 +31,7 @@ const COSTS = [
   { what: "ElevenLabs · audiobook narration credits", monthly: 22, category: "AI" },
   { what: "Loops.so · transactional + marketing email", monthly: 49, category: "email" },
   { what: "Google Workspace · operator email", monthly: 6, category: "email" },
-  { what: "Azure Trusted Signing · code-signing for ORANGEBOX installer", monthly: 9.99, category: "trust" },
+  { what: "Azure Trusted Signing · code-signing for Orange³ installer", monthly: 9.99, category: "trust" },
   { what: "Stripe · payment processing (2.9% + 30¢ per txn)", monthly: 0, category: "payments", note: "variable per sale" },
   { what: "X / Twitter API · automation tier", monthly: 100, category: "social" },
   { what: "GitHub · Pro account", monthly: 4, category: "code" },
@@ -41,10 +41,10 @@ const COSTS = [
 ];
 
 const REVENUE_RULES = [
-  "ORANGEBOX Version 1 sells for $99 perpetual. License §4A bars subscription conversion.",
-  "B00KMAKR Mac + Windows sells for $99 dynamic price tier (free during launch week).",
+  "Orange³ is free always. License §4A bars any future subscription conversion.",
+  "AI Bookmaker Mac + Windows is free always.",
   "skil.ski marketplace takes 0% rake during launch year; future rake transparent and capped.",
-  "I AM AI Kindle ebook $4.99 · Audible audiobook ~$14.95 (when ACX review finishes) · numbered hardcover $39.",
+  "I AM AI free PDF + free audiobook on /i-am-ai · numbered hardcover $39.",
   "All other content (256 routes on atomeons.com) is free, CC-BY 4.0, no signup wall, no email gate.",
   "Zero ad revenue. Zero affiliate links. Zero sponsorship payments. Zero data resale.",
   "Zero VC investment. Founder-funded from operator's prior consulting work + product revenue.",
@@ -134,7 +134,7 @@ export default function TransparencyPage() {
               the audit trail. If the recurring cost of the lab moves up or down,
               this page moves with it. The line items are individually verifiable
               against the providers' billing portals. If a buyer wants to know
-              exactly how their $99 pays for hosting, this is the page.
+              exactly how free products are funded, this is the page.
             </p>
             <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
               Operator-funded · founder-bootstrapped · zero equity sold

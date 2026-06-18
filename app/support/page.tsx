@@ -3,30 +3,30 @@ import Link from "next/link";
 import { LabHero } from "../_components/v2/LabHero";
 
 /**
- * /support — buyer-facing support hub.
+ * /support — user-facing support hub.
  *
- * Single landing page for everything a buyer hits after the Stripe
- * charge clears: install help, license recovery, refund triage,
+ * Single landing page for everything a user hits after the free download:
+ * install help, license recovery, install support claims,
  * security disclosure, source-related questions. Pre-empts inbound
- * by surfacing answers operators usually have to email for.
+ * by surfacing answers users usually have to email for.
  */
 
 export const metadata: Metadata = {
-  title: "Support — buyer help · AtomEons",
+  title: "Support — user help · AtomEons",
   description:
-    "ORANGEBOX buyer support. Lost your download link, MFG refund claim, license recovery, install troubleshooting, source-related questions. ~2-hour reply SLA in ET waking hours. a.mccree@gmail.com.",
+    "Orange³ support. Lost your download link, install support guarantee claim, license recovery, install troubleshooting, source-related questions. ~2-hour reply SLA in ET waking hours. a.mccree@gmail.com.",
   alternates: { canonical: "https://atomeons.com/support" },
   openGraph: {
-    title: "Support — buyer help · AtomEons",
+    title: "Support — user help · AtomEons",
     description:
-      "Lost the link, refund claim, install help, source questions. One operator, ~2h reply, ET waking hours.",
+      "Lost the link, install support claim, install help, source questions. One operator, ~2h reply, ET waking hours.",
     url: "https://atomeons.com/support",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "AtomEons Support",
-    description: "ORANGEBOX buyer help · ~2h reply · a.mccree@gmail.com",
+    description: "Orange³ user help · ~2h reply · a.mccree@gmail.com",
   },
   robots: { index: true, follow: true },
 };
@@ -54,30 +54,30 @@ const CHANNELS: Channel[] = [
     tag: "::lost the download link",
     title: "Replace the download link",
     description:
-      "Inside the first 30 days of purchase, the lab will re-send your time-bound signed URL. Send the Stripe order ID (starts with `pi_…`) from the receipt email. After 30 days the link can still be reissued; just say so in the subject.",
+      "Inside the first 30 days after download, the lab will re-send your time-bound signed URL. Send the download confirmation email or the email address you used. After 30 days the link can still be reissued; just say so in the subject.",
     mailto:
-      "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20replace%20download%20link&body=Order%20ID%3A%20pi_%3F%3F%3F%0AEmail%20used%20at%20checkout%3A%20%3F%3F%3F",
+      "mailto:a.mccree@gmail.com?subject=Orange3%20replace%20download%20link&body=Email%20used%20at%20download%3A%20%3F%3F%3F",
     mailtoLabel: "Email replacement request →",
     accent: "#22F0D5",
   },
   {
     tag: "::it didn't install / didn't launch",
-    title: "Material Failure Guarantee refund",
+    title: "30-day install support guarantee",
     description:
-      "30-day full refund if ORANGEBOX fails to install or launch on a clean Windows 10/11 + Node 20+ machine. Send the order ID, the OS version, the Node version, and a 5-line repro (what command, what error). The lab confirms within 48h.",
+      "Orange³ and AI Bookmaker ship free always — there is nothing to refund. If the product fails to install or launch on a clean Windows 10/11 + Node 20+ machine within 30 days of download, the lab will work with you to resolve it or replace the bundle. Send your OS version, Node version, and a 5-line repro (what command, what error). The lab confirms within 48h.",
     mailto:
-      "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20MFG%20refund%20claim&body=Order%20ID%3A%20pi_%3F%3F%3F%0AOS%3A%20Win%2011%20%2F%20Win%2010%0ANode%3A%20v%3F%3F%0A%0AWhat%20I%20ran%3A%0A%0AError%20I%20saw%3A",
-    mailtoLabel: "File MFG claim →",
+      "mailto:a.mccree@gmail.com?subject=Orange3%20install%20support%20claim&body=OS%3A%20Win%2011%20%2F%20Win%2010%0ANode%3A%20v%3F%3F%0A%0AWhat%20I%20ran%3A%0A%0AError%20I%20saw%3A",
+    mailtoLabel: "File install support claim →",
     accent: "#22F0D5",
   },
   {
-    tag: "::workflow-fit doesn't work for me",
-    title: "Workflow-Fit Refund",
+    tag: "::workflow-fit feedback",
+    title: "Workflow-Fit Feedback",
     description:
-      "30-day full refund, no questions asked, if the product doesn't fit your workflow. No repro needed, no debate. Send the order ID and a single line of explanation if you want — or not.",
+      "The product is free — there is nothing to refund. But if Orange³ doesn't fit your workflow, the lab still wants to know. Send a single line of feedback if you want. No repro needed, no debate.",
     mailto:
-      "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20Workflow-Fit%20refund&body=Order%20ID%3A%20pi_%3F%3F%3F",
-    mailtoLabel: "File Workflow-Fit refund →",
+      "mailto:a.mccree@gmail.com?subject=Orange3%20workflow-fit%20feedback",
+    mailtoLabel: "Send workflow feedback →",
     accent: "#FFB87A",
   },
   {
@@ -86,17 +86,17 @@ const CHANNELS: Channel[] = [
     description:
       "Run through 1-INSTALL.txt and the QUICKSTART. If something stays stuck, email with: OS version, Node version, output of `node --version` and `pnpm --version` (or `npm --version`), and the exact error message. Don't paste API keys or .env contents.",
     mailto:
-      "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20install%20help&body=OS%3A%20%3F%3F%3F%0ANode%3A%20%3F%3F%3F%0A%0AStep%20I'm%20stuck%20on%3A%0AExact%20error%3A",
+      "mailto:a.mccree@gmail.com?subject=Orange3%20install%20help&body=OS%3A%20%3F%3F%3F%0ANode%3A%20%3F%3F%3F%0A%0AStep%20I'm%20stuck%20on%3A%0AExact%20error%3A",
     mailtoLabel: "Email install help →",
     accent: "#22F0D5",
   },
   {
     tag: "::license recovery",
-    title: "I lost my license / can't access /account",
+    title: "I lost my license / can't re-download",
     description:
-      "The Stripe Customer Portal at /account uses the email you bought with. If that email is no longer reachable, email the lab from the address you'd like to be the new contact, with the original Stripe order ID and any proof of purchase (PayPal confirm, bank statement line showing the $99 / $1 charge).",
+      "The download record uses the email you registered with. If that email is no longer reachable, email the lab from the address you'd like to be the new contact, with the original download confirmation email or any identifier from your original registration.",
     mailto:
-      "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20license%20recovery&body=Original%20order%20ID%3A%20pi_%3F%3F%3F%0AOriginal%20email%3A%20%3F%3F%3F%0ANew%20contact%20email%3A%20%3F%3F%3F",
+      "mailto:a.mccree@gmail.com?subject=Orange3%20license%20recovery&body=Original%20email%3A%20%3F%3F%3F%0ANew%20contact%20email%3A%20%3F%3F%3F",
     mailtoLabel: "Recover license →",
     accent: "#22F0D5",
   },
@@ -106,7 +106,7 @@ const CHANNELS: Channel[] = [
     description:
       "Source ships in the bundle. Inspect freely. Modify for personal or single-business use (no redistribution). For deeper questions about MCP tool wiring, n8n integration, model lane configuration, or the receipts pipeline, email — the operator answers source-level questions himself.",
     mailto:
-      "mailto:a.mccree@gmail.com?subject=ORANGEBOX%20source%20question",
+      "mailto:a.mccree@gmail.com?subject=Orange3%20source%20question",
     mailtoLabel: "Email source question →",
     accent: "#22F0D5",
   },
@@ -114,7 +114,7 @@ const CHANNELS: Channel[] = [
     tag: "::security disclosure",
     title: "Security disclosure (responsible)",
     description:
-      "If you find a security issue in ORANGEBOX, atomeons.com, or any of the lab's public surfaces, email PRIVATELY before disclosing publicly. The lab acknowledges within 48 hours, fixes critical-severity in under 14 days, and credits the reporter in the changelog unless you ask not to be. No bug bounty program (one operator), but real recognition.",
+      "If you find a security issue in Orange³, AI Bookmaker, atomeons.com, or any of the lab's public surfaces, email PRIVATELY before disclosing publicly. The lab acknowledges within 48 hours, fixes critical-severity in under 14 days, and credits the reporter in the changelog unless you ask not to be. No bug bounty program (one operator), but real recognition.",
     mailto:
       "mailto:a.mccree@gmail.com?subject=Security%20disclosure%20(private)&body=Surface%3A%20%3F%3F%3F%0AImpact%3A%20%3F%3F%3F%0AReproduction%3A",
     mailtoLabel: "Private disclosure →",
@@ -237,8 +237,8 @@ export default function SupportPage() {
               </p>
               <ul className="mt-4 space-y-3 text-sm leading-[1.6] text-[#C8CCCE]">
                 <li>
-                  <strong className="text-[#F2F4F5]">Stripe order ID</strong>{" "}
-                  (starts with <code className="font-mono text-[#22F0D5]">pi_…</code>) from your receipt email.
+                  <strong className="text-[#F2F4F5]">Download email address</strong>{" "}
+                  or download confirmation details from the email the lab sent.
                 </li>
                 <li>
                   <strong className="text-[#F2F4F5]">OS version</strong>{" "}
@@ -274,7 +274,7 @@ export default function SupportPage() {
                 </li>
                 <li>
                   <strong className="text-[#F2F4F5]">Credit card number.</strong>{" "}
-                  Stripe handles refunds; the lab never sees your card.
+                  The product is free — no payment was taken and the lab never sees card data.
                 </li>
                 <li>
                   <strong className="text-[#F2F4F5]">PHI / HIPAA-covered material.</strong>{" "}
@@ -302,7 +302,7 @@ export default function SupportPage() {
                 Refund policy →
               </p>
               <p className="mt-2 text-sm text-[#9BA5A7]">
-                MFG + Workflow-Fit · both 30 days · both full-refund
+                free always · 30-day install support guarantee
               </p>
             </Link>
             <Link
@@ -310,7 +310,7 @@ export default function SupportPage() {
               className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/40"
             >
               <p className="text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-                Terms of sale →
+                Terms of use →
               </p>
               <p className="mt-2 text-sm text-[#9BA5A7]">
                 §4A no-saas lock · license grant · operator
@@ -325,7 +325,7 @@ export default function SupportPage() {
                 FAQ →
               </p>
               <p className="mt-2 text-sm text-[#9BA5A7]">
-                AI 101 + ORANGEBOX-specific questions answered
+                AI 101 + Orange³-specific questions answered
               </p>
             </Link>
             <Link
@@ -336,7 +336,7 @@ export default function SupportPage() {
                 /account →
               </p>
               <p className="mt-2 text-sm text-[#9BA5A7]">
-                Stripe Customer Portal · update billing / cards / opt-ins
+                account &amp; download management
               </p>
             </Link>
             <Link
@@ -358,7 +358,7 @@ export default function SupportPage() {
                 /orangebox →
               </p>
               <p className="mt-2 text-sm text-[#9BA5A7]">
-                product page · v6.3 · AE See-Suite + AE Ops
+                Orange³ product page · free download
               </p>
             </Link>
           </div>

@@ -11,13 +11,13 @@ import { ProductJsonLd } from "../_components/schema/ProductJsonLd";
  * Built from the canonical spec:
  *   C:\AtomEons\orangebox\finals\WEB_PROJECT_FINAL_PACKAGE_2026-05-30.md
  *
- * Single product. $99 perpetual. Free preview week (v1.0.0-beta from
+ * Single product. FREE ALWAYS perpetual. Free download (v1.0.0-beta from
  * GitHub Release). No subscription, no email capture, no third-party
  * tracking. Warm ember palette mirroring the in-app cockpit
  * (NOT cool tech blue like the rest of the site).
  *
  * Section structure follows §7 IA verbatim:
- *   Hero · Compression Kicker · Problem · What Orangebox Is · Pillars ·
+ *   Hero · Compression Kicker · Problem · What Orange³ Is · Pillars ·
  *   Cockpit · Under the Hood · Privacy · Pricing · Buyers · Use Cases ·
  *   System Requirements · Not in the Box · Roadmap · FAQ · Final CTA · Footer
  *
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   description:
     "Orange³ is the sovereign agentic operating system. Local-first. Zero-telemetry. Recursive. Logic, Execution, Perception balanced in a sovereign loop. 10-80× context compression. Persistent memory. Reusable skill primers. Tamper-evident receipts. 14-department routing. BYO key, zero markup. FREE ALWAYS · §4A no-saas. Formerly Orangebox. Made by the team that uses Claude the most.",
   keywords: [
-    "Orangebox",
+    "Orange³",
     "Claude optimization",
     "Claude memory",
     "Claude context compression",
@@ -154,7 +154,7 @@ const TRUST_BADGES = [
 // under the hero. the features are buried under marketing.'
 //
 // Five columns · 6-8 bullets each · scannable in 30 seconds. Buyer
-// reads this and knows exactly what Orangebox does without scrolling
+// reads this and knows exactly what Orange³ does without scrolling
 // past hand-crafted prose.
 const FEATURE_COLUMNS = [
   {
@@ -215,10 +215,10 @@ const FEATURE_COLUMNS = [
     bullets: [
       "Zero telemetry · zero analytics · zero phone-home (verifiable)",
       "Local data root at %USERPROFILE%\\OrangeBox-Data\\",
-      "API keys live on your machine · Orangebox sees none of them",
+      "API keys live on your machine · Orange³ sees none of them",
       "Zero markup on token cost · you pay your provider directly",
       "§4A no-SaaS covenant binds the lab to never go subscription",
-      "30-day Material Failure Guarantee · full refund · no gauntlet",
+      "30-day install support guarantee · no gauntlet",
       "Self-Authenticode + Sectigo timestamp · SHA-256 published",
       "Source included in the install · audit, fork, self-build",
     ],
@@ -268,23 +268,23 @@ const USE_CASES = [
 const FAQ = [
   {
     q: "Do I need to know how to code?",
-    a: "Orangebox is a developer's cockpit. If you don't already write or read code at least casually, this is not the product for you. If you do, even a little, Orangebox amplifies you.",
+    a: "Orange³ is a developer's cockpit. If you don't already write or read code at least casually, this is not the product for you. If you do, even a little, Orange³ amplifies you.",
   },
   {
-    q: "Does Orangebox include AI model API keys?",
-    a: "No. Orangebox is BYOK — Bring Your Own Keys. You supply keys for Anthropic, OpenAI, Google, OpenRouter, or any other provider you want to use. The keys live on your machine and only authenticate calls to the provider you set them for.",
+    q: "Does Orange³ include AI model API keys?",
+    a: "No. Orange³ is BYOK — Bring Your Own Keys. You supply keys for Anthropic, OpenAI, Google, OpenRouter, or any other provider you want to use. The keys live on your machine and only authenticate calls to the provider you set them for.",
   },
   {
     q: "What if I don't have any API keys yet?",
-    a: "Orangebox also routes to local models via Ollama, which is free and runs entirely offline. You can use Orangebox without any cloud AI provider at all. Or you can sign up for a free Anthropic, OpenAI, or Google API account — most have generous free tiers.",
+    a: "Orange³ also routes to local models via Ollama, which is free and runs entirely offline. You can use Orange³ without any cloud AI provider at all. Or you can sign up for a free Anthropic, OpenAI, or Google API account — most have generous free tiers.",
   },
   {
-    q: "Will Orangebox work on Mac or Linux?",
+    q: "Will Orange³ work on Mac or Linux?",
     a: "Not in v1.0.0. Mac and Linux installers are on the roadmap if there's demand.",
   },
   {
-    q: "Does Orangebox phone home?",
-    a: "No. Read PRIVACY.md in the install. No telemetry, no analytics, no crash reports. The only network traffic Orangebox generates is the AI provider calls you initiate yourself.",
+    q: "Does Orange³ phone home?",
+    a: "No. Read PRIVACY.md in the install. No telemetry, no analytics, no crash reports. The only network traffic Orange³ generates is the AI provider calls you initiate yourself.",
   },
   {
     q: "How do updates work?",
@@ -300,23 +300,23 @@ const FAQ = [
   },
   {
     q: "Is there a refund policy?",
-    a: "Yes. If Orangebox doesn't work on your supported system within 14 days of purchase, we'll issue a full refund. Email support@atomeons.com.",
+    a: "Yes. If Orange³ doesn't work on your supported system within 14 days of download, we'll provide install support and a Material Failure replacement. Email support@atomeons.com.",
   },
   {
     q: "Will my purchase still work if AtomEons goes away?",
     a: "Yes. Orange³ is free always under the §4A no-SaaS covenant. The application runs entirely on your local machine. There is no online activation, no license-server check, no kill-switch.",
   },
   {
-    q: "What models does Orangebox support?",
-    a: "Anthropic Claude (3.5+ Sonnet, Haiku, Opus), OpenAI GPT (4o, 4-Turbo, 5 when available), Google Gemini (1.5 Pro, 2.5 Pro), local Ollama models (Llama 3.1, Mistral, Qwen, etc.), OpenRouter (100+ models). New providers add via the connector registry without a new Orangebox release.",
+    q: "What models does Orange³ support?",
+    a: "Anthropic Claude (3.5+ Sonnet, Haiku, Opus), OpenAI GPT (4o, 4-Turbo, 5 when available), Google Gemini (1.5 Pro, 2.5 Pro), local Ollama models (Llama 3.1, Mistral, Qwen, etc.), OpenRouter (100+ models). New providers add via the connector registry without a new Orange³ release.",
   },
   {
-    q: "How is Orangebox different from Cursor / Copilot / Claude Code?",
+    q: "How is Orange³ different from Cursor / Copilot / Claude Code?",
     a: "Cursor and Copilot are SaaS — your code uploads to their servers and you pay monthly forever. Claude Code is subscription-locked. Orange³ is local-first (your code stays on your disk), tuned for Claude with optional fallback to other providers via BYO key, and free always. License §4A legally bans switching to subscription.",
   },
   {
     q: "Is the source code available?",
-    a: "The source for Orangebox v1.0.0 is private to AtomEons. The installer is provenance-attested via Sigstore + GitHub Artifact Attestations — you can cryptographically verify it came from our official build pipeline. Open-source roadmap is not committed at this time.",
+    a: "The source for Orange³ v1.0.0 is private to AtomEons. The installer is provenance-attested via Sigstore + GitHub Artifact Attestations — you can cryptographically verify it came from our official build pipeline. Open-source roadmap is not committed at this time.",
   },
   {
     q: "How do I report a bug?",
@@ -562,7 +562,7 @@ export default function OrangeboxPage() {
             >
               <Image
                 src={ASSETS.logo}
-                alt="Orangebox cockpit logo"
+                alt="Orange³ cockpit logo"
                 fill
                 className="object-contain p-4"
                 unoptimized
@@ -686,7 +686,7 @@ export default function OrangeboxPage() {
         </h2>
         <p className="mt-6 max-w-3xl text-[17px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
           Claude itself has no memory between sessions. Open a new chat
-          tomorrow and yesterday is gone. Orangebox is the layer that
+          tomorrow and yesterday is gone. Orange³ is the layer that
           makes Claude remember — for one operator, on one machine,
           forever, with the receipts on disk.
         </p>
@@ -749,7 +749,7 @@ export default function OrangeboxPage() {
             },
             {
               head: "Built-in orangebox-primer",
-              body: "A first-class skill that teaches a brand-new Claude session how Orangebox works in under thirty seconds. Same skill, any session, any vendor. No re-onboarding penalty when Claude rate-limits and you swap to GPT or Gemini.",
+              body: "A first-class skill that teaches a brand-new Claude session how Orange³ works in under thirty seconds. Same skill, any session, any vendor. No re-onboarding penalty when Claude rate-limits and you swap to GPT or Gemini.",
             },
           ].map((c) => (
             <div key={c.head} className="rounded-2xl border p-7" style={{ borderColor: EMBER.border, background: EMBER.elevated }}>
@@ -964,7 +964,7 @@ export default function OrangeboxPage() {
           Claude rate-limits? Swap providers without losing the route.
         </h2>
         <p className="mt-5 max-w-3xl text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
-          Orangebox is tuned for Claude — every primer, every receipt
+          Orange³ is tuned for Claude — every primer, every receipt
           schema, every compression curve is calibrated against the
           Anthropic model line. But when Claude rate-limits or you want
           a second opinion, the router falls through to other providers
@@ -994,7 +994,7 @@ export default function OrangeboxPage() {
             <span style={{ color: EMBER.accent }}>With itself.</span>
           </h2>
           <p className="mt-8 max-w-2xl text-lg leading-[1.55]" style={{ color: EMBER.textSoft }}>
-            Orangebox is the cockpit that compressed two years of solo-founder
+            Orange³ is the cockpit that compressed two years of solo-founder
             work into eleven weeks. You&apos;re getting the same cockpit.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-[1.6]" style={{ color: EMBER.textMuted }}>
@@ -1086,7 +1086,7 @@ export default function OrangeboxPage() {
             },
             {
               h: "Skill Primers",
-              body: "Reusable workflows under skills/. Built-in orangebox-primer teaches new AI sessions to operate inside Orangebox in <30s. Operator-writable, survives upgrades.",
+              body: "Reusable workflows under skills/. Built-in orangebox-primer teaches new AI sessions to operate inside Orange³ in <30s. Operator-writable, survives upgrades.",
             },
           ].map((c) => (
             <div key={c.h} className="rounded-2xl border p-6" style={{ borderColor: EMBER.border, background: EMBER.panel }}>
@@ -1334,9 +1334,9 @@ export default function OrangeboxPage() {
 
         {/* ROI line */}
         <div className="mt-10 max-w-3xl text-[16px] leading-[1.7]" style={{ color: EMBER.textSoft }}>
-          <p>One avoided bad ship pays for Orangebox.</p>
-          <p>One avoided rework cycle pays for Orangebox.</p>
-          <p>One recovered &quot;what did we decide three weeks ago&quot; moment pays for Orangebox.</p>
+          <p>One avoided bad ship · Orange³ already earned it.</p>
+          <p>One avoided rework cycle · Orange³ already earned it.</p>
+          <p>One recovered &quot;what did we decide three weeks ago&quot; moment · Orange³ already earned it.</p>
           <p className="mt-2" style={{ color: EMBER.textPrimary }}>After that, every receipt is pure margin.</p>
         </div>
       </section>
@@ -1425,7 +1425,7 @@ export default function OrangeboxPage() {
             Honesty card.
           </h2>
           <ul className="mt-5 space-y-2 text-[15px] leading-[1.65]" style={{ color: EMBER.textSoft }}>
-            <li>○ No API keys included — Orangebox ships zero credentials. You bring your own (BYOK).</li>
+            <li>○ No API keys included — Orange³ ships zero credentials. You bring your own (BYOK).</li>
             <li>○ No Mac or Linux build in v1.0.0 — Windows only for the beta. Roadmap if there&apos;s demand.</li>
             <li>○ No mobile app — desktop cockpit only.</li>
             <li>○ No vendor support for individual AI providers — bugs in Claude/GPT/Gemini go to those providers.</li>

@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Privacy Policy · AtomEons",
   description:
-    "AtomEons privacy policy. Zero telemetry from the ORANGEBOX cockpit. Stripe-only checkout data. Loops / Resend for the download email. No selling of contact data. Local-first by construction.",
+    "AtomEons privacy policy. Zero telemetry from the Orange³ cockpit. Download registration data only. Loops / Resend for the download email. No selling of contact data. Local-first by construction.",
   alternates: { canonical: "https://atomeons.com/legal/privacy" },
 };
 
@@ -48,7 +48,7 @@ export default function Privacy() {
               <strong className="text-[#F2F4F5]">No third-party trackers.</strong>{" "}
               We do not run Google Analytics, Facebook Pixel, Twitter
               Pixel beyond the explicit X Ads conversion pixel for the
-              ORANGEBOX purchase event, TikTok Pixel, or any
+              Orange³ download event, TikTok Pixel, or any
               cross-site advertising network.
             </li>
             <li>
@@ -65,12 +65,11 @@ export default function Privacy() {
             2. What checkout collects
           </h2>
           <p className="mt-3">
-            Stripe Checkout collects from every ORANGEBOX buyer: name,
-            email, billing address, phone number, machine OS (Win 10 /
-            Win 11 / other), and a marketing opt-in (yes/no). Stripe
-            does not share your card number with us. We see only the
-            order ID, the email, the postal address, the phone number,
-            the OS dropdown answer, and the opt-in flag.
+            The free download registration collects from every Orange³
+            and AI Bookmaker user: email, machine OS (Win 10 / Win 11 /
+            other), and a marketing opt-in (yes/no). No payment data is
+            collected. We see only the email, the OS answer, and the
+            opt-in flag.
           </p>
         </div>
 
@@ -80,7 +79,7 @@ export default function Privacy() {
           </h2>
           <p className="mt-3">
             <strong className="text-[#F2F4F5]">Nothing.</strong> The
-            ORANGEBOX cockpit runs entirely on your machine. It does
+            Orange³ cockpit runs entirely on your machine. It does
             not phone home. It does not report telemetry. It does not
             transmit your prompts, your project state, your receipts,
             or your generated outputs to AtomEons. The lab cannot see
@@ -212,7 +211,7 @@ export default function Privacy() {
             9. Children
           </h2>
           <p className="mt-3">
-            ORANGEBOX is sold for use by adults. The lab does not
+            Orange³ ships for use by adults. The lab does not
             knowingly collect personal information from anyone under 13.
             If you learn a minor has provided personal information,
             email the lab and the record will be deleted.

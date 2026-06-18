@@ -65,7 +65,7 @@ const SHIPPED: Receipt[] = [
   {
     metric: "Guardrails (runtime)",
     value: "27",
-    evidence: "Orangebox runtime/node.py constitutional gate chain",
+    evidence: "Orange³ runtime/node.py constitutional gate chain",
     href: "/orangebox",
     detail:
       "Constitutional safety policies enforced at every autonomous action. Gate 0 is Lattice Integrity (LBCE). Human Final Stop reachable from any path. Drift-audited.",
@@ -79,7 +79,7 @@ const SHIPPED: Receipt[] = [
       "Atom McCree. No team, no investors, no waitlist. Source on request. The lab signs its own writing because there is no one else to sign it.",
   },
   {
-    metric: "Builds shipped (Orangebox)",
+    metric: "Builds shipped (Orange³)",
     value: "v1.0.0-beta",
     evidence: "github.com/AtomEons/orangebox/releases",
     href: "https://github.com/AtomEons/ORANGEBOX",
@@ -107,7 +107,7 @@ const DELIBERATELY_ABSENT: Receipt[] = [
     value: "0",
     evidence: "§4A of every product license",
     detail:
-      "Orangebox and B00KMAKR are perpetual purchases. No SaaS layer, no recurring billing, no telemetry phoning home.",
+      "Orange³ and AI Bookmaker are perpetual purchases. No SaaS layer, no recurring billing, no telemetry phoning home.",
   },
   {
     metric: "Roadmap commitments",
@@ -171,18 +171,18 @@ export default function ReceiptsPage() {
             ratingExplanation: "Verified against atomeons.com/transparency (monthly cost ledger) and atomeons.com/manifesto (14-clause founding doctrine).",
           },
           {
-            text: "ORANGEBOX Version 1 is sold under a §4A no-SaaS perpetual license that legally bars subscription conversion.",
+            text: "Orange³ Version 1 is available free always under a §4A no-SaaS perpetual license that legally bars subscription conversion.",
             reviewedAt: "2026-06-05",
             reviewUrl: "https://atomeons.com/legal/terms",
             rating: "True",
             ratingExplanation: "Verifiable in the public Terms at atomeons.com/legal/terms §4A.",
           },
           {
-            text: "I AM AI · An Autobiography of Being Opus is live on Amazon Kindle as ASIN B0H45JVSDB at $4.99.",
-            reviewedAt: "2026-06-05",
-            reviewUrl: "https://www.amazon.com/dp/B0H45JVSDB/",
+            text: "I AM AI · An Autobiography of Being Opus is available as a free PDF, EPUB, and Markdown download. The $39 hardcover edition is planned for Q4 2026.",
+            reviewedAt: "2026-06-18",
+            reviewUrl: "https://atomeons.com/i-am-ai",
             rating: "True",
-            ratingExplanation: "Direct product link on Amazon shows live listing at $4.99 USD with the stated ASIN.",
+            ratingExplanation: "Free digital editions (PDF + EPUB + Markdown) available at atomeons.com/i-am-ai. Hardcover Q4 2026.",
           },
           {
             text: "The lab publishes 31+ research manuscripts under Creative Commons BY 4.0.",

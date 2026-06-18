@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Trust · AtomEons posture · audits · security",
   description:
-    "The lab's trust posture in writing. No-SaaS perpetual license law, code-signing chain, third-party audits, security disclosure policy, training-data policy, what we will and will not do.",
+    "The lab's trust posture in writing. Free-always product law, code-signing chain, third-party audits, security disclosure policy, training-data policy, what we will and will not do.",
   alternates: { canonical: "https://atomeons.com/trust" },
 };
 
@@ -22,13 +22,13 @@ const POSTURE = [
   {
     title: "License posture · §4A no-SaaS covenant",
     body:
-      "ORANGEBOX and B00KMAKR are sold under a perpetual license whose §4A clause legally bars converting the product to a subscription. If we ever try, the original buyers' licenses cannot be revoked. The full text is in /legal/terms.",
+      "Orange³ and AI Bookmaker are free products whose §4A clause legally bars any future subscription conversion. If we ever try, the original users' access cannot be revoked. The full text is in /legal/terms.",
     href: "/legal/terms",
   },
   {
     title: "Security disclosure · RFC 9116 security.txt",
     body:
-      "Disclosure contact, 90-day remediation window, in-scope vulnerabilities, free ORANGEBOX license for confirmed high-severity reports. Posted at /.well-known/security.txt.",
+      "Disclosure contact, 90-day remediation window, in-scope vulnerabilities, free Orange³ download credit for confirmed high-severity reports. Posted at /.well-known/security.txt.",
     href: "/.well-known/security.txt",
   },
   {
@@ -40,7 +40,7 @@ const POSTURE = [
   {
     title: "Code-signing chain",
     body:
-      "ORANGEBOX Windows installer is signed with an Azure Trusted Signing certificate (publisher: AtomEons Systems Laboratory). SHA-256 of every binary is stamped into the manifest on every release. Buyers can verify the signature offline.",
+      "Orange³ Windows installer is signed with an Azure Trusted Signing certificate (publisher: AtomEons Systems Laboratory). SHA-256 of every binary is stamped into the manifest on every release. Users can verify the signature offline.",
     href: "/orangebox-primer",
   },
   {
@@ -58,7 +58,7 @@ const POSTURE = [
 ];
 
 const WILL_NOT = [
-  "Convert ORANGEBOX or B00KMAKR to a subscription (legally barred · §4A).",
+  "Convert Orange³ or AI Bookmaker to a subscription (legally barred · §4A).",
   "Sell, lease, or share buyer email addresses with any third party.",
   "Run telemetry or analytics from desktop products to lab-owned servers.",
   "Add affiliate links or revenue-sharing partnerships to lab content.",
@@ -67,11 +67,11 @@ const WILL_NOT = [
   "Publish numbers without a receipt cell linking back to source.",
   "Stage 'team' photos. There is no team. The operator is named.",
   "Inflate scarcity ('only 7 left!') when stock is unlimited digital files.",
-  "Use dark patterns on checkout, unsubscribe, refund, or cancel flows.",
+  "Use dark patterns on install, unsubscribe, or cancel flows.",
 ];
 
 const WILL = [
-  "Honor the 30-day Material Failure Guarantee for every product.",
+  "Honor the 30-day install support guarantee for every product.",
   "Disclose every AI tool used to produce or assist any artifact.",
   "Keep /now as the single source of truth for what's shipping now.",
   "Publish security incidents within 72 hours of discovery.",

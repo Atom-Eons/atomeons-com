@@ -2,16 +2,16 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "FAQ — AI 101 + ORANGEBOX v6.3 — what is AI, which tool to use, how the cockpit works, what the license actually says",
+    "FAQ — AI 101 + Orange³ v6.3 — what is AI, which tool to use, how the cockpit works, what the license actually says",
   description:
-    "Every question answered honestly. The novice AI section (what AI is, which tool to pick first, what to do tonight, what AI cannot do, how to write a good prompt) lives above the ORANGEBOX product Q&A (v6.3 AE See-Suite + AE Operations, $99 once forever, license §4A bans subscription switch, 30-day Material Failure Guarantee, local-first, zero telemetry, source included). FAQPage structured data is exposed so AI search engines can quote any answer directly. CC-BY 4.0.",
+    "Every question answered honestly. The novice AI section (what AI is, which tool to pick first, what to do tonight, what AI cannot do, how to write a good prompt) lives above the Orange³ product Q&A (v6.3 AE See-Suite + AE Operations, free always, license §4A bans subscription switch, 30-day install support guarantee, local-first, zero telemetry, source included). FAQPage structured data is exposed so AI search engines can quote any answer directly. CC-BY 4.0.",
   keywords: [
     "AI FAQ",
-    "ORANGEBOX FAQ",
+    "Orange³ FAQ",
     "what is AI",
     "AI for beginners",
     "Claude vs ChatGPT vs Gemini",
-    "ORANGEBOX v6.3",
+    "Orange³ v6.3",
     "AE See-Suite",
     "AE Operations",
     "AI cockpit",
@@ -22,17 +22,17 @@ export const metadata = {
   ],
   alternates: { canonical: "https://atomeons.com/faq" },
   openGraph: {
-    title: "AI 101 + ORANGEBOX FAQ — AtomEons",
+    title: "AI 101 + Orange³ FAQ — AtomEons",
     description:
-      "AI 101 + ORANGEBOX v6.3. $99 once · §4A no-saas lock · 30-day MFG · local-first. Every answer formatted as JSON-LD for AI search engine citation.",
+      "AI 101 + Orange³ v6.3. Free always · §4A no-saas lock · 30-day install support guarantee · local-first. Every answer formatted as JSON-LD for AI search engine citation.",
     type: "article",
     url: "https://atomeons.com/faq",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI 101 + ORANGEBOX FAQ — AtomEons",
+    title: "AI 101 + Orange³ FAQ — AtomEons",
     description:
-      "AI 101 + ORANGEBOX v6.3. $99 once · §4A bans subscription · local-first · 30-day MFG. FAQPage structured data live.",
+      "AI 101 + Orange³ v6.3. Free always · §4A bans subscription · local-first · 30-day install support guarantee. FAQPage structured data live.",
     creator: "@AtomMccree",
   },
   robots: { index: true, follow: true },
@@ -41,7 +41,7 @@ export const metadata = {
 type QA = { q: string; a: string };
 
 // ─── AI BASICS — novice section (operator directive 2026-05-21).
-// Lives ABOVE the ORANGEBOX questions so readers who don't know what
+// Lives ABOVE the Orange³ questions so readers who don't know what
 // AI is yet land here first. Pairs with the /start onboarding page.
 const FAQS: QA[] = [
   {
@@ -74,38 +74,38 @@ const FAQS: QA[] = [
   },
   {
     q: "What is AtomEons?",
-    a: "AtomEons is an independent AI research laboratory in Marco Island, FL. One operator (Atom McCree). Four pillars: USE AI (the ORANGEBOX cockpit), MAKE MONEY (skil.ski), KNOW THE TRUTH (/intel + The Founder's View), and RESEARCH (ÆoNs Research, 12 manuscripts + the Lessons From Sci-Fi monograph). The mission is to build the cockpit that gives a human the right authority over the right machine at the right moment, and to separate signal from theater for everyone else.",
+    a: "AtomEons is an independent AI research laboratory in Marco Island, FL. One operator (Atom McCree). Four pillars: USE AI (the Orange³ cockpit), MAKE MONEY (skil.ski), KNOW THE TRUTH (/intel + The Founder's View), and RESEARCH (ÆoNs Research, 12 manuscripts + the Lessons From Sci-Fi monograph). The mission is to build the cockpit that gives a human the right authority over the right machine at the right moment, and to separate signal from theater for everyone else.",
   },
   {
-    q: "Why is the cockpit called ORANGEBOX?",
-    a: "Because orange — the brand color — is the warning light in the cockpit that says 'pay attention.' Software that runs your life should make you pay attention to what it's doing, not what it's selling you. ORANGEBOX is the cockpit AtomEons uses to build everything else. v6.3 sells today for $99 once, forever, with License §4A legally banning subscription switch and two 30-day refund paths if it doesn't fit. The deeper answer is in /orangebox.",
+    q: "Why is the cockpit called Orange³?",
+    a: "Because orange — the brand color — is the warning light in the cockpit that says 'pay attention.' Software that runs your life should make you pay attention to what it's doing, not what it's selling you. Orange³ is the cockpit AtomEons uses to build everything else. v6.3 is free always, with License §4A legally banning subscription switch and a 30-day install support guarantee if it doesn't fit. The deeper answer is in /orangebox.",
   },
   {
-    q: "What is ORANGEBOX v6.3?",
-    a: "ORANGEBOX v1.0.0-beta is the turbo-optimization system for Claude on Windows 10/11. It gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident JSON receipts on every action, and a 14-department named-role routing system (AE0-AE14). Optional fallback to GPT, Gemini, Groq, Ollama, and OpenRouter via BYO key. FREE this launch week · perpetual after · License §4A legally bans subscription switch. 30-day Material Failure Guarantee.",
+    q: "What is Orange³ v6.3?",
+    a: "Orange³ v1.0.0-beta is the turbo-optimization system for Claude on Windows 10/11. It gives Claude persistent memory across sessions, 10-80× context compression (AtomSmasher Crystal Lattice), reusable skill primers, tamper-evident JSON receipts on every action, and a 14-department named-role routing system (AE0-AE14). Optional fallback to GPT, Gemini, Groq, Ollama, and OpenRouter via BYO key. Free always · License §4A legally bans subscription switch. 30-day Material Failure Guarantee.",
   },
   {
-    q: "How is the price really $99? Where's the catch?",
-    a: "Pricing posture: FREE this launch week (2026-05-30 → 2026-06-06). After the countdown, perpetual license · price set by the lab · may change at random going forward. No subscription, no ladder, no usage meter, no freemium gate. You buy it once, you own it, you keep the binary, you keep the source. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. If it doesn't fit your workflow within 30 days, the Material Failure Guarantee returns 100% with no fault-finding required. Free-week buyers are grandfathered for life by clause — even when the price changes for new buyers, your license stays.",
+    q: "Is Orange³ really free? Where's the catch?",
+    a: "Pricing posture: Free always. No countdown, no ladder, no usage meter, no freemium gate. You download it, you own it, you keep the binary, you keep the source. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing user keeps their license free in perpetuity. If it doesn't fit your workflow within 30 days, the Material Failure Guarantee is available — no fault-finding required.",
   },
   {
     q: "What's inside the v6.3 installer?",
     a: "The installer ships the AE See-Suite and AE Operations surfaces in one native binary for Windows 10/11 x64. Two install paths: Basic Install (cockpit alone) and AI Box (cockpit + curated Ollama-managed local-model bundle for offline operation). Inside: the full ÆoNs Skill Suite, 60+ MCP tools, mission-graph DAG runner, party-line status bus, receipts pipeline, demo project, operator manual, quickstart, and full source. AE0–AE14 department doctrine and 27 Constitutional Guardrails carried forward. SHA-256 hashes published on the product page.",
   },
   {
-    q: "Is ORANGEBOX a subscription?",
-    a: "No. $99 USD once, perpetual. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing buyer keeps their license free in perpetuity. The clause is enforceable, published in full at /legal/terms, and ships inside the binary as documentation. The 14-clause manifesto restates the same commitment at clause 04.",
+    q: "Is Orange³ a subscription?",
+    a: "No. Free always, perpetual. License §4A binds AtomEons: if we ever attempt to switch to subscription billing, every existing user keeps their license free in perpetuity. The clause is enforceable, published in full at /legal/terms, and ships inside the binary as documentation. The 14-clause manifesto restates the same commitment at clause 04.",
   },
   {
     q: "What's new in v6.3 versus v5 / v6.0?",
     a: "The v6 generation ditched the webview — the whole cockpit is native Rust + egui. No HTML chrome. No bundled chromium. v6.3 refactors the lane model from 11 independent lanes into two clean surfaces: AE See-Suite (command — receipts, dashboards, mission graphs, broadcast feed) and AE Operations (engine — MCP tools, agent routing, model selection). The 2026 stack carries forward Groq LPUs for sub-300ms quick_reply tasks, Ollama LOCAL_MODE for one-env-var air-gap operation, opt-in pre-classification, and Anthropic's Agent Teams advisory header on every synthesis call. The prior alpha (memory tool, files API, adaptive thinking, advisor tool, prompt-cache pre-warm, multi-breakpoint cache, structured outputs, compaction) is preserved.",
   },
   {
-    q: "Does ORANGEBOX work on macOS or Linux?",
+    q: "Does Orange³ work on macOS or Linux?",
     a: "Not yet. Windows 10/11 x64 only. macOS Apple Silicon and Linux x64 are on the v6.x roadmap — egui targets all three natively so the port is mechanical, not architectural. ARM64 Windows, Win 7/8, and Wine/CrossOver are not supported per the Material Failure Guarantee scope.",
   },
   {
-    q: "Do I need a Claude or GPT API key to use ORANGEBOX?",
+    q: "Do I need a Claude or GPT API key to use Orange³?",
     a: "The cockpit boots, the UI works, the project DAG, party-line, MCP tools, and receipts all function without any API key. The Command Surface (the route-work-to-a-frontier-model feature) requires at least one of: Claude API key, GPT API key, Gemini API key, Groq key, OpenRouter key, or a local Ollama host. Without any key, the routed lanes report DEGRADED honestly instead of fake green. The Privacy lane shows every provider charge in real time — the cockpit takes zero markup on tokens.",
   },
   {
@@ -118,10 +118,10 @@ const FAQS: QA[] = [
   },
   {
     q: "What if it doesn't install or doesn't fit my workflow?",
-    a: "Two refund paths, both 30 days. Material Failure Guarantee — full refund if ORANGEBOX fails to install or launch on a clean Windows 10/11 machine (License §8). Workflow-Fit Refund — full refund within 30 days if it doesn't fit your workflow, no questions (License §8A). Refunds via Stripe to original payment method within 5 business days.",
+    a: "Two support paths, both 30 days. Material Failure Guarantee — full support if Orange³ fails to install or launch on a clean Windows 10/11 machine (License §8). Workflow-Fit Refund — full refund within 30 days if it doesn't fit your workflow, no questions (License §8A). Refunds via Stripe to original payment method within 5 business days.",
   },
   {
-    q: "Is ORANGEBOX private? Does it phone home?",
+    q: "Is Orange³ private? Does it phone home?",
     a: "Zero telemetry. No analytics inside the cockpit. No phone-home. Your project state lives in %APPDATA%\\com.atomeons.orangebox.command\\ on your disk and never leaves. The Privacy lane shows every provider charge before and after it happens. Set ORANGEBOX_LOCAL_MODE=1 to disable all outbound. AtomEons cannot see your work even if AtomEons wanted to. License §13.",
   },
   {
@@ -129,19 +129,19 @@ const FAQS: QA[] = [
     a: "Yes. Full source tree alongside the native binary. Inspect freely. Modify for personal or single-business use. Redistribution is not permitted (LICENSE §3). Re-uploading the binary or source to a public mirror is not permitted. Forking for personal study is fine.",
   },
   {
-    q: "Why $99?",
-    a: "The pricing exists to fund one operator's ongoing maintenance, not to growth-hack an anchor. Free during the launch week to seed install reputation. Perpetual after — once, forever — at a price set by the lab. Specifically chosen NOT to be: a subscription (banned by §4A), a usage meter (no telemetry, no per-call billing), a freemium gate (no feature ransom), or venture-funded pricing (no investors to satisfy). The post-countdown price is set by the operator and may change at random going forward; free-week buyers are grandfathered for life by clause. See manifesto clause 04 for the full reasoning.",
+    q: "Why is Orange³ free?",
+    a: "Free always — not to growth-hack but because the product works best when it belongs entirely to the operator. Specifically chosen NOT to be: a subscription (banned by §4A), a usage meter (no telemetry, no per-call billing), a freemium gate (no feature ransom), or venture-funded pricing (no investors to satisfy). See manifesto clause 04 for the full reasoning.",
   },
   {
     q: "How does it compare to hiring a part-time PM, or to Notion + Linear + Slack?",
-    a: "Hiring a part-time PM at 10h/week and $100/h is ~$52,000/year — the doctrine leaves with the human. Notion + Linear + Slack + Loom + Cal stack is ~$2,400/year — surface theater, no mission graph, no receipt law. Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced is ~$3,120/year — chat with no project memory or department routing. Custom AI cockpit consulting build is $40K–$120K and 6–9 months. ORANGEBOX is FREE this launch week and perpetual after — one purchase includes the turbo-optimize layer for Claude (memory, compression, skill primers, receipts), the 14-department router, and the optional model fallback.",
+    a: "Hiring a part-time PM at 10h/week and $100/h is ~$52,000/year — the doctrine leaves with the human. Notion + Linear + Slack + Loom + Cal stack is ~$2,400/year — surface theater, no mission graph, no receipt law. Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced is ~$3,120/year — chat with no project memory or department routing. Custom AI cockpit consulting build is $40K–$120K and 6–9 months. Orange³ is free always — one install includes the turbo-optimize layer for Claude (memory, compression, skill primers, receipts), the 14-department router, and the optional model fallback.",
   },
   {
-    q: "Will it stop being relevant if I lock into ORANGEBOX?",
-    a: "No. ORANGEBOX is provider-agnostic by design. It speaks Claude, GPT, Gemini, Groq LPUs, Ollama (local), Hermes (𝕏 Feed lane), and OpenRouter (200+ models) through one routing layer. If your model preference changes, swap a key. The cockpit doesn't care. Same workflow, same receipts, different brain.",
+    q: "Will it stop being relevant if I lock into Orange³?",
+    a: "No. Orange³ is provider-agnostic by design. It speaks Claude, GPT, Gemini, Groq LPUs, Ollama (local), Hermes (𝕏 Feed lane), and OpenRouter (200+ models) through one routing layer. If your model preference changes, swap a key. The cockpit doesn't care. Same workflow, same receipts, different brain.",
   },
   {
-    q: "Does ORANGEBOX integrate with n8n?",
+    q: "Does Orange³ integrate with n8n?",
     a: "Yes. A complete n8n setup guide ships in the bundle. The cockpit can fire and receive n8n workflows, automation hooks, and external triggers.",
   },
   {
@@ -154,7 +154,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Where do I buy?",
-    a: "https://atomeons.com/orangebox — Stripe Checkout in live mode. Collects name, email, billing address, phone, birthdate, and a marketing opt-in. Download link appears on the success page after payment is confirmed. Bookmark it before you close the tab. Lost your link? Email a.mccree@gmail.com from the address you used at purchase.",
+    a: "There is nothing to buy. Orange³ and AI Bookmaker are free always. Download direct from the GitHub Release linked at https://atomeons.com/orangebox — no name, email, billing address, phone, or birthdate collected. Free PDF + EPUB + Markdown of I AM AI at https://atomeons.com/i-am-ai with the free 28-track audiobook streaming on the same page.",
   },
 ];
 
@@ -206,12 +206,12 @@ export default function FAQ() {
       </p>
 
       <h1 className="mt-6 text-balance text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-        ORANGEBOX <span className="text-[#22F0D5]">questions</span> answered.
+        Orange³ <span className="text-[#22F0D5]">questions</span> answered.
       </h1>
       <p className="mt-6 max-w-xl text-pretty text-base text-[#a7b8ad] md:text-lg">
-        Real answers about ORANGEBOX v1.0.0-beta (turbo-optimize Claude)
-        and B00KMAKR v3.2.0 (AI publishing cockpit). FREE this week ·
-        perpetual after · License §4A bans subscription · 30-day Material
+        Real answers about Orange³ v1.0.0-beta (turbo-optimize Claude)
+        and AI Bookmaker v3.2.0 (AI publishing cockpit). Free always ·
+        License §4A bans subscription · 30-day Material
         Failure Guarantee · local-first.
       </p>
 
@@ -238,7 +238,7 @@ export default function FAQ() {
           className="rounded-md border border-[#22F0D5] bg-[#22F0D5] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#ffc46b]"
           style={{ color: "#000", WebkitTextFillColor: "#000" }}
         >
-          See ORANGEBOX · FREE this week →
+          See Orange³ · Free always →
         </Link>
         <Link
           href="/research/papers"
@@ -254,7 +254,7 @@ export default function FAQ() {
           Tonight&apos;s letter
         </Link>
         <a
-          href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20question"
+          href="mailto:a.mccree@gmail.com?subject=Orange%C2%B3%20question"
           className="rounded-md border border-[#1F242B] bg-[#0F1114] px-4 py-2 text-sm text-[#f7f0e4]"
         >
           Email a question

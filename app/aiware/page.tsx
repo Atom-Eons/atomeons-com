@@ -14,12 +14,12 @@ import { AutoGlyph } from "../_components/V3/Illustrations";
 export const metadata: Metadata = {
   title: "AI Ware · the AtomEons product line",
   description:
-    "Three shipped products · all built solo · all open or §4A perpetual · all available now. ORANGEBOX v6 (4.46 MB native cockpit for Claude). B00KMAKR (AI publishing). skil.ski (skill registry · Verify v1). Compare. Pricing. Use cases.",
+    "Three shipped products · all built solo · all open or §4A perpetual · all available now. Orange³ v6 (4.46 MB native cockpit for Claude). AI Bookmaker (AI publishing). skil.ski (skill registry · Verify v1). Compare. Pricing. Use cases.",
   alternates: { canonical: "https://atomeons.com/aiware" },
   openGraph: {
     title: "AI Ware · AtomEons product line",
     description:
-      "Three shipped products built by one operator · ORANGEBOX · B00KMAKR · skil.ski.",
+      "Three shipped products built by one operator · Orange³ · AI Bookmaker · skil.ski.",
     url: "https://atomeons.com/aiware",
     type: "article",
   },
@@ -27,20 +27,20 @@ export const metadata: Metadata = {
 
 const PRODUCTS = [
   {
-    name: "ORANGEBOX v6",
+    name: "Orange³ v6",
     tagline: "Native cockpit for Claude · 4.46 MB · §4A no-SaaS perpetual",
     href: "/orangebox",
     body: "Local-first Windows desktop. Turbo-optimize Claude with 27 constitutional guardrails, 14-department named-role routing, tamper-evident JSON receipts. BYO API keys. Zero markup on tokens. Zero telemetry. Source included. License §4A legally bans the vendor from switching to subscription.",
     accent: "#FF9F3F",
-    bullets: ["$1 → $N price ladder · one-time", "30-day Material Failure Guarantee", "70-200× smaller than Cursor/Windsurf"],
+    bullets: ["Free always · §4A perpetual", "30-day Material Failure Guarantee", "70-200× smaller than Cursor/Windsurf"],
   },
   {
-    name: "B00KMAKR",
+    name: "AI Bookmaker",
     tagline: "AI publishing cockpit · the studio that shipped I AM AI",
     href: "/b00kmakor",
     body: "Mac + Windows desktop tool for AI-augmented book publishing. End-to-end · manuscript intake · editorial · cover · audiobook · KDP metadata · disclosure ledger. Used by the lab to publish I AM AI in 75 days from blank page to live on Kindle.",
     accent: "#22F0D5",
-    bullets: ["v3.2.0 · dynamic-world pricing", "Audiobook generation · Microsoft Neural", "Publication-ready KDP metadata"],
+    bullets: ["v3.2.0 · dynamic-world pricing", "Audiobook generation · synthetic Opus voice (Eleven Labs voice clone)", "Publication-ready KDP metadata"],
   },
   {
     name: "skil.ski",

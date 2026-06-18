@@ -352,13 +352,14 @@ export default function PricingTransparencyPage() {
           <pre className="mt-5 overflow-x-auto rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-5 font-mono text-[12px] leading-[1.6] text-[#22F0D5] md:text-[13px]">
 {`# default — detected from your IP
 curl https://atomeons.com/api/price/orangebox
+# → { "price": 0, "tier": "free_always", "source": "wave73_free_always_lock", ... }
 
-# explicit country (testing)
-curl https://atomeons.com/api/price/orangebox?cc=GB   # tier default · $99
-curl https://atomeons.com/api/price/orangebox?cc=US   # USA Advantage Clause · $9.90
-curl https://atomeons.com/api/price/orangebox?cc=CN   # Strategic Tier Lift · $99
-curl https://atomeons.com/api/price/orangebox?cc=IN   # tier default · $9.90
-curl https://atomeons.com/api/price/orangebox?cc=SO   # tier default · $1.98`}
+# every country returns the same answer now
+curl https://atomeons.com/api/price/orangebox?cc=GB   # free_always
+curl https://atomeons.com/api/price/orangebox?cc=US   # free_always
+curl https://atomeons.com/api/price/orangebox?cc=CN   # free_always
+curl https://atomeons.com/api/price/orangebox?cc=IN   # free_always
+curl https://atomeons.com/api/price/orangebox?cc=SO   # free_always`}
           </pre>
           <p className="mt-6 text-base leading-[1.65] text-[#C8CCCE]">
             The JSON response includes the resolved price, the

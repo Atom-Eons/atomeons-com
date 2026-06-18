@@ -74,12 +74,12 @@ export default async function Success({
             Payment verified · download ready
           </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight">
-            Welcome to ORANGEBOX.
+            Welcome to Orange³.
           </h1>
           <p className="mt-4 text-[#a7b8ad]">
-            Your purchase is confirmed. The download link below is signed and
-            valid for 30 days. Save the installer now — this page is the only
-            place the link appears.
+            Your download is ready. The link below is signed and valid for 30
+            days. Save the installer now — this page is the only place the link
+            appears.
           </p>
 
           <a
@@ -162,7 +162,7 @@ export default async function Success({
               >
                 atomeons.com/account
               </Link>{" "}
-              — secure Stripe billing portal, no password.
+              — secure profile portal, no password.
             </p>
           </div>
         </div>
@@ -203,7 +203,7 @@ export default async function Success({
             </p>
           ) : null}
           <a
-            href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20order%20issue"
+            href="mailto:a.mccree@gmail.com?subject=Orange3%20download%20issue"
             className="mt-6 inline-flex rounded-md border border-[#1F242B] bg-[#08090B] px-4 py-2 text-sm text-[#f7f0e4]"
           >
             Email a.mccree@gmail.com
@@ -221,13 +221,13 @@ export default async function Success({
           </h1>
           <p className="mt-4 text-[#a7b8ad]">
             You probably hit this URL directly. Start at the home page or
-            buy ORANGEBOX from the product page.
+            get Orange³ from the product page.
           </p>
           <Link
             href="/orangebox"
             className="mt-6 inline-flex rounded-md border border-[#22F0D5] bg-[#22F0D5] px-4 py-2 text-sm font-semibold text-[#08090B]"
           >
-            Buy ORANGEBOX · $1
+            Get Orange³ free →
           </Link>
         </div>
       ) : null}
@@ -236,7 +236,7 @@ export default async function Success({
         No support desk. The operator manual ships in the installer. Read it.
         Email{" "}
         <a
-          href="mailto:a.mccree@gmail.com?subject=ORANGEBOX%20order%20issue"
+          href="mailto:a.mccree@gmail.com?subject=Orange3%20download%20issue"
           className="text-[#22F0D5] hover:underline"
         >
           a.mccree@gmail.com

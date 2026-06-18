@@ -231,13 +231,13 @@ const SECTIONS: Section[] = [
   {
     key: "products",
     title: "Products · 20+ routes",
-    oneliner: "ORANGEBOX · B00KMAKR · skil.ski · I AM AI book. Each product has detail pages: changelog · roadmap · competitors.",
+    oneliner: "Orange³ · AI Bookmaker · skil.ski · I AM AI book. Each product has detail pages: changelog · roadmap · competitors.",
     hub: "/orangebox",
     groups: [
       {
-        heading: "ORANGEBOX",
+        heading: "Orange³",
         routes: [
-          { href: "/orangebox", label: "ORANGEBOX · v1.0.0" },
+          { href: "/orangebox", label: "Orange³ · v1.0.0" },
           { href: "/orangebox-primer", label: "Vendor security primer" },
           { href: "/orangebox/changelog", label: "Changelog" },
           { href: "/orangebox/roadmap", label: "Roadmap + anti-roadmap" },
@@ -246,9 +246,9 @@ const SECTIONS: Section[] = [
         ],
       },
       {
-        heading: "B00KMAKR",
+        heading: "AI Bookmaker",
         routes: [
-          { href: "/b00kmakor", label: "B00KMAKR · v3.2.0" },
+          { href: "/b00kmakor", label: "AI Bookmaker · v3.2.0" },
           { href: "/b00kmakor/changelog", label: "Changelog" },
           { href: "/b00kmakor/roadmap", label: "Roadmap" },
           { href: "/b00kmakor/competitors", label: "vs alternatives" },
