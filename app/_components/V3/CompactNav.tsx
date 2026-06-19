@@ -459,7 +459,7 @@ export function CompactNav() {
             >
               <span
                 aria-hidden
-                className="pointer-events-none absolute left-2 inline-flex"
+                className={`pointer-events-none absolute left-2 inline-flex ${searchFocused ? "ae-search-pulse" : ""}`}
                 style={{ color: searchFocused ? C.signal : C.mid, transition: "color 140ms" }}
               >
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
@@ -624,6 +624,24 @@ export function CompactNav() {
                       </Link>
                     </li>
                   ) : null}
+                  {/* Keyboard-shortcut hint footer · muscle-memory builder */}
+                  <li
+                    aria-hidden
+                    className="flex items-center justify-between border-t px-3 py-1.5"
+                    style={{
+                      borderTopColor: C.hair,
+                      color: C.mid,
+                      fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                      fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase",
+                    }}
+                  >
+                    <span>↑↓ navigate · enter select · esc close</span>
+                    {indexRef.current ? (
+                      <span style={{ opacity: 0.6 }}>
+                        {indexRef.current.count} pages
+                      </span>
+                    ) : null}
+                  </li>
                 </ul>
               ) : null}
             </form>
@@ -881,6 +899,11 @@ export function CompactNav() {
           from { opacity: 0; transform: translateY(-4px); }
           to   { opacity: 1; transform: translateY(0); }
         }
+        @keyframes ae-search-pulse {
+          0%, 100% { opacity: 0.9; transform: scale(1); }
+          50%      { opacity: 1;   transform: scale(1.06); }
+        }
+        .ae-search-pulse { animation: ae-search-pulse 1800ms ease-in-out infinite; }
         @keyframes ae-hint {
           from { opacity: 0; }
           to   { opacity: 0.9; }
