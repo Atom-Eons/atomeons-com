@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from "react";
 
 /**
  * ConstellationCanvas — interactive force-laid knowledge graph of the
- * lab's 278 routes and 648 cross-route links.
+ * lab's 317 routes and 942 cross-route links (Wave 118 count refresh
+ * from graph-index.json snapshot 2026-06-18; previously documented as
+ * 278/648 which was a stale build).
  *
  * Loads /graph-index.json on mount. Lays out nodes via a deterministic
  * radial seed (categories around the clock face, weight pulls nodes
@@ -12,7 +14,7 @@ import { useEffect, useRef, useState } from "react";
  * rounds to settle the cluster shape. Renders to a single Canvas2D
  * surface with pan + zoom + node hover + click-to-navigate.
  *
- * Performance budget: ~278 × 6 force-update operations per relaxation
+ * Performance budget: ~317 × 6 force-update operations per relaxation
  * round × ~150 rounds = ~250K ops on mount, then static unless the
  * user drags. ~12 KB minified.
  *
@@ -114,7 +116,7 @@ export function ConstellationCanvas() {
       return ns;
     }
 
-    // Lightweight force relaxation · O(N²) but N=278 so manageable
+    // Lightweight force relaxation · O(N²) but N=317 so manageable
     function relax(rounds: number) {
       const REPULSION = 380;
       const SPRING = 0.012;

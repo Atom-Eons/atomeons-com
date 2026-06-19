@@ -2,14 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ConstellationCanvas } from "../_components/V3/ConstellationCanvas";
 
+// Wave 118 · count drift correction. Pulled from /public/graph-index.json
+// at last verification (2026-06-18): 317 nodes · 942 edges. If the
+// build pipeline regenerates the graph index downstream, these strings
+// drift again — the doctrine fix would be a build-time import. For now
+// these match what the visualization actually renders.
 export const metadata: Metadata = {
   title: "Constellation · the lab as a graph · AtomEons",
   description:
-    "Every public route on atomeons.com rendered as an interactive force-laid graph. 278 nodes · 648 edges. Drag to pan, wheel to zoom, click any node to navigate.",
+    "Every public route on atomeons.com rendered as an interactive force-laid graph. 317 nodes · 942 edges. Drag to pan, wheel to zoom, click any node to navigate.",
   alternates: { canonical: "https://atomeons.com/constellation" },
   openGraph: {
     title: "Constellation · the lab as a graph",
-    description: "278 routes · 648 edges · interactive · click to navigate",
+    description: "317 routes · 942 edges · interactive · click to navigate",
     url: "https://atomeons.com/constellation",
     type: "website",
   },

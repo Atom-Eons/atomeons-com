@@ -34,6 +34,7 @@ import { MobileBottomBar } from "./_components/V3/MobileBottomBar";
 import { InstallChip } from "./_components/V3/InstallChip";
 import { ScrollProgress } from "./_components/V3/ScrollProgress";
 import { RevealOnScroll } from "./_components/V3/RevealOnScroll";
+import { ReadingTime } from "./_components/V3/ReadingTime";
 import { MarkdownAlternateLink } from "./_components/V3/MarkdownAlternateLink";
 import { CopyForLlm } from "./_components/V3/CopyForLlm";
 import { FirstTimeChip } from "./_components/V3/FirstTimeChip";
@@ -395,6 +396,8 @@ export default function RootLayout({
             .ae-reveal-{up,fade,scale} on the document + MutationObserver
             picks up late-arriving nodes (lazy lists, async data) */}
         <RevealOnScroll />
+        {/* Wave 118 · ReadingTime pill · auto-hides on pages < 600 words */}
+        <ReadingTime />
         <main id="main-content" className="flex-1 pt-20">
           {children}
         </main>
