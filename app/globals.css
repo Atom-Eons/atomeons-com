@@ -2410,6 +2410,20 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+  /* Wave 132 audit fix · reveal classes set opacity:0 by default
+     and rely on JS to flip data-revealed='true' for the transition.
+     Under prefers-reduced-motion the transition is suppressed but
+     the JS still needs to run or content stays invisible. Force
+     reveal-classes to be visible immediately when motion is reduced
+     so any JS failure / SSR screenshot / late hydration still shows
+     content. */
+  .ae-reveal-up,
+  .ae-reveal-fade,
+  .ae-reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* Wave 111 readability · canonical body type for long-form prose.

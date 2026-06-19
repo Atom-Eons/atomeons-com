@@ -70,13 +70,13 @@ const SURFACES: Surface[] = [
   {
     method: "GET",
     path: "/search-index.json",
-    purpose: "Static index of all 317 public routes with title, category, headings, keywords, body sample, weight.",
+    purpose: "Static index of all 319 public routes with title, category, headings, keywords, body sample, weight.",
     when: "Use for in-process fuzzy search, route discovery, or to build your own RAG over the corpus.",
   },
   {
     method: "GET",
     path: "/graph-index.json",
-    purpose: "Static graph of all 317 routes (nodes) and 942 internal links (edges).",
+    purpose: "Static graph of all 319 routes (nodes) and 943 internal links (edges).",
     when: "Use for IA analysis or building knowledge-graph views of the lab.",
   },
   {

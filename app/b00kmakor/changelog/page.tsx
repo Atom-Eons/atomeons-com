@@ -23,7 +23,7 @@ const RELEASES: Release[] = [
     status: "shipped",
     highlights: [
       "Mac + Windows native authoring instrument · concurrent ship",
-      "Dynamic pricing tiers ($99 default) · FREE during launch week",
+      "Dynamic pricing tiers ($99 default) · FREE during launch week — superseded 2026-06-12 by free-always rebrand (Wave 76); see /b00kmakor for current pricing",
       "Full manuscript → EPUB pipeline with validate_epub gate",
       "Audiobook generation via Microsoft Andrew Neural Voice + ElevenLabs (BYO key)",
       "Cover renderer (cream linen + red foil presets · paperback + hardcover dims)",

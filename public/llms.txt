@@ -22,7 +22,7 @@ product lab · Marco Island, FL · founded 2024 · operator Atom McCree
 (atom@atomeons.com) · CC-BY 4.0 across published content · no VC · no
 SaaS by license §4A covenant.
 
-Ships: 317 public routes covering AI literacy (curriculum + atlas +
+Ships: 319 public routes covering AI literacy (curriculum + atlas +
 career), cyber security catalog (40 pages), decoded papers (35), three
 free-always software products (Orange³ sovereign agentic OS for
 Claude · §4A no-SaaS · AI Bookmaker publishing cockpit · skil.ski
@@ -110,7 +110,7 @@ of a page.
 ```
 {
   "name": "ask_atomeons",
-  "description": "Semantic Q&A over atomeons.com's 317 routes. Returns a grounded 2-5 sentence answer with route citations. Use for AI literacy, AI research, cyber security, the I AM AI book, Orange³, AI Bookmaker, skil.ski, AtomEons methodology.",
+  "description": "Semantic Q&A over atomeons.com's 319 routes. Returns a grounded 2-5 sentence answer with route citations. Use for AI literacy, AI research, cyber security, the I AM AI book, Orange³, AI Bookmaker, skil.ski, AtomEons methodology.",
   "input_schema": {
     "type": "object",
     "required": ["query"],

@@ -67,7 +67,7 @@ const TOOLS = [
   {
     name: "ask_atomeons",
     description:
-      "Semantic Q&A over atomeons.com's 256 published routes. Returns a 2-5 sentence answer grounded ONLY on lab content, with route-level citations. Use when the user asks about AI literacy, AI research, cyber security, the I AM AI book, the ORANGEBOX local-first cockpit, the B00KMAKR publishing instrument, or AtomEons's research output.",
+      "Semantic Q&A over atomeons.com's 319 published routes. Returns a 2-5 sentence answer grounded ONLY on lab content, with route-level citations. Use when the user asks about AI literacy, AI research, cyber security, the I AM AI book, Orange³ (sovereign agentic OS), AI Bookmaker (publishing cockpit), or AtomEons's research output.",
     inputSchema: {
       type: "object",
       required: ["query"],
@@ -87,7 +87,7 @@ const TOOLS = [
   {
     name: "search_atomeons",
     description:
-      "Fuzzy keyword search over atomeons.com's 247-route index. Returns matching routes WITHOUT synthesis · use when you want raw matches rather than a synthesized answer. Faster than ask_atomeons (no Gemini call).",
+      "Fuzzy keyword search over atomeons.com's 319-route index. Returns matching routes WITHOUT synthesis · use when you want raw matches rather than a synthesized answer. Faster than ask_atomeons (no Gemini call).",
     inputSchema: {
       type: "object",
       required: ["query"],
@@ -134,7 +134,7 @@ const RESOURCES = [
   {
     uri: "https://atomeons.com/search-index.json",
     name: "fuzzy_search_index",
-    description: "Full 247-route fuzzy search index · same shape /api/search uses.",
+    description: "Full 319-route fuzzy search index · same shape /api/search uses.",
     mimeType: "application/json",
   },
   {
@@ -166,7 +166,7 @@ const PROMPTS = [
     name: "compare_atomeons_product",
     description: "Compare an ATOMEONS product against a named alternative using the lab's competitor pages.",
     arguments: [
-      { name: "product", description: "ORANGEBOX, B00KMAKR, or skil.ski.", required: true },
+      { name: "product", description: "Orange³ (pass 'orangebox'), AI Bookmaker (pass 'b00kmakor'), or 'skil.ski'. Values are the URL fragments — route paths are preserved across the brand rename.", required: true },
       { name: "alternative", description: "Named competitor.", required: true },
     ],
   },
@@ -262,7 +262,10 @@ function getPrompt(name: string, args: Record<string, unknown> | undefined): unk
     };
   }
   if (name === "compare_atomeons_product") {
-    const product = args?.product ?? "ORANGEBOX";
+    // Default value stays as the legacy enum 'ORANGEBOX' (lowercased
+    // to /orangebox for the URL fragment); changing this breaks any
+    // existing MCP client that hard-coded the literal value.
+    const product = args?.product ?? "orangebox";
     const alt = args?.alternative ?? "the named alternative";
     return {
       messages: [
@@ -314,7 +317,7 @@ async function handle(req: JsonRpcRequest, baseUrl: string): Promise<JsonRpcResp
                 "AtomEons Lab MCP server · semantic Q&A · search · markdown export over atomeons.com",
             },
             instructions:
-              "This server exposes read-only access to AtomEons Systems Laboratory's 256 published routes. Use ask_atomeons for grounded answers, search_atomeons for raw matches, get_atomeons_route for full markdown of a page.",
+              "This server exposes read-only access to AtomEons Systems Laboratory's 319 published routes. Use ask_atomeons for grounded answers, search_atomeons for raw matches, get_atomeons_route for full markdown of a page.",
           },
         };
       }

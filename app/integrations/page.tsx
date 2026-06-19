@@ -40,6 +40,7 @@ const INTEGRATIONS: Integration[] = [
   { name: "Anthropic Claude API", url: "https://www.anthropic.com/api", role: "Operator's daily build companion (Claude Code · Sonnet · Opus tiers) · Orange³ default LLM provider via BYO-key (user's key, not lab's)", data: "no buyer data", category: "AI" },
   { name: "Google Gemini API", url: "https://ai.google.dev", role: "/api/ask synthesis (gemini-2.5-flash) · /api/embed vectors (gemini-embedding-001 · 768-dim Matryoshka) · free tier", data: "no buyer data", category: "AI" },
   { name: "ElevenLabs", url: "https://elevenlabs.io", role: "Synthetic Opus voice clone for I AM AI audiobook (28 tracks · free at /i-am-ai) · Optional narration credits for AI Bookmaker audiobook pipeline · operator account · not user-facing", data: "operator data only", category: "AI" },
+  { name: "Microsoft Andrew Neural Voice", url: "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/", role: "Narration for the /i-am-ai/listen Chapter 20 free sample (17:26 audio · ACX-mastered output) · also a BYO option inside AI Bookmaker", data: "operator data only", category: "AI" },
 
   // Commerce
   { name: "Stripe", url: "https://stripe.com", role: "Payment processing for Orange³ · AI Bookmaker · skil.ski · Stripe Checkout-hosted flow (operator never sees card numbers)", data: "buyer data", category: "commerce" },
