@@ -33,7 +33,7 @@ export const maxDuration = 60; // seconds — Vercel Cron timeout
  * Set env var `LETTER_PROVIDER` to one of:
  *
  *   "anthropic"  (default) — uses ANTHROPIC_API_KEY +
- *                ANTHROPIC_FOUNDERS_VIEW_MODEL (default claude-sonnet-4-5)
+ *                ANTHROPIC_FOUNDERS_VIEW_MODEL (default claude-sonnet-4-6)
  *   "openai"              — uses OPENAI_API_KEY +
  *                OPENAI_FOUNDERS_VIEW_MODEL (default gpt-5)
  *
@@ -61,7 +61,7 @@ function getProvider(): LetterProvider {
 }
 
 const ANTHROPIC_MODEL =
-  process.env.ANTHROPIC_FOUNDERS_VIEW_MODEL ?? "claude-sonnet-4-5";
+  process.env.ANTHROPIC_FOUNDERS_VIEW_MODEL ?? "claude-sonnet-4-6";
 const OPENAI_MODEL =
   process.env.OPENAI_FOUNDERS_VIEW_MODEL ?? "gpt-5";
 
