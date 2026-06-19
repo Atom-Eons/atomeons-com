@@ -193,6 +193,10 @@ export function CompactNav() {
   }, []);
 
   const cycleTheme = useCallback(() => {
+    // Wave 107 · Android haptic on theme cycle (iOS Safari ignores)
+    if (typeof navigator !== "undefined" && "vibrate" in navigator) {
+      try { navigator.vibrate(6); } catch {}
+    }
     setTheme((prev) => {
       const next = THEMES[(THEMES.indexOf(prev) + 1) % THEMES.length];
       applyTheme(next);
@@ -201,6 +205,10 @@ export function CompactNav() {
   }, []);
 
   const toggleFx = useCallback(() => {
+    // Wave 107 · Android haptic on FX toggle (iOS Safari ignores)
+    if (typeof navigator !== "undefined" && "vibrate" in navigator) {
+      try { navigator.vibrate(6); } catch {}
+    }
     setFxOn((prev) => {
       const next = !prev;
       try { localStorage.setItem("aeFx", next ? "1" : "0"); } catch {}
@@ -371,6 +379,12 @@ export function CompactNav() {
         style={{
           background: C.ink,
           borderBottom: `1px solid ${C.hair}`,
+          // Wave 107 · safe-area-inset-top for iPhone notch / Android cutout.
+          // The fixed header otherwise sits behind the OS status bar on
+          // standalone PWA installs and on landscape iPhones.
+          paddingTop: "var(--ae-safe-top, 0px)",
+          paddingLeft: "var(--ae-safe-left, 0px)",
+          paddingRight: "var(--ae-safe-right, 0px)",
         }}
       >
         {/* ─── 48px nav row ────────────────────────────────────────── */}

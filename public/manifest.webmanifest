@@ -1,0 +1,61 @@
+{
+  "name": "AtomEons Systems Laboratory",
+  "short_name": "AtomEons",
+  "description": "Independent one-operator AI lab · Marco Island, FL · research, cockpits, the nightly broadcast",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#08090B",
+  "theme_color": "#08090B",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["education", "productivity", "books"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ask the lab",
+      "short_name": "Ask",
+      "description": "AI Q&A grounded in the lab's corpus",
+      "url": "/ask",
+      "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Founder's View",
+      "short_name": "Letters",
+      "description": "Nightly 8pm ET broadcast letters",
+      "url": "/founders-view",
+      "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "I Am AI",
+      "short_name": "Book",
+      "description": "Free PDF + free 28-track audiobook",
+      "url": "/i-am-ai",
+      "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Orange³",
+      "short_name": "Cockpit",
+      "description": "Sovereign agentic OS for Claude · free always",
+      "url": "/orangebox",
+      "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    }
+  ],
+  "prefer_related_applications": false
+}

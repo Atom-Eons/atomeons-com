@@ -30,6 +30,8 @@ import { SacredSvg } from "./_components/V3/SacredSvg";
 import { LivingCursor } from "./_components/V3/LivingCursor";
 import { TierToggle } from "./_components/V3/TierToggle";
 import { SearchInline } from "./_components/V3/SearchInline";
+import { MobileBottomBar } from "./_components/V3/MobileBottomBar";
+import { InstallChip } from "./_components/V3/InstallChip";
 import { MarkdownAlternateLink } from "./_components/V3/MarkdownAlternateLink";
 import { CopyForLlm } from "./_components/V3/CopyForLlm";
 import { FirstTimeChip } from "./_components/V3/FirstTimeChip";
@@ -55,12 +57,25 @@ import { MatrixRain } from "./_components/V3/MatrixRain";
  * `themeColor` sets the browser chrome / Android status-bar tint to
  *   the same `#08090B` warm-slate the site uses as its base.
  */
+/**
+ * Wave 107 mobile innovations · 2026-06-18
+ * - viewportFit: "cover" lets the page extend under iOS notches and
+ *   gesture handles; CompactNav / MobileBottomBar use env(safe-area-*).
+ * - themeColor pairs (dark + light) so Safari + Android Chrome paint
+ *   the OS chrome (status bar / app-switcher tile) to match whichever
+ *   theme the user has on. Light value matches the V2 white theme;
+ *   dark value matches the noir base.
+ */
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#08090B",
-  colorScheme: "dark",
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)",  color: "#08090B" },
+    { media: "(prefers-color-scheme: light)", color: "#F4F4F2" },
+  ],
+  colorScheme: "dark light",
 };
 
 export const metadata: Metadata = {
@@ -73,14 +88,22 @@ export const metadata: Metadata = {
     template: "%s | AtomEons",
   },
   description:
-    "AtomEons Systems Laboratory. Marco Island, Florida. Independent one-operator AI lab. Twelve research manuscripts under CC-BY 4.0. Two shipped products tonight: ORANGEBOX v1.0.0-beta (turbo-optimize Claude · local-first · §4A no-saas perpetual · FREE launch week) and B00KMAKR v3.2.0 (AI publishing cockpit · Mac + Windows · dynamic-world-pricing). Nightly Founder's View broadcast at 8pm ET. Decoded primary-source intel. The skil.ski skill registry. /ai — the comprehensive on-ramp for the 44 million workers facing generative AI displacement. /start — the 11-minute novice on-ramp. /manifesto — the 14-clause lab doctrine. Independent research and built tools, shipped from outside the cartel.",
+    "AtomEons Systems Laboratory · Marco Island, Florida · independent one-operator AI lab. Free always: Orange³ (sovereign agentic OS for Claude), AI Bookmaker (the publishing house in a box), I AM AI (the book, PDF + 28-track Eleven Labs audiobook). Thirty-one CC-BY 4.0 research manuscripts. The Founder's View nightly broadcast at 8pm ET. Independent research and built tools, shipped from outside the cartel.",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "AtomEons",
+    statusBarStyle: "black-translucent",
+  },
   keywords: [
     "AtomEons",
     "AtomEons Systems Laboratory",
     "Atom McCree",
     "independent AI lab",
     "one operator AI",
-    "ORANGEBOX",
+    "Orange³",
+    "AI Bookmaker",
+    "I AM AI",
     "ÆoNs Research",
     "Founder's View",
     "AI on-ramp",
@@ -89,7 +112,6 @@ export const metadata: Metadata = {
     "AI builders to follow",
     "make money with AI",
     "skil.ski",
-    "B00KMakor",
     "Lessons From Sci-Fi",
     "Marco Island AI lab",
     "CC-BY 4.0 research",
@@ -99,7 +121,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AtomEons — Independent AI Systems Laboratory.",
     description:
-      "Independent AI research + built tools. Twelve papers · the ORANGEBOX cockpit · nightly broadcast · alpha intel · /ai gateway · skil.ski. One operator, Marco Island, FL.",
+      "Independent AI research + built tools. Thirty-one papers · the Orange³ cockpit · AI Bookmaker · I AM AI book · nightly broadcast · /ai gateway · skil.ski. All free. One operator, Marco Island, FL.",
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
@@ -355,6 +377,9 @@ export default function RootLayout({
         <StickyBuyBar />
         <LabTicker />
         <AmbientSignature />
+        {/* Wave 107 · mobile innovations · lg:hidden inside both components */}
+        <MobileBottomBar />
+        <InstallChip />
         <Analytics />
         <SpeedInsights />
       </body>
