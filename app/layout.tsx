@@ -32,6 +32,7 @@ import { TierToggle } from "./_components/V3/TierToggle";
 import { SearchInline } from "./_components/V3/SearchInline";
 import { MobileBottomBar } from "./_components/V3/MobileBottomBar";
 import { InstallChip } from "./_components/V3/InstallChip";
+import { ScrollProgress } from "./_components/V3/ScrollProgress";
 import { MarkdownAlternateLink } from "./_components/V3/MarkdownAlternateLink";
 import { CopyForLlm } from "./_components/V3/CopyForLlm";
 import { FirstTimeChip } from "./_components/V3/FirstTimeChip";
@@ -387,6 +388,8 @@ export default function RootLayout({
           Skip to main content
         </a>
         <CompactNav />
+        {/* Wave 111 · scroll-progress hairline under the nav · "alive as you use it" */}
+        <ScrollProgress />
         <main id="main-content" className="flex-1 pt-20">
           {children}
         </main>

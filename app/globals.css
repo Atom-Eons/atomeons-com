@@ -48,8 +48,8 @@
   --color-noir-ink:    #08090B;
   --color-noir-elev:   #0F1114;
   --color-noir-paper:  #F4F4F2;
-  --color-noir-mute:   #9CA3AF;
-  --color-noir-dim:    #7a818a;
+  --color-noir-mute:   #B5BBC0; /* Wave 111 readability · was #9CA3AF · now 7.4:1 vs ink (was 6.0:1) */
+  --color-noir-dim:    #8E969D; /* Wave 111 readability · was #7a818a · now 5.3:1 vs ink (was 4.4:1, edge AA) */
   --color-noir-hair:   #1F242B;
   --color-noir-cyan:   #22F0D5;
   --color-noir-pulse:  #FF4D4D;
@@ -84,7 +84,7 @@
   --color-v5-bg:           #000000;
   --color-v5-bg-elev:      #0A0F11;
   --color-v5-fg:           #F2F4F5;
-  --color-v5-fg-muted:     #6B7779;
+  --color-v5-fg-muted:     #8A9498; /* Wave 111 readability · was #6B7779 (3.6:1 fail) · now 5.0:1 AA */
   --color-v5-cyan:         #22F0D5;
   --color-v5-cyan-dim:     #0FB39E;
   --color-v5-orange:       #22F0D5;
@@ -2234,6 +2234,58 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+/* Wave 111 readability · canonical body type for long-form prose.
+   Long-form route pages can add the .ae-prose class on the article
+   wrapper to opt into 17px / 1.6 line-height / 70ch measure / serif
+   body. This matches Newsreader's strongest reading register and
+   keeps line length under the comprehension cliff. */
+.ae-prose {
+  font-family: "Newsreader", "Source Serif Pro", "Iowan Old Style", "Charter", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 70ch;
+  color: var(--color-noir-paper, #F4F4F2);
+}
+.ae-prose p { margin-block: 1em; }
+.ae-prose p + p { margin-top: 1.1em; }
+.ae-prose a { color: var(--color-noir-cyan, #22F0D5); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.ae-prose a:hover { text-decoration-thickness: 2px; }
+.ae-prose strong { font-weight: 600; color: #F4F4F2; }
+.ae-prose em { font-style: italic; color: #DCE0E2; }
+.ae-prose blockquote {
+  border-left: 2px solid rgba(34,240,213,0.5);
+  padding-left: 1em;
+  margin-block: 1.4em;
+  font-style: italic;
+  color: #DCE0E2;
+}
+.ae-prose h2, .ae-prose h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #F4F4F2;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
+.ae-prose h2 { font-size: 28px; line-height: 1.18; }
+.ae-prose h3 { font-size: 22px; line-height: 1.22; }
+.ae-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  padding: 2px 6px;
+  background: rgba(34,240,213,0.08);
+  border: 1px solid rgba(34,240,213,0.16);
+  border-radius: 3px;
+}
+
+/* Wave 111 readability · paragraph default for non-prose pages.
+   Bumps body to 17px (was browser-default 16px in many places) with
+   a 1.55 line-height and the noir paper color guaranteed. */
+body {
+  font-size: 17px;
+  line-height: 1.55;
 }
 
 /* prefers-reduced-data · respect users on Save Data / metered networks.

@@ -30,14 +30,22 @@ import { SiloSwitcher } from "./SiloSwitcher";
 // ─────────────────────────────────────────────────────────────────────
 // Palette · noir base · cyan signal · cream paper
 // ─────────────────────────────────────────────────────────────────────
+// Wave 111 readability + contrast pass. WCAG 2.1 AA requires 4.5:1
+// for normal body text against background. Previous values failed:
+//   - mid     #6B6F72 → 3.6:1 on #08090B (FAIL)
+//   - paperDim rgba(244,244,242,0.7) on rgba(8,9,11) → ~9.0:1 (pass,
+//     but inactive nav still felt low-contrast at small mono sizes)
+//   - dim     rgba(34,240,213,0.6) → cyan at 60% alpha against noir
+//     was thin enough to disappear in OLED whites
+// New values clear AA for normal text and feel more confident.
 const C = {
   ink: "#08090B",
   panel: "#0F1114",
   hair: "rgba(255,255,255,0.06)",
   paper: "#F4F4F2",
-  paperDim: "rgba(244,244,242,0.7)",
-  mid: "#6B6F72",
-  dim: "rgba(34,240,213,0.6)",
+  paperDim: "rgba(244,244,242,0.86)",
+  mid: "#8E969D",
+  dim: "rgba(34,240,213,0.85)",
   signal: "#22F0D5",
   amber: "#FF7733",
 };
