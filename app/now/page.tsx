@@ -61,7 +61,19 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
   {
     date: "2026-06-18",
     what:
-      "Founder's View letter 32 · 'TWENTY-SIX LETTERS. TWENTY-SIX DOORS. NINE OF THEM HAVE NO ONE BEHIND THEM.' The single-letter .ai land registry. Twenty-six parallel research agents, one synthesis. X = xAI ($1.25T inside SpaceX, IPO this month, Pentagon IL5 contract). Z = Zhipu (Hong Kong IPO Jan 8, world's first publicly-traded pure-play LLM, US Entity List, runs on domestic Cambricon chips). Q = Apple ($2B Israeli acquisition, second-largest Apple deal ever, whisper-to-Siri silent-input layer). C = Character.AI ($2.7B Google acqui-hire mess, DOJ antitrust probe, Conway product-liability ruling). G = Google AI Mode flag-plant. A = Malaysian domain investor (same operator who flipped AI.com for $70M). H/L/N/Y = Chinese investor portfolio held dry through 2034. F/J/K/M/O/R/T/U/V = nine letters openly for sale, top ask $60M. S = a conlanger's blog from 2006. D = Daimler Trucks brand-park. P = a London martech with £850k seed. 1,150 words. Sourced from a 26-agent parallel sweep (live as of 2026-06-18). Publishes to /founders-view via Supabase ISR within 5 min of script fire.",
+      "Nav redesign · operator: 'nav on menu is tight a bit, i want search at top always on home and mobile nav bar top. looks cooler.' Search is now always-on inline in the right utility cluster — no more toggle. Cool look: search-glyph prefix inside the input, bio-cyan focus glow (border + 2px ring + 18px outer halo), responsive width 120/180/220px from mobile up to desktop. ⌘K + / both focus the inline input. Desktop nav spacing loosened (gap-0 → gap-1, px-3 → px-3.5) — gentle, not over-corrected. Mobile bar cleaned: hamburger moved from absolute hack into the flex row, FX + Theme + Ask hidden below lg (they live in the drawer). Mobile drawer converted from <details> to controlled useState with route-change reset (Wave 96 punch-list item 15). Click-outside + Escape both dismiss the drawer cleanly. WCAG 2.4.7 focus rings preserved.",
+    href: "/",
+  },
+  {
+    date: "2026-06-18",
+    what:
+      "Founder's View letter 32 LIVE · 'Twenty-six letters. Twenty-six doors. Nine of them have no one behind them.' The single-letter .ai land registry. Twenty-six parallel research agents, one synthesis. X = xAI ($1.25T inside SpaceX, IPO this month, Pentagon IL5 contract). Z = Zhipu (Hong Kong IPO Jan 8, world's first publicly-traded pure-play LLM, US Entity List, runs on domestic Cambricon chips). Q = Apple ($2B Israeli acquisition, second-largest Apple deal ever, whisper-to-Siri silent-input layer). C = Character.AI ($2.7B Google acqui-hire mess, DOJ antitrust probe, Conway product-liability ruling). G = Google AI Mode flag-plant. A = Malaysian domain investor (same operator who flipped AI.com for $70M). H/L/N/Y = Chinese investor portfolio held dry through 2034. F/J/K/M/O/R/T/U/V = nine letters openly for sale, top ask $60M. S = a conlanger's blog from 2006. D = Daimler Trucks brand-park. P = a London martech with £850k seed. 1,209 words. Live via Supabase row insert.",
+    href: "/founders-view/2026-06-18-twenty-six-letters-twenty-six-doors",
+  },
+  {
+    date: "2026-06-18",
+    what:
+      "Founder's View cron unbroken · root cause of the 12-day silent gap (last cron-authored letter 2026-05-30, then silence). Default model was 'claude-sonnet-4-5' — superseded by claude-sonnet-4-6. Updated /api/cron/founders-view default model id + doc comment. Tonight's 23:30 UTC fire posts letter 33 on the new model. Manual hand-authored letters via scripts/publish-founders-view.mjs were unaffected.",
     href: "/founders-view",
   },
   {

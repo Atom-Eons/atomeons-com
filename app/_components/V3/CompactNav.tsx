@@ -163,7 +163,8 @@ export function CompactNav() {
   const pathname = usePathname() || "/";
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [hint, setHint] = useState<string>(IDLE_HINT);
-  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState<Theme>("noir");
   const [fxOn, setFxOn] = useState(true);
   const closeTimer = useRef<number | null>(null);
@@ -229,34 +230,38 @@ export function CompactNav() {
   useEffect(() => {
     setOpenKey(null);
     setHint(IDLE_HINT);
-    setSearchOpen(false);
+    setMobileOpen(false);
   }, [pathname]);
 
-  // Escape closes
+  // Escape closes · ⌘K + / focus inline search (GitHub pattern)
   useEffect(() => {
     const k = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpenKey(null);
-        setSearchOpen(false);
+        setMobileOpen(false);
+        searchInputRef.current?.blur();
+        return;
       }
-      // ⌘K opens search
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+      const tag = (document.activeElement?.tagName ?? "").toUpperCase();
+      const inField = tag === "INPUT" || tag === "TEXTAREA" || (document.activeElement as HTMLElement)?.isContentEditable;
+      const cmdK = (e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k";
+      const slash = e.key === "/" && !inField;
+      if (cmdK || slash) {
         e.preventDefault();
-        setSearchOpen(true);
-        setTimeout(() => searchInputRef.current?.focus(), 30);
+        searchInputRef.current?.focus();
       }
     };
     document.addEventListener("keydown", k);
     return () => document.removeEventListener("keydown", k);
   }, []);
 
-  // Click outside closes popover
+  // Click outside closes popover + mobile drawer
   useEffect(() => {
     const c = (e: MouseEvent) => {
       if (!navRef.current) return;
       if (!navRef.current.contains(e.target as Node)) {
         setOpenKey(null);
-        setSearchOpen(false);
+        setMobileOpen(false);
       }
     };
     document.addEventListener("mousedown", c);
@@ -312,8 +317,8 @@ export function CompactNav() {
             >ATOMEONS</span>
           </Link>
 
-          {/* Primary nav · 5 items */}
-          <nav aria-label="Primary" className="hidden lg:flex items-stretch gap-0">
+          {/* Primary nav · 5 items · operator 2026-06-19: "tight a bit" → gap-1 + px-3.5 */}
+          <nav aria-label="Primary" className="hidden lg:flex items-stretch gap-1">
             {GROUPS.map((g) => {
               const active = isActive(pathname, g);
               const isOpenItem = openKey === g.key;
@@ -328,7 +333,7 @@ export function CompactNav() {
                   <Link
                     href={g.href}
                     aria-current={active ? "page" : undefined}
-                    className="relative inline-flex items-center px-3 py-2 outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
+                    className="relative inline-flex items-center px-3.5 py-2 outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
                     style={{
                       color: active || isOpenItem ? C.paper : C.paperDim,
                       fontFamily: "ui-monospace, SFMono-Regular, monospace",
@@ -360,60 +365,54 @@ export function CompactNav() {
             })}
           </nav>
 
-          {/* Right utility cluster · [Search] [FX] [Theme] [Ask] */}
+          {/* Right utility cluster · [Search inline-always] [FX] [Theme] [Ask] [Hamburger mobile] */}
           <div className="flex items-center gap-1.5">
-            {/* SEARCH · click expands inline input · ⌘K shortcut */}
-            <div className="relative flex items-center">
-              {searchOpen ? (
-                <form onSubmit={onSearchSubmit} className="flex items-center">
-                  <input
-                    ref={searchInputRef}
-                    value={searchQ}
-                    onChange={(e) => setSearchQ(e.target.value)}
-                    placeholder="search the lab · ⌘K"
-                    autoFocus
-                    aria-label="Search the lab"
-                    className="h-7 w-[min(260px,calc(100vw-160px))] rounded-sm border bg-transparent px-3 outline-none transition-colors"
-                    style={{
-                      borderColor: C.signal,
-                      color: C.paper,
-                      fontFamily: "ui-monospace, SFMono-Regular, monospace",
-                      fontSize: 12,
-                    }}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => { setSearchOpen(false); setSearchQ(""); }}
-                    aria-label="close search"
-                    className="ml-1 inline-flex h-7 w-7 items-center justify-center"
-                    style={{ color: C.mid }}
-                  >×</button>
-                </form>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => { setSearchOpen(true); setTimeout(() => searchInputRef.current?.focus(), 30); }}
-                  onMouseEnter={() => setHint("search the lab · 340+ pages · ⌘K from anywhere")}
-                  aria-label="open search"
-                  className="inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
-                  style={{ color: C.paper, opacity: 0.85 }}
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
-                    <circle cx="11" cy="11" r="7" />
-                    <path d="M20 20l-3-3" />
-                  </svg>
-                </button>
-              )}
-            </div>
+            {/* SEARCH · always-on inline input · operator 2026-06-19: "search at top always on home and mobile" */}
+            <form
+              onSubmit={onSearchSubmit}
+              onMouseEnter={() => setHint("search the lab · 340+ pages · ⌘K or /")}
+              role="search"
+              className="relative flex items-center"
+            >
+              <span
+                aria-hidden
+                className="pointer-events-none absolute left-2 inline-flex"
+                style={{ color: searchFocused ? C.signal : C.mid, transition: "color 140ms" }}
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M20 20l-3-3" />
+                </svg>
+              </span>
+              <input
+                ref={searchInputRef}
+                value={searchQ}
+                onChange={(e) => setSearchQ(e.target.value)}
+                onFocus={() => setSearchFocused(true)}
+                onBlur={() => setSearchFocused(false)}
+                placeholder="search · ⌘K"
+                aria-label="Search the lab"
+                className="h-7 w-[120px] sm:w-[180px] lg:w-[220px] rounded-sm border bg-transparent pl-7 pr-2 outline-none transition-all"
+                style={{
+                  borderColor: searchFocused ? C.signal : "rgba(255,255,255,0.08)",
+                  color: C.paper,
+                  fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                  fontSize: 12,
+                  boxShadow: searchFocused
+                    ? `0 0 0 2px ${C.signal}22, 0 0 18px ${C.signal}33`
+                    : "none",
+                }}
+              />
+            </form>
 
-            {/* FX MASTER · sine-wave glyph · breathes when on */}
+            {/* FX MASTER · sine-wave glyph · breathes when on · lg+ only */}
             <button
               type="button"
               onClick={toggleFx}
               onMouseEnter={() => setHint(fxOn ? "FX on · ambient effects live · click to disable" : "FX off · click to re-enable ambient effects")}
               aria-label={fxOn ? "Disable visual effects" : "Enable visual effects"}
               aria-pressed={fxOn}
-              className="inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
+              className="hidden lg:inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
               style={{
                 color: fxOn ? C.signal : "#3A3A3A",
                 filter: fxOn ? `drop-shadow(0 0 4px ${C.signal})` : "none",
@@ -428,13 +427,13 @@ export function CompactNav() {
               </svg>
             </button>
 
-            {/* THEME CYCLE · circle with sector fill */}
+            {/* THEME CYCLE · circle with sector fill · lg+ only */}
             <button
               type="button"
               onClick={cycleTheme}
               onMouseEnter={() => setHint(`theme: ${THEME_LABEL[theme]} · click to cycle (noir → white → warez)`)}
               aria-label={`Theme: ${THEME_LABEL[theme]} — click to cycle`}
-              className="inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
+              className="hidden lg:inline-flex h-9 w-9 items-center justify-center outline-none transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
               style={{ color: C.paper, opacity: 0.85 }}
             >
               <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden style={{ transform: "rotate(-90deg)" }}>
@@ -451,11 +450,11 @@ export function CompactNav() {
               </svg>
             </button>
 
-            {/* ASK THE LAB · primary CTA */}
+            {/* ASK THE LAB · primary CTA · lg+ only · drawer has its own copy */}
             <Link
               href="/ask"
               onMouseEnter={() => setHint("ask the lab · AI-powered answers from the corpus")}
-              className="ml-1 hidden md:inline-flex h-8 items-center gap-1.5 px-3 outline-none transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
+              className="ml-1 hidden lg:inline-flex h-8 items-center gap-1.5 px-3 outline-none transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
               style={{
                 background: C.signal,
                 color: C.ink,
@@ -466,6 +465,25 @@ export function CompactNav() {
               Ask the lab
               <span aria-hidden>→</span>
             </Link>
+
+            {/* HAMBURGER · mobile only · controlled drawer · no more absolute hack */}
+            <button
+              type="button"
+              onClick={() => setMobileOpen((o) => !o)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-nav-drawer"
+              className="lg:hidden inline-flex h-9 w-9 items-center justify-center outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22F0D5]"
+              style={{ color: C.paper }}
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+                {mobileOpen ? (
+                  <path d="M5 5l10 10M15 5l-10 10" />
+                ) : (
+                  <path d="M3 6h14M3 10h14M3 14h14" />
+                )}
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -559,19 +577,14 @@ export function CompactNav() {
           </div>
         ) : null}
 
-        {/* ─── Mobile · hamburger drawer ───────────────────────────── */}
-        <details className="lg:hidden">
-          <summary
-            className="absolute right-4 top-2 inline-flex h-8 w-8 cursor-pointer list-none items-center justify-center outline-none"
-            style={{ color: C.paper }}
-            aria-label="Open menu"
-          >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
-              <path d="M3 6h14M3 10h14M3 14h14" />
-            </svg>
-          </summary>
+        {/* ─── Mobile · controlled drawer · operator 2026-06-19 hamburger in flex row */}
+        {mobileOpen ? (
           <div
-            className="absolute left-0 right-0 top-12 z-30 max-h-[80vh] overflow-y-auto px-4 py-4"
+            id="mobile-nav-drawer"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site navigation"
+            className="absolute left-0 right-0 top-20 z-30 max-h-[80vh] overflow-y-auto px-4 py-4 lg:hidden"
             style={{ background: C.ink, borderBottom: `1px solid ${C.hair}` }}
           >
             {GROUPS.map((g) => (
@@ -615,7 +628,7 @@ export function CompactNav() {
               </Link>
             </div>
           </div>
-        </details>
+        ) : null}
       </header>
 
       {/* Inline keyframes · scoped to nav · no global CSS bloat */}
