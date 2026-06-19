@@ -2176,7 +2176,92 @@ body {
    sync with these values. */
 
 /* =============================================================================
- * END — globals.css V7 noir-cinema · mobile innovations Wave 107 · 2026-06-18
+ * Wave 109 supplemental polish · 2026-06-18 · while strategic review runs
+ * ============================================================================= */
+
+/* Skip-to-content link (paired with a#main-content in layout.tsx).
+   Sits off-screen until tab-focused; on focus it teleports to the
+   top-left corner so keyboard users can bypass the 56px nav chrome. */
+.ae-skip-link {
+  position: fixed;
+  top: -100px;
+  left: 8px;
+  z-index: 100;
+  padding: 12px 18px;
+  background: #22F0D5;
+  color: #08090B;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: top 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ae-skip-link:focus,
+.ae-skip-link:focus-visible {
+  top: 8px;
+  outline: 2px solid #08090B;
+  outline-offset: 2px;
+}
+
+/* Selection styling · text highlight uses bio-cyan instead of the
+   default browser blue. Tiny premium-feel touch. */
+::selection {
+  background: rgba(34, 240, 213, 0.32);
+  color: #F4F4F2;
+}
+::-moz-selection {
+  background: rgba(34, 240, 213, 0.32);
+  color: #F4F4F2;
+}
+
+/* Wave 109 synthesis #10 · ae-pop-inline globalized.
+   Mirrored from CompactNav's scoped style block so InstallChip and
+   other animations survive even after CompactNav unmounts during
+   route transitions. prefers-reduced-motion guard below silences it
+   for users with motion sensitivity. */
+@keyframes ae-pop-inline {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* prefers-reduced-data · respect users on Save Data / metered networks.
+   Drops the heavy backdrop-blur on the popover + dropdown + bottom bar.
+   Safari ignores this query for now but Chromium honors it. */
+@media (prefers-reduced-data: reduce) {
+  .ae-mobile-bottombar,
+  #nav-search-suggestions,
+  [data-component="sacred-canvas"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  [data-component="sacred-svg"],
+  [data-component="sacred-canvas"],
+  [data-component="living-cursor"] {
+    display: none !important;
+  }
+}
+
+/* Apple PWA splash screen meta-fallback · paired with manifest.webmanifest.
+   The manifest's icon (purpose: 'any') already serves the install-card
+   icon on Android. iOS Safari uses meta link tags in <head> for the
+   splash, which we declare via Next 16's appleWebApp metadata API in
+   layout.tsx — no extra CSS needed here. This comment marks the
+   coordination point for future maintenance. */
+
+/* =============================================================================
+ * END — globals.css V7 noir-cinema · Wave 107 mobile + Wave 109 a11y · 2026-06-18
  * Signature: ATOM-NOIR-2026-0602 · print-extension ATOM-PRINT-2026-0605
  *            mobile-innovations ATOM-MOBILE-2026-0618
  * Palette: #08090B / #0F1114 / #F4F4F2 / #9CA3AF / #7a818a / #1F242B /

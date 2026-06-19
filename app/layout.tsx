@@ -161,6 +161,13 @@ export default function RootLayout({
             device. Also applies html.lite-mode as a legacy alias when
             tier === lite. Honors prefers-reduced-motion as a hard
             floor → lite. */}
+        {/* Wave 109 synthesis #8 · prefetch the search index + graph index.
+            search-index.json (~140 KB) powers ⌘K / inline search / live
+            suggestions. graph-index.json (~80 KB) powers /constellation.
+            Both are static; prefetching at low priority shaves ~60-100ms
+            off first interaction without competing with critical CSS/JS. */}
+        <link rel="prefetch" href="/search-index.json" as="fetch" crossOrigin="anonymous" />
+        <link rel="prefetch" href="/graph-index.json" as="fetch" crossOrigin="anonymous" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var c=localStorage.getItem('atomeons.tier');var r=localStorage.getItem('atomeons.tier.resolved');var prm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var t='full';if(prm){t='lite';}else if(c==='lite'||c==='standard'||c==='full'){t=c;}else if(c==='auto'||c===null){t=(r==='lite'||r==='standard'||r==='full')?r:'lite';}var h=document.documentElement;h.classList.remove('tier-lite','tier-standard','tier-full');h.classList.add('tier-'+t);if(t==='lite'){h.classList.add('lite-mode');}}catch(e){}})();`,
@@ -369,10 +376,20 @@ export default function RootLayout({
             (palette is reachable via ⌘K from anywhere · the inline bar
             ate vertical space on every page).
             Net: ONE chrome strip · the MegaHeader · h-14 (56px). */}
+        {/* Wave 109 a11y · skip-to-content link · WCAG 2.4.1 Bypass Blocks.
+            Invisible until focused; first Tab on any page jumps the user
+            past the 56px chrome to the main content. Critical for
+            keyboard + screen-reader users. */}
+        <a
+          href="#main-content"
+          className="ae-skip-link"
+        >
+          Skip to main content
+        </a>
         <CompactNav />
-        <div className="flex-1 pt-20">
+        <main id="main-content" className="flex-1 pt-20">
           {children}
-        </div>
+        </main>
         <Footer />
         <StickyBuyBar />
         <LabTicker />

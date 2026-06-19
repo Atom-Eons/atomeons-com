@@ -25,12 +25,20 @@ import Link from "next/link";
 
 const HIDDEN_ROUTES = new Set([
   "/ask",
-  "/founders-view",
   "/login",
   "/signup",
 ]);
 
-const HIDDEN_PREFIXES = ["/api/", "/admin/", "/auth/"];
+// Wave 109 synthesis #10 · /founders-view INDEX shows the bar
+// (lets the bar surface "Share" on the broadcast landing); only the
+// individual letter pages (long-read) hide it. Same idea applies to
+// the long-form research detail pages.
+const HIDDEN_PREFIXES = [
+  "/api/",
+  "/admin/",
+  "/auth/",
+  "/founders-view/", // trailing slash hides /founders-view/2026-06-18-...
+];
 
 export function MobileBottomBar() {
   const pathname = usePathname() || "/";

@@ -884,13 +884,29 @@ export function CompactNav() {
               </div>
             ))}
             <div className="mt-3 flex items-center gap-2">
-              <button onClick={toggleFx} className="px-3 py-2 text-[12px] font-mono" style={{ color: fxOn ? C.signal : C.mid }}>
+              <button
+                onClick={toggleFx}
+                aria-label={fxOn ? "Disable visual effects" : "Enable visual effects"}
+                aria-pressed={fxOn}
+                className="px-3 py-2 text-[12px] font-mono"
+                style={{ color: fxOn ? C.signal : C.mid }}
+              >
                 FX {fxOn ? "ON" : "OFF"}
               </button>
-              <button onClick={cycleTheme} className="px-3 py-2 text-[12px] font-mono" style={{ color: C.paper }}>
+              <button
+                onClick={cycleTheme}
+                aria-label={`Theme: ${THEME_LABEL[theme]} — click to cycle`}
+                className="px-3 py-2 text-[12px] font-mono"
+                style={{ color: C.paper }}
+              >
                 {THEME_LABEL[theme]}
               </button>
-              <Link href="/ask" className="ml-auto inline-flex items-center gap-1.5 px-3 py-2 text-[12px] font-mono" style={{ background: C.signal, color: C.ink }}>
+              <Link
+                href="/ask"
+                aria-label="Ask the lab — AI-powered answers from the corpus"
+                className="ml-auto inline-flex items-center gap-1.5 px-3 py-2 text-[12px] font-mono"
+                style={{ background: C.signal, color: C.ink }}
+              >
                 Ask the lab →
               </Link>
             </div>
@@ -909,6 +925,9 @@ export function CompactNav() {
           from { opacity: 0; transform: translate(-50%, -4px); }
           to   { opacity: 1; transform: translate(-50%, 0); }
         }
+        /* Wave 110 · ae-pop-inline kept here AND mirrored into globals.css
+           so the InstallChip and other surfaces can use it even after
+           CompactNav unmounts. Both definitions intentional. */
         @keyframes ae-pop-inline {
           from { opacity: 0; transform: translateY(-4px); }
           to   { opacity: 1; transform: translateY(0); }
