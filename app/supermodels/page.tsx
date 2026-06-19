@@ -777,9 +777,19 @@ export default function SupermodelsPage() {
             one got wrong.
           </p>
 
-          <div className="mt-16 space-y-6">
-            {ENTRIES.map((e) => (
-              <EntryCard key={e.rank} e={e} />
+          {/* Wave 128 · ranking entries stagger-reveal on scroll-in */}
+          <div
+            className="ae-stagger mt-16 space-y-6"
+            style={{ ["--stagger-step" as string]: "90ms" }}
+          >
+            {ENTRIES.map((e, i) => (
+              <div
+                key={e.rank}
+                className="ae-reveal-up"
+                style={{ ["--stagger-index" as string]: i }}
+              >
+                <EntryCard e={e} />
+              </div>
             ))}
           </div>
         </div>
