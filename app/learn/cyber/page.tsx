@@ -277,7 +277,7 @@ export default function CyberIndex() {
   };
 
   return (
-    <main className="relative z-10 bg-black text-[#F2F4F5]">
+    <main data-ae-scanlines className="relative z-10 bg-black text-[#F2F4F5]">
       <CyberMontage />
       <CyberHeroImage slug="cyber-index" alt={"Cinematic press-photo of a dimly lit cybersecurity operations center seen from above, single bio-cyan glow against pure black."} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }} />

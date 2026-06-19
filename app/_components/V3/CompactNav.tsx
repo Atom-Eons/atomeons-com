@@ -429,7 +429,8 @@ export function CompactNav() {
       >
         {/* ─── 48px nav row ────────────────────────────────────────── */}
         <div className="mx-auto flex h-12 w-full max-w-[1480px] items-center justify-between gap-4 px-4 md:px-6">
-          {/* Brand */}
+          {/* Brand · Wave 117 · ATOMEONS wordmark uses the .ae-glitch-text
+              register on hover · the Æ monogram stays crisp for legibility */}
           <Link
             href="/"
             aria-label="AtomEons home"
@@ -445,11 +446,12 @@ export function CompactNav() {
             >Æ</span>
             <span
               aria-hidden
-              className="hidden sm:block"
+              data-glitch="ATOMEONS"
+              className="ae-glitch-text hidden sm:block"
               style={{
                 color: C.paper, fontFamily: "ui-monospace, SFMono-Regular, monospace",
                 fontSize: 12, lineHeight: 1, letterSpacing: "0.18em", textTransform: "uppercase",
-                opacity: 0.85,
+                opacity: 0.92,
               }}
             >ATOMEONS</span>
           </Link>
