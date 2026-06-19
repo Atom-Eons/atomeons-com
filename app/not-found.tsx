@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NotFoundSuggestions } from "./_components/V3/NotFoundSuggestions";
 
 export const metadata = {
   title: "Page not found · AtomEons",
@@ -126,6 +127,11 @@ export default function NotFound() {
           </div>
         </div>
       </section>
+
+      {/* Wave 121 · Smart 404 · typo-tolerant URL suggestions from the
+          search index · client component · degrades silently to the
+          6-destination grid below if anything fails. */}
+      <NotFoundSuggestions />
 
       <section
         aria-labelledby="routes-heading"
