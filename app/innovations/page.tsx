@@ -537,9 +537,19 @@ function Sect({
       <p className="mt-4 max-w-[72ch] text-[15px] leading-[1.65] text-[#9CA3AF]">
         {blurb}
       </p>
-      <div className="mt-8 grid gap-5 md:grid-cols-2">
-        {items.map((inv) => (
-          <Card key={inv.name} inv={inv} accent={accent} />
+      {/* Wave 125 · cards stagger-reveal on scroll-in via .ae-reveal-up */}
+      <div
+        className="ae-stagger mt-8 grid gap-5 md:grid-cols-2"
+        style={{ ["--stagger-step" as string]: "80ms" }}
+      >
+        {items.map((inv, i) => (
+          <div
+            key={inv.name}
+            className="ae-reveal-up"
+            style={{ ["--stagger-index" as string]: i }}
+          >
+            <Card inv={inv} accent={accent} />
+          </div>
         ))}
       </div>
     </section>

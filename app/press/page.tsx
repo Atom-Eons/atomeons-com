@@ -289,10 +289,18 @@ export default function PressPage() {
             Boilerplate, brand assets, founder bio, product photography, pre-written quotes, contact. Built like a modern EPK — pick what you need, copy or download, ship your piece.
           </p>
 
-          <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-5 border-t border-[#1F242B] pt-8 md:grid-cols-4">
-            {FACTS.map((f) => (
-              <div key={f.label}>
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{f.label}</p>
+          {/* Wave 125 · facts grid stagger-reveals on scroll-in */}
+          <div
+            className="ae-stagger mt-10 grid grid-cols-2 gap-x-8 gap-y-5 border-t border-[#1F242B] pt-8 md:grid-cols-4"
+            style={{ ["--stagger-step" as string]: "60ms" }}
+          >
+            {FACTS.map((f, i) => (
+              <div
+                key={f.label}
+                className="ae-reveal-up"
+                style={{ ["--stagger-index" as string]: i }}
+              >
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">{f.label}</p>
                 <p className="mt-1 text-[15px] text-[#F4F4F2]">{f.value}</p>
               </div>
             ))}
