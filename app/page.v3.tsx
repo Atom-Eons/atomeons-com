@@ -198,15 +198,46 @@ function HeroSection() {
           className="v3-hero-img object-cover"
           draggable={false}
         />
-        {/* Tonal scrim — keeps text legible at any viewport without */}
-        {/* dimming the photograph into a flat black field.          */}
+        {/* Wave 120 · cinematic 3-layer scrim (Visual Director Wave 109 #4).
+            Previously two flat gradients dimmed the photograph uniformly,
+            giving a "desaturated" feel rather than sculptural depth.
+            New stack:
+              L1 · vertical scrim — floor at top + base at bottom (legibility)
+              L2 · radial vignette — pulls dark to the four corners
+                   (lifts the center, gives the photograph a focal point)
+              L3 · upper-third bio-cyan highlight bloom — felt, not seen
+                   (mix-blend-mode: screen tints the highlights toward
+                   the brand accent without changing the photo's pose)
+            All layers pointer-events-none so they never interfere with
+            interactions. Reads as Stripe / Apple / Linear hero grading. */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#08090B]/55 via-[#08090B]/35 to-[#08090B]/85"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(8,9,11,0.62) 0%, rgba(8,9,11,0.25) 38%, rgba(8,9,11,0.50) 70%, rgba(8,9,11,0.92) 100%)",
+          }}
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#08090B]/70 via-transparent to-[#08090B]/40"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, transparent 28%, rgba(8,9,11,0.55) 78%, rgba(8,9,11,0.8) 100%)",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 90% 60% at 32% 22%, rgba(34,240,213,0.06) 0%, transparent 70%)",
+            mixBlendMode: "screen",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#08090B]/60 via-transparent to-[#08090B]/30"
         />
       </div>
 

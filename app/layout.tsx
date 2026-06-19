@@ -171,6 +171,35 @@ export default function RootLayout({
             off first interaction without competing with critical CSS/JS. */}
         <link rel="prefetch" href="/search-index.json" as="fetch" crossOrigin="anonymous" />
         <link rel="prefetch" href="/graph-index.json" as="fetch" crossOrigin="anonymous" />
+        {/* Wave 119 · Speculation Rules · Chrome (Chromium) prerenders
+            same-origin links on intent (pointerover or focus) so the
+            next page is ready instantly when the user clicks.
+            'moderate' eagerness = prerender on hover/focus, not just
+            on a deliberate click signal. The whole site feels like an
+            installed app from the visitor's first hover. Browsers
+            without Speculation Rules support ignore this gracefully
+            (Firefox, Safari for now). */}
+        <script
+          type="speculationrules"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              prerender: [
+                {
+                  source: "document",
+                  where: { and: [{ href_matches: "/*" }, { not: { href_matches: "/api/*" } }, { not: { href_matches: "/admin/*" } }, { not: { selector_matches: "[rel~=nofollow]" } }] },
+                  eagerness: "moderate",
+                },
+              ],
+              prefetch: [
+                {
+                  source: "document",
+                  where: { and: [{ href_matches: "/*" }, { not: { href_matches: "/api/*" } }] },
+                  eagerness: "conservative",
+                },
+              ],
+            }),
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var c=localStorage.getItem('atomeons.tier');var r=localStorage.getItem('atomeons.tier.resolved');var prm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var t='full';if(prm){t='lite';}else if(c==='lite'||c==='standard'||c==='full'){t=c;}else if(c==='auto'||c===null){t=(r==='lite'||r==='standard'||r==='full')?r:'lite';}var h=document.documentElement;h.classList.remove('tier-lite','tier-standard','tier-full');h.classList.add('tier-'+t);if(t==='lite'){h.classList.add('lite-mode');}}catch(e){}})();`,
