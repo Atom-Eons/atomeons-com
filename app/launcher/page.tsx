@@ -186,14 +186,65 @@ export default function LauncherPage() {
         </div>
       </header>
 
+      {/* Wave 133 · 2026-06-19 · operator: "9 SILOS UNDER THE NAV ON HOME,
+          THEN EXPLAIN UNDER THAT WAY PROS CAN FAST HIT THEIR SILO AND
+          OTHERS CAN SCROLL. SMARTEST INFORMATION TOP OF KEY, THEN UPON
+          SCROLL GO SIMPLE."
+
+          Order is now: silos (pros) → system tiles → smart product info
+          (LAUNCH DAY) → takeover → continue → philosophy. Each block
+          carries less technical density than the one above it. */}
+
+      {/* 9 silo tiles · 3 columns desktop · 2 tablet · 1 mobile · TOP OF KEY */}
+      <section className="mt-8" aria-label="9 silos · pick your world">
+        <h2 className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9CA3AF]">
+          § Silos · 9 worlds · click direct
+        </h2>
+        <div className="mt-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {SILOS.map((s) => (
+            <SiloTile key={s.key} silo={s} />
+          ))}
+        </div>
+      </section>
+
+      {/* System tiles · the OS lane · second-row for pros */}
+      <section className="mt-12" aria-label="System lane">
+        <h2 className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9CA3AF]">
+          § System · the OS lane
+        </h2>
+        <div className="mt-6 grid gap-3 grid-cols-2 md:grid-cols-4">
+          {SYSTEM_TILES.map((t) => (
+            <Link
+              key={t.href}
+              href={t.href}
+              className="block border border-[#1F242B] p-5 transition hover:border-[#9CA3AF]"
+            >
+              <p
+                className="font-mono text-[10px] uppercase tracking-[0.32em]"
+                style={{ color: t.accent }}
+              >
+                {t.name}
+              </p>
+              <p className="mt-3 text-[13px] leading-[1.55] text-[#9CA3AF]">
+                {t.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* ═══════════════════════════════════════════════════════════════
        * Wave 73 · LAUNCH DAY · 2026-06-12 · THREE PRODUCTS FREE
        * Operator: "main home to focus on these three top of page. sell
        * the fuck out of them. this is our biggest moment."
+       *
+       * Wave 133 reorder · this block now lives BELOW the silos. Pros
+       * jump straight into a silo · curious visitors scroll into the
+       * smart product story.
        * ═══════════════════════════════════════════════════════════════ */}
       <section
         aria-label="Launch Day · three free products"
-        className="mt-8 overflow-hidden border border-[#FF7733] bg-gradient-to-br from-[#1A1410] via-[#0F1114] to-[#08090B] p-8 md:p-10"
+        className="mt-16 overflow-hidden border border-[#FF7733] bg-gradient-to-br from-[#1A1410] via-[#0F1114] to-[#08090B] p-8 md:p-10"
       >
         <div className="flex flex-wrap items-baseline justify-between gap-4">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#FF7733]">
@@ -376,48 +427,10 @@ export default function LauncherPage() {
         </p>
       </section>
 
-      {/* Wave 51 · Continue card · resume where the visitor left off */}
+      {/* Wave 51 · Continue card · resume where the visitor left off · Wave 133 moved below LAUNCH+TAKEOVER */}
       <ContinueCard />
 
-      {/* 9 silo tiles · 3 columns desktop · 2 tablet · 1 mobile */}
-      <section className="mt-12">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9CA3AF]">
-          § Silos · 9 worlds
-        </h2>
-        <div className="mt-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {SILOS.map((s) => (
-            <SiloTile key={s.key} silo={s} />
-          ))}
-        </div>
-      </section>
-
-      {/* System tiles · the OS lane */}
-      <section className="mt-16">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9CA3AF]">
-          § System · the OS lane
-        </h2>
-        <div className="mt-6 grid gap-3 grid-cols-2 md:grid-cols-4">
-          {SYSTEM_TILES.map((t) => (
-            <Link
-              key={t.href}
-              href={t.href}
-              className="block border border-[#1F242B] p-5 transition hover:border-[#9CA3AF]"
-            >
-              <p
-                className="font-mono text-[10px] uppercase tracking-[0.32em]"
-                style={{ color: t.accent }}
-              >
-                {t.name}
-              </p>
-              <p className="mt-3 text-[13px] leading-[1.55] text-[#9CA3AF]">
-                {t.description}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* The metaphor · explained briefly */}
+      {/* The metaphor · explained briefly · simplest content lives at the bottom · Wave 133 */}
       <section className="mt-20 border-l-4 border-[#22F0D5] bg-[#0F1114] p-7">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#22F0D5]">
           § The launcher pattern
