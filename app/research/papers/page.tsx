@@ -154,12 +154,17 @@ export default function ResearchPapersPage() {
           Read in full.
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {summarized.map((p) => (
+        {/* Wave 126 · summarized cards stagger-reveal on scroll-in */}
+        <div
+          className="ae-stagger grid gap-6 md:grid-cols-2"
+          style={{ ["--stagger-step" as string]: "70ms" }}
+        >
+          {summarized.map((p, i) => (
             <Link
               key={p.slug}
               href={`/research/papers/${p.slug}`}
-              className="group flex flex-col rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/40"
+              className="ae-reveal-up group flex flex-col rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 transition-colors hover:border-[#22F0D5]/40"
+              style={{ ["--stagger-index" as string]: i }}
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                 {p.date} · {(p.bytes / 1024).toFixed(1)} KB · pdf
@@ -200,12 +205,16 @@ export default function ResearchPapersPage() {
           Read on Drive while we draft the lay summaries.
         </h2>
 
-        <div className="grid gap-3 md:grid-cols-2">
-          {indexed.map((p) => (
+        <div
+          className="ae-stagger grid gap-3 md:grid-cols-2"
+          style={{ ["--stagger-step" as string]: "50ms" }}
+        >
+          {indexed.map((p, i) => (
             <Link
               key={p.slug}
               href={`/research/papers/${p.slug}`}
-              className="group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/40"
+              className="ae-reveal-up group rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5 transition-colors hover:border-[#22F0D5]/40"
+              style={{ ["--stagger-index" as string]: i }}
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
                 {p.date} · {(p.bytes / 1024).toFixed(1)} KB
