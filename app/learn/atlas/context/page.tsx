@@ -312,7 +312,7 @@ const PAGE_DATA: ContentPage = {
       "href": "/tools/context-cost"
     },
     {
-      "label": "B00KMakor: long-document workflows",
+      "label": "AI Bookmaker: long-document workflows",
       "href": "/b00kmakor"
     }
   ]

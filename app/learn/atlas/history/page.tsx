@@ -393,11 +393,11 @@ const PAGE_DATA: ContentPage = {
       "href": "/tools"
     },
     {
-      "label": "OrangeBox",
+      "label": "Orange³",
       "href": "/orangebox"
     },
     {
-      "label": "B00KMakor",
+      "label": "AI Bookmaker",
       "href": "/b00kmakor"
     },
     {

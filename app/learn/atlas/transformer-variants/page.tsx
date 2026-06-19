@@ -411,11 +411,11 @@ const PAGE_DATA: ContentPage = {
       "href": "/vs"
     },
     {
-      "label": "OrangeBox runtime",
+      "label": "Orange³ runtime",
       "href": "/orangebox"
     },
     {
-      "label": "B00kMakor — long-form research mode",
+      "label": "AI Bookmaker — long-form research mode",
       "href": "/b00kmakor"
     },
     {

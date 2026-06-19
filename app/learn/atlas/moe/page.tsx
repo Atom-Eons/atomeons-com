@@ -408,7 +408,7 @@ const PAGE_DATA: ContentPage = {
       "href": "/vs/deepseek-v3-vs-mixtral-8x22b"
     },
     {
-      "label": "OrangeBox: running MoEs on local hardware",
+      "label": "Orange³: running MoEs on local hardware",
       "href": "/orangebox"
     }
   ]

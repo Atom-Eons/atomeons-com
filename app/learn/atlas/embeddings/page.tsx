@@ -419,7 +419,7 @@ const PAGE_DATA: ContentPage = {
       "href": "/learn/chunking"
     },
     {
-      "label": "OrangeBox: local RAG stack",
+      "label": "Orange³: local RAG stack",
       "href": "/orangebox"
     }
   ]
@@ -445,7 +445,7 @@ const BREADCRUMB = [
 
 export const metadata: Metadata = {
   title: "Embeddings · AtomEons /learn/atlas/embeddings",
-  description: "An embedding is a learned map from a piece of content — a word, a sentence, a paragraph, an image — into a fixed-length vector of real numbers. The geometry of that vector space carries meaning.",
+  description: "An embedding maps content — words, sentences, images — into a fixed-length vector. The geometry of that space carries meaning: semantic search, RAG, clustering.",
   alternates: { canonical: "https://atomeons.com/learn/atlas/embeddings" },
   openGraph: {
     title: "Embeddings",

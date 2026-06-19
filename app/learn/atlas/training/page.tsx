@@ -258,7 +258,7 @@ const PAGE_DATA: ContentPage = {
       "href": "/tools"
     },
     {
-      "label": "OrangeBox local-first AI build system",
+      "label": "Orange³ local-first AI build system",
       "href": "/orangebox"
     },
     {

@@ -90,7 +90,7 @@ const ATOMEONS_EXTENSIONS = [
   {
     n: "E1",
     title: "Receipts are the only honest answer to the algorithm",
-    body: "Every claim in the leaked code becomes auditable for the first time. The min-traction gate, the Author Diversity Decay, the 4 shadowban types — these are now provable, not speculative. ORANGEBOX's receipts doctrine applies the same logic to your own work: every action writes a timestamped JSON line with department, tool, tokens, cents, SHA-256 of inputs and outputs. The algorithm finally has its receipts; your work should too.",
+    body: "Every claim in the leaked code becomes auditable for the first time. The min-traction gate, the Author Diversity Decay, the 4 shadowban types — these are now provable, not speculative. Orange³'s receipts doctrine applies the same logic to your own work: every action writes a timestamped JSON line with department, tool, tokens, cents, SHA-256 of inputs and outputs. The algorithm finally has its receipts; your work should too.",
   },
   {
     n: "E2",
@@ -110,7 +110,7 @@ const ATOMEONS_EXTENSIONS = [
   {
     n: "E5",
     title: "The 4 shadowban types are mechanically distinct",
-    body: "Hard drop (Action::Drop via VFFilter — content-based labels). Soft (DO_NOT_AMPLIFY + the 14 MediumRisk labels — strip adjacent ads, structural downrank). Operational (BotMaker rule applies a safety label manually). Implicit (Phoenix author_hashes embed your account's negative history). Plus the structural one: failing the min-traction gate. ORANGEBOX's anti-saas posture survives all five because we ship CC-BY 4.0 + own-machine + no algorithm reliance.",
+    body: "Hard drop (Action::Drop via VFFilter — content-based labels). Soft (DO_NOT_AMPLIFY + the 14 MediumRisk labels — strip adjacent ads, structural downrank). Operational (BotMaker rule applies a safety label manually). Implicit (Phoenix author_hashes embed your account's negative history). Plus the structural one: failing the min-traction gate. Orange³'s anti-saas posture survives all five because we ship CC-BY 4.0 + own-machine + no algorithm reliance.",
   },
   {
     n: "E6",
@@ -659,7 +659,7 @@ export default function XAlgorithmIntel() {
               ::built through the cockpit
             </p>
             <p className="mt-3 text-base font-medium text-[#F2F4F5] group-hover:text-[#22F0D5]">
-              ORANGEBOX v6.3 · $99 once · §4A no-saas · receipts on every action →
+              Orange³ v6.3 · Free always · §4A no-saas · receipts on every action →
             </p>
           </Link>
         </div>

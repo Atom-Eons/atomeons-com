@@ -293,7 +293,7 @@ const PAGE_DATA: ContentPage = {
       "href": "/research/evaluation-harnesses"
     },
     {
-      "label": "OrangeBox: self-hosted LoRA and QLoRA serving stack",
+      "label": "Orange³: self-hosted LoRA and QLoRA serving stack",
       "href": "/orangebox"
     },
     {

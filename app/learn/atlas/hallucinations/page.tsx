@@ -294,11 +294,11 @@ const PAGE_DATA: ContentPage = {
       "href": "/learn/llm-basics"
     },
     {
-      "label": "B00KMakor — citation-grounded writing",
+      "label": "AI Bookmaker — citation-grounded writing",
       "href": "/b00kmakor"
     },
     {
-      "label": "OrangeBox — local verification stack",
+      "label": "Orange³ — local verification stack",
       "href": "/orangebox"
     },
     {

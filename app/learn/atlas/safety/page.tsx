@@ -297,7 +297,7 @@ const PAGE_DATA: ContentPage = {
       "href": "/atlas/evals"
     },
     {
-      "label": "B00KMakor — reading lists",
+      "label": "AI Bookmaker — reading lists",
       "href": "/b00kmakor"
     },
     {

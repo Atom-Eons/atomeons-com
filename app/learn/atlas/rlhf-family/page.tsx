@@ -370,11 +370,11 @@ const PAGE_DATA: ContentPage = {
       "href": "/tools"
     },
     {
-      "label": "OrangeBox · local AI development stack",
+      "label": "Orange³ · local AI development stack",
       "href": "/orangebox"
     },
     {
-      "label": "B00KMakor · turn papers into books",
+      "label": "AI Bookmaker · turn papers into books",
       "href": "/b00kmakor"
     }
   ]

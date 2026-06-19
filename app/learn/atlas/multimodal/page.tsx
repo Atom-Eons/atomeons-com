@@ -438,7 +438,7 @@ const PAGE_DATA: ContentPage = {
       "href": "/tools/multimodal"
     },
     {
-      "label": "OrangeBox · local AI rig setup",
+      "label": "Orange³ · local AI rig setup",
       "href": "/orangebox"
     }
   ]
