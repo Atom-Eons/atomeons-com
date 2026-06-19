@@ -389,7 +389,7 @@ function ThesisSection() {
       id="thesis"
       aria-labelledby="v3-thesis-heading"
       data-v3-section="02-thesis"
-      className="relative isolate border-y border-[#1F242B] bg-[#08090B] text-[#F4F4F2]"
+      className="ae-reveal-up relative isolate border-y border-[#1F242B] bg-[#08090B] text-[#F4F4F2]"
     >
       <div className="mx-auto w-full max-w-[1480px] px-6 py-28 md:px-10 md:py-36 lg:px-14 lg:py-44">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
@@ -542,7 +542,7 @@ function ThreeDoorsSection() {
       id="doors"
       aria-label="Three doors — Cyber, Learn, Build"
       data-v3-section="03-three-doors"
-      className="relative isolate bg-[#08090B] text-[#F4F4F2]"
+      className="ae-reveal-up relative isolate bg-[#08090B] text-[#F4F4F2]"
     >
       {/* Section header */}
       <div className="mx-auto w-full max-w-[1480px] px-6 pt-24 md:px-10 md:pt-32 lg:px-14">
@@ -739,7 +739,7 @@ function ReceiptsSection() {
       id="receipts"
       aria-label="Live receipts — current operating state"
       data-v3-section="04-receipts"
-      className="relative isolate border-y border-[#1F242B] bg-[#0F1114] text-[#F4F4F2]"
+      className="ae-reveal-up relative isolate border-y border-[#1F242B] bg-[#0F1114] text-[#F4F4F2]"
     >
       <div className="mx-auto w-full max-w-[1480px] px-6 pt-24 md:px-10 md:pt-32 lg:px-14">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
@@ -909,7 +909,7 @@ function ResearchSection() {
       id="research"
       aria-label="Current research — latest ÆoNs papers"
       data-v3-section="05-research"
-      className="relative isolate border-b border-[#1F242B] bg-[#08090B] text-[#F4F4F2]"
+      className="ae-reveal-up relative isolate border-b border-[#1F242B] bg-[#08090B] text-[#F4F4F2]"
     >
       <div className="mx-auto w-full max-w-[1480px] px-6 pt-24 md:px-10 md:pt-32 lg:px-14">
         {/* Header */}
@@ -1042,7 +1042,7 @@ function FounderNoteSection() {
       id="founder"
       aria-label="A note from the operator"
       data-v3-section="07-founder-note"
-      className="relative isolate flex min-h-[100svh] w-full flex-col overflow-hidden border-t border-[#1F242B] bg-[#08090B] text-[#F4F4F2]"
+      className="ae-reveal-up relative isolate flex min-h-[100svh] w-full flex-col overflow-hidden border-t border-[#1F242B] bg-[#08090B] text-[#F4F4F2]"
     >
       {/* Workspace photograph */}
       <div className="absolute inset-0 z-0">
