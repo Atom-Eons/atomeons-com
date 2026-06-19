@@ -125,7 +125,32 @@ const GROUPS: NavGroup[] = [
   },
 ];
 
-const IDLE_HINT = "ATOMEONS SYSTEMS LAB · MARCO ISLAND · OPEN · LAUNCH DAY 2026-06-12";
+const IDLE_HINT_DEFAULT = "ATOMEONS SYSTEMS LAB · MARCO ISLAND · OPEN · 31 PAPERS · 3 FREE PRODUCTS · 1 BOOK · NIGHTLY BROADCAST 8PM ET";
+
+// Wave 112 aliveness · visit-count milestone infotips. The lab notices
+// the returning visitor. localStorage 'aeVisitCount' increments on every
+// route change. Hint copy escalates as familiarity grows. Each tier
+// presents a deeper invitation; tier 1 is the boilerplate welcome, tier
+// 5+ reads like the lab acknowledging a regular.
+const IDLE_HINTS_BY_VISIT: Array<[number, string]> = [
+  [1,  IDLE_HINT_DEFAULT],
+  [2,  "WELCOME BACK · 340+ PAGES · ⌘K OR / FOR SEARCH"],
+  [3,  "THIRD VISIT · TRY /CONSTELLATION FOR THE LAB AS A GRAPH"],
+  [5,  "REGULAR · /FOUNDERS-VIEW DROPS NIGHTLY 8PM ET"],
+  [8,  "EIGHT VISITS · YOU MIGHT LIKE /RESEARCH/DECODED"],
+  [13, "DEEP READER · ASK THE LAB ANYTHING AT /ASK"],
+  [21, "21 VISITS · THE LAB SEES YOU · MOM IS WATCHING"],
+];
+
+function hintForVisit(n: number): string {
+  let pick = IDLE_HINTS_BY_VISIT[0][1];
+  for (const [threshold, text] of IDLE_HINTS_BY_VISIT) {
+    if (n >= threshold) pick = text;
+  }
+  return pick;
+}
+
+const IDLE_HINT = IDLE_HINT_DEFAULT; // backwards-compat for existing references below
 
 // ─────────────────────────────────────────────────────────────────────
 // Active-route detection
@@ -248,11 +273,18 @@ export function CompactNav() {
     }, 140);
   }, [clearTimer]);
 
-  // Close on route change + record visit in localStorage (cap 6 · dedup)
+  // Close on route change + record visit in localStorage (cap 6 · dedup) +
+  // increment aeVisitCount + recompute milestone hint (Wave 112 aliveness).
   useEffect(() => {
     setOpenKey(null);
-    setHint(IDLE_HINT);
     setMobileOpen(false);
+    let visitCount = 1;
+    try {
+      const raw = localStorage.getItem("aeVisitCount") ?? "0";
+      visitCount = Math.max(1, parseInt(raw, 10) || 0) + 1;
+      localStorage.setItem("aeVisitCount", String(visitCount));
+    } catch {}
+    setHint(hintForVisit(visitCount));
     if (pathname === "/" || pathname.startsWith("/api")) return;
     try {
       const prev: string[] = JSON.parse(localStorage.getItem("aeRecent") ?? "[]");

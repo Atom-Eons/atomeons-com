@@ -457,8 +457,14 @@ export default function OrangeboxPage() {
             <h1 className="text-balance text-5xl font-medium leading-[0.98] tracking-[-0.025em] md:text-8xl" style={{ color: EMBER.textPrimary }}>
               ORANGE<sup style={{ color: EMBER.accent, fontSize: "0.55em", verticalAlign: "super" }}>3</sup>
             </h1>
-            <p className="mt-4 font-mono text-[12px] uppercase tracking-[0.32em]" style={{ color: EMBER.textMuted }}>
-              the cockpit that gives Claude a spine
+            {/* Wave 112 Barnum · former "the cockpit that gives Claude a spine"
+                replaced with a declarative claim. The brand wordmark above
+                is the identity; this line is the promise. */}
+            <p className="mt-5 text-balance text-2xl font-medium leading-[1.1] tracking-[-0.015em] md:text-3xl" style={{ color: EMBER.textPrimary }}>
+              The sovereign agentic operating system for Claude.
+            </p>
+            <p className="mt-3 font-mono text-[12px] uppercase tracking-[0.28em]" style={{ color: EMBER.accent }}>
+              persistent memory · 10–80× compression · tamper-evident receipts · local-first · zero telemetry · forever
             </p>
 
             {/* Wave 75 · VALUE AT TOP · operator: "value on top." 4-cell
@@ -492,16 +498,17 @@ export default function OrangeboxPage() {
               ))}
             </div>
 
+            {/* Wave 112 Barnum · tightened deck. Three sentences, each
+                a load-bearing claim. The "Built in 75 days. With itself."
+                line is the punch — the product compiled itself. */}
             <p className="mt-8 max-w-xl text-lg leading-[1.55] md:text-xl" style={{ color: EMBER.textSoft }}>
-              Orange³ gives Claude persistent memory, 10-80× context
-              compression, and tamper-evident receipts on every action.
-              Local-first. Zero-telemetry. Recursive.
+              Orange³ is the layer Claude never had — persistent memory
+              across sessions, context compression that fits 80× more code
+              per token, and cryptographic receipts on every action.
               <span className="block mt-3" style={{ color: EMBER.textPrimary }}>
                 Built in 75 days. With itself.
               </span>
-              Reusable skill primers, a 14-department named-role router,
-              MCP-native tool bridge, BYO model keys. Made by the team that
-              uses Claude the most.
+              Made by the team that uses Claude the most.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">

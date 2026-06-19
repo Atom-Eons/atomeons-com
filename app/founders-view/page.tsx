@@ -124,30 +124,34 @@ export default async function FoundersViewIndex() {
       <section className="mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
         <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           <AeMark size={20} glow />
-          ::nightly broadcast · 8pm ET · sealed · slipped under your door
+          ::nightly broadcast · 8pm ET · live · no edits before · retracts with reason
         </p>
-        <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
-          The Founder&apos;s View
+        {/* Wave 112 Barnum · former "The Founder's View" → claim of power.
+            The lab's posture: independent broadcast, no advertisers to
+            appease, no subscription revenue to protect. */}
+        <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.025em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
+          What the lab thinks, right now.
         </h1>
-        <p className="mt-8 max-w-3xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
-          A fictional broadcast from the lab. Every night at 8pm
-          Eastern, sealed and slipped under your door. No punches
-          pulled. Aims at everything that earns it. Equal opportunity
-          indignation — every letter, no exceptions.
+        <p className="mt-3 font-mono text-xs uppercase tracking-[0.22em] text-[#8E969D]">
+          the founder&apos;s view · nightly · 8pm et
+        </p>
+        <p className="mt-8 max-w-3xl text-lg leading-[1.6] text-[#B5BBC0]">
+          A nightly letter from the operator. Published live the moment
+          it&apos;s written — no edits before publication, only retracts
+          after, with the reason stated. No punches pulled. Equal
+          opportunity indignation. Aims at everything that earns it.
         </p>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#9BA5A7]">
-          Editorial framing, characterizations, and pointed dialogue are
-          fiction. The events cited are real and from the day&apos;s news.
+          Editorial framing and pointed dialogue are fiction. Events
+          cited are real and from the day&apos;s news.
         </p>
 
-        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[#6B7779]">
-          Published live the moment it&apos;s written. The lab does not
-          edit before publication — only retracts after, with the reason
-          stated. Bookmark this page. There is no email list. There is no
-          algorithm. You come here, or you miss it — or you subscribe by{" "}
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[#8E969D]">
+          No email list. No algorithm. No advertiser to please. You come
+          here at 8pm, or you miss it, or you subscribe by{" "}
           <a
             href="/founders-view/rss.xml"
-            className="text-[#22F0D5] hover:text-[#FFA45A]"
+            className="text-[#22F0D5] underline underline-offset-2 hover:text-[#FFA45A]"
             target="_blank"
             rel="noopener"
           >
