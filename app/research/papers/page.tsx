@@ -5,7 +5,7 @@ import { PAPERS } from "../../_data/research-papers";
 export const metadata = {
   title: "Research Papers — Æ Research",
   description:
-    "Twelve ÆoNs Research manuscripts published April 2026 under CC-BY 4.0. Topics span bioelectric oncology, the gut-brain mislabel hypothesis, solar information transfer, the topological field theory of self-modifying systems, light code DNA version control, the universal defect framework, Coherence ToE, GlyphSpeak compression, and the Spiral-of-Thought architecture. Each paper carries an academic abstract and a plain-language summary side-by-side for non-scientists.",
+    "12 ÆoNs Research papers · CC-BY 4.0. Bioelectric oncology, mislabel hypothesis, GlyphSpeak, Spiral-of-Thought. Academic abstracts + plain-language summaries.",
   keywords: [
     "ÆoNs Research",
     "AtomEons research papers",

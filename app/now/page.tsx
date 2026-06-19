@@ -375,7 +375,7 @@ const SHIPPED_THIS_WEEK: Array<{ date: string; what: string; href?: string }> = 
 ];
 
 const SHIPPING_NEXT: string[] = [
-  "STRIPE_ORANGEBOX_V63_ENABLED=true (optionally STRIPE_ORANGEBOX_V63_PRICE_ID) in Vercel env → /orangebox flips from inquire-only to live $99 self-serve Stripe Checkout. One env var.",
+  "STRIPE_ORANGEBOX_V63_ENABLED=true (optionally STRIPE_ORANGEBOX_V63_PRICE_ID) in Vercel env → /orangebox flips from inquire-only to free-download flow. One env var.",
   "Cron sanity: confirm /api/cron/founders-view fires at 8pm ET (Vercel Cron + Supabase service-role write). Verify letter cadence post-letter-31.",
   "EV code-signing certificate (DigiCert / Sectigo) → eliminates Windows SmartScreen warning on first cockpit download.",
   "Real ORANGEBOX cockpit screenshots → flagged TODO in WEBSITE_HANDOFF. Capture v6.3 on a clean machine, drop into /public/orangebox/.",
@@ -384,8 +384,8 @@ const SHIPPING_NEXT: string[] = [
 ];
 
 const CURRENT_REALITY: string[] = [
-  "ORANGEBOX v6.3 (AE See-Suite + AE Operations) is the current cockpit. $99 once, forever. License §4A bans subscription.",
-  "Public checkout is inquire-only until the STRIPE_ORANGEBOX_V63_ENABLED env var is set. The v6.1.0 / $1 archive lives at /orangebox/legacy.",
+  "Orange³ v6.3 (AE See-Suite + AE Operations) is the current cockpit. Free always. License §4A bans subscription.",
+  "Public checkout is inquire-only until the STRIPE_ORANGEBOX_V63_ENABLED env var is set. The v6.1.0 / $1 archive lives at /orangebox/legacy. Orange³ is free always.",
   "The Founder's View has 31+ published letters in the archive. Live teaser surfaces the latest on the homepage via 5-min ISR.",
   "Twelve research manuscripts public + summarized · 38-page Lessons From Sci-Fi monograph live · 1,851-line X Algorithm Alpha dossier live.",
   "Every major route ships JSON-LD structured data (Organization · WebSite · SearchAction · FAQPage · Blog · TechArticle · BreadcrumbList · VideoObject · ImageObject · HowTo · Product).",
@@ -479,7 +479,7 @@ export default async function NowPage() {
             </p>
             <p className="mt-2 text-2xl font-medium text-[#F2F4F5]">v6.3</p>
             <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#6B7779]">
-              $99 once · §4A
+              Free always · §4A
             </p>
           </div>
           <div className="rounded-xl border border-[#1A2225] bg-[#0A0F11] p-5">

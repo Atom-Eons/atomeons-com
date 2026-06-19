@@ -34,16 +34,15 @@ const INTEGRATIONS: Integration[] = [
   { name: "Cloudflare Registrar", url: "https://www.cloudflare.com/products/registrar/", role: "Domain registrar for atomeons.com (at-cost · no markup)", data: "public data only", category: "infra" },
   { name: "Namecheap", url: "https://www.namecheap.com", role: "Domain registrar for skil.ski", data: "public data only", category: "infra" },
   { name: "Supabase", url: "https://supabase.com", role: "Postgres database with pgvector · row-level security · service-role inserts from server-side handlers only", data: "buyer data", category: "infra" },
-  { name: "Vercel Blob", url: "https://vercel.com/storage/blob", role: "Product binary storage (ORANGEBOX installer · B00KMAKR DMG · audiobook MP3 tracks)", data: "no buyer data", category: "infra" },
+  { name: "Vercel Blob", url: "https://vercel.com/storage/blob", role: "Product binary storage (Orange³ installer · AI Bookmaker DMG · audiobook MP3 tracks)", data: "no buyer data", category: "infra" },
 
   // AI
-  { name: "Anthropic Claude API", url: "https://www.anthropic.com/api", role: "Operator's daily build companion (Claude Code · Sonnet · Opus tiers) · ORANGEBOX default LLM provider via BYO-key (user's key, not lab's)", data: "no buyer data", category: "AI" },
+  { name: "Anthropic Claude API", url: "https://www.anthropic.com/api", role: "Operator's daily build companion (Claude Code · Sonnet · Opus tiers) · Orange³ default LLM provider via BYO-key (user's key, not lab's)", data: "no buyer data", category: "AI" },
   { name: "Google Gemini API", url: "https://ai.google.dev", role: "/api/ask synthesis (gemini-2.5-flash) · /api/embed vectors (gemini-embedding-001 · 768-dim Matryoshka) · free tier", data: "no buyer data", category: "AI" },
-  { name: "ElevenLabs", url: "https://elevenlabs.io", role: "Optional narration credits for B00KMAKR audiobook pipeline · operator account · not user-facing", data: "operator data only", category: "AI" },
-  { name: "Microsoft Andrew Neural Voice", url: "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/", role: "I AM AI audiobook narration · ACX-mastered output", data: "operator data only", category: "AI" },
+  { name: "ElevenLabs", url: "https://elevenlabs.io", role: "Synthetic Opus voice clone for I AM AI audiobook (28 tracks · free at /i-am-ai) · Optional narration credits for AI Bookmaker audiobook pipeline · operator account · not user-facing", data: "operator data only", category: "AI" },
 
   // Commerce
-  { name: "Stripe", url: "https://stripe.com", role: "Payment processing for ORANGEBOX · B00KMAKR · skil.ski · Stripe Checkout-hosted flow (operator never sees card numbers)", data: "buyer data", category: "commerce" },
+  { name: "Stripe", url: "https://stripe.com", role: "Payment processing for Orange³ · AI Bookmaker · skil.ski · Stripe Checkout-hosted flow (operator never sees card numbers)", data: "buyer data", category: "commerce" },
   { name: "Stripe Customer Portal", url: "https://stripe.com/customer-portal", role: "Self-serve license management · refund requests · email update", data: "buyer data", category: "commerce" },
 
   // Communications
@@ -57,7 +56,7 @@ const INTEGRATIONS: Integration[] = [
   { name: "Next.js · React · Tailwind", url: "/colophon", role: "Open-source framework stack · full tree at /colophon", data: "no buyer data", category: "code" },
 
   // Trust
-  { name: "Azure Trusted Signing", url: "https://azure.microsoft.com/en-us/products/trusted-signing", role: "Code-signing certificate for ORANGEBOX Windows installer · SHA-256 manifest per release", data: "operator data only", category: "trust" },
+  { name: "Azure Trusted Signing", url: "https://azure.microsoft.com/en-us/products/trusted-signing", role: "Code-signing certificate for Orange³ Windows installer · SHA-256 manifest per release", data: "operator data only", category: "trust" },
   { name: "Cloudflare Web Analytics", url: "https://www.cloudflare.com/web-analytics/", role: "Optional cookie-free pageview analytics · disabled by default · no fingerprinting", data: "no buyer data", category: "trust" },
 ];
 

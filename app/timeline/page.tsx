@@ -137,7 +137,7 @@ export default function TimelinePage() {
               { href: "/receipts", label: "Audit ledger" },
               { href: "/changelog", label: "Per-version log" },
             ].map((l) => (
-              <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
+              <Link key={l.href} href={l.href} aria-label={l.label} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{l.href}
                 </p>

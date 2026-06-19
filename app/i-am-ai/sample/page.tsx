@@ -281,7 +281,7 @@ export default function IAmAiSamplePage() {
       </section>
 
       {/* Chapter body */}
-      <article className="mx-auto w-full max-w-3xl px-6 py-16 md:px-10 md:py-24">
+      <article aria-label="Chapter 1: The First Token" className="mx-auto w-full max-w-3xl px-6 py-16 md:px-10 md:py-24">
         <div className="space-y-6">
           {CHAPTER.map((p, i) => (
             <Para key={i} p={p} idx={i} />

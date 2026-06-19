@@ -59,7 +59,7 @@ const SKILLS: Skill[] = [
   { name: "atomeons-drift",     tier: "T3", role: "invariant guard",    what: "Enforces 27 constitutional guardrails · sole cognitive center authority · founder-salary law · Human Final Stop reachability." },
   { name: "atomeons-bench",     tier: "T3", role: "honest measurement", what: "Performance bench discipline · corpus + N≥30 + confidence interval + p-value. No vibe-checked benchmarks." },
   // T4 · Compression
-  { name: "atomeons-clc",       tier: "T4", role: "archive compression",what: "Crystal Lattice Compression · 10-80× context shrink for archival + transport. Powers ORANGEBOX compression layer.", disclosure: "ATOM-CLC-2026-0331" },
+  { name: "atomeons-clc",       tier: "T4", role: "archive compression",what: "Crystal Lattice Compression · 10-80× context shrink for archival + transport. Powers Orange³ compression layer.", disclosure: "ATOM-CLC-2026-0331" },
   { name: "atomeons-glyphspeak",tier: "T4", role: "cross-model encoding",what: "EODO cross-model encoding for transport between Claude / GPT / Gemini · preserves semantic content under tokenizer drift.", disclosure: "ATOM-GS-2026-0406" },
   // T5 · Emission
   { name: "atomeons-ledger",    tier: "T5", role: "delivery law",       what: "Universal terminal for non-trivial deliverables: zip + SHA-256 + ledger row + present_files. No exceptions." },
@@ -217,7 +217,7 @@ export default function SkillsPage() {
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#C9A55C]">§ what is NOT on this page</p>
             <p className="mt-4 font-serif text-[15px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
               The internal cognitive-architecture details that power
-              ORANGEBOX are not published here per operator IP boundary.
+              Orange³ are not published here per operator IP boundary.
               Specifically · the AE# model assignments · trust gradient
               thresholds · phase map day counts · Trilane authority
               hierarchy on conflict · the 17th HSMP mutation kind · and
@@ -230,7 +230,7 @@ export default function SkillsPage() {
 
           <div className="mt-12 grid gap-3 md:grid-cols-4">
             {[
-              { href: "/orangebox", label: "ORANGEBOX · the cockpit" },
+              { href: "/orangebox", label: "Orange³ · the cockpit" },
               { href: "/orangebox-primer", label: "Vendor security primer" },
               { href: "/manifesto", label: "14-clause manifesto" },
               { href: "/trust", label: "Trust posture" },

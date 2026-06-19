@@ -44,7 +44,7 @@ const TOTAL_LESSONS = LESSONS.length;
 export const metadata: Metadata = {
   title:
     "Learn AI · the multi-week curriculum · onboarding humanity to AI · AtomEons",
-  description: `A free 27-lesson curriculum that moves any human from never-used-AI to operator-grade. Five levels (Novice → Learner → User → Operator → Pilot). Five paths by persona (Worker · Builder · Student · Operator · Curious). Real drills, copy-paste prompts, honest limits, graduation criteria. ${TOTAL_LESSONS} lessons · ~${Math.round(TOTAL_MIN / 60)} hours total. No signup. No mailing list. No affiliate revenue. CC-BY 4.0.`,
+  description: `Free ${TOTAL_LESSONS}-lesson AI curriculum — Novice to Pilot, 5 persona paths, real drills, honest limits. No signup. No mailing list. CC-BY 4.0.`,
   keywords: [
     "AI curriculum",
     "AI learning path",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     "Claude vs ChatGPT vs Gemini",
     "Ollama tutorial",
     "AI cockpit",
-    "ORANGEBOX",
+    "Orange³",
     "AtomEons",
   ],
   alternates: { canonical: "https://atomeons.com/learn" },
@@ -339,7 +339,7 @@ export default function LearnPage() {
                   <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-[#FFB87A]" />
                   <span>
                     Not affiliated revenue. We name Claude, ChatGPT, Gemini,
-                    Ollama, ORANGEBOX. We take ZERO from any of them.
+                    Ollama, Orange³. We take ZERO from any of them.
                   </span>
                 </li>
                 <li className="flex gap-3">

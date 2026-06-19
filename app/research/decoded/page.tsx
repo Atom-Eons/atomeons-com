@@ -26,7 +26,7 @@ import { DiscordCTA } from "../../_components/V3/DiscordCTA";
 export const metadata: Metadata = {
   title: "Decoded · arXiv papers in plain English · /research/decoded · AtomEons",
   description:
-    "Real published AI research papers translated to plain English for normal humans. Attention Is All You Need, Scaling Laws, Chain-of-Thought, Constitutional AI, Sparse Autoencoders — what scientists know but don't always say.",
+    "AI research papers in plain English. Attention Is All You Need, Scaling Laws, Chain-of-Thought, Constitutional AI — what scientists know but don't say.",
   alternates: { canonical: "https://atomeons.com/research/decoded" },
   openGraph: {
     title: "Decoded · arXiv papers in plain English",

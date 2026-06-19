@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "B00KMAKR vs Vellum · Atticus · Scrivener · Reedsy · honest comparison",
+  title: "AI Bookmaker vs Vellum · Atticus · Scrivener · Reedsy · honest comparison",
   description:
     "How B00KMAKR stacks against named indie-publishing tools. Where it wins, where it loses, and which buyer should pick which tool.",
   alternates: { canonical: "https://atomeons.com/b00kmakor/competitors" },
@@ -26,7 +26,7 @@ const COMPARISONS: Comparison[] = [
     pricing: "$199 unlimited ebooks · $249 ebooks + paperback",
     b00kmakorWins: [
       "Mac AND Windows · Vellum is Mac-only.",
-      "$99 vs $250 · roughly 60% less for similar feature scope.",
+      "Free vs $250 · AI Bookmaker is free always; Vellum is paid.",
       "Audiobook pipeline built-in · Vellum has none.",
       "AI-disclosure ledger as a first-class deliverable.",
     ],
@@ -97,7 +97,7 @@ const COMPARISONS: Comparison[] = [
       "Strong community of paid Reedsy professionals (editors, designers).",
     ],
     takeaway:
-      "For an author publishing one book in plain typography for free, Reedsy is the right pick. For an operator publishing 3+ books a year across multiple formats with audiobooks, B00KMAKR pays for itself by book #2.",
+      "For an author publishing one book in plain typography for free, Reedsy is the right pick. For an operator publishing 3+ books a year across multiple formats with audiobooks, AI Bookmaker is the stronger instrument — and free.",
   },
   {
     competitor: "Adobe InDesign",
@@ -126,7 +126,7 @@ export default function B00kmakrCompetitorsPage() {
     <main className="min-h-screen text-[#F4F4F2]">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">§ B00KMAKR vs alternatives · honest comparison</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">§ AI Bookmaker vs alternatives · honest comparison</p>
           <h1 className="mt-6 font-serif text-[44px] font-light leading-[1.04] tracking-[-0.025em] md:text-[64px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             Different instruments for different stages.
           </h1>
@@ -183,7 +183,7 @@ export default function B00kmakrCompetitorsPage() {
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <div className="grid gap-3 md:grid-cols-3">
             {[
-              { href: "/b00kmakor", label: "Back to B00KMAKR" },
+              { href: "/b00kmakor", label: "Back to AI Bookmaker" },
               { href: "/b00kmakor/changelog", label: "Version history" },
               { href: "/b00kmakor/roadmap", label: "Roadmap + anti-roadmap" },
             ].map((l) => (

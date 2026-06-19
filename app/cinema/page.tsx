@@ -878,8 +878,8 @@ const DOORS: ReadonlyArray<Door> = [
     img: "/cyber-images/platforms.png",
     imgAlt: "Cinematic photograph — runtime workbench",
     caption:
-      "OrangeBox is the AtomEons runtime — one binary, 27 guardrails, Gate 0 lattice integrity, Human Final Stop. The lab that runs the lab. Source public, install in one click.",
-    count: "OrangeBox · B00KMakor",
+      "Orange³ is the AtomEons runtime — one binary, 27 guardrails, Gate 0 lattice integrity, Human Final Stop. The lab that runs the lab. Source public, install in one click.",
+    count: "Orange³ · AI Bookmaker",
   },
 ];
 

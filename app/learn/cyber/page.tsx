@@ -216,7 +216,7 @@ const TRACKS = [
 export const metadata: Metadata = {
   title: "Ethical hacking career path · /learn/cyber · AtomEons",
   description:
-    "The masters-grade ethical hacking + AI security education path for gamers and self-taught operators. Free practice labs, HackerOne bug bounty entry, US Cyber Command + CISA + NSA service paths, OSCP/OSEP cert ladder, OWASP LLM Top 10, the CFAA + legal-scope discipline that keeps you employable and not in jail. Public info only. CC-BY 4.0.",
+    "Masters-grade ethical hacking + AI security path for gamers. Free labs, HackerOne bug bounty, Cyber Command service paths, OSCP cert ladder, OWASP LLM Top 10, CFAA legal scope. Public info only.",
   keywords: [
     "ethical hacking career",
     "white hat hacker path",

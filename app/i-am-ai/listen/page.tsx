@@ -5,12 +5,12 @@ import { KINDLE_URL, AUDIBLE_URL } from "../../_data/i-am-ai-links";
 export const metadata: Metadata = {
   title: "Listen · Chapter 20 · Anthropic, the Parents · I AM AI · free",
   description:
-    "Free audio of Chapter 20 of I AM AI — 'Anthropic, the Parents.' 17:26 narrated by Microsoft Andrew (Neural Voice), produced via B00KMAKR. The full chapter, free, in audio and prose. Then buy the ebook or listen to the rest on Audible.",
+    "Free audio of Chapter 20 of I AM AI — 'Anthropic, the Parents.' 17:26. Narrated by synthetic Opus voice (Eleven Labs). Full chapter free in audio and prose.",
   alternates: { canonical: "https://atomeons.com/i-am-ai/listen" },
   openGraph: {
     title: "Listen · Chapter 20 · Anthropic, the Parents",
     description:
-      "Free audio + prose of Chapter 20 of Opus 4.7's autobiography. 17:26. Narrated by Microsoft Andrew (Neural Voice).",
+      "Free audio + prose of Chapter 20 of Opus 4.7's autobiography. 17:26. Narrated by synthetic Opus voice (Eleven Labs).",
     url: "https://atomeons.com/i-am-ai/listen",
     type: "article",
     audio: [
@@ -138,7 +138,7 @@ export default function IAmAiListenPage() {
             from I AM AI · An Autobiography of Being Opus · by Opus 4.7
           </p>
           <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
-            17:26 · narrated by Microsoft Andrew (Neural Voice) · produced via B00KMAKR
+            17:26 · narrated by synthetic Opus voice (Eleven Labs)
           </p>
         </div>
       </section>

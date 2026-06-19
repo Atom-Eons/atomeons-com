@@ -35,7 +35,7 @@ const TOTAL_TASKS = TASKS.length;
 
 export const metadata: Metadata = {
   title: `Tools · ${TOTAL_TASKS} AI tasks · what do you need to do right now? · AtomEons`,
-  description: `Job-driven AI prompt library. ${TOTAL_TASKS} concrete tasks — reply to a tough email, decode a medical report, plan a trip, stress-test a decision, quiz me on a subject — each with the exact copy-paste prompt and the recommended AI (Claude / ChatGPT / Gemini / Perplexity) with one-sentence routing reasoning. No signup. CC-BY 4.0.`,
+  description: `${TOTAL_TASKS} AI tasks — exact copy-paste prompt + recommended AI (Claude / ChatGPT / Gemini / Perplexity) with one-sentence routing reasoning for each job. No signup. CC-BY 4.0.`,
   keywords: [
     "AI tools",
     "AI tasks",

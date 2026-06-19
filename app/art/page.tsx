@@ -53,7 +53,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Art · 368 generative sacred-geometry pieces",
   description:
-    "AtomEons procedural art gallery · 23 families × 16 variants = 368 unique pieces · Flower of Life · Metatron · Sri Yantra · Penrose tiling · Truchet · Voronoi · Pythagoras tree · Hilbert curve · Sierpinski · Koch · Lorenz attractor · fractal trees · wave interference · phyllotaxis · mandalas · all pure SVG · zero JavaScript · open-license CC-BY 4.0.",
+    "AtomEons generative art gallery · 23 families × 16 variants = 368 unique pieces · sacred geometry · fractals · chaos · all pure SVG · zero JavaScript · CC-BY 4.0.",
   alternates: { canonical: "https://atomeons.com/art" },
   openGraph: {
     title: "Art · 368 generative pieces · AtomEons",

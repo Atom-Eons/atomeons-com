@@ -86,7 +86,7 @@ const softwareJsonLd = {
     url: "https://atomeons.com",
   },
   license:
-    "Commercial · §4A no-SaaS covenant · 30-day Material Failure Guarantee",
+    "Free · §4A no-SaaS covenant · Material Failure replacement / install support",
 };
 
 // ─────────────────────────────────────────────────────────────────────
@@ -174,17 +174,16 @@ const MAC_PATHS = [
 
 // What stays true forever vs what's intentionally volatile
 const STABLE = [
-  "Once · forever. Pay one time, own the license for life.",
-  "Same source code, same updates, regardless of which tier you bought at.",
+  "Free forever. No payment required — download, own, use commercially.",
+  "Same source code, same updates, regardless of when you downloaded.",
   "§4A no-SaaS covenant — never moves to subscription. Ever.",
-  "30-day Material Failure Guarantee. If it doesn't materially work for you, full refund, no questions.",
+  "Material Failure replacement / install support. If it doesn't materially work for you, we fix it, no questions.",
   "PDF manual + universal HTML app + native installers, all in the bundle.",
 ];
 
 const VOLATILE = [
-  "The exact dollar amount may change at random going forward. Lock in your tier price now.",
-  "Free-week eligibility ends when the countdown hits zero. Then your country's tier rate kicks in automatically.",
-  "Feature additions: new pipelines, new templates, new pre-built launches — the lab keeps shipping.",
+  "The app is free always — no tier, no countdown, no price to lock in.",
+  "Feature additions: new pipelines, new templates, new pre-built launches — the lab keeps shipping at no charge.",
   "Distribution channels (KDP, Substack, Ghost, direct PDF) — added as APIs stabilize.",
   "Brand surface (this page, manuals, OG images) — refined when the lab finds a better way to say it.",
 ];
@@ -991,7 +990,7 @@ export default function B00KMakorPage() {
             href="/orangebox"
             className="inline-flex items-center gap-2 rounded-lg border border-[#22F0D5]/40 bg-[#0A0F11] px-6 py-3 font-mono text-xs uppercase tracking-[0.22em] text-[#22F0D5] hover:bg-[#22F0D5]/10"
           >
-            ::ORANGEBOX · the engine inside →
+            ::Orange³ · the engine inside →
           </Link>
           <a
             href="mailto:a.mccree@gmail.com?subject=B00KMAKR%20question"

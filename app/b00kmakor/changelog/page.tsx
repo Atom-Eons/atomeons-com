@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "B00KMAKR · changelog · version history",
+  title: "AI Bookmaker · changelog · version history",
   description:
-    "Every B00KMAKR release in time order. Mac + Windows native builds, manuscript→EPUB pipeline, audiobook generation, cover renderer, KDP metadata generator.",
+    "Every AI Bookmaker release in time order. Mac + Windows native builds, manuscript→EPUB pipeline, audiobook generation, cover renderer, KDP metadata generator.",
   alternates: { canonical: "https://atomeons.com/b00kmakor/changelog" },
 };
 
@@ -93,7 +93,7 @@ export default function B00kmakrChangelogPage() {
     <main className="min-h-screen text-[#F4F4F2]">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">§ B00KMAKR · changelog</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">§ AI Bookmaker · changelog</p>
           <h1 className="mt-6 font-serif text-[44px] font-light leading-[1.04] tracking-[-0.025em] md:text-[64px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             From prototype to publishing instrument.
           </h1>
@@ -138,7 +138,7 @@ export default function B00kmakrChangelogPage() {
 
           <div className="mt-16 grid gap-3 md:grid-cols-3">
             {[
-              { href: "/b00kmakor", label: "Back to B00KMAKR" },
+              { href: "/b00kmakor", label: "Back to AI Bookmaker" },
               { href: "/b00kmakor/roadmap", label: "Roadmap + anti-roadmap" },
               { href: "/b00kmakor/competitors", label: "Competitor comparison" },
             ].map((l) => (

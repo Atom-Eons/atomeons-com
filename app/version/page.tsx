@@ -18,7 +18,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Version · JUNE ROCKET",
   description:
-    "AtomEons site version manifest. JUNE ROCKET is the Wave 30 release · GPU-adaptive visual scaling · OpenMind 4-agent review consensus shipped · 3 new domain hubs (health · money · video AI) · deferred-offline-model scoped for future on-hold upgrade.",
+    "AtomEons site version manifest. JUNE ROCKET · Wave 30 · GPU-adaptive tiering · OpenMind 4-agent review · 3 new domain hubs · offline model scoped.",
   alternates: { canonical: "https://atomeons.com/version" },
   openGraph: {
     title: "JUNE ROCKET · AtomEons site version",

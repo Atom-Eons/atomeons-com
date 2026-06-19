@@ -26,9 +26,9 @@ import { TrackedDownloadAnchor } from "../../_components/TrackedDownloadAnchor";
 
 export const metadata: Metadata = {
   title:
-    "B00KMAKR v3.2.0 download — Mac + Windows · grab both · SHA-256 verified",
+    "AI Bookmaker v3.2.0 download — Mac + Windows · grab both · SHA-256 verified",
   description:
-    "Direct downloads for B00KMAKR v3.2.0. Mac zip (2.10 MB) + Windows zip (1.04 MB) + both manuals (book-red Mac · blue Windows). SHA-256 receipts published. Grandfather-for-life clause applies during the free-week countdown.",
+    "Direct downloads for AI Bookmaker v3.2.0. Mac zip (2.10 MB) + Windows zip (1.04 MB) + both manuals. SHA-256 receipts published. Free always — no subscription, no catch.",
   alternates: { canonical: "https://atomeons.com/b00kmakor/download" },
   robots: { index: false, follow: false }, // buyer-only page, not for crawl indexing
 };
@@ -271,7 +271,7 @@ export default function B00KMakrDownloadPage() {
             <li className="flex items-baseline gap-3">
               <span className="font-mono text-[#22F0D5]">▲</span>
               <span>
-                Once · forever. You own this version of B00KMAKR on
+                Free always · forever. You own this version of AI Bookmaker on
                 every machine you operate. No subscription. License
                 §4A no-SaaS covenant binds the lab to never move this
                 product to a recurring fee.
@@ -280,26 +280,25 @@ export default function B00KMakrDownloadPage() {
             <li className="flex items-baseline gap-3">
               <span className="font-mono text-[#22F0D5]">▲</span>
               <span>
-                <span className="font-semibold text-[#F2F4F5]">Free-week grandfather clause:</span>{" "}
-                if you downloaded during the free-week countdown, your
-                license is grandfathered for life — even after the
-                price changes for new buyers. The lab will not retroactively
-                bill you.
+                <span className="font-semibold text-[#F2F4F5]">Free always:</span>{" "}
+                AI Bookmaker is free to download and keep. No subscription.
+                No future billing. The lab's §4A no-SaaS covenant binds us
+                to that permanently.
               </span>
             </li>
             <li className="flex items-baseline gap-3">
               <span className="font-mono text-[#22F0D5]">▲</span>
               <span>
-                <span className="font-semibold text-[#F2F4F5]">30-day Material Failure Guarantee:</span>{" "}
-                if B00KMAKR doesn&apos;t materially work for your writing
+                <span className="font-semibold text-[#F2F4F5]">30-day Material Failure replacement:</span>{" "}
+                if AI Bookmaker doesn&apos;t materially work for your writing
                 workflow, email{" "}
                 <a
-                  href="mailto:a.mccree@gmail.com?subject=B00KMAKR%20Material%20Failure%20Guarantee"
+                  href="mailto:a.mccree@gmail.com?subject=AI%20Bookmaker%20Material%20Failure"
                   className="text-[#22F0D5] underline decoration-[#22F0D5]/40 underline-offset-4"
                 >
                   a.mccree@gmail.com
                 </a>{" "}
-                within 30 days. Full refund, no support-queue gauntlet.
+                within 30 days. We&apos;ll fix it or replace it — no support-queue gauntlet.
               </span>
             </li>
             <li className="flex items-baseline gap-3">

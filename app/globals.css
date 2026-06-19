@@ -2052,8 +2052,133 @@ html.custom-cursor [contenteditable="true"] {
 }
 
 /* =============================================================================
- * END — globals.css V6 noir-cinema · print sheet added 2026-06-05
+ * Wave 107 · Mobile innovations · 2026-06-18
+ * Operator: "10 WAVES ON MOBILE INNOVATIONS CUSTOM FOR APPLES AND ANDRIOD"
+ * ============================================================================= */
+
+/* Wave 1 · Kill the iOS Safari gray-flash on every tap.
+   Apple ships -webkit-tap-highlight-color: rgba(0,0,0,.3) by default; we
+   want our own focus ring + button transitions to do the work, not the OS. */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Wave 2 · Safe-area-inset support for notched iPhones.
+   Anything that hugs an edge of the viewport (fixed nav, sticky CTAs,
+   footer, drawers) pads against env(safe-area-inset-*) so iOS Pro
+   notches and Android gesture handles never overlap content.
+   The custom properties below let components opt in by referencing
+   var(--ae-safe-top) etc., without re-hardcoding the env() call. */
+:root {
+  --ae-safe-top:    env(safe-area-inset-top, 0px);
+  --ae-safe-right:  env(safe-area-inset-right, 0px);
+  --ae-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --ae-safe-left:   env(safe-area-inset-left, 0px);
+}
+
+/* Wave 3 · Touch-action discipline.
+   By default the browser hijacks single-finger gestures for pan/zoom
+   on every element. We tell the browser that nav, forms, and CTAs
+   are click-only (manipulation = tap + double-tap-zoom suppressed),
+   which both feels faster (no 300ms tap delay on older Safari) and
+   prevents accidental zoom on rapid taps. */
+header, button, a, input, textarea, select, [role="button"], [role="link"], [role="combobox"], [role="listbox"], [role="option"] {
+  touch-action: manipulation;
+}
+
+/* Wave 4 · Mobile bottom CTA bar safe-area helper.
+   Applied to .ae-mobile-bottombar, which is the new fixed thumb-reach
+   CTA strip below the fold on long-scroll routes. We compute padding
+   so the strip never collides with the iOS home indicator. */
+.ae-mobile-bottombar {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0px);
+}
+
+/* Wave 5 · Disable iOS pull-to-refresh on signature surfaces.
+   Cron-published letter pages and dashboards behind ISR don't need
+   the OS swipe-down behavior — it just makes them feel less premium.
+   Pages opt in by setting class="ae-no-pull" on their root. */
+.ae-no-pull {
+  overscroll-behavior-y: contain;
+}
+
+/* Wave 6 · Android over-scroll glow control.
+   Chromium's amber over-scroll bounce is a brand mismatch with the
+   noir palette. Contain it globally on the body so the bounce dies
+   inside the document instead of bleeding cyan onto blue tint. */
+body {
+  overscroll-behavior-x: contain;
+}
+
+/* Wave 7 · Smooth-scroll-only when motion is allowed (a11y).
+   prefers-reduced-motion already kills our keyframe animations; this
+   makes anchor-link jumps + Element.scrollIntoView feel mobile-native
+   without overriding the user's OS-level setting. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Wave 8 · Tap-target minimum (WCAG 2.5.5 Level AAA: 44×44 CSS px).
+   Selector hits anything that already advertises itself as actionable
+   AND lives inside the mobile-only drawer / bottom bar. Desktop
+   surfaces are unaffected so existing 32px IconButton ergonomics on
+   the right-utility cluster don't bloat. */
+@media (max-width: 1023px) {
+  .ae-mobile-bottombar a,
+  .ae-mobile-bottombar button,
+  #mobile-nav-drawer a,
+  #mobile-nav-drawer button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Wave 9 · Mobile-only sticky bottom CTA strip styling.
+   Lives at bottom of the viewport on viewports below lg. Hairline
+   border-top, near-black panel, bio-cyan accent on the primary CTA.
+   Hidden by default; the React component flips display:flex when
+   it should appear (off-route, hidden on /ask itself, etc). */
+.ae-mobile-bottombar {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 38; /* below modal (50), above content */
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-left: max(12px, var(--ae-safe-left));
+  padding-right: max(12px, var(--ae-safe-right));
+  padding-top: 8px;
+  padding-bottom: calc(8px + var(--ae-safe-bottom));
+  background: rgba(8, 9, 11, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+@media (max-width: 1023px) {
+  .ae-mobile-bottombar[data-visible="true"] {
+    display: flex;
+  }
+}
+
+/* Wave 10 · Theme-color media query (paired with theme-color in head).
+   Safari + Chrome both honor a meta theme-color with media=
+   "(prefers-color-scheme: dark)". The dark value matches our base
+   noir; the light value matches the V2 white theme operator added in
+   Wave 51. Components keep their CSS variables; this only paints the
+   OS chrome (status bar, app-switcher) so the experience extends
+   beyond the viewport. */
+/* The actual theme-color metas live in app/layout.tsx head — kept in
+   sync with these values. */
+
+/* =============================================================================
+ * END — globals.css V7 noir-cinema · mobile innovations Wave 107 · 2026-06-18
  * Signature: ATOM-NOIR-2026-0602 · print-extension ATOM-PRINT-2026-0605
+ *            mobile-innovations ATOM-MOBILE-2026-0618
  * Palette: #08090B / #0F1114 / #F4F4F2 / #9CA3AF / #7a818a / #1F242B /
  *          #22F0D5 / #FF4D4D
  * ============================================================================= */

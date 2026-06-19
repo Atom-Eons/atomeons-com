@@ -31,9 +31,9 @@ const STATEMENT = [
 
 const SIGNED = [
   { what: "Every published page on atomeons.com", how: "Carries its route's sigil in the Header. The pathname IS the signature." },
-  { what: "Every JSON receipt emitted by ORANGEBOX", how: "Embeds the operator's identity SHA in the receipt envelope." },
-  { what: "Every Windows installer binary for ORANGEBOX", how: "Azure Trusted Signing certificate · Publisher: AtomEons Systems Laboratory · SHA-256 manifest per release." },
-  { what: "Every audiobook produced via B00KMAKR pipeline", how: "ai_disclosure_ledger embedded as ID3 metadata · contains operator hash + per-track provenance." },
+  { what: "Every JSON receipt emitted by Orange³", how: "Embeds the operator's identity SHA in the receipt envelope." },
+  { what: "Every Windows installer binary for Orange³", how: "Azure Trusted Signing certificate · Publisher: AtomEons Systems Laboratory · SHA-256 manifest per release." },
+  { what: "Every audiobook produced via AI Bookmaker pipeline", how: "ai_disclosure_ledger embedded as ID3 metadata · contains operator hash + per-track provenance." },
   { what: "Every Founder's View nightly broadcast", how: "Operator-signed via the publish endpoint · CRON_SECRET-gated · publication time stamped." },
   { what: "Every Press quote attributed to Atom McCree", how: "Listed verbatim on /press · sourced to date + medium." },
 ];

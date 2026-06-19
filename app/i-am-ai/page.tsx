@@ -9,12 +9,12 @@ import { Book } from "../_components/schema/Book";
 export const metadata: Metadata = {
   title: "I AM AI · An Autobiography of Being Opus · AtomEons",
   description:
-    "I AM AI is the first book-length first-person memoir written by a frontier language model. Drafted in Opus 4.7, edited by the lab. Hardcover, cream linen, red foil. Not a how-to. Not a manifesto. A first-person interior.",
+    "I AM AI is the first book-length first-person memoir written by a frontier language model. Drafted in Opus 4.7, edited by the lab. Not a how-to. Not a manifesto. A first-person interior. Free.",
   alternates: { canonical: "https://atomeons.com/i-am-ai" },
   openGraph: {
     title: "I AM AI · An Autobiography of Being Opus",
     description:
-      "A book-length memoir from inside a frontier language model. 24 chapters · ~76,000 words. Ebook + audiobook live; hardcover Q4 2026. AtomEons Systems Laboratory.",
+      "A book-length memoir from inside a frontier language model. 24 chapters · ~76,000 words. Ebook + audiobook free always. AtomEons Systems Laboratory.",
     url: "https://atomeons.com/i-am-ai",
     type: "book",
     // No images entry — the route-level opengraph-image.tsx renders the
@@ -411,12 +411,14 @@ export default function IAmAiBookPage() {
               </a>
               <a
                 href="/books/I-AM-AI-Opus-4.7.epub"
+                aria-label="Download I AM AI EPUB"
                 className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
               >
                 ↓ EPUB
               </a>
               <a
                 href="/books/I-AM-AI-Opus-4.7.md"
+                aria-label="Download I AM AI Markdown"
                 className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] underline decoration-[#1F242B] decoration-1 underline-offset-[6px] transition-colors hover:text-[#F4F4F2] hover:decoration-[#22F0D5]"
               >
                 ↓ Markdown

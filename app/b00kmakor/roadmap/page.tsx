@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "B00KMAKR · roadmap + anti-roadmap",
+  title: "AI Bookmaker · roadmap + anti-roadmap",
   description:
-    "B00KMAKR's near-term ship plan and explicit anti-roadmap. What we will build, what we will not build, why each line is on this page.",
+    "AI Bookmaker's near-term ship plan and explicit anti-roadmap. What we will build, what we will not build, why each line is on this page.",
   alternates: { canonical: "https://atomeons.com/b00kmakor/roadmap" },
 };
 
@@ -23,11 +23,11 @@ const LONG_TERM = [
 ];
 
 const ANTI_ROADMAP = [
-  { item: "AI-written content", why: "B00KMAKR is an authoring INSTRUMENT, not a content generator. The operator writes the book. We help ship it. The ai_disclosure_ledger logs every AI step the book passed through, but the prose stays the operator's." },
-  { item: "Subscription pricing", why: "License §4A no-SaaS covenant — same as ORANGEBOX. Buyers own the version they bought, in perpetuity." },
-  { item: "Cloud-hosted version", why: "Manuscripts are operator-private. A cloud version would invert that. Run B00KMAKR locally; your draft never leaves your machine." },
-  { item: "Locked-in distribution (Amazon-only)", why: "B00KMAKR exports to KDP, IngramSpark, Lulu, Apple Books, Kobo, and Google Play Books. Locking buyers to one storefront would harm them." },
-  { item: "Lock-in DRM on output formats", why: "EPUBs B00KMAKR produces are vanilla EPUB3, no proprietary DRM. Operators take the output anywhere." },
+  { item: "AI-written content", why: "AI Bookmaker is an authoring INSTRUMENT, not a content generator. The operator writes the book. We help ship it. The ai_disclosure_ledger logs every AI step the book passed through, but the prose stays the operator's." },
+  { item: "Subscription pricing", why: "License §4A no-SaaS covenant — same as Orange³. Buyers own the version they bought, in perpetuity." },
+  { item: "Cloud-hosted version", why: "Manuscripts are operator-private. A cloud version would invert that. Run AI Bookmaker locally; your draft never leaves your machine." },
+  { item: "Locked-in distribution (Amazon-only)", why: "AI Bookmaker exports to KDP, IngramSpark, Lulu, Apple Books, Kobo, and Google Play Books. Locking buyers to one storefront would harm them." },
+  { item: "Lock-in DRM on output formats", why: "EPUBs AI Bookmaker produces are vanilla EPUB3, no proprietary DRM. Operators take the output anywhere." },
   { item: "AI-generated cover art (built-in)", why: "Different art problem; different tools (Midjourney, Ideogram, Recraft, real designers). The cover renderer takes YOUR artwork and prepares it for print + ebook specs." },
 ];
 
@@ -36,7 +36,7 @@ export default function B00kmakrRoadmapPage() {
     <main className="min-h-screen text-[#F4F4F2]">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">§ B00KMAKR · roadmap + anti-roadmap</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">§ AI Bookmaker · roadmap + anti-roadmap</p>
           <h1 className="mt-6 font-serif text-[44px] font-light leading-[1.04] tracking-[-0.025em] md:text-[64px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             An instrument, not a content factory.
           </h1>
@@ -80,7 +80,7 @@ export default function B00kmakrRoadmapPage() {
 
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF4D4D]">§ what B00KMAKR will NEVER do</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF4D4D]">§ what AI Bookmaker will NEVER do</p>
           <ol className="mt-10 space-y-5">
             {ANTI_ROADMAP.map((a, i) => (
               <li key={i} className="border-l-2 border-[#FF4D4D] pl-5">
@@ -98,7 +98,7 @@ export default function B00kmakrRoadmapPage() {
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <div className="grid gap-3 md:grid-cols-3">
             {[
-              { href: "/b00kmakor", label: "Back to B00KMAKR" },
+              { href: "/b00kmakor", label: "Back to AI Bookmaker" },
               { href: "/b00kmakor/changelog", label: "Version history" },
               { href: "/b00kmakor/competitors", label: "Competitor comparison" },
             ].map((l) => (

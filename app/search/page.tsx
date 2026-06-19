@@ -25,7 +25,7 @@ import { SearchFilter } from "./SearchFilter";
 export const metadata = {
   title: "Search — AtomEons directory",
   description:
-    "The AtomEons directory. Every canonical surface — /ai (the 44M on-ramp), /start (novice 11-minute), /orangebox (the $1 cockpit), /research/papers (12 manuscripts), /research/lessons-from-sci-fi (the monograph), /press (media kit), /founders-view (nightly broadcast), /intel/x-algorithm (xAI leak) — grouped by intent. Type any term to filter.",
+    "The AtomEons directory. Every canonical surface — /ai (the 44M on-ramp), /start (novice 11-minute), /orangebox (the free cockpit), /research/papers (12 manuscripts), /research/lessons-from-sci-fi (the monograph), /press (media kit), /founders-view (nightly broadcast), /intel/x-algorithm (xAI leak) — grouped by intent. Type any term to filter.",
   alternates: { canonical: "https://atomeons.com/search" },
   robots: { index: true, follow: true },
   openGraph: {
@@ -107,16 +107,16 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         href: "/orangebox",
         title: "/orangebox — the v6.3 AI cockpit",
         description:
-          "ORANGEBOX Command v6.3. Two surfaces: AE See-Suite (command) + AE Operations (systems). Basic Install or AI Box path. License §4A bans subscription. 30-day MFG + Workflow-Fit refund.",
-        keywords: ["orangebox", "cockpit", "claude code", "mcp", "ae see-suite", "ae operations", "buy", "v6.3"],
-        badge: "$99 once · forever",
+          "Orange³ Command v6.3. Two surfaces: AE See-Suite (command) + AE Operations (systems). Basic Install or AI Box path. License §4A bans subscription. 30-day MFG + Workflow-Fit replacement / install support.",
+        keywords: ["orangebox", "cockpit", "claude code", "mcp", "ae see-suite", "ae operations", "free", "v6.3"],
+        badge: "Free always",
       },
       {
         href: "/pricing",
-        title: "/pricing — $99 once, forever",
+        title: "/pricing — Free always",
         description:
-          "Standalone pricing page. $99 ORANGEBOX. License §4A no-saas lock. Comparison ladder vs Notion+Linear+Slack+Loom stack ($2,400/yr), Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced ($3,120/yr), part-time PM ($52K/yr), custom consulting ($40K–$120K). 6-FAQ.",
-        keywords: ["pricing", "cost", "price", "$99", "subscription", "license §4A", "no saas", "buy"],
+          "Standalone pricing page. Free Orange³. License §4A no-saas lock. Comparison ladder vs Notion+Linear+Slack+Loom stack ($2,400/yr), Claude Pro + ChatGPT Plus + Cursor + Gemini Advanced ($3,120/yr), part-time PM ($52K/yr), custom consulting ($40K–$120K). 6-FAQ.",
+        keywords: ["pricing", "cost", "price", "free", "subscription", "license §4A", "no saas"],
       },
       {
         href: "/support",
@@ -129,7 +129,7 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         href: "/faq",
         title: "/faq — every question before you buy",
         description:
-          "ORANGEBOX product Q&A plus nine novice AI questions. License §4A explained. Privacy stance. Refund paths.",
+          "Orange³ product Q&A plus nine novice AI questions. License §4A explained. Privacy stance. Replacement / install support paths.",
         keywords: ["faq", "questions", "refund", "license", "privacy"],
       },
     ],
@@ -226,7 +226,7 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         href: "/changelog",
         title: "/changelog — public version history",
         description:
-          "Every shipped change with date + surfaces touched + operator note. Site rewrites, ORANGEBOX releases, broadcast cadence, research drops, legal updates. Not a roadmap — what actually shipped.",
+          "Every shipped change with date + surfaces touched + operator note. Site rewrites, Orange³ releases, broadcast cadence, research drops, legal updates. Not a roadmap — what actually shipped.",
         keywords: ["changelog", "version history", "releases", "ship log"],
       },
       {

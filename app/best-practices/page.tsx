@@ -21,7 +21,7 @@ import { DiscordCTA } from "../_components/V3/DiscordCTA";
 export const metadata: Metadata = {
   title: "Best Practices · AI coding tool cheat sheets",
   description:
-    "Lab-curated cheat sheets for Claude (Desktop + Code), OpenAI Codex CLI, and Google Antigravity. Keyboard shortcuts · slash commands · config files · hooks · subagents · optimization tips · common mistakes · source links. Dense like a shortcut reference · facts not opinions.",
+    "Lab-curated cheat sheets for Claude, Codex CLI, and Antigravity. Keyboard shortcuts, slash commands, config files, hooks, subagents. Dense facts, not opinions.",
   alternates: { canonical: "https://atomeons.com/best-practices" },
   openGraph: {
     title: "Best Practices · AI coding tool cheat sheets",
