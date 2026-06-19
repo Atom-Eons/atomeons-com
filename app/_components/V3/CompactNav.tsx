@@ -21,10 +21,10 @@
  * No WebGL, no canvas, no third-party UI lib.
  */
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { SearchPalette } from "./SearchPalette";
+import { SearchPalette, rankRecord, type SearchIndexFile, type Scored } from "./SearchPalette";
 import { SiloSwitcher } from "./SiloSwitcher";
 
 // ─────────────────────────────────────────────────────────────────────
@@ -161,6 +161,7 @@ function loadTheme(): Theme {
 // ─────────────────────────────────────────────────────────────────────
 export function CompactNav() {
   const pathname = usePathname() || "/";
+  const router = useRouter();
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [hint, setHint] = useState<string>(IDLE_HINT);
   const [searchFocused, setSearchFocused] = useState(false);
@@ -171,6 +172,10 @@ export function CompactNav() {
   const navRef = useRef<HTMLElement | null>(null);
   const searchInputRef = useRef<HTMLInputElement | null>(null);
   const [searchQ, setSearchQ] = useState("");
+  // Live suggestions · operator 2026-06-18 "looks cooler · keep going"
+  const indexRef = useRef<SearchIndexFile | null>(null);
+  const [indexReady, setIndexReady] = useState(false);
+  const [suggestionIdx, setSuggestionIdx] = useState(-1);
 
   // Load theme + fx from localStorage on mount
   useEffect(() => {
@@ -268,13 +273,61 @@ export function CompactNav() {
     return () => document.removeEventListener("mousedown", c);
   }, []);
 
-  // Search submit · routes to /ask?q= or /q/<slug>
+  // Lazy-load the search index on first focus · 140KB, cached in ref
+  const ensureIndex = useCallback(async () => {
+    if (indexRef.current) return;
+    try {
+      const r = await fetch("/search-index.json", { cache: "force-cache" });
+      if (!r.ok) return;
+      const data = (await r.json()) as SearchIndexFile;
+      indexRef.current = data;
+      setIndexReady(true);
+    } catch {
+      // Network failure: input still works as plain /ask?q= submit
+    }
+  }, []);
+
+  // Live suggestions · top 6 ranked by SearchPalette.rankRecord
+  const suggestions = useMemo<Scored[]>(() => {
+    const q = searchQ.trim();
+    if (!q || !indexRef.current) return [];
+    const out: Scored[] = [];
+    for (const rec of indexRef.current.records) {
+      const s = rankRecord(q, rec);
+      if (s) out.push(s);
+    }
+    out.sort((a, b) => b.score - a.score);
+    return out.slice(0, 6);
+  }, [searchQ, indexReady]);
+
+  // Reset suggestion focus when query changes
+  useEffect(() => { setSuggestionIdx(-1); }, [searchQ]);
+
+  // Search submit · selected suggestion wins · else /ask?q=
   const onSearchSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
+    if (suggestionIdx >= 0 && suggestions[suggestionIdx]) {
+      router.push(suggestions[suggestionIdx].r);
+      setSearchQ("");
+      searchInputRef.current?.blur();
+      return;
+    }
     const q = searchQ.trim();
     if (!q) return;
     window.location.href = `/ask?q=${encodeURIComponent(q)}`;
-  }, [searchQ]);
+  }, [searchQ, suggestionIdx, suggestions, router]);
+
+  // Keyboard nav inside the input · ↑↓ navigate · Enter submit (handled by form)
+  const onSearchKey = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (suggestions.length === 0) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setSuggestionIdx((i) => (i + 1) % suggestions.length);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setSuggestionIdx((i) => (i <= 0 ? suggestions.length - 1 : i - 1));
+    }
+  }, [suggestions]);
 
   return (
     <>
@@ -388,10 +441,16 @@ export function CompactNav() {
                 ref={searchInputRef}
                 value={searchQ}
                 onChange={(e) => setSearchQ(e.target.value)}
-                onFocus={() => setSearchFocused(true)}
+                onFocus={() => { setSearchFocused(true); ensureIndex(); }}
                 onBlur={() => setSearchFocused(false)}
+                onKeyDown={onSearchKey}
                 placeholder="search · ⌘K"
                 aria-label="Search the lab"
+                aria-autocomplete="list"
+                aria-controls="nav-search-suggestions"
+                aria-expanded={searchFocused && suggestions.length > 0}
+                aria-activedescendant={suggestionIdx >= 0 ? `nav-sugg-${suggestionIdx}` : undefined}
+                role="combobox"
                 className="h-7 w-[120px] sm:w-[180px] lg:w-[220px] rounded-sm border bg-transparent pl-7 pr-2 outline-none transition-all"
                 style={{
                   borderColor: searchFocused ? C.signal : "rgba(255,255,255,0.08)",
@@ -403,6 +462,84 @@ export function CompactNav() {
                     : "none",
                 }}
               />
+              {/* Live suggestions dropdown · top 6 · ↑↓ navigate · Enter selects */}
+              {searchFocused && suggestions.length > 0 ? (
+                <ul
+                  id="nav-search-suggestions"
+                  role="listbox"
+                  className="absolute right-0 top-9 z-50 w-[min(360px,calc(100vw-32px))] overflow-hidden rounded-md border"
+                  style={{
+                    background: "#0A0B0E",
+                    borderColor: "rgba(34,240,213,0.18)",
+                    boxShadow: "0 12px 36px rgba(0,0,0,0.65)",
+                    animation: "ae-pop-inline 140ms cubic-bezier(0.16,1,0.3,1)",
+                  }}
+                >
+                  {suggestions.map((s, i) => (
+                    <li
+                      key={s.r}
+                      id={`nav-sugg-${i}`}
+                      role="option"
+                      aria-selected={i === suggestionIdx}
+                    >
+                      <Link
+                        href={s.r}
+                        onMouseEnter={() => setSuggestionIdx(i)}
+                        onMouseDown={(e) => {
+                          // mousedown beats blur · suggestion routes before input loses focus
+                          e.preventDefault();
+                          router.push(s.r);
+                          setSearchQ("");
+                          searchInputRef.current?.blur();
+                        }}
+                        className="flex flex-col gap-0.5 border-l-2 px-3 py-2 transition-colors"
+                        style={{
+                          borderLeftColor: i === suggestionIdx ? C.signal : "transparent",
+                          background: i === suggestionIdx ? "rgba(34,240,213,0.06)" : "transparent",
+                        }}
+                      >
+                        <span
+                          style={{
+                            color: C.paper,
+                            fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                            fontSize: 12, lineHeight: 1.25,
+                          }}
+                        >
+                          {s.t.length > 70 ? s.t.slice(0, 68) + "…" : s.t}
+                        </span>
+                        <span
+                          style={{
+                            color: C.mid,
+                            fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                            fontSize: 10, letterSpacing: "0.04em",
+                          }}
+                        >
+                          {s.r}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                  <li
+                    className="border-t px-3 py-1.5"
+                    style={{ borderTopColor: C.hair }}
+                  >
+                    <Link
+                      href={`/ask?q=${encodeURIComponent(searchQ.trim())}`}
+                      onMouseDown={(e) => {
+                        e.preventDefault();
+                        window.location.href = `/ask?q=${encodeURIComponent(searchQ.trim())}`;
+                      }}
+                      style={{
+                        color: C.signal,
+                        fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                        fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase",
+                      }}
+                    >
+                      ask the lab about &quot;{searchQ.trim().slice(0, 30)}&quot; →
+                    </Link>
+                  </li>
+                </ul>
+              ) : null}
             </form>
 
             {/* FX MASTER · sine-wave glyph · breathes when on · lg+ only */}
@@ -579,6 +716,18 @@ export function CompactNav() {
 
         {/* ─── Mobile · controlled drawer · operator 2026-06-19 hamburger in flex row */}
         {mobileOpen ? (
+          <>
+            {/* Backdrop · dim the page behind the drawer · tap to close */}
+            <div
+              aria-hidden
+              onClick={() => setMobileOpen(false)}
+              className="fixed inset-0 top-20 z-20 lg:hidden"
+              style={{
+                background: "rgba(0,0,0,0.55)",
+                backdropFilter: "blur(2px)",
+                WebkitBackdropFilter: "blur(2px)",
+              }}
+            />
           <div
             id="mobile-nav-drawer"
             role="dialog"
@@ -628,6 +777,7 @@ export function CompactNav() {
               </Link>
             </div>
           </div>
+          </>
         ) : null}
       </header>
 
@@ -640,6 +790,10 @@ export function CompactNav() {
         @keyframes ae-pop {
           from { opacity: 0; transform: translate(-50%, -4px); }
           to   { opacity: 1; transform: translate(-50%, 0); }
+        }
+        @keyframes ae-pop-inline {
+          from { opacity: 0; transform: translateY(-4px); }
+          to   { opacity: 1; transform: translateY(0); }
         }
         @keyframes ae-hint {
           from { opacity: 0; }
