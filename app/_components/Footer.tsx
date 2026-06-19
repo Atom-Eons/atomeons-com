@@ -182,6 +182,7 @@ export function Footer() {
                   { href: "/constellation", label: "/constellation" },
                   { href: "/founders-view", label: "/founders-view" },
                   { href: "/api/mcp", label: "/api/mcp · MCP server" },
+                  { href: "/api/agent-gateway", label: "/api/agent-gateway · LLM onboarding" },
                   { href: "/api", label: "/api · dev docs" },
                 ].map((l) => (
                   <Link
