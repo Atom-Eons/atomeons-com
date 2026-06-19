@@ -24,7 +24,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { SearchPalette, rankRecord, type SearchIndexFile, type Scored } from "./SearchPalette";
+import { SearchPalette, rankRecord, type SearchIndexFile, type SearchRecord, type Scored } from "./SearchPalette";
 import { SiloSwitcher } from "./SiloSwitcher";
 
 // ─────────────────────────────────────────────────────────────────────
@@ -176,6 +176,7 @@ export function CompactNav() {
   const indexRef = useRef<SearchIndexFile | null>(null);
   const [indexReady, setIndexReady] = useState(false);
   const [suggestionIdx, setSuggestionIdx] = useState(-1);
+  const [recent, setRecent] = useState<string[]>([]);
 
   // Load theme + fx from localStorage on mount
   useEffect(() => {
@@ -231,11 +232,17 @@ export function CompactNav() {
     }, 140);
   }, [clearTimer]);
 
-  // Close on route change
+  // Close on route change + record visit in localStorage (cap 6 · dedup)
   useEffect(() => {
     setOpenKey(null);
     setHint(IDLE_HINT);
     setMobileOpen(false);
+    if (pathname === "/" || pathname.startsWith("/api")) return;
+    try {
+      const prev: string[] = JSON.parse(localStorage.getItem("aeRecent") ?? "[]");
+      const next = [pathname, ...prev.filter((p) => p !== pathname)].slice(0, 6);
+      localStorage.setItem("aeRecent", JSON.stringify(next));
+    } catch {}
   }, [pathname]);
 
   // Escape closes · ⌘K + / focus inline search (GitHub pattern)
@@ -287,6 +294,27 @@ export function CompactNav() {
     }
   }, []);
 
+  // Hydrate recent list from localStorage on focus (empty-state surface)
+  const hydrateRecent = useCallback(() => {
+    try {
+      const r: string[] = JSON.parse(localStorage.getItem("aeRecent") ?? "[]");
+      setRecent(r);
+    } catch {}
+  }, []);
+
+  // Recent items resolved against the search index (need titles + categories)
+  const recentItems = useMemo<SearchRecord[]>(() => {
+    if (!indexRef.current || recent.length === 0) return [];
+    const byRoute = new Map<string, SearchRecord>();
+    for (const rec of indexRef.current.records) byRoute.set(rec.r, rec);
+    const out: SearchRecord[] = [];
+    for (const r of recent) {
+      const hit = byRoute.get(r);
+      if (hit) out.push(hit);
+    }
+    return out.slice(0, 5);
+  }, [recent, indexReady]);
+
   // Live suggestions · top 6 ranked by SearchPalette.rankRecord
   const suggestions = useMemo<Scored[]>(() => {
     const q = searchQ.trim();
@@ -306,8 +334,9 @@ export function CompactNav() {
   // Search submit · selected suggestion wins · else /ask?q=
   const onSearchSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
-    if (suggestionIdx >= 0 && suggestions[suggestionIdx]) {
-      router.push(suggestions[suggestionIdx].r);
+    const activeList: { r: string }[] = suggestions.length > 0 ? suggestions : recentItems;
+    if (suggestionIdx >= 0 && activeList[suggestionIdx]) {
+      router.push(activeList[suggestionIdx].r);
       setSearchQ("");
       searchInputRef.current?.blur();
       return;
@@ -315,19 +344,20 @@ export function CompactNav() {
     const q = searchQ.trim();
     if (!q) return;
     window.location.href = `/ask?q=${encodeURIComponent(q)}`;
-  }, [searchQ, suggestionIdx, suggestions, router]);
+  }, [searchQ, suggestionIdx, suggestions, recentItems, router]);
 
-  // Keyboard nav inside the input · ↑↓ navigate · Enter submit (handled by form)
+  // Keyboard nav inside the input · ↑↓ navigate over either suggestions or recents
   const onSearchKey = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (suggestions.length === 0) return;
+    const activeList = suggestions.length > 0 ? suggestions : recentItems;
+    if (activeList.length === 0) return;
     if (e.key === "ArrowDown") {
       e.preventDefault();
-      setSuggestionIdx((i) => (i + 1) % suggestions.length);
+      setSuggestionIdx((i) => (i + 1) % activeList.length);
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
-      setSuggestionIdx((i) => (i <= 0 ? suggestions.length - 1 : i - 1));
+      setSuggestionIdx((i) => (i <= 0 ? activeList.length - 1 : i - 1));
     }
-  }, [suggestions]);
+  }, [suggestions, recentItems]);
 
   return (
     <>
@@ -441,7 +471,7 @@ export function CompactNav() {
                 ref={searchInputRef}
                 value={searchQ}
                 onChange={(e) => setSearchQ(e.target.value)}
-                onFocus={() => { setSearchFocused(true); ensureIndex(); }}
+                onFocus={() => { setSearchFocused(true); ensureIndex(); hydrateRecent(); }}
                 onBlur={() => setSearchFocused(false)}
                 onKeyDown={onSearchKey}
                 placeholder="search · ⌘K"
@@ -462,12 +492,12 @@ export function CompactNav() {
                     : "none",
                 }}
               />
-              {/* Live suggestions dropdown · top 6 · ↑↓ navigate · Enter selects */}
-              {searchFocused && suggestions.length > 0 ? (
+              {/* Suggestions OR recent-routes dropdown · ↑↓ navigate · Enter selects */}
+              {searchFocused && (suggestions.length > 0 || (searchQ.trim() === "" && recentItems.length > 0)) ? (
                 <ul
                   id="nav-search-suggestions"
                   role="listbox"
-                  className="absolute right-0 top-9 z-50 w-[min(360px,calc(100vw-32px))] overflow-hidden rounded-md border"
+                  className="absolute right-0 top-9 z-50 w-[min(380px,calc(100vw-32px))] overflow-hidden rounded-md border"
                   style={{
                     background: "#0A0B0E",
                     borderColor: "rgba(34,240,213,0.18)",
@@ -475,69 +505,125 @@ export function CompactNav() {
                     animation: "ae-pop-inline 140ms cubic-bezier(0.16,1,0.3,1)",
                   }}
                 >
-                  {suggestions.map((s, i) => (
+                  {/* Header · 'Recent' for empty state, 'Top matches' otherwise */}
+                  <li
+                    aria-hidden
+                    className="px-3 pt-2 pb-1.5"
+                    style={{
+                      color: C.signal,
+                      opacity: 0.55,
+                      fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                      fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase",
+                    }}
+                  >
+                    {suggestions.length > 0
+                      ? `top matches · ${suggestions.length}`
+                      : `recent · ${recentItems.length}`}
+                  </li>
+                  {(suggestions.length > 0 ? suggestions : recentItems).map((s, i) => {
+                    const isSelected = i === suggestionIdx;
+                    // Substring-match highlight (only when query is non-empty exact match)
+                    const q = searchQ.trim().toLowerCase();
+                    let titleNode: React.ReactNode = s.t.length > 70 ? s.t.slice(0, 68) + "…" : s.t;
+                    if (q && q.length >= 2) {
+                      const tLower = s.t.toLowerCase();
+                      const idx = tLower.indexOf(q);
+                      if (idx !== -1) {
+                        const before = s.t.slice(0, idx);
+                        const match = s.t.slice(idx, idx + q.length);
+                        const after = s.t.slice(idx + q.length);
+                        titleNode = (
+                          <>
+                            {before}
+                            <mark style={{ background: "transparent", color: C.signal, fontWeight: 600 }}>{match}</mark>
+                            {after.length > 60 ? after.slice(0, 58) + "…" : after}
+                          </>
+                        );
+                      }
+                    }
+                    return (
+                      <li
+                        key={s.r}
+                        id={`nav-sugg-${i}`}
+                        role="option"
+                        aria-selected={isSelected}
+                      >
+                        <Link
+                          href={s.r}
+                          onMouseEnter={() => setSuggestionIdx(i)}
+                          onMouseDown={(e) => {
+                            e.preventDefault();
+                            router.push(s.r);
+                            setSearchQ("");
+                            searchInputRef.current?.blur();
+                          }}
+                          className="flex flex-col gap-0.5 border-l-2 px-3 py-2 transition-colors"
+                          style={{
+                            borderLeftColor: isSelected ? C.signal : "transparent",
+                            background: isSelected ? "rgba(34,240,213,0.06)" : "transparent",
+                          }}
+                        >
+                          <div className="flex items-baseline justify-between gap-2">
+                            <span
+                              className="min-w-0 flex-1 truncate"
+                              style={{
+                                color: C.paper,
+                                fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                                fontSize: 12, lineHeight: 1.25,
+                              }}
+                            >
+                              {titleNode}
+                            </span>
+                            {s.c ? (
+                              <span
+                                aria-hidden
+                                className="shrink-0"
+                                style={{
+                                  color: C.signal,
+                                  opacity: isSelected ? 0.85 : 0.5,
+                                  fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                                  fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase",
+                                }}
+                              >
+                                {s.c}
+                              </span>
+                            ) : null}
+                          </div>
+                          <span
+                            style={{
+                              color: C.mid,
+                              fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                              fontSize: 10, letterSpacing: "0.04em",
+                            }}
+                          >
+                            {s.r}
+                          </span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                  {/* Persistent escape hatch · /ask?q= when there's a query */}
+                  {searchQ.trim() !== "" ? (
                     <li
-                      key={s.r}
-                      id={`nav-sugg-${i}`}
-                      role="option"
-                      aria-selected={i === suggestionIdx}
+                      className="border-t px-3 py-1.5"
+                      style={{ borderTopColor: C.hair }}
                     >
                       <Link
-                        href={s.r}
-                        onMouseEnter={() => setSuggestionIdx(i)}
+                        href={`/ask?q=${encodeURIComponent(searchQ.trim())}`}
                         onMouseDown={(e) => {
-                          // mousedown beats blur · suggestion routes before input loses focus
                           e.preventDefault();
-                          router.push(s.r);
-                          setSearchQ("");
-                          searchInputRef.current?.blur();
+                          window.location.href = `/ask?q=${encodeURIComponent(searchQ.trim())}`;
                         }}
-                        className="flex flex-col gap-0.5 border-l-2 px-3 py-2 transition-colors"
                         style={{
-                          borderLeftColor: i === suggestionIdx ? C.signal : "transparent",
-                          background: i === suggestionIdx ? "rgba(34,240,213,0.06)" : "transparent",
+                          color: C.signal,
+                          fontFamily: "ui-monospace, SFMono-Regular, monospace",
+                          fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase",
                         }}
                       >
-                        <span
-                          style={{
-                            color: C.paper,
-                            fontFamily: "ui-monospace, SFMono-Regular, monospace",
-                            fontSize: 12, lineHeight: 1.25,
-                          }}
-                        >
-                          {s.t.length > 70 ? s.t.slice(0, 68) + "…" : s.t}
-                        </span>
-                        <span
-                          style={{
-                            color: C.mid,
-                            fontFamily: "ui-monospace, SFMono-Regular, monospace",
-                            fontSize: 10, letterSpacing: "0.04em",
-                          }}
-                        >
-                          {s.r}
-                        </span>
+                        ask the lab about &quot;{searchQ.trim().slice(0, 30)}&quot; →
                       </Link>
                     </li>
-                  ))}
-                  <li
-                    className="border-t px-3 py-1.5"
-                    style={{ borderTopColor: C.hair }}
-                  >
-                    <Link
-                      href={`/ask?q=${encodeURIComponent(searchQ.trim())}`}
-                      onMouseDown={(e) => {
-                        e.preventDefault();
-                        window.location.href = `/ask?q=${encodeURIComponent(searchQ.trim())}`;
-                      }}
-                      style={{
-                        color: C.signal,
-                        fontFamily: "ui-monospace, SFMono-Regular, monospace",
-                        fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase",
-                      }}
-                    >
-                      ask the lab about &quot;{searchQ.trim().slice(0, 30)}&quot; →
-                    </Link>
-                  </li>
+                  ) : null}
                 </ul>
               ) : null}
             </form>
