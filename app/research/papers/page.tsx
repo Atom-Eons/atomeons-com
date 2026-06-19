@@ -76,20 +76,54 @@ export default function ResearchPapersPage() {
         </p>
       </div>
 
-      {/* HERO */}
+      {/* HERO · Wave 116 Barnum amplification */}
       <section className="mx-auto w-full max-w-6xl px-6 py-20 md:py-28">
         <p className="mb-4 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.32em] text-[#22F0D5]">
           <AeMark size={20} glow />
-          ::ÆoNs Research · 12 manuscripts · april 2026
+          ::ÆoNs Research · {PAPERS.length} manuscripts · CC-BY 4.0 · april 2026
         </p>
-        <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.02em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
-          Read the papers.
+        <h1 className="text-balance text-[2.25rem] font-medium leading-[1.02] tracking-[-0.025em] text-[#F2F4F5] sm:text-5xl md:text-7xl">
+          One lab. One operator.
           <br />
           <span className="text-[#22F0D5]">
-            We&apos;ll explain them like you&apos;re six.
+            {PAPERS.length} CC-BY manuscripts.
           </span>
         </h1>
-        <p className="mt-8 max-w-3xl text-base leading-relaxed text-[#9BA5A7] md:text-lg">
+        <p className="mt-3 font-mono text-xs uppercase tracking-[0.22em] text-[#8E969D]">
+          zero institutional gates · zero grant funding · all papers carry falsifiable predictions
+        </p>
+
+        {/* Proof strip · same 4-cell grid pattern as Orange³ hero */}
+        <div
+          role="list"
+          aria-label="ÆoNs Research at a glance"
+          className="ae-stagger mt-10 grid grid-cols-2 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-4"
+          style={{ ["--stagger-step" as string]: "120ms" }}
+        >
+          {[
+            [String(PAPERS.length), "CC-BY manuscripts"],
+            ["0", "institutional gates"],
+            ["0", "grant dollars"],
+            ["1", "operator · marco island, fl"],
+          ].map(([n, label], i) => (
+            <div
+              key={label}
+              role="listitem"
+              aria-label={`${n}: ${label}`}
+              className="ae-reveal-up bg-[#08090B] p-4"
+              style={{ ["--stagger-index" as string]: i }}
+            >
+              <p className="font-mono text-[clamp(22px,3vw,32px)] font-light leading-[1] text-[#22F0D5]">
+                {n}
+              </p>
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
+                {label}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-10 max-w-3xl text-lg leading-[1.6] text-[#B5BBC0]">
           Every paper carries two summaries. The{" "}
           <span className="text-[#F2F4F5]">academic</span> one matches the
           paper&apos;s own abstract — falsifiable, peer-ready, formal. The{" "}
@@ -98,7 +132,7 @@ export default function ResearchPapersPage() {
           sentences. Click any card for both.
         </p>
 
-        <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+        <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
           source : Google Drive folder · all PDFs CC-BY 4.0 ·{" "}
           <a
             href="https://drive.google.com/drive/folders/19F87lsJanwKt1VafzyE-7EYh0yfMvyBV"

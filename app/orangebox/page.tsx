@@ -468,25 +468,28 @@ export default function OrangeboxPage() {
             </p>
 
             {/* Wave 75 · VALUE AT TOP · operator: "value on top." 4-cell
-                proof strip immediately under hero h1 · no scroll required */}
+                proof strip immediately under hero h1 · no scroll required.
+                Wave 113 · cells stagger-reveal on scroll into view via
+                ae-reveal-up class · 80ms step between cells via inline
+                --stagger-step and per-cell --stagger-index. */}
             <div
               role="list"
               aria-label="Orange³ at a glance"
-              className="mt-6 grid grid-cols-2 gap-px border md:grid-cols-4"
-              style={{ borderColor: EMBER.border, background: EMBER.border }}
+              className="ae-stagger mt-6 grid grid-cols-2 gap-px border md:grid-cols-4"
+              style={{ borderColor: EMBER.border, background: EMBER.border, ["--stagger-step" as string]: "120ms" }}
             >
               {[
                 ["10-80×", "context compression"],
                 ["0", "telemetry · ever"],
                 ["14", "named-role depts"],
                 ["§4A", "no-SaaS · perpetual"],
-              ].map(([n, label]) => (
+              ].map(([n, label], i) => (
                 <div
                   key={label}
                   role="listitem"
                   aria-label={`${n}: ${label}`}
-                  className="p-4"
-                  style={{ background: EMBER.panel }}
+                  className="ae-reveal-up p-4"
+                  style={{ background: EMBER.panel, ["--stagger-index" as string]: i }}
                 >
                   <p className="font-mono text-[clamp(22px,3vw,32px)] font-light leading-[1]" style={{ color: EMBER.accent }}>
                     {n}

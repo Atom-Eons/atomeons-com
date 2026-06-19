@@ -304,28 +304,32 @@ export default function B00KMakorPage() {
         </p>
 
         {/* Wave 75 · VALUE AT TOP · operator: "value on top." 4-cell proof
-            strip right under hero h1 · the killer numbers before any prose */}
+            strip right under hero h1 · the killer numbers before any prose.
+            Wave 113 · cells stagger-reveal on scroll-in via .ae-reveal-up +
+            --stagger-index for staggered fade-up. */}
         <div
           role="list"
           aria-label="AI Bookmaker at a glance"
-          className="mt-8 grid grid-cols-2 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-4"
+          className="ae-stagger mt-8 grid grid-cols-2 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-4"
+          style={{ ["--stagger-step" as string]: "120ms" }}
         >
           {[
             ["142", "feature surfaces"],
             ["76,000", "words shipped"],
             ["28", "audiobook tracks · live"],
             ["§4A", "no-SaaS · perpetual"],
-          ].map(([n, label]) => (
+          ].map(([n, label], i) => (
             <div
               key={label}
               role="listitem"
               aria-label={`${n}: ${label}`}
-              className="bg-[#08090B] p-4"
+              className="ae-reveal-up bg-[#08090B] p-4"
+              style={{ ["--stagger-index" as string]: i }}
             >
               <p className="font-mono text-[clamp(22px,3vw,32px)] font-light leading-[1] text-[#22F0D5]">
                 {n}
               </p>
-              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
                 {label}
               </p>
             </div>

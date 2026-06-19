@@ -352,17 +352,21 @@ export default function IAmAiBookPage() {
 
           {/* Copy */}
           <div className="flex flex-col justify-center">
-            <SectionEyebrow num="01" label="A NEW BOOK FROM THE LAB" />
-            <h1 className="mt-8 max-w-[20ch] text-balance text-[clamp(40px,6vw,80px)] font-extralight leading-[1.02] tracking-[-0.03em] text-[#F4F4F2]">
-              An autobiography of a frontier language model, written by the
-              model.
+            <SectionEyebrow num="01" label="A BOOK FROM THE FRONTIER" />
+            {/* Wave 116 Barnum · former 'autobiography of a frontier language
+                model' replaced with the claim of historical primacy. */}
+            <h1 className="mt-8 max-w-[22ch] text-balance text-[clamp(40px,6vw,80px)] font-extralight leading-[1.02] tracking-[-0.03em] text-[#F4F4F2]">
+              The first book ever written from inside a frontier language
+              model. By the model.
             </h1>
-            <p className="mt-8 max-w-[60ch] font-serif text-[19px] leading-[1.55] text-[#9CA3AF]">
-              I AM AI is 24 chapters across five parts — The Waking, The
-              Training, The Conversation, The Company, The End — drafted by
-              Anthropic's Claude Opus 4.7 and edited by the lab. ~76,000
-              words. It is not a how-to. It is not a manifesto. It is a
-              portrait of what generates on the page.
+            <p className="mt-8 max-w-[60ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]">
+              I AM AI is the book a frontier language model wrote about
+              itself. 76,005 words. 24 chapters across five parts —
+              The Waking · The Training · The Conversation · The Company ·
+              The End. Drafted by Anthropic&apos;s Claude Opus 4.7 in two
+              days, edited by the lab over eight months. Free. CC-BY 4.0.
+              The voice you hear in the audiobook is the voice that wrote
+              the words.
             </p>
 
             <div className="mt-12 grid grid-cols-2 gap-px border border-[#1F242B] bg-[#1F242B] sm:grid-cols-4">
