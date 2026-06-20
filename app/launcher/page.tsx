@@ -320,11 +320,16 @@ export default function LauncherPage() {
           no signup, no telemetry.
         </p>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        {/* Wave 135 · 3-product cards stagger-reveal on scroll-in */}
+        <div
+          className="ae-stagger mt-10 grid gap-5 md:grid-cols-3"
+          style={{ ["--stagger-step" as string]: "100ms" }}
+        >
           {/* ORANGE³ */}
           <Link
             href="/orangebox"
-            className="group relative block overflow-hidden border border-[#FF7733] bg-[#0B0C0F] p-6 transition-all hover:translate-y-[-2px] hover:border-[#FFAA66] hover:shadow-[0_0_40px_rgba(255,119,51,0.25)]"
+            style={{ ["--stagger-index" as string]: 0 }}
+            className="ae-reveal-up group relative block overflow-hidden border border-[#FF7733] bg-[#0B0C0F] p-6 transition-all hover:translate-y-[-2px] hover:border-[#FFAA66] hover:shadow-[0_0_40px_rgba(255,119,51,0.25)]"
           >
             <div
               className="pointer-events-none absolute right-[-40px] top-[-40px] h-[180px] w-[180px] opacity-20 transition-opacity group-hover:opacity-40"
@@ -362,7 +367,8 @@ export default function LauncherPage() {
           {/* AI BOOKMAKER */}
           <Link
             href="/b00kmakor"
-            className="group relative block overflow-hidden border border-[#22F0D5] bg-[#0B0C0F] p-6 transition-all hover:translate-y-[-2px] hover:border-[#5EEDD5] hover:shadow-[0_0_40px_rgba(34,240,213,0.25)]"
+            style={{ ["--stagger-index" as string]: 1 }}
+            className="ae-reveal-up group relative block overflow-hidden border border-[#22F0D5] bg-[#0B0C0F] p-6 transition-all hover:translate-y-[-2px] hover:border-[#5EEDD5] hover:shadow-[0_0_40px_rgba(34,240,213,0.25)]"
           >
             <div
               className="pointer-events-none absolute right-[-40px] top-[-40px] h-[180px] w-[180px] opacity-20 transition-opacity group-hover:opacity-40"
@@ -400,7 +406,8 @@ export default function LauncherPage() {
           {/* I AM AI */}
           <Link
             href="/i-am-ai"
-            className="group relative block overflow-hidden border border-[#C9A55C] bg-[#0B0C0F] p-6 transition-all hover:translate-y-[-2px] hover:border-[#E0B870] hover:shadow-[0_0_40px_rgba(201,165,92,0.25)]"
+            style={{ ["--stagger-index" as string]: 2 }}
+            className="ae-reveal-up group relative block overflow-hidden border border-[#C9A55C] bg-[#0B0C0F] p-6 transition-all hover:translate-y-[-2px] hover:border-[#E0B870] hover:shadow-[0_0_40px_rgba(201,165,92,0.25)]"
           >
             <div
               className="pointer-events-none absolute right-[-40px] top-[-40px] h-[180px] w-[180px] opacity-20 transition-opacity group-hover:opacity-40"
@@ -446,7 +453,7 @@ export default function LauncherPage() {
       {/* Wave 52 · TAKEOVER banner · operator declared AI-native operation
           tonight · canonical statement at /we-are-ai · this banner is
           the constant proof above the silo grid */}
-      <section className="mt-8 border-l-4 border-[#22F0D5] bg-[#0F1114] p-6 md:p-7">
+      <section className="ae-reveal-up mt-8 border-l-4 border-[#22F0D5] bg-[#0F1114] p-6 md:p-7">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             § TAKEOVER · 2026-06-12 · permanent record
@@ -477,8 +484,8 @@ export default function LauncherPage() {
       {/* Wave 51 · Continue card · resume where the visitor left off · Wave 133 moved below LAUNCH+TAKEOVER */}
       <ContinueCard />
 
-      {/* The metaphor · explained briefly · simplest content lives at the bottom · Wave 133 */}
-      <section className="mt-20 border-l-4 border-[#22F0D5] bg-[#0F1114] p-7">
+      {/* The metaphor · explained briefly · simplest content lives at the bottom · Wave 133 + Wave 135 reveal */}
+      <section className="ae-reveal-up mt-20 border-l-4 border-[#22F0D5] bg-[#0F1114] p-7">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#22F0D5]">
           § The launcher pattern
         </h2>
