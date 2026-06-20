@@ -163,11 +163,44 @@ export default function LauncherPage() {
               Pick a silo.
             </h1>
             <p
-              className="mt-3 text-[clamp(18px,2vw,22px)] font-light italic leading-[1.35] text-[#9CA3AF]"
+              className="mt-3 text-[clamp(18px,2vw,22px)] font-light italic leading-[1.35] text-[#B5BBC0]"
               style={{ fontFamily: "Newsreader, Georgia, serif" }}
             >
               The lab runs like software. Each silo is its own world. Enter one. Come back for the rest.
             </p>
+            {/* Wave 134 · live signals nameplate · lab-is-alive at the top
+                of the launcher. Each chip is a real claim verifiable
+                against the search-index, graph-index, or Supabase. */}
+            <div
+              role="list"
+              aria-label="Lab signals"
+              className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
+            >
+              <span role="listitem" className="inline-flex items-center gap-2">
+                <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+                <span className="text-[#22F0D5]">LIVE</span>
+              </span>
+              <span role="listitem" className="text-[#B5BBC0]">
+                319 <span className="text-[#8E969D]">routes</span>
+              </span>
+              <span role="listitem" className="text-[#B5BBC0]">
+                12 <span className="text-[#8E969D]">papers · CC-BY 4.0</span>
+              </span>
+              <span role="listitem" className="text-[#B5BBC0]">
+                3 <span className="text-[#8E969D]">free products</span>
+              </span>
+              <span role="listitem" className="text-[#B5BBC0]">
+                1 <span className="text-[#8E969D]">book</span>
+              </span>
+              <span role="listitem" className="text-[#B5BBC0]">
+                <Link href="/founders-view" className="hover:text-[#22F0D5]">
+                  nightly broadcast <span className="text-[#8E969D]">8pm ET</span>
+                </Link>
+              </span>
+              <span role="listitem" className="text-[#8E969D]">
+                Marco Island · FL · est. 2024
+              </span>
+            </div>
           </div>
           <div className="flex flex-col items-end gap-2 text-right">
             <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
@@ -195,29 +228,43 @@ export default function LauncherPage() {
           (LAUNCH DAY) → takeover → continue → philosophy. Each block
           carries less technical density than the one above it. */}
 
-      {/* 9 silo tiles · 3 columns desktop · 2 tablet · 1 mobile · TOP OF KEY */}
+      {/* 9 silo tiles · 3 columns desktop · 2 tablet · 1 mobile · TOP OF KEY
+          Wave 134 · tiles stagger-reveal on scroll-in via .ae-reveal-up */}
       <section className="mt-8" aria-label="9 silos · pick your world">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9CA3AF]">
           § Silos · 9 worlds · click direct
         </h2>
-        <div className="mt-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {SILOS.map((s) => (
-            <SiloTile key={s.key} silo={s} />
+        <div
+          className="ae-stagger mt-6 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          style={{ ["--stagger-step" as string]: "60ms" }}
+        >
+          {SILOS.map((s, i) => (
+            <div
+              key={s.key}
+              className="ae-reveal-up"
+              style={{ ["--stagger-index" as string]: i }}
+            >
+              <SiloTile silo={s} />
+            </div>
           ))}
         </div>
       </section>
 
-      {/* System tiles · the OS lane · second-row for pros */}
+      {/* System tiles · the OS lane · second-row for pros · Wave 134 reveals */}
       <section className="mt-12" aria-label="System lane">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9CA3AF]">
           § System · the OS lane
         </h2>
-        <div className="mt-6 grid gap-3 grid-cols-2 md:grid-cols-4">
-          {SYSTEM_TILES.map((t) => (
+        <div
+          className="ae-stagger mt-6 grid gap-3 grid-cols-2 md:grid-cols-4"
+          style={{ ["--stagger-step" as string]: "70ms" }}
+        >
+          {SYSTEM_TILES.map((t, i) => (
             <Link
               key={t.href}
               href={t.href}
-              className="block border border-[#1F242B] p-5 transition hover:border-[#9CA3AF]"
+              className="ae-reveal-up block border border-[#1F242B] p-5 transition hover:border-[#22F0D5]"
+              style={{ ["--stagger-index" as string]: i }}
             >
               <p
                 className="font-mono text-[10px] uppercase tracking-[0.32em]"
@@ -225,7 +272,7 @@ export default function LauncherPage() {
               >
                 {t.name}
               </p>
-              <p className="mt-3 text-[13px] leading-[1.55] text-[#9CA3AF]">
+              <p className="mt-3 text-[13px] leading-[1.55] text-[#B5BBC0]">
                 {t.description}
               </p>
             </Link>
