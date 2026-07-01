@@ -111,20 +111,24 @@ export default function TrustPage() {
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
             § posture · the files
           </p>
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {POSTURE.map((p) => (
+          <div
+            className="ae-stagger mt-10 grid gap-5 md:grid-cols-2"
+            style={{ ["--stagger-step" as string]: "80ms" }}
+          >
+            {POSTURE.map((p, i) => (
               <Link
                 key={p.href}
                 href={p.href}
-                className="group block border border-[#1F242B] bg-[#0F1114] p-5 transition-colors hover:border-[#22F0D5]"
+                className="ae-reveal-up group block border border-[#1F242B] bg-[#0F1114] p-5 transition-colors hover:border-[#22F0D5]"
+                style={{ ["--stagger-index" as string]: i }}
               >
                 <p className="font-serif text-[17px] font-medium text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                   {p.title}
                 </p>
-                <p className="mt-2 font-serif text-[14px] leading-[1.55] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+                <p className="mt-2 font-serif text-[14px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                   {p.body}
                 </p>
-                <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
+                <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{p.href} →
                 </p>
               </Link>
@@ -138,11 +142,18 @@ export default function TrustPage() {
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#FF4D4D]">
             § what the lab will NOT do
           </p>
-          <ul className="mt-8 space-y-4">
+          <ul
+            className="ae-stagger mt-8 space-y-4"
+            style={{ ["--stagger-step" as string]: "50ms" }}
+          >
             {WILL_NOT.map((row, i) => (
-              <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-4">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</span>
-                <p className="font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+              <li
+                key={i}
+                className="ae-reveal-up flex items-baseline gap-4 border-b border-[#1F242B] pb-4"
+                style={{ ["--stagger-index" as string]: i }}
+              >
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">{String(i + 1).padStart(2, "0")}</span>
+                <p className="font-serif text-[16px] leading-[1.6] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                   {row}
                 </p>
               </li>
