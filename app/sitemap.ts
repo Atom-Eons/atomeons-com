@@ -32,7 +32,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${BASE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     // Wave 132 sitemap freshness · Wave 129 /agents + Wave 130 /home-v3 add
+    // Wave 137 · /doctrine (operator + agent manual)
     { url: `${BASE}/agents`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${BASE}/doctrine`, lastModified: now, changeFrequency: "weekly", priority: 0.94 },
     { url: `${BASE}/home-v3`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/learn`, lastModified: now, changeFrequency: "weekly", priority: 0.99 },
     { url: `${BASE}/learn/where-am-i`, lastModified: now, changeFrequency: "monthly", priority: 0.92 },

@@ -125,25 +125,31 @@ const SYSTEM_TILES = [
     name: "Manual",
     href: "/manual",
     description: "17-section user manual · PDF-printable · every feature documented.",
-    accent: "#7a818a",
+    accent: "#8E969D",
+  },
+  {
+    name: "Doctrine",
+    href: "/doctrine",
+    description: "The operator + agent doctrine · 12 sections · deploy playbook · disaster recovery · voice register · Wave law.",
+    accent: "#22F0D5",
   },
   {
     name: "Version",
     href: "/version",
     description: "JUNE ROCKET release manifest · what shipped · what's deferred.",
-    accent: "#7a818a",
+    accent: "#8E969D",
   },
   {
     name: "Audit log",
     href: "/audit-log",
     description: "Every commit · 250 deep · SHA-linked to github.",
-    accent: "#7a818a",
+    accent: "#8E969D",
   },
   {
     name: "Tour",
     href: "/welcome",
     description: "First time? 90-second six-scroll introduction.",
-    accent: "#7a818a",
+    accent: "#8E969D",
   },
 ];
 
