@@ -64,19 +64,40 @@ const breadcrumbJsonLd = {
 
 export default function About() {
   return (
-    <main className="relative z-10 mx-auto w-full max-w-3xl px-6 pt-16 pb-24">
+    <main className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-16 pb-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#a7b8ad]">
-        Software · Books · Apps · LLMs
+      <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5]">
+        ::about the lab · software · books · apps · LLMs
       </p>
-      <h1 className="mt-2 text-4xl font-black tracking-tight md:text-5xl">
-        About AtomEons.
+      {/* Wave 138 · about hero elevated. Former "About AtomEons." →
+          real claim in the operator voice. Live signals nameplate below. */}
+      <h1
+        className="mt-6 max-w-[22ch] text-balance text-[clamp(48px,7vw,96px)] font-light leading-[1.02] tracking-[-0.025em] text-[#F4F4F2]"
+        style={{ fontFamily: "Newsreader, Georgia, serif" }}
+      >
+        One operator. One lab. Marco Island.
       </h1>
+      <div
+        role="list"
+        aria-label="Lab signals"
+        className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
+      >
+        <span role="listitem" className="inline-flex items-center gap-2">
+          <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+          <span className="text-[#22F0D5]">LIVE</span>
+        </span>
+        <span role="listitem" className="text-[#B5BBC0]">est. 2024</span>
+        <span role="listitem" className="text-[#B5BBC0]">319 <span className="text-[#8E969D]">routes</span></span>
+        <span role="listitem" className="text-[#B5BBC0]">12 <span className="text-[#8E969D]">CC-BY papers</span></span>
+        <span role="listitem" className="text-[#B5BBC0]">3 <span className="text-[#8E969D]">free products</span></span>
+        <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">book · Opus 4.7</span></span>
+        <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+      </div>
 
-      <p className="mt-6 text-lg text-[#a7b8ad]">
+      <p className="mt-10 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
         Atom McCree built AtomEons Systems Laboratory in Marco Island,
         Florida, to solve one problem: no existing AI tool let the
         operator stay outside the model&apos;s context while still running
@@ -84,14 +105,14 @@ export default function About() {
         out of that gap.
       </p>
 
-      <p className="mt-3 text-lg text-[#a7b8ad]">
+      <p className="mt-4 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
         The lab also publishes twelve research manuscripts under CC-BY 4.0,
         ranging from bioelectric oncology to a topological field theory of
         self-modifying systems, and broadcasts a nightly editorial at 8pm
         Eastern.
       </p>
 
-      <p className="mt-3 text-lg text-[#a7b8ad]">
+      <p className="mt-4 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
         One operator. No team. No deck. The receipts are the proof.
       </p>
 
@@ -128,11 +149,15 @@ export default function About() {
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
           Five rules. They run the build.
         </h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {DOCTRINE.map((d) => (
+        <div
+          className="ae-stagger mt-8 grid gap-4 md:grid-cols-2"
+          style={{ ["--stagger-step" as string]: "80ms" }}
+        >
+          {DOCTRINE.map((d, i) => (
             <div
               key={d.serial}
-              className="group relative overflow-hidden rounded-xl border border-[#1F242B] bg-[#0F1114] p-5 transition-colors hover:border-[#22F0D5]/40"
+              className="ae-reveal-up group relative overflow-hidden rounded-xl border border-[#1F242B] bg-[#0F1114] p-5 transition-colors hover:border-[#22F0D5]/40"
+              style={{ ["--stagger-index" as string]: i }}
             >
               <span
                 aria-hidden
