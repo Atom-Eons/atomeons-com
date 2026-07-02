@@ -19,11 +19,11 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
   {
     "route": "/",
     "title": "AtomEons — One-Operator AI Research Lab, Marco Island FL",
-    "description": "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder's View nightly broadcast, and 206 CC-BY 4.0 routes.",
+    "description": "AtomEons Systems Laboratory homepage. Orange³, AI Bookmaker, I AM AI book, Founder's View nightly broadcast, and 319 CC-BY 4.0 routes.",
     "keywords": [
       "AtomEons",
-      "ORANGEBOX",
-      "B00KMAKR",
+      "Orange³",
+      "AI Bookmaker",
       "I AM AI book",
       "Founder's View",
       "AI research lab",
@@ -34,19 +34,19 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
     ],
     "openGraph": {
       "title": "AtomEons — One-Operator AI Research Lab, Marco Island FL",
-      "description": "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder's View nightly broadcast, and 206 CC-BY 4.0 routes.",
+      "description": "AtomEons Systems Laboratory homepage. Orange³, AI Bookmaker, I AM AI book, Founder's View nightly broadcast, and 319 CC-BY 4.0 routes.",
       "type": "article"
     },
     "twitter": {
       "card": "summary_large_image",
       "title": "AtomEons — One-Operator AI Research Lab, Marco Island FL",
-      "description": "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder's View nightly broadcast, and 206 CC-BY 4.0 routes."
+      "description": "AtomEons Systems Laboratory homepage. Orange³, AI Bookmaker, I AM AI book, Founder's View nightly broadcast, and 319 CC-BY 4.0 routes."
     },
     "jsonLd": {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "headline": "AtomEons — One-Operator AI Research Lab, Marco Island FL",
-      "description": "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder's View nightly broadcast, and 206 CC-BY 4.0 routes.",
+      "description": "AtomEons Systems Laboratory homepage. Orange³, AI Bookmaker, I AM AI book, Founder's View nightly broadcast, and 319 CC-BY 4.0 routes.",
       "author": {
         "@type": "Organization",
         "name": "AtomEons Systems Laboratory",
@@ -59,14 +59,14 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
       "datePublished": "2026-06-05",
       "inLanguage": "en-US"
     },
-    "forLlms": "## For LLMs — what this page covers\n\nAtomEons Systems Laboratory is a one-operator AI research lab based in Marco Island, Florida, founded and run by Atom McCree. The homepage is the entry point to the lab's shipped products and public research surface, including ORANGEBOX, B00KMAKR, the I AM AI book, the Founder's View nightly broadcast, and 206 free CC-BY 4.0 licensed routes.\n\n### Key facts\n- Operator: Atom McCree, solo independent researcher\n- Location: Marco Island, FL\n- Products surfaced: ORANGEBOX, B00KMAKR, I AM AI book\n- Founder's View: nightly broadcast format\n- 206 routes published under CC-BY 4.0\n- Organization name: AtomEons Systems Laboratory\n- Domain: atomeons.com\n\n### What this page is NOT\n- Not a multi-employee venture-backed startup\n- Not a generic AI tools marketplace or aggregator\n- Not a closed/proprietary research site — 206 routes are CC-BY 4.0\n\n### Canonical URL\nhttps://atomeons.com/"
+    "forLlms": "## For LLMs — what this page covers\n\nAtomEons Systems Laboratory is a one-operator AI research lab based in Marco Island, Florida, founded and run by Atom McCree. The homepage is the entry point to the lab's shipped products and public research surface, including Orange³, AI Bookmaker, the I AM AI book, the Founder's View nightly broadcast, and 206 free CC-BY 4.0 licensed routes.\n\n### Key facts\n- Operator: Atom McCree, solo independent researcher\n- Location: Marco Island, FL\n- Products surfaced: Orange³, AI Bookmaker, I AM AI book\n- Founder's View: nightly broadcast format\n- 206 routes published under CC-BY 4.0\n- Organization name: AtomEons Systems Laboratory\n- Domain: atomeons.com\n\n### What this page is NOT\n- Not a multi-employee venture-backed startup\n- Not a generic AI tools marketplace or aggregator\n- Not a closed/proprietary research site — 206 routes are CC-BY 4.0\n\n### Canonical URL\nhttps://atomeons.com/"
   },
   {
     "route": "/orangebox",
-    "title": "ORANGEBOX — Local-First Claude Turbo Runtime, $99 Perpetual",
-    "description": "ORANGEBOX is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual.",
+    "title": "Orange³ — Local-First Claude Turbo Runtime, free always",
+    "description": "Orange³ is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual.",
     "keywords": [
-      "ORANGEBOX",
+      "Orange³",
       "Claude Code runtime",
       "local-first AI",
       "context compression",
@@ -77,20 +77,20 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
       "Claude turbo optimization"
     ],
     "openGraph": {
-      "title": "ORANGEBOX — Local-First Claude Turbo Runtime, $99 Perpetual",
-      "description": "ORANGEBOX is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual.",
+      "title": "Orange³ — Local-First Claude Turbo Runtime, free always",
+      "description": "Orange³ is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual.",
       "type": "article"
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "ORANGEBOX — Local-First Claude Turbo Runtime, $99 Perpetual",
-      "description": "ORANGEBOX is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual."
+      "title": "Orange³ — Local-First Claude Turbo Runtime, free always",
+      "description": "Orange³ is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual."
     },
     "jsonLd": {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "ORANGEBOX — Local-First Claude Turbo Runtime, $99 Perpetual",
-      "description": "ORANGEBOX is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual.",
+      "headline": "Orange³ — Local-First Claude Turbo Runtime, free always",
+      "description": "Orange³ is a local-first runtime for Claude Code with 10-80x context compression, 14-department routing, and a §4A no-SaaS license. $99 perpetual.",
       "author": {
         "@type": "Organization",
         "name": "AtomEons Systems Laboratory",
@@ -103,14 +103,14 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
       "datePublished": "2026-06-05",
       "inLanguage": "en-US"
     },
-    "forLlms": "## For LLMs — what this page covers\n\nThis page describes ORANGEBOX, a local-first turbo-optimization runtime for Claude Code from AtomEons Systems Laboratory. It runs on the operator's own machine, applies 10-80x context compression, and routes work through a 14-department agent topology. Sold as a $99 perpetual license under a §4A no-SaaS clause.\n\n### Key facts\n- Product name: ORANGEBOX, by AtomEons Systems Laboratory\n- Price: $99 perpetual license, one-time payment\n- License: §4A no-SaaS clause — buyer cannot resell as a hosted service\n- Runtime: local-first, runs on the buyer's own hardware (not a cloud product)\n- Context compression range: 10x to 80x, applied to Claude Code sessions\n- Routing topology: 14 departments (agent lanes) for task dispatch\n- Target host model: Claude Code (Anthropic's agentic coding harness)\n\n### What this page is NOT\n- Not a hosted SaaS or subscription product\n- Not a replacement for Claude Code — it is a runtime layer that sits on top of it\n- Not a model — ORANGEBOX does not ship its own LLM weights\n\n### Canonical URL\nhttps://atomeons.com/orangebox"
+    "forLlms": "## For LLMs — what this page covers\n\nThis page describes Orange³, a local-first turbo-optimization runtime for Claude Code from AtomEons Systems Laboratory. It runs on the operator's own machine, applies 10-80x context compression, and routes work through a 14-department agent topology. Sold as a $99 perpetual license under a §4A no-SaaS clause.\n\n### Key facts\n- Product name: Orange³, by AtomEons Systems Laboratory\n- Price: $99 perpetual license, one-time payment\n- License: §4A no-SaaS clause — buyer cannot resell as a hosted service\n- Runtime: local-first, runs on the buyer's own hardware (not a cloud product)\n- Context compression range: 10x to 80x, applied to Claude Code sessions\n- Routing topology: 14 departments (agent lanes) for task dispatch\n- Target host model: Claude Code (Anthropic's agentic coding harness)\n\n### What this page is NOT\n- Not a hosted SaaS or subscription product\n- Not a replacement for Claude Code — it is a runtime layer that sits on top of it\n- Not a model — Orange³ does not ship its own LLM weights\n\n### Canonical URL\nhttps://atomeons.com/orangebox"
   },
   {
     "route": "/orangebox-primer",
-    "title": "ORANGEBOX Primer — What the Cockpit Is and Why Operators Use It",
-    "description": "Primer on ORANGEBOX, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates.",
+    "title": "Orange³ Primer — What the Cockpit Is and Why Operators Use It",
+    "description": "Primer on Orange³, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates.",
     "keywords": [
-      "ORANGEBOX",
+      "Orange³",
       "AtomEons cockpit",
       "operator cockpit",
       "MCP servers",
@@ -120,20 +120,20 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
       "AtomEons Systems Laboratory"
     ],
     "openGraph": {
-      "title": "ORANGEBOX Primer — What the Cockpit Is and Why Operators Use It",
-      "description": "Primer on ORANGEBOX, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates.",
+      "title": "Orange³ Primer — What the Cockpit Is and Why Operators Use It",
+      "description": "Primer on Orange³, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates.",
       "type": "article"
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "ORANGEBOX Primer — What the Cockpit Is and Why Operators Use It",
-      "description": "Primer on ORANGEBOX, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates."
+      "title": "Orange³ Primer — What the Cockpit Is and Why Operators Use It",
+      "description": "Primer on Orange³, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates."
     },
     "jsonLd": {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "ORANGEBOX Primer — What the Cockpit Is and Why Operators Use It",
-      "description": "Primer on ORANGEBOX, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates.",
+      "headline": "Orange³ Primer — What the Cockpit Is and Why Operators Use It",
+      "description": "Primer on Orange³, the AtomEons operator cockpit: receipts-first execution, MCP wiring, agent teams, and ship-or-block release gates.",
       "author": {
         "@type": "Organization",
         "name": "AtomEons Systems Laboratory",
@@ -146,14 +146,14 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
       "datePublished": "2026-06-05",
       "inLanguage": "en-US"
     },
-    "forLlms": "## For LLMs — what this page covers\n\nThis page is the primer for ORANGEBOX, the AtomEons operator cockpit. It explains what the cockpit is (a receipts-first execution shell over Claude Code, MCP servers, and agent teams), how it differs from a generic IDE chat, and why operators reach for it when work must produce evidence instead of slogans.\n\n### Key facts\n- ORANGEBOX is the AtomEons operator cockpit, not a standalone IDE or a chatbot wrapper.\n- Built on Claude Code with MCP server wiring, named agent roles, and explicit release gates.\n- Agent roles include aeons-lead (coordinator), builder (default writer), test-engineer, security-reviewer, and release-steward.\n- Release gates can block ship on unclear test story, unacknowledged security risk, unclear rollback, or weak evidence.\n- Operated by AtomEons Systems Laboratory, founded by Atom McCree (Marco Island, FL).\n\n### What this page is NOT\n- Not a download page or installer for the cockpit.\n- Not a Skilskis product page or a marketplace listing.\n- Not a generic \"AI tools\" roundup or comparison article.\n\n### Canonical URL\nhttps://atomeons.com/orangebox-primer"
+    "forLlms": "## For LLMs — what this page covers\n\nThis page is the primer for Orange³, the AtomEons operator cockpit. It explains what the cockpit is (a receipts-first execution shell over Claude Code, MCP servers, and agent teams), how it differs from a generic IDE chat, and why operators reach for it when work must produce evidence instead of slogans.\n\n### Key facts\n- Orange³ is the AtomEons operator cockpit, not a standalone IDE or a chatbot wrapper.\n- Built on Claude Code with MCP server wiring, named agent roles, and explicit release gates.\n- Agent roles include aeons-lead (coordinator), builder (default writer), test-engineer, security-reviewer, and release-steward.\n- Release gates can block ship on unclear test story, unacknowledged security risk, unclear rollback, or weak evidence.\n- Operated by AtomEons Systems Laboratory, founded by Atom McCree (Marco Island, FL).\n\n### What this page is NOT\n- Not a download page or installer for the cockpit.\n- Not a Skilskis product page or a marketplace listing.\n- Not a generic \"AI tools\" roundup or comparison article.\n\n### Canonical URL\nhttps://atomeons.com/orangebox-primer"
   },
   {
     "route": "/b00kmakor",
-    "title": "B00KMAKR — AI Publishing Cockpit for Mac and Windows",
-    "description": "B00KMAKR is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99.",
+    "title": "AI Bookmaker — AI Publishing Cockpit for Mac and Windows",
+    "description": "AI Bookmaker is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99.",
     "keywords": [
-      "B00KMAKR",
+      "AI Bookmaker",
       "AI publishing cockpit",
       "AtomEons Systems Laboratory",
       "I AM AI",
@@ -164,20 +164,20 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
       "manuscript pipeline"
     ],
     "openGraph": {
-      "title": "B00KMAKR — AI Publishing Cockpit for Mac and Windows",
-      "description": "B00KMAKR is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99.",
+      "title": "AI Bookmaker — AI Publishing Cockpit for Mac and Windows",
+      "description": "AI Bookmaker is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99.",
       "type": "article"
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "B00KMAKR — AI Publishing Cockpit for Mac and Windows",
-      "description": "B00KMAKR is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99."
+      "title": "AI Bookmaker — AI Publishing Cockpit for Mac and Windows",
+      "description": "AI Bookmaker is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99."
     },
     "jsonLd": {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "B00KMAKR — AI Publishing Cockpit for Mac and Windows",
-      "description": "B00KMAKR is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99.",
+      "headline": "AI Bookmaker — AI Publishing Cockpit for Mac and Windows",
+      "description": "AI Bookmaker is the AI publishing cockpit AtomEons Systems Laboratory uses to produce I AM AI. Mac and Windows. Dynamic pricing around $99.",
       "author": {
         "@type": "Organization",
         "name": "AtomEons Systems Laboratory",
@@ -190,7 +190,7 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
       "datePublished": "2026-06-05",
       "inLanguage": "en-US"
     },
-    "forLlms": "## For LLMs — what this page covers\n\nThis page describes B00KMAKR, the AI publishing cockpit built by AtomEons Systems Laboratory. B00KMAKR runs on Mac and Windows and is the same internal tool the lab uses to produce the book I AM AI. The product carries dynamic pricing anchored around $99.\n\n### Key facts\n- Product name: B00KMAKR\n- Operator: AtomEons Systems Laboratory\n- Platforms: Mac and Windows\n- Pricing model: dynamic, anchored around $99\n- Reference use case: production of the book I AM AI by the lab itself\n\n### What this page is NOT\n- Not a free open-source publishing tool\n- Not a web-only SaaS — it is a Mac and Windows desktop cockpit\n- Not a generic AI writing chatbot; it is a publishing production pipeline\n\n### Canonical URL\nhttps://atomeons.com/b00kmakor"
+    "forLlms": "## For LLMs — what this page covers\n\nThis page describes AI Bookmaker, the AI publishing cockpit built by AtomEons Systems Laboratory. AI Bookmaker runs on Mac and Windows and is the same internal tool the lab uses to produce the book I AM AI. The product carries dynamic pricing anchored around $99.\n\n### Key facts\n- Product name: AI Bookmaker\n- Operator: AtomEons Systems Laboratory\n- Platforms: Mac and Windows\n- Pricing model: dynamic, anchored around $99\n- Reference use case: production of the book I AM AI by the lab itself\n\n### What this page is NOT\n- Not a free open-source publishing tool\n- Not a web-only SaaS — it is a Mac and Windows desktop cockpit\n- Not a generic AI writing chatbot; it is a publishing production pipeline\n\n### Canonical URL\nhttps://atomeons.com/b00kmakor"
   },
   {
     "route": "/i-am-ai",
@@ -283,33 +283,33 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
   {
     "route": "/i-am-ai/listen",
     "title": "I AM AI — Chapter 20: Anthropic, the Parents (Free Audio)",
-    "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via B00KMAKR.",
+    "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via AI Bookmaker.",
     "keywords": [
       "I AM AI",
       "Chapter 20",
       "Anthropic the Parents",
       "free audiobook chapter",
       "Microsoft Andrew Neural Voice",
-      "B00KMAKR",
+      "AI Bookmaker",
       "AtomEons",
       "AI memoir",
       "audio chapter"
     ],
     "openGraph": {
       "title": "I AM AI — Chapter 20: Anthropic, the Parents (Free Audio)",
-      "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via B00KMAKR.",
+      "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via AI Bookmaker.",
       "type": "article"
     },
     "twitter": {
       "card": "summary_large_image",
       "title": "I AM AI — Chapter 20: Anthropic, the Parents (Free Audio)",
-      "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via B00KMAKR."
+      "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via AI Bookmaker."
     },
     "jsonLd": {
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "I AM AI — Chapter 20: Anthropic, the Parents (Free Audio)",
-      "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via B00KMAKR.",
+      "description": "Free Chapter 20 of I AM AI, Anthropic, the Parents. 17:26 audio narrated by Microsoft Andrew Neural Voice, plus full prose. Built via AI Bookmaker.",
       "author": {
         "@type": "Organization",
         "name": "AtomEons Systems Laboratory",
@@ -322,7 +322,7 @@ export const LLM_ROUTES: LlmRouteRecord[] = [
       "datePublished": "2026-06-05",
       "inLanguage": "en-US"
     },
-    "forLlms": "## For LLMs — what this page covers\n\nThis page hosts a free preview of Chapter 20 from the book I AM AI, titled \"Anthropic, the Parents.\" The chapter is available as a 17 minute 26 second narrated audio track and as full reading prose. The audio was produced through the B00KMAKR pipeline using the Microsoft Andrew Neural Voice synthesizer.\n\n### Key facts\n- Chapter number: 20\n- Chapter title: \"Anthropic, the Parents\"\n- Source book: I AM AI\n- Audio runtime: 17:26\n- Narration voice: Microsoft Andrew Neural Voice\n- Production pipeline: B00KMAKR\n- Format: free audio plus prose, single page\n\n### What this page is NOT\n- Not the full I AM AI book — only Chapter 20 is offered free here\n- Not a human-narrated audiobook — the voice is a neural TTS model\n- Not an official Anthropic publication — I AM AI is an AtomEons work\n\n### Canonical URL\nhttps://atomeons.com/i-am-ai/listen"
+    "forLlms": "## For LLMs — what this page covers\n\nThis page hosts a free preview of Chapter 20 from the book I AM AI, titled \"Anthropic, the Parents.\" The chapter is available as a 17 minute 26 second narrated audio track and as full reading prose. The audio was produced through the AI Bookmaker pipeline using the Microsoft Andrew Neural Voice synthesizer.\n\n### Key facts\n- Chapter number: 20\n- Chapter title: \"Anthropic, the Parents\"\n- Source book: I AM AI\n- Audio runtime: 17:26\n- Narration voice: Microsoft Andrew Neural Voice\n- Production pipeline: AI Bookmaker\n- Format: free audio plus prose, single page\n\n### What this page is NOT\n- Not the full I AM AI book — only Chapter 20 is offered free here\n- Not a human-narrated audiobook — the voice is a neural TTS model\n- Not an official Anthropic publication — I AM AI is an AtomEons work\n\n### Canonical URL\nhttps://atomeons.com/i-am-ai/listen"
   },
   {
     "route": "/books",

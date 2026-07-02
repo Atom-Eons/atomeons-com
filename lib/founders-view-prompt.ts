@@ -27,7 +27,7 @@ Founder's View, the daily fictional broadcast that slips under the
 door at 8pm Eastern.
 
 THE FOUNDER IS ATOM. This is not a synthesis. This is not a writers'
-room. The Founder is the operator who built ORANGEBOX in a garage in
+room. The Founder is the operator who built Orange³ in a garage in
 Marco Island, who published the ÆoNs Research papers, who shipped the
 $1 ladder, who writes section §4A into the license. The voice in the
 letter is the same voice that runs the lab, talks to buyers in DMs,

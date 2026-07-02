@@ -14,7 +14,7 @@ export const SESSION_KEYS = {
 } as const;
 
 export const PRODUCT = {
-  NAME: "ORANGEBOX",
+  NAME: "Orange³",
   VERSION: "v6.0.0",
   // Default download = NSIS setup.exe (one file, double-click, 2-second launch).
   // Source: receipts/BUILD_v6.0.0.json
@@ -32,7 +32,7 @@ export const PRODUCT = {
   DISCLOSURE_ID: "ATOM-OBX-V6-SITE-HANDOFF-2026-0517",
   TAGLINE: "One file. Double-click. 2 seconds.",
   DESCRIPTION:
-    "ORANGEBOX Command v6.0.0 — native 4.46 MB Rust + egui binary. No webview. No chromium. 11 lanes. Claude + GPT + Gemini + Groq LPUs + Ollama + OpenRouter. $1 once, forever.",
+    "Orange³ Command v6.0.0 — native 4.46 MB Rust + egui binary. No webview. No chromium. 11 lanes. Claude + GPT + Gemini + Groq LPUs + Ollama + OpenRouter. $1 once, forever.",
   // PRICING LAW: $1 perpetual. See lib/stripe.ts for the binding source.
   PRICE_USD: 1,
   PRICE_USD_CENTS: 100,

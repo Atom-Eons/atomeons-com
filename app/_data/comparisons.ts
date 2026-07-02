@@ -307,7 +307,7 @@ Neither model is automatically better at lock-in avoidance. A poorly-designed on
 
 ## The §4A example
 
-The ORANGEBOX cockpit shipped by AtomEons is priced at $99 once, forever, with a clause in the license (§4A) that legally binds the lab to never switch to a subscription model. If the lab ever attempts the switch, every existing buyer keeps their license free in perpetuity.
+The Orange³ cockpit shipped by AtomEons is priced at $99 once, forever, with a clause in the license (§4A) that legally binds the lab to never switch to a subscription model. If the lab ever attempts the switch, every existing buyer keeps their license free in perpetuity.
 
 This is unusual. Most software licenses reserve the right to change pricing models. §4A removes that right. The reason it exists is to make the one-time commitment legally enforceable rather than merely promised. Without a clause like §4A, "one-time pricing" is a marketing claim, not a contract.
 

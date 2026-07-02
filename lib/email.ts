@@ -26,7 +26,7 @@ export async function sendDownloadEmail({
           dataVariables: {
             downloadUrl,
             sessionId,
-            productName: "ORANGEBOX",
+            productName: "Orange³",
           },
         }),
       });
@@ -57,13 +57,13 @@ export async function sendDownloadEmail({
         body: JSON.stringify({
           from: resendFrom,
           to,
-          subject: "Your ORANGEBOX download",
-          html: `<p>Thanks for buying ORANGEBOX.</p>
+          subject: "Your Orange³ download",
+          html: `<p>Thanks for buying Orange³.</p>
 <p>Download: <a href="${downloadUrl}">${downloadUrl}</a></p>
 <p>This link is valid for 30 days. Save the file when you get it.</p>
 <p>Order: ${sessionId}</p>
 <p>— AtomEons</p>`,
-          text: `Thanks for buying ORANGEBOX.\n\nDownload: ${downloadUrl}\n\nThis link is valid for 30 days. Save the file when you get it.\n\nOrder: ${sessionId}\n\n— AtomEons`,
+          text: `Thanks for buying Orange³.\n\nDownload: ${downloadUrl}\n\nThis link is valid for 30 days. Save the file when you get it.\n\nOrder: ${sessionId}\n\n— AtomEons`,
         }),
       });
       if (!res.ok) {

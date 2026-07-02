@@ -1,8 +1,8 @@
 /**
- * Sample build receipts — what every ORANGEBOX project produces.
+ * Sample build receipts — what every Orange³ project produces.
  *
  * These are illustrative entries showing the shape and voice of
- * party-line messages an ORANGEBOX cockpit writes while coordinating
+ * party-line messages an Orange³ cockpit writes while coordinating
  * a real project. They are NOT real telemetry from any specific
  * customer or operator.
  *
