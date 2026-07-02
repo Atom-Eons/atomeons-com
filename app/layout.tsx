@@ -197,6 +197,14 @@ export default function RootLayout({
             link tags. Novel for a solo lab: two feeds, one hub aggregate. */}
         <link rel="alternate" type="application/rss+xml" title="AtomEons — everything published" href="/feed.xml" />
         <link rel="alternate" type="application/rss+xml" title="Founder's View — letters only" href="/founders-view/rss" />
+        {/* Wave 145g · machine-readable heartbeat + agent manifest auto-discovery.
+            Any agent parsing the site's <head> now sees the JSON heartbeat +
+            LLM onboarding manifest without hunting. Complements /llms.txt
+            (LLM-bootstrap) + /.well-known/agent.json (agent card) with an
+            in-page alternate link for browsers + AI agents that follow the
+            standard rel="alternate" pattern. */}
+        <link rel="alternate" type="application/json" title="AtomEons live heartbeat" href="/api/live" />
+        <link rel="alternate" type="text/markdown" title="AtomEons agent onboarding manifest" href="/api/agent-gateway" />
         {/* Wave 119 · Speculation Rules · Chrome (Chromium) prerenders
             same-origin links on intent (pointerover or focus) so the
             next page is ready instantly when the user clicks.
