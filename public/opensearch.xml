@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>AtomEons</ShortName>
+  <LongName>AtomEons Systems Laboratory · site search</LongName>
+  <Description>Search 319 routes across atomeons.com — Founder's View letters, research papers, product docs, learn atlas, cyber curriculum, handbook, doctrine, org chart. Marco Island · FL · CC-BY 4.0.</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image height="64" width="64" type="image/svg+xml">https://atomeons.com/icon.svg</Image>
+  <Image height="512" width="512" type="image/png">https://atomeons.com/icon</Image>
+  <Url type="text/html" method="get" template="https://atomeons.com/search?q={searchTerms}"/>
+  <Url type="application/json" method="get" template="https://atomeons.com/api/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://atomeons.com/opensearch.xml"/>
+  <moz:SearchForm xmlns:moz="http://www.mozilla.org/2006/browser/search/">https://atomeons.com/search</moz:SearchForm>
+  <Developer>Atom McCree · a.mccree@gmail.com</Developer>
+  <Contact>a.mccree@gmail.com</Contact>
+  <Attribution>AtomEons Systems Laboratory · Marco Island · FL · 2026 · CC-BY 4.0</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  <Language>en-US</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+</OpenSearchDescription>

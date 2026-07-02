@@ -205,6 +205,17 @@ export default function RootLayout({
             standard rel="alternate" pattern. */}
         <link rel="alternate" type="application/json" title="AtomEons live heartbeat" href="/api/live" />
         <link rel="alternate" type="text/markdown" title="AtomEons agent onboarding manifest" href="/api/agent-gateway" />
+        {/* Wave 145m · OpenSearch descriptor · lets browsers add
+            atomeons.com as a search engine. After adding, users can
+            type `atomeons.com <query>` in the URL bar and go straight
+            to /search?q=<query>. Firefox / Chrome / Edge / Vivaldi
+            all honor this. */}
+        <link
+          rel="search"
+          type="application/opensearchdescription+xml"
+          title="AtomEons"
+          href="/opensearch.xml"
+        />
         {/* Wave 119 · Speculation Rules · Chrome (Chromium) prerenders
             same-origin links on intent (pointerover or focus) so the
             next page is ready instantly when the user clicks.
