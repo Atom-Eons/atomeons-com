@@ -64,6 +64,12 @@ function SiloTile({ silo }: { silo: Silo }) {
   let h = 0;
   for (let i = 0; i < silo.key.length; i++) h = (h * 31 + silo.key.charCodeAt(i)) | 0;
   const seed = Math.abs(h) % 12;
+  // Wave 144b · view-transition-name for native browser morph on click.
+  // The tile's name maps to whatever element on the destination page
+  // marks itself with the same name — cross-fade morphs into it via
+  // the View Transitions API (Wave 115 @view-transition CSS shipped
+  // the enabler; this ties specific origin→destination pairs together).
+  const tileVtName = `silo-${silo.key}`;
   return (
     <Link
       href={silo.home}
@@ -71,6 +77,7 @@ function SiloTile({ silo }: { silo: Silo }) {
       style={{
         borderColor: "#1F242B",
         background: `linear-gradient(180deg, ${silo.bgTint} 0%, rgba(11, 12, 15, 0.96) 60%)`,
+        viewTransitionName: tileVtName,
       }}
     >
       {/* Background glyph · low opacity · decoration */}
