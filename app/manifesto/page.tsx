@@ -215,15 +215,18 @@ export default function ManifestoPage() {
       />
 
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}
           <span className="text-[#1A2225]">/</span> Manifesto
         </p>
       </div>
 
-      {/* HERO — LabHero primitive */}
+      {/* HERO — LabHero primitive. Wave 139 · eyebrow tightened to the
+          non-negotiable register + live signals nameplate added via the
+          children slot (LabHero itself is shared across ~8 pages and is
+          intentionally left untouched). */}
       <LabHero
-        eyebrow={`::manifesto · ${CLAUSES.length} clauses · published, falsifiable, cc-by 4.0`}
+        eyebrow={`::the manifesto · ${CLAUSES.length} clauses · non-negotiable`}
         title="What the lab"
         titleAccent="insists on."
         subtitle={
@@ -253,7 +256,23 @@ export default function ManifestoPage() {
         primaryCta={{ label: "scan all 14 →", href: "#clause-index" }}
         secondaryCta={{ label: "open changelog →", href: "/changelog" }}
         tone="cyan"
-      />
+      >
+        <div
+          role="list"
+          aria-label="Lab signals"
+          className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
+        >
+          <span role="listitem" className="inline-flex items-center gap-2">
+            <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+            <span className="text-[#22F0D5]">LIVE</span>
+          </span>
+          <span role="listitem" className="text-[#B5BBC0]">14 <span className="text-[#8E969D]">clauses</span></span>
+          <span role="listitem" className="text-[#B5BBC0]">12 <span className="text-[#8E969D]">CC-BY papers</span></span>
+          <span role="listitem" className="text-[#B5BBC0]">§4A <span className="text-[#8E969D]">no-SaaS</span></span>
+          <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">operator</span></span>
+          <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+        </div>
+      </LabHero>
 
       {/* CLAUSE INDEX · scan all 14 in 10 seconds, click to deep-read */}
       <section id="clause-index" className="scroll-mt-24 border-b border-[#1A2225] bg-[#08090B]/30 py-12 md:py-16">
@@ -261,11 +280,14 @@ export default function ManifestoPage() {
           <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#22F0D5]">
             ::all 14 clauses at a glance · click any to deep-read
           </p>
-          <ol className="mt-6 grid gap-2 sm:grid-cols-2 md:grid-cols-2">
-            {CLAUSES.map((c) => {
+          <ol
+            className="ae-stagger mt-6 grid gap-2 sm:grid-cols-2 md:grid-cols-2"
+            style={{ ["--stagger-step" as string]: "60ms" }}
+          >
+            {CLAUSES.map((c, i) => {
               const accent = KIND_COLOR[c.kind];
               return (
-                <li key={c.num}>
+                <li key={c.num} className="ae-reveal-up" style={{ ["--stagger-index" as string]: i }}>
                   <a
                     href={`#clause-${c.num}`}
                     className="group flex items-start gap-3 rounded-xl border border-[#1A2225] bg-[#0A0F11] p-3 transition-colors hover:bg-[#0E1418]"
@@ -291,14 +313,18 @@ export default function ManifestoPage() {
       {/* CLAUSES */}
       <section className="py-20 md:py-28">
         <div className="mx-auto w-full max-w-4xl px-6">
-          <ol className="space-y-6">
-            {CLAUSES.map((c) => {
+          <ol
+            className="ae-stagger space-y-6"
+            style={{ ["--stagger-step" as string]: "60ms" }}
+          >
+            {CLAUSES.map((c, i) => {
               const accent = KIND_COLOR[c.kind];
               return (
                 <li
                   key={c.num}
                   id={`clause-${c.num}`}
-                  className="scroll-mt-20 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-9"
+                  className="ae-reveal-up scroll-mt-20 rounded-2xl border border-[#1A2225] bg-[#0A0F11] p-7 md:p-9"
+                  style={{ ["--stagger-index" as string]: i }}
                 >
                   <div className="flex flex-wrap items-baseline gap-3">
                     <span className="font-mono text-3xl font-medium text-[#F2F4F5] md:text-4xl">
@@ -344,8 +370,11 @@ export default function ManifestoPage() {
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.08] tracking-tight md:text-5xl">
             How to use this page.
           </h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-[#22F0D5]/30 bg-[#0A0F11] p-6">
+          <div
+            className="ae-stagger mt-8 grid gap-4 md:grid-cols-2"
+            style={{ ["--stagger-step" as string]: "80ms" }}
+          >
+            <div className="ae-reveal-up rounded-2xl border border-[#22F0D5]/30 bg-[#0A0F11] p-6" style={{ ["--stagger-index" as string]: 0 }}>
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
                 ::quote it
               </p>
@@ -360,7 +389,7 @@ export default function ManifestoPage() {
                 attribution.
               </p>
             </div>
-            <div className="rounded-2xl border border-[#22F0D5]/30 bg-[#0A0F11] p-6">
+            <div className="ae-reveal-up rounded-2xl border border-[#22F0D5]/30 bg-[#0A0F11] p-6" style={{ ["--stagger-index" as string]: 1 }}>
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
                 ::falsify it
               </p>

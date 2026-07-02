@@ -491,10 +491,10 @@ function Card({ inv, accent }: { inv: Invention; accent: string }) {
           {inv.date ? ` · ${inv.date}` : ""}
         </span>
       </div>
-      <p className="mt-3 text-[15px] leading-[1.6] text-[#9CA3AF]">{inv.one_line}</p>
+      <p className="mt-3 text-[15px] leading-[1.6] text-[#B5BBC0]">{inv.one_line}</p>
       <p className="mt-3 text-[13px] leading-[1.6] text-[#C9A55C]">
         <span className="font-mono uppercase tracking-[0.22em] text-[#C9A55C]">why this is first ·</span>{" "}
-        <span className="text-[#9CA3AF]">{inv.why_first}</span>
+        <span className="text-[#B5BBC0]">{inv.why_first}</span>
       </p>
       {inv.disclosure_id && (
         <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
@@ -503,7 +503,7 @@ function Card({ inv, accent }: { inv: Invention; accent: string }) {
       )}
       <ul className="mt-3 space-y-1">
         {inv.evidence.map((e, i) => (
-          <li key={i} className="text-[12px] leading-[1.5] text-[#9CA3AF]">
+          <li key={i} className="text-[12px] leading-[1.5] text-[#B5BBC0]">
             {e.url ? (
               <Link href={e.url} className="text-[#22F0D5] hover:underline">
                 ↗ {e.label}
@@ -531,10 +531,10 @@ function Sect({
 }) {
   return (
     <section className="mt-20">
-      <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#9CA3AF]">
+      <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#B5BBC0]">
         § {title} · {items.length} entries
       </h2>
-      <p className="mt-4 max-w-[72ch] text-[15px] leading-[1.65] text-[#9CA3AF]">
+      <p className="mt-4 max-w-[72ch] text-[15px] leading-[1.65] text-[#B5BBC0]">
         {blurb}
       </p>
       {/* Wave 125 · cards stagger-reveal on scroll-in via .ae-reveal-up */}
@@ -569,16 +569,34 @@ export default function InnovationsPage() {
       <header className="border-b border-[#1F242B] pb-12">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#7a818a]">
-              INVENTIONS · INNOVATIONS · DISCOVERIES · 2024-2026
+            <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5]">
+              ::innovations · inventions · discoveries · 2024-2026
             </p>
+            {/* Wave 139 · hero elevated to the /about pattern: Newsreader
+                light, clamp(48,7,96), leading 1.02, tracking -0.025em. */}
             <h1
-              className="mt-6 text-balance text-[clamp(48px,9vw,108px)] font-light leading-[0.92]"
-              style={{ fontFamily: "Newsreader, Georgia, serif", fontWeight: 300 }}
+              className="mt-6 max-w-[22ch] text-balance text-[clamp(48px,7vw,96px)] font-light leading-[1.02] tracking-[-0.025em] text-[#F4F4F2]"
+              style={{ fontFamily: "Newsreader, Georgia, serif" }}
             >
               The brag page.
             </h1>
-            <p className="mt-6 max-w-[64ch] text-[18px] leading-[1.55] text-[#9CA3AF]">
+            <div
+              role="list"
+              aria-label="Lab signals"
+              className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
+            >
+              <span role="listitem" className="inline-flex items-center gap-2">
+                <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+                <span className="text-[#22F0D5]">LIVE</span>
+              </span>
+              <span role="listitem" className="text-[#B5BBC0]">{total} <span className="text-[#8E969D]">entries</span></span>
+              <span role="listitem" className="text-[#B5BBC0]">319 <span className="text-[#8E969D]">routes</span></span>
+              <span role="listitem" className="text-[#B5BBC0]">12 <span className="text-[#8E969D]">CC-BY papers</span></span>
+              <span role="listitem" className="text-[#B5BBC0]">3 <span className="text-[#8E969D]">free products</span></span>
+              <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">book</span></span>
+              <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+            </div>
+            <p className="mt-8 max-w-[68ch] text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
               Things the lab built first. Things nobody else has done.
               All public. All dated. All sourced or honestly qualified.
               Mom&apos;s Law applies · no &ldquo;world&apos;s first&rdquo;
@@ -633,7 +651,7 @@ export default function InnovationsPage() {
         <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#22F0D5]">
           § How to read this page honestly
         </h2>
-        <ul className="mt-4 space-y-3 text-[14px] leading-[1.65] text-[#9CA3AF]">
+        <ul className="mt-4 space-y-3 text-[14px] leading-[1.65] text-[#B5BBC0]">
           <li className="flex gap-3">
             <span className="mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full bg-[#22F0D5]" />
             <span>
@@ -668,19 +686,22 @@ export default function InnovationsPage() {
       <DiscordCTA context="innovations-reader" />
 
       <section className="mt-20 border-t border-[#1F242B] pt-12">
-        <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#9CA3AF]">
+        <h2 className="font-mono text-[12px] uppercase tracking-[0.32em] text-[#B5BBC0]">
           § Where the daily firsts get tracked
         </h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          <Link href="/audit-log" className="block border border-[#1F242B] p-5 transition hover:border-[#22F0D5]">
+        <div
+          className="ae-stagger mt-8 grid gap-4 md:grid-cols-3"
+          style={{ ["--stagger-step" as string]: "80ms" }}
+        >
+          <Link href="/audit-log" className="ae-reveal-up block border border-[#1F242B] p-5 transition hover:border-[#22F0D5]" style={{ ["--stagger-index" as string]: 0 }}>
             <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">/audit-log</p>
             <p className="mt-2 text-[13px] text-[#F4F4F2]">Every commit, SHA-linked. The shipping record nobody can fake.</p>
           </Link>
-          <Link href="/founders-view" className="block border border-[#1F242B] p-5 transition hover:border-[#22F0D5]">
+          <Link href="/founders-view" className="ae-reveal-up block border border-[#1F242B] p-5 transition hover:border-[#22F0D5]" style={{ ["--stagger-index" as string]: 1 }}>
             <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">/founders-view</p>
             <p className="mt-2 text-[13px] text-[#F4F4F2]">Nightly broadcast · the daily firsts live here before they land on this page.</p>
           </Link>
-          <Link href="/version" className="block border border-[#1F242B] p-5 transition hover:border-[#22F0D5]">
+          <Link href="/version" className="ae-reveal-up block border border-[#1F242B] p-5 transition hover:border-[#22F0D5]" style={{ ["--stagger-index" as string]: 2 }}>
             <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">/version</p>
             <p className="mt-2 text-[13px] text-[#F4F4F2]">JUNE ROCKET release manifest · named waves with everything that shipped.</p>
           </Link>
@@ -688,10 +709,10 @@ export default function InnovationsPage() {
       </section>
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#8E969D]">
           /innovations · curated by Atom McCree · CC-BY 4.0 · last updated 2026-06-06
         </p>
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
+        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#8E969D]">
           Mom&apos;s Law applies · every claim sourced or qualified · corrections within 24h
         </p>
       </footer>

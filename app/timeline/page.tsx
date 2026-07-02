@@ -78,11 +78,32 @@ export default function TimelinePage() {
     <main className="min-h-screen text-[#F4F4F2]">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">§ timeline · ship log in time order</p>
-          <h1 className="mt-6 font-serif text-[44px] font-light leading-[1.04] tracking-[-0.025em] md:text-[64px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5]">::timeline · ship log in time order</p>
+          {/* Wave 139 · timeline hero elevated per Wave 138 /about pattern.
+              Live signals nameplate below reflects this page's own ledger
+              (entry count + year span), not site-wide stats — the more
+              honest claim for a ship-log page. */}
+          <h1
+            className="mt-6 max-w-[24ch] text-balance text-[clamp(48px,7vw,96px)] font-light leading-[1.02] tracking-[-0.025em] text-[#F4F4F2]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
             What the lab has shipped.
           </h1>
-          <p className="mt-6 max-w-2xl font-serif text-[18px] leading-[1.55] text-[#9CA3AF] md:text-[20px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+          <div
+            role="list"
+            aria-label="Timeline signals"
+            className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
+          >
+            <span role="listitem" className="inline-flex items-center gap-2">
+              <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+              <span className="text-[#22F0D5]">LIVE</span>
+            </span>
+            <span role="listitem" className="text-[#B5BBC0]">25 <span className="text-[#8E969D]">entries</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">2024–2026 <span className="text-[#8E969D]">span</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">5 <span className="text-[#8E969D]">categories</span></span>
+            <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+          </div>
+          <p className="mt-8 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             Most recent first. Every entry is either a shipped artifact,
             a doctrine revision, a model-generation upgrade, or a research
             release. The narrative is the entries — there is no
@@ -100,11 +121,11 @@ export default function TimelinePage() {
                   {y}
                 </p>
               </div>
-              <ol className="space-y-5">
+              <ol className="ae-stagger space-y-5" style={{ ["--stagger-step" as string]: "40ms" }}>
                 {grouped.get(y)!.map((e, i) => (
-                  <li key={i} className="border-l border-[#1F242B] pl-5">
+                  <li key={i} className="ae-reveal-up border-l border-[#1F242B] pl-5" style={{ ["--stagger-index" as string]: i }}>
                     <div className="flex flex-wrap items-baseline gap-4">
-                      <p className="font-mono text-[11px] tabular-nums tracking-[0.05em] text-[#7a818a]">{e.date}</p>
+                      <p className="font-mono text-[11px] tabular-nums tracking-[0.05em] text-[#8E969D]">{e.date}</p>
                       <p
                         className="font-mono text-[9px] uppercase tracking-[0.22em]"
                         style={{ color: CATEGORY_COLOR[e.category] }}
@@ -131,14 +152,23 @@ export default function TimelinePage() {
       <section>
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ continue</p>
-          <div className="mt-8 grid gap-3 md:grid-cols-3">
+          <div
+            className="ae-stagger mt-8 grid gap-3 md:grid-cols-3"
+            style={{ ["--stagger-step" as string]: "80ms" }}
+          >
             {[
               { href: "/now", label: "Today's ship log" },
               { href: "/receipts", label: "Audit ledger" },
               { href: "/changelog", label: "Per-version log" },
-            ].map((l) => (
-              <Link key={l.href} href={l.href} aria-label={l.label} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
+            ].map((l, i) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                aria-label={l.label}
+                className="ae-reveal-up group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]"
+                style={{ ["--stagger-index" as string]: i }}
+              >
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{l.href}
                 </p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>

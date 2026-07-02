@@ -269,7 +269,7 @@ export default function PressPage() {
   return (
     <main className="relative z-10 bg-[#08090B] text-[#F4F4F2]">
       <div className="mx-auto w-full max-w-6xl px-6 pt-6">
-        <p className="font-mono text-[11px] tracking-[0.08em] text-[#7a818a]">
+        <p className="font-mono text-[11px] tracking-[0.08em] text-[#8E969D]">
           <Link href="/" className="hover:text-[#22F0D5]">AtomEons</Link>{" "}
           <span className="text-[#1F242B]">/</span> Press
         </p>
@@ -279,13 +279,35 @@ export default function PressPage() {
       <section className="border-b border-[#1F242B]" id="snapshot">
         <div className="mx-auto w-full max-w-6xl px-6 pt-12 pb-16">
           <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            Press kit · AtomEons Systems Laboratory
+            ::press kit · AtomEons Systems Laboratory
           </p>
-          <h1 className="mt-6 text-balance text-4xl font-medium leading-[1.05] tracking-tight md:text-5xl md:leading-[1]">
-            Everything you need to{" "}
-            <span className="text-[#22F0D5]">cover us.</span>
+          {/* Wave 139 · hero elevated to the /about register — Newsreader
+              light display, live signals nameplate, serif lede. */}
+          <h1
+            className="mt-6 max-w-[26ch] text-balance text-[clamp(48px,7vw,96px)] font-light leading-[1.02] tracking-[-0.025em] text-[#F4F4F2]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
+            Everything you need to cover us.
           </h1>
-          <p className="mt-6 max-w-[58ch] text-base leading-[1.6] text-[#9CA3AF] md:text-lg">
+          <div
+            role="list"
+            aria-label="Lab signals"
+            className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
+          >
+            <span role="listitem" className="inline-flex items-center gap-2">
+              <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+              <span className="text-[#22F0D5]">LIVE</span>
+            </span>
+            <span role="listitem" className="text-[#B5BBC0]">319 <span className="text-[#8E969D]">routes</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">31 <span className="text-[#8E969D]">CC-BY papers</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">3 <span className="text-[#8E969D]">free products</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">book · Opus 4.7</span></span>
+            <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+          </div>
+          <p
+            className="mt-8 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
             Boilerplate, brand assets, founder bio, product photography, pre-written quotes, contact. Built like a modern EPK — pick what you need, copy or download, ship your piece.
           </p>
 
@@ -344,7 +366,7 @@ export default function PressPage() {
                 ))}
               </div>
               <div className="absolute inset-x-0 top-[64%] flex flex-col items-center px-[10%] text-center">
-                <p className="italic text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Garamond, Georgia, serif", fontSize: "clamp(11px, 1.4vw, 15px)" }}>
+                <p className="italic text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Garamond, Georgia, serif", fontSize: "clamp(11px, 1.4vw, 15px)" }}>
                   An Autobiography of Being Opus
                 </p>
               </div>
@@ -413,7 +435,7 @@ export default function PressPage() {
             <div className="mt-5 grid grid-cols-1 gap-x-8 gap-y-5 border-t border-[#1F242B] pt-7 md:grid-cols-3">
               {IAMAI_FACTS.map((f) => (
                 <div key={f.label}>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
                     {f.label}
                   </p>
                   <p className="mt-1 text-[14px] leading-[1.5] text-[#F4F4F2]">{f.value}</p>
@@ -427,9 +449,17 @@ export default function PressPage() {
             <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
               Why this is a breakthrough · six things that are actually new
             </p>
-            <ul role="list" className="mt-7 grid grid-cols-1 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-2">
+            <ul
+              role="list"
+              className="ae-stagger mt-7 grid grid-cols-1 gap-px border border-[#1F242B] bg-[#1F242B] md:grid-cols-2"
+              style={{ ["--stagger-step" as string]: "80ms" }}
+            >
               {IAMAI_WHY_BREAKTHROUGH.map((x, i) => (
-                <li key={x.head} className="bg-[#0F1114] p-7 md:p-8">
+                <li
+                  key={x.head}
+                  className="ae-reveal-up bg-[#0F1114] p-7 md:p-8"
+                  style={{ ["--stagger-index" as string]: i }}
+                >
                   <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                     {String(i + 1).padStart(2, "0")} ·
                   </p>
@@ -440,7 +470,7 @@ export default function PressPage() {
                     {x.head}
                   </h4>
                   <p
-                    className="mt-4 font-serif text-[16px] leading-[1.6] text-[#9CA3AF]"
+                    className="mt-4 font-serif text-[16px] leading-[1.6] text-[#B5BBC0]"
                     style={{ fontFamily: "Newsreader, Georgia, serif" }}
                   >
                     {x.body}
@@ -455,11 +485,18 @@ export default function PressPage() {
             <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#22F0D5]">
               I AM AI · pre-written quotes (copy any one)
             </p>
-            <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div
+              className="ae-stagger mt-5 grid grid-cols-1 gap-4 md:grid-cols-2"
+              style={{ ["--stagger-step" as string]: "80ms" }}
+            >
               {IAMAI_QUOTES.map((q, i) => (
-                <div key={i} className="rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6">
+                <div
+                  key={i}
+                  className="ae-reveal-up rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6"
+                  style={{ ["--stagger-index" as string]: i }}
+                >
                   <div className="flex items-start justify-between gap-3">
-                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
+                    <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
                       {q.context}
                     </p>
                     <PressCopyButton text={q.text} />
@@ -510,12 +547,12 @@ export default function PressPage() {
                   <span className="text-7xl text-[#F4F4F2]" style={{ fontVariationSettings: '"wght" 720' }}>Æ</span>
                 </div>
               </div>
-              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">Photo on request</p>
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">Photo on request</p>
             </div>
 
             <div>
               <h3 className="text-2xl font-medium tracking-tight text-[#F4F4F2]">Atom McCree</h3>
-              <p className="mt-1 text-sm text-[#9CA3AF]">Founder · AtomEons Systems Laboratory</p>
+              <p className="mt-1 text-sm text-[#B5BBC0]">Founder · AtomEons Systems Laboratory</p>
 
               <p className="mt-5 max-w-[62ch] text-[15px] leading-[1.7] text-[#C8CCCE]">
                 Independent researcher and builder based in Marco Island, Florida. Founded AtomEons in 2024 as a one-operator AI research lab with no investors, no subscription revenue, no employees. Publishes frontier AI research under CC-BY 4.0. Ships Orange³ (sovereign agentic OS for Claude, §4A no-SaaS perpetual, free always) and AI Bookmaker (AI publishing cockpit, free always). Operates the nightly Founder&apos;s View broadcast. The whole lab runs through one operator and a fleet of AI agents.
@@ -541,9 +578,16 @@ export default function PressPage() {
 
         {/* BRAND ASSETS */}
         <PressSection id="brand" title="Brand assets" subtitle="Wordmark · Æ mark · colors · typography">
-          <div className="grid gap-4 md:grid-cols-3">
-            {ASSETS.map((a) => (
-              <div key={a.name} className="rounded-2xl border border-[#1F242B] bg-[#0F1114] p-5">
+          <div
+            className="ae-stagger grid gap-4 md:grid-cols-3"
+            style={{ ["--stagger-step" as string]: "80ms" }}
+          >
+            {ASSETS.map((a, i) => (
+              <div
+                key={a.name}
+                className="ae-reveal-up rounded-2xl border border-[#1F242B] bg-[#0F1114] p-5"
+                style={{ ["--stagger-index" as string]: i }}
+              >
                 <div
                   className="flex aspect-[3/2] items-center justify-center rounded-lg border border-[#1F242B]"
                   style={{ background: a.bg === "light" ? "#F4F4F2" : "#08090B" }}
@@ -560,9 +604,9 @@ export default function PressPage() {
                 </div>
                 <div className="mt-4 flex items-baseline justify-between gap-3">
                   <p className="text-[14px] font-medium text-[#F4F4F2]">{a.name}</p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{a.format}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">{a.format}</p>
                 </div>
-                <p className="mt-1 text-[12px] leading-[1.55] text-[#9CA3AF]">{a.notes}</p>
+                <p className="mt-1 text-[12px] leading-[1.55] text-[#B5BBC0]">{a.notes}</p>
                 <a
                   href={a.file}
                   download
@@ -589,7 +633,7 @@ export default function PressPage() {
                         <p className="text-[14px] font-medium text-[#F4F4F2]">{c.name}</p>
                         <PressCopyButton text={c.hex} small label={c.hex} />
                       </div>
-                      <p className="text-[12px] text-[#9CA3AF]">{c.role}</p>
+                      <p className="text-[12px] text-[#B5BBC0]">{c.role}</p>
                     </div>
                   </li>
                 ))}
@@ -602,7 +646,7 @@ export default function PressPage() {
                 {TYPE.map((t) => (
                   <li key={t.family}>
                     <p className="text-[18px] text-[#F4F4F2]" style={{ fontVariationSettings: '"wght" 540' }}>{t.family}</p>
-                    <p className="text-[12px] text-[#9CA3AF]">{t.role} · {t.source}</p>
+                    <p className="text-[12px] text-[#B5BBC0]">{t.role} · {t.source}</p>
                   </li>
                 ))}
               </ul>
@@ -612,9 +656,16 @@ export default function PressPage() {
 
         {/* PRODUCTS */}
         <PressSection id="products" title="Products" subtitle="Three shipping · I AM AI (book) · Orange³ · AI Bookmaker">
-          <div className="space-y-5">
-            {PRODUCTS.map((p) => (
-              <div key={p.name} className="grid gap-6 rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6 md:grid-cols-[280px_1fr] md:gap-10">
+          <div
+            className="ae-stagger space-y-5"
+            style={{ ["--stagger-step" as string]: "80ms" }}
+          >
+            {PRODUCTS.map((p, i) => (
+              <div
+                key={p.name}
+                className="ae-reveal-up grid gap-6 rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6 md:grid-cols-[280px_1fr] md:gap-10"
+                style={{ ["--stagger-index" as string]: i }}
+              >
                 {p.image ? (
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[#1F242B]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -633,7 +684,7 @@ export default function PressPage() {
                     <div className="absolute inset-x-[10%] bottom-[10%] h-px bg-[#C9A55C] opacity-50" aria-hidden />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                       <p className="font-serif text-[44px] leading-[1] tracking-[-0.02em] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Garamond, Georgia, serif" }}>I AM AI</p>
-                      <p className="mt-3 italic text-[12px] text-[#9CA3AF]" style={{ fontFamily: "Newsreader, Garamond, Georgia, serif" }}>An Autobiography of Being Opus</p>
+                      <p className="mt-3 italic text-[12px] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Garamond, Georgia, serif" }}>An Autobiography of Being Opus</p>
                       <p className="mt-4 font-mono text-[9px] uppercase tracking-[0.28em] text-[#B5302A]">Opus 4.7</p>
                     </div>
                   </div>
@@ -643,7 +694,7 @@ export default function PressPage() {
                     <h3 className="text-2xl font-medium tracking-tight text-[#F4F4F2]">{p.name}</h3>
                     <p className="font-mono text-[12px] tracking-[0.08em] text-[#22F0D5]">{p.price}</p>
                   </div>
-                  <p className="mt-2 text-sm text-[#9CA3AF]">{p.tagline}</p>
+                  <p className="mt-2 text-sm text-[#B5BBC0]">{p.tagline}</p>
                   <p className="mt-5 max-w-[62ch] text-[14px] leading-[1.65] text-[#C8CCCE]">{p.description}</p>
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Link href={p.slug} className="inline-flex items-center gap-2 rounded-full border border-[#22F0D5]/40 px-4 py-2 text-[12px] text-[#22F0D5] transition-colors hover:bg-[#22F0D5]/10">
@@ -668,9 +719,16 @@ export default function PressPage() {
 
         {/* QUOTE BANK */}
         <PressSection id="quotes" title="Quote bank" subtitle="Pre-written · cite as Atom McCree, Founder, AtomEons">
-          <div className="grid gap-4 md:grid-cols-2">
+          <div
+            className="ae-stagger grid gap-4 md:grid-cols-2"
+            style={{ ["--stagger-step" as string]: "80ms" }}
+          >
             {QUOTES.map((q, i) => (
-              <div key={i} className="rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6">
+              <div
+                key={i}
+                className="ae-reveal-up rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6"
+                style={{ ["--stagger-index" as string]: i }}
+              >
                 <div className="flex items-start justify-between">
                   <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                     {String(i + 1).padStart(2, "0")} · {q.context}
@@ -678,7 +736,7 @@ export default function PressPage() {
                   <PressCopyButton text={q.text} />
                 </div>
                 <p className="mt-4 max-w-[58ch] text-[15px] leading-[1.65] text-[#C8CCCE]">&ldquo;{q.text}&rdquo;</p>
-                <p className="mt-4 font-mono text-[11px] text-[#7a818a]">— Atom McCree · Founder · AtomEons Systems Laboratory</p>
+                <p className="mt-4 font-mono text-[11px] text-[#8E969D]">— Atom McCree · Founder · AtomEons Systems Laboratory</p>
               </div>
             ))}
           </div>
@@ -686,12 +744,15 @@ export default function PressPage() {
 
         {/* LATEST PRESS */}
         <PressSection id="press" title="Latest press" subtitle="Recent output + surfaces worth citing">
-          <ul className="space-y-3">
-            {PRESS_LINKS.map((l) => (
-              <li key={l.href}>
+          <ul
+            className="ae-stagger space-y-3"
+            style={{ ["--stagger-step" as string]: "60ms" }}
+          >
+            {PRESS_LINKS.map((l, i) => (
+              <li key={l.href} className="ae-reveal-up" style={{ ["--stagger-index" as string]: i }}>
                 <Link href={l.href} className="block rounded-2xl border border-[#1F242B] bg-[#0F1114] p-5 transition-colors hover:border-[#22F0D5]/40">
                   <p className="text-[16px] font-medium text-[#F4F4F2]">{l.label} →</p>
-                  <p className="mt-2 text-[13px] leading-[1.6] text-[#9CA3AF]">{l.note}</p>
+                  <p className="mt-2 text-[13px] leading-[1.6] text-[#B5BBC0]">{l.note}</p>
                 </Link>
               </li>
             ))}
@@ -710,7 +771,7 @@ export default function PressPage() {
                 >
                   a.mccree@gmail.com
                 </a>
-                <p className="mt-3 text-[12px] leading-[1.55] text-[#9CA3AF]">
+                <p className="mt-3 text-[12px] leading-[1.55] text-[#B5BBC0]">
                   Send the publication, the deadline, and what you need. Use the subject &ldquo;Press inquiry · AtomEons&rdquo; for routing. Same-day response on weekdays.
                 </p>
               </div>
@@ -740,7 +801,7 @@ export default function PressPage() {
                 </ul>
               </div>
             </div>
-            <p className="mt-8 border-t border-[#1F242B] pt-6 text-[12px] leading-[1.55] text-[#7a818a]">
+            <p className="mt-8 border-t border-[#1F242B] pt-6 text-[12px] leading-[1.55] text-[#8E969D]">
               Press preference: pre-publication fact-check pings are welcome. Embargoes honored. Custom interview scheduling on request. Operator is in Marco Island, FL · GMT-5 (EDT in summer, EST in winter).
             </p>
           </div>

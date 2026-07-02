@@ -57,14 +57,31 @@ export default function TransparencyPage() {
     <main className="min-h-screen text-[#F4F4F2]">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">
-            § financial transparency · 2026-06
+          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5]">
+            ::financial transparency · the monthly ledger
           </p>
-          <h1 className="mt-6 font-serif text-[44px] font-light leading-[1.04] tracking-[-0.025em] md:text-[64px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+          <h1
+            className="mt-6 max-w-[24ch] text-balance text-[clamp(48px,7vw,96px)] font-light leading-[1.02] tracking-[-0.025em] text-[#F4F4F2]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
             What the lab costs to run.
           </h1>
-          <p className="mt-6 max-w-2xl font-serif text-[18px] leading-[1.55] text-[#9CA3AF] md:text-[20px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
-            Every recurring line item. Every dollar. "No VC money" is a
+          <div
+            role="list"
+            aria-label="Ledger signals"
+            className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
+          >
+            <span role="listitem" className="inline-flex items-center gap-2">
+              <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+              <span className="text-[#22F0D5]">LIVE</span>
+            </span>
+            <span role="listitem" className="text-[#B5BBC0]">{COSTS.length} <span className="text-[#8E969D]">line items</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">${TOTAL.toFixed(2)} <span className="text-[#8E969D]">monthly total</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">0 <span className="text-[#8E969D]">VC dollars</span></span>
+            <span role="listitem" className="text-[#8E969D]">cutoff 2026-06-01 · USD</span>
+          </div>
+          <p className="mt-8 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+            Every recurring line item. Every dollar. &quot;No VC money&quot; is a
             claim that deserves a number. Here is the number.
           </p>
         </div>
@@ -74,23 +91,23 @@ export default function TransparencyPage() {
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-[#1F242B] pb-4">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ recurring monthly costs</p>
-            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#7a818a]">cutoff 2026-06-01 · USD</p>
+            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#8E969D]">cutoff 2026-06-01 · USD</p>
           </div>
-          <ul className="mt-8 divide-y divide-[#1F242B]">
+          <ul className="ae-stagger mt-8 divide-y divide-[#1F242B]" style={{ ["--stagger-step" as string]: "40ms" }}>
             {COSTS.map((c, i) => (
-              <li key={i} className="flex items-baseline justify-between gap-6 py-3.5">
+              <li key={i} className="ae-reveal-up flex items-baseline justify-between gap-6 py-3.5" style={{ ["--stagger-index" as string]: i }}>
                 <div className="flex-1">
                   <p className="font-serif text-[16px] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                     {c.what}
                   </p>
                   {c.note ? (
-                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">{c.note}</p>
+                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-[#8E969D]">{c.note}</p>
                   ) : null}
                 </div>
                 <p
                   className={
                     c.monthly === 0
-                      ? "font-mono text-[14px] uppercase tracking-[0.12em] text-[#7a818a]"
+                      ? "font-mono text-[14px] uppercase tracking-[0.12em] text-[#8E969D]"
                       : "font-mono text-[16px] tabular-nums text-[#F4F4F2]"
                   }
                 >
@@ -103,7 +120,7 @@ export default function TransparencyPage() {
               <p className="font-mono text-[20px] font-semibold tabular-nums text-[#22F0D5]">${TOTAL.toFixed(2)}</p>
             </li>
           </ul>
-          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">
+          <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-[#8E969D]">
             does NOT include · Stripe transaction fees (variable, ~3% per sale) · payroll (zero · no employees) · office rent (operator works from home) · insurance · taxes · accountant
           </p>
         </div>
@@ -112,10 +129,10 @@ export default function TransparencyPage() {
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ revenue rules</p>
-          <ol className="mt-8 space-y-4">
+          <ol className="ae-stagger mt-8 space-y-4" style={{ ["--stagger-step" as string]: "60ms" }}>
             {REVENUE_RULES.map((r, i) => (
-              <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-3.5">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{String(i + 1).padStart(2, "0")}</span>
+              <li key={i} className="ae-reveal-up flex items-baseline gap-4 border-b border-[#1F242B] pb-3.5" style={{ ["--stagger-index" as string]: i }}>
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">{String(i + 1).padStart(2, "0")}</span>
                 <p className="font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
                   {r}
                 </p>
@@ -136,19 +153,19 @@ export default function TransparencyPage() {
               against the providers' billing portals. If a buyer wants to know
               exactly how free products are funded, this is the page.
             </p>
-            <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#7a818a]">
+            <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-[#8E969D]">
               Operator-funded · founder-bootstrapped · zero equity sold
             </p>
           </div>
 
-          <div className="mt-10 grid gap-3 md:grid-cols-3">
+          <div className="ae-stagger mt-10 grid gap-3 md:grid-cols-3" style={{ ["--stagger-step" as string]: "80ms" }}>
             {[
               { href: "/trust", label: "Trust posture" },
               { href: "/receipts", label: "Receipts ledger" },
               { href: "/manifesto", label: "Operating manifesto" },
-            ].map((l) => (
-              <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">
+            ].map((l, i) => (
+              <Link key={l.href} href={l.href} className="ae-reveal-up group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]" style={{ ["--stagger-index" as string]: i }}>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D] transition-colors group-hover:text-[#22F0D5]">
                   atomeons.com{l.href}
                 </p>
                 <p className="mt-2 font-serif text-[17px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>

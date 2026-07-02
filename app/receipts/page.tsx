@@ -118,23 +118,26 @@ const DELIBERATELY_ABSENT: Receipt[] = [
   },
 ];
 
-function ReceiptRow({ r }: { r: Receipt }) {
+function ReceiptRow({ r, i }: { r: Receipt; i: number }) {
   return (
-    <article className="border-t border-[#1F242B] py-10">
+    <article
+      className="ae-reveal-up border-t border-[#1F242B] py-10"
+      style={{ ["--stagger-index" as string]: i }}
+    >
       <div className="grid gap-6 md:grid-cols-[1fr_1fr] md:gap-12">
         <header>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
             {r.metric}
           </p>
           <p className="mt-3 font-mono text-[clamp(40px,6vw,72px)] leading-none tabular-nums tracking-[-0.03em] text-[#F4F4F2]">
             {r.value}
           </p>
-          <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-[#9CA3AF]">
+          <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-[#B5BBC0]">
             {r.evidence}
           </p>
         </header>
         <div>
-          <p className="font-serif text-[17px] leading-[1.55] text-[#9CA3AF]">
+          <p className="font-serif text-[17px] leading-[1.6] text-[#B5BBC0]">
             {r.detail}
           </p>
           {r.href ? (
@@ -201,15 +204,34 @@ export default function ReceiptsPage() {
         ]}
       />
       <section className="mx-auto max-w-6xl px-6 pt-24 pb-12 md:px-10 md:pt-32">
-        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#7a818a]">
-          <span className="text-[#9CA3AF]">§ Audit ledger</span>
-          <span className="mx-3 text-[#1F242B]">·</span>
-          <span>Current build</span>
+        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5]">
+          ::audit ledger · current build · falsifiable
         </p>
-        <h1 className="mt-8 max-w-[18ch] text-balance text-[clamp(44px,7vw,96px)] font-extralight leading-[1.02] tracking-[-0.03em] text-[#F4F4F2]">
+        {/* Wave 139 · hero elevated to the Wave 138 /about pattern —
+            Newsreader light serif display, live signals nameplate below. */}
+        <h1
+          className="mt-6 max-w-[24ch] text-balance text-[clamp(48px,7vw,96px)] font-light leading-[1.02] tracking-[-0.025em] text-[#F4F4F2]"
+          style={{ fontFamily: "Newsreader, Georgia, serif" }}
+        >
           What this lab has actually shipped.
         </h1>
-        <p className="mt-10 max-w-[60ch] font-serif text-[19px] leading-[1.58] text-[#9CA3AF]">
+        <div
+          role="list"
+          aria-label="Ledger signals"
+          className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
+        >
+          <span role="listitem" className="inline-flex items-center gap-2">
+            <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+            <span className="text-[#22F0D5]">LIVE</span>
+          </span>
+          <span role="listitem" className="text-[#B5BBC0]">200+ <span className="text-[#8E969D]">pages</span></span>
+          <span role="listitem" className="text-[#B5BBC0]">31 <span className="text-[#8E969D]">CC-BY papers</span></span>
+          <span role="listitem" className="text-[#B5BBC0]">68 <span className="text-[#8E969D]">lessons</span></span>
+          <span role="listitem" className="text-[#B5BBC0]">27 <span className="text-[#8E969D]">guardrails</span></span>
+          <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">operator</span></span>
+          <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+        </div>
+        <p className="mt-10 max-w-[60ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]">
           Every cell on this page has a measurement, a file the
           measurement was read from, and a link to inspect the file.
           When we do not have a number, we write em-dash; we do not
@@ -226,28 +248,32 @@ export default function ReceiptsPage() {
             Live and measurable
           </h2>
         </header>
-        {SHIPPED.map((r) => (
-          <ReceiptRow key={r.metric} r={r} />
-        ))}
+        <div className="ae-stagger" style={{ ["--stagger-step" as string]: "60ms" }}>
+          {SHIPPED.map((r, i) => (
+            <ReceiptRow key={r.metric} r={r} i={i} />
+          ))}
+        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-24 md:px-10 md:pb-32">
         <header className="mt-16 border-b border-[#1F242B] pb-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
             Deliberately absent
           </p>
           <h2 className="mt-3 text-2xl font-medium leading-tight tracking-tight md:text-3xl">
             Things the lab does not have
           </h2>
         </header>
-        {DELIBERATELY_ABSENT.map((r) => (
-          <ReceiptRow key={r.metric} r={r} />
-        ))}
+        <div className="ae-stagger" style={{ ["--stagger-step" as string]: "60ms" }}>
+          {DELIBERATELY_ABSENT.map((r, i) => (
+            <ReceiptRow key={r.metric} r={r} i={i} />
+          ))}
+        </div>
       </section>
 
       <section className="border-t border-[#1F242B] bg-[#08090B] py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-6 md:px-10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
             Falsify
           </p>
           <p className="mt-4 font-serif text-[20px] leading-[1.5] text-[#F4F4F2]">
@@ -270,7 +296,7 @@ export default function ReceiptsPage() {
             </Link>
             <Link
               href="/now"
-              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#9CA3AF] transition-colors hover:text-[#22F0D5]"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#B5BBC0] transition-colors hover:text-[#22F0D5]"
             >
               The current bench
             </Link>

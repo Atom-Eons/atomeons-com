@@ -98,7 +98,7 @@ const VERIFIED_STATE = [
 ];
 
 const TIER_COLOR: Record<Skill["tier"], string> = {
-  T1: "#9CA3AF",
+  T1: "#B5BBC0",
   T2: "#22F0D5",
   T3: "#FF4D4D",
   T4: "#C9A55C",
@@ -119,11 +119,31 @@ export default function SkillsPage() {
     <main className="min-h-screen text-[#F4F4F2]">
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">§ ÆSkill Suite V1.4 · public canon</p>
-          <h1 className="mt-6 font-serif text-[44px] font-light leading-[1.04] tracking-[-0.025em] md:text-[64px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5]">
+            ::the æskill suite · 15 skills · runtime doctrine
+          </p>
+          <h1
+            className="mt-6 max-w-[24ch] text-balance text-[clamp(48px,7vw,96px)] font-light leading-[1.02] tracking-[-0.025em] text-[#F4F4F2]"
+            style={{ fontFamily: "Newsreader, Georgia, serif" }}
+          >
             The 15 skills that run every session.
           </h1>
-          <p className="speakable-answer mt-6 max-w-3xl font-serif text-[18px] leading-[1.55] text-[#9CA3AF] md:text-[20px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
+          <div
+            role="list"
+            aria-label="Suite signals"
+            className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
+          >
+            <span role="listitem" className="inline-flex items-center gap-2">
+              <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
+              <span className="text-[#22F0D5]">LIVE</span>
+            </span>
+            <span role="listitem" className="text-[#B5BBC0]">15 <span className="text-[#8E969D]">skills</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">6 <span className="text-[#8E969D]">canonical chains</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">134 <span className="text-[#8E969D]">triggers · 0 collisions</span></span>
+            <span role="listitem" className="text-[#B5BBC0]">230 / 230 <span className="text-[#8E969D]">peer-review pass</span></span>
+            <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+          </div>
+          <p className="speakable-answer mt-8 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             The lab's runtime doctrine. Five tiers · fifteen skills ·
             six canonical chains. Peer-review tested at 230/230 green.
             Disclosure IDs included for the named research artifacts.
@@ -141,18 +161,18 @@ export default function SkillsPage() {
                 <p className="font-mono text-[10px] uppercase tracking-[0.22em]" style={{ color: TIER_COLOR[tier] }}>
                   § {tier} · {TIER_LABEL[tier]}
                 </p>
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#7a818a]">{list.length} skill{list.length > 1 ? "s" : ""}</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#8E969D]">{list.length} skill{list.length > 1 ? "s" : ""}</p>
               </div>
-              <ol className="mt-10 space-y-7">
-                {list.map((s) => (
-                  <li key={s.name} className="border-l-2 border-[#1F242B] pl-6">
+              <ol className="ae-stagger mt-10 space-y-7" style={{ ["--stagger-step" as string]: "60ms" }}>
+                {list.map((s, i) => (
+                  <li key={s.name} className="ae-reveal-up border-l-2 border-[#1F242B] pl-6" style={{ ["--stagger-index" as string]: i }}>
                     <div className="flex flex-wrap items-baseline justify-between gap-3">
                       <h2 className="font-mono text-[18px] text-[#22F0D5]">{s.name}</h2>
-                      <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">{s.role}</p>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">{s.role}</p>
                     </div>
                     <p className="mt-3 font-serif text-[15px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{s.what}</p>
                     {s.disclosure ? (
-                      <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">disclosure · {s.disclosure}</p>
+                      <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">disclosure · {s.disclosure}</p>
                     ) : null}
                   </li>
                 ))}
@@ -165,13 +185,13 @@ export default function SkillsPage() {
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ canonical chains · how the skills compose</p>
-          <ol className="mt-10 space-y-7">
-            {CHAINS.map((c) => (
-              <li key={c.name} className="border-l-2 border-[#1F242B] pl-6">
+          <ol className="ae-stagger mt-10 space-y-7" style={{ ["--stagger-step" as string]: "60ms" }}>
+            {CHAINS.map((c, i) => (
+              <li key={c.name} className="ae-reveal-up border-l-2 border-[#1F242B] pl-6" style={{ ["--stagger-index" as string]: i }}>
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <p className="font-mono text-[14px] text-[#22F0D5]">{c.name}</p>
                 </div>
-                <p className="mt-2 break-all font-mono text-[12px] text-[#9CA3AF]">{c.formula}</p>
+                <p className="mt-2 break-all font-mono text-[12px] text-[#B5BBC0]">{c.formula}</p>
                 <p className="mt-3 font-serif text-[15px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{c.description}</p>
               </li>
             ))}
@@ -182,9 +202,9 @@ export default function SkillsPage() {
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ standing orders</p>
-          <ol className="mt-10 space-y-5">
+          <ol className="ae-stagger mt-10 space-y-5" style={{ ["--stagger-step" as string]: "60ms" }}>
             {STANDING_ORDERS.map((o, i) => (
-              <li key={i} className="flex items-baseline gap-4 border-b border-[#1F242B] pb-4">
+              <li key={i} className="ae-reveal-up flex items-baseline gap-4 border-b border-[#1F242B] pb-4" style={{ ["--stagger-index" as string]: i }}>
                 <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">{String(i + 1).padStart(2, "0")}</span>
                 <p className="font-serif text-[16px] leading-[1.55] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{o}</p>
               </li>
@@ -196,16 +216,16 @@ export default function SkillsPage() {
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">§ verified state · peer-review pass</p>
-          <ul className="mt-10 divide-y divide-[#1F242B]">
+          <ul className="ae-stagger mt-10 divide-y divide-[#1F242B]" style={{ ["--stagger-step" as string]: "50ms" }}>
             {VERIFIED_STATE.map((v, i) => (
-              <li key={i} className="grid items-baseline gap-4 py-4 md:grid-cols-[260px_200px_1fr]">
+              <li key={i} className="ae-reveal-up grid items-baseline gap-4 py-4 md:grid-cols-[260px_200px_1fr]" style={{ ["--stagger-index" as string]: i }}>
                 <p className="font-serif text-[16px] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{v.what}</p>
                 <p className="font-mono text-[13px] text-[#22F0D5]">{v.value}</p>
-                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#7a818a]">{v.note}</p>
+                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#8E969D]">{v.note}</p>
               </li>
             ))}
           </ul>
-          <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
+          <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D]">
             test battery anchor · ATOM-AESUITE-TEST-2026-0420
           </p>
         </div>
@@ -228,15 +248,15 @@ export default function SkillsPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-3 md:grid-cols-4">
+          <div className="ae-stagger mt-12 grid gap-3 md:grid-cols-4" style={{ ["--stagger-step" as string]: "70ms" }}>
             {[
               { href: "/orangebox", label: "Orange³ · the cockpit" },
               { href: "/orangebox-primer", label: "Vendor security primer" },
               { href: "/manifesto", label: "14-clause manifesto" },
               { href: "/trust", label: "Trust posture" },
-            ].map((l) => (
-              <Link key={l.href} href={l.href} className="group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]">
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
+            ].map((l, i) => (
+              <Link key={l.href} href={l.href} className="ae-reveal-up group border border-[#1F242B] bg-[#0F1114] p-4 transition-colors hover:border-[#22F0D5]" style={{ ["--stagger-index" as string]: i }}>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8E969D] transition-colors group-hover:text-[#22F0D5]">atomeons.com{l.href}</p>
                 <p className="mt-2 font-serif text-[15px] font-medium" style={{ fontFamily: "Newsreader, Georgia, serif" }}>{l.label}</p>
               </Link>
             ))}
