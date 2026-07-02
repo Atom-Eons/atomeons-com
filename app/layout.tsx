@@ -172,6 +172,13 @@ export default function RootLayout({
             off first interaction without competing with critical CSS/JS. */}
         <link rel="prefetch" href="/search-index.json" as="fetch" crossOrigin="anonymous" />
         <link rel="prefetch" href="/graph-index.json" as="fetch" crossOrigin="anonymous" />
+        {/* Wave 145b · Google Fonts preconnect · saves the DNS + TLS round-trip
+            for Newsreader + JetBrains Mono (loaded via @import at the top of
+            globals.css). Without preconnect the browser doesn't know it needs
+            fonts.gstatic.com until it parses the CSS. crossOrigin required
+            because font files ship with CORS. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Wave 143 · site-wide RSS discovery · lets feed readers, browsers,
             and LLM crawlers auto-discover /feed.xml (aggregate) and
             /founders-view/rss (letters-only) via the standard atom alternate
