@@ -403,6 +403,27 @@ export default async function FoundersViewPostPage({
           </div>
         </div>
 
+        {/* Wave 145f · <link rel="prev/next"> series navigation.
+            React 19 auto-hoists these into <head>. Improves accessibility
+            (screen readers announce series position), SEO (Google
+            recognizes multi-page articles as a series), and MPA
+            back/forward gesture heuristics on iOS Safari. Rendered only
+            when the corresponding sibling exists to avoid dangling refs. */}
+        {prev && (
+          <link
+            rel="prev"
+            href={`https://atomeons.com/founders-view/${prev.slug}`}
+            title={prev.title}
+          />
+        )}
+        {next && (
+          <link
+            rel="next"
+            href={`https://atomeons.com/founders-view/${next.slug}`}
+            title={next.title}
+          />
+        )}
+
         {/* PREV / NEXT letter navigation — failure-soft (renders nothing if both null) */}
         <LetterPrevNext prev={prev} next={next} />
 
