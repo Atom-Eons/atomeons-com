@@ -172,6 +172,12 @@ export default function RootLayout({
             off first interaction without competing with critical CSS/JS. */}
         <link rel="prefetch" href="/search-index.json" as="fetch" crossOrigin="anonymous" />
         <link rel="prefetch" href="/graph-index.json" as="fetch" crossOrigin="anonymous" />
+        {/* Wave 143 · site-wide RSS discovery · lets feed readers, browsers,
+            and LLM crawlers auto-discover /feed.xml (aggregate) and
+            /founders-view/rss (letters-only) via the standard atom alternate
+            link tags. Novel for a solo lab: two feeds, one hub aggregate. */}
+        <link rel="alternate" type="application/rss+xml" title="AtomEons — everything published" href="/feed.xml" />
+        <link rel="alternate" type="application/rss+xml" title="Founder's View — letters only" href="/founders-view/rss" />
         {/* Wave 119 · Speculation Rules · Chrome (Chromium) prerenders
             same-origin links on intent (pointerover or focus) so the
             next page is ready instantly when the user clicks.
