@@ -32,14 +32,20 @@ function XMark({ className = "" }: { className?: string }) {
 const labLinks = [
   { label: "Founder's View", href: "/founders-view" },
   { label: "Research papers", href: "/research/papers" },
+  { label: "Handbook", href: "/handbook" },
+  { label: "Doctrine", href: "/doctrine" },
+  { label: "Org chart", href: "/org-chart" },
+  { label: "Manifesto", href: "/manifesto" },
+  { label: "Timeline", href: "/timeline" },
   { label: "Press", href: "/press" },
   { label: "About", href: "/about" },
+  { label: "🎲 Random page", href: "/random" },
 ];
 
 const productLinks = [
-  { label: "ORANGEBOX", href: "/orangebox" },
-  { label: "B00KMAKR", href: "/b00kmakor" },
-  { label: "I AM AI · the book", href: "/i-am-ai" },
+  { label: "Orange³", href: "/orangebox" },
+  { label: "AI Bookmaker", href: "/b00kmakor" },
+  { label: "I Am AI · the book", href: "/i-am-ai" },
 ];
 
 const learnLinks = [
