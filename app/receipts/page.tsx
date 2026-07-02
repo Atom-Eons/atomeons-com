@@ -40,11 +40,11 @@ type Receipt = {
 const SHIPPED: Receipt[] = [
   {
     metric: "Pages live",
-    value: "200+",
+    value: "319",
     evidence: "app/**/page.tsx",
     href: "/sitemap.xml",
     detail:
-      "Sum of route files across /learn, /cyber, /research, /founders-view, /orangebox, /b00kmakor, and the rest. Every URL in the sitemap resolves; the link audit reports zero broken hrefs in source.",
+      "Sum of route files across /learn, /cyber, /research, /founders-view, /orangebox, /b00kmakor, and the rest. Every URL in the sitemap resolves; the link audit reports zero broken hrefs in source. Live count exposed at /api/live.",
   },
   {
     metric: "Papers published",
@@ -195,7 +195,7 @@ export default function ReceiptsPage() {
             ratingExplanation: "Papers index at /research/papers enumerates current corpus with full text and CC-BY 4.0 footer per paper.",
           },
           {
-            text: "atomeons.com hosts 256+ public routes covering AI literacy, cyber security, decoded papers, and product writing.",
+            text: "atomeons.com hosts 319 public routes covering AI literacy, cyber security, decoded papers, and product writing.",
             reviewedAt: "2026-06-05",
             reviewUrl: "https://atomeons.com/sitemap.xml",
             rating: "True",
@@ -224,7 +224,7 @@ export default function ReceiptsPage() {
             <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
             <span className="text-[#22F0D5]">LIVE</span>
           </span>
-          <span role="listitem" className="text-[#B5BBC0]">200+ <span className="text-[#8E969D]">pages</span></span>
+          <span role="listitem" className="text-[#B5BBC0]">319 <span className="text-[#8E969D]">routes</span></span>
           <span role="listitem" className="text-[#B5BBC0]">31 <span className="text-[#8E969D]">CC-BY papers</span></span>
           <span role="listitem" className="text-[#B5BBC0]">68 <span className="text-[#8E969D]">lessons</span></span>
           <span role="listitem" className="text-[#B5BBC0]">27 <span className="text-[#8E969D]">guardrails</span></span>
