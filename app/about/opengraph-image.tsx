@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "About AtomEons. One operator. Marco Island, FL. Independent AI research lab. No VC money. No subscription. Two cockpits shipped (Orangebox + B00KMAKR) · §4A no-saas.";
+  "About AtomEons. One operator. Marco Island, FL. Independent AI research lab. No VC money. No subscription. Two cockpits shipped (Orange³ + AI Bookmaker) · §4A no-saas.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -53,8 +53,8 @@ export default function OG() {
           </p>
           <p style={{ margin: "20px 0 0", fontSize: 22, lineHeight: 1.4, color: "#C8CCCE", maxWidth: 1020, fontWeight: 400 }}>
             Founder: Atom McCree. No VC money. No employees. No board.
-            Twelve research manuscripts under CC-BY 4.0. The perpetual
-            ORANGEBOX cockpit (License §4A bans subscription). The
+            Thirty-one research manuscripts under CC-BY 4.0. The perpetual
+            Orange³ cockpit (License §4A bans subscription). The
             nightly Founder&apos;s View broadcast. The 14-clause
             manifesto. The lab built outside the cartel for the people
             the cartel isn&apos;t building for.
