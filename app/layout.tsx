@@ -179,6 +179,18 @@ export default function RootLayout({
             because font files ship with CORS. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Wave 145e · IndieWeb rel="me" identity verification.
+            Establishes cross-service ownership of atomeons.com so
+            Mastodon / Bluesky / IndieAuth / h-card readers can confirm
+            the site belongs to the same identity as the linked
+            profiles. Two-way verification: each linked profile must
+            also link back to atomeons.com with rel="me" for the loop
+            to close. Standard IndieWeb pattern. */}
+        <link rel="me" href="https://x.com/AtomMccree" />
+        <link rel="me" href="https://github.com/AtomEons" />
+        <link rel="me" href="https://github.com/Atom-Eons" />
+        <link rel="me" href="mailto:a.mccree@gmail.com" />
+        <link rel="author" href="https://atomeons.com/about" />
         {/* Wave 143 · site-wide RSS discovery · lets feed readers, browsers,
             and LLM crawlers auto-discover /feed.xml (aggregate) and
             /founders-view/rss (letters-only) via the standard atom alternate
