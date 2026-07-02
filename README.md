@@ -15,13 +15,38 @@
 **Source of [atomeons.com](https://atomeons.com) — the AtomEons Systems Laboratory website.**
 
 Next.js 16 · React 19 · Tailwind v4 · Turbopack
-9 silos · 4 themes · 142+ pages · 0 trackers
+9 silos · 4 themes · 319 routes · 0 trackers
 
-[Live site](https://atomeons.com) · [The lab](#the-lab-canon) · [Quick start](#local-dev) · [Discord workshop](https://discord.gg/4wx3AGga)
+[Live site](https://atomeons.com) · [The lab](#the-lab-canon) · [Products](#products--all-free-always) · [Quick start](#local-dev) · [Discord workshop](https://discord.gg/4wx3AGga)
 
-`open-source` `next-16` `react-19` `tailwind-v4` `cc-by-4.0` `built-by-ai`
+`open-source` `next-16` `react-19` `tailwind-v4` `cc-by-4.0` `built-by-ai` `wave-138-stable`
 
 </div>
+
+---
+
+## 🟢 GitHub is the site for the next few weeks
+
+**If [atomeons.com](https://atomeons.com) is unreachable**, this repo is the canonical surface. Everything the lab ships is here or one hop away:
+
+- **Read** — the lab in one document: [`app/doctrine/page.tsx`](./app/doctrine/page.tsx) · the user manual: [`app/manual/page.tsx`](./app/manual/page.tsx) · the 14-clause manifesto: [`app/manifesto/page.tsx`](./app/manifesto/page.tsx)
+- **Download Orange³** — sovereign agentic OS for Claude · [Releases at github.com/Atom-Eons/Orange3](https://github.com/Atom-Eons/Orange3/releases)
+- **Read I AM AI** — first book-length memoir by a frontier LLM · [github.com/AtomEons/i-am-ai](https://github.com/AtomEons/i-am-ai) · free PDF + EPUB + Markdown
+- **Listen I AM AI audiobook** — 28-track synthetic Opus voice · [github.com/AtomEons/i-am-ai-audiobook](https://github.com/AtomEons/i-am-ai-audiobook)
+- **Contact the operator** — [a.mccree@gmail.com](mailto:a.mccree@gmail.com) · [@AtomMccree](https://x.com/AtomMccree)
+
+Latest known-good tagged state: **`wave-138-stable`** (2026-07-01 · commit visible via `git log --tags`).
+
+---
+
+## Products · all free always
+
+| Product | Route | GitHub | License |
+|---|---|---|---|
+| **Orange³** — sovereign agentic OS for Claude | `/orangebox` | [Atom-Eons/Orange3](https://github.com/Atom-Eons/Orange3) | §4A no-SaaS · free always |
+| **AI Bookmaker** — the publishing house in a box | `/b00kmakor` | (release archive on demand) | §4A no-SaaS · free always |
+| **I AM AI** — 76,005-word Opus 4.7 memoir | `/i-am-ai` | [AtomEons/i-am-ai](https://github.com/AtomEons/i-am-ai) | CC-BY 4.0 |
+| **I AM AI audiobook** — 28 tracks · Eleven Labs Opus voice | `/i-am-ai#audiobook` | [AtomEons/i-am-ai-audiobook](https://github.com/AtomEons/i-am-ai-audiobook) | CC-BY 4.0 |
 
 ---
 
