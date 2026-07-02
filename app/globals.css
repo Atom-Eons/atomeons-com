@@ -2228,7 +2228,15 @@ body {
 /* REVEAL — fade + translate from below. Opt in by adding .ae-reveal-up
    to any element; a sibling RevealOnScroll observer flips the
    data-revealed attribute when the element crosses 12% of viewport.
-   Initial state: invisible + 12px down. Final: opaque + at-rest. */
+   Initial state: invisible + 12px down. Final: opaque + at-rest.
+
+   Wave 144 · 2026-07-02 · Progressive enhancement layer added below.
+   Modern browsers (Chrome 115+, Edge 115+, Opera 101+ · ~85% coverage
+   as of July 2026) use native `animation-timeline: view()` and run the
+   reveal on the compositor thread with zero JS observer overhead. The
+   IntersectionObserver + data-revealed transition path stays as the
+   fallback for Safari + Firefox until they ship the spec. Same visual
+   motion in both paths; only the driver differs. */
 .ae-reveal-up {
   opacity: 0;
   transform: translate3d(0, 12px, 0);
@@ -2268,6 +2276,61 @@ body {
    per-step delay). Set on the parent via inline style if needed. */
 .ae-stagger > * {
   transition-delay: calc(var(--stagger-index, 0) * var(--stagger-step, 80ms));
+}
+
+/* Wave 144 · scroll-driven native path.
+   Runs on the compositor thread. No JS observer. No layout thrash.
+   Progressive: takes over from the IO fallback above where supported.
+   Note: :not([data-revealed]) targets elements the observer hasn't
+   marked yet — when the IO fires and stamps data-revealed="true" the
+   scroll-driven animation deactivates and the CSS transition above
+   handles the finish. That preserves double-firing safety on browsers
+   that happen to support both paths. */
+@supports (animation-timeline: view()) {
+  @keyframes aeRevealUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes aeRevealFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes aeRevealScale {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .ae-reveal-up:not([data-revealed]) {
+    animation: aeRevealUp linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 88%;
+    /* stagger delay carried by stagger rule below applies as
+       animation-delay in this path */
+  }
+  .ae-reveal-fade:not([data-revealed]) {
+    animation: aeRevealFade linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 88%;
+  }
+  .ae-reveal-scale:not([data-revealed]) {
+    animation: aeRevealScale linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 88%;
+  }
+  .ae-stagger > *:not([data-revealed]) {
+    animation-delay: calc(var(--stagger-index, 0) * var(--stagger-step, 80ms));
+  }
 }
 
 /* GLITCH — RGB chromatic aberration on hover. The base text stays
@@ -2416,13 +2479,15 @@ body {
      the JS still needs to run or content stays invisible. Force
      reveal-classes to be visible immediately when motion is reduced
      so any JS failure / SSR screenshot / late hydration still shows
-     content. */
+     content. Wave 144 · also cancel the scroll-driven animation
+     path so the compositor doesn't play the reveal either. */
   .ae-reveal-up,
   .ae-reveal-fade,
   .ae-reveal-scale {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+    animation: none !important;
   }
 }
 
