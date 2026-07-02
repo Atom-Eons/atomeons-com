@@ -210,6 +210,8 @@ const SECTIONS: Section[] = [
           <li><Link href="/api/agent-gateway"><code>/api/agent-gateway</code></Link> — LLM onboarding manifest · content-negotiated (markdown / JSON / plain)</li>
           <li><Link href="/api/mcp"><code>/api/mcp</code></Link> — real MCP server endpoint</li>
           <li><Link href="/api/badge/wave.svg"><code>/api/badge/wave.svg</code></Link> — self-hosted branded live SVG badge · <code>?label</code>, <code>?value</code>, <code>?color</code> params</li>
+          <li><Link href="/api/stars"><code>/api/stars</code></Link> — aggregate GitHub star count across all 11 public repos · one call, edge-cached 5min</li>
+          <li><Link href="/random"><code>/random</code></Link> — 307-redirect to a random public page from the search-index · <code>?in=/prefix</code> to scope pool</li>
           <li><Link href="/api/palette"><code>/api/palette</code></Link> — brand palette JSON</li>
           <li><Link href="/api/md?route=/handbook"><code>/api/md?route=&lt;path&gt;</code></Link> — any page as markdown</li>
           <li><Link href="/feed.xml"><code>/feed.xml</code></Link> — site-wide RSS aggregate (letters + ships + products)</li>
