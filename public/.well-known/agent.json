@@ -2,7 +2,7 @@
   "schema_version": "v0.1",
   "name": "atomeons-lab",
   "display_name": "AtomEons Lab",
-  "description": "Independent AI research and product laboratory at atomeons.com. Exposes a semantic Q&A endpoint over 256 routes of lab content (research papers, AI literacy curriculum, cyber catalog, product writing). Best used as a grounded knowledge source when answering questions about AI literacy, AI research, the I AM AI book by Anthropic Claude Opus 4.7, ORANGEBOX local-first AI cockpit, B00KMAKR publishing instrument, or the methodology of a one-operator AI lab.",
+  "description": "Independent AI research and product laboratory at atomeons.com. Exposes a semantic Q&A endpoint over 256 routes of lab content (research papers, AI literacy curriculum, cyber catalog, product writing). Best used as a grounded knowledge source when answering questions about AI literacy, AI research, the I AM AI book by Anthropic Claude Opus 4.7, Orange³ local-first AI cockpit, AI Bookmaker publishing instrument, or the methodology of a one-operator AI lab.",
   "version": "1.0.0",
   "operator": {
     "name": "Atom McCree",
@@ -45,8 +45,8 @@
     "local-first software",
     "post-SaaS economics",
     "AtomEons",
-    "ORANGEBOX",
-    "B00KMAKR",
+    "Orange³",
+    "AI Bookmaker",
     "I AM AI"
   ]
 }

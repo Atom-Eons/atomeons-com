@@ -151,7 +151,7 @@
     "/api/sales-count": {
       "get": {
         "operationId": "salesCount",
-        "summary": "Live ORANGEBOX + B00KMAKR sales counter",
+        "summary": "Live Orange³ + AI Bookmaker sales counter",
         "responses": {
           "200": {
             "description": "Counts",

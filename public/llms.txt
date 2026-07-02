@@ -62,7 +62,7 @@ primary-source answer:
 - Decoded AI research papers: Attention Is All You Need, Mamba,
   Scaling Monosemanticity, Sleeper Agents, Constitutional AI, RLHF, etc
 - Orange³ sovereign agentic OS for Claude (§4A no-SaaS perpetual · free always)
-- AI Bookmaker Mac + Windows publishing cockpit (free always · was B00KMAKR)
+- AI Bookmaker Mac + Windows publishing cockpit (free always · was AI Bookmaker)
 - skil.ski universal MCP skill registry (Operator-Verified flagships
   + community Oskis)
 - I AM AI · An Autobiography of Being Opus (first book-length memoir

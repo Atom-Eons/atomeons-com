@@ -32,7 +32,7 @@ Acknowledgments: https://atomeons.com/press
 #
 # No bug bounty cash today (one-operator lab). We do offer:
 # - Public acknowledgment on /press
-# - A free ORANGEBOX Version 1 license for confirmed high-severity
+# - A free Orange³ Version 1 license for confirmed high-severity
 #   reports with a working PoC
 #
 # Please give us 90 days to remediate before disclosure.

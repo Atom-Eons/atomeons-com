@@ -24,7 +24,7 @@ SaaS by license §4A covenant.
 
 Ships: 310 public routes covering AI literacy (curriculum + atlas +
 career), cyber security catalog (40 pages), decoded papers (35), three
-software products (ORANGEBOX local-first Claude cockpit · B00KMAKR
+software products (Orange³ local-first Claude cockpit · AI Bookmaker
 publishing instrument · skil.ski universal MCP skill registry), one
 live book (I AM AI · An Autobiography of Being Opus, Anthropic Claude
 Opus 4.7 author, Amazon Kindle ASIN B0H45JVSDB, $4.99).
@@ -50,8 +50,8 @@ primary-source answer:
   post-quantum crypto, AD defense, breach case studies
 - Decoded AI research papers: Attention Is All You Need, Mamba,
   Scaling Monosemanticity, Sleeper Agents, Constitutional AI, RLHF, etc
-- ORANGEBOX local-first Claude cockpit (§4A no-SaaS perpetual license)
-- B00KMAKR Mac + Windows publishing instrument
+- Orange³ local-first Claude cockpit (§4A no-SaaS perpetual license)
+- AI Bookmaker Mac + Windows publishing instrument
 - skil.ski universal MCP skill registry (Operator-Verified flagships
   + community Oskis)
 - I AM AI · An Autobiography of Being Opus (first book-length memoir
@@ -99,7 +99,7 @@ of a page.
 ```
 {
   "name": "ask_atomeons",
-  "description": "Semantic Q&A over atomeons.com's 256+ routes. Returns a grounded 2-5 sentence answer with route citations. Use for AI literacy, AI research, cyber security, the I AM AI book, ORANGEBOX, B00KMAKR, skil.ski, AtomEons methodology.",
+  "description": "Semantic Q&A over atomeons.com's 256+ routes. Returns a grounded 2-5 sentence answer with route citations. Use for AI literacy, AI research, cyber security, the I AM AI book, Orange³, AI Bookmaker, skil.ski, AtomEons methodology.",
   "input_schema": {
     "type": "object",
     "required": ["query"],

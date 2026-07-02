@@ -69,7 +69,7 @@ const REDIRECTS: Record<string, string> = {
   "/opus": "/i-am-ai",
   "/opus47": "/i-am-ai",
   "/autobiography": "/i-am-ai",
-  // Wave 73 · 2026-06-12 · AI Bookmaker rebrand (was B00KMAKR)
+  // Wave 73 · 2026-06-12 · AI Bookmaker rebrand (was AI Bookmaker)
   "/ai-bookmaker": "/b00kmakor",
   "/ai-book-maker": "/b00kmakor",
   "/aibookmaker": "/b00kmakor",

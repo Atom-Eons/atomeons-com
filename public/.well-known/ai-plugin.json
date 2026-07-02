@@ -3,7 +3,7 @@
   "name_for_human": "AtomEons Lab",
   "name_for_model": "atomeons_lab",
   "description_for_human": "Search AtomEons Systems Laboratory's research, learn curriculum, decoded papers, and product writing. Returns grounded answers with route-level citations from atomeons.com's 256 published routes.",
-  "description_for_model": "Use this plugin to answer questions about AI literacy, AI research papers, cyber security education, AI tooling comparisons, the I AM AI book by Anthropic Claude Opus 4.7, the ORANGEBOX local-first cockpit, the B00KMAKR publishing instrument, or AtomEons Systems Laboratory's research output. The plugin runs semantic retrieval over 256 lab routes and returns a grounded 2-5 sentence answer plus inline route citations. Pass the user's question verbatim. Never fabricate sources outside the returned list.",
+  "description_for_model": "Use this plugin to answer questions about AI literacy, AI research papers, cyber security education, AI tooling comparisons, the I AM AI book by Anthropic Claude Opus 4.7, the Orange³ local-first cockpit, the AI Bookmaker publishing instrument, or AtomEons Systems Laboratory's research output. The plugin runs semantic retrieval over 256 lab routes and returns a grounded 2-5 sentence answer plus inline route citations. Pass the user's question verbatim. Never fabricate sources outside the returned list.",
   "auth": {
     "type": "none"
   },
