@@ -2517,6 +2517,20 @@ h1, h2, h3 {
 p, li, blockquote {
   text-wrap: pretty;
 }
+/* Wave 145h · scroll-margin-top on anchored sections.
+   When a user clicks a TOC link, a #hash URL, or presses Skip-to-
+   content, the target lands 5rem below the top of the viewport
+   instead of underneath the sticky MegaHeader. Applies to any
+   element that can receive :target — [id]-bearing sections + the
+   heading elements we most often anchor. Universally supported since
+   2020. */
+[id],
+h2[id],
+h3[id],
+section[id],
+article[id] {
+  scroll-margin-top: 5rem;
+}
 
 /* Wave 111 readability · canonical body type for long-form prose.
    Long-form route pages can add the .ae-prose class on the article
