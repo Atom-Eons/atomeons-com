@@ -2491,6 +2491,21 @@ body {
   }
 }
 
+/* Wave 145c · text-wrap balance/pretty · CSS 4 typography primitives.
+   `text-wrap: balance` on headings prevents orphan-last-line by
+   redistributing line breaks across all lines equally. Browsers with
+   support (Chrome 114+, Safari 17.5+, Firefox 121+ · ~92% caniuse as
+   of July 2026) apply it; older browsers ignore.
+   `text-wrap: pretty` on prose (weaker balance, faster) prevents last-
+   line orphans on paragraphs without the ~O(n²) cost of full balance.
+   Zero visual regression on non-supporting browsers. */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+p, li, blockquote {
+  text-wrap: pretty;
+}
+
 /* Wave 111 readability · canonical body type for long-form prose.
    Long-form route pages can add the .ae-prose class on the article
    wrapper to opt into 17px / 1.6 line-height / 70ch measure / serif
