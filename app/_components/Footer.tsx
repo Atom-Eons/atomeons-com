@@ -225,10 +225,21 @@ export function Footer() {
       </div>
 
       {/* ─── Bottom bar · operator + legal + verify ───────────────── */}
+      {/* Wave 145n · h-card microformats2 markup · IndieWeb standard for
+          machine-readable identity. Parsers (indieauth.com, Bridgy Fed,
+          Mastodon Fediverse, Bluesky's rel-me chain) automatically extract
+          operator name, location, URL, and email from this block. Zero
+          visual change; adds classes to existing markup. */}
       <div className="border-t border-[#1A2225]">
         <div className="mx-auto flex w-full max-w-[1480px] flex-col items-start gap-3 px-6 py-6 text-[12px] text-[#6B7779] md:flex-row md:items-center md:justify-between md:px-8">
-          <p>
-            © 2026 AtomEons Systems Laboratory · Atom McCree · Marco Island, FL · operator-owned · no VC
+          <p className="h-card">
+            © 2026{" "}
+            <a href="https://atomeons.com" className="p-org u-url">
+              AtomEons Systems Laboratory
+            </a>{" "}
+            · <span className="p-name">Atom McCree</span> ·{" "}
+            <span className="p-locality">Marco Island</span>,{" "}
+            <span className="p-region">FL</span> · operator-owned · no VC
             <br className="md:hidden" />
             <span className="hidden md:inline"> · </span>
             <span>Website created by Atom McCree + AI</span>
