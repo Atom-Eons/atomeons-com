@@ -2503,6 +2503,23 @@ body {
   max-width: 70ch;
   color: var(--color-noir-paper, #F4F4F2);
 }
+/* Wave 145 · content-visibility skip-paint for off-screen prose blocks.
+   Browsers with support (Chromium + Safari 18.2+ · ~78% caniuse July 2026)
+   defer layout + paint work on paragraphs that are outside the viewport.
+   contain-intrinsic-size gives the browser a size hint so the scrollbar
+   doesn't jump when off-screen content collapses. Effect scales with
+   article length: negligible on short pages, large on Founder's View
+   letters + book chapters where hundreds of paragraphs stack. Zero
+   visual difference. Browsers without support ignore both properties. */
+.ae-prose > p,
+.ae-prose > blockquote,
+.ae-prose > pre,
+.ae-prose > ul,
+.ae-prose > ol,
+.ae-prose > figure {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 4em;
+}
 .ae-prose p { margin-block: 1em; }
 .ae-prose p + p { margin-top: 1.1em; }
 .ae-prose a { color: var(--color-noir-cyan, #22F0D5); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
