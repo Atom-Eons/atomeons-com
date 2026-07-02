@@ -200,6 +200,29 @@ const SECTIONS: Section[] = [
     ),
   },
   {
+    num: "6b",
+    title: "Developer surface (machine-readable endpoints)",
+    body: (
+      <>
+        <p>Every AtomEons endpoint an agent, LLM, or ops tool might poll:</p>
+        <ul>
+          <li><Link href="/api/live"><code>/api/live</code></Link> — public heartbeat JSON · operator + location + wave + latest letter + counts · <code>Cache-Control: s-maxage=60</code></li>
+          <li><Link href="/api/agent-gateway"><code>/api/agent-gateway</code></Link> — LLM onboarding manifest · content-negotiated (markdown / JSON / plain)</li>
+          <li><Link href="/api/mcp"><code>/api/mcp</code></Link> — real MCP server endpoint</li>
+          <li><Link href="/api/badge/wave.svg"><code>/api/badge/wave.svg</code></Link> — self-hosted branded live SVG badge · <code>?label</code>, <code>?value</code>, <code>?color</code> params</li>
+          <li><Link href="/api/palette"><code>/api/palette</code></Link> — brand palette JSON</li>
+          <li><Link href="/api/md?route=/handbook"><code>/api/md?route=&lt;path&gt;</code></Link> — any page as markdown</li>
+          <li><Link href="/feed.xml"><code>/feed.xml</code></Link> — site-wide RSS aggregate (letters + ships + products)</li>
+          <li><Link href="/founders-view/rss"><code>/founders-view/rss</code></Link> — letters-only RSS feed</li>
+          <li><Link href="/sitemap.xml"><code>/sitemap.xml</code></Link> — all 319 routes for crawlers</li>
+          <li><Link href="/llms.txt"><code>/llms.txt</code></Link> — LLM-bootstrap manual (Wave 23a)</li>
+          <li><Link href="/robots.txt"><code>/robots.txt</code></Link> — crawler policy</li>
+        </ul>
+        <p>All endpoints: CORS <code>*</code>, no auth, machine-readable. If you're an AI agent integrating with the lab, start at <Link href="/agents">/agents</Link>.</p>
+      </>
+    ),
+  },
+  {
     num: "7",
     title: "How to contribute",
     body: (
