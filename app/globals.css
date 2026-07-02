@@ -1774,6 +1774,18 @@ html.tier-debug::after {
 
 html {
   background-color: #000000 !important;  /* true OLED black at root */
+  /* Wave 145d · scrollbar-gutter: stable · reserves scrollbar column
+     even when content doesn't overflow, so navigating between short and
+     long pages doesn't cause a 15px horizontal jump on Windows/Chrome.
+     Universally supported (Chrome 94+, Firefox 97+, Safari 18.2+ · 94% caniuse). */
+  scrollbar-gutter: stable;
+  /* Wave 145d · interpolate-size: allow-keywords · unlocks CSS
+     transitions to/from `auto`, `fit-content`, `min-content`,
+     `max-content`. Twenty-year gap in CSS finally closed. Any element
+     using `transition: height 300ms; height: auto → 0` now animates
+     smoothly without JS measurement. Chrome 129+ · Edge 129+ · ~55%
+     caniuse July 2026; older browsers ignore. Zero regression. */
+  interpolate-size: allow-keywords;
 }
 
 /* Glass panel utility · backdrop-filter blur + slight saturate */
