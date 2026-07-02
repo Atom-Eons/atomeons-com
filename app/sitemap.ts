@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/doctrine`, lastModified: now, changeFrequency: "weekly", priority: 0.94 },
     { url: `${BASE}/handbook`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE}/org-chart`, lastModified: now, changeFrequency: "weekly", priority: 0.90 },
+    { url: `${BASE}/shortcuts`, lastModified: now, changeFrequency: "monthly", priority: 0.60 },
     { url: `${BASE}/home-v3`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/learn`, lastModified: now, changeFrequency: "weekly", priority: 0.99 },
     { url: `${BASE}/learn/where-am-i`, lastModified: now, changeFrequency: "monthly", priority: 0.92 },
