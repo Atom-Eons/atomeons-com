@@ -38,7 +38,7 @@ export default function TermsPage() {
         eyebrow="QUESTIONS / DIRECT"
         title="There is no legal department between us."
         actions={[
-          { href: "mailto:a.mccree@gmail.com?subject=AtomEons%20terms", label: "Email Atom" },
+          { href: "mailto:legal@atomeons.com?subject=AtomEons%20terms", label: "Email Atom" },
           { href: "/legal/privacy", label: "Privacy" },
         ]}
       />

@@ -360,6 +360,53 @@ export default function AetherHome() {
         </div>
       </section>
 
+      <section className={styles.resourcesSection} aria-labelledby="contact-title">
+        <SectionIntro
+          eyebrow="CONTACT / NO GATEKEEPER"
+          title="A real address for the next thing."
+          body="No form, funnel, or pretend department. Choose the signal and it reaches Atom directly."
+          id="contact-title"
+        />
+        <div className={styles.supportGrid}>
+          <a
+            href="mailto:hello@atomeons.com?subject=Build%20something%20with%20AtomEons"
+            className={`${styles.supportCard} ${styles.orange}`}
+            style={{ "--accent": "#f36b21" } as CSSProperties}
+          >
+            <div className={styles.supportTopline}><span>01 / COLLABORATE</span><span>OPEN CHANNEL</span></div>
+            <div className={styles.supportGlyph} aria-hidden>Æ</div>
+            <h3>Make something.</h3>
+            <p>Commissions, collaborations, partnerships, and serious strange proposals.</p>
+            <div className={styles.supportMeta}><span>hello@atomeons.com</span><span>WRITE ↗</span></div>
+          </a>
+          <a
+            href="mailto:press@atomeons.com?subject=Press%20inquiry%20-%20AtomEons"
+            className={`${styles.supportCard} ${styles.book}`}
+            style={{ "--accent": "#d60024" } as CSSProperties}
+          >
+            <div className={styles.supportTopline}><span>02 / PRESS</span><span>DIRECT ACCESS</span></div>
+            <div className={styles.supportGlyph} aria-hidden>¶</div>
+            <h3>Tell the story.</h3>
+            <p>Interviews, profiles, appearances, fact checks, images, and media deadlines.</p>
+            <div className={styles.supportMeta}><span>press@atomeons.com</span><span>WRITE ↗</span></div>
+          </a>
+          <a
+            href="mailto:research@atomeons.com?subject=AtomEons%20research%20inquiry"
+            className={`${styles.supportCard} ${styles.mint}`}
+            style={{ "--accent": "#008d6b" } as CSSProperties}
+          >
+            <div className={styles.supportTopline}><span>03 / RESEARCH</span><span>CRITIQUE WELCOME</span></div>
+            <div className={styles.supportGlyph} aria-hidden>λ</div>
+            <h3>Test the edge.</h3>
+            <p>Papers, replications, technical criticism, new evidence, and frontier experiments.</p>
+            <div className={styles.supportMeta}><span>research@atomeons.com</span><span>WRITE ↗</span></div>
+          </a>
+        </div>
+        <div className={styles.heroActions}>
+          <Link href="/contact" className={styles.primaryButton}>Open every contact route <Arrow /></Link>
+        </div>
+      </section>
+
       <section className={styles.finalSection}>
         <p className={styles.sectionEyebrow}>YOU ARE AT THE FRONT DOOR</p>
         <h2>Pick a system.<br />Keep the parts you need.</h2>
@@ -372,6 +419,9 @@ export default function AetherHome() {
           </Link>
           <Link href="/random" className={styles.textButton}>
             Surprise me <Arrow />
+          </Link>
+          <Link href="/contact" className={styles.textButton}>
+            Contact Atom <Arrow />
           </Link>
         </div>
         <p className={styles.finalNote}>AtomEons · Naples, Florida · independent · artist-owned · 2026</p>

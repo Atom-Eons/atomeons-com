@@ -25,6 +25,7 @@ const columns = [
     title: "About",
     links: [
       ["About", "/about"],
+      ["Contact", "/contact"],
       ["Press", "/press"],
       ["Receipts", "/receipts"],
       ["Timeline", "/timeline"],
@@ -87,7 +88,7 @@ export function AetherFooter() {
           <Link href="/trust">Trust</Link>
           <a href="https://x.com/AtomMccree" target="_blank" rel="me noopener">X</a>
           <a href="https://discord.gg/4wx3AGga" target="_blank" rel="noopener noreferrer">Discord</a>
-          <a href="mailto:a.mccree@gmail.com">Email</a>
+          <Link href="/contact">Contact</Link>
         </nav>
       </div>
     </footer>

@@ -61,7 +61,7 @@ export default function ReceiptsPage() {
         eyebrow="A CORRECTION IS A BETTER RECEIPT"
         title="If a claim is wrong, challenge it."
         actions={[
-          { href: "mailto:a.mccree@gmail.com?subject=AtomEons%20receipt%20correction", label: "Report a correction" },
+          { href: "mailto:support@atomeons.com?subject=AtomEons%20receipt%20correction", label: "Report a correction" },
           { href: "/atlas", label: "Audit the atlas" },
         ]}
       />

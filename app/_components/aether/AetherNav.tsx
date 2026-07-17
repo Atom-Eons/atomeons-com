@@ -30,6 +30,7 @@ const navigation = [
     href: "/about",
     items: [
       ["About AtomEons", "/about", "The artist, the company, and the work"],
+      ["Contact", "/contact", "Reach Atom directly"],
       ["Press", "/press", "Press notes and media kit"],
       ["Receipts", "/receipts", "Public proof surfaces"],
       ["Explore", "/explore", "The focused public index"],
@@ -114,8 +115,8 @@ export function AetherNav() {
               <span>Search</span>
               <kbd>⌘K</kbd>
             </button>
-            <Link href="/#products" className={styles.launchButton}>
-              See the work <span aria-hidden>↗</span>
+            <Link href="/contact" className={styles.launchButton}>
+              Contact <span aria-hidden>↗</span>
             </Link>
             <button
               className={styles.menuButton}

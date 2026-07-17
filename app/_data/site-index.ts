@@ -24,6 +24,7 @@ export const SITE_INDEX: SiteEntry[] = [
   { title: "Art", href: "/art", description: "AI as material: selected objects and systems.", category: "Creations", keywords: ["art", "objects", "artist", "practice"] },
   { title: "Cinema", href: "/cinema", description: "Moving image, broadcast, and the Atom Alive signal.", category: "Creations", keywords: ["cinema", "video", "broadcast", "youtube"] },
   { title: "About", href: "/about", description: "Atom McCree, AtomEons, and the independent practice.", category: "Company", keywords: ["about", "founder", "naples", "artist"] },
+  { title: "Contact", href: "/contact", description: "Direct routes for collaborations, support, press, research, privacy, and legal questions.", category: "Company", keywords: ["contact", "email", "collaborate", "support", "press"] },
   { title: "Press", href: "/press", description: "Fast facts, story angles, and direct press contact.", category: "Company", keywords: ["press", "media", "epk", "bio"] },
   { title: "Receipts", href: "/receipts", description: "Public proof for claims made by this site.", category: "Company", keywords: ["receipts", "proof", "github", "build"] },
   { title: "Timeline", href: "/timeline", description: "The sequence from idea to public object.", category: "Company", keywords: ["timeline", "history", "release"] },

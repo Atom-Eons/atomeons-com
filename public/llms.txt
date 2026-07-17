@@ -5,7 +5,7 @@
 
 Canonical site: https://atomeons.com
 Source mirror: https://github.com/Atom-Eons/atomeons-com
-Contact: a.mccree@gmail.com
+Contact: hello@atomeons.com
 Edition: Aether 01
 Deployment: static public site
 Updated: 2026-07-17
@@ -61,6 +61,7 @@ affiliation, scientific consensus, or professional advice.
 ## Company and proof
 
 - About: https://atomeons.com/about
+- Contact: https://atomeons.com/contact
 - Press: https://atomeons.com/press
 - Receipts: https://atomeons.com/receipts
 - Timeline: https://atomeons.com/timeline
