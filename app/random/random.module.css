@@ -1,0 +1,38 @@
+.machine {
+  min-height: 480px;
+  padding: clamp(32px, 6vw, 86px);
+  border: 1px solid #101010;
+  background:
+    radial-gradient(circle at 75% 25%, rgba(216,255,62,.72), transparent 28%),
+    linear-gradient(135deg, #fff, #f1f0ea);
+}
+.machine > p {
+  font: 700 10px/1.2 var(--font-mono, monospace);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.machine h2 {
+  max-width: 900px;
+  margin: clamp(76px, 12vw, 160px) 0 16px;
+  font-size: clamp(54px, 10vw, 150px);
+  line-height: .82;
+  letter-spacing: -.07em;
+}
+.machine > span { display: block; max-width: 620px; color: #66645f; font-size: 20px; line-height: 1.5; }
+.machine > div { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.machine a,
+.machine button {
+  min-height: 52px;
+  padding: 0 20px;
+  border: 1px solid #101010;
+  border-radius: 0;
+  background: #101010;
+  color: #fff;
+  font: 700 11px/1 var(--font-mono, monospace);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+.machine a { display: inline-flex; align-items: center; }
+.machine button { background: transparent; color: #101010; }

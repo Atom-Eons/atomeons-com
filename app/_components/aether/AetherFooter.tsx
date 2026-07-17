@@ -27,6 +27,7 @@ const columns = [
       ["About", "/about"],
       ["Press", "/press"],
       ["Receipts", "/receipts"],
+      ["Timeline", "/timeline"],
       ["Explore archive", "/explore"],
       ["Full atlas", "/atlas"],
       ["For machines", "/api"],
@@ -75,7 +76,7 @@ export function AetherFooter() {
         <Link href="/api/agent-gateway">AGENT GATEWAY</Link>
         <Link href="/llms.txt">LLMS.TXT</Link>
         <Link href="/openapi.json">OPENAPI</Link>
-        <span>323 INDEXED PAGES · NO VC</span>
+        <span>STATIC EDITION · NO TRACKING DATABASE · NO VC</span>
       </div>
 
       <div className={styles.bottom}>

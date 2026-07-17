@@ -32,7 +32,7 @@ const navigation = [
       ["About AtomEons", "/about", "The artist, the company, and the work"],
       ["Press", "/press", "Press notes and media kit"],
       ["Receipts", "/receipts", "Public proof surfaces"],
-      ["Full archive", "/explore", "Everything preserved underneath"],
+      ["Explore", "/explore", "The focused public index"],
     ],
   },
 ] as const;

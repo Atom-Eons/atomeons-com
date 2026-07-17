@@ -89,6 +89,8 @@
   transition: background .2s ease, transform .2s ease;
 }
 .card:last-child { border-right: 0; }
+.card:nth-child(3n) { border-right: 0; }
+.card:nth-child(n+4) { border-top: 1px solid var(--line); }
 .card:hover { background: var(--paper); transform: translateY(-4px); }
 .cardTop { display: flex; justify-content: space-between; gap: 16px; color: var(--muted); }
 .card h3 { margin: 84px 0 18px; font-size: clamp(32px, 3.3vw, 54px); line-height: .95; letter-spacing: -.05em; }
@@ -453,6 +455,7 @@
   .heroAside { max-width: 480px; }
   .grid { grid-template-columns: 1fr; }
   .card { min-height: 310px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .card:nth-child(n+4) { border-top: 0; }
   .card:last-child { border-bottom: 0; }
   .feature > div + div { border-left: 0; border-top: 1px solid var(--line); }
   .listItem { grid-template-columns: 48px 1fr 24px; }
