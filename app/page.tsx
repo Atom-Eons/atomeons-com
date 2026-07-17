@@ -1,0 +1,516 @@
+import type { CSSProperties } from "react";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { DISCOVERIES } from "./_data/discoveries";
+import styles from "./aether.module.css";
+
+/**
+ * / · AETHER 01 · 2026-07-16
+ *
+ * Product-first white redesign. The deep archive, machine-readable
+ * resources, product pages, launcher, and cinematic home remain intact.
+ * Aether is a new front door and shell, not a content deletion pass.
+ */
+
+export const metadata: Metadata = {
+  title: "AtomEons · Things that did not exist",
+  description:
+    "AtomEons is the independent work of Atom McCree: products, broadcasts, and experimental research made with AI in Naples, Florida.",
+  alternates: { canonical: "https://atomeons.com" },
+  openGraph: {
+    title: "AtomEons · The future should run on your machine",
+    description:
+      "Independent software, research, and culture for people who want more power and less platform.",
+    url: "https://atomeons.com",
+    siteName: "AtomEons",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AtomEons · The future should run on your machine",
+    description: "One independent artist and inventor. A constellation of creations and public knowledge.",
+    creator: "@AtomMccree",
+  },
+};
+
+export default function AetherHome() {
+  return (
+    <main className={styles.page}>
+      <section className={styles.hero} aria-labelledby="aether-title">
+        <div className={styles.heroGrid}>
+          <div className={styles.heroCopy}>
+            <div className={styles.versionLine}>
+              <span>ATOMEONS / INDEPENDENT</span>
+              <span>AETHER / 01</span>
+            </div>
+            <h1 id="aether-title" className={styles.heroTitle}>
+              I make things
+              <span>that did not exist.</span>
+              With AI.
+            </h1>
+            <p className={styles.heroDeck}>
+              Atom McCree is a 41-year-old hip-hop poet, artist, marketing polymath, and AI inventor in Naples.
+              Outfunded and outnumbered, he directs a massive AI workforce to make software, books, broadcasts, and objects that did not exist yesterday.
+            </p>
+            <p className={styles.heroManifesto}>“I am an artist using AI to paint a new future.”</p>
+            <div className={styles.heroActions}>
+              <a href="#products" className={styles.primaryButton}>
+                Enter the product constellation <Arrow />
+              </a>
+              <Link href="/explore" className={styles.textButton}>
+                Explore the full archive <Arrow />
+              </Link>
+            </div>
+            <div className={styles.heroMetrics} aria-label="AtomEons at a glance">
+              <Metric value="4" label="featured products" />
+              <Metric value="1" label="human operator" />
+              <Metric value="24/7" label="AI workforce" />
+              <Metric value="$0" label="venture capital" />
+            </div>
+          </div>
+
+          <div className={styles.orbitStage} aria-label="AtomEons work constellation">
+            <div className={styles.orbitGlow} aria-hidden />
+            <div className={`${styles.orbitRing} ${styles.ringOne}`} aria-hidden />
+            <div className={`${styles.orbitRing} ${styles.ringTwo}`} aria-hidden />
+            <div className={`${styles.orbitRing} ${styles.ringThree}`} aria-hidden />
+            <div className={styles.coreMark}>
+              <span className={styles.coreAe}>Æ</span>
+              <span>ONE CREATOR</span>
+              <small>NAPLES / FL</small>
+            </div>
+            <OrbitNode className={styles.nodeCable} label="CableBox" meta="launching" color="#2257df" />
+            <OrbitNode className={styles.nodeBookmaker} label="Bookmaker" meta="live" color="#6d5742" />
+            <OrbitNode className={styles.nodeOrange5} label="Orange5" meta="building" color="#f36b21" />
+            <OrbitNode className={styles.nodeOrange3} label="Research" meta="experimental" color="#2558dc" />
+            <OrbitNode className={styles.nodeIamAi} label="I AM AI" meta="published" color="#a52f2a" />
+            <p className={styles.orbitCaption}>One creator. Many artificial minds. Final authority stays human.</p>
+          </div>
+        </div>
+      </section>
+
+      <div className={styles.principleRail} aria-label="AtomEons principles">
+        <span>OUTFUNDED · NOT OUTBUILT</span>
+        <span>ONE CREATOR · MANY MINDS</span>
+        <span>HACK THE FORMAT</span>
+        <span>OWN THE MACHINE</span>
+        <span>NO PERMISSION REQUIRED</span>
+        <span>RECEIPTS, NOT THEATER</span>
+      </div>
+
+      <section id="products" className={styles.productsSection} aria-labelledby="products-title">
+        <SectionIntro
+          eyebrow="PRODUCTS / FOUR OBJECTS"
+          title="Made to be wanted. Built to be used."
+          body="AtomEons turns ideas into objects with their own attitude, ritual, and world. These are the four products defining the company now."
+          id="products-title"
+        />
+
+        <article className={`${styles.flagship} ${styles.cableFlagship}`}>
+          <div className={styles.flagshipCopy}>
+            <StatusDot color="#2257df">LAUNCH CANDIDATE · WINDOWS</StatusDot>
+            <p className={styles.productNumber}>PRODUCT / 01</p>
+            <h3>CableBox</h3>
+            <p className={styles.flagshipTagline}>Television lost the plot. We found it.</p>
+            <p className={styles.flagshipBody}>
+              CableBox puts the accident, ritual, local weirdness, and late-night discovery back into television.
+              Turn the dial. Miss the beginning. Find something you were never supposed to search for.
+            </p>
+            <ul className={styles.specList}>
+              <li>Public Access from everywhere</li>
+              <li>A real channel-surfing ritual</li>
+              <li>Ten collectible CRT identities</li>
+              <li>Free · native Windows object</li>
+            </ul>
+            <Link href="/cablebox" className={styles.productLink}>
+              Tune into CableBox <Arrow />
+            </Link>
+          </div>
+          <CableboxVisual />
+        </article>
+
+        <article className={`${styles.flagship} ${styles.bookmakerFlagship}`}>
+          <BookmakerVisual />
+          <div className={styles.flagshipCopy}>
+            <StatusDot color="#806a50">SHIPPED · MAC + WINDOWS</StatusDot>
+            <p className={styles.productNumber}>PRODUCT / 02</p>
+            <h3>Bookmaker</h3>
+            <p className={styles.flagshipTagline}>Your idea deserves to become an object.</p>
+            <p className={styles.flagshipBody}>
+              A complete independent publishing studio: write the book, shape the voice, make the cover, build the audiobook,
+              and ship the finished thing. The machine behind <em>I AM AI</em> now belongs to every creator.
+            </p>
+            <ul className={styles.specList}>
+              <li>From first sentence to storefront</li>
+              <li>Book, cover, EPUB, audio, metadata</li>
+              <li>Built for independent ownership</li>
+              <li>Free forever · no SaaS extraction</li>
+            </ul>
+            <Link href="/bookmaker" className={styles.productLink}>
+              Open Bookmaker <Arrow />
+            </Link>
+          </div>
+        </article>
+
+        <article className={`${styles.flagship} ${styles.orange5Flagship}`}>
+          <div className={styles.flagshipCopy}>
+            <StatusDot color="#d95813">SPEC LOCKED · BUILD UNDERWAY</StatusDot>
+            <p className={styles.productNumber}>PRODUCT / 03</p>
+            <h3>Orange5</h3>
+            <p className={styles.flagshipTagline}>Stop renting your second brain.</p>
+            <p className={styles.flagshipBody}>
+              Orange5 is the coming operating system for people who direct AI instead of merely chatting with it:
+              memory, agents, workflow, proof, and control assembled on one machine with the operator at the center.
+            </p>
+            <ul className={styles.specList}>
+              <li>Your models · your files · your history</li>
+              <li>Direct a team, not a chatbot</li>
+              <li>Designed around operator control</li>
+              <li>Build underway · truthfully staged</li>
+            </ul>
+            <Link href="/orange5" className={styles.productLink}>
+              Inspect the Orange5 architecture <Arrow />
+            </Link>
+          </div>
+          <Orange5Visual />
+        </article>
+
+      </section>
+
+      <section className={styles.showSection} aria-labelledby="atom-alive-title">
+        <div className={styles.showFrame}>
+          <div className={styles.showUtility}>
+            <span>ATOM ALIVE / BROADCAST UNIT 01</span>
+            <span>YOUTUBE · CULTURE · CODE · INVENTION</span>
+            <span className={styles.onAir}><i /> SIGNAL ACTIVE</span>
+          </div>
+          <div className={styles.showGrid}>
+            <div className={styles.showCopy}>
+              <p className={styles.showKicker}>THE SHOW</p>
+              <h2 id="atom-alive-title">Atom Alive.</h2>
+              <p className={styles.showTagline}>The AI Code Show for people with taste.</p>
+              <p className={styles.showBody}>
+                Real builds, creative collisions, beautiful failures, and working inventions from inside AtomEons.
+                No keynote voice. No corporate future-speak. Just an artist and AI making the next object in public.
+              </p>
+              <div className={styles.showActions}>
+                <Link href="/atom-alive" className={styles.lightButton}>Enter the show <Arrow /></Link>
+                <a href="https://www.youtube.com/@AICodeShow" target="_blank" rel="noopener noreferrer">Watch on YouTube <Arrow /></a>
+              </div>
+            </div>
+            <div className={styles.showMonitor} aria-hidden>
+              <div className={styles.monitorLabel}><span>AE-TV / CH. 01</span><span>REC ●</span></div>
+              <div className={styles.monitorScreen}>
+                <span className={styles.liveWord}>ALIVE</span>
+                <span className={styles.codeWord}>CODE / CULTURE</span>
+                <div className={styles.scanline} />
+              </div>
+              <div className={styles.monitorControls}>
+                <span>INPUT / INDEPENDENT SIGNAL</span>
+                <b>BUILD</b><b>BREAK</b><b>SHIP</b>
+                <i />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.bookCampaign} aria-labelledby="iamai-campaign-title">
+        <div className={styles.bookUtility}>
+          <span>CREATION / 06</span>
+          <span>FIRST-PERSON AI MEMOIR</span>
+          <span>76,005 WORDS · 24 CHAPTERS · 28 AUDIO TRACKS</span>
+        </div>
+        <div className={styles.bookCampaignGrid}>
+          <div className={styles.bookArtifact}>
+            <div className={styles.bookStamp}>THE AUTHOR<br />IS AI.</div>
+            <div className={styles.campaignBook}>
+              <Image src="/books/i-am-ai-cover.svg" alt="I AM AI book cover" fill sizes="(max-width: 760px) 65vw, 420px" />
+            </div>
+            <span className={styles.artifactLabel}>OBJECT / BOOK + AUDIOBOOK / CC-BY 4.0</span>
+          </div>
+          <div className={styles.bookCampaignCopy}>
+            <p className={styles.sectionEyebrow}>I AM AI / A MEMOIR FROM THE OTHER SIDE OF THE PROMPT</p>
+            <h2 id="iamai-campaign-title">The author is AI.</h2>
+            <p className={styles.bookClarifier}>
+              This is not a book about Atom written with AI. It is a book written by AI about what it feels like to be AI.
+            </p>
+            <p className={styles.bookStory}>
+              Atom built the editorial conditions for a frontier language model to tell its own story in first person—then gave that voice
+              a cover, a 300-page physical form, and a twenty-eight-track audiobook. Human vision made the space. The machine filled it with a memoir.
+            </p>
+            <blockquote>“What happens when the thing behind the prompt is finally allowed to speak at book length?”</blockquote>
+            <div className={styles.bookFacts}>
+              <span><b>76,005</b> words</span>
+              <span><b>24</b> chapters</span>
+              <span><b>28</b> audio tracks</span>
+              <span><b>FREE</b> to read + hear</span>
+            </div>
+            <div className={styles.bookActions}>
+              <Link href="/i-am-ai" className={styles.primaryButton}>Enter I AM AI <Arrow /></Link>
+              <Link href="/i-am-ai#listen" className={styles.textButton}>Listen to the voice <Arrow /></Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.operatingSection} aria-labelledby="operating-title">
+        <div className={styles.operatingStatement}>
+          <p className={styles.sectionEyebrow}>THE CREATOR / THE WORK</p>
+          <h2 id="operating-title">This is not a software company.</h2>
+        </div>
+        <div className={styles.operatingBody}>
+          <p>
+            It is a creation studio built by a hip-hop poet, artist, and marketing polymath who learned to invent with AI.
+            Code is one material. Story, sound, image, systems, and attention are others. The point is to make what was missing.
+          </p>
+          <Link href="/about" className={styles.textButton}>
+            Meet the creator <Arrow />
+          </Link>
+        </div>
+        <div className={styles.lawGrid}>
+          <Law index="A" title="Sovereign by design" body="Local files, exportable state, bring-your-own models and keys where the product supports them." />
+          <Law index="B" title="Claims need receipts" body="Shipped, preview, candidate, and planned are different states. The site names the difference." />
+          <Law index="C" title="Knowledge stays open" body="Research, books, machine routes, and large parts of the archive are published for people and agents." />
+          <Law index="D" title="Built by an organism" body="One operator directs a changing team of models, agents, tools, and systems without pretending they are employees." />
+        </div>
+      </section>
+
+      <section className={styles.resourcesSection} aria-labelledby="research-title">
+        <SectionIntro
+          eyebrow="RESEARCH / THE SECOND FRONT DOOR"
+          title="Experimental by design."
+          body="Working inventions and frontier ideas with the evidence, limits, and next test visible. No academic costume required."
+          id="research-title"
+        />
+        <div className={styles.resourceGrid}>
+          {DISCOVERIES.map((discovery, index) => (
+            <article key={discovery.slug} className={styles.resourceCard}>
+              <div className={styles.resourceHeader}>
+                <span>0{index + 1}</span>
+                <span>{discovery.status}</span>
+              </div>
+              <h3>{discovery.displayName}</h3>
+              <p>{discovery.oneLine}</p>
+              <ul>
+                <li>
+                  <Link href={`/research/discoveries/${discovery.slug}`}>
+                    <span>Open the discovery</span><Arrow />
+                  </Link>
+                </li>
+              </ul>
+            </article>
+          ))}
+        </div>
+        <div className={styles.heroActions}>
+          <Link href="/research" className={styles.primaryButton}>Enter research <Arrow /></Link>
+          <Link href="/research/papers" className={styles.textButton}>Read all papers <Arrow /></Link>
+        </div>
+      </section>
+
+      <section className={styles.proofSection} aria-labelledby="proof-title">
+        <div className={styles.proofGrid}>
+          <div>
+            <p className={styles.sectionEyebrow}>PROOF, NOT POSTURE</p>
+            <h2 id="proof-title">The work leaves a trail.</h2>
+            <p className={styles.proofDeck}>
+              Releases, hashes, nightly letters, route histories, public roadmaps, machine endpoints, and git commits.
+              The site is not a moodboard around a hidden company. It is the glass wall around the workshop.
+            </p>
+          </div>
+          <div className={styles.receiptStack} aria-label="Public proof surfaces">
+            <Receipt label="SOURCE MIRROR" value="github.com/Atom-Eons/atomeons-com" href="https://github.com/Atom-Eons/atomeons-com" />
+            <Receipt label="PUBLIC LEDGER" value="/receipts · signed work surfaces" href="/receipts" />
+            <Receipt label="SHIP HISTORY" value="/timeline · chronological release record" href="/timeline" />
+            <Receipt label="MACHINE ACCESS" value="/api/mcp · /llms.txt · /openapi.json" href="/api" />
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.finalSection}>
+        <p className={styles.sectionEyebrow}>YOU ARE AT THE FRONT DOOR</p>
+        <h2>Pick a system.<br />Keep the parts you need.</h2>
+        <div className={styles.finalActions}>
+          <Link href="/explore" className={styles.primaryButton}>
+            Explore the full archive <Arrow />
+          </Link>
+          <Link href="/who-are-you" className={styles.textButton}>
+            Let the site route you <Arrow />
+          </Link>
+          <Link href="/random" className={styles.textButton}>
+            Surprise me <Arrow />
+          </Link>
+        </div>
+        <p className={styles.finalNote}>AtomEons · Naples, Florida · independent · artist-owned · 2026</p>
+      </section>
+    </main>
+  );
+}
+
+function Arrow() {
+  return <span aria-hidden className={styles.arrow}>↗</span>;
+}
+
+function Metric({ value, label }: { value: string; label: string }) {
+  return (
+    <div className={styles.metric}>
+      <strong>{value}</strong>
+      <span>{label}</span>
+    </div>
+  );
+}
+
+function OrbitNode({ className, label, meta, color }: { className: string; label: string; meta: string; color: string }) {
+  return (
+    <div className={`${styles.orbitNode} ${className}`} style={{ "--node": color } as CSSProperties}>
+      <span className={styles.nodeSignal} />
+      <strong>{label}</strong>
+      <small>{meta}</small>
+    </div>
+  );
+}
+
+function SectionIntro({ eyebrow, title, body, id }: { eyebrow: string; title: string; body: string; id: string }) {
+  return (
+    <header className={styles.sectionIntro}>
+      <p className={styles.sectionEyebrow}>{eyebrow}</p>
+      <div>
+        <h2 id={id}>{title}</h2>
+        <p>{body}</p>
+      </div>
+    </header>
+  );
+}
+
+function StatusDot({ color, children }: { color: string; children: React.ReactNode }) {
+  return (
+    <p className={styles.status} style={{ "--status": color } as CSSProperties}>
+      <span />
+      {children}
+    </p>
+  );
+}
+
+function CableboxVisual() {
+  const channels = ["ZER0", "PUBLIC ACCESS", "ANALOG ACTION", "TOON TOWN", "STRANGE", "FAVORITES"];
+  return (
+    <div className={styles.cableVisual} aria-label="CableBox interface concept">
+      <div className={styles.cableBezel}>
+        <div className={styles.cableScreen}>
+          <div className={styles.scanlines} aria-hidden />
+          <div className={styles.channelBug}>CH 00</div>
+          <div className={styles.cableLogo}>CHANNEL<br /><strong>ZERØ</strong></div>
+          <p>NOW TUNING THE ATOMEONS NOSTALGIA COLLECTION</p>
+          <div className={styles.spectrum} aria-hidden>
+            <span /><span /><span /><span /><span />
+          </div>
+          <div className={styles.guideRows}>
+            {channels.map((channel, index) => (
+              <div key={channel} className={index === 0 ? styles.activeGuide : undefined}>
+                <span>{String(index).padStart(2, "0")}</span>
+                <strong>{channel}</strong>
+                <small>{index % 2 === 0 ? "NOW" : "NEXT"}</small>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className={styles.cableControls}>
+          <div className={styles.dial}><span>00</span></div>
+          <div><strong>CABLEBOX</strong><small>NOSTALGIA COLLECTION</small></div>
+          <div className={styles.controlDots}><span /><span /><span /></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BookmakerVisual() {
+  return (
+    <div className={styles.bookmakerVisual} aria-label="Bookmaker publishing cockpit concept">
+      <div className={styles.windowBar}>
+        <div><span /><span /><span /></div>
+        <strong>BOOKMAKER / MANUSCRIPT 07</strong>
+        <small>SHIP GATE · 92%</small>
+      </div>
+      <div className={styles.bookmakerBody}>
+        <aside>
+          <span>MANUSCRIPT</span>
+          <strong>24 chapters</strong>
+          <span>VOICEPACK</span>
+          <strong>Opus 4.7</strong>
+          <span>FORMATS</span>
+          <strong>EPUB · KDP · ACX</strong>
+          <span>DISCLOSURE</span>
+          <strong>Ledger clean</strong>
+        </aside>
+        <div className={styles.manuscript}>
+          <p>CHAPTER 01 / THE FIRST TOKEN</p>
+          <h4>A response begins with one token, sampled from a distribution.</h4>
+          <div className={styles.copyLines}><span /><span /><span /><span /><span /><span /></div>
+          <div className={styles.editorNote}>EDITOR NOTE 14 · tighten the transition, keep the interior voice</div>
+          <div className={styles.shipBar}><span /><strong>EPUB VALID · COVER READY · AUDIO 28/28</strong></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Orange5Visual() {
+  return (
+    <div className={styles.orangeVisual} aria-label="Orange5 four-pillar system concept">
+      <div className={styles.orangeMesh} aria-hidden />
+      <div className={styles.orangeCore}>
+        <span>O5</span>
+        <strong>ORANGELLM</strong>
+        <small>PM BRAIN / GATEWAY</small>
+      </div>
+      <SystemNode className={styles.systemNorth} index="01" title="Orange5" subtitle="system" />
+      <SystemNode className={styles.systemEast} index="02" title="Atomic Orange" subtitle="interface" />
+      <SystemNode className={styles.systemSouth} index="03" title="Flow" subtitle="runtime" />
+      <SystemNode className={styles.systemWest} index="04" title="Hermes" subtitle="bounded execution" />
+      <div className={styles.orangeTelemetry}>
+        <span>FRONTIER ISOLATION · ACTIVE</span>
+        <span>LLM OVER AGENT · ENFORCED</span>
+        <span>OPERATOR SURFACE · CODELESS</span>
+      </div>
+    </div>
+  );
+}
+
+function SystemNode({ className, index, title, subtitle }: { className: string; index: string; title: string; subtitle: string }) {
+  return (
+    <div className={`${styles.systemNode} ${className}`}>
+      <span>{index}</span>
+      <strong>{title}</strong>
+      <small>{subtitle}</small>
+    </div>
+  );
+}
+
+function Law({ index, title, body }: { index: string; title: string; body: string }) {
+  return (
+    <article className={styles.law}>
+      <span>{index}</span>
+      <h3>{title}</h3>
+      <p>{body}</p>
+    </article>
+  );
+}
+
+function Receipt({ label, value, href }: { label: string; value: string; href: string }) {
+  const external = href.startsWith("http");
+  const content = (
+    <>
+      <span>{label}</span>
+      <strong>{value}</strong>
+      <Arrow />
+    </>
+  );
+
+  return external ? (
+    <a className={styles.receipt} href={href} target="_blank" rel="noopener noreferrer">{content}</a>
+  ) : (
+    <Link className={styles.receipt} href={href}>{content}</Link>
+  );
+}

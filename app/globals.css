@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: #fff; }
+body {
+  margin: 0;
+  background: #fff;
+  color: #101010;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button, input { font: inherit; }
+::selection { background: #d8ff3e; color: #101010; }

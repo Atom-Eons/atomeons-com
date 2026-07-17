@@ -1,0 +1,132 @@
+import type { CSSProperties } from "react";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { DISCOVERIES } from "../_data/discoveries";
+import { PAPERS } from "../_data/research-papers";
+import styles from "../editorial.module.css";
+
+export const metadata: Metadata = {
+  title: "Research · AtomEons",
+  description:
+    "Independent frontier research from AtomEons: discoveries, working systems, speculative papers, and locally hosted open PDFs.",
+  alternates: { canonical: "https://atomeons.com/research" },
+};
+
+export default function ResearchPage() {
+  return (
+    <main className={styles.page} style={{ "--accent": "#2558dc" } as CSSProperties}>
+      <section className={styles.hero}>
+        <div className={styles.heroGrid}>
+          <div>
+            <p className={styles.eyebrow}>ATOMEONS / RESEARCH</p>
+            <h1>Follow the<br /><span>strange idea.</span></h1>
+            <p className={styles.lede}>
+              Independent research into machine perception, memory, compression,
+              collective intelligence, biology, and the systems hiding between fields.
+            </p>
+            <div className={styles.actions}>
+              <Link href="/research/discoveries" className={`${styles.button} ${styles.buttonAccent}`}>
+                Enter discoveries ↗
+              </Link>
+              <Link href="/research/papers" className={`${styles.button} ${styles.buttonGhost}`}>
+                Read {PAPERS.length} papers
+              </Link>
+            </div>
+          </div>
+          <aside className={styles.heroAside}>
+            <strong>No imaginary institution.</strong>
+            <p>
+              AtomEons Research is the independent work of Atom McCree with AI systems
+              in Naples, Florida. There is no funded physical lab behind the language.
+              The work is presented as prototypes, architectures, working papers, and
+              hypotheses—with status and limits visible.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <p className={styles.index}>DISCOVERIES / 001—003</p>
+          <div>
+            <h2>Things found by building.</h2>
+            <p>
+              Research here begins as an object: code, an architecture, a measurement,
+              or a system that behaves differently enough to deserve its own name.
+            </p>
+          </div>
+        </div>
+        <div className={styles.grid}>
+          {DISCOVERIES.map((discovery, index) => (
+            <Link
+              href={`/research/discoveries/${discovery.slug}`}
+              className={styles.card}
+              key={discovery.slug}
+              style={{ "--accent": discovery.accent } as CSSProperties}
+            >
+              <div className={styles.cardTop}>
+                <span className={styles.index}>0{index + 1}</span>
+                <span className={styles.status}>{discovery.status}</span>
+              </div>
+              <h3>{discovery.displayName}</h3>
+              <p>{discovery.oneLine}</p>
+              <span className={styles.cardArrow}>↗</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.feature}>
+          <div>
+            <p className={styles.eyebrow}>OPEN PAPER LIBRARY / {PAPERS.length} OBJECTS</p>
+            <h2>Ideas with<br />edges.</h2>
+          </div>
+          <div>
+            <p className={styles.lede}>
+              Cross-disciplinary papers on bioelectric systems, intelligence,
+              topology, cognition, and machine language.
+            </p>
+            <p>
+              Some are formal working papers. Some are speculative. None are presented
+              as peer-reviewed unless that status can be proved. Every paper gets its
+              own page, a plain-language summary, a technical abstract, and a direct PDF.
+            </p>
+            <div className={styles.actions}>
+              <Link href="/research/papers" className={styles.button}>Open paper library ↗</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <p className={styles.index}>METHOD / PUBLIC STATUS</p>
+          <div>
+            <h2>Wonder first. Receipts immediately after.</h2>
+            <p>
+              Fringe questions are welcome. Fake certainty is not. The public record
+              separates implemented systems, measured results, architectural work,
+              hypotheses, and future tests.
+            </p>
+          </div>
+        </div>
+        <div className={styles.factGrid}>
+          <div className={styles.fact}><span className={styles.index}>01</span><strong>Name the proposition</strong><p>Say what the idea changes and why it matters.</p></div>
+          <div className={styles.fact}><span className={styles.index}>02</span><strong>Build an object</strong><p>Code, a protocol, a model, a paper, or an experiment.</p></div>
+          <div className={styles.fact}><span className={styles.index}>03</span><strong>Record the evidence</strong><p>Keep measurements, failures, versions, and receipts visible.</p></div>
+          <div className={styles.fact}><span className={styles.index}>04</span><strong>Name the limits</strong><p>Make the next test obvious and the current claim exact.</p></div>
+        </div>
+      </section>
+
+      <section className={styles.footerCta}>
+        <p className={styles.eyebrow}>A SECOND FRONT DOOR INTO ATOMEONS</p>
+        <h2>Products prove the future can be built. Research asks what else is possible.</h2>
+        <div className={styles.actions}>
+          <Link href="/research/discoveries" className={styles.button}>Explore discoveries</Link>
+          <Link href="/research/papers" className={`${styles.button} ${styles.buttonGhost}`}>Download the papers</Link>
+        </div>
+      </section>
+    </main>
+  );
+}
