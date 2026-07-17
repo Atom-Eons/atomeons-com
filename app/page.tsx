@@ -25,12 +25,21 @@ export const metadata: Metadata = {
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
+    images: [
+      {
+        url: "/aether-v2/hero-invention-field-v2.webp",
+        width: 1536,
+        height: 1024,
+        alt: "The AtomEons invention field",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "AtomEons · The future should run on your machine",
     description: "One independent artist and inventor. A constellation of creations and public knowledge.",
     creator: "@AtomMccree",
+    images: ["/aether-v2/hero-invention-field-v2.webp"],
   },
 };
 
@@ -71,21 +80,36 @@ export default function AetherHome() {
           </div>
 
           <div className={styles.orbitStage} aria-label="AtomEons work constellation">
-            <div className={styles.orbitGlow} aria-hidden />
+            <Image
+              className={styles.heroArtifactImage}
+              src="/aether-v2/hero-invention-field-v2.webp"
+              alt="A hand-built AtomEons command instrument surrounded by experimental objects on a white workshop table"
+              fill
+              priority
+              sizes="(max-width: 1180px) 100vw, 46vw"
+            />
+            <div className={styles.heroArtifactVeil} aria-hidden />
+            <div className={styles.artifactIndex}>
+              <span>FIELD OBJECT / AE-01</span>
+              <span>ONE HUMAN / MANY MINDS</span>
+            </div>
             <div className={`${styles.orbitRing} ${styles.ringOne}`} aria-hidden />
             <div className={`${styles.orbitRing} ${styles.ringTwo}`} aria-hidden />
-            <div className={`${styles.orbitRing} ${styles.ringThree}`} aria-hidden />
-            <div className={styles.coreMark}>
-              <span className={styles.coreAe}>Æ</span>
-              <span>ONE CREATOR</span>
-              <small>NAPLES / FL</small>
+            <div className={styles.artifactCore} aria-hidden>
+              <span />
+              <small>HUMAN<br />AUTHORITY</small>
             </div>
             <OrbitNode className={styles.nodeCable} label="CableBox" meta="launching" color="#2257df" />
             <OrbitNode className={styles.nodeBookmaker} label="Bookmaker" meta="live" color="#6d5742" />
             <OrbitNode className={styles.nodeOrange5} label="Orange5" meta="building" color="#f36b21" />
             <OrbitNode className={styles.nodeOrange3} label="Research" meta="experimental" color="#2558dc" />
             <OrbitNode className={styles.nodeIamAi} label="I AM AI" meta="published" color="#a52f2a" />
-            <p className={styles.orbitCaption}>One creator. Many artificial minds. Final authority stays human.</p>
+            <div className={styles.artifactReadout}>
+              <span>OBJECT STATUS / ALIVE</span>
+              <span>ORIGIN / NAPLES, FL</span>
+              <span>CAPITAL / IMAGINATION</span>
+            </div>
+            <p className={styles.orbitCaption}>Not a rendering of a company. A working artifact field built by one artist and an artificial workforce.</p>
           </div>
         </div>
       </section>
@@ -393,33 +417,39 @@ function StatusDot({ color, children }: { color: string; children: React.ReactNo
 }
 
 function CableboxVisual() {
-  const channels = ["ZER0", "PUBLIC ACCESS", "ANALOG ACTION", "TOON TOWN", "STRANGE", "FAVORITES"];
   return (
-    <div className={styles.cableVisual} aria-label="CableBox interface concept">
-      <div className={styles.cableBezel}>
-        <div className={styles.cableScreen}>
-          <div className={styles.scanlines} aria-hidden />
-          <div className={styles.channelBug}>CH 00</div>
-          <div className={styles.cableLogo}>CHANNEL<br /><strong>ZERØ</strong></div>
-          <p>NOW TUNING THE ATOMEONS NOSTALGIA COLLECTION</p>
-          <div className={styles.spectrum} aria-hidden>
-            <span /><span /><span /><span /><span />
-          </div>
-          <div className={styles.guideRows}>
-            {channels.map((channel, index) => (
-              <div key={channel} className={index === 0 ? styles.activeGuide : undefined}>
-                <span>{String(index).padStart(2, "0")}</span>
-                <strong>{channel}</strong>
-                <small>{index % 2 === 0 ? "NOW" : "NEXT"}</small>
-              </div>
-            ))}
-          </div>
+    <div className={`${styles.productObject} ${styles.cableVisual}`}>
+      <div className={styles.objectImage}>
+        <Image
+          src="/aether-v2/cablebox-object-v2.webp"
+          alt="CableBox imagined as a repairable charcoal television object with a cobalt analog screen and a physical tuning dial"
+          fill
+          sizes="(max-width: 1180px) 100vw, 54vw"
+        />
+        <div className={styles.objectTopline}>
+          <span>AE / SIGNAL OBJECT 01</span>
+          <span>PHYSICAL RITUAL / DIGITAL WORLD</span>
         </div>
-        <div className={styles.cableControls}>
-          <div className={styles.dial}><span>00</span></div>
-          <div><strong>CABLEBOX</strong><small>NOSTALGIA COLLECTION</small></div>
-          <div className={styles.controlDots}><span /><span /><span /></div>
+        <div className={styles.cableSignalCard}>
+          <span>NOW TUNING</span>
+          <strong>CH / 00</strong>
+          <small>PUBLIC ACCESS FROM EVERYWHERE</small>
         </div>
+        <div className={styles.objectCoordinates}>26.1423° N / 81.7948° W</div>
+      </div>
+      <div className={styles.objectRail}>
+        <div>
+          <span className={styles.railLed} />
+          <strong>SIGNAL FOUND</strong>
+        </div>
+        <ol aria-label="CableBox channels">
+          <li><b>00</b> ZERØ</li>
+          <li><b>11</b> PUBLIC ACCESS</li>
+          <li><b>23</b> TOON TOWN</li>
+        </ol>
+        <span className={styles.objectDial} aria-hidden>
+          <i />
+        </span>
       </div>
     </div>
   );
@@ -427,30 +457,32 @@ function CableboxVisual() {
 
 function BookmakerVisual() {
   return (
-    <div className={styles.bookmakerVisual} aria-label="Bookmaker publishing cockpit concept">
-      <div className={styles.windowBar}>
-        <div><span /><span /><span /></div>
-        <strong>BOOKMAKER / MANUSCRIPT 07</strong>
-        <small>SHIP GATE · 92%</small>
-      </div>
-      <div className={styles.bookmakerBody}>
-        <aside>
-          <span>MANUSCRIPT</span>
-          <strong>24 chapters</strong>
-          <span>VOICEPACK</span>
-          <strong>Opus 4.7</strong>
-          <span>FORMATS</span>
-          <strong>EPUB · KDP · ACX</strong>
-          <span>DISCLOSURE</span>
-          <strong>Ledger clean</strong>
-        </aside>
-        <div className={styles.manuscript}>
-          <p>CHAPTER 01 / THE FIRST TOKEN</p>
-          <h4>A response begins with one token, sampled from a distribution.</h4>
-          <div className={styles.copyLines}><span /><span /><span /><span /><span /><span /></div>
-          <div className={styles.editorNote}>EDITOR NOTE 14 · tighten the transition, keep the interior voice</div>
-          <div className={styles.shipBar}><span /><strong>EPUB VALID · COVER READY · AUDIO 28/28</strong></div>
+    <div className={`${styles.productObject} ${styles.bookmakerVisual}`}>
+      <div className={styles.objectImage}>
+        <Image
+          src="/aether-v2/bookmaker-object-v2.webp"
+          alt="Bookmaker imagined as a warm-white clothbound book beside a machined independent publishing instrument"
+          fill
+          sizes="(max-width: 1180px) 100vw, 56vw"
+        />
+        <div className={styles.objectTopline}>
+          <span>AE / PUBLISHING OBJECT 02</span>
+          <span>MANUSCRIPT → MATTER</span>
         </div>
+        <div className={styles.bookmakerPlate}>
+          <span>SHIP GATE / 92%</span>
+          <strong>THE IDEA<br />BECOMES<br />AN OBJECT.</strong>
+          <small>BOOK · COVER · EPUB · AUDIO · METADATA</small>
+        </div>
+        <div className={styles.objectCoordinates}>24 CHAPTERS / 28 TRACKS / ONE OWNER</div>
+      </div>
+      <div className={styles.bookmakerRail}>
+        <span>MANUSCRIPT</span>
+        <i />
+        <span>VOICE</span>
+        <i />
+        <span>OBJECT</span>
+        <b>READY TO SHIP</b>
       </div>
     </div>
   );
@@ -458,21 +490,31 @@ function BookmakerVisual() {
 
 function Orange5Visual() {
   return (
-    <div className={styles.orangeVisual} aria-label="Orange5 four-pillar system concept">
+    <div className={`${styles.productObject} ${styles.orangeVisual}`}>
+      <Image
+        className={styles.orangeObjectImage}
+        src="/aether-v2/orange5-object-v2.webp"
+        alt="Orange5 imagined as a modular translucent orange command instrument with four connected control units"
+        fill
+        sizes="(max-width: 1180px) 100vw, 54vw"
+      />
       <div className={styles.orangeMesh} aria-hidden />
-      <div className={styles.orangeCore}>
-        <span>O5</span>
-        <strong>ORANGELLM</strong>
-        <small>PM BRAIN / GATEWAY</small>
+      <div className={styles.objectTopline}>
+        <span>AE / SOVEREIGN SYSTEM 03</span>
+        <span>OPERATOR AUTHORITY / ACTIVE</span>
       </div>
-      <SystemNode className={styles.systemNorth} index="01" title="Orange5" subtitle="system" />
-      <SystemNode className={styles.systemEast} index="02" title="Atomic Orange" subtitle="interface" />
-      <SystemNode className={styles.systemSouth} index="03" title="Flow" subtitle="runtime" />
-      <SystemNode className={styles.systemWest} index="04" title="Hermes" subtitle="bounded execution" />
+      <div className={styles.orangeOperator}>
+        <span>YOU</span>
+        <small>FINAL<br />AUTHORITY</small>
+      </div>
+      <SystemNode className={styles.systemNorth} index="01" title="Memory" subtitle="stays yours" />
+      <SystemNode className={styles.systemEast} index="02" title="Agents" subtitle="directed" />
+      <SystemNode className={styles.systemSouth} index="03" title="Proof" subtitle="visible" />
+      <SystemNode className={styles.systemWest} index="04" title="Models" subtitle="interchangeable" />
       <div className={styles.orangeTelemetry}>
-        <span>FRONTIER ISOLATION · ACTIVE</span>
-        <span>LLM OVER AGENT · ENFORCED</span>
-        <span>OPERATOR SURFACE · CODELESS</span>
+        <span>YOUR MODELS · YOUR FILES</span>
+        <span>FOUR MODULES · ONE OPERATOR</span>
+        <span>RENTED INTELLIGENCE · REJECTED</span>
       </div>
     </div>
   );
