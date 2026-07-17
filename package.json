@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "next build && node -e \"require('fs').renameSync('out','dist')\"",
+    "build": "next build && node scripts/package-deploy.mjs",
     "dev": "next dev",
     "start": "next start"
   },
