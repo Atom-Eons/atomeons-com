@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/org-chart`, lastModified: now, changeFrequency: "weekly", priority: 0.90 },
     { url: `${BASE}/shortcuts`, lastModified: now, changeFrequency: "monthly", priority: 0.60 },
     { url: `${BASE}/roadmap`, lastModified: now, changeFrequency: "weekly", priority: 0.80 },
+    { url: `${BASE}/cablebox`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${BASE}/home-v3`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/learn`, lastModified: now, changeFrequency: "weekly", priority: 0.99 },
     { url: `${BASE}/learn/where-am-i`, lastModified: now, changeFrequency: "monthly", priority: 0.92 },
