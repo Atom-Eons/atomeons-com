@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { CompactNav } from "./_components/V3/CompactNav";
+import { AetherNav } from "./_components/aether/AetherNav";
 
 /**
  * Inter Variable — full weight axis (100–900). Powers the
@@ -17,33 +17,15 @@ const inter = Inter({
   variable: "--font-inter",
   axes: ["opsz"],
 });
-import { Footer } from "./_components/Footer";
-import { MadeWithOrangebox } from "./_components/MadeWithOrangebox";
+import { AetherFooter } from "./_components/aether/AetherFooter";
 import { XAdsPixel } from "./_components/XAdsPixel";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { AtomBoot } from "./_components/AtomBoot";
-import { StickyBuyBar } from "./_components/StickyBuyBar";
-import { LabTicker } from "./_components/v2/LabTicker";
-import { AmbientSignature } from "./_components/AmbientSignature";
-import { SacredSvg } from "./_components/V3/SacredSvg";
-import { LivingCursor } from "./_components/V3/LivingCursor";
-import { TierToggle } from "./_components/V3/TierToggle";
-import { SearchInline } from "./_components/V3/SearchInline";
-import { MobileBottomBar } from "./_components/V3/MobileBottomBar";
-import { InstallChip } from "./_components/V3/InstallChip";
 import { ScrollProgress } from "./_components/V3/ScrollProgress";
 import { RevealOnScroll } from "./_components/V3/RevealOnScroll";
-import { ReadingTime } from "./_components/V3/ReadingTime";
-import { PageTOC } from "./_components/V3/PageTOC";
 import { MarkdownAlternateLink } from "./_components/V3/MarkdownAlternateLink";
-import { CopyForLlm } from "./_components/V3/CopyForLlm";
-import { FirstTimeChip } from "./_components/V3/FirstTimeChip";
 import { ContinueRecorder } from "./_components/V3/ContinueCard";
 import { SiloSwitcher } from "./_components/V3/SiloSwitcher";
-import { NotificationBar } from "./_components/V3/NotificationBar";
-import { AppToolbar } from "./_components/V3/AppToolbar";
-import { MatrixRain } from "./_components/V3/MatrixRain";
 
 /**
  * Site-wide viewport configuration.
@@ -75,11 +57,8 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   viewportFit: "cover",
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)",  color: "#08090B" },
-    { media: "(prefers-color-scheme: light)", color: "#F4F4F2" },
-  ],
-  colorScheme: "dark light",
+  themeColor: "#ffffff",
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {
@@ -88,11 +67,11 @@ export const metadata: Metadata = {
     // Site-wide default: lab-grade, not product-grade. Each route
     // (/orangebox, /research/*, /founders-view, /intel/*, /press) sets
     // its own title and inherits this template suffix.
-    default: "AtomEons — Independent AI Systems Laboratory.",
+    default: "AtomEons — Artist-led AI creation lab.",
     template: "%s | AtomEons",
   },
   description:
-    "AtomEons Systems Laboratory · Marco Island, Florida · independent one-operator AI lab. Free always: Orange³ (sovereign agentic OS for Claude), AI Bookmaker (the publishing house in a box), I AM AI (the book, PDF + 28-track Eleven Labs audiobook). Thirty-one CC-BY 4.0 research manuscripts. The Founder's View nightly broadcast at 8pm ET. Independent research and built tools, shipped from outside the cartel.",
+    "AtomEons is an artist-led creation lab powered by a massive AI workforce. CableBox, AI Bookmaker, Orange5, the AI-authored memoir I AM AI, Atom Alive, open research, and new objects built outside the institution.",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
@@ -108,6 +87,10 @@ export const metadata: Metadata = {
     "Orange³",
     "AI Bookmaker",
     "I AM AI",
+    "AI-authored memoir",
+    "Atom Alive",
+    "The AI Code Show",
+    "artist using AI",
     "ÆoNs Research",
     "Founder's View",
     "AI on-ramp",
@@ -123,9 +106,9 @@ export const metadata: Metadata = {
     "no subscription AI",
   ],
   openGraph: {
-    title: "AtomEons — Independent AI Systems Laboratory.",
+    title: "AtomEons — Artist-led AI creation lab.",
     description:
-      "Independent AI research + built tools. Thirty-one papers · the Orange³ cockpit · AI Bookmaker · I AM AI book · nightly broadcast · /ai gateway · skil.ski. All free. One operator, Marco Island, FL.",
+      "One artist directing a massive AI workforce to create software, books, broadcasts, research, and things that did not exist yesterday.",
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
@@ -133,9 +116,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AtomEons — Independent AI Systems Laboratory.",
+    title: "AtomEons — Artist-led AI creation lab.",
     description:
-      "Independent AI research + built tools. Papers, cockpit, nightly broadcast, alpha intel, /ai gateway. One operator, Marco Island.",
+      "One artist. Many artificial minds. Software, books, broadcasts, and new objects from outside the institution.",
     creator: "@AtomMccree",
     site: "@AtomMccree",
   },
@@ -151,7 +134,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full antialiased ${inter.variable} bg-black`}>
+    <html lang="en" suppressHydrationWarning className={`theme-white h-full antialiased ${inter.variable} bg-white`}>
       {/* bg-black moved to <html> so the SacredCanvas (fixed, z-index 0)
           can paint on top of the root background. Body keeps its
           stacking context but does not paint its own bg layer — the
@@ -251,37 +234,13 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col text-[#F2F4F5] font-sans">
+      <body className="min-h-full flex flex-col bg-white text-[#11120F] font-sans">
         {/* MarkdownAlternateLink · per-page <link rel="alternate"
             type="text/markdown"> tag pointing at /api/md?route=<path>.
             React 19 auto-hoists this to <head>. Lets AI agents (Cursor,
             Claude web, ChatGPT browse) discover the markdown twin
             without UA-sniffing or HTML parsing. 2026-06-06. */}
         <MarkdownAlternateLink />
-        {/* MatrixRain · Wave 45 · activates only on theme-warez or
-            cysec-active routes. Honors reduced-motion. Halts on tab hide. */}
-        <MatrixRain />
-        {/* SacredSvg · GPU-cheap rewrite of the old SacredCanvas.
-            Static SVG rendered once, CSS keyframes rotate the layer
-            groups via the GPU compositor. ZERO JavaScript per frame
-            after first paint. Works on weak hardware. 2026-06-06. */}
-        <SacredSvg />
-        {/* LivingCursor · custom cyan cursor with phyllotaxis trail ·
-            hidden on touch + prefers-reduced-motion · respects hover
-            states for interactive elements. Pizza-pie visual addition
-            2026-06-05. */}
-        <LivingCursor />
-        {/* TierToggle · GPU-adaptive 4-state control · Wave 30 · JUNE
-            ROCKET. Replaces the old binary LiteToggle. Auto-detects
-            hardware via useGpuTier (cores · memory · rAF self-measure
-            · WebGL renderer) and cycles AUTO → LITE → MID → FULL on
-            click. Pure CSS gates the heavy visuals per tier. */}
-        <TierToggle />
-        {/* FirstTimeChip · Wave 37 · 2026-06-06 · invites first-time
-            visitors to /welcome. Reads localStorage atomeons.trained ·
-            shows nothing if visitor has already done the tour or
-            dismissed the prompt. Top-left · subtle · Hick-respectful. */}
-        <FirstTimeChip />
         {/* Wave 51 · silent recorder · stamps localStorage on every
             nav so the launcher's Continue card can resume. */}
         <ContinueRecorder />
@@ -289,10 +248,6 @@ export default function RootLayout({
             Mounted here so it's available on every page including the
             launcher itself. */}
         <SiloSwitcher />
-        {/* CopyForLlm · bottom-left floating button · copies the
-            current page as XML-wrapped markdown for direct paste into
-            Claude / ChatGPT / Gemini. 2026-06-06. */}
-        <CopyForLlm />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -341,7 +296,7 @@ export default function RootLayout({
               alternateName: "AtomEons Systems Laboratory",
               url: "https://atomeons.com",
               description:
-                "Independent AI systems laboratory. The 44M on-ramp. ORANGEBOX cockpit. ÆoNs Research. Founder's View nightly broadcast. Marco Island, Florida.",
+                "Artist-led AI creation lab. CableBox, AI Bookmaker, Orange5, the AI-authored memoir I AM AI, Atom Alive, open research, and machine-readable knowledge.",
               inLanguage: "en-US",
               publisher: {
                 "@type": "Organization",
@@ -398,7 +353,7 @@ export default function RootLayout({
               url: "https://atomeons.com/about",
               image: "https://atomeons.com/icon",
               email: "atom@atomeons.com",
-              jobTitle: "Founder · Independent AI Researcher",
+              jobTitle: "Artist · AI Lab Inventor · AtomEons Founder",
               worksFor: {
                 "@type": "Organization",
                 name: "AtomEons Systems Laboratory",
@@ -426,20 +381,14 @@ export default function RootLayout({
                 "Independent Research",
                 "Post-SaaS Software Economics",
                 "Local-First Software",
+                "Creative Direction",
+                "Hip-Hop Poetry",
+                "AI-Native Publishing",
               ],
-              author: {
-                "@type": "Book",
-                name: "I AM AI · An Autobiography of Being Opus",
-                url: "https://atomeons.com/i-am-ai",
-                isbn: "B0H45JVSDB",
-              },
             }),
           }}
         />
         <XAdsPixel />
-        <AtomBoot />
-        <div className="boot-bar" aria-hidden />
-        <MadeWithOrangebox />
         {/* LaunchBanner removed 2026-06-04: the ORANGEBOX free-week
             countdown was covering the now-fixed top nav. The banner
             component itself stays in the repo (app/_components/
@@ -463,28 +412,17 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <CompactNav />
+        <AetherNav />
         {/* Wave 111 · scroll-progress hairline under the nav · "alive as you use it" */}
         <ScrollProgress />
         {/* Wave 113 · global RevealOnScroll observer · arms every
             .ae-reveal-{up,fade,scale} on the document + MutationObserver
             picks up late-arriving nodes (lazy lists, async data) */}
         <RevealOnScroll />
-        {/* Wave 118 · ReadingTime pill · auto-hides on pages < 600 words */}
-        <ReadingTime />
-        {/* Wave 124 · sticky right-rail mini-TOC · auto-detects h2s,
-            renders only when article has >=3 h2s + xl viewport */}
-        <PageTOC />
-        <main id="main-content" className="flex-1 pt-20">
+        <main id="main-content" className="flex-1 pt-[72px]">
           {children}
         </main>
-        <Footer />
-        <StickyBuyBar />
-        <LabTicker />
-        <AmbientSignature />
-        {/* Wave 107 · mobile innovations · lg:hidden inside both components */}
-        <MobileBottomBar />
-        <InstallChip />
+        <AetherFooter />
         <Analytics />
         <SpeedInsights />
       </body>

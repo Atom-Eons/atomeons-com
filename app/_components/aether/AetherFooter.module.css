@@ -1,0 +1,189 @@
+.footer {
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid #11120f;
+  background: #f4f5f0;
+  color: #11120f;
+}
+
+.top {
+  display: grid;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 76px clamp(24px,5vw,80px);
+  grid-template-columns: minmax(280px,.72fr) minmax(0,1.28fr);
+  gap: clamp(60px,9vw,150px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 11px;
+  color: #11120f !important;
+  text-decoration: none !important;
+}
+
+.brand span {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 42px;
+  font-weight: 350;
+  letter-spacing: -.07em;
+  line-height: 1;
+}
+
+.brand strong {
+  font-size: 13px;
+  font-weight: 760;
+  letter-spacing: .17em;
+}
+
+.brandBlock > p {
+  max-width: 460px;
+  margin: 28px 0 0;
+  color: #62645f !important;
+  font-family: "Newsreader", Georgia, serif !important;
+  font-size: 18px;
+  letter-spacing: -.015em;
+  line-height: 1.5 !important;
+}
+
+.status {
+  display: flex;
+  margin-top: 38px;
+  align-items: center;
+  gap: 10px;
+  color: #64665f;
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: .13em;
+}
+
+.status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3fa15e;
+  box-shadow: 0 0 0 5px rgba(63,161,94,.12);
+}
+
+.githubLink {
+  display: inline-block;
+  margin-top: 16px;
+  border-bottom: 1px solid #11120f;
+  color: #11120f !important;
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  letter-spacing: .08em;
+  text-decoration: none !important;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 32px;
+}
+
+.columns h2 {
+  margin: 0;
+  color: #8b8d87 !important;
+  font-family: var(--font-mono), monospace !important;
+  font-size: 8px;
+  font-weight: 650 !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase;
+}
+
+.columns ul {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columns li {
+  border-bottom: 1px solid #dedfd9;
+}
+
+.columns a {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  color: #454742 !important;
+  font-size: 11px;
+  font-weight: 560;
+  text-decoration: none !important;
+}
+
+.columns a span {
+  opacity: 0;
+  transform: translate(-4px,4px);
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.columns a:hover { color: #11120f !important; }
+.columns a:hover span { opacity: 1; transform: translate(0,0); }
+
+.machineRail {
+  display: flex;
+  min-height: 52px;
+  padding: 0 24px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  overflow-x: auto;
+  border-top: 1px solid #11120f;
+  border-bottom: 1px solid #11120f;
+  background: #d8ff3e;
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  white-space: nowrap;
+}
+
+.machineRail a { color: #11120f !important; text-decoration: none !important; }
+.machineRail a:hover { text-decoration: underline !important; text-underline-offset: 4px; }
+
+.bottom {
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 74px;
+  margin: 0 auto;
+  padding: 0 clamp(24px,5vw,80px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.bottom p {
+  margin: 0;
+  color: #7d7f79 !important;
+  font-family: var(--font-mono), monospace !important;
+  font-size: 8px;
+  letter-spacing: .09em;
+}
+
+.bottom nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.bottom a { color: #62645f !important; font-size: 10px; text-decoration: none !important; }
+.bottom a:hover { color: #11120f !important; }
+
+@media (max-width: 1050px) {
+  .top { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .top { padding-top: 56px; }
+  .columns { grid-template-columns: 1fr 1fr; gap: 48px 24px; }
+  .bottom { padding-top: 22px; padding-bottom: 22px; align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 430px) {
+  .columns { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .columns a span { transition: none; }
+}

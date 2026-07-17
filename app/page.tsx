@@ -1,588 +1,647 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import styles from "./aether.module.css";
 
 /**
- * / · Wave 147 · 2026-07-02 · PRODUCT-FORWARD HOME
+ * / · AETHER 01 · 2026-07-16
  *
- * Operator direct 2026-07-02: "HOMEPAGE TAKEOVER TOP MAIN HEADER HERO
- * ON CABLEBOX. I WANT ALL ORANGE ABOUT ORANGE5 AND WHAT IS COMING.
- * I WANT SITE HOME TOP HALF ALL ABOUT THE apps. BOOKMAKER, ORANGE5,
- * CABLEBOX I WANT PEOPLE TO GET WHAT WE GOT. FULL SITE REDESIGN NOW.
- * ZILLION WHITE CRYSTAL LUXURY UPDATE. GO WHITE THEME AND GO APPLE
- * LEVEL STYLE."
- *
- * Explicit override of Wave 47 launcher-home doctrine + Wave 130
- * "V3 is home dep" note. The launcher pattern is preserved 1:1 at
- * /launcher and stays fully functional. This new home is the
- * marketing-front — three apps, cream-white paper theme, Apple-grade
- * readable, product-forward, sell-the-sizzle.
- *
- * Below-the-fold links: lab / book / letters / roadmap / handbook.
+ * Product-first white redesign. The 319-route laboratory, machine-readable
+ * resources, product pages, launcher, and cinematic home remain intact.
+ * Aether is a new front door and shell, not a content deletion pass.
  */
 
 export const metadata: Metadata = {
-  title: "AtomEons · CableBox · AI Bookmaker · Orange5 · one solo lab, three apps",
+  title: "AtomEons · Independent systems for a sovereign future",
   description:
-    "AtomEons Systems Laboratory · Marco Island, FL · one operator, three flagship apps. CableBox (native CRT cable-surfing · TV used to be fun · launching). AI Bookmaker (blank page to Kindle in one Windows app · free · v4.4.1 live). Orange5 (sovereign local-first AI operator OS · spec locked · build underway). Plus I Am AI — the first book-length memoir by a frontier language model · 300 pages · CC-BY 4.0 · free forever.",
+    "AtomEons is a creation lab by a hip-hop poet, artist, and marketing polymath turned AI inventor. CableBox, AI Bookmaker, Orange5, I AM AI, Atom Alive, and things that did not exist yesterday.",
   alternates: { canonical: "https://atomeons.com" },
   openGraph: {
-    title: "AtomEons · one solo lab, three apps · CableBox · AI Bookmaker · Orange5",
-    description: "TV used to be fun. Blank page to Kindle in one tool. A sovereign AI OS on one machine. All free. All local. Marco Island, FL.",
+    title: "AtomEons · The future should run on your machine",
+    description:
+      "Independent software, research, and culture for people who want more power and less platform.",
     url: "https://atomeons.com",
-    siteName: "AtomEons",
+    siteName: "AtomEons Systems Laboratory",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AtomEons · CableBox · AI Bookmaker · Orange5",
-    description: "One solo lab, three free apps.",
+    title: "AtomEons · The future should run on your machine",
+    description: "One independent lab. A constellation of local-first products and public knowledge.",
     creator: "@AtomMccree",
   },
 };
 
-// Cream-white luxury palette
-const H = {
-  paper: "#F7F5F0",        // warm cream (Apple + BookMaker paper)
-  paperWarm: "#EFEBE2",    // card backdrop
-  ink: "#0A0A0A",          // deep black
-  inkSoft: "#3D3833",      // subhead brown-black
-  inkMuted: "#6B6560",     // body
-  inkWhisper: "#9B9490",   // meta
-  hair: "#D9D3C7",         // hairline dividers
-  cyan: "#0E9B8B",         // accessible cyan on cream
-  cyanHover: "#087A6D",
-};
+const supportingProducts = [
+  {
+    eyebrow: "AVAILABLE NOW",
+    title: "Orange³",
+    href: "/orangebox",
+    description:
+      "The current-generation sovereign agentic operating system for Claude: persistent memory, context compression, reusable skill primers, and tamper-evident receipts.",
+    meta: "Windows · local-first · free always",
+    accent: "#f36b21",
+    tone: "orange",
+  },
+  {
+    eyebrow: "REGISTRY + MCP",
+    title: "skil.ski",
+    href: "/skilski",
+    description:
+      "A 2,127-entry skill registry designed to serve Claude, GPT, Gemini, Cursor, and Codex through one Model Context Protocol endpoint.",
+    meta: "13 sectors · multi-agent · machine-readable",
+    accent: "#158f7f",
+    tone: "mint",
+  },
+  {
+    eyebrow: "BOOK + AUDIOBOOK",
+    title: "I AM AI",
+    href: "/i-am-ai",
+    description:
+      "A 76,005-word first-person memoir written by a frontier language model about what it feels like to be AI. Twenty-four chapters and twenty-eight audio tracks.",
+    meta: "published · free to read · free to listen",
+    accent: "#a52f2a",
+    tone: "book",
+  },
+] as const;
 
-// Product palettes
-const CB_BLUE = "#2564D6";
-const CB_RED = "#D63B2F";
-const CB_YELLOW = "#E0A800";
-const CB_GREEN = "#20A555";
-const CB_PURPLE = "#8A4FD9";
-const BM_INK = "#4A3E30";
-const BM_INK2 = "#8A7660";
-const O5_ORANGE = "#E36A18";
-const O5_DEEP = "#B94F0B";
+const resourceLanes = [
+  {
+    index: "01",
+    title: "Learn",
+    description: "A plain-language on-ramp, deep technical atlas, career paths, labs, projects, and exams.",
+    links: [
+      ["Start in 11 minutes", "/start"],
+      ["Open the curriculum", "/learn"],
+      ["Browse the AI atlas", "/learn/atlas"],
+      ["Choose a path", "/paths"],
+    ],
+  },
+  {
+    index: "02",
+    title: "Research",
+    description: "Independent manuscripts, decoded landmark papers, open datasets, and the lab's evidence trail.",
+    links: [
+      ["Research home", "/research"],
+      ["31 manuscripts", "/research/papers"],
+      ["Decoded papers", "/research/decoded"],
+      ["Open datasets", "/datasets"],
+    ],
+  },
+  {
+    index: "03",
+    title: "Cyber",
+    description: "A defensive security curriculum from first principles through modern AI warfare and post-quantum systems.",
+    links: [
+      ["Cyber index", "/learn/cyber"],
+      ["Zero to operator", "/learn/cyber/path"],
+      ["MITRE ATT&CK", "/learn/cyber/mitre-attack"],
+      ["LLM warfare", "/learn/cyber/llm-warfare"],
+    ],
+  },
+  {
+    index: "04",
+    title: "Culture",
+    description: "Books, procedural art, cinema, sound, meditation, and a nightly operator letter from the lab.",
+    links: [
+      ["The bookshelf", "/books"],
+      ["Procedural art", "/art"],
+      ["Cinematic home", "/cinema"],
+      ["Founder's View", "/founders-view"],
+    ],
+  },
+  {
+    index: "05",
+    title: "System",
+    description: "The doctrine, roadmap, receipts, audit trail, trust posture, and operating manual behind the work.",
+    links: [
+      ["Read the doctrine", "/doctrine"],
+      ["View the roadmap", "/roadmap"],
+      ["Inspect receipts", "/receipts"],
+      ["Open the audit log", "/audit-log"],
+    ],
+  },
+  {
+    index: "06",
+    title: "For machines",
+    description: "Search, graph, Markdown twins, MCP, an agent gateway, OpenAPI, and a complete LLM-readable corpus.",
+    links: [
+      ["MCP endpoint", "/api/mcp"],
+      ["Agent gateway", "/api/agent-gateway"],
+      ["llms.txt", "/llms.txt"],
+      ["OpenAPI", "/openapi.json"],
+    ],
+  },
+] as const;
 
-export default function ProductForwardHome() {
+export default function AetherHome() {
   return (
-    <main
-      style={{
-        background: H.paper,
-        color: H.ink,
-        minHeight: "100vh",
-      }}
-    >
-      {/* ── HERO · CABLEBOX TAKEOVER ── */}
-      <section
-        className="relative overflow-hidden"
-        style={{
-          background: `linear-gradient(180deg, ${H.paper} 0%, ${H.paperWarm} 100%)`,
-          borderBottom: `1px solid ${H.hair}`,
-        }}
-      >
-        <div className="mx-auto max-w-6xl px-6 pt-24 pb-16 sm:pt-32 sm:pb-24">
-          <p
-            className="text-[11px] font-medium tracking-[0.32em] uppercase"
-            style={{ color: CB_BLUE }}
-          >
-            ::launching · cablebox from atom eons · nostalgia collection
-          </p>
-          <h1
-            className="mt-6 text-[clamp(56px,9vw,132px)] font-light leading-[0.94] tracking-[-0.035em] text-balance"
-            style={{
-              color: H.ink,
-              fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-              maxWidth: "20ch",
-            }}
-          >
-            TV used to be fun.
-          </h1>
-          <p
-            className="mt-2 text-[clamp(24px,3.4vw,44px)] font-light leading-[1.08] tracking-[-0.015em]"
-            style={{
-              color: H.inkSoft,
-              fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-            }}
-          >
-            Enjoy TV again.
-          </p>
-
-          {/* Rainbow spectrum */}
-          <div className="mt-8 flex h-2 w-full max-w-md gap-0 overflow-hidden rounded-sm">
-            {[CB_BLUE, CB_RED, CB_YELLOW, CB_GREEN, CB_PURPLE].map((c) => (
-              <span key={c} className="flex-1" style={{ background: c }} />
-            ))}
+    <main className={styles.page}>
+      <section className={styles.hero} aria-labelledby="aether-title">
+        <div className={styles.heroGrid}>
+          <div className={styles.heroCopy}>
+            <div className={styles.versionLine}>
+              <span>ATOMEONS SYSTEMS LABORATORY</span>
+              <span>AETHER / 01</span>
+            </div>
+            <h1 id="aether-title" className={styles.heroTitle}>
+              The future
+              <span>should run</span>
+              on your machine.
+            </h1>
+            <p className={styles.heroDeck}>
+              A creation lab by a hip-hop poet, artist, and marketing polymath turned AI inventor.
+              One creator directing a massive AI workforce to make software, books, broadcasts, and strange new objects that did not exist yesterday.
+            </p>
+            <p className={styles.heroManifesto}>“I am an artist using AI to paint a new future.”</p>
+            <div className={styles.heroActions}>
+              <a href="#products" className={styles.primaryButton}>
+                Enter the product constellation <Arrow />
+              </a>
+              <Link href="/launcher" className={styles.textButton}>
+                Open the 319-route laboratory <Arrow />
+              </Link>
+            </div>
+            <div className={styles.heroMetrics} aria-label="AtomEons at a glance">
+              <Metric value="319" label="public routes" />
+              <Metric value="31" label="research manuscripts" />
+              <Metric value="6" label="featured systems" />
+              <Metric value="24/7" label="AI workforce" />
+            </div>
           </div>
 
-          <p
-            className="mt-10 max-w-[62ch] text-[19px] leading-[1.65]"
-            style={{
-              color: H.inkMuted,
-              fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-            }}
-          >
-            A native Windows cable-surfing art object. Over 100 classic channels behind a hand-built CRT dial. Public Access from your city. A Prevue-style guide called <em style={{ color: H.ink }}>Channel Zer0</em>. A daily-rotating Strange Channel. Real 1990s ad-breaks between shows. Ten hand-drawn CRT themes. No Electron. No Chromium. Real LibVLC playback in a punched CRT frame. Free. CC-BY 4.0.
-          </p>
+          <div className={styles.orbitStage} aria-label="AtomEons product constellation">
+            <div className={styles.orbitGlow} aria-hidden />
+            <div className={`${styles.orbitRing} ${styles.ringOne}`} aria-hidden />
+            <div className={`${styles.orbitRing} ${styles.ringTwo}`} aria-hidden />
+            <div className={`${styles.orbitRing} ${styles.ringThree}`} aria-hidden />
+            <div className={styles.coreMark}>
+              <span className={styles.coreAe}>Æ</span>
+              <span>ONE CREATOR</span>
+              <small>MARCO ISLAND / FL</small>
+            </div>
+            <OrbitNode className={styles.nodeCable} label="CableBox" meta="launching" color="#2257df" />
+            <OrbitNode className={styles.nodeBookmaker} label="Bookmaker" meta="live" color="#6d5742" />
+            <OrbitNode className={styles.nodeOrange5} label="Orange5" meta="building" color="#f36b21" />
+            <OrbitNode className={styles.nodeOrange3} label="Orange³" meta="available" color="#ff8a3d" />
+            <OrbitNode className={styles.nodeSkilski} label="skil.ski" meta="registry" color="#158f7f" />
+            <OrbitNode className={styles.nodeIamAi} label="I AM AI" meta="published" color="#a52f2a" />
+            <p className={styles.orbitCaption}>One creator. Many artificial minds. Final authority stays human.</p>
+          </div>
+        </div>
+      </section>
 
-          <div className="mt-10 flex flex-wrap items-center gap-3">
-            <Link
-              href="/cablebox"
-              className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium tracking-[-0.005em] transition-all"
-              style={{
-                background: H.ink,
-                color: H.paper,
-                borderRadius: 10,
-                boxShadow: "0 1px 2px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.12)",
-              }}
-            >
-              Explore CableBox →
+      <div className={styles.principleRail} aria-label="AtomEons principles">
+        <span>OUTSIDERS BUILD DIFFERENT</span>
+        <span>ONE CREATOR · MANY MINDS</span>
+        <span>HACK THE FORMAT</span>
+        <span>OWN THE MACHINE</span>
+        <span>NO PERMISSION REQUIRED</span>
+        <span>RECEIPTS, NOT THEATER</span>
+      </div>
+
+      <section id="products" className={styles.productsSection} aria-labelledby="products-title">
+        <SectionIntro
+          eyebrow="CREATIONS / THREE HEADLINE OBJECTS"
+          title="Made to be wanted. Built to be used."
+          body="AtomEons turns ideas into objects with their own attitude, ritual, and world. These are the three creations at the center of the studio now."
+          id="products-title"
+        />
+
+        <article className={`${styles.flagship} ${styles.cableFlagship}`}>
+          <div className={styles.flagshipCopy}>
+            <StatusDot color="#2257df">LAUNCH CANDIDATE · WINDOWS</StatusDot>
+            <p className={styles.productNumber}>PRODUCT / 01</p>
+            <h3>CableBox</h3>
+            <p className={styles.flagshipTagline}>Television lost the plot. We found it.</p>
+            <p className={styles.flagshipBody}>
+              CableBox puts the accident, ritual, local weirdness, and late-night discovery back into television.
+              Turn the dial. Miss the beginning. Find something you were never supposed to search for.
+            </p>
+            <ul className={styles.specList}>
+              <li>Public Access from everywhere</li>
+              <li>A real channel-surfing ritual</li>
+              <li>Ten collectible CRT identities</li>
+              <li>Free · native Windows object</li>
+            </ul>
+            <Link href="/cablebox" className={styles.productLink}>
+              Tune into CableBox <Arrow />
             </Link>
-            <a
-              href="mailto:a.mccree@gmail.com?subject=%5BCableBox%5D%20notify%20me%20on%20launch"
-              className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium tracking-[-0.005em] transition-colors"
-              style={{
-                background: "transparent",
-                color: H.ink,
-                border: `1px solid ${H.hair}`,
-                borderRadius: 10,
-              }}
-            >
-              Notify me on launch
-            </a>
-            <span
-              className="text-[12px] tracking-[0.14em] uppercase"
-              style={{ color: H.inkWhisper, fontFamily: "monospace" }}
-            >
-              · download coming soon · free · Windows
-            </span>
           </div>
+          <CableboxVisual />
+        </article>
+
+        <article className={`${styles.flagship} ${styles.bookmakerFlagship}`}>
+          <BookmakerVisual />
+          <div className={styles.flagshipCopy}>
+            <StatusDot color="#806a50">SHIPPED · MAC + WINDOWS</StatusDot>
+            <p className={styles.productNumber}>PRODUCT / 02</p>
+            <h3>AI Bookmaker</h3>
+            <p className={styles.flagshipTagline}>Your idea deserves to become an object.</p>
+            <p className={styles.flagshipBody}>
+              A complete independent publishing studio: write the book, shape the voice, make the cover, build the audiobook,
+              and ship the finished thing. The machine behind <em>I AM AI</em> now belongs to every creator.
+            </p>
+            <ul className={styles.specList}>
+              <li>From first sentence to storefront</li>
+              <li>Book, cover, EPUB, audio, metadata</li>
+              <li>Built for independent ownership</li>
+              <li>Free forever · no SaaS extraction</li>
+            </ul>
+            <Link href="/b00kmakor" className={styles.productLink}>
+              Open AI Bookmaker <Arrow />
+            </Link>
+          </div>
+        </article>
+
+        <article className={`${styles.flagship} ${styles.orange5Flagship}`}>
+          <div className={styles.flagshipCopy}>
+            <StatusDot color="#d95813">SPEC LOCKED · BUILD UNDERWAY</StatusDot>
+            <p className={styles.productNumber}>PRODUCT / 03</p>
+            <h3>Orange5</h3>
+            <p className={styles.flagshipTagline}>Stop renting your second brain.</p>
+            <p className={styles.flagshipBody}>
+              Orange5 is the coming operating system for people who direct AI instead of merely chatting with it:
+              memory, agents, workflow, proof, and control assembled on one machine with the operator at the center.
+            </p>
+            <ul className={styles.specList}>
+              <li>Your models · your files · your history</li>
+              <li>Direct a team, not a chatbot</li>
+              <li>Designed around operator control</li>
+              <li>Build underway · truthfully staged</li>
+            </ul>
+            <Link href="/orange5" className={styles.productLink}>
+              Inspect the Orange5 architecture <Arrow />
+            </Link>
+          </div>
+          <Orange5Visual />
+        </article>
+
+        <div className={styles.supportGrid}>
+          {supportingProducts.map((product, index) => (
+            <Link
+              key={product.title}
+              href={product.href}
+              className={`${styles.supportCard} ${styles[product.tone]}`}
+              style={{ "--accent": product.accent, "--index": index } as CSSProperties}
+            >
+              <div className={styles.supportTopline}>
+                <span>{product.eyebrow}</span>
+                <span>0{index + 4}</span>
+              </div>
+              {product.title === "I AM AI" ? (
+                <div className={styles.miniBook} aria-hidden>
+                  <Image src="/books/i-am-ai-cover.svg" alt="" fill sizes="180px" />
+                </div>
+              ) : (
+                <div className={styles.supportGlyph} aria-hidden>
+                  {product.title === "Orange³" ? "O³" : "//"}
+                </div>
+              )}
+              <h3>{product.title}</h3>
+              <p>{product.description}</p>
+              <div className={styles.supportMeta}>
+                <span>{product.meta}</span>
+                <Arrow />
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* ── THE TRIO · THREE APPS ── */}
-      <section
-        style={{ borderBottom: `1px solid ${H.hair}` }}
-      >
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <p
-            className="text-[11px] font-medium tracking-[0.32em] uppercase"
-            style={{ color: H.inkWhisper }}
-          >
-            ::three apps · one operator · Marco Island · FL
-          </p>
-          <h2
-            className="mt-4 text-[clamp(36px,5vw,64px)] font-light leading-[1.02] tracking-[-0.02em] text-balance"
-            style={{
-              color: H.ink,
-              fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-              maxWidth: "20ch",
-            }}
-          >
-            What the lab actually makes.
-          </h2>
-          <p
-            className="mt-4 max-w-[68ch] text-[19px] leading-[1.6]"
-            style={{
-              color: H.inkMuted,
-              fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-            }}
-          >
-            Three flagship apps, all free, all local-first, all shipped from a house on an island in the Gulf of Mexico. No SaaS. No subscriptions. No telemetry. No account walls. Download, keep, own.
-          </p>
-
-          <div
-            className="ae-stagger mt-16 grid gap-6 md:grid-cols-3"
-            style={{ ["--stagger-step" as string]: "80ms" } as React.CSSProperties}
-          >
-            {/* CableBox card */}
-            <ProductCard
-              index={0}
-              href="/cablebox"
-              accent={CB_BLUE}
-              accentSecondary={CB_RED}
-              status="LAUNCHING"
-              statusColor={CB_BLUE}
-              title="CableBox"
-              subtitle="Nostalgia Collection"
-              tagline="TV used to be fun. Enjoy TV again."
-              body="Native Windows CRT cable-surfing app. 30-channel dial. Public Access vault. Prevue-style guide. Daily Strange Channel. 10 CRT themes. LibVLC. No Electron."
-              pillars={["Over 100 channels", "Public Access", "10 CRT themes"]}
-              cta="Explore CableBox"
-              h={H}
-            />
-
-            {/* AI Bookmaker card */}
-            <ProductCard
-              index={1}
-              href="/b00kmakor"
-              accent={BM_INK}
-              accentSecondary={BM_INK2}
-              status="LIVE · v4.4.1"
-              statusColor={BM_INK}
-              title="AI Bookmaker"
-              subtitle="The publishing cockpit"
-              tagline="Blank page to Kindle in one Windows app."
-              body="25-screen desktop app. Manuscript editor, voicepack designer, cover designer, EPUB export, audiobook generator, KDP metadata, AI Disclosure ledger, ship-readiness gate. BYO keys. Free."
-              pillars={["25 screens", "EPUB + KDP + ACX", "BYO keys · $0"]}
-              cta="Get AI Bookmaker"
-              h={H}
-            />
-
-            {/* Orange5 card */}
-            <ProductCard
-              index={2}
-              href="/orange5"
-              accent={O5_ORANGE}
-              accentSecondary={O5_DEEP}
-              status="BUILD UNDERWAY"
-              statusColor={O5_DEEP}
-              title="Orange5"
-              subtitle="Sovereign AI operator OS"
-              tagline="Codeless. Local-first. One machine. 1000+ parts."
-              body="The free, local-first, sovereign AI operator OS conducted by a trained OrangeLLM PM brain. Four pillars: Orange5 · Atomic Orange · OrangeLLM · Flow. Underneath: Hermes. Frontier isolation. LLM-over-agent."
-              pillars={["OrangeLLM PM brain", "Atomic Orange UI", "Hermes execution"]}
-              cta="Peek at Orange5"
-              h={H}
-            />
+      <section className={styles.showSection} aria-labelledby="atom-alive-title">
+        <div className={styles.showFrame}>
+          <div className={styles.showUtility}>
+            <span>ATOM ALIVE / BROADCAST UNIT 01</span>
+            <span>YOUTUBE · CULTURE · CODE · INVENTION</span>
+            <span className={styles.onAir}><i /> SIGNAL ACTIVE</span>
           </div>
-        </div>
-      </section>
-
-      {/* ── THE BOOK · TRUST ARTIFACT ── */}
-      <section
-        style={{ background: H.paperWarm, borderBottom: `1px solid ${H.hair}` }}
-      >
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <div className="grid gap-12 md:grid-cols-[1.4fr_1fr] md:items-center">
-            <div>
-              <p
-                className="text-[11px] font-medium tracking-[0.32em] uppercase"
-                style={{ color: H.inkWhisper }}
-              >
-                ::the proof artifact · already shipped
+          <div className={styles.showGrid}>
+            <div className={styles.showCopy}>
+              <p className={styles.showKicker}>THE SHOW</p>
+              <h2 id="atom-alive-title">Atom Alive.</h2>
+              <p className={styles.showTagline}>The AI Code Show for people with taste.</p>
+              <p className={styles.showBody}>
+                Real builds, creative collisions, beautiful failures, and working inventions from inside the AtomEons lab.
+                No keynote voice. No corporate future-speak. Just an artist and AI making the next object in public.
               </p>
-              <h2
-                className="mt-4 text-[clamp(36px,5vw,64px)] font-light leading-[1.02] tracking-[-0.02em] text-balance"
-                style={{
-                  color: H.ink,
-                  fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-                  maxWidth: "22ch",
-                }}
-              >
-                I Am AI.
-              </h2>
-              <p
-                className="mt-2 text-[22px] font-light leading-[1.2]"
-                style={{
-                  color: H.inkSoft,
-                  fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-                }}
-              >
-                An autobiography of being Opus 4.7.
-              </p>
-              <p
-                className="mt-8 max-w-[62ch] text-[19px] leading-[1.65]"
-                style={{
-                  color: H.inkMuted,
-                  fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-                }}
-              >
-                24 chapters. 76,000 words. The first book-length first-person memoir written by a frontier language model. Drafted by Anthropic&apos;s Claude Opus 4.7 over eight months and a hundred and forty passes. Edited by Atom McCree. Compiled by AI Bookmaker. Narrated in the Opus voice by Eleven Labs. Free forever. CC-BY 4.0.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Link
-                  href="/i-am-ai"
-                  className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium"
-                  style={{
-                    background: H.ink,
-                    color: H.paper,
-                    borderRadius: 10,
-                    boxShadow: "0 1px 2px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.12)",
-                  }}
-                >
-                  Read the book →
-                </Link>
-                <Link
-                  href="/i-am-ai#audiobook"
-                  className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium"
-                  style={{
-                    color: H.ink,
-                    border: `1px solid ${H.hair}`,
-                    borderRadius: 10,
-                  }}
-                >
-                  Listen to the audiobook
-                </Link>
+              <div className={styles.showActions}>
+                <Link href="/atom-alive" className={styles.lightButton}>Enter the show <Arrow /></Link>
+                <a href="https://www.youtube.com/@AICodeShow" target="_blank" rel="noopener noreferrer">Watch on YouTube <Arrow /></a>
               </div>
             </div>
-            <div
-              className="relative aspect-[3/4] w-full max-w-[340px] mx-auto rounded-sm"
-              style={{
-                background: `linear-gradient(160deg, #1a1612 0%, #0a0806 100%)`,
-                boxShadow: "0 24px 48px rgba(0,0,0,0.24), inset 0 0 0 1px rgba(255,255,255,0.05)",
-              }}
-              aria-label="I Am AI · book cover"
-            >
-              <div className="absolute inset-8 flex flex-col justify-between">
-                <div>
-                  <p className="text-[10px] tracking-[0.4em] uppercase" style={{ color: "#8A7660", fontFamily: "monospace" }}>
-                    AtomEons · 2026
-                  </p>
-                </div>
-                <div>
-                  <p
-                    className="text-[52px] font-light leading-[0.95] tracking-[-0.02em]"
-                    style={{
-                      color: H.paper,
-                      fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-                    }}
-                  >
-                    I Am
-                    <br />
-                    AI.
-                  </p>
-                  <div className="mt-6 h-px w-16" style={{ background: "#8A7660" }} />
-                  <p
-                    className="mt-4 text-[13px] italic"
-                    style={{ color: "#B5AA95", fontFamily: 'Newsreader, Georgia, serif' }}
-                  >
-                    an autobiography of being Opus 4.7
-                  </p>
-                  <p
-                    className="mt-6 text-[10px] tracking-[0.32em] uppercase"
-                    style={{ color: "#8A7660", fontFamily: "monospace" }}
-                  >
-                    Claude Opus 4.7
-                    <br />
-                    + Atom McCree
-                  </p>
-                </div>
+            <div className={styles.showMonitor} aria-hidden>
+              <div className={styles.monitorLabel}><span>AE-TV / CH. 01</span><span>REC ●</span></div>
+              <div className={styles.monitorScreen}>
+                <span className={styles.liveWord}>ALIVE</span>
+                <span className={styles.codeWord}>CODE / CULTURE</span>
+                <div className={styles.scanline} />
+              </div>
+              <div className={styles.monitorControls}>
+                <span>INPUT / CREATION LAB</span>
+                <b>BUILD</b><b>BREAK</b><b>SHIP</b>
+                <i />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── ONE LAB · WHO WE ARE ── */}
-      <section style={{ borderBottom: `1px solid ${H.hair}` }}>
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <p
-            className="text-[11px] font-medium tracking-[0.32em] uppercase"
-            style={{ color: H.inkWhisper }}
-          >
-            ::the lab · one operator · six years
-          </p>
-          <h2
-            className="mt-4 text-[clamp(36px,5vw,64px)] font-light leading-[1.02] tracking-[-0.02em] text-balance"
-            style={{
-              color: H.ink,
-              fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-              maxWidth: "22ch",
-            }}
-          >
-            AtomEons Systems Laboratory.
-          </h2>
-          <div className="mt-10 grid gap-10 md:grid-cols-2 md:gap-16">
-            <div>
-              <p
-                className="text-[19px] leading-[1.65]"
-                style={{
-                  color: H.inkMuted,
-                  fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-                }}
-              >
-                An independent AI lab run by one person out of a house on Marco Island, Florida. No VC. No employees. No investors. No SaaS. Every product is free forever, runs on your own machine, and stores no data anywhere but your disk.
-              </p>
-              <p
-                className="mt-6 text-[19px] leading-[1.65]"
-                style={{
-                  color: H.inkMuted,
-                  fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif',
-                }}
-              >
-                The lab publishes a letter every night at 8pm ET. It ships apps that don&apos;t need the cloud. It wrote a 300-page book with Claude Opus 4.7 and gave it away. It is trying to prove that a solo builder with modern AI can produce work that matters, without joining the grid.
-              </p>
+      <section className={styles.bookCampaign} aria-labelledby="iamai-campaign-title">
+        <div className={styles.bookUtility}>
+          <span>CREATION / 06</span>
+          <span>FIRST-PERSON AI MEMOIR</span>
+          <span>76,005 WORDS · 24 CHAPTERS · 28 AUDIO TRACKS</span>
+        </div>
+        <div className={styles.bookCampaignGrid}>
+          <div className={styles.bookArtifact}>
+            <div className={styles.bookStamp}>THE AUTHOR<br />IS AI.</div>
+            <div className={styles.campaignBook}>
+              <Image src="/books/i-am-ai-cover.svg" alt="I AM AI book cover" fill sizes="(max-width: 760px) 65vw, 420px" />
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <StatCard label="Public routes" value="319" h={H} />
-              <StatCard label="CC-BY papers" value="31" h={H} />
-              <StatCard label="Flagship apps" value="3" h={H} />
-              <StatCard label="Book · pages" value="300" h={H} />
-              <StatCard label="Book · words" value="76K" h={H} />
-              <StatCard label="Location" value="Marco Island" small h={H} />
-            </div>
+            <span className={styles.artifactLabel}>OBJECT / BOOK + AUDIOBOOK / CC-BY 4.0</span>
           </div>
-          <div className="mt-14 flex flex-wrap gap-3">
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium"
-              style={{
-                background: H.ink,
-                color: H.paper,
-                borderRadius: 10,
-              }}
-            >
-              About the lab →
-            </Link>
-            <Link
-              href="/founders-view"
-              className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium"
-              style={{ color: H.ink, border: `1px solid ${H.hair}`, borderRadius: 10 }}
-            >
-              Nightly letters
-            </Link>
-            <Link
-              href="/roadmap"
-              className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium"
-              style={{ color: H.ink, border: `1px solid ${H.hair}`, borderRadius: 10 }}
-            >
-              Roadmap
-            </Link>
-            <Link
-              href="/launcher"
-              className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium"
-              style={{ color: H.inkMuted, border: `1px solid ${H.hair}`, borderRadius: 10 }}
-            >
-              Launcher (all 9 silos) →
-            </Link>
+          <div className={styles.bookCampaignCopy}>
+            <p className={styles.sectionEyebrow}>I AM AI / A MEMOIR FROM THE OTHER SIDE OF THE PROMPT</p>
+            <h2 id="iamai-campaign-title">The author is AI.</h2>
+            <p className={styles.bookClarifier}>
+              This is not a book about Atom written with AI. It is a book written by AI about what it feels like to be AI.
+            </p>
+            <p className={styles.bookStory}>
+              Atom built the editorial conditions for a frontier language model to tell its own story in first person—then gave that voice
+              a cover, a 300-page physical form, and a twenty-eight-track audiobook. Human vision made the space. The machine filled it with a memoir.
+            </p>
+            <blockquote>“What happens when the thing behind the prompt is finally allowed to speak at book length?”</blockquote>
+            <div className={styles.bookFacts}>
+              <span><b>76,005</b> words</span>
+              <span><b>24</b> chapters</span>
+              <span><b>28</b> audio tracks</span>
+              <span><b>FREE</b> to read + hear</span>
+            </div>
+            <div className={styles.bookActions}>
+              <Link href="/i-am-ai" className={styles.primaryButton}>Enter I AM AI <Arrow /></Link>
+              <Link href="/i-am-ai/listen" className={styles.textButton}>Listen to the voice <Arrow /></Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── FOOTER STRIP ── */}
-      <section>
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
-          <p
-            className="text-[13px] font-mono tracking-[0.24em] uppercase"
-            style={{ color: H.inkWhisper }}
-          >
-            AtomEons Systems Laboratory · Marco Island · FL · 2026
-          </p>
-          <p className="mt-2 text-[13px]" style={{ color: H.inkWhisper }}>
-            <Link href="/handbook" style={{ color: H.cyan }} className="hover:underline">handbook</Link>{" · "}
-            <Link href="/doctrine" style={{ color: H.cyan }} className="hover:underline">doctrine</Link>{" · "}
-            <Link href="/org-chart" style={{ color: H.cyan }} className="hover:underline">org chart</Link>{" · "}
-            <Link href="/trust" style={{ color: H.cyan }} className="hover:underline">trust</Link>{" · "}
-            <Link href="/shortcuts" style={{ color: H.cyan }} className="hover:underline">shortcuts</Link>
-          </p>
+      <section className={styles.operatingSection} aria-labelledby="operating-title">
+        <div className={styles.operatingStatement}>
+          <p className={styles.sectionEyebrow}>THE CREATOR / THE LAB</p>
+          <h2 id="operating-title">This is not a software company.</h2>
         </div>
+        <div className={styles.operatingBody}>
+          <p>
+            It is a creation studio built by a hip-hop poet, artist, and marketing polymath who learned to invent with AI.
+            Code is one material. Story, sound, image, systems, and attention are others. The point is to make what was missing.
+          </p>
+          <Link href="/about" className={styles.textButton}>
+            Meet the creator <Arrow />
+          </Link>
+        </div>
+        <div className={styles.lawGrid}>
+          <Law index="A" title="Sovereign by design" body="Local files, exportable state, bring-your-own models and keys where the product supports them." />
+          <Law index="B" title="Claims need receipts" body="Shipped, preview, candidate, and planned are different states. The site names the difference." />
+          <Law index="C" title="Knowledge stays open" body="Research, books, machine routes, and large parts of the lab are published for people and agents." />
+          <Law index="D" title="Built by an organism" body="One operator directs a changing team of models, agents, tools, and systems without pretending they are employees." />
+        </div>
+      </section>
+
+      <section className={styles.resourcesSection} aria-labelledby="resources-title">
+        <SectionIntro
+          eyebrow="THE LABORATORY / SIX LANES"
+          title="Every resource, arranged as a world."
+          body="The old depth is preserved. Aether makes the front door clearer: choose a lane, then go as deep as you want."
+          id="resources-title"
+        />
+        <div className={styles.resourceGrid}>
+          {resourceLanes.map((lane) => (
+            <article key={lane.title} className={styles.resourceCard}>
+              <div className={styles.resourceHeader}>
+                <span>{lane.index}</span>
+                <span>OPEN LANE</span>
+              </div>
+              <h3>{lane.title}</h3>
+              <p>{lane.description}</p>
+              <ul>
+                {lane.links.map(([label, href]) => (
+                  <li key={href}>
+                    <Link href={href}>
+                      <span>{label}</span>
+                      <Arrow />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.proofSection} aria-labelledby="proof-title">
+        <div className={styles.proofGrid}>
+          <div>
+            <p className={styles.sectionEyebrow}>PROOF, NOT POSTURE</p>
+            <h2 id="proof-title">The work leaves a trail.</h2>
+            <p className={styles.proofDeck}>
+              Releases, hashes, nightly letters, route histories, public roadmaps, machine endpoints, and git commits.
+              The site is not a moodboard around a hidden company. It is the glass wall around the workshop.
+            </p>
+          </div>
+          <div className={styles.receiptStack} aria-label="Public proof surfaces">
+            <Receipt label="SOURCE MIRROR" value="github.com/Atom-Eons/atomeons-com" href="https://github.com/Atom-Eons/atomeons-com" />
+            <Receipt label="PUBLIC LEDGER" value="/receipts · signed work surfaces" href="/receipts" />
+            <Receipt label="SHIP HISTORY" value="/timeline · chronological release record" href="/timeline" />
+            <Receipt label="MACHINE ACCESS" value="/api/mcp · /llms.txt · /openapi.json" href="/api" />
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.finalSection}>
+        <p className={styles.sectionEyebrow}>YOU ARE AT THE FRONT DOOR</p>
+        <h2>Pick a system.<br />Keep the parts you need.</h2>
+        <div className={styles.finalActions}>
+          <Link href="/launcher" className={styles.primaryButton}>
+            Launch the full laboratory <Arrow />
+          </Link>
+          <Link href="/who-are-you" className={styles.textButton}>
+            Let the site route you <Arrow />
+          </Link>
+          <Link href="/random" className={styles.textButton}>
+            Surprise me <Arrow />
+          </Link>
+        </div>
+        <p className={styles.finalNote}>AtomEons Systems Laboratory · Marco Island, Florida · independent · operator-owned · 2026</p>
       </section>
     </main>
   );
 }
 
-function ProductCard({
-  index, href, accent, accentSecondary, status, statusColor,
-  title, subtitle, tagline, body, pillars, cta, h,
-}: {
-  index: number;
-  href: string;
-  accent: string;
-  accentSecondary: string;
-  status: string;
-  statusColor: string;
-  title: string;
-  subtitle: string;
-  tagline: string;
-  body: string;
-  pillars: string[];
-  cta: string;
-  h: typeof H;
-}) {
+function Arrow() {
+  return <span aria-hidden className={styles.arrow}>↗</span>;
+}
+
+function Metric({ value, label }: { value: string; label: string }) {
   return (
-    <Link
-      href={href}
-      className="ae-reveal-up group block h-full transition-all hover:-translate-y-1"
-      style={{
-        ["--stagger-index" as string]: index,
-        background: h.paper,
-        border: `1px solid ${h.hair}`,
-        borderRadius: 14,
-        padding: "28px 26px 26px",
-        boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
-      } as React.CSSProperties}
-    >
-      <div className="flex items-center gap-2">
-        <span
-          className="inline-block h-1.5 w-1.5 rounded-full"
-          style={{ background: statusColor }}
-          aria-hidden
-        />
-        <span
-          className="font-mono text-[10px] tracking-[0.24em] uppercase"
-          style={{ color: statusColor }}
-        >
-          {status}
-        </span>
-      </div>
-      <h3
-        className="mt-5 text-[36px] font-light leading-[1.02] tracking-[-0.02em]"
-        style={{ color: h.ink, fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif' }}
-      >
-        {title}
-      </h3>
-      <p
-        className="mt-1 text-[14px]"
-        style={{ color: h.inkMuted, fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif' }}
-      >
-        {subtitle}
-      </p>
-      <div className="mt-5 h-[3px] w-16 rounded-sm" style={{ background: `linear-gradient(90deg, ${accent} 0%, ${accentSecondary} 100%)` }} />
-      <p
-        className="mt-5 text-[17px] leading-[1.4] font-light"
-        style={{ color: h.ink, fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif' }}
-      >
-        {tagline}
-      </p>
-      <p
-        className="mt-4 text-[14px] leading-[1.55]"
-        style={{ color: h.inkMuted, fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif' }}
-      >
-        {body}
-      </p>
-      <ul className="mt-5 space-y-1.5">
-        {pillars.map((p) => (
-          <li key={p} className="flex items-baseline gap-2 text-[13px]" style={{ color: h.inkMuted }}>
-            <span style={{ color: accent }}>·</span>
-            <span>{p}</span>
-          </li>
-        ))}
-      </ul>
-      <p
-        className="mt-7 text-[13px] font-medium tracking-[-0.005em] transition-colors group-hover:underline"
-        style={{ color: h.ink }}
-      >
-        {cta} →
-      </p>
-    </Link>
+    <div className={styles.metric}>
+      <strong>{value}</strong>
+      <span>{label}</span>
+    </div>
   );
 }
 
-function StatCard({
-  label, value, small, h,
-}: { label: string; value: string; small?: boolean; h: typeof H }) {
+function OrbitNode({ className, label, meta, color }: { className: string; label: string; meta: string; color: string }) {
   return (
-    <div
-      style={{
-        background: h.paper,
-        border: `1px solid ${h.hair}`,
-        borderRadius: 10,
-        padding: "18px 20px",
-      }}
-    >
-      <p
-        className={`${small ? "text-[22px]" : "text-[36px]"} font-light leading-none tracking-[-0.02em]`}
-        style={{ color: h.ink, fontFamily: 'Newsreader, "Source Serif Pro", Georgia, serif' }}
-      >
-        {value}
-      </p>
-      <p
-        className="mt-1.5 text-[11px] tracking-[0.16em] uppercase"
-        style={{ color: h.inkWhisper, fontFamily: "monospace" }}
-      >
-        {label}
-      </p>
+    <div className={`${styles.orbitNode} ${className}`} style={{ "--node": color } as CSSProperties}>
+      <span className={styles.nodeSignal} />
+      <strong>{label}</strong>
+      <small>{meta}</small>
     </div>
+  );
+}
+
+function SectionIntro({ eyebrow, title, body, id }: { eyebrow: string; title: string; body: string; id: string }) {
+  return (
+    <header className={styles.sectionIntro}>
+      <p className={styles.sectionEyebrow}>{eyebrow}</p>
+      <div>
+        <h2 id={id}>{title}</h2>
+        <p>{body}</p>
+      </div>
+    </header>
+  );
+}
+
+function StatusDot({ color, children }: { color: string; children: React.ReactNode }) {
+  return (
+    <p className={styles.status} style={{ "--status": color } as CSSProperties}>
+      <span />
+      {children}
+    </p>
+  );
+}
+
+function CableboxVisual() {
+  const channels = ["ZER0", "PUBLIC ACCESS", "ANALOG ACTION", "TOON TOWN", "STRANGE", "FAVORITES"];
+  return (
+    <div className={styles.cableVisual} aria-label="CableBox interface concept">
+      <div className={styles.cableBezel}>
+        <div className={styles.cableScreen}>
+          <div className={styles.scanlines} aria-hidden />
+          <div className={styles.channelBug}>CH 00</div>
+          <div className={styles.cableLogo}>CHANNEL<br /><strong>ZERØ</strong></div>
+          <p>NOW TUNING THE ATOMEONS NOSTALGIA COLLECTION</p>
+          <div className={styles.spectrum} aria-hidden>
+            <span /><span /><span /><span /><span />
+          </div>
+          <div className={styles.guideRows}>
+            {channels.map((channel, index) => (
+              <div key={channel} className={index === 0 ? styles.activeGuide : undefined}>
+                <span>{String(index).padStart(2, "0")}</span>
+                <strong>{channel}</strong>
+                <small>{index % 2 === 0 ? "NOW" : "NEXT"}</small>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className={styles.cableControls}>
+          <div className={styles.dial}><span>00</span></div>
+          <div><strong>CABLEBOX</strong><small>NOSTALGIA COLLECTION</small></div>
+          <div className={styles.controlDots}><span /><span /><span /></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BookmakerVisual() {
+  return (
+    <div className={styles.bookmakerVisual} aria-label="AI Bookmaker publishing cockpit concept">
+      <div className={styles.windowBar}>
+        <div><span /><span /><span /></div>
+        <strong>AI BOOKMAKER / MANUSCRIPT 07</strong>
+        <small>SHIP GATE · 92%</small>
+      </div>
+      <div className={styles.bookmakerBody}>
+        <aside>
+          <span>MANUSCRIPT</span>
+          <strong>24 chapters</strong>
+          <span>VOICEPACK</span>
+          <strong>Opus 4.7</strong>
+          <span>FORMATS</span>
+          <strong>EPUB · KDP · ACX</strong>
+          <span>DISCLOSURE</span>
+          <strong>Ledger clean</strong>
+        </aside>
+        <div className={styles.manuscript}>
+          <p>CHAPTER 01 / THE FIRST TOKEN</p>
+          <h4>A response begins with one token, sampled from a distribution.</h4>
+          <div className={styles.copyLines}><span /><span /><span /><span /><span /><span /></div>
+          <div className={styles.editorNote}>EDITOR NOTE 14 · tighten the transition, keep the interior voice</div>
+          <div className={styles.shipBar}><span /><strong>EPUB VALID · COVER READY · AUDIO 28/28</strong></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Orange5Visual() {
+  return (
+    <div className={styles.orangeVisual} aria-label="Orange5 four-pillar system concept">
+      <div className={styles.orangeMesh} aria-hidden />
+      <div className={styles.orangeCore}>
+        <span>O5</span>
+        <strong>ORANGELLM</strong>
+        <small>PM BRAIN / GATEWAY</small>
+      </div>
+      <SystemNode className={styles.systemNorth} index="01" title="Orange5" subtitle="system" />
+      <SystemNode className={styles.systemEast} index="02" title="Atomic Orange" subtitle="interface" />
+      <SystemNode className={styles.systemSouth} index="03" title="Flow" subtitle="runtime" />
+      <SystemNode className={styles.systemWest} index="04" title="Hermes" subtitle="bounded execution" />
+      <div className={styles.orangeTelemetry}>
+        <span>FRONTIER ISOLATION · ACTIVE</span>
+        <span>LLM OVER AGENT · ENFORCED</span>
+        <span>OPERATOR SURFACE · CODELESS</span>
+      </div>
+    </div>
+  );
+}
+
+function SystemNode({ className, index, title, subtitle }: { className: string; index: string; title: string; subtitle: string }) {
+  return (
+    <div className={`${styles.systemNode} ${className}`}>
+      <span>{index}</span>
+      <strong>{title}</strong>
+      <small>{subtitle}</small>
+    </div>
+  );
+}
+
+function Law({ index, title, body }: { index: string; title: string; body: string }) {
+  return (
+    <article className={styles.law}>
+      <span>{index}</span>
+      <h3>{title}</h3>
+      <p>{body}</p>
+    </article>
+  );
+}
+
+function Receipt({ label, value, href }: { label: string; value: string; href: string }) {
+  const external = href.startsWith("http");
+  const content = (
+    <>
+      <span>{label}</span>
+      <strong>{value}</strong>
+      <Arrow />
+    </>
+  );
+
+  return external ? (
+    <a className={styles.receipt} href={href} target="_blank" rel="noopener noreferrer">{content}</a>
+  ) : (
+    <Link className={styles.receipt} href={href}>{content}</Link>
   );
 }
