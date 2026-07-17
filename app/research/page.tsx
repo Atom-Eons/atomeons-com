@@ -68,6 +68,7 @@ export default function ResearchPage() {
             alt="Two experimental photonic eye instruments exchanging red and blue light paths on a white optical bench"
             fill
             priority
+            unoptimized
             sizes="100vw"
           />
           <div className={styles.researchFieldTop}>
