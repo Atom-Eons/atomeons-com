@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "../editorial.module.css";
 
@@ -29,9 +30,9 @@ export default function BookmakerPage() {
               designed, and ready to leave the machine.
             </p>
             <div className={styles.actions}>
-              <Link href="/b00kmakor/download" className={`${styles.button} ${styles.buttonAccent}`}>
+              <a href="https://github.com/AtomEons/BookMaker" target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.buttonAccent}`}>
                 Get Bookmaker ↗
-              </Link>
+              </a>
               <Link href="/i-am-ai" className={`${styles.button} ${styles.buttonGhost}`}>
                 See a book it helped make
               </Link>
@@ -46,6 +47,30 @@ export default function BookmakerPage() {
             </p>
             <p className={styles.status}>MAC + WINDOWS · AVAILABLE NOW</p>
           </aside>
+        </div>
+      </section>
+
+      <section className={styles.campaignSection}>
+        <div className={styles.campaignField}>
+          <Image
+            src="/aether-v2/bookmaker-object-v2.webp"
+            alt="A sculptural publishing machine with paper, editing controls, and a finished cream book"
+            fill
+            priority
+            unoptimized
+            sizes="100vw"
+            className={styles.campaignFieldImage}
+          />
+          <div className={styles.campaignFieldTop}>
+            <span>BOOKMAKER / PUBLISHING OBJECT 02</span>
+            <span>IDEA → MANUSCRIPT → BOOK</span>
+          </div>
+          <div className={styles.campaignFieldPlate}>
+            <span>THE WHOLE ACT OF PUBLISHING</span>
+            <strong>Give the idea a body.</strong>
+            <small>MAC + WINDOWS / AVAILABLE NOW</small>
+          </div>
+          <div className={styles.campaignFieldAxis}><span>IDEA</span><i /><span>OBJECT</span></div>
         </div>
       </section>
 
@@ -120,8 +145,8 @@ export default function BookmakerPage() {
         <p className={styles.eyebrow}>THE BOOK DOES NOT HAVE TO STAY IN YOUR HEAD</p>
         <h2>Give the idea a body.</h2>
         <div className={styles.actions}>
-          <Link href="/b00kmakor/download" className={styles.button}>Open downloads ↗</Link>
-          <Link href="/b00kmakor/roadmap" className={`${styles.button} ${styles.buttonGhost}`}>Technical archive</Link>
+          <a href="https://github.com/AtomEons/BookMaker" target="_blank" rel="noopener noreferrer" className={styles.button}>Open source + releases ↗</a>
+          <a href="https://github.com/AtomEons/BookMaker" target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.buttonGhost}`}>Technical archive</a>
         </div>
       </section>
     </main>
