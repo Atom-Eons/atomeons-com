@@ -42,7 +42,7 @@ const SURFACES = {
     eyebrow: "ABOUT / NAPLES, FLORIDA",
     accent: "#101010",
     line: "Outfunded. Outnumbered. Still building.",
-    body: "Atom McCree is a 41-year-old hip-hop poet, artist, marketing polymath, and AI inventor using artificial intelligence as a creative medium.",
+    body: "Atom McCree is a 42 year old creative with 25 years in the creative arts. Now merging art and AI to create the never existed.",
     facts: ["One human operator", "Massive AI workforce", "No venture capital", "Products, show, research"]
   }
 } as const;
