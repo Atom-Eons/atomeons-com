@@ -7,6 +7,7 @@
 - Research is an equal second front door with Discoveries, Papers, AEyes, AtomSmasher, and AEMemory.
 - Radiance-Luminance Theory and Alpha Wolf Eyes is featured first in the global navigation with a red blood-drop treatment.
 - The old site, legacy product pages, skil.ski, and the sci-fi monograph remain in source. Nothing was deleted.
+- Live public review stage: `https://atomeons-aether.a-mccree.chatgpt.site`.
 
 # evidence
 
@@ -20,12 +21,15 @@
 - Full standalone TypeScript check passed with zero errors on the final source.
 - Next production compilation passed. Final static export was stopped after extended Windows memory paging; this is an environment-capacity limitation, not a reported compiler or type error.
 - No Cloudflare migration and no Vercel upload were performed.
+- Sites version 4 deployed successfully from projection commit `f564e387d9fa7094d4e7edd4d214c0ebae15fa86`.
+- HTTP 200 verified for `/`, `/research`, `/bookmaker`, the Radiance paper page, and the locally hosted Radiance PDF.
+- GitHub remains the complete canonical mirror at commit `f0b0f3b`; the deploy-only projection carries the 28 locked front-stage routes and required assets without the oversized sleeping archive.
 
 # blockers
 
 - The Codex in-app browser could not create its initial tab, so visual browser screenshots were not captured in this run.
 - The old corpus still contains pre-existing full-repository lint debt; focused lint for this stage is clean.
-- A production custom-domain cutover remains separate from this review deployment.
+- The `atomeons.com` custom-domain cutover remains separate from this public review deployment.
 
 # next action
 
