@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./atom-alive.module.css";
 
@@ -47,16 +48,19 @@ export default function AtomAlivePage() {
             </div>
           </div>
 
-          <div className={styles.broadcastRig} aria-hidden>
+          <div className={styles.broadcastRig}>
+            <Image
+              src="/aether-v3/atom-alive-broadcast-object-v3.webp"
+              alt="A handmade independent television broadcast machine with CRT, camera, recorder, and acid signal"
+              fill
+              priority
+              unoptimized
+              sizes="(max-width: 1050px) 94vw, 52vw"
+              className={styles.rigImage}
+            />
             <div className={styles.rigLabel}><b>AE-TV</b><span>MODEL / AA-01</span><i>● REC</i></div>
-            <div className={styles.screen}>
-              <span className={styles.screenCode}>AI / CODE / CULTURE</span>
-              <strong>WE ARE<br />LIVE.</strong>
-              <div className={styles.crosshair}>+</div>
-              <div className={styles.scan} />
-            </div>
             <div className={styles.controls}>
-              <span>CH 01</span><b>MAKE</b><b>BREAK</b><b>SHIP</b><i /><em>POWER</em>
+              <span>INDEPENDENT SIGNAL</span><b>MAKE</b><b>BREAK</b><b>SHIP</b><i /><em>LIVE</em>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "../editorial.module.css";
 
@@ -46,6 +47,30 @@ export default function BookmakerPage() {
             </p>
             <p className={styles.status}>MAC + WINDOWS · AVAILABLE NOW</p>
           </aside>
+        </div>
+      </section>
+
+      <section className={styles.campaignSection}>
+        <div className={styles.campaignField}>
+          <Image
+            src="/aether-v2/bookmaker-object-v2.webp"
+            alt="A sculptural publishing machine with paper, editing controls, and a finished cream book"
+            fill
+            priority
+            unoptimized
+            sizes="100vw"
+            className={styles.campaignFieldImage}
+          />
+          <div className={styles.campaignFieldTop}>
+            <span>BOOKMAKER / PUBLISHING OBJECT 02</span>
+            <span>IDEA → MANUSCRIPT → BOOK</span>
+          </div>
+          <div className={styles.campaignFieldPlate}>
+            <span>THE WHOLE ACT OF PUBLISHING</span>
+            <strong>Give the idea a body.</strong>
+            <small>MAC + WINDOWS / AVAILABLE NOW</small>
+          </div>
+          <div className={styles.campaignFieldAxis}><span>IDEA</span><i /><span>OBJECT</span></div>
         </div>
       </section>
 

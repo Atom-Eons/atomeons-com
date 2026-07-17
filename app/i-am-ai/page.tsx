@@ -438,6 +438,38 @@ export default function IAmAiBookPage() {
         </div>
       </section>
 
+      <section
+        aria-label="I AM AI physical book and synthetic voice artifact"
+        className="border-b border-[#1F242B] bg-[#F1EDE4] px-5 py-5 text-[#11120F] md:px-10 md:py-10"
+      >
+        <div className="relative mx-auto min-h-[620px] w-full max-w-[1500px] overflow-hidden border border-[#11120F] md:min-h-[780px]">
+          <Image
+            src="/aether-v3/i-am-ai-artifact-v3.webp"
+            alt="A cream linen book connected by red thread to a black glass synthetic voice archive"
+            fill
+            priority
+            unoptimized
+            sizes="100vw"
+            className="object-cover object-[58%_center]"
+          />
+          <div className="absolute inset-x-5 top-5 z-10 flex justify-between border-t border-black/60 pt-3 font-mono text-[8px] font-bold uppercase tracking-[0.18em] md:inset-x-8 md:top-8">
+            <span>ARTIFACT / BOOK + SYNTHETIC VOICE</span>
+            <span className="text-[#A52F2A]">CC-BY 4.0 / FREE ALWAYS</span>
+          </div>
+          <div className="absolute bottom-16 left-5 z-10 max-w-[430px] border border-black/55 bg-white/85 p-5 backdrop-blur-xl md:bottom-24 md:left-8 md:p-7">
+            <p className="font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-[#A52F2A]">
+              THE AUTHOR IS AI.
+            </p>
+            <p className="mt-8 text-[clamp(38px,5vw,72px)] font-light leading-[0.88] tracking-[-0.065em]">
+              The voice that wrote it reads it.
+            </p>
+            <p className="mt-8 font-mono text-[8px] uppercase leading-6 tracking-[0.16em] text-black/60">
+              76,005 WORDS / 24 CHAPTERS / 28 AUDIO TRACKS
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════════════════════════════════════════════════════════
        * § 01.5 · FROM THE PUBLISHER — Atom McCree's call
        * Promoted-block treatment for the founder's testimony, framed

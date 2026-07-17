@@ -224,17 +224,19 @@ export default function AetherHome() {
                 <a href="https://www.youtube.com/@AICodeShow" target="_blank" rel="noopener noreferrer">Watch on YouTube <Arrow /></a>
               </div>
             </div>
-            <div className={styles.showMonitor} aria-hidden>
+            <div className={styles.showMonitor}>
+              <Image
+                src="/aether-v3/atom-alive-broadcast-object-v3.webp"
+                alt="A handmade independent television broadcast machine with CRT, camera, recorder, and acid signal"
+                fill
+                unoptimized
+                sizes="(max-width: 1180px) 92vw, 48vw"
+                className={styles.showMonitorImage}
+              />
               <div className={styles.monitorLabel}><span>AE-TV / CH. 01</span><span>REC ●</span></div>
-              <div className={styles.monitorScreen}>
-                <span className={styles.liveWord}>ALIVE</span>
-                <span className={styles.codeWord}>CODE / CULTURE</span>
-                <div className={styles.scanline} />
-              </div>
-              <div className={styles.monitorControls}>
-                <span>INPUT / INDEPENDENT SIGNAL</span>
-                <b>BUILD</b><b>BREAK</b><b>SHIP</b>
-                <i />
+              <div className={styles.monitorSignal}>
+                <span>INDEPENDENT SIGNAL</span>
+                <strong>MAKE / BREAK / SHIP</strong>
               </div>
             </div>
           </div>
@@ -249,10 +251,15 @@ export default function AetherHome() {
         </div>
         <div className={styles.bookCampaignGrid}>
           <div className={styles.bookArtifact}>
+            <Image
+              src="/aether-v3/i-am-ai-artifact-v3.webp"
+              alt="A cream linen book connected by red thread to a black glass synthetic voice archive"
+              fill
+              unoptimized
+              sizes="(max-width: 1180px) 92vw, 42vw"
+              className={styles.bookArtifactImage}
+            />
             <div className={styles.bookStamp}>THE AUTHOR<br />IS AI.</div>
-            <div className={styles.campaignBook}>
-              <Image src="/books/i-am-ai-cover.svg" alt="I AM AI book cover" fill sizes="(max-width: 760px) 65vw, 420px" />
-            </div>
             <span className={styles.artifactLabel}>OBJECT / BOOK + AUDIOBOOK / CC-BY 4.0</span>
           </div>
           <div className={styles.bookCampaignCopy}>
