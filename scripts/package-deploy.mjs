@@ -1,8 +1,8 @@
 import {
   copyFileSync,
+  cpSync,
   existsSync,
   mkdirSync,
-  renameSync,
   rmSync,
   writeFileSync,
 } from "node:fs";
@@ -15,7 +15,9 @@ if (existsSync("dist")) {
   rmSync("dist", { recursive: true, force: true });
 }
 
-renameSync("out", "dist");
+mkdirSync("dist/assets", { recursive: true });
+cpSync("out", "dist/assets", { recursive: true });
+rmSync("out", { recursive: true, force: true });
 mkdirSync("dist/server", { recursive: true });
 mkdirSync("dist/.openai", { recursive: true });
 
