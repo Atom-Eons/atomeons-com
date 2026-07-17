@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { DISCOVERIES } from "../_data/discoveries";
 import { PAPERS } from "../_data/research-papers";
@@ -10,6 +11,19 @@ export const metadata: Metadata = {
   description:
     "Independent frontier research from AtomEons: discoveries, working systems, speculative papers, and locally hosted open PDFs.",
   alternates: { canonical: "https://atomeons.com/research" },
+  openGraph: {
+    title: "Experimental Research · AtomEons",
+    description:
+      "Independent research into machine perception, memory, compression, collective intelligence, and the systems hiding between fields.",
+    images: [
+      {
+        url: "/aether-v2/research-radiance-field-v2.webp",
+        width: 1536,
+        height: 1024,
+        alt: "Radiance-Luminance Theory and Alpha Wolf Eyes",
+      },
+    ],
+  },
 };
 
 export default function ResearchPage() {
@@ -43,6 +57,35 @@ export default function ResearchPage() {
             </p>
           </aside>
         </div>
+        <Link
+          href="/research/papers/radiance-luminance-alpha-wolf-eyes"
+          className={styles.researchField}
+          aria-label="Open Radiance-Luminance Theory and Alpha Wolf Eyes"
+        >
+          <Image
+            className={styles.researchFieldImage}
+            src="/aether-v2/research-radiance-field-v2.webp"
+            alt="Two experimental photonic eye instruments exchanging red and blue light paths on a white optical bench"
+            fill
+            priority
+            sizes="100vw"
+          />
+          <div className={styles.researchFieldTop}>
+            <span>FEATURED PAPER / 01</span>
+            <span>VISION WITHOUT LEARNED FILTER WEIGHTS</span>
+          </div>
+          <div className={styles.researchFieldPlate}>
+            <span>RLT / AWE-3</span>
+            <strong>What if vision<br />begins with light?</strong>
+            <small>RADIANCE-LUMINANCE THEORY<br />AND ALPHA WOLF EYES</small>
+          </div>
+          <div className={styles.researchFieldAxis} aria-hidden>
+            <span>RADIANCE</span>
+            <i />
+            <span>LUMINANCE</span>
+          </div>
+          <span className={styles.researchFieldArrow}>Open paper ↗</span>
+        </Link>
       </section>
 
       <section className={styles.section}>

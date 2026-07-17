@@ -163,6 +163,158 @@
 .footerCta .actions { justify-content: center; }
 .footerCta .button { border-color: #fff; }
 
+.researchField {
+  position: relative;
+  display: block;
+  min-height: clamp(520px, 50vw, 760px);
+  max-width: 1540px;
+  margin: clamp(70px, 9vw, 130px) auto 0;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  background: #f4f3ef;
+  color: var(--ink);
+  text-decoration: none;
+  isolation: isolate;
+}
+
+.researchField::after {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(16,16,16,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,16,16,.07) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(135deg, black, transparent 72%);
+  mix-blend-mode: multiply;
+}
+
+.researchFieldImage {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 1s cubic-bezier(.2,.72,.2,1), filter 1s ease;
+}
+
+.researchField:hover .researchFieldImage {
+  transform: scale(1.018);
+  filter: contrast(1.025) saturate(1.04);
+}
+
+.researchFieldTop,
+.researchFieldPlate,
+.researchFieldAxis,
+.researchFieldArrow {
+  font-family: var(--font-mono, monospace);
+}
+
+.researchFieldTop {
+  position: absolute;
+  z-index: 5;
+  top: 28px;
+  right: 28px;
+  left: 28px;
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(16,16,16,.62);
+  color: rgba(16,16,16,.7);
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: .14em;
+}
+
+.researchFieldPlate {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 28px;
+  display: flex;
+  width: min(340px, 36%);
+  min-height: 270px;
+  padding: 19px;
+  flex-direction: column;
+  border: 1px solid rgba(16,16,16,.54);
+  background: rgba(255,255,255,.82);
+  transform: translateY(-50%);
+  backdrop-filter: blur(12px);
+}
+
+.researchFieldPlate > span,
+.researchFieldPlate > small {
+  font-size: 8px;
+  font-weight: 720;
+  letter-spacing: .13em;
+}
+
+.researchFieldPlate > span {
+  color: #ae1618;
+}
+
+.researchFieldPlate > strong {
+  margin-top: 42px;
+  font-family: var(--font-inter, sans-serif);
+  font-size: clamp(31px, 3.7vw, 58px);
+  letter-spacing: -.065em;
+  line-height: .88;
+}
+
+.researchFieldPlate > small {
+  margin-top: auto;
+  color: #6d6b65;
+  line-height: 1.55;
+}
+
+.researchFieldAxis {
+  position: absolute;
+  z-index: 5;
+  right: 28px;
+  bottom: 54px;
+  display: grid;
+  width: min(420px, 42%);
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  color: rgba(16,16,16,.68);
+  font-size: 7px;
+  font-weight: 750;
+  letter-spacing: .13em;
+}
+
+.researchFieldAxis i {
+  position: relative;
+  display: block;
+  height: 1px;
+  background: #ae1618;
+}
+
+.researchFieldAxis i::after {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 9px;
+  height: 9px;
+  content: "";
+  border-radius: 50%;
+  background: #ae1618;
+  box-shadow: 0 0 0 7px rgba(174,22,24,.1);
+}
+
+.researchFieldArrow {
+  position: absolute;
+  z-index: 5;
+  right: 28px;
+  bottom: 22px;
+  color: #ae1618;
+  font-size: 9px;
+  font-weight: 780;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 900px) {
   .heroGrid, .sectionHead, .feature, .twoCol { grid-template-columns: 1fr; }
   .heroAside { max-width: 480px; }
@@ -172,6 +324,7 @@
   .feature > div + div { border-left: 0; border-top: 1px solid var(--line); }
   .listItem { grid-template-columns: 48px 1fr 24px; }
   .listItem p { display: none; }
+  .researchFieldPlate { width: min(360px, 52%); }
 }
 
 @media (max-width: 580px) {
@@ -179,4 +332,23 @@
   .factGrid { grid-template-columns: 1fr; }
   .fact, .fact:nth-child(2n), .fact:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); }
   .fact:last-child { border-bottom: 0; }
+  .researchField { min-height: 620px; }
+  .researchFieldImage { object-position: 58% center; }
+  .researchFieldTop { top: 18px; right: 18px; left: 18px; }
+  .researchFieldTop span:last-child { display: none; }
+  .researchFieldPlate {
+    top: auto;
+    right: 18px;
+    bottom: 70px;
+    left: 18px;
+    width: auto;
+    min-height: 220px;
+    transform: none;
+  }
+  .researchFieldAxis { display: none; }
+  .researchFieldArrow { right: 18px; bottom: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .researchFieldImage { transition: none; }
 }
