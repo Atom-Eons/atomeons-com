@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "About — AtomEons",
   description:
-    "AtomEons is Atom McCree: a 41-year-old hip-hop poet, artist, marketer, and AI inventor in Naples, Florida, building software, books, shows, and public resources with AI.",
+    "AtomEons is Atom McCree: a 42 year old creative with 25 years in the creative arts. Now merging art and AI to create the never existed.",
   alternates: { canonical: "https://atomeons.com/about" },
   openGraph: {
     title: "About — AtomEons",
@@ -89,18 +89,18 @@ export default function About() {
           <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
           <span className="text-[#22F0D5]">LIVE</span>
         </span>
-        <span role="listitem" className="text-[#B5BBC0]">41 <span className="text-[#8E969D]">years alive</span></span>
+        <span role="listitem" className="text-[#B5BBC0]">42 <span className="text-[#8E969D]">years alive</span></span>
         <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">human</span></span>
         <span role="listitem" className="text-[#B5BBC0]">many <span className="text-[#8E969D]">artificial minds</span></span>
         <span role="listitem" className="text-[#8E969D]">Naples · FL</span>
       </div>
 
       <p className="mt-10 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
-        I&apos;m Atom McCree: a 41-year-old hip-hop poet, artist, marketer,
-        and inventor in Naples, Florida. There is no glass office, staff,
-        venture fund, or hidden institution behind this site. There is one
-        person doing his best in a hard season, directing a changing army
-        of AI systems toward work that might help people.
+        I&apos;m Atom McCree: a 42 year old creative with 25 years in the
+        creative arts. Now merging art and AI to create the never existed.
+        There is no glass office, staff, venture fund, or hidden institution
+        behind this site. There is one person doing his best in a hard season,
+        directing a changing army of AI systems toward work that might help people.
       </p>
 
       <p className="mt-4 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>

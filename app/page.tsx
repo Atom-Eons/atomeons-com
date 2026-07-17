@@ -59,7 +59,7 @@ export default function AetherHome() {
               With AI.
             </h1>
             <p className={styles.heroDeck}>
-              Atom McCree is a 41-year-old hip-hop poet, artist, marketing polymath, and AI inventor in Naples.
+              Atom McCree is a 42 year old creative with 25 years in the creative arts. Now merging art and AI to create the never existed.
               Outfunded and outnumbered, he directs a massive AI workforce to make software, books, broadcasts, and objects that did not exist yesterday.
             </p>
             <p className={styles.heroManifesto}>“I am an artist using AI to paint a new future.”</p>
@@ -287,7 +287,7 @@ export default function AetherHome() {
         </div>
         <div className={styles.operatingBody}>
           <p>
-            It is a creation studio built by a hip-hop poet, artist, and marketing polymath who learned to invent with AI.
+            It is a creation studio built by a creative with 25 years in the creative arts, now merging art and AI to create the never existed.
             Code is one material. Story, sound, image, systems, and attention are others. The point is to make what was missing.
           </p>
           <Link href="/about" className={styles.textButton}>

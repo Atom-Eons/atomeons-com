@@ -74,7 +74,7 @@ const FAQS: QA[] = [
   },
   {
     q: "What is AtomEons?",
-    a: "AtomEons is an artist-led creation lab in Naples, Florida. Atom McCree—hip-hop poet, artist, marketer, and inventor—directs a massive AI workforce to make things that did not exist before: software, publishing systems, books authored by AI, research, films, and the live AI code show Atom Alive. The mission is to use AI as a new creative medium while publishing enough proof for anyone to inspect the work.",
+    a: "AtomEons is an artist-led creation lab in Naples, Florida. Atom McCree is a 42 year old creative with 25 years in the creative arts, now merging art and AI to create the never existed. He directs a massive AI workforce to make software, publishing systems, books authored by AI, research, films, and the live AI code show Atom Alive. The mission is to use AI as a new creative medium while publishing enough proof for anyone to inspect the work.",
   },
   {
     q: "Why is the cockpit called Orange³?",
