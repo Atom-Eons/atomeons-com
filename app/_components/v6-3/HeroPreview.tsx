@@ -35,7 +35,7 @@ export function HeroPreview() {
       <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-6 pt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]/80">
         <span className="inline-flex items-center gap-2">
           <span className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_12px_#22F0D5]" />
-          ATOMEONS · MARCO ISLAND · NEXT BUILD QUEUED
+          ATOMEONS · NAPLES · NEXT BUILD QUEUED
         </span>
         <span className="hidden md:inline">v6.3 · ALPHA.7 · IN BUILD</span>
       </div>

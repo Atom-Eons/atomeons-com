@@ -80,7 +80,7 @@ const PILLARS: ReadonlyArray<Pillar> = [
     title: 'Runtime cognition you can ship',
     display: 'Make the thing.',
     caption:
-      'OrangeBox installs in one binary on consumer hardware. B00KMakor turns a transcript into a hardback. Skil.ski packages a single skill as a sold artifact. The lab does not lecture about agents — it sells them. Real revenue, real install count, real commit hash on the colophon below.',
+      'Orange³ installs on consumer hardware. AI Bookmaker turns raw language into a finished publication. I AM AI turns the model itself into the author. The lab does not lecture about agents—it directs them into real artifacts with inspectable receipts.',
     href: '/build',
     cta: 'See what shipped',
     image: '/cyber-images/12-orangebox-install.jpg',
@@ -405,7 +405,7 @@ export default function Pillars() {
         {/* Foot annotation — the lab-grade signature */}
         <div className="mt-20 grid grid-cols-12 gap-x-6 border-t border-[var(--surface-edge)] pt-6">
           <p className="col-span-12 md:col-span-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--ink-faint)]">
-            Marco Island, FL · 25°56′N 81°43′W
+            Naples, FL · 25°56′N 81°43′W
           </p>
           <p className="col-span-12 md:col-span-6 md:text-right font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--ink-faint)]">
             Three doors · One lattice · Open the one you need

@@ -26,7 +26,7 @@ const ITEMS = [
   },
   {
     head: "Built by one operator",
-    body: "Atom McCree, AtomEons Systems Laboratory, Marco Island, FL. Two months of internal use before anyone else touched it.",
+    body: "Atom McCree, AtomEons Systems Laboratory, Naples, FL. Two months of internal use before anyone else touched it.",
     tag: "manifest",
   },
 ];

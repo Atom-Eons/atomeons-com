@@ -141,7 +141,7 @@ export default function SkillsPage() {
             <span role="listitem" className="text-[#B5BBC0]">6 <span className="text-[#8E969D]">canonical chains</span></span>
             <span role="listitem" className="text-[#B5BBC0]">134 <span className="text-[#8E969D]">triggers · 0 collisions</span></span>
             <span role="listitem" className="text-[#B5BBC0]">230 / 230 <span className="text-[#8E969D]">peer-review pass</span></span>
-            <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+            <span role="listitem" className="text-[#8E969D]">Naples · FL</span>
           </div>
           <p className="speakable-answer mt-8 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             The lab's runtime doctrine. Five tiers · fifteen skills ·

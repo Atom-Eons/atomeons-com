@@ -29,6 +29,26 @@ const nextConfig: NextConfig = {
     root: path.resolve(__dirname),
   },
 
+  async redirects() {
+    return [
+      {
+        source: "/b00kmakor",
+        destination: "/bookmaker",
+        permanent: true,
+      },
+      {
+        source: "/i-am-ai/sample",
+        destination: "/i-am-ai#read",
+        permanent: true,
+      },
+      {
+        source: "/i-am-ai/listen",
+        destination: "/i-am-ai#listen",
+        permanent: true,
+      },
+    ];
+  },
+
   /**
    * Rewrites — preserve historical public URLs after internal route
    * directory renames.

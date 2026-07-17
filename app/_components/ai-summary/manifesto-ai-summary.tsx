@@ -18,7 +18,7 @@ export function ManifestoAiSummary() {
       </p>
       <ul className="list-disc pl-5 mb-6 space-y-1.5 font-serif text-[14px] text-[#9CA3AF] marker:text-[#1F242B]">
         <li>Document contains 14 numbered clauses, each written as a falsifiable claim rather than a value statement.</li>
-        <li>Published by AtomEons, a one-operator independent AI lab founded by Atom McCree, based in Marco Island, Florida.</li>
+        <li>Published by AtomEons, a one-operator independent AI lab founded by Atom McCree, based in Naples, Florida.</li>
         <li>Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) — free to reproduce with attribution.</li>
         <li>Operating doctrine governs the lab's product surface, release law, and refusal-to-ship conditions across all AtomEons projects.</li>
         <li>Manifesto sits above marketing copy in the editorial hierarchy: it is the source of truth that downstream pages must not contradict.</li>

@@ -247,7 +247,7 @@ function HeroSection() {
           <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9CA3AF]">
             <span className="text-[#F4F4F2]">ÆONS RESEARCH LABORATORY</span>
             <span className="mx-3 text-[#1F242B]">·</span>
-            <span>Marco Island, FL</span>
+            <span>Naples, FL</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span className="text-[#7a818a]">Est. 2024</span>
           </p>
@@ -287,7 +287,7 @@ function HeroSection() {
               Claude Opus 4.7, edited by the lab. 76,005 words across 24 chapters.
               Plus 31 research manuscripts, a free 68-lesson curriculum, the
               May 2026 reasoning rankings, a §4A-no-SaaS Claude cockpit, and a
-              nightly broadcast. One operator. Marco Island, Florida. Built in
+              nightly broadcast. One operator. Naples, Florida. Built in
               75 days, shipping daily.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -546,7 +546,7 @@ const SCOREBOARD_ROWS: ScoreRow[] = [
         <strong className="font-medium text-[#F4F4F2]">Built by one
         person. No outside capital.</strong>{" "}
         <span className="text-[#9CA3AF]">
-          Marco Island, Florida. Zero investors. Zero subscriptions. Zero
+          Naples, Florida. Zero investors. Zero subscriptions. Zero
           ads. The lab uses the tools it sells — and sells what it uses.
         </span>
       </>
@@ -765,7 +765,7 @@ function ThesisSection() {
             </p>
             <p className="mt-7 max-w-[58ch] font-serif text-[19px] leading-[1.58] text-[#9CA3AF]">
               No round, no investors, no marketing team. One operator in
-              Marco Island, FL, building in public against a 27-guardrail
+              Naples, FL, building in public against a 27-guardrail
               constitution. The source is public, the papers are CC-BY
               4.0, the receipts ledger updates on every install. Read the
               work before you trust the words.
@@ -1069,7 +1069,7 @@ const RECEIPTS: ReadonlyArray<Receipt> = [
   {
     label: "Operator",
     value: "1",
-    detail: "Atom McCree · Marco Island, FL · solo independent",
+    detail: "Atom McCree · Naples, FL · solo independent",
     href: "/about",
   },
   {
@@ -1379,7 +1379,7 @@ function ResearchSection() {
 // § 07 · FOUNDER NOTE
 //   One full-bleed photograph of the operator's workspace. One signed
 //   paragraph in Newsreader serif, max 80 words. Signed
-//   "— Atom McCree, Marco Island." The design-inspiration moment
+//   "— Atom McCree, Naples." The design-inspiration moment
 //   most companies omit. The site that signs its own writing.
 // ===========================================================================
 
@@ -1395,7 +1395,7 @@ function FounderNoteSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/cyber-images/labs.png"
-          alt="Cinematic photograph — the operator's workspace, Marco Island, FL"
+          alt="Cinematic photograph — the operator's workspace, Naples, FL"
           fill
           sizes="100vw"
           loading="lazy"
@@ -1421,7 +1421,7 @@ function FounderNoteSection() {
             <span className="text-[#F4F4F2]">FOUNDER NOTE</span>
           </p>
           <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] sm:block">
-            Marco Island, FL · {SIGNAL.lat} {SIGNAL.lon}
+            Naples, FL · {SIGNAL.lat} {SIGNAL.lon}
           </p>
         </div>
       </div>
@@ -1435,7 +1435,7 @@ function FounderNoteSection() {
 
           <blockquote className="mt-8">
             <p className="font-serif text-[clamp(24px,3.4vw,40px)] leading-[1.32] tracking-[-0.005em] text-[#F4F4F2]">
-              I am one operator in Marco Island, Florida, writing a free
+              I am one operator in Naples, Florida, writing a free
               AI education better than most universities, shipping a
               runtime that ships, and publishing every paper under
               CC-BY 4.0. There is no team page because there is no team.
@@ -1450,7 +1450,7 @@ function FounderNoteSection() {
               </p>
               <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
                 <span className="mx-2 text-[#1F242B]">·</span>
-                <span>Marco Island, FL</span>
+                <span>Naples, FL</span>
                 <span className="mx-2 text-[#1F242B]">·</span>
                 <span>{SIGNAL.buildDate}</span>
               </span>

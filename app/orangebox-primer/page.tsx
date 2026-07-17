@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Orangebox Primer — A Local-First Compression Layer for Claude",
   description:
-    "A primer for security leads evaluating Orangebox: code-signed Windows installer, SHA-256 stamped binary, 10-80x context compression, tamper-evident receipts, BYO key, no SaaS. Built by one operator in Marco Island, FL.",
+    "A primer for security leads evaluating Orangebox: code-signed Windows installer, SHA-256 stamped binary, 10-80x context compression, tamper-evident receipts, BYO key, no SaaS. Built by one operator in Naples, FL.",
   openGraph: {
     title: "Orangebox Primer — Why a one-operator installer beats a SaaS dashboard",
     description:
@@ -76,7 +76,7 @@ export default function OrangeboxPrimerPage() {
           className="mb-8 text-5xl font-medium tracking-tight md:text-6xl"
         >
           A code-signed Windows installer that compresses Claude's context 10
-          to 80 times. Built by one operator in Marco Island in 75 days.
+          to 80 times. Built by one operator in Naples in 75 days.
         </h1>
         <p
           style={{
@@ -494,7 +494,7 @@ export default function OrangeboxPrimerPage() {
       <Section number="12" title="Contact and disclosure">
         <P>
           Source on request to qualified evaluators. Disclosure IDs are
-          public. The operator publishes from Marco Island, Florida, under
+          public. The operator publishes from Naples, Florida, under
           the lab name AtomEons Systems Laboratory. Papers, registry hashes,
           and the canonical CLAUDE.md are versioned and dated.
         </P>
@@ -554,7 +554,7 @@ export default function OrangeboxPrimerPage() {
               <div style={{ color: "#F4F4F2" }} className="mb-2 text-sm">
                 AtomEons Systems Laboratory
               </div>
-              <div>Marco Island, FL</div>
+              <div>Naples, FL</div>
               <div>One operator. No investors. No waitlist.</div>
             </div>
             <div className="text-right">

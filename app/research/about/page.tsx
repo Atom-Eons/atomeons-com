@@ -5,12 +5,12 @@ import { AeMark } from "../../_components/AeMark";
 export const metadata = {
   title: "About — Æ Research",
   description:
-    "ÆoNs Research Laboratory / AtomEons Systems Laboratory. One independent researcher in Marco Island, FL, building unified field theories of cancer, economics, AI alignment, and astrophysics — and the cockpit that ships them.",
+    "ÆoNs Research Laboratory / AtomEons Systems Laboratory. One independent researcher in Naples, FL, building unified field theories of cancer, economics, AI alignment, and astrophysics — and the cockpit that ships them.",
   alternates: { canonical: "https://atomeons.com/research/about" },
   openGraph: {
     title: "About — ÆoNs Research Laboratory",
     description:
-      "One operator. One lab. One unifying field. Independent AI + frontier-science research from Marco Island, FL.",
+      "One operator. One lab. One unifying field. Independent AI + frontier-science research from Naples, FL.",
     type: "article",
     images: [
       "/research/lessons-from-sci-fi/stills/metropolis-maschinenmensch.png",
@@ -20,7 +20,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "About — ÆoNs Research Laboratory",
     description:
-      "One operator. One lab. One unifying field. Marco Island, FL.",
+      "One operator. One lab. One unifying field. Naples, FL.",
     images: [
       "/research/lessons-from-sci-fi/stills/metropolis-maschinenmensch.png",
     ],
@@ -190,7 +190,7 @@ export default function ResearchAbout() {
                 Atom McCree
               </p>
               <p className="mt-1 font-mono text-xs uppercase tracking-[0.22em] text-[#6B7779]">
-                founder · ÆoNs Research / AtomEons Systems Laboratory · Marco Island, FL
+                founder · ÆoNs Research / AtomEons Systems Laboratory · Naples, FL
               </p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[#9BA5A7] md:text-base">
                 Independent researcher. Writes the papers, ships the cockpit
@@ -221,7 +221,7 @@ export default function ResearchAbout() {
                   <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
                     ::location
                   </p>
-                  <p className="mt-1 text-[#F2F4F5]">Marco Island, FL, USA</p>
+                  <p className="mt-1 text-[#F2F4F5]">Naples, FL, USA</p>
                   <p className="font-mono text-[#6B7779]">independent · no chair</p>
                 </div>
                 <div className="rounded-lg border border-[#1A2225] bg-[#0A0F11] p-3">

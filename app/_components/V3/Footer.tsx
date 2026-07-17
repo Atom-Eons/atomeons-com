@@ -200,7 +200,7 @@ export default function Footer() {
               Æ
             </span>
             <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[#7a818a]">
-              Built in Marco Island, FL · 2026 · Atom McCree + AI
+              Built in Naples, FL · 2026 · Atom McCree + AI
             </p>
           </div>
 

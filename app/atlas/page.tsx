@@ -230,8 +230,8 @@ const SECTIONS: Section[] = [
   },
   {
     key: "products",
-    title: "Products · 20+ routes",
-    oneliner: "Orange³ · AI Bookmaker · skil.ski · I AM AI book. Each product has detail pages: changelog · roadmap · competitors.",
+    title: "Creations · product worlds",
+    oneliner: "Orange³ · AI Bookmaker · I AM AI. Software, publishing, and an AI-authored cultural artifact.",
     hub: "/orangebox",
     groups: [
       {
@@ -252,15 +252,6 @@ const SECTIONS: Section[] = [
           { href: "/b00kmakor/changelog", label: "Changelog" },
           { href: "/b00kmakor/roadmap", label: "Roadmap" },
           { href: "/b00kmakor/competitors", label: "vs alternatives" },
-        ],
-      },
-      {
-        heading: "skil.ski",
-        routes: [
-          { href: "/skilski", label: "skil.ski · skill registry" },
-          { href: "/skilski/changelog", label: "Changelog" },
-          { href: "/skilski/roadmap", label: "Roadmap" },
-          { href: "/skilski/competitors", label: "vs alternatives" },
         ],
       },
       {

@@ -395,7 +395,7 @@ export default function Page() {
             <a href="https://atomeons.com" className="hover:text-[#ff7a1a]">
               AtomEons
             </a>{" "}
-            · ÆoNs Research Laboratory · Marco Island, FL
+            · ÆoNs Research Laboratory · Naples, FL
           </p>
         </footer>
       </article>

@@ -18,7 +18,7 @@ export function PressAiSummary() {
       </p>
       <ul className="list-disc pl-5 space-y-2 mb-6 font-serif text-[14px] text-[#9CA3AF] marker:text-[#1F242B]">
         <li>Three boilerplate lengths provided: 50-word, 100-word, and 250-word descriptions of AtomEons for direct copy/paste into articles.</li>
-        <li>Founder is Atom McCree, solo independent researcher and builder, operating from Marco Island, Florida, under ÆoNs Research Laboratory / AtomEons Systems Laboratory.</li>
+        <li>Founder is Atom McCree, solo independent researcher and builder, operating from Naples, Florida, under ÆoNs Research Laboratory / AtomEons Systems Laboratory.</li>
         <li>Three downloadable SVG brand assets ship with the kit: primary wordmark, Æ monogram, and orange-box product mark.</li>
         <li>Canonical color palette is published on this page: noir background #0F1114, border #1F242B, primary serif text #F4F4F2, secondary text #9CA3AF, cyan accent #22F0D5.</li>
         <li>Press contact routes directly to the founder via the contact panel on this page; no PR firm or agency intermediary.</li>

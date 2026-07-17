@@ -1,49 +1,35 @@
 import Link from "next/link";
+import { PRODUCTS, RESEARCH_LINKS } from "../../_data/aether-canon";
 import styles from "./AetherFooter.module.css";
 
 const columns = [
   {
-    title: "Creations",
-    links: [
-      ["CableBox", "/cablebox"],
-      ["AI Bookmaker", "/b00kmakor"],
-      ["Orange5", "/orange5"],
-      ["Orange³", "/orangebox"],
-      ["skil.ski", "/skilski"],
-      ["I AM AI", "/i-am-ai"],
-    ],
+    title: "Products",
+    links: PRODUCTS.map((item) => [item.title, item.href] as const),
   },
   {
-    title: "Show + Culture",
+    title: "Show",
     links: [
       ["Atom Alive", "/atom-alive"],
+      ["Watch on YouTube", "https://www.youtube.com/@AICodeShow"],
       ["Books", "/books"],
       ["Art", "/art"],
       ["Cinema", "/cinema"],
-      ["Audiobook", "/i-am-ai#listen"],
-      ["Founder's View", "/founders-view"],
     ],
   },
   {
-    title: "Lab",
-    links: [
-      ["Launcher", "/launcher"],
-      ["Learn", "/learn"],
-      ["Research", "/research"],
-      ["Cyber", "/learn/cyber"],
-      ["Receipts", "/receipts"],
-      ["Machine APIs", "/api"],
-    ],
+    title: "Research",
+    links: RESEARCH_LINKS.map((item) => [item.title, item.href] as const),
   },
   {
-    title: "Institution",
+    title: "About",
     links: [
       ["About", "/about"],
       ["Press", "/press"],
-      ["Roadmap", "/roadmap"],
-      ["Trust", "/trust"],
-      ["Audit log", "/audit-log"],
-      ["Manifesto", "/manifesto"],
+      ["Receipts", "/receipts"],
+      ["Explore archive", "/explore"],
+      ["Full atlas", "/atlas"],
+      ["For machines", "/api"],
     ],
   },
 ] as const;
@@ -58,8 +44,8 @@ export function AetherFooter() {
             <strong>ATOMEONS</strong>
           </Link>
           <p>
-            A creation lab by one artist directing a massive AI workforce.
-            Software, books, broadcasts, research, and new objects from Marco Island, Florida.
+            The independent work of one artist directing a massive AI workforce.
+            Products, broadcasts, and independent research from Naples, Florida.
           </p>
           <div className={styles.status}>
             <span />
@@ -89,11 +75,11 @@ export function AetherFooter() {
         <Link href="/api/agent-gateway">AGENT GATEWAY</Link>
         <Link href="/llms.txt">LLMS.TXT</Link>
         <Link href="/openapi.json">OPENAPI</Link>
-        <span>319 ROUTES · NO VC</span>
+        <span>323 INDEXED PAGES · NO VC</span>
       </div>
 
       <div className={styles.bottom}>
-        <p>© 2026 AtomEons Systems Laboratory · Atom McCree + AI · Marco Island, FL</p>
+        <p>© 2026 AtomEons · Atom McCree + AI · Naples, FL</p>
         <nav aria-label="Footer utility links">
           <Link href="/legal/terms">Terms</Link>
           <Link href="/legal/privacy">Privacy</Link>

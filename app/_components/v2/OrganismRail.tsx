@@ -9,7 +9,6 @@ import Link from "next/link";
  * Card accent law:
  *   RESEARCH     → cyan   (knowledge, open)
  *   ORANGEBOX    → orange (product, ship)
- *   SKIL.SKI     → white  (registry, neutral)
  *   B00KMAKOR    → muted  (coming soon)
  */
 
@@ -47,17 +46,6 @@ const ORGANISMS: OrgCard[] = [
     accentColor: "#22F0D5",
     borderColor: "border-[#22F0D5]/40",
     cta: "Get ORANGEBOX",
-  },
-  {
-    label: "SKIL.SKI",
-    name: "skil.ski",
-    description: "Operator-class skill registry.",
-    detail:
-      "Skills as files — YAML + Markdown + scoring rubric. Indexed by sector. Verified before listed. Drops into ORANGEBOX or any cockpit that reads the format.",
-    href: "/skilski",
-    accentColor: "#F2F4F5",
-    borderColor: "border-[#F2F4F5]/20",
-    cta: "Browse the registry",
   },
   {
     label: "B00KMAKOR",

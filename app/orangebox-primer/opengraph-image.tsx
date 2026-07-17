@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "Orangebox Primer — a code-signed Windows installer that compresses Claude's context 10 to 80 times. Built by one operator in Marco Island in 75 days. AtomEons Systems Laboratory.";
+  "Orangebox Primer — a code-signed Windows installer that compresses Claude's context 10 to 80 times. Built by one operator in Naples in 75 days. AtomEons Systems Laboratory.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -48,7 +48,7 @@ export default function OG() {
           A code-signed Windows installer that compresses Claude's context 10 to 80 times.
         </p>
         <p style={{ margin: "22px 0 0", fontFamily: "Georgia, ui-serif, serif", fontSize: 22, lineHeight: 1.4, color: "#9CA3AF", maxWidth: 980, display: "flex" }}>
-          Built by one operator in Marco Island in 75 days. Every claim below carries the receipt that falsifies it.
+          Built by one operator in Naples in 75 days. Every claim below carries the receipt that falsifies it.
         </p>
 
         <div style={{ display: "flex", gap: 0, marginTop: 32, border: "1px solid #1F242B", width: "100%" }}>

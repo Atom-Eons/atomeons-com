@@ -924,7 +924,7 @@ export function Header() {
                 textTransform: "uppercase",
               }}
             >
-              ÆoNs Research Laboratory · Marco Island, FL · 25°56′N 81°43′W
+              ÆoNs Research Laboratory · Naples, FL · 25°56′N 81°43′W
             </p>
           </div>
         </div>

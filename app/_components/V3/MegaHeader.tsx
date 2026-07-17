@@ -12,7 +12,7 @@
  *   1. Learn      mega · curriculum · atlas · synthesis · career · q-pages
  *   2. Cyber      mega · catalog · doctrine · breaches · path · heroes
  *   3. Research   mega · papers · decoded · sci-fi · intel · constellation
- *   4. Products   mega · ORANGEBOX · B00KMAKR · skil.ski · I AM AI · compare
+ *   4. Products   mega · ORANGEBOX · B00KMAKR · I AM AI · compare
  *   5. Lab        mega · trust · transparency · studio · personal · live
  *   6. Founder's View · direct link
  *
@@ -379,14 +379,13 @@ const MEGAS: Mega[] = [
     // at 1280-1400px viewport widths · flexbox broke between "AI" and
     // "Ware" at the space. Non-breaking space (U+00A0) prevents the
     // break. Still reads as "AI Ware" · disambiguated I.
-    prefixes: ["/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases", "/aiware"],
+    prefixes: ["/orangebox", "/b00kmakor", "/compare", "/pricing", "/use-cases", "/aiware"],
     columns: [
       {
         title: "Software",
         items: [
           { href: "/orangebox", label: "ORANGE³", hint: "Sovereign agentic OS · FREE always · §4A no-SaaS" },
           { href: "/b00kmakor", label: "AI Bookmaker", hint: "Mac + Windows publishing cockpit · FREE forever" },
-          { href: "/skilski", label: "skil.ski", hint: "Universal MCP skill registry · zero rake" },
         ],
       },
       {
@@ -399,14 +398,11 @@ const MEGAS: Mega[] = [
         ],
       },
       {
-        title: "B00KMAKR + skil.ski",
+        title: "AI Bookmaker detail",
         items: [
           { href: "/b00kmakor/changelog", label: "B00KMAKR changelog", badge: "NEW" },
           { href: "/b00kmakor/roadmap", label: "B00KMAKR roadmap", badge: "NEW" },
           { href: "/b00kmakor/competitors", label: "B00KMAKR vs Vellum · Atticus", badge: "NEW" },
-          { href: "/skilski/changelog", label: "skil.ski changelog", badge: "NEW" },
-          { href: "/skilski/roadmap", label: "skil.ski roadmap", badge: "NEW" },
-          { href: "/skilski/competitors", label: "skil.ski vs GPT Store · Smithery", badge: "NEW" },
         ],
       },
       {
@@ -497,7 +493,7 @@ const MEGAS: Mega[] = [
       "/api", "/ask", "/datasets",
       "/research", "/intel", "/constellation",
       "/founders-view", "/audit-log",
-      "/orangebox", "/b00kmakor", "/skilski", "/compare", "/pricing", "/use-cases",
+      "/orangebox", "/b00kmakor", "/compare", "/pricing", "/use-cases",
       "/innovations", "/version", "/books", "/i-am-ai",
       "/press", "/skills", "/about",
     ],
@@ -532,7 +528,6 @@ const MEGAS: Mega[] = [
         items: [
           { href: "/orangebox", label: "ORANGEBOX v6 · cockpit" },
           { href: "/b00kmakor", label: "B00KMAKR · publishing" },
-          { href: "/skilski", label: "skil.ski · skill registry" },
           { href: "/compare", label: "Product comparisons" },
           { href: "/pricing", label: "Pricing" },
           { href: "/use-cases", label: "Use cases" },

@@ -131,10 +131,10 @@ export function Header() {
 
           <div
             data-active={
-              isActive("/orangebox") || isActive("/b00kmakor") || isActive("/skilski") || undefined
+              isActive("/orangebox") || isActive("/b00kmakor") || undefined
             }
             className={`relative ${
-              isActive("/orangebox") || isActive("/b00kmakor") || isActive("/skilski")
+              isActive("/orangebox") || isActive("/b00kmakor")
                 ? "after:absolute after:left-0 after:right-0 after:-bottom-[22px] after:h-px after:bg-[#22F0D5]"
                 : ""
             }`}
@@ -151,11 +151,6 @@ export function Header() {
                   href: "/b00kmakor",
                   label: "B00KMAKR",
                   hint: "AI publishing cockpit",
-                },
-                {
-                  href: "/skilski",
-                  label: "skil.ski",
-                  hint: "Skill marketplace via MCP",
                 },
               ]}
             />

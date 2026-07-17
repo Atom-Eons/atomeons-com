@@ -22,6 +22,7 @@ if (!existsSync(PUBLIC_DIR)) {
   mkdirSync(PUBLIC_DIR, { recursive: true });
 }
 const OUT = join(PUBLIC_DIR, "audit-log.json");
+const STEALTH_TERMS = /skil\.ski|skilski/i;
 
 // Vercel ships shallow clones by default · unshallow first if needed.
 // "git rev-parse --is-shallow-repository" returns "true" or "false".
@@ -52,6 +53,7 @@ try {
 const commits = raw
   .split("\n")
   .filter((l) => l.trim().length > 0)
+  .filter((l) => !STEALTH_TERMS.test(l))
   .map((l) => {
     const [sha, date, subject, author] = l.split("|");
     return {

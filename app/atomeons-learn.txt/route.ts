@@ -82,7 +82,7 @@ const FOOTER = `
 
 NOT IN THIS BUNDLE:
   - /research · papers + decoded primary sources → see /atomeons-research.txt (future)
-  - /aiware product pages → at /orangebox /b00kmakor /skilski
+  - /aiware product pages → at /orangebox /b00kmakor
 
 QUESTIONS:
   POST your question to https://atomeons.com/api/ask

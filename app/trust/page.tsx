@@ -46,7 +46,7 @@ const POSTURE = [
   {
     title: "Operator identity",
     body:
-      "One operator: Atom McCree, Marco Island, FL. Verified social presence at the linked surfaces. Direct contact email is in the footer. There is no team to hide behind.",
+      "One operator: Atom McCree, Naples, FL. Verified social presence at the linked surfaces. Direct contact email is in the footer. There is no team to hide behind.",
     href: "/about",
   },
   {

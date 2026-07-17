@@ -27,6 +27,31 @@ export type ResearchPaper = {
 
 export const PAPERS: ResearchPaper[] = [
   {
+    slug: "radiance-luminance-alpha-wolf-eyes",
+    title: "Radiance-Luminance Theory and Alpha Wolf Eyes",
+    authors: "Atom McCree",
+    keywords: [
+      "radiance-luminance theory",
+      "Alpha Wolf Eyes",
+      "AWE-3",
+      "deterministic computer vision",
+      "photon-first perception",
+      "zero learned weights",
+      "retinal computation",
+      "few-shot recognition",
+    ],
+    bytes: 1067343,
+    drive_id: "local-radiance-luminance-alpha-wolf-eyes",
+    drive_url:
+      "https://atomeons.com/research/papers/radiance-luminance-alpha-wolf-eyes.pdf",
+    date: "July 2026",
+    kid_summary:
+      "Most computer vision learns by studying huge piles of pictures. Alpha Wolf Eyes tries another way: measure light, color, edges, shape, and motion with fixed, inspectable rules—more like a built eye than a trained black box—then recognize what comes back.",
+    academic_summary:
+      "Introduces Radiance-Luminance Theory (RLT), a photon-first account of visual perception, and Alpha Wolf Eyes 3 (AWE-3), an implemented deterministic retina-to-inferotemporal pipeline with zero learned filter weights. The system integrates linear-light recovery, chromatic adaptation, foveated log-polar canonicalization, retinal and LGN-inspired channel decomposition, fixed V1/V2/V4 measurements, and an 80-dimensional identity representation. On its repeatedly evaluated 47-class development corpus, AWE-3 classified 275 of 282 observations (97.52%); the manuscript correctly frames this as development evidence, not an unbiased generalization result, and specifies a locked million-observation scale experiment.",
+    status: "summarized",
+  },
+  {
     slug: "mislabel-hypothesis",
     title: "The Mislabel Hypothesis",
     authors:

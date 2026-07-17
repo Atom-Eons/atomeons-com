@@ -5,7 +5,7 @@ import { DiscordCTA } from "../_components/V3/DiscordCTA";
 export const metadata: Metadata = {
   title: "The lab · physical workspace · daily routine",
   description:
-    "Where the work actually happens. The desk, the machines, the routine. One operator, one room, Marco Island Florida. No team, no investors, no co-working space. Just receipts.",
+    "Where the work actually happens. The desk, the machines, the routine. One operator, one room, Naples Florida. No team, no investors, no co-working space. Just receipts.",
   alternates: { canonical: "https://atomeons.com/lab" },
 };
 
@@ -50,7 +50,7 @@ const SOFTWARE_DAILY = [
 
 const ROUTINE = [
   { time: "06:30", what: "Wake. No phone for 30 minutes. Coffee, water, journal." },
-  { time: "07:00", what: "Walk the seawall. 25 minutes. Marco Island, Florida — operator's only meeting room with the Gulf." },
+  { time: "07:00", what: "Walk the seawall. 25 minutes. Naples, Florida — operator's only meeting room with the Gulf." },
   { time: "08:00", what: "Sit. Read overnight events: arXiv firehose, Anthropic + OpenAI + Google releases, Hacker News top 30. Notes go into Obsidian, not published." },
   { time: "09:00", what: "Single biggest leverage move of the day. Usually a long-form artifact: research paper draft, lesson sequence, new product surface. No meetings exist." },
   { time: "12:30", what: "Lunch + 45-minute deliberate offline window. No phone." },
@@ -77,7 +77,7 @@ export default function LabPage() {
       <section className="border-b border-[#1F242B]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#9CA3AF]">
-            § the lab · Marco Island, FL · trust + workshop
+            § the lab · Naples, FL · trust + workshop
           </p>
           <h1 className="mt-6 font-serif text-[44px] font-light leading-[1.04] tracking-[-0.025em] md:text-[64px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             One room. One operator.

@@ -208,7 +208,7 @@ export default function Orange5Page() {
         </section>
 
         <div className="mt-24 border-t pt-8 text-[13px]" style={{ borderColor: H.hair, color: H.inkWhisper }}>
-          <p>AtomEons Systems Laboratory · Marco Island · FL · 2026</p>
+          <p>AtomEons Systems Laboratory · Naples · FL · 2026</p>
         </div>
       </div>
     </main>

@@ -1611,7 +1611,7 @@ export default function OrangeboxPage() {
 
         <div className="mt-12 border-t pt-6" style={{ borderColor: EMBER.border }}>
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] leading-[1.8]" style={{ color: EMBER.textMuted }}>
-            Built by AtomEons Systems Laboratory · Marco Island, Florida · © 2026
+            Built by AtomEons Systems Laboratory · Naples, Florida · © 2026
             <br />
             One operator. One organism. One cockpit.
             <br />

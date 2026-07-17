@@ -149,7 +149,7 @@ export function AtomEonsImmersiveHero() {
       <div className="relative mx-auto flex min-h-[88vh] w-full max-w-7xl flex-col justify-end px-6 pb-16 pt-32 md:min-h-[92vh] md:pb-24 md:pt-40">
         <div className="max-w-5xl">
           <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#22F0D5]">
-            AtomEons Systems Laboratory · Marco Island, FL · est. 2024
+            AtomEons Systems Laboratory · Naples, FL · est. 2024
           </p>
 
           <h1
@@ -168,7 +168,7 @@ export function AtomEonsImmersiveHero() {
 
           <p className="mt-9 max-w-2xl text-base leading-[1.55] text-[#E7EBED] md:text-xl md:leading-[1.5]">
             Masters-grade cyber education. Realtime AI research, published free. Anti-hype tools that ship.
-            Built in the open by one person and a fleet of agents — Marco Island, Florida.
+            Built in the open by one person and a fleet of agents — Naples, Florida.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-3">

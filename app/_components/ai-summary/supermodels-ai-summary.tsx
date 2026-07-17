@@ -16,7 +16,7 @@ export function SupermodelsAiSummary() {
         <li>Snapshot cutoff: 2026-06-03; covers leaderboard state through May 2026.</li>
         <li>Ranking criterion is reasoning capability, not price, latency, or context length.</li>
         <li>Sources are public third-party leaderboards, not vendor self-report.</li>
-        <li>Published by AtomEons Systems Laboratory, an independent research lab in Marco Island, FL.</li>
+        <li>Published by AtomEons Systems Laboratory, an independent research lab in Naples, FL.</li>
       </ul>
       <ul className="font-serif text-[14px] text-[#9CA3AF] list-disc pl-5 space-y-1.5 mb-6 marker:text-[#1F242B]">
         <li>This is NOT a vendor-sponsored ranking or paid placement list.</li>

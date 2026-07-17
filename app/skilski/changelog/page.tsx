@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Every skil.ski release. The skill registry's evolution from internal Oski tooling to public MCP marketplace.",
   alternates: { canonical: "https://atomeons.com/skilski/changelog" },
+  robots: { index: false, follow: false, nocache: true },
 };
 
 type Release = {

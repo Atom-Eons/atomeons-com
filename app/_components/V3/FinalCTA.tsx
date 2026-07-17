@@ -91,7 +91,7 @@ const SIGNAL = {
   buildDate: process.env.NEXT_PUBLIC_BUILD_DATE ?? "—",
   // Lab status — "Live" or "Maintenance". Operator-controlled.
   status: "Live",
-  // Coordinates. Marco Island, FL — fixed. Not derived from geolocation.
+  // Coordinates. Naples, FL — fixed. Not derived from geolocation.
   // Sourced from the operator's filed lab address; identical to Footer.
   lat: "25°56′N",
   lon: "81°43′W",
@@ -381,7 +381,7 @@ export function FinalCTA() {
       <div className="relative z-10 mx-auto w-full max-w-[1480px] px-6 pb-14 md:px-10 md:pb-20 lg:px-14">
         <div className="flex flex-wrap items-baseline justify-between gap-4 border-t border-[#1F242B] pt-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
-            <span className="text-[#9CA3AF]">Marco Island, FL</span>
+            <span className="text-[#9CA3AF]">Naples, FL</span>
             <span className="mx-3 text-[#1F242B]">·</span>
             <span>
               {SIGNAL.lat} {SIGNAL.lon}

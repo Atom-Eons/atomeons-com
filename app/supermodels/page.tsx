@@ -940,7 +940,7 @@ export default function SupermodelsPage() {
             className="mt-6 font-serif text-[16px] leading-[1.6] italic text-[#9CA3AF]"
             style={{ fontFamily: "Newsreader, Georgia, serif" }}
           >
-            Edited at AtomEons Systems Laboratory, Marco Island, Florida. Cover
+            Edited at AtomEons Systems Laboratory, Naples, Florida. Cover
             voice: Atom McCree. Receipts column: the public leaderboards listed
             above. No advertising; no sponsorship; no review copies; no early
             access; no influencer kits. The lab pays for its own API calls.

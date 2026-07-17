@@ -58,7 +58,7 @@ export default function Paths() {
           <span role="listitem" className="text-[#B5BBC0]">2 <span className="text-[#8E969D]">tracks</span></span>
           <span role="listitem" className="text-[#B5BBC0]">free <span className="text-[#8E969D]">always</span></span>
           <span role="listitem" className="text-[#B5BBC0]">CC-BY <span className="text-[#8E969D]">4.0</span></span>
-          <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+          <span role="listitem" className="text-[#8E969D]">Naples · FL</span>
         </div>
 
         <p
@@ -104,7 +104,7 @@ export default function Paths() {
         </div>
 
         <p className="mt-16 max-w-[640px] font-mono text-[11px] uppercase tracking-[0.18em] text-[#8E969D]">
-          Atom McCree · AtomEons Systems Laboratory · Marco Island, FL · 2026
+          Atom McCree · AtomEons Systems Laboratory · Naples, FL · 2026
         </p>
       </section>
     </main>

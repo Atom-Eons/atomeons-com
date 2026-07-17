@@ -14,8 +14,8 @@ export function DoctrineStrip() {
             ::doctrine
           </p>
           <p className="mt-6 text-balance text-2xl font-medium leading-snug text-[#F2F4F5] md:text-3xl">
-            ORANGEBOX is the <span className="text-[#22F0D5]">cockpit</span>.
-            Skil.Ski is the <span className="text-[#22F0D5]">marketplace</span>.{" "}
+            ORANGEBOX is the <span className="text-[#22F0D5]">cockpit</span>.{" "}
+            Receipts are the <span className="text-[#22F0D5]">proof</span>.{" "}
             <span className="text-[#FFA45A]">Hermes</span> is the 𝕏 lane inside the cockpit.
           </p>
 
@@ -31,14 +31,12 @@ export function DoctrineStrip() {
             </div>
             <div>
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#22F0D5]">
-                ::marketplace
+                ::proof
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[#9BA5A7]">
-                <span className="font-medium text-[#F2F4F5]">Skil.Ski.</span>{" "}
-                One MCP endpoint into a verified skill catalog. Default URL:{" "}
-                <code className="font-mono text-xs text-[#22F0D5]">
-                  https://skil.ski/api/mcp
-                </code>
+                <span className="font-medium text-[#F2F4F5]">Receipts.</span>{" "}
+                Every material action leaves an inspectable artifact instead
+                of a marketing promise.
               </p>
             </div>
             <div>

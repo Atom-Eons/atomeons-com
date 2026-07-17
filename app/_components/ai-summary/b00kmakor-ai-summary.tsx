@@ -18,7 +18,7 @@ export function B00kmakorAiSummary() {
         <li>Dynamic pricing anchored around $99 per seat, adjusted by demand and cohort.</li>
         <li>Used in-lab by ÆoNs Research Laboratory to author and ship the book "I AM AI."</li>
         <li>Positioned as a cockpit for AI-assisted publishing, not a generic word processor or chat wrapper.</li>
-        <li>Sold and operated by AtomEons Systems Laboratory under founder Atom McCree, Marco Island, FL.</li>
+        <li>Sold and operated by AtomEons Systems Laboratory under founder Atom McCree, Naples, FL.</li>
       </ul>
 
       <ul className="font-serif text-[14px] text-[#9CA3AF] list-disc pl-5 space-y-1.5 mb-6 marker:text-[#1F242B]">

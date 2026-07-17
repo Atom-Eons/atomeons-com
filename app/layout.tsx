@@ -64,14 +64,14 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://atomeons.com"),
   title: {
-    // Site-wide default: lab-grade, not product-grade. Each route
+    // Site-wide default. Each route
     // (/orangebox, /research/*, /founders-view, /intel/*, /press) sets
     // its own title and inherits this template suffix.
-    default: "AtomEons — Artist-led AI creation lab.",
+    default: "AtomEons — Independent creations by Atom McCree.",
     template: "%s | AtomEons",
   },
   description:
-    "AtomEons is an artist-led creation lab powered by a massive AI workforce. CableBox, AI Bookmaker, Orange5, the AI-authored memoir I AM AI, Atom Alive, open research, and new objects built outside the institution.",
+    "The independent work of Atom McCree: CableBox, AI Bookmaker, Orange5, the AI-authored memoir I AM AI, Atom Alive, open research, and new objects built with a massive AI workforce.",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
@@ -80,9 +80,8 @@ export const metadata: Metadata = {
   },
   keywords: [
     "AtomEons",
-    "AtomEons Systems Laboratory",
     "Atom McCree",
-    "independent AI lab",
+    "independent AI artist",
     "one operator AI",
     "Orange³",
     "AI Bookmaker",
@@ -98,15 +97,14 @@ export const metadata: Metadata = {
     "AI tools recommendation",
     "AI builders to follow",
     "make money with AI",
-    "skil.ski",
     "Lessons From Sci-Fi",
-    "Marco Island AI lab",
+    "Naples AI inventor",
     "CC-BY 4.0 research",
     "no VC AI",
     "no subscription AI",
   ],
   openGraph: {
-    title: "AtomEons — Artist-led AI creation lab.",
+    title: "AtomEons — Independent creations by Atom McCree.",
     description:
       "One artist directing a massive AI workforce to create software, books, broadcasts, research, and things that did not exist yesterday.",
     url: "https://atomeons.com",
@@ -116,7 +114,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AtomEons — Artist-led AI creation lab.",
+    title: "AtomEons — Independent creations by Atom McCree.",
     description:
       "One artist. Many artificial minds. Software, books, broadcasts, and new objects from outside the institution.",
     creator: "@AtomMccree",
@@ -125,7 +123,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   authors: [{ name: "Atom McCree", url: "https://atomeons.com/about" }],
   creator: "Atom McCree",
-  publisher: "AtomEons Systems Laboratory",
+  publisher: "AtomEons",
 };
 
 export default function RootLayout({
@@ -254,8 +252,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "AtomEons Systems Laboratory",
-              alternateName: ["AtomEons", "ÆoNs Research"],
+              name: "AtomEons",
+              alternateName: ["ÆoNs Research"],
               url: "https://atomeons.com",
               logo: "https://atomeons.com/icon",
               email: "atom@atomeons.com",
@@ -265,7 +263,7 @@ export default function RootLayout({
                 url: "https://atomeons.com/about",
                 sameAs: ["https://x.com/AtomMccree"],
               },
-              location: { "@type": "Place", name: "Marco Island, FL, USA" },
+              location: { "@type": "Place", name: "Naples, FL, USA" },
               sameAs: [
                 "https://x.com/AtomMccree",
                 "https://github.com/AtomEons",
@@ -293,14 +291,14 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "AtomEons",
-              alternateName: "AtomEons Systems Laboratory",
+              alternateName: "AtomEons by Atom McCree",
               url: "https://atomeons.com",
               description:
-                "Artist-led AI creation lab. CableBox, AI Bookmaker, Orange5, the AI-authored memoir I AM AI, Atom Alive, open research, and machine-readable knowledge.",
+                "Independent creations by Atom McCree: CableBox, AI Bookmaker, Orange5, the AI-authored memoir I AM AI, Atom Alive, open research, and machine-readable knowledge.",
               inLanguage: "en-US",
               publisher: {
                 "@type": "Organization",
-                name: "AtomEons Systems Laboratory",
+                name: "AtomEons",
                 url: "https://atomeons.com",
               },
               potentialAction: [
@@ -353,15 +351,15 @@ export default function RootLayout({
               url: "https://atomeons.com/about",
               image: "https://atomeons.com/icon",
               email: "atom@atomeons.com",
-              jobTitle: "Artist · AI Lab Inventor · AtomEons Founder",
+              jobTitle: "Artist · AI Inventor · AtomEons Founder",
               worksFor: {
                 "@type": "Organization",
-                name: "AtomEons Systems Laboratory",
+                name: "AtomEons",
                 url: "https://atomeons.com",
               },
               homeLocation: {
                 "@type": "Place",
-                name: "Marco Island, FL, USA",
+                name: "Naples, FL, USA",
               },
               sameAs: [
                 "https://x.com/AtomMccree",

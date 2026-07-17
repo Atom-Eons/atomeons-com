@@ -153,7 +153,7 @@ export default function RoadmapPage() {
             </span>
             <span>· 4 tiers · Stable · Rolling · Uncertain · Won&apos;t do</span>
             <span>· solo lab · realistic promises only</span>
-            <span>· Marco Island · FL</span>
+            <span>· Naples · FL</span>
           </div>
 
           <p
@@ -234,7 +234,7 @@ export default function RoadmapPage() {
               .
             </p>
             <p className="mt-2">
-              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Marco Island · FL · 2026 · CC-BY 4.0
+              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Naples · FL · 2026 · CC-BY 4.0
             </p>
           </div>
         </div>

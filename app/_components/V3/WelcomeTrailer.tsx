@@ -65,7 +65,7 @@ const SCENES: Scene[] = [
   {
     eyebrow: "§ 01 · WHERE YOU ARE",
     headline: "This is a research laboratory.",
-    body: "ÆoNs Research Laboratory · one operator · Marco Island, Florida · since 2024. Most labs hide the workshop. This one doesn't.",
+    body: "ÆoNs Research Laboratory · one operator · Naples, Florida · since 2024. Most labs hide the workshop. This one doesn't.",
     visual: "atom",
     hue: 175,
   },

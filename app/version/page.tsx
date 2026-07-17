@@ -150,7 +150,7 @@ export default function VersionPage() {
           3 new domain hubs · the offline model is scoped and waiting.
         </p>
         <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5]">
-          Released · 2026-06-06 · Marco Island, FL · 0 dependencies on anyone&apos;s permission
+          Released · 2026-06-06 · Naples, FL · 0 dependencies on anyone&apos;s permission
         </p>
       </header>
 
@@ -363,7 +363,7 @@ export default function VersionPage() {
 
       <footer className="mt-20 border-t border-[#1F242B] pt-8">
         <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
-          ÆoNs Research Laboratory · Marco Island, FL · 25.93°N 81.71°W
+          ÆoNs Research Laboratory · Naples, FL · 25.93°N 81.71°W
         </p>
         <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
           Author · Atom McCree · CC-BY 4.0 · License § 4A no-SaaS

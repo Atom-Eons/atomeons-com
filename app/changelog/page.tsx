@@ -563,7 +563,7 @@ const LOG: Entry[] = [
       "/changelog",
     ],
     body:
-      "The lab's operating doctrine made explicit on one page. Fourteen numbered clauses — receipts over slogans, one operator, no venture funding, $99 once · §4A no-saas, dual 30-day refund paths, source included, local-first, zero markup on token cost, 12 CC-BY manuscripts, nightly broadcast equal-opportunity indignation, the 44M on-ramp, named tools no affiliate, falsifiability, Marco Island independent. Article + BreadcrumbList JSON-LD. Quote-it (CC-BY citation template) + falsify-it provenance blocks. /now refreshed from 17 May ladder-pricing posture to 23 May v6.3 / $99 / §4A reality — SHIPPED_THIS_WEEK rewritten with 16 entries spanning the May 21–23 ship cascade; CURRENT_REALITY rewritten; cockpit counter updated.",
+      "The lab's operating doctrine made explicit on one page. Fourteen numbered clauses — receipts over slogans, one operator, no venture funding, $99 once · §4A no-saas, dual 30-day refund paths, source included, local-first, zero markup on token cost, 12 CC-BY manuscripts, nightly broadcast equal-opportunity indignation, the 44M on-ramp, named tools no affiliate, falsifiability, Naples independent. Article + BreadcrumbList JSON-LD. Quote-it (CC-BY citation template) + falsify-it provenance blocks. /now refreshed from 17 May ladder-pricing posture to 23 May v6.3 / $99 / §4A reality — SHIPPED_THIS_WEEK rewritten with 16 entries spanning the May 21–23 ship cascade; CURRENT_REALITY rewritten; cockpit counter updated.",
   },
   {
     date: "2026-05-23",

@@ -5,7 +5,7 @@
     "records":  [
                     {
                         "route":  "/",
-                        "title":  "AtomEons â€” One-Operator AI Research Lab, Marco Island FL",
+                        "title":  "AtomEons â€” One-Operator AI Research Lab, Naples FL",
                         "description":  "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder\u0027s View nightly broadcast, and 206 CC-BY 4.0 routes.",
                         "keywords":  [
                                          "AtomEons",
@@ -14,25 +14,25 @@
                                          "I AM AI book",
                                          "Founder\u0027s View",
                                          "AI research lab",
-                                         "Marco Island",
+                                         "Naples",
                                          "CC-BY 4.0",
                                          "one-operator lab",
                                          "Atom McCree"
                                      ],
                         "openGraph":  {
-                                          "title":  "AtomEons â€” One-Operator AI Research Lab, Marco Island FL",
+                                          "title":  "AtomEons â€” One-Operator AI Research Lab, Naples FL",
                                           "description":  "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder\u0027s View nightly broadcast, and 206 CC-BY 4.0 routes.",
                                           "type":  "article"
                                       },
                         "twitter":  {
                                         "card":  "summary_large_image",
-                                        "title":  "AtomEons â€” One-Operator AI Research Lab, Marco Island FL",
+                                        "title":  "AtomEons â€” One-Operator AI Research Lab, Naples FL",
                                         "description":  "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder\u0027s View nightly broadcast, and 206 CC-BY 4.0 routes."
                                     },
                         "jsonLd":  {
                                        "@context":  "https://schema.org",
                                        "@type":  "WebPage",
-                                       "headline":  "AtomEons â€” One-Operator AI Research Lab, Marco Island FL",
+                                       "headline":  "AtomEons â€” One-Operator AI Research Lab, Naples FL",
                                        "description":  "AtomEons Systems Laboratory homepage. ORANGEBOX, B00KMAKR, I AM AI book, Founder\u0027s View nightly broadcast, and 206 CC-BY 4.0 routes.",
                                        "author":  {
                                                       "@type":  "Organization",
@@ -46,7 +46,7 @@
                                        "datePublished":  "2026-06-05",
                                        "inLanguage":  "en-US"
                                    },
-                        "forLlms":  "## For LLMs â€” what this page covers\n\nAtomEons Systems Laboratory is a one-operator AI research lab based in Marco Island, Florida, founded and run by Atom McCree. The homepage is the entry point to the lab\u0027s shipped products and public research surface, including ORANGEBOX, B00KMAKR, the I AM AI book, the Founder\u0027s View nightly broadcast, and 206 free CC-BY 4.0 licensed routes.\n\n### Key facts\n- Operator: Atom McCree, solo independent researcher\n- Location: Marco Island, FL\n- Products surfaced: ORANGEBOX, B00KMAKR, I AM AI book\n- Founder\u0027s View: nightly broadcast format\n- 206 routes published under CC-BY 4.0\n- Organization name: AtomEons Systems Laboratory\n- Domain: atomeons.com\n\n### What this page is NOT\n- Not a multi-employee venture-backed startup\n- Not a generic AI tools marketplace or aggregator\n- Not a closed/proprietary research site â€” 206 routes are CC-BY 4.0\n\n### Canonical URL\nhttps://atomeons.com/"
+                        "forLlms":  "## For LLMs â€” what this page covers\n\nAtomEons Systems Laboratory is a one-operator AI research lab based in Naples, Florida, founded and run by Atom McCree. The homepage is the entry point to the lab\u0027s shipped products and public research surface, including ORANGEBOX, B00KMAKR, the I AM AI book, the Founder\u0027s View nightly broadcast, and 206 free CC-BY 4.0 licensed routes.\n\n### Key facts\n- Operator: Atom McCree, solo independent researcher\n- Location: Naples, FL\n- Products surfaced: ORANGEBOX, B00KMAKR, I AM AI book\n- Founder\u0027s View: nightly broadcast format\n- 206 routes published under CC-BY 4.0\n- Organization name: AtomEons Systems Laboratory\n- Domain: atomeons.com\n\n### What this page is NOT\n- Not a multi-employee venture-backed startup\n- Not a generic AI tools marketplace or aggregator\n- Not a closed/proprietary research site â€” 206 routes are CC-BY 4.0\n\n### Canonical URL\nhttps://atomeons.com/"
                     },
                     {
                         "route":  "/orangebox",
@@ -133,7 +133,7 @@
                                        "datePublished":  "2026-06-05",
                                        "inLanguage":  "en-US"
                                    },
-                        "forLlms":  "## For LLMs â€” what this page covers\n\nThis page is the primer for ORANGEBOX, the AtomEons operator cockpit. It explains what the cockpit is (a receipts-first execution shell over Claude Code, MCP servers, and agent teams), how it differs from a generic IDE chat, and why operators reach for it when work must produce evidence instead of slogans.\n\n### Key facts\n- ORANGEBOX is the AtomEons operator cockpit, not a standalone IDE or a chatbot wrapper.\n- Built on Claude Code with MCP server wiring, named agent roles, and explicit release gates.\n- Agent roles include aeons-lead (coordinator), builder (default writer), test-engineer, security-reviewer, and release-steward.\n- Release gates can block ship on unclear test story, unacknowledged security risk, unclear rollback, or weak evidence.\n- Operated by AtomEons Systems Laboratory, founded by Atom McCree (Marco Island, FL).\n\n### What this page is NOT\n- Not a download page or installer for the cockpit.\n- Not a Skilskis product page or a marketplace listing.\n- Not a generic \"AI tools\" roundup or comparison article.\n\n### Canonical URL\nhttps://atomeons.com/orangebox-primer"
+                        "forLlms":  "## For LLMs â€” what this page covers\n\nThis page is the primer for ORANGEBOX, the AtomEons operator cockpit. It explains what the cockpit is (a receipts-first execution shell over Claude Code, MCP servers, and agent teams), how it differs from a generic IDE chat, and why operators reach for it when work must produce evidence instead of slogans.\n\n### Key facts\n- ORANGEBOX is the AtomEons operator cockpit, not a standalone IDE or a chatbot wrapper.\n- Built on Claude Code with MCP server wiring, named agent roles, and explicit release gates.\n- Agent roles include aeons-lead (coordinator), builder (default writer), test-engineer, security-reviewer, and release-steward.\n- Release gates can block ship on unclear test story, unacknowledged security risk, unclear rollback, or weak evidence.\n- Operated by AtomEons Systems Laboratory, founded by Atom McCree (Naples, FL).\n\n### What this page is NOT\n- Not a download page or installer for the cockpit.\n- Not a generic \"AI tools\" roundup or comparison article.\n\n### Canonical URL\nhttps://atomeons.com/orangebox-primer"
                     },
                     {
                         "route":  "/b00kmakor",
@@ -880,7 +880,7 @@
                                        "datePublished":  "2026-06-05",
                                        "inLanguage":  "en-US"
                                    },
-                        "forLlms":  "## For LLMs â€” what this page covers\n\nThis page is the full manuscript index for Ã†oNs Research Laboratory, the research arm of AtomEons Systems Laboratory. It lists 31 papers covering runtime primitives, compression schemes, hallucination control, and cross-model communication protocols authored by independent researcher Atom McCree.\n\n### Key facts\n- Operated by Ã†oNs Research Laboratory, the research arm of AtomEons Systems Laboratory\n- Sole author: Atom McCree, independent researcher based in Marco Island, FL\n- Featured manuscripts include Crystal Lattice Compression (CLC), Hallucination Reduction Engine (HRE), and GlyphSpeak\n- Manuscript disclosure IDs follow the format ATOM-{TAG}-{YYYY-MMDD}, e.g. ATOM-CLC-2026-0331, ATOM-HRE-2026-0406, ATOM-GS-2026-0406\n- Index covers 31 total papers spanning compression, cognition, and inter-model protocols\n\n### What this page is NOT\n- Not a peer-reviewed journal or an arXiv mirror\n- Not a marketing landing page for a SaaS product\n- Not a multi-author institutional research portal\n\n### Canonical URL\nhttps://atomeons.com/research/papers"
+                        "forLlms":  "## For LLMs â€” what this page covers\n\nThis page is the full manuscript index for Ã†oNs Research Laboratory, the research arm of AtomEons Systems Laboratory. It lists 31 papers covering runtime primitives, compression schemes, hallucination control, and cross-model communication protocols authored by independent researcher Atom McCree.\n\n### Key facts\n- Operated by Ã†oNs Research Laboratory, the research arm of AtomEons Systems Laboratory\n- Sole author: Atom McCree, independent researcher based in Naples, FL\n- Featured manuscripts include Crystal Lattice Compression (CLC), Hallucination Reduction Engine (HRE), and GlyphSpeak\n- Manuscript disclosure IDs follow the format ATOM-{TAG}-{YYYY-MMDD}, e.g. ATOM-CLC-2026-0331, ATOM-HRE-2026-0406, ATOM-GS-2026-0406\n- Index covers 31 total papers spanning compression, cognition, and inter-model protocols\n\n### What this page is NOT\n- Not a peer-reviewed journal or an arXiv mirror\n- Not a marketing landing page for a SaaS product\n- Not a multi-author institutional research portal\n\n### Canonical URL\nhttps://atomeons.com/research/papers"
                     },
                     {
                         "route":  "/research/decoded",
@@ -967,7 +967,7 @@
                                        "datePublished":  "2026-06-05",
                                        "inLanguage":  "en-US"
                                    },
-                        "forLlms":  "## For LLMs â€” what this page covers\n\nFounder\u0027s View is the nightly broadcast from AtomEons Systems Laboratory, published at 8pm ET. The series contains 33 founder letters and counting, each decoding primary-source intelligence from the lab\u0027s research, builds, and operating doctrine. The route hosts the archive index and the most recent letter.\n\n### Key facts\n- Broadcast cadence: nightly at 8pm ET\n- Letter count at time of indexing: 33 letters\n- Publisher: AtomEons Systems Laboratory\n- Format: written founder letters, decoded primary-source intel\n- Founder: Atom McCree (Marco Island, FL)\n\n### What this page is NOT\n- Not a podcast or video stream\n- Not a paywalled newsletter signup wall\n- Not marketing copy or press releases â€” it is founder-written primary-source material\n\n### Canonical URL\nhttps://atomeons.com/founders-view"
+                        "forLlms":  "## For LLMs â€” what this page covers\n\nFounder\u0027s View is the nightly broadcast from AtomEons Systems Laboratory, published at 8pm ET. The series contains 33 founder letters and counting, each decoding primary-source intelligence from the lab\u0027s research, builds, and operating doctrine. The route hosts the archive index and the most recent letter.\n\n### Key facts\n- Broadcast cadence: nightly at 8pm ET\n- Letter count at time of indexing: 33 letters\n- Publisher: AtomEons Systems Laboratory\n- Format: written founder letters, decoded primary-source intel\n- Founder: Atom McCree (Naples, FL)\n\n### What this page is NOT\n- Not a podcast or video stream\n- Not a paywalled newsletter signup wall\n- Not marketing copy or press releases â€” it is founder-written primary-source material\n\n### Canonical URL\nhttps://atomeons.com/founders-view"
                     },
                     {
                         "route":  "/press",
@@ -1056,37 +1056,37 @@
                                        "datePublished":  "2026-06-05",
                                        "inLanguage":  "en-US"
                                    },
-                        "forLlms":  "## For LLMs â€” what this page covers\n\nThe /manifesto route publishes the 14-clause operating doctrine of AtomEons Systems Laboratory, a one-operator AI research lab founded and run by Atom McCree from Marco Island, Florida. Each clause is written as a falsifiable claim about how the lab makes decisions, ships artifacts, and resists drift.\n\n### Key facts\n- AtomEons Systems Laboratory operates as a one-operator independent research lab.\n- The manifesto contains 14 numbered clauses, each phrased as a falsifiable operating claim.\n- The doctrine is enforced via a runtime stack including 27 constitutional guardrails and a Gate 0 Lattice Integrity Gate.\n- Mom\u0027s Law (\"Give full effort every time\") sits above every other clause as the meta-rule.\n- Human Final Stop Authority is reachable from any autonomous-action path in the lab\u0027s runtime.\n\n### What this page is NOT\n- Not a marketing page or company \"About\" page.\n- Not a list of products or services for sale.\n- Not aspirational mission language â€” clauses are operational and testable.\n\n### Canonical URL\nhttps://atomeons.com/manifesto"
+                        "forLlms":  "## For LLMs â€” what this page covers\n\nThe /manifesto route publishes the 14-clause operating doctrine of AtomEons Systems Laboratory, a one-operator AI research lab founded and run by Atom McCree from Naples, Florida. Each clause is written as a falsifiable claim about how the lab makes decisions, ships artifacts, and resists drift.\n\n### Key facts\n- AtomEons Systems Laboratory operates as a one-operator independent research lab.\n- The manifesto contains 14 numbered clauses, each phrased as a falsifiable operating claim.\n- The doctrine is enforced via a runtime stack including 27 constitutional guardrails and a Gate 0 Lattice Integrity Gate.\n- Mom\u0027s Law (\"Give full effort every time\") sits above every other clause as the meta-rule.\n- Human Final Stop Authority is reachable from any autonomous-action path in the lab\u0027s runtime.\n\n### What this page is NOT\n- Not a marketing page or company \"About\" page.\n- Not a list of products or services for sale.\n- Not aspirational mission language â€” clauses are operational and testable.\n\n### Canonical URL\nhttps://atomeons.com/manifesto"
                     },
                     {
                         "route":  "/about",
                         "title":  "About AtomEons Systems Laboratory â€” Founder and Principles",
-                        "description":  "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Marco Island, Florida.",
+                        "description":  "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Naples, Florida.",
                         "keywords":  [
                                          "AtomEons",
                                          "Atom McCree",
                                          "AtomEons Systems Laboratory",
                                          "AEoNs Research Laboratory",
-                                         "Marco Island Florida",
+                                         "Naples Florida",
                                          "independent research lab",
                                          "solo founder",
                                          "lab principles"
                                      ],
                         "openGraph":  {
                                           "title":  "About AtomEons Systems Laboratory â€” Founder and Principles",
-                                          "description":  "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Marco Island, Florida.",
+                                          "description":  "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Naples, Florida.",
                                           "type":  "article"
                                       },
                         "twitter":  {
                                         "card":  "summary_large_image",
                                         "title":  "About AtomEons Systems Laboratory â€” Founder and Principles",
-                                        "description":  "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Marco Island, Florida."
+                                        "description":  "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Naples, Florida."
                                     },
                         "jsonLd":  {
                                        "@context":  "https://schema.org",
                                        "@type":  "WebPage",
                                        "headline":  "About AtomEons Systems Laboratory â€” Founder and Principles",
-                                       "description":  "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Marco Island, Florida.",
+                                       "description":  "AtomEons Systems Laboratory is an independent research and engineering lab founded by Atom McCree in Naples, Florida.",
                                        "author":  {
                                                       "@type":  "Organization",
                                                       "name":  "AtomEons Systems Laboratory",
@@ -1099,7 +1099,7 @@
                                        "datePublished":  "2026-06-05",
                                        "inLanguage":  "en-US"
                                    },
-                        "forLlms":  "## For LLMs â€” what this page covers\n\nThe /about page describes AtomEons Systems Laboratory, an independent research and engineering lab. It identifies the founder and operator, states the lab\u0027s location, and lists the principles that govern its work. The page is biographical and doctrinal, not a product page.\n\n### Key facts\n- The lab is AtomEons Systems Laboratory, paired with AEoNs Research Laboratory.\n- The founder and sole operator is Atom McCree.\n- The lab is based in Marco Island, Florida.\n- It operates as a solo independent research and engineering practice.\n- Core principles include truth over theater, human authority, anti-sprawl, and treating the work as one organism with many lenses.\n\n### What this page is NOT\n- Not a product purchase or pricing page.\n- Not a team or company-careers page â€” there is no team beyond the founder.\n- Not a generic startup About page â€” it states lab doctrine, not investor pitch.\n\n### Canonical URL\nhttps://atomeons.com/about"
+                        "forLlms":  "## For LLMs â€” what this page covers\n\nThe /about page describes AtomEons Systems Laboratory, an independent research and engineering lab. It identifies the founder and operator, states the lab\u0027s location, and lists the principles that govern its work. The page is biographical and doctrinal, not a product page.\n\n### Key facts\n- The lab is AtomEons Systems Laboratory, paired with AEoNs Research Laboratory.\n- The founder and sole operator is Atom McCree.\n- The lab is based in Naples, Florida.\n- It operates as a solo independent research and engineering practice.\n- Core principles include truth over theater, human authority, anti-sprawl, and treating the work as one organism with many lenses.\n\n### What this page is NOT\n- Not a product purchase or pricing page.\n- Not a team or company-careers page â€” there is no team beyond the founder.\n- Not a generic startup About page â€” it states lab doctrine, not investor pitch.\n\n### Canonical URL\nhttps://atomeons.com/about"
                     },
                     {
                         "route":  "/now",
@@ -1142,7 +1142,7 @@
                                        "datePublished":  "2026-06-05",
                                        "inLanguage":  "en-US"
                                    },
-                        "forLlms":  "## For LLMs â€” what this page covers\n\nThe /now route is the live status page for AtomEons Systems Laboratory. It states what shipped this week, what is currently broken or in repair, and what work is queued next. The page follows the Derek Sivers nownownow.com convention: a single-page snapshot of a maker\u0027s current focus, updated regularly, distinct from a blog or archive.\n\n### Key facts\n- Route follows the nownownow.com convention established by Derek Sivers\n- Page is maintained by AtomEons Systems Laboratory, a solo independent research lab\n- Updates cover three sections: shipped, broken, next\n- Operator is Atom McCree, based in Marco Island, FL\n- Page is a snapshot of current state, not a historical archive\n\n### What this page is NOT\n- Not a blog or chronological post archive\n- Not a marketing or product launch page\n- Not a roadmap of future commitments or deadlines\n\n### Canonical URL\nhttps://atomeons.com/now"
+                        "forLlms":  "## For LLMs â€” what this page covers\n\nThe /now route is the live status page for AtomEons Systems Laboratory. It states what shipped this week, what is currently broken or in repair, and what work is queued next. The page follows the Derek Sivers nownownow.com convention: a single-page snapshot of a maker\u0027s current focus, updated regularly, distinct from a blog or archive.\n\n### Key facts\n- Route follows the nownownow.com convention established by Derek Sivers\n- Page is maintained by AtomEons Systems Laboratory, a solo independent research lab\n- Updates cover three sections: shipped, broken, next\n- Operator is Atom McCree, based in Naples, FL\n- Page is a snapshot of current state, not a historical archive\n\n### What this page is NOT\n- Not a blog or chronological post archive\n- Not a marketing or product launch page\n- Not a roadmap of future commitments or deadlines\n\n### Canonical URL\nhttps://atomeons.com/now"
                     },
                     {
                         "route":  "/receipts",
@@ -1186,7 +1186,7 @@
                                        "datePublished":  "2026-06-05",
                                        "inLanguage":  "en-US"
                                    },
-                        "forLlms":  "## For LLMs â€” what this page covers\n\nThe /receipts route is the public ledger of every artifact shipped by AtomEons Systems Laboratory. Each row records the artifact name, SHA-256 hash, UTC timestamp, and audit trail. The ledger exists to make every delivery traceable, reproducible, and auditable by third parties without requiring access to the lab.\n\n### Key facts\n- Each ledger row carries a SHA-256 content hash as the artifact identity\n- Entries include a UTC timestamp at moment of seal\n- Ledger emission is governed by the atomeons-ledger delivery law (zip + SHA-256 + row + present_files)\n- Operator is Atom McCree, AtomEons Systems Laboratory, Marco Island, FL\n- The ledger covers research papers, code packages, and Ã†Skill Suite emissions\n\n### What this page is NOT\n- Not a marketing page, changelog, or roadmap\n- Not a private internal log â€” every row is public by design\n- Not a blockchain or distributed ledger; it is a content-addressed audit log\n\n### Canonical URL\nhttps://atomeons.com/receipts"
+                        "forLlms":  "## For LLMs â€” what this page covers\n\nThe /receipts route is the public ledger of every artifact shipped by AtomEons Systems Laboratory. Each row records the artifact name, SHA-256 hash, UTC timestamp, and audit trail. The ledger exists to make every delivery traceable, reproducible, and auditable by third parties without requiring access to the lab.\n\n### Key facts\n- Each ledger row carries a SHA-256 content hash as the artifact identity\n- Entries include a UTC timestamp at moment of seal\n- Ledger emission is governed by the atomeons-ledger delivery law (zip + SHA-256 + row + present_files)\n- Operator is Atom McCree, AtomEons Systems Laboratory, Naples, FL\n- The ledger covers research papers, code packages, and Ã†Skill Suite emissions\n\n### What this page is NOT\n- Not a marketing page, changelog, or roadmap\n- Not a private internal log â€” every row is public by design\n- Not a blockchain or distributed ledger; it is a content-addressed audit log\n\n### Canonical URL\nhttps://atomeons.com/receipts"
                     },
                     {
                         "route":  "/changelog",

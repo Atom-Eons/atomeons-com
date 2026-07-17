@@ -74,7 +74,7 @@ const SECTIONS: Section[] = [
     body: (
       <>
         <p>
-          AtomEons Systems Laboratory is a <strong>solo, operator-owned AI research and product lab</strong> based in Marco Island, Florida. Not a startup, not a VC-backed company, not a collective, not an academic institution. One person runs it, publishes from it, owns everything that ships out of it.
+          AtomEons Systems Laboratory is a <strong>solo, operator-owned AI research and product lab</strong> based in Naples, Florida. Not a startup, not a VC-backed company, not a collective, not an academic institution. One person runs it, publishes from it, owns everything that ships out of it.
         </p>
         <p>Three surfaces:</p>
         <ul>
@@ -91,7 +91,7 @@ const SECTIONS: Section[] = [
     body: (
       <>
         <p>
-          <strong>Atom McCree.</strong> Solo operator. Marco Island, FL. Founder, engineer, author, editor, ops, security, support, janitor. No employees, no investors, no board.
+          <strong>Atom McCree.</strong> Solo operator. Naples, FL. Founder, engineer, author, editor, ops, security, support, janitor. No employees, no investors, no board.
         </p>
         <p>
           Contact: <code>a.mccree@gmail.com</code> · <Link href="https://x.com/AtomMccree">@AtomMccree</Link> · <Link href="https://discord.gg/4wx3AGga">Discord workshop</Link>.
@@ -252,7 +252,7 @@ const SECTIONS: Section[] = [
           <strong>The site or lab as a whole:</strong>
         </p>
         <blockquote>
-          McCree, A. (2026). <em>AtomEons Systems Laboratory</em> [Public research and product lab]. Marco Island, FL. https://atomeons.com
+          McCree, A. (2026). <em>AtomEons Systems Laboratory</em> [Public research and product lab]. Naples, FL. https://atomeons.com
         </blockquote>
         <p>
           <strong>A specific Founder's View letter</strong> — cite letter number + date + permalink from <Link href="/founders-view">/founders-view</Link>.
@@ -353,7 +353,7 @@ export default function HandbookPage() {
             <span>· 12 sections</span>
             <span>· 319 routes · 31 papers · 3 free products · 1 book (Opus 4.7)</span>
             <span>· §4A no-SaaS · CC-BY 4.0</span>
-            <span>· Marco Island · FL</span>
+            <span>· Naples · FL</span>
           </div>
 
           <p className="mt-10 max-w-[68ch] text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
@@ -389,7 +389,7 @@ export default function HandbookPage() {
               has the same content in Markdown for offline reference.
             </p>
             <p className="mt-2">
-              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Marco Island · FL · 2026 · CC-BY 4.0
+              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Naples · FL · 2026 · CC-BY 4.0
             </p>
           </div>
         </div>

@@ -28,9 +28,16 @@
 import { readdirSync, readFileSync, statSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
-const ROOT = "C:/AtomEons/github/atomeons-com";
+const ROOT = process.cwd();
 const APP = join(ROOT, "app");
 const OUT = join(ROOT, "public", "search-index.json");
+const STEALTH_ROUTE_PREFIXES = ["/skilski", "/research/lessons-from-sci-fi"];
+const MERGED_ROUTES = new Set(["/b00kmakor", "/i-am-ai/sample", "/i-am-ai/listen"]);
+
+function isStealthRoute(route) {
+  return MERGED_ROUTES.has(route) ||
+    STEALTH_ROUTE_PREFIXES.some((prefix) => route === prefix || route.startsWith(`${prefix}/`));
+}
 
 /* ────────────────────────────────────────────────────────────────────
  * 1. Walk app/ — collect every page.tsx
@@ -61,6 +68,7 @@ function pageFileToRoute(file) {
  * ──────────────────────────────────────────────────────────────────── */
 function categorize(route) {
   if (route === "/") return { cat: "Home", weight: 1.0 };
+  if (route.startsWith("/bookmaker")) return { cat: "Product", weight: 0.98 };
   if (route.startsWith("/orangebox")) return { cat: "Product", weight: 0.95 };
   if (route.startsWith("/b00kmakor")) return { cat: "Product", weight: 0.95 };
   if (route.startsWith("/i-am-ai")) return { cat: "Book", weight: 0.92 };
@@ -169,6 +177,7 @@ for (const file of pageFiles) {
   // Skip route groups, error/loading, dynamic param leaves (we index parents)
   if (route.includes("[") || route.includes("]")) continue;
   if (/^\/_/.test(route)) continue;
+  if (isStealthRoute(route)) continue;
 
   let src;
   try {

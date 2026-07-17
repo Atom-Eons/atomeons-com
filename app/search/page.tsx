@@ -180,15 +180,8 @@ const GROUPS: { name: string; items: Destination[] }[] = [
     ],
   },
   {
-    name: "MAKE MONEY · the commerce surfaces",
+    name: "CREATIONS · independent publishing",
     items: [
-      {
-        href: "/skilski",
-        title: "/skilski — the universal skill registry for AI agents",
-        description:
-          "One name, one claim, one MCP server per skill. Author-paid marketplace for verified AI skills.",
-        keywords: ["skilski", "skil.ski", "marketplace", "mcp", "skills"],
-      },
       {
         href: "/b00kmakor",
         title: "/b00kmakor — the AI publishing house",
@@ -205,14 +198,14 @@ const GROUPS: { name: string; items: Destination[] }[] = [
         href: "/about",
         title: "/about — the lab thesis",
         description:
-          "One operator. Marco Island, FL. Independent. Four-pillar architecture.",
+          "One operator. Naples, FL. Independent. Four-pillar architecture.",
         keywords: ["about", "atomeons", "operator", "thesis"],
       },
       {
         href: "/manifesto",
         title: "/manifesto — the 14-clause lab doctrine",
         description:
-          "Receipts over slogans. One operator. No venture funding. $99 once · §4A no-saas. Two refund paths. Source included. Local-first. Zero markup. 12 CC-BY manuscripts. Nightly broadcast. The 44M on-ramp. Named tools no affiliate. Falsifiability. Marco Island independent. Quote-it + falsify-it provenance.",
+          "Receipts over slogans. One operator. No venture funding. $99 once · §4A no-saas. Two refund paths. Source included. Local-first. Zero markup. 12 CC-BY manuscripts. Nightly broadcast. The 44M on-ramp. Named tools no affiliate. Falsifiability. Naples independent. Quote-it + falsify-it provenance.",
         keywords: ["manifesto", "doctrine", "philosophy", "principles", "clauses", "values", "stance", "license", "no saas", "no venture", "operator-owned"],
       },
       {

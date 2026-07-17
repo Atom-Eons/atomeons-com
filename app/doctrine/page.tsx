@@ -64,7 +64,7 @@ const SECTIONS: Section[] = [
         <p>
           atomeons.com is the public face of{" "}
           <strong>AtomEons Systems Laboratory</strong> — an independent
-          one-operator AI research + product lab in Marco Island, Florida,
+          one-operator AI research + product lab in Naples, Florida,
           founded 2024. Operator: <strong>Atom McCree</strong>.
         </p>
         <p>
@@ -99,7 +99,7 @@ const SECTIONS: Section[] = [
           <li><strong>Learn</strong> — <Link href="/learn">/learn</Link> curriculum · <Link href="/books">/books</Link> · <Link href="/aiware">/aiware</Link> · <Link href="/best-practices">/best-practices</Link> · <Link href="/skills">/skills</Link> · <Link href="/soulkey">/soulkey</Link></li>
           <li><strong>Cyber</strong> — <Link href="/learn/cyber">/learn/cyber</Link> · 40-page catalog · mythos · industry models · breaches · doctrine</li>
           <li><strong>Create</strong> — <Link href="/art">/art</Link> · <Link href="/mindrest">/mindrest</Link> · <Link href="/tools">/tools</Link> · <Link href="/lab">/lab</Link></li>
-          <li><strong>Products</strong> — <Link href="/orangebox">/orangebox</Link> · <Link href="/b00kmakor">/b00kmakor</Link> · <Link href="/i-am-ai">/i-am-ai</Link> · <Link href="/skilski">/skilski</Link> · <Link href="/discord">/discord</Link></li>
+          <li><strong>Products</strong> — <Link href="/orangebox">/orangebox</Link> · <Link href="/b00kmakor">/b00kmakor</Link> · <Link href="/i-am-ai">/i-am-ai</Link> · <Link href="/discord">/discord</Link></li>
           <li><strong>Machine</strong> — <Link href="/agents">/agents</Link> · <Link href="/api">/api</Link> · <Link href="/constellation">/constellation</Link> · <Link href="/atlas">/atlas</Link> · <Link href="/ask">/ask</Link></li>
           <li><strong>Trust</strong> — <Link href="/trust">/trust</Link> · <Link href="/transparency">/transparency</Link> · <Link href="/receipts">/receipts</Link> · <Link href="/vendor-pack">/vendor-pack</Link> · <Link href="/manifesto">/manifesto</Link></li>
         </ul>
@@ -475,7 +475,7 @@ npx vercel deploy --prod --yes`}
     body: (
       <>
         <p>
-          One operator: <strong>Atom McCree</strong>, Marco Island, FL.
+          One operator: <strong>Atom McCree</strong>, Naples, FL.
           No team to hide behind.
         </p>
         <ul>

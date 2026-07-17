@@ -15,7 +15,7 @@ import { LabHero } from "../_components/v2/LabHero";
 export const metadata: Metadata = {
   title: "Manifesto — what the lab insists on",
   description:
-    "AtomEons Systems Laboratory manifesto. The 14 explicit clauses: receipts over slogans, one operator, no venture funding, Free always, License §4A no-SaaS, source included, local-first by construction, zero telemetry, the 44M frame, equal-opportunity-indignation broadcast, named tools, named builders, CC-BY 4.0 research, Marco Island independent. Every clause is published, falsifiable, and CC-BY 4.0 quotable.",
+    "AtomEons Systems Laboratory manifesto. The 14 explicit clauses: receipts over slogans, one operator, no venture funding, Free always, License §4A no-SaaS, source included, local-first by construction, zero telemetry, the 44M frame, equal-opportunity-indignation broadcast, named tools, named builders, CC-BY 4.0 research, Naples independent. Every clause is published, falsifiable, and CC-BY 4.0 quotable.",
   keywords: [
     "AtomEons manifesto",
     "AtomEons doctrine",
@@ -84,7 +84,7 @@ const CLAUSES: Clause[] = [
     kind: "commerce",
     title: "No venture funding. Not now. Not ever.",
     body: "No seed round. No Series A. No SAFE. No convertible note. No revenue-share investor structure. The lab does not have anyone to keep happy other than the buyers of the product. If the product ever has investors, it stops being this lab.",
-    receipt: "Public business form: independent · sole proprietor · Marco Island, FL",
+    receipt: "Public business form: independent · sole proprietor · Naples, FL",
   },
   {
     num: "04",
@@ -159,8 +159,8 @@ const CLAUSES: Clause[] = [
   {
     num: "14",
     kind: "operator",
-    title: "Marco Island. Independent. Forever.",
-    body: "The lab operates from Marco Island, Florida. Not Silicon Valley. Not New York. Not San Francisco. Geographically independent of the funding gravity and the social pressure that comes with it. The mailing address is on the contact card. The operator answers his own email.",
+    title: "Naples. Independent. Forever.",
+    body: "The lab operates from Naples, Florida. Not Silicon Valley. Not New York. Not San Francisco. Geographically independent of the funding gravity and the social pressure that comes with it. The mailing address is on the contact card. The operator answers his own email.",
     receipt: "Public contact: a.mccree@gmail.com · @AtomMccree on X",
   },
 ];
@@ -178,7 +178,7 @@ const articleJsonLd = {
   "@type": "Article",
   headline: "AtomEons Manifesto — what the lab insists on",
   description:
-    "The 14 explicit clauses of AtomEons Systems Laboratory. Receipts over slogans. One operator. No venture funding. Free always. License §4A bans SaaS. Source included. Local-first. Zero telemetry. The 44M on-ramp. Equal-opportunity indignation. Named tools, named builders, no affiliate revenue. Falsifiable. Marco Island independent.",
+    "The 14 explicit clauses of AtomEons Systems Laboratory. Receipts over slogans. One operator. No venture funding. Free always. License §4A bans SaaS. Source included. Local-first. Zero telemetry. The 44M on-ramp. Equal-opportunity indignation. Named tools, named builders, no affiliate revenue. Falsifiable. Naples independent.",
   author: {
     "@type": "Person",
     name: "Atom McCree",
@@ -270,7 +270,7 @@ export default function ManifestoPage() {
           <span role="listitem" className="text-[#B5BBC0]">12 <span className="text-[#8E969D]">CC-BY papers</span></span>
           <span role="listitem" className="text-[#B5BBC0]">§4A <span className="text-[#8E969D]">no-SaaS</span></span>
           <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">operator</span></span>
-          <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+          <span role="listitem" className="text-[#8E969D]">Naples · FL</span>
         </div>
       </LabHero>
 

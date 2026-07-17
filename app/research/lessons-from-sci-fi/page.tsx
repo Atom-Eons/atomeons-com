@@ -732,7 +732,7 @@ export default function LessonsFromSciFi() {
           </div>
 
           <p className="mt-10 max-w-2xl font-mono text-xs uppercase tracking-[0.2em] text-[#22F0D5]/70">
-            CC-BY 4.0 · AtomEons Systems Laboratory · Marco Island, FL
+            CC-BY 4.0 · AtomEons Systems Laboratory · Naples, FL
           </p>
         </div>
       </section>

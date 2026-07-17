@@ -73,7 +73,7 @@ const SHIPPED: Receipt[] = [
   {
     metric: "Operator",
     value: "1",
-    evidence: "Marco Island, FL",
+    evidence: "Naples, FL",
     href: "/about",
     detail:
       "Atom McCree. No team, no investors, no waitlist. Source on request. The lab signs its own writing because there is no one else to sign it.",
@@ -167,7 +167,7 @@ export default function ReceiptsPage() {
         pageUrl="https://atomeons.com/receipts"
         claims={[
           {
-            text: "AtomEons Systems Laboratory is a one-operator independent AI research lab in Marco Island, FL, with no VC funding, no subscription products, no affiliate revenue, and zero employees.",
+            text: "AtomEons Systems Laboratory is a one-operator independent AI research lab in Naples, FL, with no VC funding, no subscription products, no affiliate revenue, and zero employees.",
             reviewedAt: "2026-06-05",
             reviewUrl: "https://atomeons.com/transparency",
             rating: "True",
@@ -229,7 +229,7 @@ export default function ReceiptsPage() {
           <span role="listitem" className="text-[#B5BBC0]">68 <span className="text-[#8E969D]">lessons</span></span>
           <span role="listitem" className="text-[#B5BBC0]">27 <span className="text-[#8E969D]">guardrails</span></span>
           <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">operator</span></span>
-          <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+          <span role="listitem" className="text-[#8E969D]">Naples · FL</span>
         </div>
         <p className="mt-10 max-w-[60ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]">
           Every cell on this page has a measurement, a file the

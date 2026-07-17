@@ -69,7 +69,7 @@ export function Footer() {
             </Link>
             <p className="mt-5 max-w-[260px] text-[13px] leading-[1.65] text-[#9BA5A7]">
               Independent AI research. Software, books, apps, lessons.
-              One operator. Marco Island, FL.
+              One operator. Naples, FL.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               <Link href="/ask" className="inline-flex items-center gap-1.5 border border-[#22F0D5] bg-[#0F1114] px-3 py-1.5 text-[10px] font-mono uppercase tracking-[0.22em] text-[#22F0D5] transition-colors hover:bg-[#22F0D5] hover:text-black">
@@ -130,7 +130,6 @@ export function Footer() {
             { href: "/orangebox/roadmap", label: "OB roadmap" },
             { href: "/orangebox/competitors", label: "OB vs alternatives" },
             { href: "/b00kmakor", label: "AI Bookmaker" },
-            { href: "/skilski", label: "skil.ski" },
             { href: "/compare", label: "Compare matrices" },
             { href: "/use-cases", label: "Use cases" },
             { href: "/pricing", label: "Pricing" },
@@ -238,7 +237,7 @@ export function Footer() {
               AtomEons Systems Laboratory
             </a>{" "}
             · <span className="p-name">Atom McCree</span> ·{" "}
-            <span className="p-locality">Marco Island</span>,{" "}
+            <span className="p-locality">Naples</span>,{" "}
             <span className="p-region">FL</span> · operator-owned · no VC
             <br className="md:hidden" />
             <span className="hidden md:inline"> · </span>

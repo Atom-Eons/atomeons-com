@@ -38,7 +38,7 @@ const OPERATOR = {
   github: "https://github.com/AtomEons",
 };
 const LOCATION = {
-  city: "Marco Island",
+  city: "Naples",
   region: "FL",
   country: "US",
   timezone: "America/New_York",

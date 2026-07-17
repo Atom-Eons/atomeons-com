@@ -379,7 +379,7 @@ export default function Page() {
 
         <footer className="mt-16 border-t border-neutral-800 pt-8 text-xs text-neutral-500">
           <p>
-            AtomEons Research Laboratory · Marco Island, FL · No invented citations.
+            AtomEons Research Laboratory · Naples, FL · No invented citations.
             Last reviewed June 2026.
           </p>
         </footer>

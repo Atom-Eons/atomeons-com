@@ -38,8 +38,7 @@ const ENTRIES: Entry[] = [
   { loc: "/research", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
   { loc: "/i-am-ai", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
   { loc: "/orangebox", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
-  { loc: "/b00kmakor", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
-  { loc: "/skilski", lastmod: TODAY, changefreq: "weekly", priority: 0.85 },
+  { loc: "/bookmaker", lastmod: TODAY, changefreq: "weekly", priority: 0.95 },
   { loc: "/now", lastmod: TODAY, changefreq: "daily", priority: 0.9 },
   { loc: "/founders-view", lastmod: TODAY, changefreq: "daily", priority: 0.9 },
   { loc: "/press", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
@@ -87,9 +86,12 @@ const ENTRIES: Entry[] = [
   { loc: "/research/decoded/rlhf", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
   { loc: "/research/decoded/scaling-laws", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
 
-  // I AM AI launch
-  { loc: "/i-am-ai/sample", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
-  { loc: "/i-am-ai/listen", lastmod: TODAY, changefreq: "monthly", priority: 0.85 },
+  // AtomEons experimental research
+  { loc: "/research/discoveries", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
+  { loc: "/research/discoveries/aeyes", lastmod: TODAY, changefreq: "weekly", priority: 0.88 },
+  { loc: "/research/discoveries/atomsmasher", lastmod: TODAY, changefreq: "weekly", priority: 0.88 },
+  { loc: "/research/discoveries/aememory", lastmod: TODAY, changefreq: "weekly", priority: 0.88 },
+  { loc: "/research/papers", lastmod: TODAY, changefreq: "weekly", priority: 0.9 },
 
   // Discovery surfaces
   { loc: "/glossary", lastmod: TODAY, changefreq: "weekly", priority: 0.8 },

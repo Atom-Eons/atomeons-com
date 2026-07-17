@@ -10,7 +10,7 @@ export function AboutAiSummary() {
       </p>
 
       <p className="font-serif text-[15px] leading-[1.55] text-[#F4F4F2] mb-6">
-        This page is the operator profile for AtomEons, a one-person independent research and engineering lab run by Atom McCree from Marco Island, Florida, documenting principles, receipts, and the live build trail.
+        This page is the operator profile for AtomEons, a one-person independent research and engineering lab run by Atom McCree from Naples, Florida, documenting principles, receipts, and the live build trail.
       </p>
 
       <p className="font-mono uppercase tracking-[0.22em] text-[10px] text-[#9CA3AF] mb-3">
@@ -18,7 +18,7 @@ export function AboutAiSummary() {
       </p>
       <ul className="list-disc pl-5 mb-6 space-y-2 font-serif text-[14px] text-[#9CA3AF] marker:text-[#22F0D5]">
         <li>Operator: Atom McCree, solo independent researcher and builder.</li>
-        <li>Location: Marco Island, Florida (United States).</li>
+        <li>Location: Naples, Florida (United States).</li>
         <li>Lab name: ÆoNs Research Laboratory / AtomEons Systems Laboratory.</li>
         <li>Operating doctrine: truth over theater, calm premium surface, anti-sprawl, receipts over slogans.</li>
         <li>Structure: one organism, many rooms (lenses over shared primitives), not a portfolio of disconnected apps.</li>

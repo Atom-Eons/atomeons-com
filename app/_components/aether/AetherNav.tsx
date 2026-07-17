@@ -2,40 +2,39 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { PRODUCTS, RESEARCH_LINKS } from "../../_data/aether-canon";
 import styles from "./AetherNav.module.css";
 
 const navigation = [
   {
-    label: "Creations",
+    label: "Radiance",
+    href: "/research/papers/radiance-luminance-alpha-wolf-eyes",
+    special: true,
+  },
+  {
+    label: "Products",
     href: "/#products",
-    items: [
-      ["CableBox", "/cablebox", "Native CRT cable-surfing"],
-      ["AI Bookmaker", "/b00kmakor", "Publishing cockpit"],
-      ["Orange5", "/orange5", "Sovereign operator OS"],
-      ["Orange³", "/orangebox", "Agentic OS available now"],
-      ["skil.ski", "/skilski", "Multi-agent skill registry"],
-      ["I AM AI", "/i-am-ai", "Book + 28-track audiobook"],
-    ],
+    items: PRODUCTS.map((item) => [item.title, item.href, item.descriptor] as const),
   },
   {
     label: "Show",
     href: "/atom-alive",
   },
   {
-    label: "Lab",
-    href: "/launcher",
+    label: "Research",
+    href: "/research",
+    items: RESEARCH_LINKS.map((item) => [item.title, item.href, item.descriptor] as const),
+  },
+  {
+    label: "About",
+    href: "/about",
     items: [
-      ["Launcher", "/launcher", "All nine silos"],
-      ["Learn", "/learn", "Curriculum + atlas"],
-      ["Research", "/research", "Manuscripts + decoded papers"],
-      ["Cyber", "/learn/cyber", "Defensive security track"],
+      ["About AtomEons", "/about", "The artist, the company, and the work"],
+      ["Press", "/press", "Press notes and media kit"],
       ["Receipts", "/receipts", "Public proof surfaces"],
-      ["For machines", "/api", "MCP + agent interfaces"],
-      ["Founder's View", "/founders-view", "Operator field notes"],
+      ["Full archive", "/explore", "Everything preserved underneath"],
     ],
   },
-  { label: "About", href: "/about" },
-  { label: "Press", href: "/press" },
 ] as const;
 
 export function AetherNav() {
@@ -80,8 +79,15 @@ export function AetherNav() {
 
           <nav className={styles.desktopNav} aria-label="Primary navigation">
             {navigation.map((item) => (
-              <div className={styles.navGroup} data-dropdown={"items" in item} key={item.label}>
-                <Link href={item.href}>{item.label}</Link>
+              <div
+                className={styles.navGroup}
+                data-dropdown={"items" in item}
+                data-special={"special" in item}
+                key={item.label}
+              >
+                <Link href={item.href} className={"special" in item ? styles.radianceLink : undefined}>
+                  {item.label}
+                </Link>
                 {"items" in item ? (
                   <div className={styles.dropdown}>
                     <p>{item.label} / INDEX</p>
@@ -108,8 +114,8 @@ export function AetherNav() {
               <span>Search</span>
               <kbd>⌘K</kbd>
             </button>
-            <Link href="/launcher" className={styles.launchButton}>
-              Launch the lab <span aria-hidden>↗</span>
+            <Link href="/#products" className={styles.launchButton}>
+              See the work <span aria-hidden>↗</span>
             </Link>
             <button
               className={styles.menuButton}
@@ -126,7 +132,7 @@ export function AetherNav() {
         {mobileOpen ? (
           <nav id="aether-mobile-menu" className={styles.mobileMenu} aria-label="Mobile navigation">
             {navigation.map((item, itemIndex) => (
-              <div key={item.label}>
+              <div key={item.label} data-special={"special" in item}>
                 <p>0{itemIndex + 1} / {item.label}</p>
                 {"items" in item ? item.items.map(([label, href]) => (
                   <Link key={href} href={href} onClick={() => setMobileOpen(false)}>{label}<span aria-hidden>↗</span></Link>
@@ -135,7 +141,7 @@ export function AetherNav() {
                 )}
               </div>
             ))}
-            <button onClick={() => { setMobileOpen(false); setSearchOpen(true); }}>Search the laboratory <span aria-hidden>⌕</span></button>
+            <button onClick={() => { setMobileOpen(false); setSearchOpen(true); }}>Search the archive <span aria-hidden>⌕</span></button>
           </nav>
         ) : null}
       </header>
@@ -144,7 +150,7 @@ export function AetherNav() {
         <div className={styles.searchOverlay} role="dialog" aria-modal="true" aria-label="Search AtomEons">
           <button className={styles.overlayClose} onClick={() => setSearchOpen(false)} aria-label="Close search">ESC / CLOSE</button>
           <form action="/search" className={styles.searchForm} onSubmit={() => setSearchOpen(false)}>
-            <label htmlFor="aether-search">Search 319 routes.</label>
+            <label htmlFor="aether-search">Search the AtomEons archive.</label>
             <div>
               <span aria-hidden>⌕</span>
               <input
@@ -157,7 +163,7 @@ export function AetherNav() {
               />
               <button type="submit">SEARCH ↗</button>
             </div>
-            <p>Try “local AI”, “prompt injection”, “publishing”, “Claude memory”, or “sci-fi”.</p>
+            <p>Try “CableBox”, “Bookmaker”, “AEyes”, “memory”, or “compression”.</p>
           </form>
         </div>
       ) : null}

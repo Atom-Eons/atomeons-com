@@ -196,7 +196,7 @@ export function Hero() {
         <p className="font-mono text-[10px] uppercase leading-[1.6] tracking-[0.28em] text-[#9CA3AF] md:text-[11px]">
           <span className="text-[#F4F4F2]">ÆoNs Research Laboratory</span>
           <span className="mx-2 text-[#7a818a]">·</span>
-          <span>Marco Island, FL</span>
+          <span>Naples, FL</span>
           <span className="mx-2 text-[#7a818a]">·</span>
           <span>Est. 2024</span>
         </p>
@@ -244,7 +244,7 @@ export function Hero() {
 
           {/* Sub-line — restrained, sourced, Atom McCree not Apple ad copy */}
           <p className="mt-10 max-w-[44ch] text-[15px] leading-[1.65] text-[#9CA3AF] md:text-[17px] md:leading-[1.6]">
-            One operator, Marco Island. Open research papers,
+            One operator, Naples. Open research papers,
             production-grade tooling, a curriculum that grades against
             the work — not the credential.
             <span className="mx-1 text-[#7a818a]">/</span>

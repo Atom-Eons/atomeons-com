@@ -559,7 +559,7 @@ export function Curriculum() {
             <span className="mx-3 text-[#1F242B]">·</span>
             <span>cc-by 4.0</span>
             <span className="mx-3 text-[#1F242B]">·</span>
-            <span>marco island, fl</span>
+            <span>naples, fl</span>
           </p>
           <Link
             href="/learn"

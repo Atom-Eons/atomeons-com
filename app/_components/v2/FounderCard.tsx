@@ -6,7 +6,7 @@ import { AeMark } from "@/app/_components/AeMark";
  * This section answers the first question a new visitor asks:
  * who built this and why should I believe them?
  *
- * The answer is: one operator, Marco Island, FL. The receipts are
+ * The answer is: one operator, Naples, FL. The receipts are
  * the products, the papers, the nightly broadcast.
  *
  * Server component. No dynamic data.
@@ -43,7 +43,7 @@ export function FounderCard() {
                 Founder · AtomEons Systems Laboratory
               </p>
               <p className="mb-8 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779]">
-                Marco Island, Florida
+                Naples, Florida
               </p>
 
               {/* 3-sentence bio */}
@@ -56,7 +56,7 @@ export function FounderCard() {
                 <p>
                   Atom ships research papers under CC-BY 4.0, builds native
                   tools that run without a browser, and broadcasts a nightly
-                  editorial from Marco Island, Florida.
+                  editorial from Naples, Florida.
                 </p>
                 <p>
                   Nothing ships that hasn&apos;t run inside the cockpit for two

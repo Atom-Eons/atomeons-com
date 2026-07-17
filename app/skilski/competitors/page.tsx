@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Honest competitor comparison for skil.ski's universal AI skill registry. Where the marketplace wins, where competitors win, and which buyer should pick which surface.",
   alternates: { canonical: "https://atomeons.com/skilski/competitors" },
+  robots: { index: false, follow: false, nocache: true },
 };
 
 type Comparison = {

@@ -20,7 +20,7 @@ const CASES: UseCase[] = [
     persona: "Solo founder shipping an AI product",
     goal: "Ship faster than competitors with 10× the headcount.",
     workflow: "Use ORANGEBOX as your daily Claude cockpit · receipts every action · 10-80× context compression lets you keep entire codebases in working memory · skill primers turn repeatable workflows into one-line invocations · multi-LLM BYO lets you A/B Claude vs GPT vs Gemini per task.",
-    surfaces: ["/orangebox", "/skilski", "/learn/synthesis"],
+    surfaces: ["/orangebox", "/learn/synthesis"],
   },
   {
     persona: "CISO evaluating AI tooling for the team",
@@ -73,8 +73,8 @@ const CASES: UseCase[] = [
   {
     persona: "Existing buyer who wants to deepen their use",
     goal: "Move from 'I bought ORANGEBOX' to 'I am a Pilot using ORANGEBOX'.",
-    workflow: "Read /orangebox-primer for advanced operating patterns. Build the skills queue via skil.ski. Run the Pilot-tier projects on /learn/projects. Show your work via /correspondence (if you want).",
-    surfaces: ["/orangebox-primer", "/skilski", "/learn/projects"],
+    workflow: "Read /orangebox-primer for advanced operating patterns. Build reusable skill primers inside Orange³. Run the Pilot-tier projects on /learn/projects. Show your work via /correspondence (if you want).",
+    surfaces: ["/orangebox-primer", "/learn/projects"],
   },
 ];
 

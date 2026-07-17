@@ -218,7 +218,7 @@ export default function OG() {
                 color: "#6B7779",
               }}
             >
-              one operator · marco island, fl
+              one operator · naples, fl
             </p>
             <p
               style={{

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "AtomEons Systems Laboratory — one operator shipped 31 papers and a code-signed Claude accelerator in 75 days. Marco Island, FL.";
+  "AtomEons Systems Laboratory — one operator shipped 31 papers and a code-signed Claude accelerator in 75 days. Naples, FL.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -103,7 +103,7 @@ export default function OG() {
                 color: "#9CA3AF",
               }}
             >
-              LAB · LIVE · MARCO ISLAND, FL
+              LAB · LIVE · NAPLES, FL
             </p>
           </div>
         </div>

@@ -3,18 +3,18 @@ import Link from "next/link";
 export const metadata = {
   title: "About — AtomEons",
   description:
-    "AtomEons is Atom McCree, building command surfaces for operators shipping real projects through AI — software, books, apps, LLMs. Marco Island, Florida.",
+    "AtomEons is Atom McCree: a 41-year-old hip-hop poet, artist, marketer, and AI inventor in Naples, Florida, building software, books, shows, and public resources with AI.",
   alternates: { canonical: "https://atomeons.com/about" },
   openGraph: {
     title: "About — AtomEons",
     description:
-      "One operator. AI cockpits, frontier-science research, an indie-lab broadcast. Marco Island, FL.",
+      "Built without backing. Built anyway. Independent creations from Naples, Florida.",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
     title: "About — AtomEons",
-    description: "One operator. AI cockpits + frontier-science research.",
+    description: "Outfunded. Outnumbered. Still building.",
   },
 };
 
@@ -70,7 +70,7 @@ export default function About() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#22F0D5]">
-        ::about the lab · software · books · apps · LLMs
+        ::about atom · artist · inventor · one-man army
       </p>
       {/* Wave 138 · about hero elevated. Former "About AtomEons." →
           real claim in the operator voice. Live signals nameplate below. */}
@@ -78,52 +78,50 @@ export default function About() {
         className="mt-6 max-w-[22ch] text-balance text-[clamp(48px,7vw,96px)] font-light leading-[1.02] tracking-[-0.025em] text-[#F4F4F2]"
         style={{ fontFamily: "Newsreader, Georgia, serif" }}
       >
-        One operator. One lab. Marco Island.
+        Outfunded. Outnumbered. Still building.
       </h1>
       <div
         role="list"
-        aria-label="Lab signals"
+        aria-label="Creator signals"
         className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em]"
       >
         <span role="listitem" className="inline-flex items-center gap-2">
           <span aria-hidden className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]" />
           <span className="text-[#22F0D5]">LIVE</span>
         </span>
-        <span role="listitem" className="text-[#B5BBC0]">est. 2024</span>
-        <span role="listitem" className="text-[#B5BBC0]">319 <span className="text-[#8E969D]">routes</span></span>
-        <span role="listitem" className="text-[#B5BBC0]">12 <span className="text-[#8E969D]">CC-BY papers</span></span>
-        <span role="listitem" className="text-[#B5BBC0]">3 <span className="text-[#8E969D]">free products</span></span>
-        <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">book · Opus 4.7</span></span>
-        <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+        <span role="listitem" className="text-[#B5BBC0]">41 <span className="text-[#8E969D]">years alive</span></span>
+        <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">human</span></span>
+        <span role="listitem" className="text-[#B5BBC0]">many <span className="text-[#8E969D]">artificial minds</span></span>
+        <span role="listitem" className="text-[#8E969D]">Naples · FL</span>
       </div>
 
       <p className="mt-10 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
-        Atom McCree built AtomEons Systems Laboratory in Marco Island,
-        Florida, to solve one problem: no existing AI tool let the
-        operator stay outside the model&apos;s context while still running
-        a real project through it. The cockpit — Orange³ — is what came
-        out of that gap.
+        I&apos;m Atom McCree: a 41-year-old hip-hop poet, artist, marketer,
+        and inventor in Naples, Florida. There is no glass office, staff,
+        venture fund, or hidden institution behind this site. There is one
+        person doing his best in a hard season, directing a changing army
+        of AI systems toward work that might help people.
       </p>
 
       <p className="mt-4 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
-        The lab also publishes twelve research manuscripts under CC-BY 4.0,
-        ranging from bioelectric oncology to a topological field theory of
-        self-modifying systems, and broadcasts a nightly editorial at 8pm
-        Eastern.
+        I use AI as a creative medium and a force multiplier. Code is one
+        material. Language, sound, publishing, product design, research,
+        marketing, and world-building are the others. CableBox, AI
+        Bookmaker, Orange5, I AM AI, and Atom Alive are the proof.
       </p>
 
       <p className="mt-4 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#F4F4F2]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
-        One operator. No team. No deck. The receipts are the proof.
+        No funding. No safety net. Still shipping. The work is the proof.
       </p>
 
       <hr className="my-12 border-[#1F242B]" />
 
       <section>
         <p className="text-xs uppercase tracking-widest text-[#22F0D5]">
-          What the lab ships
+          What I can do
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-          The cockpit for operators who ship.
+          Turn an impossible idea into a working world.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
           Most AI tooling is a chatbox or a dashboard. Neither survives
@@ -132,7 +130,7 @@ export default function About() {
           and unverified claims.
         </p>
         <p className="mt-3 text-[#a7b8ad]">
-          AtomEons builds the layer above. One mission thread per project.
+          I build the layer above. One mission thread per project.
           Structured department status. Real receipts. Model lane routing.
           Worker rails. Proof gates. The operator sees what is happening,
           what is verified, what is blocked, and what to do next — without
@@ -174,7 +172,7 @@ export default function About() {
                 </h3>
                 <p className="mt-2 text-sm text-[#a7b8ad]">{d.body}</p>
                 <p className="mt-3 font-mono text-[9px] uppercase tracking-widest text-[#1b8b75]">
-                  ::filed 2026-05 · marco island
+                  ::filed 2026-05 · naples
                 </p>
               </div>
             </div>
@@ -222,16 +220,15 @@ export default function About() {
           Æ Research
         </p>
         <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-          The lab also publishes papers.
+          What is worth keeping stays open.
         </h2>
         <p className="mt-4 text-[#a7b8ad]">
-          ÆoNs Research is the publishing arm. Twelve manuscripts as of
-          April 2026 covering bioelectric oncology, the gut-brain
-          mislabel hypothesis, solar information transfer, the
-          topological field theory of self-modifying systems, and
-          quantum-classical unification through a sinusoidal light code
-          substrate. Every paper carries an academic abstract AND a
-          plain-language summary side by side. CC-BY 4.0.
+          The archive includes practical AI education, decoded source
+          material, technical experiments, manuscripts, tools, and working
+          notes. It is not presented as an institution or a claim to
+          credentials I do not have. Strong work gets evidence and context;
+          experiments stay labeled as experiments. The useful parts remain
+          open.
         </p>
         <p className="mt-3 text-[#a7b8ad]">
           There is also a nightly broadcast, <span className="text-[#22F0D5]">The Founder&apos;s View</span>.
@@ -240,11 +237,11 @@ export default function About() {
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
-            href="/research/about"
+            href="/research"
             className="rounded-md border border-[#22F0D5] bg-[#22F0D5] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#5FF7E1]"
             style={{ color: "#000", WebkitTextFillColor: "#000" }}
           >
-            About the lab →
+            Research context →
           </Link>
           <Link
             href="/research/papers"
@@ -272,8 +269,7 @@ export default function About() {
           <a href="mailto:a.mccree@gmail.com">a.mccree@gmail.com</a>
         </p>
         <p className="mt-1 text-sm text-[#a7b8ad]">
-          AtomEons does not run a support desk. I ship, then ship again.
-          Read the manual that comes inside Orange³ before asking.
+          There is no support department. Email reaches me directly.
         </p>
         <p className="mt-3 text-sm text-[#f7f0e4]">
           If you have a real question about what Orange³ does or does

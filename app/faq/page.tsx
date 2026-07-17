@@ -74,7 +74,7 @@ const FAQS: QA[] = [
   },
   {
     q: "What is AtomEons?",
-    a: "AtomEons is an independent AI research laboratory in Marco Island, FL. One operator (Atom McCree). Four pillars: USE AI (the Orange³ cockpit), MAKE MONEY (skil.ski), KNOW THE TRUTH (/intel + The Founder's View), and RESEARCH (ÆoNs Research, 12 manuscripts + the Lessons From Sci-Fi monograph). The mission is to build the cockpit that gives a human the right authority over the right machine at the right moment, and to separate signal from theater for everyone else.",
+    a: "AtomEons is an artist-led creation lab in Naples, Florida. Atom McCree—hip-hop poet, artist, marketer, and inventor—directs a massive AI workforce to make things that did not exist before: software, publishing systems, books authored by AI, research, films, and the live AI code show Atom Alive. The mission is to use AI as a new creative medium while publishing enough proof for anyone to inspect the work.",
   },
   {
     q: "Why is the cockpit called Orange³?",

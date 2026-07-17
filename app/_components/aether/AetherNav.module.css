@@ -93,6 +93,40 @@
 .navGroup:hover > a,
 .navGroup:focus-within > a { color: #11120f !important; }
 
+.radianceLink {
+  position: relative;
+  color: #b00018 !important;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px !important;
+  font-weight: 850 !important;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.navGroup:hover > .radianceLink,
+.navGroup:focus-within > .radianceLink { color: #e00022 !important; }
+
+.radianceLink::before {
+  position: absolute;
+  right: 7px;
+  bottom: 11px;
+  width: 7px;
+  height: 11px;
+  border-radius: 70% 40% 65% 45%;
+  background: #b00018;
+  content: "";
+  clip-path: polygon(50% 0, 100% 58%, 84% 90%, 50% 100%, 16% 90%, 0 58%);
+  filter: drop-shadow(0 3px 2px rgba(176,0,24,.24));
+  animation: bloodDrop 2.8s cubic-bezier(.2,.7,.3,1) infinite;
+}
+
+@keyframes bloodDrop {
+  0%, 64%, 100% { opacity: .9; transform: translateY(0) scaleY(.82); }
+  74% { opacity: 1; transform: translateY(5px) scaleY(1.2); }
+  84% { opacity: 0; transform: translateY(12px) scaleY(.65); }
+  85% { opacity: 0; transform: translateY(-4px) scaleY(.7); }
+}
+
 .dropdown {
   position: absolute;
   top: 60px;
@@ -297,6 +331,8 @@
   .mobileMenu > div { padding: 22px; border: 1px solid rgba(255,255,255,.18); }
   .mobileMenu p { margin: 0 0 20px; color: #d8ff3e !important; font-family: var(--font-mono), monospace !important; font-size: 8px; letter-spacing: .13em; }
   .mobileMenu a { display: flex; min-height: 42px; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.12); color: #fff !important; font-size: 13px; text-decoration: none !important; }
+  .mobileMenu > div[data-special="true"] p,
+  .mobileMenu > div[data-special="true"] a { color: #ff2342 !important; font-weight: 800; text-transform: uppercase; }
   .mobileMenu > button { min-height: 52px; grid-column: 1 / -1; border: 1px solid #d8ff3e; background: #d8ff3e; color: #11120f; font-size: 12px; font-weight: 650; }
 }
 
@@ -315,5 +351,6 @@
   .dropdown,
   .searchOverlay,
   .launchButton,
-  .menuButton span { animation: none; transition: none; }
+  .menuButton span,
+  .radianceLink::before { animation: none; transition: none; }
 }

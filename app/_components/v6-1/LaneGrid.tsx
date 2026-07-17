@@ -91,7 +91,7 @@ const LANES: Lane[] = [
     name: "Skils",
     glyph: "✦",
     shortcut: "Ctrl+9",
-    tagline: "Skil.Ski marketplace via one MCP endpoint.",
+    tagline: "Reusable operator skills through one cockpit lane.",
   },
   {
     id: "settings",

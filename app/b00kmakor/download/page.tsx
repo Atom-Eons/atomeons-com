@@ -354,7 +354,7 @@ export default function B00KMakrDownloadPage() {
       {/* footer */}
       <div className="mx-auto w-full max-w-5xl px-6 pb-10">
         <div className="flex flex-col items-start justify-between gap-4 border-t border-[#1A2225] pt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B7779] sm:flex-row sm:items-center">
-          <span>2026 · AtomEons Systems Laboratory · Marco Island, FL</span>
+          <span>2026 · AtomEons Systems Laboratory · Naples, FL</span>
           <Link href="/" className="hover:text-[#22F0D5]">
             ← back to atomeons
           </Link>

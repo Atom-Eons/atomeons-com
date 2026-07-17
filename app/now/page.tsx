@@ -380,7 +380,6 @@ const SHIPPING_NEXT: string[] = [
   "EV code-signing certificate (DigiCert / Sectigo) → eliminates Windows SmartScreen warning on first cockpit download.",
   "Real ORANGEBOX cockpit screenshots → flagged TODO in WEBSITE_HANDOFF. Capture v6.3 on a clean machine, drop into /public/orangebox/.",
   "Mac notarization + ARM64 native build → v6.x roadmap, not yet wired.",
-  "skil.ski marketplace public registry → planned. Teaser surface live at /skilski.",
 ];
 
 const CURRENT_REALITY: string[] = [
@@ -389,7 +388,7 @@ const CURRENT_REALITY: string[] = [
   "The Founder's View has 31+ published letters in the archive. Live teaser surfaces the latest on the homepage via 5-min ISR.",
   "Twelve research manuscripts public + summarized · 38-page Lessons From Sci-Fi monograph live · 1,851-line X Algorithm Alpha dossier live.",
   "Every major route ships JSON-LD structured data (Organization · WebSite · SearchAction · FAQPage · Blog · TechArticle · BreadcrumbList · VideoObject · ImageObject · HowTo · Product).",
-  "Lab is solo. Atom McCree. Marco Island, FL. No team. No deck. No board. No venture funding ever.",
+  "Lab is solo. Atom McCree. Naples, FL. No team. No deck. No board. No venture funding ever.",
 ];
 
 const breadcrumbJsonLd = {
@@ -444,7 +443,7 @@ export default async function NowPage() {
           the lab is, right now.
         </p>
         <p className="mt-3 max-w-3xl text-xs text-[#6B7779]">
-          Last touch: 23 May 2026 · Marco Island, FL.
+          Last touch: 23 May 2026 · Naples, FL.
         </p>
       </section>
 

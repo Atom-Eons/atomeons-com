@@ -7,7 +7,6 @@ import { OrganismRail } from "./_components/v2/OrganismRail";
 import { LatestFromLab } from "./_components/LatestFromLab";
 import { ResearchSnapshot } from "./_components/v2/ResearchSnapshot";
 import { OrangeBoxBlock } from "./_components/v2/OrangeBoxBlock";
-import { SkilSkiBlock } from "./_components/v2/SkilSkiBlock";
 import { FoundersViewLiveTeaser } from "./_components/v2/FoundersViewLiveTeaser";
 import { IntelDrop } from "./_components/v2/IntelDrop";
 import { FounderCard } from "./_components/v2/FounderCard";
@@ -19,7 +18,7 @@ import { LabFooterCTA } from "./_components/v2/LabFooterCTA";
  * The brand spine is the LAB. ORANGEBOX is ONE product, not the doctrine.
  * The four pillars (operator-locked, 2026-05-20):
  *
- *   1. USE AI                  → ORANGEBOX + skil.ski + Hermes (the cockpit
+ *   1. USE AI                  → ORANGEBOX + Hermes (the cockpit
  *                                we ship to put AI into real work)
  *   2. MAKE MONEY              → reframe of the same product stack as the
  *                                operator's commerce + sales tools
@@ -33,7 +32,7 @@ import { LabFooterCTA } from "./_components/v2/LabFooterCTA";
  *  into that part."
  *
  * What the homepage promises in 5 seconds: AtomEons is an independent
- * AI systems laboratory in Marco Island. It deploys AI into real work,
+ * AI systems laboratory in Naples. It deploys AI into real work,
  * builds commerce tools for operators, publishes alpha intel decoded
  * from primary sources, and ships frontier scientific manuscripts.
  *
@@ -114,13 +113,6 @@ export default function Home() {
         <OrangeBoxBlock />
       </div>
 
-      {/* 4 — MAKE MONEY · operator commerce pillar. Skil.Ski + the
-              ORANGEBOX sales surface together. The pillar is a framing,
-              not a separate route. */}
-      <div data-cockpit-section="make money">
-        <SkilSkiBlock />
-      </div>
-
       {/* 5 — KNOW THE REAL INFO · intel surface. Decoded primary
               sources, alpha drops, not aggregated headlines. */}
       <div data-cockpit-section="real info">
@@ -149,7 +141,7 @@ export default function Home() {
         <LatestFromLab />
       </div>
 
-      {/* 9 — The operator. One person. Marco Island. Trust anchor. */}
+      {/* 9 — The operator. One person. Naples. Trust anchor. */}
       <div data-cockpit-section="operator">
         <FounderCard />
       </div>

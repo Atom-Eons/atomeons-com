@@ -29,7 +29,7 @@ export function HeroLabManifest() {
             aria-hidden
             className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]"
           />
-          ::ATOMEONS SYSTEMS LABORATORY · MARCO ISLAND, FL
+          ::ATOMEONS SYSTEMS LABORATORY · NAPLES, FL
         </p>
 
         {/* H1 — lab-first, declarative, Atom's register */}
@@ -44,7 +44,7 @@ export function HeroLabManifest() {
         <p className="mt-8 max-w-2xl text-pretty text-base leading-relaxed text-[#9BA5A7] sm:text-lg md:mt-10 md:text-xl">
           AtomEons Systems Laboratory researches systems that change their own
           rules, ships the tools it builds during that research, and broadcasts
-          findings every night at 8pm Eastern. Built in Marco Island, Florida.
+          findings every night at 8pm Eastern. Built in Naples, Florida.
         </p>
 
         {/* stat strip — naked numbers, no editorializing */}

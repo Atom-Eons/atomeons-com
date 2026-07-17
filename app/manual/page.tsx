@@ -36,7 +36,7 @@ const SECTIONS = [
     n: "1",
     title: "What this site is",
     body: [
-      "AtomEons Systems Laboratory · atomeons.com · independent AI lab · one operator · Marco Island, FL. ~340 public routes shipped between 2024 and 2026. CC-BY 4.0 unless explicitly noted.",
+      "AtomEons Systems Laboratory · atomeons.com · independent AI lab · one operator · Naples, FL. ~340 public routes shipped between 2024 and 2026. CC-BY 4.0 unless explicitly noted.",
       "The site is built as a Library of Alexandria for AI · curriculum, research, cheat sheets, products, tools, broadcasts, and an open-license corpus.",
       "Continuous-deploy · every commit ships to production · the public /audit-log proves the cadence.",
     ],

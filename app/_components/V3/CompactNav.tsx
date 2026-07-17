@@ -119,13 +119,12 @@ const GROUPS: NavGroup[] = [
       { label: "Orange³", href: "/orangebox", desc: "sovereign agentic OS · free always" },
       { label: "AI Bookmaker", href: "/b00kmakor", desc: "publishing cockpit · free" },
       { label: "I Am AI", href: "/i-am-ai", desc: "the book · free PDF + audiobook" },
-      { label: "skil.ski", href: "/skilski", desc: "universal MCP skill registry" },
       { label: "Discord", href: "/discord", desc: "the workshop · invite live" },
     ],
   },
 ];
 
-const IDLE_HINT_DEFAULT = "ATOMEONS SYSTEMS LAB · MARCO ISLAND · OPEN · 31 PAPERS · 3 FREE PRODUCTS · 1 BOOK · NIGHTLY BROADCAST 8PM ET";
+const IDLE_HINT_DEFAULT = "ATOMEONS SYSTEMS LAB · NAPLES · OPEN · 31 PAPERS · 3 FREE PRODUCTS · 1 BOOK · NIGHTLY BROADCAST 8PM ET";
 
 // Wave 112 aliveness · visit-count milestone infotips. The lab notices
 // the returning visitor. localStorage 'aeVisitCount' increments on every

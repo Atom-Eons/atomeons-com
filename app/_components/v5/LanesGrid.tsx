@@ -14,7 +14,7 @@ const LANES = [
   { id: "vault",    name: "Vault",     glyph: "⬡",  key: "Ctrl+6",       body: "Compounding lattice. Smarter every session." },
   { id: "receipts", name: "Receipts",  glyph: "▤",  key: "Ctrl+7",       body: "Proof of work. Shareable as artifact." },
   { id: "privacy",  name: "Privacy",   glyph: "◆",  key: "Ctrl+8",       body: "Every API call audited. Air-gap on demand." },
-  { id: "skils",    name: "Skils",     glyph: "✦",  key: "Ctrl+9",       body: "Skil.Ski marketplace via one MCP endpoint." },
+  { id: "skils",    name: "Skils",     glyph: "✦",  key: "Ctrl+9",       body: "Reusable operator skills through one cockpit lane." },
   { id: "settings", name: "Settings",  glyph: "⚙",  key: "Ctrl+0",       body: "Cockpit pin · keys · privacy · language · a11y." },
 ];
 

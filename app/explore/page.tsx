@@ -130,7 +130,6 @@ const TRACKS: Track[] = [
         },
         followups: [
           { href: "/b00kmakor/competitors", label: "vs Vellum · Atticus · Scrivener · Reedsy" },
-          { href: "/skilski", label: "skil.ski · MCP skill registry" },
           { href: "/compare", label: "All product matrices" },
         ],
       },

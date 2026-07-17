@@ -779,7 +779,7 @@ const FAQS: FAQ[] = [
   {
     category: "misc",
     q: "How does AtomEons fit into all of this?",
-    a: "AtomEons is a one-operator independent AI lab in Marco Island, Florida. Things shipping from one desk: (1) ORANGEBOX v1.0.0-beta — the turbo-optimization system for Claude (persistent memory, 10-80× context compression, skill primers, receipts, 14-department routing). License §4A bans subscription. (2) B00KMAKR v3.2.0 — the AI publishing cockpit (Mac + Windows, 142 feature surfaces). (3) Twelve research manuscripts under CC-BY 4.0. (4) The Founder's View — a nightly broadcast at 8pm ET. (5) /intel — decoded primary-source analysis. (6) The 14-clause manifesto at /manifesto. We don't take VC money. We don't gate education behind subscription. Both products are FREE this week, perpetual after, §4A no-saas locked. Read more at /about and /press.",
+    a: "AtomEons is a one-operator independent AI lab in Naples, Florida. Things shipping from one desk: (1) ORANGEBOX v1.0.0-beta — the turbo-optimization system for Claude (persistent memory, 10-80× context compression, skill primers, receipts, 14-department routing). License §4A bans subscription. (2) B00KMAKR v3.2.0 — the AI publishing cockpit (Mac + Windows, 142 feature surfaces). (3) Twelve research manuscripts under CC-BY 4.0. (4) The Founder's View — a nightly broadcast at 8pm ET. (5) /intel — decoded primary-source analysis. (6) The 14-clause manifesto at /manifesto. We don't take VC money. We don't gate education behind subscription. Both products are FREE this week, perpetual after, §4A no-saas locked. Read more at /about and /press.",
   },
   {
     category: "misc",
@@ -1888,19 +1888,17 @@ export default function AIPage() {
             ::09 · who runs this lab
           </p>
           <h2 className="mt-4 text-balance text-3xl font-medium leading-[1.08] tracking-tight md:text-5xl">
-            One operator. One desk. Marco Island, Florida.
+            One operator. One desk. Naples, Florida.
           </h2>
           <div className="mt-8 space-y-6 text-base leading-[1.7] text-[#C8CCCE] md:text-lg">
             <p>
               AtomEons Systems Laboratory is an independent AI research
               and product lab. Founder: Atom McCree. Location: Marco
               Island, Florida. Stack: solo. No venture money. No board.
-              No employees. The lab ships across four pillars: USE AI
-              (the local-first ORANGEBOX cockpit), MAKE MONEY (the
-              skil.ski skill marketplace), KNOW THE TRUTH (the /intel
-              decoded-primary-source surface and the Founder&apos;s View
-              nightly broadcast), and RESEARCH (twelve manuscripts under
-              CC-BY 4.0 plus the Lessons From Sci-Fi monograph).
+              No employees. The lab is an artist-led creation system:
+              software in Orange³, publishing through AI Bookmaker,
+              culture through I AM AI and Atom Alive, and open research
+              backed by inspectable primary sources.
             </p>
             <p>
               We take zero markup on the token costs you pay for AI. We

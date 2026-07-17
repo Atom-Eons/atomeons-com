@@ -16,7 +16,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Org Chart · AtomEons Systems Laboratory · 1 operator · 16 roles",
   description:
-    "The formal organizational structure of the AtomEons Systems Laboratory. One operator (Atom McCree, Marco Island, FL) holds 16 named roles. Single-point-of-failure by design. AI co-authors are named. Governance ladder + financial structure + succession/bus-factor contingency plans in full.",
+    "The formal organizational structure of the AtomEons Systems Laboratory. One operator (Atom McCree, Naples, FL) holds 16 named roles. Single-point-of-failure by design. AI co-authors are named. Governance ladder + financial structure + succession/bus-factor contingency plans in full.",
   alternates: { canonical: "https://atomeons.com/org-chart" },
   openGraph: {
     title: "AtomEons Org Chart",
@@ -53,7 +53,7 @@ const orgJsonLd = {
     sameAs: ["https://x.com/AtomMccree", "https://github.com/atom-mccree"],
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Marco Island",
+      addressLocality: "Naples",
       addressRegion: "FL",
       addressCountry: "US",
     },
@@ -63,7 +63,7 @@ const orgJsonLd = {
     "@type": "Place",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Marco Island",
+      addressLocality: "Naples",
       addressRegion: "FL",
       addressCountry: "US",
     },
@@ -130,7 +130,7 @@ export default function OrgChartPage() {
             </span>
             <span>· 1 operator · 16 roles · 0 employees · 0 investors · 0 board members</span>
             <span>· bus factor: 1</span>
-            <span>· Marco Island · FL</span>
+            <span>· Naples · FL</span>
           </div>
 
           <p className="mt-10 max-w-[68ch] text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
@@ -143,7 +143,7 @@ export default function OrgChartPage() {
             <pre className="mt-4 overflow-x-auto rounded-lg border border-[#22F0D5]/20 bg-[#050708] p-6 font-mono text-[12px] leading-[1.5] text-[#B5BBC0]">{`
                           ╔═════════════════════════════════════╗
                           ║       ATOM MCCREE  ·  OPERATOR      ║
-                          ║       Marco Island · FL · USA       ║
+                          ║       Naples · FL · USA       ║
                           ║   founder · engineer · author       ║
                           ║   editor · security · ops · brand   ║
                           ╚═══╤═══════════════╤══════════════╤══╝
@@ -238,7 +238,7 @@ export default function OrgChartPage() {
             <ul className="mt-4 max-w-[68ch] space-y-3 text-[17px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
               <li><strong className="text-[#F4F4F2]">Revenue:</strong> $0 recurring. $0 subscriptions. $0 ads. $0 from investors.</li>
               <li><strong className="text-[#F4F4F2]">Book royalties:</strong> hardcover edition (numbered run of 1,000, Q4 2026) is the only paid form of anything the lab has made. Everything digital is free.</li>
-              <li><strong className="text-[#F4F4F2]">Costs:</strong> operator's personal machine, Marco Island bandwidth, Vercel hosting (free tier), domain fees, Discord (free). Full ledger at <Link href="/transparency" className="text-[#22F0D5] hover:underline">/transparency</Link>.</li>
+              <li><strong className="text-[#F4F4F2]">Costs:</strong> operator's personal machine, Naples bandwidth, Vercel hosting (free tier), domain fees, Discord (free). Full ledger at <Link href="/transparency" className="text-[#22F0D5] hover:underline">/transparency</Link>.</li>
               <li><strong className="text-[#F4F4F2]">Sustainability:</strong> the lab is small enough to sustain on the operator's own income and reasonable time. Not scaling to a headcount is a deliberate defense against every failure mode that killed similar labs.</li>
             </ul>
           </section>
@@ -269,7 +269,7 @@ export default function OrgChartPage() {
               Complete manual at <Link href="/handbook" className="text-[#22F0D5] hover:underline">/handbook</Link>. Doctrine at <Link href="/doctrine" className="text-[#22F0D5] hover:underline">/doctrine</Link>.
             </p>
             <p className="mt-2">
-              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Marco Island · FL · 2026 · CC-BY 4.0
+              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Naples · FL · 2026 · CC-BY 4.0
             </p>
           </div>
         </div>

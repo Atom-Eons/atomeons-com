@@ -223,7 +223,7 @@ export default function Privacy() {
             10. Contact
           </h2>
           <p className="mt-3">
-            AtomEons Systems Laboratory · Atom McCree · Marco Island, FL
+            AtomEons Systems Laboratory · Atom McCree · Naples, FL
             · {" "}
             <a
               href="mailto:a.mccree@gmail.com"

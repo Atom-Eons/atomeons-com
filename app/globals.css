@@ -282,7 +282,7 @@ a:hover {
 }
 
 /* Mono eyebrow — uppercase tracker for section §-labels, "EST. 2024",
- * "MARCO ISLAND, FL", etc. Pairs with text-noir-receipt for grid columns. */
+ * "NAPLES, FL", etc. Pairs with text-noir-receipt for grid columns. */
 .text-noir-eyebrow {
   font-family: var(--font-mono);
   font-size: 0.6875rem;     /* 11 */
@@ -831,7 +831,7 @@ a:hover {
  * FOUNDER NOTE — §06 the design-inspiration moment most companies omit
  *
  * One full-bleed photograph of the operator's workspace, one signed paragraph
- * in Newsreader serif (max 80 words). Signed "— Atom McCree, Marco Island."
+ * in Newsreader serif (max 80 words). Signed "— Atom McCree, Naples."
  * The single first-person register on the entire homepage.
  * ============================================================================= */
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Library · books on the operator's shelf · AtomEons",
   description:
-    "Physical books on Atom McCree's shelf at the Marco Island lab. Read recently, returned to often, or open at the time of writing. Honest list, with one-sentence reviews.",
+    "Physical books on Atom McCree's shelf at the Naples lab. Read recently, returned to often, or open at the time of writing. Honest list, with one-sentence reviews.",
   alternates: { canonical: "https://atomeons.com/library" },
 };
 
@@ -53,7 +53,7 @@ export default function LibraryPage() {
             The shelf as it stands.
           </h1>
           <p className="mt-6 max-w-2xl font-serif text-[18px] leading-[1.55] text-[#9CA3AF] md:text-[20px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
-            Physical books on the desk at the Marco Island lab.
+            Physical books on the desk at the Naples lab.
             Re-read, returned to, or open at the time of writing.
             One-sentence reviews. Most of the shelf is unread — the
             anti-library principle.

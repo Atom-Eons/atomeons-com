@@ -246,7 +246,7 @@ function renderMarkdown(md: string) {
 
     // 4) bare internal paths to known surfaces — only the lab's own routes,
     //    so prose like "9/10" or "1/2" never linkifies
-    const INTERNAL = "start|research|press|founders-view|orangebox|intel|now|faq|about|legal|account|skilski|b00kmakor|api\\/admin";
+    const INTERNAL = "start|research|press|founders-view|orangebox|intel|now|faq|about|legal|account|b00kmakor|api\\/admin";
     out = out.replace(
       new RegExp(
         `${LEAD}(\\/(?:${INTERNAL})(?:\\/[A-Za-z0-9/_\\-]*)?)${TRAIL}`,

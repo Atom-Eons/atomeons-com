@@ -57,7 +57,7 @@ export async function GET() {
   out.push("## Mission");
   out.push("");
   out.push(
-    "Onboard humanity to AI. One operator (Atom McCree), Marco Island, FL. No venture funding. No subscription. No upsell. No affiliate revenue. The lab ships a free 27-lesson curriculum, a $99-once local-first AI cockpit (ORANGEBOX, License §4A bans subscription), 12 research manuscripts (CC-BY 4.0), a nightly 8pm ET broadcast (The Founder's View), a 26-term plain-English glossary, a 14-clause public manifesto, and decoded primary-source intel.",
+    "Onboard humanity to AI. One operator (Atom McCree), Naples, FL. No venture funding. No subscription. No upsell. No affiliate revenue. The lab ships a free 27-lesson curriculum, a $99-once local-first AI cockpit (ORANGEBOX, License §4A bans subscription), 12 research manuscripts (CC-BY 4.0), a nightly 8pm ET broadcast (The Founder's View), a 26-term plain-English glossary, a 14-clause public manifesto, and decoded primary-source intel.",
   );
   out.push("");
 

@@ -211,7 +211,7 @@ export default function LauncherPage() {
                 </Link>
               </span>
               <span role="listitem" className="text-[#8E969D]">
-                Marco Island · FL · est. 2024
+                Naples · FL · est. 2024
               </span>
             </div>
           </div>

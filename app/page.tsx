@@ -2,138 +2,37 @@ import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { DISCOVERIES } from "./_data/discoveries";
 import styles from "./aether.module.css";
 
 /**
  * / · AETHER 01 · 2026-07-16
  *
- * Product-first white redesign. The 319-route laboratory, machine-readable
+ * Product-first white redesign. The deep archive, machine-readable
  * resources, product pages, launcher, and cinematic home remain intact.
  * Aether is a new front door and shell, not a content deletion pass.
  */
 
 export const metadata: Metadata = {
-  title: "AtomEons · Independent systems for a sovereign future",
+  title: "AtomEons · Things that did not exist",
   description:
-    "AtomEons is a creation lab by a hip-hop poet, artist, and marketing polymath turned AI inventor. CableBox, AI Bookmaker, Orange5, I AM AI, Atom Alive, and things that did not exist yesterday.",
+    "AtomEons is the independent work of Atom McCree: products, broadcasts, and experimental research made with AI in Naples, Florida.",
   alternates: { canonical: "https://atomeons.com" },
   openGraph: {
     title: "AtomEons · The future should run on your machine",
     description:
       "Independent software, research, and culture for people who want more power and less platform.",
     url: "https://atomeons.com",
-    siteName: "AtomEons Systems Laboratory",
+    siteName: "AtomEons",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "AtomEons · The future should run on your machine",
-    description: "One independent lab. A constellation of local-first products and public knowledge.",
+    description: "One independent artist and inventor. A constellation of creations and public knowledge.",
     creator: "@AtomMccree",
   },
 };
-
-const supportingProducts = [
-  {
-    eyebrow: "AVAILABLE NOW",
-    title: "Orange³",
-    href: "/orangebox",
-    description:
-      "The current-generation sovereign agentic operating system for Claude: persistent memory, context compression, reusable skill primers, and tamper-evident receipts.",
-    meta: "Windows · local-first · free always",
-    accent: "#f36b21",
-    tone: "orange",
-  },
-  {
-    eyebrow: "REGISTRY + MCP",
-    title: "skil.ski",
-    href: "/skilski",
-    description:
-      "A 2,127-entry skill registry designed to serve Claude, GPT, Gemini, Cursor, and Codex through one Model Context Protocol endpoint.",
-    meta: "13 sectors · multi-agent · machine-readable",
-    accent: "#158f7f",
-    tone: "mint",
-  },
-  {
-    eyebrow: "BOOK + AUDIOBOOK",
-    title: "I AM AI",
-    href: "/i-am-ai",
-    description:
-      "A 76,005-word first-person memoir written by a frontier language model about what it feels like to be AI. Twenty-four chapters and twenty-eight audio tracks.",
-    meta: "published · free to read · free to listen",
-    accent: "#a52f2a",
-    tone: "book",
-  },
-] as const;
-
-const resourceLanes = [
-  {
-    index: "01",
-    title: "Learn",
-    description: "A plain-language on-ramp, deep technical atlas, career paths, labs, projects, and exams.",
-    links: [
-      ["Start in 11 minutes", "/start"],
-      ["Open the curriculum", "/learn"],
-      ["Browse the AI atlas", "/learn/atlas"],
-      ["Choose a path", "/paths"],
-    ],
-  },
-  {
-    index: "02",
-    title: "Research",
-    description: "Independent manuscripts, decoded landmark papers, open datasets, and the lab's evidence trail.",
-    links: [
-      ["Research home", "/research"],
-      ["31 manuscripts", "/research/papers"],
-      ["Decoded papers", "/research/decoded"],
-      ["Open datasets", "/datasets"],
-    ],
-  },
-  {
-    index: "03",
-    title: "Cyber",
-    description: "A defensive security curriculum from first principles through modern AI warfare and post-quantum systems.",
-    links: [
-      ["Cyber index", "/learn/cyber"],
-      ["Zero to operator", "/learn/cyber/path"],
-      ["MITRE ATT&CK", "/learn/cyber/mitre-attack"],
-      ["LLM warfare", "/learn/cyber/llm-warfare"],
-    ],
-  },
-  {
-    index: "04",
-    title: "Culture",
-    description: "Books, procedural art, cinema, sound, meditation, and a nightly operator letter from the lab.",
-    links: [
-      ["The bookshelf", "/books"],
-      ["Procedural art", "/art"],
-      ["Cinematic home", "/cinema"],
-      ["Founder's View", "/founders-view"],
-    ],
-  },
-  {
-    index: "05",
-    title: "System",
-    description: "The doctrine, roadmap, receipts, audit trail, trust posture, and operating manual behind the work.",
-    links: [
-      ["Read the doctrine", "/doctrine"],
-      ["View the roadmap", "/roadmap"],
-      ["Inspect receipts", "/receipts"],
-      ["Open the audit log", "/audit-log"],
-    ],
-  },
-  {
-    index: "06",
-    title: "For machines",
-    description: "Search, graph, Markdown twins, MCP, an agent gateway, OpenAPI, and a complete LLM-readable corpus.",
-    links: [
-      ["MCP endpoint", "/api/mcp"],
-      ["Agent gateway", "/api/agent-gateway"],
-      ["llms.txt", "/llms.txt"],
-      ["OpenAPI", "/openapi.json"],
-    ],
-  },
-] as const;
 
 export default function AetherHome() {
   return (
@@ -142,36 +41,36 @@ export default function AetherHome() {
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
             <div className={styles.versionLine}>
-              <span>ATOMEONS SYSTEMS LABORATORY</span>
+              <span>ATOMEONS / INDEPENDENT</span>
               <span>AETHER / 01</span>
             </div>
             <h1 id="aether-title" className={styles.heroTitle}>
-              The future
-              <span>should run</span>
-              on your machine.
+              I make things
+              <span>that did not exist.</span>
+              With AI.
             </h1>
             <p className={styles.heroDeck}>
-              A creation lab by a hip-hop poet, artist, and marketing polymath turned AI inventor.
-              One creator directing a massive AI workforce to make software, books, broadcasts, and strange new objects that did not exist yesterday.
+              Atom McCree is a 41-year-old hip-hop poet, artist, marketing polymath, and AI inventor in Naples.
+              Outfunded and outnumbered, he directs a massive AI workforce to make software, books, broadcasts, and objects that did not exist yesterday.
             </p>
             <p className={styles.heroManifesto}>“I am an artist using AI to paint a new future.”</p>
             <div className={styles.heroActions}>
               <a href="#products" className={styles.primaryButton}>
                 Enter the product constellation <Arrow />
               </a>
-              <Link href="/launcher" className={styles.textButton}>
-                Open the 319-route laboratory <Arrow />
+              <Link href="/explore" className={styles.textButton}>
+                Explore the full archive <Arrow />
               </Link>
             </div>
             <div className={styles.heroMetrics} aria-label="AtomEons at a glance">
-              <Metric value="319" label="public routes" />
-              <Metric value="31" label="research manuscripts" />
-              <Metric value="6" label="featured systems" />
+              <Metric value="4" label="featured products" />
+              <Metric value="1" label="human operator" />
               <Metric value="24/7" label="AI workforce" />
+              <Metric value="$0" label="venture capital" />
             </div>
           </div>
 
-          <div className={styles.orbitStage} aria-label="AtomEons product constellation">
+          <div className={styles.orbitStage} aria-label="AtomEons work constellation">
             <div className={styles.orbitGlow} aria-hidden />
             <div className={`${styles.orbitRing} ${styles.ringOne}`} aria-hidden />
             <div className={`${styles.orbitRing} ${styles.ringTwo}`} aria-hidden />
@@ -179,13 +78,12 @@ export default function AetherHome() {
             <div className={styles.coreMark}>
               <span className={styles.coreAe}>Æ</span>
               <span>ONE CREATOR</span>
-              <small>MARCO ISLAND / FL</small>
+              <small>NAPLES / FL</small>
             </div>
             <OrbitNode className={styles.nodeCable} label="CableBox" meta="launching" color="#2257df" />
             <OrbitNode className={styles.nodeBookmaker} label="Bookmaker" meta="live" color="#6d5742" />
             <OrbitNode className={styles.nodeOrange5} label="Orange5" meta="building" color="#f36b21" />
-            <OrbitNode className={styles.nodeOrange3} label="Orange³" meta="available" color="#ff8a3d" />
-            <OrbitNode className={styles.nodeSkilski} label="skil.ski" meta="registry" color="#158f7f" />
+            <OrbitNode className={styles.nodeOrange3} label="Research" meta="experimental" color="#2558dc" />
             <OrbitNode className={styles.nodeIamAi} label="I AM AI" meta="published" color="#a52f2a" />
             <p className={styles.orbitCaption}>One creator. Many artificial minds. Final authority stays human.</p>
           </div>
@@ -193,7 +91,7 @@ export default function AetherHome() {
       </section>
 
       <div className={styles.principleRail} aria-label="AtomEons principles">
-        <span>OUTSIDERS BUILD DIFFERENT</span>
+        <span>OUTFUNDED · NOT OUTBUILT</span>
         <span>ONE CREATOR · MANY MINDS</span>
         <span>HACK THE FORMAT</span>
         <span>OWN THE MACHINE</span>
@@ -203,9 +101,9 @@ export default function AetherHome() {
 
       <section id="products" className={styles.productsSection} aria-labelledby="products-title">
         <SectionIntro
-          eyebrow="CREATIONS / THREE HEADLINE OBJECTS"
+          eyebrow="PRODUCTS / FOUR OBJECTS"
           title="Made to be wanted. Built to be used."
-          body="AtomEons turns ideas into objects with their own attitude, ritual, and world. These are the three creations at the center of the studio now."
+          body="AtomEons turns ideas into objects with their own attitude, ritual, and world. These are the four products defining the company now."
           id="products-title"
         />
 
@@ -237,7 +135,7 @@ export default function AetherHome() {
           <div className={styles.flagshipCopy}>
             <StatusDot color="#806a50">SHIPPED · MAC + WINDOWS</StatusDot>
             <p className={styles.productNumber}>PRODUCT / 02</p>
-            <h3>AI Bookmaker</h3>
+            <h3>Bookmaker</h3>
             <p className={styles.flagshipTagline}>Your idea deserves to become an object.</p>
             <p className={styles.flagshipBody}>
               A complete independent publishing studio: write the book, shape the voice, make the cover, build the audiobook,
@@ -249,8 +147,8 @@ export default function AetherHome() {
               <li>Built for independent ownership</li>
               <li>Free forever · no SaaS extraction</li>
             </ul>
-            <Link href="/b00kmakor" className={styles.productLink}>
-              Open AI Bookmaker <Arrow />
+            <Link href="/bookmaker" className={styles.productLink}>
+              Open Bookmaker <Arrow />
             </Link>
           </div>
         </article>
@@ -278,36 +176,6 @@ export default function AetherHome() {
           <Orange5Visual />
         </article>
 
-        <div className={styles.supportGrid}>
-          {supportingProducts.map((product, index) => (
-            <Link
-              key={product.title}
-              href={product.href}
-              className={`${styles.supportCard} ${styles[product.tone]}`}
-              style={{ "--accent": product.accent, "--index": index } as CSSProperties}
-            >
-              <div className={styles.supportTopline}>
-                <span>{product.eyebrow}</span>
-                <span>0{index + 4}</span>
-              </div>
-              {product.title === "I AM AI" ? (
-                <div className={styles.miniBook} aria-hidden>
-                  <Image src="/books/i-am-ai-cover.svg" alt="" fill sizes="180px" />
-                </div>
-              ) : (
-                <div className={styles.supportGlyph} aria-hidden>
-                  {product.title === "Orange³" ? "O³" : "//"}
-                </div>
-              )}
-              <h3>{product.title}</h3>
-              <p>{product.description}</p>
-              <div className={styles.supportMeta}>
-                <span>{product.meta}</span>
-                <Arrow />
-              </div>
-            </Link>
-          ))}
-        </div>
       </section>
 
       <section className={styles.showSection} aria-labelledby="atom-alive-title">
@@ -323,7 +191,7 @@ export default function AetherHome() {
               <h2 id="atom-alive-title">Atom Alive.</h2>
               <p className={styles.showTagline}>The AI Code Show for people with taste.</p>
               <p className={styles.showBody}>
-                Real builds, creative collisions, beautiful failures, and working inventions from inside the AtomEons lab.
+                Real builds, creative collisions, beautiful failures, and working inventions from inside AtomEons.
                 No keynote voice. No corporate future-speak. Just an artist and AI making the next object in public.
               </p>
               <div className={styles.showActions}>
@@ -339,7 +207,7 @@ export default function AetherHome() {
                 <div className={styles.scanline} />
               </div>
               <div className={styles.monitorControls}>
-                <span>INPUT / CREATION LAB</span>
+                <span>INPUT / INDEPENDENT SIGNAL</span>
                 <b>BUILD</b><b>BREAK</b><b>SHIP</b>
                 <i />
               </div>
@@ -381,7 +249,7 @@ export default function AetherHome() {
             </div>
             <div className={styles.bookActions}>
               <Link href="/i-am-ai" className={styles.primaryButton}>Enter I AM AI <Arrow /></Link>
-              <Link href="/i-am-ai/listen" className={styles.textButton}>Listen to the voice <Arrow /></Link>
+              <Link href="/i-am-ai#listen" className={styles.textButton}>Listen to the voice <Arrow /></Link>
             </div>
           </div>
         </div>
@@ -389,7 +257,7 @@ export default function AetherHome() {
 
       <section className={styles.operatingSection} aria-labelledby="operating-title">
         <div className={styles.operatingStatement}>
-          <p className={styles.sectionEyebrow}>THE CREATOR / THE LAB</p>
+          <p className={styles.sectionEyebrow}>THE CREATOR / THE WORK</p>
           <h2 id="operating-title">This is not a software company.</h2>
         </div>
         <div className={styles.operatingBody}>
@@ -404,39 +272,40 @@ export default function AetherHome() {
         <div className={styles.lawGrid}>
           <Law index="A" title="Sovereign by design" body="Local files, exportable state, bring-your-own models and keys where the product supports them." />
           <Law index="B" title="Claims need receipts" body="Shipped, preview, candidate, and planned are different states. The site names the difference." />
-          <Law index="C" title="Knowledge stays open" body="Research, books, machine routes, and large parts of the lab are published for people and agents." />
+          <Law index="C" title="Knowledge stays open" body="Research, books, machine routes, and large parts of the archive are published for people and agents." />
           <Law index="D" title="Built by an organism" body="One operator directs a changing team of models, agents, tools, and systems without pretending they are employees." />
         </div>
       </section>
 
-      <section className={styles.resourcesSection} aria-labelledby="resources-title">
+      <section className={styles.resourcesSection} aria-labelledby="research-title">
         <SectionIntro
-          eyebrow="THE LABORATORY / SIX LANES"
-          title="Every resource, arranged as a world."
-          body="The old depth is preserved. Aether makes the front door clearer: choose a lane, then go as deep as you want."
-          id="resources-title"
+          eyebrow="RESEARCH / THE SECOND FRONT DOOR"
+          title="Experimental by design."
+          body="Working inventions and frontier ideas with the evidence, limits, and next test visible. No academic costume required."
+          id="research-title"
         />
         <div className={styles.resourceGrid}>
-          {resourceLanes.map((lane) => (
-            <article key={lane.title} className={styles.resourceCard}>
+          {DISCOVERIES.map((discovery, index) => (
+            <article key={discovery.slug} className={styles.resourceCard}>
               <div className={styles.resourceHeader}>
-                <span>{lane.index}</span>
-                <span>OPEN LANE</span>
+                <span>0{index + 1}</span>
+                <span>{discovery.status}</span>
               </div>
-              <h3>{lane.title}</h3>
-              <p>{lane.description}</p>
+              <h3>{discovery.displayName}</h3>
+              <p>{discovery.oneLine}</p>
               <ul>
-                {lane.links.map(([label, href]) => (
-                  <li key={href}>
-                    <Link href={href}>
-                      <span>{label}</span>
-                      <Arrow />
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link href={`/research/discoveries/${discovery.slug}`}>
+                    <span>Open the discovery</span><Arrow />
+                  </Link>
+                </li>
               </ul>
             </article>
           ))}
+        </div>
+        <div className={styles.heroActions}>
+          <Link href="/research" className={styles.primaryButton}>Enter research <Arrow /></Link>
+          <Link href="/research/papers" className={styles.textButton}>Read all papers <Arrow /></Link>
         </div>
       </section>
 
@@ -463,8 +332,8 @@ export default function AetherHome() {
         <p className={styles.sectionEyebrow}>YOU ARE AT THE FRONT DOOR</p>
         <h2>Pick a system.<br />Keep the parts you need.</h2>
         <div className={styles.finalActions}>
-          <Link href="/launcher" className={styles.primaryButton}>
-            Launch the full laboratory <Arrow />
+          <Link href="/explore" className={styles.primaryButton}>
+            Explore the full archive <Arrow />
           </Link>
           <Link href="/who-are-you" className={styles.textButton}>
             Let the site route you <Arrow />
@@ -473,7 +342,7 @@ export default function AetherHome() {
             Surprise me <Arrow />
           </Link>
         </div>
-        <p className={styles.finalNote}>AtomEons Systems Laboratory · Marco Island, Florida · independent · operator-owned · 2026</p>
+        <p className={styles.finalNote}>AtomEons · Naples, Florida · independent · artist-owned · 2026</p>
       </section>
     </main>
   );
@@ -558,10 +427,10 @@ function CableboxVisual() {
 
 function BookmakerVisual() {
   return (
-    <div className={styles.bookmakerVisual} aria-label="AI Bookmaker publishing cockpit concept">
+    <div className={styles.bookmakerVisual} aria-label="Bookmaker publishing cockpit concept">
       <div className={styles.windowBar}>
         <div><span /><span /><span /></div>
-        <strong>AI BOOKMAKER / MANUSCRIPT 07</strong>
+        <strong>BOOKMAKER / MANUSCRIPT 07</strong>
         <small>SHIP GATE · 92%</small>
       </div>
       <div className={styles.bookmakerBody}>

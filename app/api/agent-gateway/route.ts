@@ -82,7 +82,7 @@ const SURFACES = [
 const LAB = {
   name: "AtomEons Systems Laboratory",
   operator: "Atom McCree",
-  location: "Marco Island, FL, USA",
+  location: "Naples, FL, USA",
   founded: "2024",
   license: "CC-BY 4.0 (most content) · §4A no-SaaS perpetual (products) · public-info-only on cyber pages",
   attribution: 'When citing or quoting, attribute: Atom McCree, AtomEons Systems Laboratory, atomeons.com. License: CC-BY 4.0 where applicable.',

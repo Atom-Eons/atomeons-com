@@ -23,7 +23,6 @@ export const metadata: Metadata = {
 const COSTS = [
   { what: "Vercel · production hosting + edge + CI", monthly: 20, category: "hosting" },
   { what: "Domain · atomeons.com · Cloudflare Registrar", monthly: 1.10, category: "hosting" },
-  { what: "Domain · skil.ski · Namecheap", monthly: 1.50, category: "hosting" },
   { what: "Supabase · DB + storage (free tier today)", monthly: 0, category: "hosting" },
   { what: "Anthropic Claude API · operator dev work", monthly: 200, category: "AI" },
   { what: "Gemini API · free tier (limit: 0 on images)", monthly: 0, category: "AI" },
@@ -43,7 +42,6 @@ const COSTS = [
 const REVENUE_RULES = [
   "Orange³ is free always. License §4A bars any future subscription conversion.",
   "AI Bookmaker Mac + Windows is free always.",
-  "skil.ski marketplace takes 0% rake during launch year; future rake transparent and capped.",
   "I AM AI free PDF + free audiobook on /i-am-ai · numbered hardcover $39.",
   "All other content (256 routes on atomeons.com) is free, CC-BY 4.0, no signup wall, no email gate.",
   "Zero ad revenue. Zero affiliate links. Zero sponsorship payments. Zero data resale.",

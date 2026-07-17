@@ -163,7 +163,7 @@ export default function GlobalError({
               color: "#6B6F72",
             }}
           >
-            AtomEons Systems Laboratory · Marco Island · FL · 2026
+            AtomEons Systems Laboratory · Naples · FL · 2026
           </p>
         </main>
       </body>

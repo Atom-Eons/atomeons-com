@@ -29,7 +29,7 @@ const OBJECTS = [
   { what: "An astrolabe · brass · ~1930s reproduction", note: "Mostly decorative. Sometimes the operator tunes the rete and just looks at it for a while." },
   { what: "A glass orb · refraction toy", note: "Catches the western light at 4:30pm. Throws spectrum onto the wall. The eye needs places that aren't a screen." },
   { what: "A small sumi-e ink stone + brush", note: "For when the lab's diagrams need to be drawn by an analog hand to be understood. A few times a year." },
-  { what: "An open window · most of the year", note: "Marco Island. The Gulf is a 4-minute walk. The window is the cheapest piece of equipment in the room." },
+  { what: "An open window · most of the year", note: "Naples. The Gulf is a 4-minute walk. The window is the cheapest piece of equipment in the room." },
   { what: "Headphones · Beyerdynamic DT 770 Pro · 80Ω", note: "For the post-9pm shift. Open-back would be better acoustically; closed-back is better when the family is sleeping." },
 ];
 

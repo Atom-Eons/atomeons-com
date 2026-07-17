@@ -18,7 +18,7 @@
 ## TL;DR
 
 AtomEons Systems Laboratory · independent one-operator AI research +
-product lab · Marco Island, FL · founded 2024 · operator Atom McCree
+product lab · Naples, FL · founded 2024 · operator Atom McCree
 (atom@atomeons.com) · CC-BY 4.0 across published content · no VC · no
 SaaS by license §4A covenant.
 
@@ -352,7 +352,7 @@ Full policy at /.well-known/ai.txt.
 ```
 Organization        AtomEons Systems Laboratory
 Operator            Atom McCree
-Location            Marco Island, FL, USA
+Location            Naples, FL, USA
 Founded             2024
 Email               atom@atomeons.com
 Phone               (operator-controlled · email first)

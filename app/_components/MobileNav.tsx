@@ -23,7 +23,6 @@ const LEARN = [
 const PRODUCTS = [
   { href: "/orangebox", label: "Orangebox", hint: "Local-first AI cockpit" },
   { href: "/b00kmakor", label: "B00KMAKR", hint: "AI publishing cockpit" },
-  { href: "/skilski", label: "skil.ski", hint: "Skill marketplace via MCP" },
 ];
 
 const RESEARCH = [

@@ -171,7 +171,7 @@ export function AppToolbar() {
 
         {/* Center: a quiet tagline · operator-set · fills what used to be empty space */}
         <p className="hidden font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a] md:block">
-          atomeons systems lab · marco island · live · 24/7
+          atomeons systems lab · naples · live · 24/7
         </p>
 
         {/* Right: the actual controls · responsive collapse · tight gap */}

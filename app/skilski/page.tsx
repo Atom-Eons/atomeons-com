@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "skil.ski hosts 2,127 verified skills across 13 sectors. One MCP endpoint serves Claude, GPT, Gemini, Cursor, Codex. Save = bookmark. Add to Lodge = make active on MCP. Operator-Verified flagships + free community Oskis. Built by AtomEons.",
   alternates: { canonical: "https://atomeons.com/skilski" },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false, nocache: true },
 };
 
 const SECTORS = [
@@ -404,7 +404,7 @@ export default function Skilski() {
             </a>
           </div>
           <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.18em] text-[#6B7779]">
-            skil.ski · 2026 AtomEons Systems Laboratory · marco island, fl ·{" "}
+            skil.ski · 2026 AtomEons Systems Laboratory · naples, fl ·{" "}
             <a
               href="https://www.instagram.com/skil.ski/"
               target="_blank"

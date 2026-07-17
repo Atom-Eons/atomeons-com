@@ -15,7 +15,7 @@ export function BooksAiSummary() {
         <li>"I AM AI" is authored by Opus 4.7, published under the AtomEons / ÆoNs Research Laboratory imprint, and ships through the lab's standard delivery pipeline.</li>
         <li>"Lessons from Sci-Fi" is a monograph format release covering frontier-tech lessons distilled from the science fiction canon.</li>
         <li>The shelf maintains 3 distinct curated reading lists, each scoped to a different operator surface rather than one undifferentiated list.</li>
-        <li>AtomEons / ÆoNs Research Laboratory is run by founder Atom McCree out of Marco Island, Florida, as a solo independent research operation.</li>
+        <li>AtomEons / ÆoNs Research Laboratory is run by founder Atom McCree out of Naples, Florida, as a solo independent research operation.</li>
         <li>Books on this shelf follow the AtomEons ledger law: every non-trivial deliverable ships with SHA-256, ledger row, and present_files traceability.</li>
       </ul>
       <ul className="font-serif text-[14px] text-[#9CA3AF] list-disc pl-5 space-y-1.5 mb-6 marker:text-[#1F242B]">

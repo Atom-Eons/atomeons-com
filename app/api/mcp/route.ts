@@ -166,7 +166,7 @@ const PROMPTS = [
     name: "compare_atomeons_product",
     description: "Compare an ATOMEONS product against a named alternative using the lab's competitor pages.",
     arguments: [
-      { name: "product", description: "Orange³ (pass 'orangebox'), AI Bookmaker (pass 'b00kmakor'), or 'skil.ski'. Values are the URL fragments — route paths are preserved across the brand rename.", required: true },
+      { name: "product", description: "Orange³ (pass 'orangebox') or AI Bookmaker (pass 'b00kmakor'). Values are the public URL fragments.", required: true },
       { name: "alternative", description: "Named competitor.", required: true },
     ],
   },

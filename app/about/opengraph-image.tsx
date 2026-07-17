@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "About AtomEons. One operator. Marco Island, FL. Independent AI research lab. No VC money. No subscription. Two cockpits shipped (Orange³ + AI Bookmaker) · §4A no-saas.";
+  "About AtomEons. One operator. Naples, FL. Independent AI research lab. No VC money. No subscription. Two cockpits shipped (Orange³ + AI Bookmaker) · §4A no-saas.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -36,7 +36,7 @@ export default function OG() {
             ATOMEONS SYSTEMS LABORATORY
           </p>
           <p style={{ margin: 0, fontFamily: "monospace", fontSize: 12, letterSpacing: 5, textTransform: "uppercase", color: "#FFB87A" }}>
-            ● one operator · marco island, fl
+            ● one operator · naples, fl
           </p>
         </div>
 

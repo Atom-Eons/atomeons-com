@@ -155,7 +155,7 @@ export async function GET() {
     <title>AtomEons Systems Laboratory — everything the lab publishes</title>
     <link>${BASE}</link>
     <atom:link href="${BASE}/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Everything AtomEons publishes — Founder's View letters, ship checkpoints, product launches, research drops. Marco Island · FL · §4A no-SaaS · free always · CC-BY 4.0.</description>
+    <description>Everything AtomEons publishes — Founder's View letters, ship checkpoints, product launches, research drops. Naples · FL · §4A no-SaaS · free always · CC-BY 4.0.</description>
     <language>en-US</language>
     <lastBuildDate>${new Date(lastBuild).toUTCString()}</lastBuildDate>
     <generator>atomeons.com — Next.js 16 / Vercel</generator>

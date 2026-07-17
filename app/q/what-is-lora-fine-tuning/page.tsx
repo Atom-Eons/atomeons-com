@@ -342,7 +342,7 @@ export default function Page() {
         <footer className="mt-16 border-t border-[#2a2a2a] pt-6 text-xs text-[#6a6a6a]">
           <p>
             atomeons.com/q — AI-search answers from AtomEons Systems
-            Laboratory. Marco Island, FL.
+            Laboratory. Naples, FL.
           </p>
         </footer>
       </article>

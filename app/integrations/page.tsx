@@ -32,7 +32,6 @@ const INTEGRATIONS: Integration[] = [
   // Infra
   { name: "Vercel", url: "https://vercel.com", role: "Production hosting · edge runtime · CI pipeline · OG image generation · Analytics + Speed Insights", data: "operator data only", category: "infra" },
   { name: "Cloudflare Registrar", url: "https://www.cloudflare.com/products/registrar/", role: "Domain registrar for atomeons.com (at-cost · no markup)", data: "public data only", category: "infra" },
-  { name: "Namecheap", url: "https://www.namecheap.com", role: "Domain registrar for skil.ski", data: "public data only", category: "infra" },
   { name: "Supabase", url: "https://supabase.com", role: "Postgres database with pgvector · row-level security · service-role inserts from server-side handlers only", data: "buyer data", category: "infra" },
   { name: "Vercel Blob", url: "https://vercel.com/storage/blob", role: "Product binary storage (Orange³ installer · AI Bookmaker DMG · audiobook MP3 tracks)", data: "no buyer data", category: "infra" },
 
@@ -43,7 +42,7 @@ const INTEGRATIONS: Integration[] = [
   { name: "Microsoft Andrew Neural Voice", url: "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/", role: "Narration for the /i-am-ai/listen Chapter 20 free sample (17:26 audio · ACX-mastered output) · also a BYO option inside AI Bookmaker", data: "operator data only", category: "AI" },
 
   // Commerce
-  { name: "Stripe", url: "https://stripe.com", role: "Payment processing for Orange³ · AI Bookmaker · skil.ski · Stripe Checkout-hosted flow (operator never sees card numbers)", data: "buyer data", category: "commerce" },
+  { name: "Stripe", url: "https://stripe.com", role: "Payment processing for Orange³ and AI Bookmaker · Stripe Checkout-hosted flow (operator never sees card numbers)", data: "buyer data", category: "commerce" },
   { name: "Stripe Customer Portal", url: "https://stripe.com/customer-portal", role: "Self-serve license management · refund requests · email update", data: "buyer data", category: "commerce" },
 
   // Communications

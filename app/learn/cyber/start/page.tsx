@@ -79,7 +79,7 @@ export default function CyberStartPage() {
           </div>
 
           <p className="mt-5 max-w-[62ch] text-sm leading-[1.6] text-[#9BA5A7]">
-            Your email goes to AtomEons only. No selling, no sharing, no affiliate funnels. One unsubscribe link in every email and instant removal. We are an independent lab in Marco Island, FL.
+            Your email goes to AtomEons only. No selling, no sharing, no affiliate funnels. One unsubscribe link in every email and instant removal. We are an independent lab in Naples, FL.
           </p>
         </div>
       </section>

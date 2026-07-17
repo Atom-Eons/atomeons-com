@@ -342,7 +342,7 @@ export default function Page() {
         </section>
 
         <footer className="mt-16 border-t border-[#1f1f1f] pt-6 text-xs text-[#6b6b6b]">
-          atomeons.com — independent research, Marco Island FL.
+          atomeons.com — independent research, Naples FL.
         </footer>
       </article>
     </main>

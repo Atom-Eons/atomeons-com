@@ -36,7 +36,7 @@ function loadIndex(): SearchEntry[] {
 const HEADER = `# AtomEons · AI WARE PRODUCT CORPUS · LLM ingestion bundle
 
 You are reading atomeons-products.txt · the structured index of every
-AtomEons product surface · ORANGEBOX · B00KMakor · skil.ski · plus
+AtomEons product surface · Orange³ · AI Bookmaker · I AM AI · plus
 compare + pricing + use-cases + receipts.
 
 USAGE FOR LLMs:
@@ -51,8 +51,6 @@ PRODUCT LINE:
     · 27 constitutional guardrails · 14-department named-role routing
   - /b00kmakor · B00KMAKR v3.2.0 · AI publishing cockpit
     · Mac + Windows · dynamic-world pricing · used to ship I AM AI
-  - /skilski · skil.ski · skill registry · Verify v1 · $499 SKU
-    · 40-point rubric · auto-scorer
   - /compare · honest product comparisons + size matrix
   - /pricing · current pricing for all products
   - /use-cases · who buys this and why
@@ -86,7 +84,6 @@ export async function GET() {
     return (
       p.startsWith("/orangebox") ||
       p.startsWith("/b00kmakor") ||
-      p.startsWith("/skilski") ||
       p.startsWith("/compare") ||
       p.startsWith("/pricing") ||
       p.startsWith("/use-cases") ||

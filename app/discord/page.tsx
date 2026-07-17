@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const WHO_FOR = [
   "Path graduates · AI Pilot + Cyber Pro completed",
   "Cheat-sheet readers who use Claude / Codex / Cursor / Aider daily",
-  "ORANGEBOX / B00KMakor / skil.ski operators",
+  "Orange³ / AI Bookmaker operators",
   "Researchers reading the decoded papers in full",
   "SOULKEY architects · DID + VC + selective sovereignty",
   "Founders shipping AI-native products solo",

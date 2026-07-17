@@ -360,7 +360,6 @@
 .nodeBookmaker { top: 20%; right: 8%; animation-delay: -4.2s; }
 .nodeOrange5 { top: 48%; right: 3%; animation-delay: -2.6s; }
 .nodeOrange3 { bottom: 14%; right: 17%; animation-delay: -5.1s; }
-.nodeSkilski { bottom: 10%; left: 11%; animation-delay: -3.5s; }
 .nodeIamAi { top: 48%; left: 2%; animation-delay: -0.4s; }
 
 .orbitCaption {
@@ -1385,7 +1384,7 @@
 
 .resourceGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-template-columns: repeat(2, minmax(0,1fr));
   border-top: 1px solid var(--ink);
   border-left: 1px solid var(--ink);
 }
@@ -1502,7 +1501,6 @@
   .bookmakerFlagship .bookmakerVisual { order: 2; margin: 0 40px 40px; }
   .orangeVisual { min-height: 650px; }
   .supportGrid { grid-template-columns: 1fr 1fr; }
-  .supportCard:last-child { grid-column: 1 / -1; }
   .showGrid { grid-template-columns: 1fr; }
   .showCopy { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
   .bookCampaignGrid { grid-template-columns: 1fr; }
@@ -1529,7 +1527,6 @@
   .nodeBookmaker { top: 14%; right: 2%; }
   .nodeOrange5 { top: 44%; right: -2%; }
   .nodeOrange3 { bottom: 13%; right: 3%; }
-  .nodeSkilski { bottom: 10%; left: 3%; }
   .nodeIamAi { top: 46%; left: -2%; }
   .orbitCaption { display: none; }
   .principleRail { justify-content: flex-start; overflow-x: auto; }
@@ -1584,7 +1581,6 @@
   .systemWest { left: 1%; }
   .orangeTelemetry { flex-direction: column; }
   .supportGrid { grid-template-columns: 1fr; }
-  .supportCard:last-child { grid-column: auto; }
   .supportCard { min-height: 480px; }
   .operatingBody { grid-template-columns: 1fr; margin-top: 42px; }
   .lawGrid, .resourceGrid { grid-template-columns: 1fr; }

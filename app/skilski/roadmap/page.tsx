@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Where skil.ski is going. Near-term ship plan, longer-horizon ambitions, and an explicit anti-roadmap of features that will never ship.",
   alternates: { canonical: "https://atomeons.com/skilski/roadmap" },
+  robots: { index: false, follow: false, nocache: true },
 };
 
 const NEAR_TERM = [

@@ -32,7 +32,6 @@ const TIMELINE: Entry[] = [
   { date: "2026-06-01", what: "ORANGEBOX Version 1 ship · 14-department AE0–AE14 architecture · §4A no-SaaS license law · code-signed Windows installer", category: "ship", href: "/orangebox" },
   { date: "2026-05-31", what: "Persistent inline search bar wired under fixed Header · 86 KB static index · sublime fuzzy scorer · sub-15ms keystroke", category: "ship" },
   { date: "2026-05-28", what: "Anthropic Claude Opus 4.7 + Sonnet 4.7 become primary model generations · Opus 4.7 drafts I AM AI · Sonnet 4.7 runs Claude Code daily", category: "model" },
-  { date: "2026-05-22", what: "skil.ski two-L brand DNS dead at registrar · all hardcoded URLs renamed to skil.ski → Vercel · operator must update DNS to point skill.ski at Vercel", category: "doctrine", href: "/skilski" },
   { date: "2026-05-15", what: "/founders-view · nightly 8pm ET broadcast launched · cron-scheduled · auto-publish · /api/cron/founders-view", category: "ship", href: "/founders-view" },
   { date: "2026-05-01", what: "/intel/x-algorithm · May 2026 xAI algorithm leak decoded · plain-English breakdown of the source code", category: "research", href: "/intel/x-algorithm" },
   { date: "2026-04-19", what: "ÆSkill Suite V1.4 peer-review tested · 230/230 tests green · 15 skills · 134 triggers · 0 collisions · disclosure ID ATOM-AESUITE-2026-0419", category: "doctrine" },
@@ -41,7 +40,7 @@ const TIMELINE: Entry[] = [
   { date: "2026-03-31", what: "Crystal Lattice Compression v1 (CLC · ATOM-CLC-2026-0331) · archival compression for context · powers ORANGEBOX's 10–80× compression", category: "research" },
   { date: "2026-02-01", what: "atomeons.com initial public launch · Next.js 14 · Tailwind v3 · early version of 4-pillar architecture", category: "ship" },
   { date: "2025-12-15", what: "AtomEons Systems Laboratory formally chartered · operator-only, no employees, no equity sold · 14-clause founding manifesto v1.0", category: "doctrine", href: "/manifesto" },
-  { date: "2024", what: "Lab established. Marco Island, FL. One operator. One desk. The work begins.", category: "doctrine" },
+  { date: "2024", what: "Lab established. Naples, FL. One operator. One desk. The work begins.", category: "doctrine" },
 ];
 
 const CATEGORY_COLOR: Record<Entry["category"], string> = {
@@ -101,7 +100,7 @@ export default function TimelinePage() {
             <span role="listitem" className="text-[#B5BBC0]">25 <span className="text-[#8E969D]">entries</span></span>
             <span role="listitem" className="text-[#B5BBC0]">2024–2026 <span className="text-[#8E969D]">span</span></span>
             <span role="listitem" className="text-[#B5BBC0]">5 <span className="text-[#8E969D]">categories</span></span>
-            <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+            <span role="listitem" className="text-[#8E969D]">Naples · FL</span>
           </div>
           <p className="mt-8 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
             Most recent first. Every entry is either a shipped artifact,

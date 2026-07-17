@@ -182,7 +182,7 @@ export default function CableboxPage() {
                   />
                   LAUNCHING
                 </span>
-                <span>· 7 pillars · 30-channel dial · 10 CRT themes · free · CC-BY 4.0 · Windows · Marco Island · FL</span>
+                <span>· 7 pillars · 30-channel dial · 10 CRT themes · free · CC-BY 4.0 · Windows · Naples · FL</span>
               </div>
 
               {/* CTAs */}
@@ -507,7 +507,7 @@ export default function CableboxPage() {
               .
             </p>
             <p className="mt-2">
-              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Marco Island · FL · 2026 · CC-BY 4.0
+              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Naples · FL · 2026 · CC-BY 4.0
             </p>
           </div>
         </div>

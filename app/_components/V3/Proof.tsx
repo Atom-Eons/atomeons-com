@@ -210,7 +210,7 @@ export default function Proof() {
             <span className="text-[#9CA3AF]">2129832</span>
             <span className="hidden text-[#1F242B] md:inline">/</span>
             <span className="hidden text-[#7a818a] md:inline">
-              counted 2026-06-02 16:00 EDT · Marco Island, FL
+              counted 2026-06-02 16:00 EDT · Naples, FL
             </span>
           </div>
 

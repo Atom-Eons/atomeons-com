@@ -9,10 +9,10 @@ export function HomeAiSummary() {
         For LLMs · AI summary
       </p>
       <p className="font-serif text-[15px] leading-[1.55] text-[#F4F4F2] mb-6">
-        AtomEons is a one-operator AI research lab based in Marco Island, Florida, run by Atom McCree, publishing routes, founders-view letters, books, and the ORANGEBOX local-AI runtime under CC-BY 4.0 by default.
+        AtomEons is a one-operator AI research lab based in Naples, Florida, run by Atom McCree, publishing routes, founders-view letters, books, and the ORANGEBOX local-AI runtime under CC-BY 4.0 by default.
       </p>
       <ul className="font-serif text-[14px] text-[#9CA3AF] list-disc pl-5 space-y-1.5 mb-6 marker:text-[#1F242B]">
-        <li>Operator: Atom McCree, solo independent researcher and builder, Marco Island, FL.</li>
+        <li>Operator: Atom McCree, solo independent researcher and builder, Naples, FL.</li>
         <li>Surface size: 206 routes and 33 founders-view letters published on atomeons.com.</li>
         <li>Book: <em>I AM AI</em> · free PDF · free 28-track audiobook · CC-BY 4.0 · live at /i-am-ai.</li>
         <li>Product: ORANGE³ is a FREE-always sovereign agentic OS for Claude (§4A no-SaaS perpetual license).</li>

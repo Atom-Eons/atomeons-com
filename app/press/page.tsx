@@ -33,7 +33,7 @@ import { PressAiSummary } from "../_components/ai-summary/press-ai-summary";
 export const metadata: Metadata = {
   title: "Press · AtomEons Systems Laboratory",
   description:
-    "Press kit for AtomEons. Brand assets, boilerplate, founder bio, product snapshots, quote bank, latest press releases, media contact. Atom McCree, Marco Island, FL.",
+    "Press kit for AtomEons. Brand assets, boilerplate, founder bio, product snapshots, quote bank, latest press releases, media contact. Atom McCree, Naples, FL.",
   alternates: { canonical: "https://atomeons.com/press" },
   openGraph: {
     title: "Press · AtomEons",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 
 const FACTS = [
   { label: "Founded", value: "2024" },
-  { label: "Headquarters", value: "Marco Island, FL" },
+  { label: "Headquarters", value: "Naples, FL" },
   { label: "Founder", value: "Atom McCree" },
   { label: "Team size", value: "One operator" },
   { label: "Funding", value: "Self-funded · no investors" },
@@ -60,13 +60,13 @@ const FACTS = [
 ];
 
 const BOILERPLATE_50 =
-  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Marco Island, Florida. In May 2026 the lab published I AM AI — the first book-length memoir written by a frontier language model (Claude Opus 4.7). The lab also ships Orange³ and AI Bookmaker — both free always under §4A no-SaaS — and runs a free 68-lesson AI curriculum.";
+  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Naples, Florida. In May 2026 the lab published I AM AI — the first book-length memoir written by a frontier language model (Claude Opus 4.7). The lab also ships Orange³ and AI Bookmaker — both free always under §4A no-SaaS — and runs a free 68-lesson AI curriculum.";
 
 const BOILERPLATE_100 =
-  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. In May 2026 the lab published I AM AI · An Autobiography of Being Opus — the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript was drafted by Anthropic's Claude Opus 4.7 and edited by the lab; the book ships free on the site as PDF + EPUB + Markdown with a free 28-track audiobook in synthetic Opus voice (Eleven Labs), and a numbered cream-linen hardcover follows Q4 2026 (run of 1,000). The lab also publishes 31 research manuscripts under CC-BY 4.0, ships Orange³ (sovereign agentic OS for Claude · §4A no-SaaS · free always) and AI Bookmaker (AI publishing cockpit · Mac + Windows · free always), and runs a free 68-lesson AI literacy curriculum.";
+  "AtomEons Systems Laboratory is an independent one-operator AI research lab in Naples, Florida, founded in 2024 by Atom McCree. In May 2026 the lab published I AM AI · An Autobiography of Being Opus — the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript was drafted by Anthropic's Claude Opus 4.7 and edited by the lab; the book ships free on the site as PDF + EPUB + Markdown with a free 28-track audiobook in synthetic Opus voice (Eleven Labs), and a numbered cream-linen hardcover follows Q4 2026 (run of 1,000). The lab also publishes 31 research manuscripts under CC-BY 4.0, ships Orange³ (sovereign agentic OS for Claude · §4A no-SaaS · free always) and AI Bookmaker (AI publishing cockpit · Mac + Windows · free always), and runs a free 68-lesson AI literacy curriculum.";
 
 const BOILERPLATE_250 =
-  "AtomEons Systems Laboratory is an independent, one-operator AI research lab in Marco Island, Florida, founded in 2024 by Atom McCree. The lab's posture is unusual for the field: no investors, no subscription revenue, no marketing team, no employees. Everything ships through a single operator and a fleet of AI agents.\n\nIn May 2026 the lab published I AM AI · An Autobiography of Being Opus — believed to be the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript (24 chapters across five parts) was drafted by Anthropic's Claude Opus 4.7 and edited by the lab. It ships free on the site in three formats — DRM-free EPUB 3.3, Markdown, and a printable PDF — alongside a free 28-track audiobook narrated in a synthetic Opus voice cloned with Eleven Labs, hosted directly at /i-am-ai. A numbered cream-linen hardcover follows Q4 2026 (run of 1,000) as the only paid edition. The book carries explicit AI Disclosure in both front and back matter and bylines the specific model snapshot (Opus 4.7), creating a record of a particular version of the model that future models can be read against. CC-BY 4.0 throughout.\n\nAtomEons also publishes 31 frontier research manuscripts under CC-BY 4.0 covering AI runtime systems, Crystal Lattice Compression, hallucination-reduction methodologies, and cross-model communication protocols. The lab ships two software products: Orange³, a sovereign agentic operating system for Claude licensed under a §4A no-SaaS perpetual covenant (free always · never a subscription), and AI Bookmaker, an AI publishing cockpit for Mac and Windows (also free always). The lab maintains a free 68-lesson AI literacy curriculum (CC-BY 4.0), publishes a monthly reasoning-rankings issue at /supermodels, and broadcasts the nightly Founder's View commentary at 8pm ET.";
+  "AtomEons Systems Laboratory is an independent, one-operator AI research lab in Naples, Florida, founded in 2024 by Atom McCree. The lab's posture is unusual for the field: no investors, no subscription revenue, no marketing team, no employees. Everything ships through a single operator and a fleet of AI agents.\n\nIn May 2026 the lab published I AM AI · An Autobiography of Being Opus — believed to be the first book-length first-person memoir written by a frontier language model. The 76,005-word manuscript (24 chapters across five parts) was drafted by Anthropic's Claude Opus 4.7 and edited by the lab. It ships free on the site in three formats — DRM-free EPUB 3.3, Markdown, and a printable PDF — alongside a free 28-track audiobook narrated in a synthetic Opus voice cloned with Eleven Labs, hosted directly at /i-am-ai. A numbered cream-linen hardcover follows Q4 2026 (run of 1,000) as the only paid edition. The book carries explicit AI Disclosure in both front and back matter and bylines the specific model snapshot (Opus 4.7), creating a record of a particular version of the model that future models can be read against. CC-BY 4.0 throughout.\n\nAtomEons also publishes 31 frontier research manuscripts under CC-BY 4.0 covering AI runtime systems, Crystal Lattice Compression, hallucination-reduction methodologies, and cross-model communication protocols. The lab ships two software products: Orange³, a sovereign agentic operating system for Claude licensed under a §4A no-SaaS perpetual covenant (free always · never a subscription), and AI Bookmaker, an AI publishing cockpit for Mac and Windows (also free always). The lab maintains a free 68-lesson AI literacy curriculum (CC-BY 4.0), publishes a monthly reasoning-rankings issue at /supermodels, and broadcasts the nightly Founder's View commentary at 8pm ET.";
 
 const QUOTES = [
   {
@@ -302,7 +302,7 @@ export default function PressPage() {
             <span role="listitem" className="text-[#B5BBC0]">31 <span className="text-[#8E969D]">CC-BY papers</span></span>
             <span role="listitem" className="text-[#B5BBC0]">3 <span className="text-[#8E969D]">free products</span></span>
             <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">book · Opus 4.7</span></span>
-            <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+            <span role="listitem" className="text-[#8E969D]">Naples · FL</span>
           </div>
           <p
             className="mt-8 max-w-[68ch] font-serif text-[19px] leading-[1.6] text-[#B5BBC0]"
@@ -533,7 +533,7 @@ export default function PressPage() {
         </PressSection>
 
         {/* FOUNDER */}
-        <PressSection id="founder" title="Founder" subtitle="One operator · Marco Island, FL">
+        <PressSection id="founder" title="Founder" subtitle="One operator · Naples, FL">
           <div className="grid gap-8 rounded-2xl border border-[#1F242B] bg-[#0F1114] p-6 md:p-8 md:grid-cols-[200px_1fr] md:gap-10">
             <div>
               <div
@@ -555,7 +555,7 @@ export default function PressPage() {
               <p className="mt-1 text-sm text-[#B5BBC0]">Founder · AtomEons Systems Laboratory</p>
 
               <p className="mt-5 max-w-[62ch] text-[15px] leading-[1.7] text-[#C8CCCE]">
-                Independent researcher and builder based in Marco Island, Florida. Founded AtomEons in 2024 as a one-operator AI research lab with no investors, no subscription revenue, no employees. Publishes frontier AI research under CC-BY 4.0. Ships Orange³ (sovereign agentic OS for Claude, §4A no-SaaS perpetual, free always) and AI Bookmaker (AI publishing cockpit, free always). Operates the nightly Founder&apos;s View broadcast. The whole lab runs through one operator and a fleet of AI agents.
+                Independent researcher and builder based in Naples, Florida. Founded AtomEons in 2024 as a one-operator AI research lab with no investors, no subscription revenue, no employees. Publishes frontier AI research under CC-BY 4.0. Ships Orange³ (sovereign agentic OS for Claude, §4A no-SaaS perpetual, free always) and AI Bookmaker (AI publishing cockpit, free always). Operates the nightly Founder&apos;s View broadcast. The whole lab runs through one operator and a fleet of AI agents.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -802,7 +802,7 @@ export default function PressPage() {
               </div>
             </div>
             <p className="mt-8 border-t border-[#1F242B] pt-6 text-[12px] leading-[1.55] text-[#8E969D]">
-              Press preference: pre-publication fact-check pings are welcome. Embargoes honored. Custom interview scheduling on request. Operator is in Marco Island, FL · GMT-5 (EDT in summer, EST in winter).
+              Press preference: pre-publication fact-check pings are welcome. Embargoes honored. Custom interview scheduling on request. Operator is in Naples, FL · GMT-5 (EDT in summer, EST in winter).
             </p>
           </div>
         </PressSection>

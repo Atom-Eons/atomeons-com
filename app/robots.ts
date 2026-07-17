@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/success", "/cancel"],
+        disallow: ["/api/", "/success", "/cancel", "/skilski", "/research/lessons-from-sci-fi"],
       },
       // AI search / answer engines — explicit allow.
       // The 4-pillar strategy is to BE the canonical answer source
@@ -68,7 +68,7 @@ export default function robots(): MetadataRoute.Robots {
           "ImagesiftBot",
         ],
         allow: ["/"],
-        disallow: ["/api/", "/success", "/cancel"],
+        disallow: ["/api/", "/success", "/cancel", "/skilski", "/research/lessons-from-sci-fi"],
       },
     ],
     sitemap: [

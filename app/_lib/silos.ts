@@ -230,7 +230,7 @@ export const SILOS: Silo[] = [
     name: "AI Ware",
     tagline: "The product line.",
     description:
-      "Three shipped products built by one operator · Orange³ · AI Bookmaker · skil.ski. §4A perpetual · free always.",
+      "Two shipped software systems built by one operator · Orange³ · AI Bookmaker. §4A perpetual · free always.",
     accent: "#FF4D4D",
     bgTint: "hsla(0, 80%, 35%, 0.10)",
     glyph: "prism",
@@ -239,7 +239,6 @@ export const SILOS: Silo[] = [
       "/aiware",
       "/orangebox",
       "/b00kmakor",
-      "/skilski",
       "/compare",
       "/pricing",
       "/use-cases",
@@ -248,11 +247,10 @@ export const SILOS: Silo[] = [
       { href: "/aiware", label: "AI Ware home" },
       { href: "/orangebox", label: "Orange³" },
       { href: "/b00kmakor", label: "AI Bookmaker" },
-      { href: "/skilski", label: "skil.ski" },
       { href: "/pricing", label: "Pricing" },
     ],
     inventory:
-      "Orange³ sovereign agentic OS · AI Bookmaker publishing cockpit · skil.ski skill registry · pricing · comparisons",
+      "Orange³ sovereign agentic OS · AI Bookmaker publishing cockpit · pricing · comparisons",
   },
   {
     key: "mindstate",

@@ -82,7 +82,7 @@ export default function WeAreAiPage() {
           slogan. It&apos;s an operational state.
         </p>
         <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.32em] text-[#7a818a]">
-          Signed · Atom McCree · operator · Marco Island, FL · 2026-06-12
+          Signed · Atom McCree · operator · Naples, FL · 2026-06-12
         </p>
       </header>
 

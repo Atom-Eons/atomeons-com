@@ -14,12 +14,12 @@ import { AutoGlyph } from "../_components/V3/Illustrations";
 export const metadata: Metadata = {
   title: "AI Ware · the AtomEons product line",
   description:
-    "Three shipped products · all built solo · all open or §4A perpetual · all available now. Orange³ v6 (4.46 MB native cockpit for Claude). AI Bookmaker (AI publishing). skil.ski (skill registry · Verify v1). Compare. Pricing. Use cases.",
+    "Two shipped software systems · both built solo · both open or §4A perpetual · both available now. Orange³ is the native AI cockpit. AI Bookmaker is the publishing machine. Compare. Pricing. Use cases.",
   alternates: { canonical: "https://atomeons.com/aiware" },
   openGraph: {
     title: "AI Ware · AtomEons product line",
     description:
-      "Three shipped products built by one operator · Orange³ · AI Bookmaker · skil.ski.",
+      "Two shipped software systems built by one operator · Orange³ · AI Bookmaker.",
     url: "https://atomeons.com/aiware",
     type: "article",
   },
@@ -41,14 +41,6 @@ const PRODUCTS = [
     body: "Mac + Windows desktop tool for AI-augmented book publishing. End-to-end · manuscript intake · editorial · cover · audiobook · KDP metadata · disclosure ledger. Used by the lab to publish I AM AI in 75 days from blank page to live on Kindle.",
     accent: "#22F0D5",
     bullets: ["v3.2.0 · dynamic-world pricing", "Audiobook generation · synthetic Opus voice (Eleven Labs voice clone)", "Publication-ready KDP metadata"],
-  },
-  {
-    name: "skil.ski",
-    tagline: "Skill registry · Verify v1 · the standard-setter",
-    href: "/skilski",
-    body: "High-ticket curated skill marketplace. Standalone Verify v1 SKU ($499) ships a 40-point rubric plus runnable auto-scorer plus five industry pain dossiers plus a 1000-skill case study. The skill-validation product that sets the standard others measure against.",
-    accent: "#9D7FFF",
-    bullets: ["Verify v1 · $499 standalone", "40-point rubric + auto-scorer", "5 industry pain dossiers included"],
   },
 ];
 

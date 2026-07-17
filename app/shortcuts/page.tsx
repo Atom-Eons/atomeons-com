@@ -176,7 +176,7 @@ export default function ShortcutsPage() {
             </span>
             <span>· 7 sections · ~40 shortcuts</span>
             <span>· documented so screen readers + power users don&apos;t have to guess</span>
-            <span>· Marco Island · FL</span>
+            <span>· Naples · FL</span>
           </div>
 
           <p
@@ -241,7 +241,7 @@ export default function ShortcutsPage() {
               .
             </p>
             <p className="mt-2">
-              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Marco Island · FL · 2026 · CC-BY 4.0
+              <strong className="text-[#F4F4F2]">AtomEons Systems Laboratory</strong> · Naples · FL · 2026 · CC-BY 4.0
             </p>
           </div>
         </div>

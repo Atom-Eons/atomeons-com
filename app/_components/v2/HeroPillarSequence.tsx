@@ -55,7 +55,7 @@ const STAT_ITEMS = [
   "11 LANES",
   "NIGHTLY 8pm ET",
   "60/60 SMOKE",
-  "MARCO ISLAND",
+  "NAPLES",
 ];
 
 export function HeroPillarSequence() {
@@ -135,7 +135,7 @@ export function HeroPillarSequence() {
             aria-hidden
             className="inline-block size-1.5 animate-pulse rounded-full bg-[#22F0D5] shadow-[0_0_8px_#22F0D5]"
           />
-          ::ATOMEONS · INDEPENDENT AI SYSTEMS LABORATORY · MARCO ISLAND, FL
+          ::ATOMEONS · INDEPENDENT AI SYSTEMS LABORATORY · NAPLES, FL
         </p>
 
         {/* Variable-weight H1 */}

@@ -97,7 +97,7 @@ const QUOTE = {
   author: {
     name: "Atom McCree",
     role: "Founder, ÆoNs Research Laboratory",
-    location: "Marco Island, FL",
+    location: "Naples, FL",
     // ISO date of authorship for this pull quote. Receipts > vibes.
     iso: "2026-06-02",
     // Build SHA placeholder — replaced by env-injected commit hash at

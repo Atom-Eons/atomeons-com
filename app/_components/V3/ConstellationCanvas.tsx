@@ -43,7 +43,7 @@ function hash32(s: string): number {
 }
 
 const CATEGORY_ORDER = [
-  "home", "learn", "research", "orangebox", "b00kmakor", "skilski",
+  "home", "learn", "research", "orangebox", "b00kmakor",
   "i-am-ai", "q", "founders-view", "intel", "press", "now",
   "lab", "trust", "transparency", "aesthetic", "colophon", "timeline",
   "influences", "library", "listening", "watching", "ask", "live",

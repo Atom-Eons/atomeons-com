@@ -20,10 +20,17 @@
 import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
-const ROOT = "C:/AtomEons/github/atomeons-com";
+const ROOT = process.cwd();
 const APP_DIR = join(ROOT, "app");
 const SEARCH_INDEX = join(ROOT, "public/search-index.json");
 const OUT = join(ROOT, "public/graph-index.json");
+const STEALTH_ROUTE_PREFIXES = ["/skilski", "/research/lessons-from-sci-fi"];
+const MERGED_ROUTES = new Set(["/b00kmakor", "/i-am-ai/sample", "/i-am-ai/listen"]);
+
+function isStealthRoute(route) {
+  return MERGED_ROUTES.has(route) ||
+    STEALTH_ROUTE_PREFIXES.some((prefix) => route === prefix || route.startsWith(`${prefix}/`));
+}
 
 function walkPages(dir, out = []) {
   for (const entry of readdirSync(dir)) {
@@ -103,6 +110,7 @@ const edges = [];
 for (const file of pageFiles) {
   const route = fileToRoute(file);
   if (!route) continue;
+  if (isStealthRoute(route)) continue;
   const src = readFileSync(file, "utf8");
   const title = extractTitle(src) || route;
   if (!nodeMap.has(route)) {
@@ -119,6 +127,7 @@ for (const file of pageFiles) {
   }
   const refs = extractRefs(src);
   for (const ref of refs) {
+    if (isStealthRoute(ref)) continue;
     if (ref === route) continue;  // skip self-loops
     edges.push({ from: route, to: ref });
   }
@@ -128,6 +137,7 @@ for (const file of pageFiles) {
 try {
   const idx = JSON.parse(readFileSync(SEARCH_INDEX, "utf8"));
   for (const r of idx.records) {
+    if (isStealthRoute(r.r)) continue;
     if (!nodeMap.has(r.r)) {
       nodeMap.set(r.r, { r: r.r, t: r.t || r.r, c: r.c || categorize(r.r), w: 0 });
     } else {

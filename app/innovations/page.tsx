@@ -172,18 +172,6 @@ const PRODUCTS: Invention[] = [
     status: "shipped",
   },
   {
-    name: "skil.ski · skill registry",
-    one_line:
-      "High-ticket curated skill marketplace · standalone Verify v1 SKU at $499 · 40-point rubric + auto-scorer.",
-    why_first:
-      "First (and only known) skill-rubric SKU that includes a runnable auto-scorer rather than a manual checklist.",
-    evidence: [
-      { label: "/skilski · product page", url: "/skilski" },
-      { label: "skilskis Verify v1 · standalone $499 SKU" },
-    ],
-    status: "shipped",
-  },
-  {
     name: "Mindrest · in-browser audiovisual entrainment",
     one_line:
       "Eight-mode entrainment session · binaural beat synthesis (alpha 10Hz · theta 6Hz · beta 15Hz · delta 3Hz · Schumann 7.83Hz · Wim Hof rhythm · Sleep wind-down · pure Meditation) · synthesized ocean swell · 4-7-8 breathing guide · 20-min auto-stop · photosensitive-epilepsy safety gate.",
@@ -594,7 +582,7 @@ export default function InnovationsPage() {
               <span role="listitem" className="text-[#B5BBC0]">12 <span className="text-[#8E969D]">CC-BY papers</span></span>
               <span role="listitem" className="text-[#B5BBC0]">3 <span className="text-[#8E969D]">free products</span></span>
               <span role="listitem" className="text-[#B5BBC0]">1 <span className="text-[#8E969D]">book</span></span>
-              <span role="listitem" className="text-[#8E969D]">Marco Island · FL</span>
+              <span role="listitem" className="text-[#8E969D]">Naples · FL</span>
             </div>
             <p className="mt-8 max-w-[68ch] text-[19px] leading-[1.6] text-[#B5BBC0]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
               Things the lab built first. Things nobody else has done.

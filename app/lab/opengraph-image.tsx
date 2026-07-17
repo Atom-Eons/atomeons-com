@@ -13,7 +13,7 @@ export const contentType = ogContentType;
  */
 export default function OG() {
   return renderNoirCard({
-    section: "§ the lab · Marco Island, FL",
+    section: "§ the lab · Naples, FL",
     title: "One room. One operator.",
     stamp: "ANTI-LARP",
     accent: "cyan",

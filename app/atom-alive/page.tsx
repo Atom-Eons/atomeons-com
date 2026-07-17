@@ -28,7 +28,7 @@ export default function AtomAlivePage() {
       <section className={styles.hero}>
         <div className={styles.utility}>
           <span>ATOM ALIVE / BROADCAST UNIT 01</span>
-          <span>MARCO ISLAND · FL</span>
+          <span>NAPLES · FL</span>
           <span className={styles.signal}><i /> SIGNAL ACTIVE</span>
         </div>
 

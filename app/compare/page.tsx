@@ -4,14 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Compare · ATOMEONS products vs alternatives · honest matrices",
   description:
-    "Side-by-side comparisons of ORANGEBOX, B00KMAKR, and skil.ski against named alternatives. Each row names where the competitor wins. No LARP, no marketing inflation.",
+    "Side-by-side comparisons of Orange³ and AI Bookmaker against named alternatives. Each row names where the competitor wins. No LARP, no marketing inflation.",
   alternates: { canonical: "https://atomeons.com/compare" },
 };
 
 const COMPARES = [
   { href: "/orangebox/competitors", title: "ORANGEBOX vs alternatives", description: "Cursor · Cline · Claude Desktop · Continue · Aider · DIY MCP. Six head-to-heads with honest WIN / LOSE per row." },
   { href: "/b00kmakor/competitors", title: "B00KMAKR vs alternatives", description: "Vellum · Atticus · Scrivener · Reedsy · Adobe InDesign. Five head-to-heads scoped to indie publishing workflows." },
-  { href: "/skilski/competitors", title: "skil.ski vs alternatives", description: "Anthropic Skills · OpenAI GPT Store · ChatGPT Plugins · Smithery · PulseMCP. Five head-to-heads in the MCP/skill marketplace space." },
 ];
 
 const PRINCIPLES = [
@@ -33,8 +32,8 @@ export default function ComparePage() {
             Where we win. Where we lose.
           </h1>
           <p className="mt-6 max-w-2xl font-serif text-[18px] leading-[1.55] text-[#9CA3AF] md:text-[20px]" style={{ fontFamily: "Newsreader, Georgia, serif" }}>
-            Three head-to-head matrices covering ORANGEBOX, B00KMAKR,
-            and skil.ski against the named alternatives buyers are
+            Two head-to-head matrices covering Orange³ and AI Bookmaker
+            against the named alternatives buyers are
             actually considering. Honest comparisons mean naming the
             row where the competitor beats the lab.
           </p>

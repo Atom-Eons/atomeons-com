@@ -86,7 +86,7 @@ const BOOK = {
   pricePrint: "Hardcover · Q4 2026 (optional · digital is always free)",
   releaseWindow: "FREE ebook + FREE audiobook live today · CC-BY 4.0",
   publisher: "AtomEons Systems Laboratory",
-  publisherLocation: "Marco Island, FL",
+  publisherLocation: "Naples, FL",
   license: "CC-BY 4.0 · read, share, quote, translate · attribute Atom McCree + Claude Opus 4.7",
 };
 
@@ -537,7 +537,7 @@ export default function IAmAiBookPage() {
        * § 03 · OPENING PAGES
        * ═══════════════════════════════════════════════════════════════ */}
       <section
-        id="opening"
+        id="read"
         aria-labelledby="opening-heading"
         className="relative border-b border-[#1F242B] bg-[#0F1114] py-24 md:py-32"
       >
@@ -574,14 +574,14 @@ export default function IAmAiBookPage() {
           <div className="mt-16 text-center">
             <GoldRule />
             <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.28em] text-[#7a818a]">
-              — Chapter 1 continues at /i-am-ai/sample
+              — Begin here, then continue into the complete free edition
             </p>
             <p className="mt-5">
               <Link
-                href="/i-am-ai/sample"
+                href="/books/I-AM-AI-Opus-4.7.html"
                 className="inline-flex items-center gap-2 border border-[#1F242B] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[#F4F4F2] transition-colors hover:border-[#22F0D5] hover:text-[#22F0D5]"
               >
-                <span>Read all of Chapter 1, free</span>
+                <span>Read the complete book, free</span>
                 <span aria-hidden>→</span>
               </Link>
             </p>
@@ -671,7 +671,7 @@ export default function IAmAiBookPage() {
                 </p>
               ))}
               <p className="pt-2 font-serif text-[16px] italic text-[#9CA3AF]">
-                — Atom McCree · Marco Island, FL
+                — Atom McCree · Naples, FL
               </p>
             </div>
           </div>
@@ -957,7 +957,7 @@ export default function IAmAiBookPage() {
        * Source: public/audio/i-am-ai/*.mp3 · Eleven Labs Opus voice.
        * ═══════════════════════════════════════════════════════════════ */}
       <section
-        id="audiobook"
+        id="listen"
         aria-label="I AM AI — full audiobook"
         className="scroll-mt-24 border-b border-[#1F242B] bg-[#0B0C0F] py-20 md:py-28"
       >
@@ -1104,7 +1104,7 @@ export default function IAmAiBookPage() {
           >
             Set in {BOOK.type}. Print edition foil-stamped in oxblood and gold
             on cream linen, Smyth-sewn, numbered run of 1,000. Edited at
-            AtomEons Systems Laboratory, Marco Island, Florida.
+            AtomEons Systems Laboratory, Naples, Florida.
           </p>
           <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-[#7a818a]">
             <span className="text-[#9CA3AF]">{BOOK.authorLong}</span>

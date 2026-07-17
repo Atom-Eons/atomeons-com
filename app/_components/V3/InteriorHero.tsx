@@ -441,7 +441,7 @@ export function InteriorHero({
           <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-[#9CA3AF]">
             <span className="text-[#F4F4F2]">{resolvedEyebrow}</span>
             <span className="mx-3 text-[#1F242B]">·</span>
-            <span className="text-[#7a818a]">MARCO ISLAND · EST. 2024</span>
+            <span className="text-[#7a818a]">NAPLES · EST. 2024</span>
           </p>
 
           <nav aria-label="Breadcrumb" className="md:justify-self-end">
