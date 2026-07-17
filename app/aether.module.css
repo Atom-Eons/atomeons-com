@@ -83,18 +83,18 @@
   font-family: var(--font-inter), Inter, system-ui, sans-serif !important;
   font-size: clamp(68px, 8.3vw, 148px);
   font-weight: 580 !important;
-  letter-spacing: -0.082em !important;
-  line-height: 0.82;
+  letter-spacing: -0.07em !important;
+  line-height: 0.85;
 }
 
 .heroTitle span {
   display: block;
-  color: transparent;
-  font-family: "Newsreader", Georgia, serif;
+  color: #343530;
+  font-family: var(--font-serif);
   font-style: italic;
   font-weight: 350;
-  letter-spacing: -0.065em;
-  -webkit-text-stroke: 1.4px var(--ink);
+  letter-spacing: -0.055em;
+  -webkit-text-stroke: 0;
 }
 
 .heroDeck {
@@ -113,7 +113,7 @@
   padding-left: 18px;
   border-left: 3px solid #f36b21;
   color: var(--ink) !important;
-  font-family: "Newsreader", Georgia, serif !important;
+  font-family: var(--font-serif) !important;
   font-size: clamp(19px, 1.6vw, 25px);
   font-style: italic;
   letter-spacing: -.025em;
@@ -137,7 +137,7 @@
   justify-content: center;
   gap: 34px;
   border: 1px solid var(--ink);
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--ink);
   color: #fff !important;
   font-size: 13px;
@@ -205,7 +205,7 @@
 }
 
 .metric strong {
-  font-family: "Newsreader", Georgia, serif;
+  font-family: var(--font-serif);
   font-size: clamp(26px, 2vw, 38px);
   font-weight: 350;
   letter-spacing: -0.04em;
@@ -296,7 +296,7 @@
 }
 
 .coreAe {
-  font-family: "Newsreader", Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 54px;
   font-weight: 350;
   line-height: 0.8;
@@ -458,7 +458,7 @@
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   overflow: hidden;
   border: 1px solid var(--ink);
-  border-radius: 12px;
+  border-radius: 4px;
   background: #fff;
 }
 
@@ -496,14 +496,14 @@
   font-family: var(--font-inter), Inter, sans-serif !important;
   font-size: clamp(52px, 6vw, 100px);
   font-weight: 590 !important;
-  letter-spacing: -0.075em !important;
-  line-height: 0.88;
+  letter-spacing: -0.065em !important;
+  line-height: 0.9;
 }
 
 .flagshipTagline {
   margin: 22px 0 0;
   color: var(--ink) !important;
-  font-family: "Newsreader", Georgia, serif !important;
+  font-family: var(--font-serif) !important;
   font-size: clamp(24px, 2.3vw, 38px);
   font-style: italic;
   letter-spacing: -0.035em;
@@ -770,7 +770,7 @@
   max-width: 17ch;
   margin: 38px 0 34px;
   color: #2e2923;
-  font-family: "Newsreader", Georgia, serif;
+  font-family: var(--font-serif);
   font-size: clamp(28px, 3.4vw, 50px);
   font-weight: 350;
   letter-spacing: -0.04em;
@@ -916,12 +916,12 @@
 .supportCard {
   position: relative;
   display: flex;
-  min-height: 520px;
+  min-height: 460px;
   padding: 28px;
   overflow: hidden;
   flex-direction: column;
   border: 1px solid var(--ink);
-  border-radius: 12px;
+  border-radius: 4px;
   color: var(--ink) !important;
   text-decoration: none !important;
   transition: transform 220ms ease, box-shadow 220ms ease;
@@ -945,15 +945,15 @@
 
 .supportGlyph {
   display: grid;
-  width: 180px;
-  height: 180px;
-  margin: 48px auto 36px;
+  width: 150px;
+  height: 150px;
+  margin: 40px auto 30px;
   place-items: center;
   border: 1px solid color-mix(in srgb, var(--accent) 60%, #111);
   border-radius: 50%;
   color: var(--accent);
-  font-family: "Newsreader", Georgia, serif;
-  font-size: 62px;
+  font-family: var(--font-serif);
+  font-size: 54px;
   font-style: italic;
   box-shadow: inset 0 0 0 22px color-mix(in srgb, var(--accent) 8%, transparent);
 }
@@ -1065,7 +1065,7 @@
 .showCopy h2 {
   margin: 0;
   color: #fff !important;
-  font-family: "Newsreader", Georgia, serif !important;
+  font-family: var(--font-serif) !important;
   font-size: clamp(74px, 9vw, 152px);
   font-weight: 430 !important;
   letter-spacing: -.075em !important;
@@ -1274,7 +1274,7 @@
   max-width: 8ch;
   margin: 40px 0 0;
   color: #a52f2a !important;
-  font-family: "Newsreader", Georgia, serif !important;
+  font-family: var(--font-serif) !important;
   font-size: clamp(82px, 9.5vw, 158px);
   font-weight: 460 !important;
   letter-spacing: -.08em !important;
@@ -1295,7 +1295,7 @@
   max-width: 62ch;
   margin: 30px 0 0;
   color: #59534f !important;
-  font-family: "Newsreader", Georgia, serif !important;
+  font-family: var(--font-serif) !important;
   font-size: 18px;
   line-height: 1.55 !important;
 }
@@ -1306,7 +1306,7 @@
   padding: 20px 0 20px 22px;
   border-left: 2px solid #a52f2a;
   color: #6f322e;
-  font-family: "Newsreader", Georgia, serif;
+  font-family: var(--font-serif);
   font-size: clamp(18px, 1.7vw, 27px);
   font-style: italic;
   letter-spacing: -.025em;
@@ -1357,7 +1357,7 @@
   max-width: 800px;
   margin: 0;
   color: rgba(255,255,255,.66) !important;
-  font-family: "Newsreader", Georgia, serif !important;
+  font-family: var(--font-serif) !important;
   font-size: clamp(21px, 2vw, 31px);
   letter-spacing: -.025em;
   line-height: 1.35 !important;
@@ -1455,7 +1455,7 @@
 }
 
 .proofSection h2 { margin-top: 28px; max-width: 9ch; }
-.proofDeck { max-width: 620px; margin: 34px 0 0; color: var(--muted) !important; font-family: "Newsreader", Georgia, serif !important; font-size: clamp(20px,1.8vw,28px); letter-spacing: -.02em; line-height: 1.42 !important; }
+.proofDeck { max-width: 620px; margin: 34px 0 0; color: var(--muted) !important; font-family: var(--font-serif) !important; font-size: clamp(20px,1.8vw,28px); letter-spacing: -.02em; line-height: 1.42 !important; }
 
 .receiptStack {
   align-self: end;

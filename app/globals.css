@@ -1,12 +1,87 @@
+@font-face {
+  font-family: "AE Geist";
+  src: url("/fonts/Geist-Variable.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "AE Geist Mono";
+  src: url("/fonts/GeistMono-Variable.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "AE Newsreader";
+  src: url("/fonts/Newsreader-Variable.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200 800;
+}
+
+@font-face {
+  font-family: "AE Newsreader";
+  src: url("/fonts/Newsreader-VariableItalic.woff2") format("woff2");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 200 800;
+}
+
+:root {
+  --font-inter: "AE Geist";
+  --font-mono: "AE Geist Mono";
+  --font-serif: "AE Newsreader", Georgia, serif;
+  --page-white: #fcfcfa;
+  --page-ink: #11120f;
+  --focus: #2558dc;
+}
+
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: #fff; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+  background: var(--page-white);
+}
+
 body {
   margin: 0;
-  background: #fff;
-  color: #101010;
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page-white);
+  color: var(--page-ink);
+  font-family: var(--font-inter), "Helvetica Neue", Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-synthesis: none;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
+
 a { color: inherit; }
 button, input { font: inherit; }
 ::selection { background: #d8ff3e; color: #101010; }
+
+:where(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+:where(p, li) {
+  text-wrap: pretty;
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(a, button, input):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
