@@ -56,6 +56,130 @@
 .heroAside p { color: var(--muted); font-size: 15px; line-height: 1.55; }
 .heroAside strong { display: block; margin-bottom: 8px; color: var(--ink); font-size: 22px; }
 
+.routeHeroAside {
+  display: grid;
+  align-self: stretch;
+  align-content: end;
+  gap: 32px;
+}
+
+.routeAsideCopy {
+  max-width: 430px;
+}
+
+.routeInstrument {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  background:
+    linear-gradient(rgba(16,16,16,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,16,16,.055) 1px, transparent 1px),
+    #faf9f5;
+  background-size: 28px 28px;
+}
+
+.routeInstrumentTop,
+.routeInstrumentBottom {
+  position: absolute;
+  z-index: 2;
+  right: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font: 760 7px/1 var(--font-mono, monospace);
+  letter-spacing: .14em;
+}
+
+.routeInstrumentTop {
+  top: 14px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(16,16,16,.62);
+}
+
+.routeInstrumentBottom {
+  bottom: 14px;
+}
+
+.routeInstrumentBottom i {
+  height: 1px;
+  flex: 1;
+  background: var(--accent, #f36b21);
+}
+
+.routeInstrument svg {
+  position: absolute;
+  inset: 34px 12px 28px;
+  width: calc(100% - 24px);
+  height: calc(100% - 62px);
+}
+
+.routeInstrument svg path,
+.routeInstrument svg circle {
+  fill: none;
+  stroke: rgba(16,16,16,.28);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.routeInstrument svg .routeInstrumentAccent {
+  stroke: var(--accent, #f36b21);
+  stroke-width: 2;
+}
+
+.routeInstrument svg .routeInstrumentDot {
+  fill: var(--accent, #f36b21);
+  stroke: #fff;
+  stroke-width: 3;
+}
+
+.routeInstrument > b {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  color: var(--ink);
+  font-size: clamp(58px, 6vw, 98px);
+  font-weight: 600;
+  letter-spacing: -.075em;
+  line-height: .8;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+
+.routeRail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid var(--line);
+  background: var(--ink);
+  color: #fff;
+}
+
+.routeRail > span {
+  display: flex;
+  min-height: 46px;
+  padding: 0 18px;
+  align-items: center;
+  gap: 8px;
+  border-right: 1px solid rgba(255,255,255,.2);
+  font: 760 8px/1 var(--font-mono, monospace);
+  letter-spacing: .13em;
+}
+
+.routeRail > span:last-child {
+  border-right: 0;
+}
+
+.routeRail i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent, #f36b21);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent, #f36b21) 20%, transparent);
+}
+
 .section {
   max-width: 1540px;
   margin: 0 auto;
@@ -92,6 +216,17 @@
 .card:nth-child(3n) { border-right: 0; }
 .card:nth-child(n+4) { border-top: 1px solid var(--line); }
 .card:hover { background: var(--paper); transform: translateY(-4px); }
+.card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+  content: "";
+  background: var(--accent, #f36b21);
+  transition: width .35s cubic-bezier(.2,.72,.2,1);
+}
+.card:hover::before { width: 100%; }
 .cardTop { display: flex; justify-content: space-between; gap: 16px; color: var(--muted); }
 .card h3 { margin: 84px 0 18px; font-size: clamp(32px, 3.3vw, 54px); line-height: .95; letter-spacing: -.05em; }
 .card p { max-width: 42ch; color: var(--muted); font-size: 16px; line-height: 1.55; }
@@ -453,6 +588,11 @@
 @media (max-width: 900px) {
   .heroGrid, .sectionHead, .feature, .twoCol { grid-template-columns: 1fr; }
   .heroAside { max-width: 480px; }
+  .routeHeroAside { max-width: none; }
+  .routeInstrument { min-height: 340px; }
+  .routeRail { grid-template-columns: 1fr 1fr; }
+  .routeRail > span:nth-child(2) { border-right: 0; }
+  .routeRail > span:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.2); }
   .grid { grid-template-columns: 1fr; }
   .card { min-height: 310px; border-right: 0; border-bottom: 1px solid var(--line); }
   .card:nth-child(n+4) { border-top: 0; }
@@ -466,6 +606,15 @@
 
 @media (max-width: 580px) {
   .hero h1 { font-size: clamp(58px, 20vw, 92px); }
+  .routeInstrument { min-height: 280px; }
+  .routeRail { grid-template-columns: 1fr; }
+  .routeRail > span,
+  .routeRail > span:nth-child(2) {
+    min-height: 40px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+  }
+  .routeRail > span:last-child { border-bottom: 0; }
   .factGrid { grid-template-columns: 1fr; }
   .fact, .fact:nth-child(2n), .fact:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); }
   .fact:last-child { border-bottom: 0; }

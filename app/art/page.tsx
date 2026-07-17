@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  RouteCampaign,
   RouteCards,
   RouteFinal,
   RoutePage,
@@ -22,6 +23,16 @@ export default function ArtPage() {
       asideBody="AtomEons does not split usefulness from expression. The interface, ritual, story, industrial form, and way an object behaves are all part of the work."
       accent="#f36b21"
     >
+      <RouteCampaign
+        image="/aether-v2/hero-invention-field-v2.webp"
+        imageAlt="A white workshop field of sculptural software machines, signals, and handmade prototypes"
+        object="ART PRACTICE / FIELD OBJECT"
+        measure="TASTE / SYSTEM / BEHAVIOR"
+        label="AI AS CREATIVE MATERIAL"
+        title="Make the impossible tangible."
+        note="CODE / VOICE / IMAGE / RITUAL / OBJECT"
+        priority
+      />
       <RouteSection index="SELECTED WORK / THREE OBJECTS" title="Art that does something.">
         <RouteCards
           cards={[

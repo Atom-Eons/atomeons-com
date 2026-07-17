@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  RouteCampaign,
   RouteCards,
   RouteFinal,
   RoutePage,
@@ -26,6 +27,16 @@ export default function CinemaPage() {
         { href: "/atom-alive", label: "Enter Atom Alive" },
       ]}
     >
+      <RouteCampaign
+        image="/aether-v3/atom-alive-broadcast-object-v3.webp"
+        imageAlt="A handmade independent television broadcast machine with CRT, camera, recorder, and acid signal"
+        object="ATOM ALIVE / BROADCAST UNIT 01"
+        measure="MAKE / BREAK / EXPLAIN / SHIP"
+        label="THE AI CODE SHOW"
+        title="Creation is the plot."
+        note="INDEPENDENT SIGNAL / YOUTUBE / NAPLES, FLORIDA"
+        priority
+      />
       <RouteSection index="PROGRAM / ATOM ALIVE" title="A signal with a point of view.">
         <RouteCards
           cards={[

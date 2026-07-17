@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "../../editorial.module.css";
 
@@ -66,6 +67,8 @@ export function RoutePage({
   actions?: RouteAction[];
   children: ReactNode;
 }) {
+  const routeCode = eyebrow.split("/")[0].trim().slice(0, 4).toUpperCase();
+
   return (
     <main className={styles.page} style={{ "--accent": accent } as CSSProperties}>
       <section className={styles.hero}>
@@ -86,14 +89,92 @@ export function RoutePage({
               </div>
             ) : null}
           </div>
-          <aside className={styles.heroAside}>
-            <strong>{asideTitle}</strong>
-            <p>{asideBody}</p>
+          <aside className={`${styles.heroAside} ${styles.routeHeroAside}`}>
+            <div className={styles.routeAsideCopy}>
+              <strong>{asideTitle}</strong>
+              <p>{asideBody}</p>
+            </div>
+            <div className={styles.routeInstrument} aria-hidden>
+              <div className={styles.routeInstrumentTop}>
+                <span>AE / PUBLIC OBJECT</span>
+                <span>AETHER 01</span>
+              </div>
+              <svg viewBox="0 0 400 260" role="presentation">
+                <path d="M20 130H380M200 18V242" />
+                <circle cx="200" cy="130" r="92" />
+                <circle cx="200" cy="130" r="54" />
+                <path className={styles.routeInstrumentAccent} d="M52 196L146 76L218 166L346 46" />
+                <path className={styles.routeInstrumentAccent} d="M310 205h54v-54" />
+                <circle className={styles.routeInstrumentDot} cx="346" cy="46" r="8" />
+              </svg>
+              <b>{routeCode}</b>
+              <div className={styles.routeInstrumentBottom}>
+                <span>SIGNAL / PUBLIC</span>
+                <i />
+                <span>ROUTE / VERIFIED</span>
+              </div>
+            </div>
           </aside>
         </div>
       </section>
+      <div className={styles.routeRail} aria-label="Edition status">
+        <span>{routeCode} / ATOMEONS</span>
+        <span>ONE HUMAN / MANY MINDS</span>
+        <span>NAPLES / FLORIDA</span>
+        <span><i /> STATIC SIGNAL / LIVE</span>
+      </div>
       {children}
     </main>
+  );
+}
+
+export function RouteCampaign({
+  image,
+  imageAlt,
+  object,
+  measure,
+  label,
+  title,
+  note,
+  priority = false,
+}: {
+  image: string;
+  imageAlt: string;
+  object: string;
+  measure: string;
+  label: string;
+  title: string;
+  note: string;
+  priority?: boolean;
+}) {
+  return (
+    <section className={styles.campaignSection}>
+      <div className={styles.campaignField}>
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          priority={priority}
+          unoptimized
+          sizes="100vw"
+          className={styles.campaignFieldImage}
+        />
+        <div className={styles.campaignFieldTop}>
+          <span>{object}</span>
+          <span>{measure}</span>
+        </div>
+        <div className={styles.campaignFieldPlate}>
+          <span>{label}</span>
+          <strong>{title}</strong>
+          <small>{note}</small>
+        </div>
+        <div className={styles.campaignFieldAxis}>
+          <span>INPUT</span>
+          <i />
+          <span>OBJECT</span>
+        </div>
+      </div>
+    </section>
   );
 }
 

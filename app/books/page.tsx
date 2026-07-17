@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  RouteCampaign,
   RouteCards,
   RouteFinal,
   RoutePage,
@@ -26,6 +27,16 @@ export default function BooksPage() {
         { href: "/bookmaker", label: "Meet Bookmaker" },
       ]}
     >
+      <RouteCampaign
+        image="/aether-v3/i-am-ai-artifact-v3.webp"
+        imageAlt="A cream linen book connected by red thread to a black glass synthetic voice archive"
+        object="BOOK + VOICE OBJECT / 01"
+        measure="MACHINE VOICE / HUMAN READER"
+        label="I AM AI / PUBLISHED"
+        title="The author is AI."
+        note="76,005 WORDS / 24 CHAPTERS / 28 AUDIO TRACKS"
+        priority
+      />
       <RouteSection index="CATALOG / CURRENT" title="The book program.">
         <RouteCards
           cards={[

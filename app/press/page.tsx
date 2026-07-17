@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PAPERS } from "../_data/research-papers";
 import {
   RouteCards,
+  RouteCampaign,
   RouteFacts,
   RouteFinal,
   RoutePage,
@@ -31,6 +32,16 @@ export default function PressPage() {
         { href: "/receipts", label: "Check the receipts" },
       ]}
     >
+      <RouteCampaign
+        image="/aether-v2/hero-invention-field-v2.webp"
+        imageAlt="A bright independent invention field of handmade AI objects and working instruments"
+        object="PRESS FIELD / ORIGIN OBJECT"
+        measure="ARTIST / MACHINE / PUBLIC PROOF"
+        label="THE STORY IS THE WORK"
+        title="A story with receipts."
+        note="NAPLES, FLORIDA / ONE OPERATOR / DIRECT CONTACT"
+        priority
+      />
       <RouteSection index="FAST FACTS / CURRENT" title="The short file.">
         <RouteFacts
           facts={[
