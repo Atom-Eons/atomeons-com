@@ -1,8 +1,8 @@
 # Aether destination graphics V3 receipt
 
-Date: 2026-07-17  
-Branch: `aecdex/atomeons-aether-redesign`  
-Production target: AtomEons Aether Sites project  
+Date: 2026-07-17
+Branch: `aecdex/atomeons-aether-redesign`
+Production target: AtomEons Aether Sites project
 Rollback before this pass: Sites version 6 / GitHub commit `c363158b41796e0a7c08a2cfa0ae50d0b0e0b526`
 
 ## Goal
@@ -57,4 +57,13 @@ Built-in image-generation mode was used for both original campaign objects. Gene
 
 ## Deployment
 
-Pending final source push, saved Sites version, and production deployment receipt.
+- Canonical GitHub source commit: `7d69683`
+- Deployable source commit: `2fdda56de2cf0137ed21dbd29cf4394407404e2d`
+- Sites version: 8
+- Sites version ID: `appgprj_6a59c864592c8191a8f2158cfe05af20~appgver_b5626f27334081918dbf3e52b78f0aa9`
+- Deployment ID: `appgdep_6a5a196b3d08819193c6af8100ed0db7`
+- Production URL: `https://atomeons-aether.a-mccree.chatgpt.site`
+- Deployment status: SUCCEEDED
+- Live route probes: homepage, CableBox, Bookmaker, Orange5, I AM AI, Atom Alive, and About all returned HTTP 200.
+- Live asset probes: both V3 WebPs returned HTTP 200 with exact expected byte counts after edge propagation.
+- Rollback: redeploy saved Sites version 6.
