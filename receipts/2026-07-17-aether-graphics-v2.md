@@ -78,6 +78,17 @@ not affect the old main-site branch, sleeping archive, paper PDFs, routes, or pr
   - Packaged Sites entrypoints exist at `dist/server/index.js`,
     `dist/.openai/hosting.json`, and `dist/assets/index.html`.
   - All five optimized V2 graphics are present in `dist/assets/aether-v2/`.
-- The in-app browser preview window did not attach, so final visual inspection
-  used the generated assets directly and the deployed page remains the final browser proof.
-- Live Sites verification: pending at receipt creation time.
+- Sites version 5 deployed successfully, then the live browser proof exposed a
+  static-host mismatch: Next Image was requesting `/_next/image` optimization
+  endpoints that do not exist on the static Sites projection.
+- The five new campaign images now use direct static delivery with `unoptimized`.
+  Sites version 6 deployed successfully from projection commit
+  `c06193c7cf3154ee97a081f194a8813354f96fb2`.
+- Final deployment:
+  - URL: `https://atomeons-aether.a-mccree.chatgpt.site`
+  - Version: 6
+  - Version ID: `appgprj_6a59c864592c8191a8f2158cfe05af20~appgver_e93e01aade248191a46c74e511baadb6`
+  - Deployment ID: `appgdep_6a59e9846ddc81918b0a2a214e045687`
+- Browser proof after the correction confirmed direct `/aether-v2/*.webp` URLs.
+  The hero and first product image both completed with natural dimensions
+  `1536 × 1024`; below-fold product images remained correctly lazy-loaded.

@@ -86,6 +86,7 @@ export default function AetherHome() {
               alt="A hand-built AtomEons command instrument surrounded by experimental objects on a white workshop table"
               fill
               priority
+              unoptimized
               sizes="(max-width: 1180px) 100vw, 46vw"
             />
             <div className={styles.heroArtifactVeil} aria-hidden />
@@ -424,6 +425,7 @@ function CableboxVisual() {
           src="/aether-v2/cablebox-object-v2.webp"
           alt="CableBox imagined as a repairable charcoal television object with a cobalt analog screen and a physical tuning dial"
           fill
+          unoptimized
           sizes="(max-width: 1180px) 100vw, 54vw"
         />
         <div className={styles.objectTopline}>
@@ -463,6 +465,7 @@ function BookmakerVisual() {
           src="/aether-v2/bookmaker-object-v2.webp"
           alt="Bookmaker imagined as a warm-white clothbound book beside a machined independent publishing instrument"
           fill
+          unoptimized
           sizes="(max-width: 1180px) 100vw, 56vw"
         />
         <div className={styles.objectTopline}>
@@ -496,6 +499,7 @@ function Orange5Visual() {
         src="/aether-v2/orange5-object-v2.webp"
         alt="Orange5 imagined as a modular translucent orange command instrument with four connected control units"
         fill
+        unoptimized
         sizes="(max-width: 1180px) 100vw, 54vw"
       />
       <div className={styles.orangeMesh} aria-hidden />
