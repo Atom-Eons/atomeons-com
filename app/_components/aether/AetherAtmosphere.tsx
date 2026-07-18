@@ -28,7 +28,13 @@ function energyForCount(count: number) {
 
 function themeForPath(pathname: string) {
   if (pathname.includes("radiance")) return "radiance";
-  if (pathname === "/atom-alive" || pathname.startsWith("/cinema")) return "signal";
+  if (
+    pathname === "/atom-alive" ||
+    pathname.startsWith("/cinema") ||
+    pathname.startsWith("/cablebox")
+  ) {
+    return "signal";
+  }
   if (pathname.startsWith("/orange5")) return "forge";
   if (pathname.startsWith("/research")) return "evidence";
   if (
