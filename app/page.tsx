@@ -60,20 +60,20 @@ export default function AetherHome() {
             </h1>
             <p className={styles.heroDeck}>
               Atom McCree is a 42 year old creative with 25 years in the creative arts. Now merging art and AI to create the never existed.
-              Outfunded and outnumbered, he directs a massive AI workforce to make software, books, broadcasts, and objects that did not exist yesterday.
+              He directs a massive AI workforce. The finished products, books, broadcasts, and experiments are below.
             </p>
             <p className={styles.heroManifesto}>“I am an artist using AI to paint a new future.”</p>
             <div className={styles.heroActions}>
               <a href="#products" className={styles.primaryButton}>
-                Enter the product constellation <Arrow />
+                See what exists <Arrow />
               </a>
               <Link href="/explore" className={styles.textButton}>
-                Explore the full archive <Arrow />
+                Explore every public object <Arrow />
               </Link>
             </div>
             <div className={styles.heroMetrics} aria-label="AtomEons at a glance">
               <Metric value="4" label="featured products" />
-              <Metric value="1" label="human operator" />
+              <Metric value="1" label="artist directing it" />
               <Metric value="24/7" label="AI workforce" />
               <Metric value="$0" label="venture capital" />
             </div>
@@ -92,7 +92,7 @@ export default function AetherHome() {
             <div className={styles.heroArtifactVeil} aria-hidden />
             <div className={styles.artifactIndex}>
               <span>FIELD OBJECT / AE-01</span>
-              <span>ONE HUMAN / MANY MINDS</span>
+              <span>ARTIST DIRECTED / MACHINE AMPLIFIED</span>
             </div>
             <div className={`${styles.orbitRing} ${styles.ringOne}`} aria-hidden />
             <div className={`${styles.orbitRing} ${styles.ringTwo}`} aria-hidden />
@@ -117,7 +117,7 @@ export default function AetherHome() {
 
       <div className={styles.principleRail} aria-label="AtomEons principles">
         <span>OUTFUNDED · NOT OUTBUILT</span>
-        <span>ONE CREATOR · MANY MINDS</span>
+        <span>ARTIST DIRECTED · MACHINE AMPLIFIED</span>
         <span>HACK THE FORMAT</span>
         <span>OWN THE MACHINE</span>
         <span>NO PERMISSION REQUIRED</span>
@@ -360,65 +360,12 @@ export default function AetherHome() {
         </div>
       </section>
 
-      <section className={styles.resourcesSection} aria-labelledby="contact-title">
-        <SectionIntro
-          eyebrow="CONTACT / NO GATEKEEPER"
-          title="A real address for the next thing."
-          body="No form, funnel, or pretend department. Choose the signal and it reaches Atom directly."
-          id="contact-title"
-        />
-        <div className={styles.supportGrid}>
-          <a
-            href="mailto:hello@atomeons.com?subject=Build%20something%20with%20AtomEons"
-            className={`${styles.supportCard} ${styles.orange}`}
-            style={{ "--accent": "#f36b21" } as CSSProperties}
-          >
-            <div className={styles.supportTopline}><span>01 / COLLABORATE</span><span>OPEN CHANNEL</span></div>
-            <div className={styles.supportGlyph} aria-hidden>Æ</div>
-            <h3>Make something.</h3>
-            <p>Commissions, collaborations, partnerships, and serious strange proposals.</p>
-            <div className={styles.supportMeta}><span>hello@atomeons.com</span><span>WRITE ↗</span></div>
-          </a>
-          <a
-            href="mailto:press@atomeons.com?subject=Press%20inquiry%20-%20AtomEons"
-            className={`${styles.supportCard} ${styles.book}`}
-            style={{ "--accent": "#d60024" } as CSSProperties}
-          >
-            <div className={styles.supportTopline}><span>02 / PRESS</span><span>DIRECT ACCESS</span></div>
-            <div className={styles.supportGlyph} aria-hidden>¶</div>
-            <h3>Tell the story.</h3>
-            <p>Interviews, profiles, appearances, fact checks, images, and media deadlines.</p>
-            <div className={styles.supportMeta}><span>press@atomeons.com</span><span>WRITE ↗</span></div>
-          </a>
-          <a
-            href="mailto:research@atomeons.com?subject=AtomEons%20research%20inquiry"
-            className={`${styles.supportCard} ${styles.mint}`}
-            style={{ "--accent": "#008d6b" } as CSSProperties}
-          >
-            <div className={styles.supportTopline}><span>03 / RESEARCH</span><span>CRITIQUE WELCOME</span></div>
-            <div className={styles.supportGlyph} aria-hidden>λ</div>
-            <h3>Test the edge.</h3>
-            <p>Papers, replications, technical criticism, new evidence, and frontier experiments.</p>
-            <div className={styles.supportMeta}><span>research@atomeons.com</span><span>WRITE ↗</span></div>
-          </a>
-        </div>
-        <div className={styles.heroActions}>
-          <Link href="/contact" className={styles.primaryButton}>Open every contact route <Arrow /></Link>
-        </div>
-      </section>
-
       <section className={styles.finalSection}>
         <p className={styles.sectionEyebrow}>YOU ARE AT THE FRONT DOOR</p>
         <h2>Pick a system.<br />Keep the parts you need.</h2>
         <div className={styles.finalActions}>
           <Link href="/explore" className={styles.primaryButton}>
             Explore the full archive <Arrow />
-          </Link>
-          <Link href="/who-are-you" className={styles.textButton}>
-            Let the site route you <Arrow />
-          </Link>
-          <Link href="/random" className={styles.textButton}>
-            Surprise me <Arrow />
           </Link>
           <Link href="/contact" className={styles.textButton}>
             Contact Atom <Arrow />

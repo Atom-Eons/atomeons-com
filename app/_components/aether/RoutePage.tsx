@@ -119,7 +119,7 @@ export function RoutePage({
       </section>
       <div className={styles.routeRail} aria-label="Edition status">
         <span>{routeCode} / ATOMEONS</span>
-        <span>ONE HUMAN / MANY MINDS</span>
+        <span>ARTIST DIRECTED / MACHINE AMPLIFIED</span>
         <span>NAPLES / FLORIDA</span>
         <span><i /> STATIC SIGNAL / LIVE</span>
       </div>

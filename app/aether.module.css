@@ -172,8 +172,7 @@
 .textButton:hover .arrow,
 .productLink:hover .arrow,
 .receipt:hover .arrow,
-.resourceCard a:hover .arrow,
-.supportCard:hover .arrow {
+.resourceCard a:hover .arrow {
   transform: translate(3px, -3px);
 }
 
@@ -906,106 +905,6 @@
   letter-spacing: .1em;
 }
 
-.supportGrid {
-  display: grid;
-  margin-top: 24px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.supportCard {
-  position: relative;
-  display: flex;
-  min-height: 460px;
-  padding: 28px;
-  overflow: hidden;
-  flex-direction: column;
-  border: 1px solid var(--ink);
-  border-radius: 4px;
-  color: var(--ink) !important;
-  text-decoration: none !important;
-  transition: transform 220ms ease, box-shadow 220ms ease;
-}
-
-.supportCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 80px rgba(17,18,15,.12);
-}
-
-.supportTopline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--accent);
-  font-family: var(--font-mono), monospace;
-  font-size: 8px;
-  font-weight: 650;
-  letter-spacing: .14em;
-}
-
-.supportGlyph {
-  display: grid;
-  width: 150px;
-  height: 150px;
-  margin: 40px auto 30px;
-  place-items: center;
-  border: 1px solid color-mix(in srgb, var(--accent) 60%, #111);
-  border-radius: 50%;
-  color: var(--accent);
-  font-family: var(--font-serif);
-  font-size: 54px;
-  font-style: italic;
-  box-shadow: inset 0 0 0 22px color-mix(in srgb, var(--accent) 8%, transparent);
-}
-
-.miniBook {
-  position: relative;
-  width: 145px;
-  aspect-ratio: 3 / 4;
-  margin: 35px auto 22px;
-  transform: rotate(-5deg);
-  box-shadow: 18px 25px 40px rgba(61,27,21,.2);
-}
-
-.miniBook img { object-fit: cover; }
-
-.supportCard h3 {
-  margin: auto 0 0;
-  color: var(--ink) !important;
-  font-family: var(--font-inter), Inter, sans-serif !important;
-  font-size: clamp(38px, 3.2vw, 62px);
-  font-weight: 590 !important;
-  letter-spacing: -.065em !important;
-  line-height: .95;
-}
-
-.supportCard > p {
-  margin: 22px 0 0;
-  color: var(--muted) !important;
-  font-size: 14px;
-  letter-spacing: -.01em;
-  line-height: 1.55 !important;
-}
-
-.supportMeta {
-  display: flex;
-  margin-top: 28px;
-  padding-top: 16px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  border-top: 1px solid color-mix(in srgb, var(--accent) 30%, #ddd);
-  color: var(--accent);
-  font-family: var(--font-mono), monospace;
-  font-size: 8px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.orange { background: #fff5ee; }
-.mint { background: #edf9f5; }
-.book { background: #f5eee8; }
-
 .showSection {
   max-width: 1600px;
   margin: 0 auto;
@@ -1511,7 +1410,6 @@
   .flagshipCopy { min-height: 620px; }
   .bookmakerFlagship .bookmakerVisual { order: 2; margin: 0 40px 40px; }
   .orangeVisual { min-height: 650px; }
-  .supportGrid { grid-template-columns: 1fr 1fr; }
   .showGrid { grid-template-columns: 1fr; }
   .showCopy { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
   .bookCampaignGrid { grid-template-columns: 1fr; }
@@ -1590,8 +1488,6 @@
   .systemEast { right: 1%; }
   .systemWest { left: 1%; }
   .orangeTelemetry { flex-direction: column; }
-  .supportGrid { grid-template-columns: 1fr; }
-  .supportCard { min-height: 480px; }
   .operatingBody { grid-template-columns: 1fr; margin-top: 42px; }
   .lawGrid, .resourceGrid { grid-template-columns: 1fr; }
   .law { min-height: 230px; }
@@ -1606,7 +1502,6 @@
 @media (prefers-reduced-motion: reduce) {
   .orbitNode, .onAir i, .scanline { animation: none; }
   .primaryButton,
-  .supportCard,
   .arrow { transition: none; }
 }
 
