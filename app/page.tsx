@@ -1,7 +1,8 @@
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BookAudioPlayer } from "./_components/aether/BookAudioPlayer";
 import { DISCOVERIES } from "./_data/discoveries";
 import styles from "./aether.module.css";
 
@@ -142,6 +143,7 @@ export default function AetherHome() {
               CableBox puts the accident, ritual, local weirdness, and late-night discovery back into television.
               Turn the dial. Miss the beginning. Find something you were never supposed to search for.
             </p>
+            <ImpactPlate index="01">THE INTERNET BECOMES TELEVISION.</ImpactPlate>
             <ul className={styles.specList}>
               <li>Public Access from everywhere</li>
               <li>A real channel-surfing ritual</li>
@@ -166,6 +168,7 @@ export default function AetherHome() {
               A complete independent publishing studio: write the book, shape the voice, make the cover, build the audiobook,
               and ship the finished thing. The machine behind <em>I AM AI</em> now belongs to every creator.
             </p>
+            <ImpactPlate index="02">A THOUGHT BECOMES A FINISHED BOOK.</ImpactPlate>
             <ul className={styles.specList}>
               <li>From first sentence to storefront</li>
               <li>Book, cover, EPUB, audio, metadata</li>
@@ -188,6 +191,7 @@ export default function AetherHome() {
               Orange5 is the coming operating system for people who direct AI instead of merely chatting with it:
               memory, agents, workflow, proof, and control assembled on one machine with the operator at the center.
             </p>
+            <ImpactPlate index="03">AI STOPS LIVING ON SOMEBODY ELSE&apos;S MACHINE.</ImpactPlate>
             <ul className={styles.specList}>
               <li>Your models · your files · your history</li>
               <li>Direct a team, not a chatbot</li>
@@ -279,6 +283,7 @@ export default function AetherHome() {
               <span><b>28</b> audio tracks</span>
               <span><b>FREE</b> to read + hear</span>
             </div>
+            <BookAudioPlayer />
             <div className={styles.bookActions}>
               <Link href="/i-am-ai" className={styles.primaryButton}>Enter I AM AI <Arrow /></Link>
               <Link href="/i-am-ai#listen" className={styles.textButton}>Listen to the voice <Arrow /></Link>
@@ -491,6 +496,15 @@ function BookmakerVisual() {
         <span>OBJECT</span>
         <b>READY TO SHIP</b>
       </div>
+    </div>
+  );
+}
+
+function ImpactPlate({ children, index }: { children: ReactNode; index: string }) {
+  return (
+    <div className={styles.impactPlate}>
+      <span>THE WTF / {index}</span>
+      <strong>{children}</strong>
     </div>
   );
 }

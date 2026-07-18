@@ -329,7 +329,7 @@
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 12px 36px rgba(17, 18, 15, 0.08);
   backdrop-filter: blur(8px);
-  animation: orbitFloat 6s ease-in-out infinite;
+  animation: orbitFloat 19s cubic-bezier(.2, .72, .2, 1) infinite;
 }
 
 .nodeSignal {
@@ -384,7 +384,7 @@
   gap: 28px;
   overflow: hidden;
   border-bottom: 1px solid var(--ink);
-  background: var(--acid);
+  background: var(--psych-attention);
   color: var(--ink);
   font-family: var(--font-mono), monospace;
   font-size: 9px;
@@ -516,6 +516,35 @@
   font-size: clamp(16px, 1.25vw, 19px);
   letter-spacing: -0.017em;
   line-height: 1.55 !important;
+}
+
+.impactPlate {
+  display: grid;
+  margin-top: 32px;
+  padding: 15px 16px 16px;
+  grid-template-columns: 92px 1fr;
+  align-items: start;
+  gap: 18px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.impactPlate span {
+  padding-top: 3px;
+  color: var(--psych-attention);
+  font-family: var(--font-mono), monospace;
+  font-size: 7px;
+  font-weight: 750;
+  letter-spacing: .14em;
+}
+
+.impactPlate strong {
+  max-width: 26ch;
+  font-size: clamp(15px,1.25vw,20px);
+  font-weight: 720;
+  letter-spacing: -.025em;
+  line-height: 1.05;
 }
 
 .specList {
@@ -936,7 +965,7 @@
 
 .showUtility span:last-child { justify-self: end; }
 .onAir { display: inline-flex; align-items: center; gap: 8px; }
-.onAir i { width: 7px; height: 7px; border-radius: 50%; background: #ff4c29; box-shadow: 0 0 14px #ff4c29; animation: signalPulse 1.4s ease-in-out infinite; }
+.onAir i { width: 7px; height: 7px; border-radius: 50%; background: #ff4c29; box-shadow: 0 0 14px #ff4c29; animation: signalPulse 5.6s ease-in-out infinite; }
 
 .showGrid {
   display: grid;
@@ -1388,13 +1417,15 @@
 .finalNote { margin: 90px 0 0; color: var(--quiet) !important; font-family: var(--font-mono), monospace !important; font-size: 8px; letter-spacing: .13em; text-transform: uppercase; }
 
 @keyframes orbitFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%, 62%, 100% { transform: translateY(0); }
+  67% { transform: translateY(-4px); }
+  72% { transform: translateY(-1px); }
 }
 
 @keyframes signalPulse {
-  0%, 100% { opacity: .45; }
-  50% { opacity: 1; }
+  0%, 70%, 100% { opacity: .48; }
+  78% { opacity: 1; }
+  86% { opacity: .62; }
 }
 
 @keyframes scan {
@@ -1424,7 +1455,7 @@
   .versionLine { margin-bottom: 48px; }
   .versionLine span:first-child { max-width: 18ch; }
   .heroTitle { font-size: clamp(62px, 19vw, 96px); line-height: .84; }
-  .heroTitle span { -webkit-text-stroke-width: 1px; }
+  .heroTitle span { -webkit-text-stroke-width: 0; }
   .heroDeck { font-size: 18px; }
   .heroActions { align-items: flex-start; flex-direction: column; }
   .heroMetrics { grid-template-columns: 1fr 1fr; }
@@ -1466,6 +1497,7 @@
   .flagship { min-height: 0; border-radius: 8px; }
   .flagshipCopy { min-height: auto; padding: 38px 26px 48px; }
   .flagship h3 { font-size: 58px; }
+  .impactPlate { grid-template-columns: 1fr; gap: 7px; }
   .status { margin-bottom: 34px; }
   .specList { grid-template-columns: 1fr; }
   .specList li:nth-child(odd) { border-right: 0; }
@@ -1503,6 +1535,12 @@
   .orbitNode, .onAir i, .scanline { animation: none; }
   .primaryButton,
   .arrow { transition: none; }
+}
+
+:global(html[data-ae-motion="off"]) .orbitNode,
+:global(html[data-ae-motion="off"]) .onAir i,
+:global(html[data-ae-motion="off"]) .scanline {
+  animation: none;
 }
 
 /* AETHER / GRAPHIC SYSTEM 02

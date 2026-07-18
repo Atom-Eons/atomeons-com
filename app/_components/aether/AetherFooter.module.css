@@ -25,11 +25,13 @@
 }
 
 .brand span {
+  color: var(--psych-primary);
   font-family: var(--font-serif);
   font-size: 42px;
   font-weight: 350;
   letter-spacing: -.07em;
   line-height: 1;
+  transition: color 420ms ease;
 }
 
 .brand strong {
@@ -64,8 +66,9 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #3fa15e;
-  box-shadow: 0 0 0 5px rgba(63,161,94,.12);
+  background: var(--psych-primary);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--psych-primary) 12%, transparent);
+  transition: background 420ms ease, box-shadow 420ms ease;
 }
 
 .githubLink {
@@ -135,12 +138,13 @@
   overflow-x: auto;
   border-top: 1px solid #11120f;
   border-bottom: 1px solid #11120f;
-  background: #d8ff3e;
+  background: var(--psych-attention);
   font-family: var(--font-mono), monospace;
   font-size: 8px;
   font-weight: 700;
   letter-spacing: .13em;
   white-space: nowrap;
+  transition: background 420ms ease;
 }
 
 .machineRail a { color: #11120f !important; text-decoration: none !important; }

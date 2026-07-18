@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AetherAtmosphere } from "./_components/aether/AetherAtmosphere";
 import { AetherFooter } from "./_components/aether/AetherFooter";
 import { AetherNav } from "./_components/aether/AetherNav";
 import "./globals.css";
@@ -15,8 +16,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-ae-energy="quiet">
       <body>
+        <AetherAtmosphere />
         <AetherNav />
         {children}
         <AetherFooter />

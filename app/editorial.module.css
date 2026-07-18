@@ -127,12 +127,27 @@
 .routeInstrument svg .routeInstrumentAccent {
   stroke: var(--accent, #f36b21);
   stroke-width: 2;
+  stroke-dasharray: 18 8;
+  animation: routeTrace 17s cubic-bezier(.2,.72,.2,1) -6s infinite;
 }
 
 .routeInstrument svg .routeInstrumentDot {
   fill: var(--accent, #f36b21);
   stroke: #fff;
   stroke-width: 3;
+  animation: routePing 13s ease-in-out -9s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes routeTrace {
+  0%, 72%, 100% { stroke-dashoffset: 0; }
+  80% { stroke-dashoffset: -34; }
+}
+
+@keyframes routePing {
+  0%, 78%, 86%, 100% { opacity: 1; transform: scale(1); }
+  82% { opacity: .5; transform: scale(1.75); }
 }
 
 .routeInstrument > b {
@@ -666,5 +681,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .researchFieldImage, .campaignFieldImage { transition: none; }
+  .researchFieldImage,
+  .campaignFieldImage { transition: none; }
+  .routeInstrumentAccent,
+  .routeInstrumentDot { animation: none !important; }
+}
+
+:global(html[data-ae-motion="off"]) .routeInstrumentAccent,
+:global(html[data-ae-motion="off"]) .routeInstrumentDot {
+  animation: none !important;
 }

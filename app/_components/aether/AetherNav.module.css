@@ -11,6 +11,19 @@
   backdrop-filter: blur(18px);
 }
 
+.header::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--psych-primary), transparent 72%);
+  content: "";
+  opacity: .5;
+  pointer-events: none;
+  transition: background 420ms ease;
+}
+
 .inner {
   display: flex;
   width: 100%;
@@ -31,10 +44,14 @@
 }
 
 .mark {
+  display: inline-block;
+  color: var(--psych-primary);
   font-family: var(--font-serif);
   font-size: 28px;
   font-weight: 430;
   letter-spacing: -.06em;
+  animation: markTick 23s steps(1, end) -9s infinite;
+  transition: color 420ms ease;
 }
 
 .wordmark {
@@ -183,7 +200,7 @@
   transition: background 130ms ease;
 }
 
-.dropdown li a:hover { background: #f4f5f0; }
+.dropdown li a:hover { background: var(--psych-wash); }
 .dropdown li span { font-size: 13px; font-weight: 650; }
 .dropdown li small { margin-top: 7px; grid-column: 1; color: #7b7d77; font-size: 10px; }
 .dropdown li b { grid-row: 1 / 3; grid-column: 2; align-self: center; font-size: 13px; font-weight: 400; }
@@ -213,6 +230,12 @@
   border: 1px solid #dedfd9;
   border-radius: 999px;
   font-size: 11px;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.searchButton:hover {
+  border-color: color-mix(in srgb, var(--psych-primary) 52%, #dedfd9);
+  background: var(--psych-wash);
 }
 
 .searchButton > span:first-child { font-size: 19px; line-height: 1; }
@@ -234,7 +257,19 @@
   transition: background 150ms ease, color 150ms ease;
 }
 
-.launchButton:hover { background: #d8ff3e; color: #11120f !important; }
+.launchButton:hover { background: var(--psych-attention); color: #11120f !important; }
+
+@keyframes markTick {
+  0%, 82%, 86%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  83% {
+    transform: translate(0, -1px) rotate(-3deg);
+  }
+  84% {
+    transform: translate(0, 1px) rotate(2deg);
+  }
+}
 
 .menuButton {
   display: none;
@@ -352,5 +387,10 @@
   .searchOverlay,
   .launchButton,
   .menuButton span,
-  .radianceLink::before { animation: none; transition: none; }
+  .radianceLink::before,
+  .mark { animation: none; transition: none; }
+}
+
+:global(html[data-ae-motion="off"]) .mark {
+  animation: none;
 }

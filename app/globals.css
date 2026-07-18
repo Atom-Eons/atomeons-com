@@ -36,7 +36,53 @@
   --font-serif: "AE Newsreader", Georgia, serif;
   --page-white: #fcfcfa;
   --page-ink: #11120f;
-  --focus: #2558dc;
+  /* Trust: confidence and clarity at the default front door. */
+  --psych-primary: #2558dc;
+  --psych-attention: #d8ff3e;
+  --psych-wash: #f1f4ff;
+  --focus: var(--psych-primary);
+}
+
+:root[data-ae-theme="forge"] {
+  /* Action: heat, invention, and forward motion. */
+  --psych-primary: #e65f16;
+  --psych-attention: #ffc247;
+  --psych-wash: #fff3e9;
+}
+
+:root[data-ae-theme="evidence"] {
+  /* Evidence: calm attention and experimental credibility. */
+  --psych-primary: #007a60;
+  --psych-attention: #b9f1dc;
+  --psych-wash: #edf8f4;
+}
+
+:root[data-ae-theme="signal"] {
+  /* Signal: urgency, broadcast energy, and cultural heat. */
+  --psych-primary: #d60024;
+  --psych-attention: #d8ff3e;
+  --psych-wash: #fff0f3;
+}
+
+:root[data-ae-theme="story"] {
+  /* Story: material warmth, memory, and emotional weight. */
+  --psych-primary: #8f302c;
+  --psych-attention: #efd4c1;
+  --psych-wash: #faf1eb;
+}
+
+:root[data-ae-theme="connection"] {
+  /* Connection: human warmth and low-friction action. */
+  --psych-primary: #e45b18;
+  --psych-attention: #ffd7ad;
+  --psych-wash: #fff5eb;
+}
+
+:root[data-ae-theme="radiance"] {
+  /* Radiance: danger, importance, and an intentional interruption. */
+  --psych-primary: #b00018;
+  --psych-attention: #ffccd3;
+  --psych-wash: #fff1f3;
 }
 
 * { box-sizing: border-box; }
@@ -61,7 +107,7 @@ body {
 
 a { color: inherit; }
 button, input { font: inherit; }
-::selection { background: #d8ff3e; color: #101010; }
+::selection { background: var(--psych-attention); color: #101010; }
 
 :where(h1, h2, h3) {
   text-wrap: balance;
