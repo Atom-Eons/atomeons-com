@@ -11,11 +11,6 @@ const signals = [
     detail: "CHANNEL 03 / BIG MODE",
   },
   {
-    src: "/cablebox-premiere/theme-atomic-orange.webp",
-    label: "ATOMIC ORANGE",
-    detail: "CABINET 01 / GOOD SIGNAL",
-  },
-  {
     src: "/cablebox-premiere/theme-space.webp",
     label: "DEEP SPACE",
     detail: "CABINET 03 / GOOD SIGNAL",
