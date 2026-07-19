@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CableboxDemo } from "./CableboxDemo";
 import { CableboxPremiere } from "./CableboxPremiere";
 import styles from "./cablebox.module.css";
 
@@ -58,7 +57,6 @@ const theatreCards = [
 ] as const;
 
 const themes = [
-  { src: "/cablebox-premiere/theme-atomic-orange.webp", name: "Atomic Orange", number: "01" },
   { src: "/cablebox-premiere/theme-space.webp", name: "Deep Space", number: "03" },
   { src: "/cablebox-premiere/theme-underwater.webp", name: "Underwater", number: "06" },
   { src: "/cablebox-premiere/theme-patchouli.webp", name: "Patchouli", number: "07" },
@@ -150,8 +148,6 @@ export default function CableboxPage() {
           <span>UNDER 1 GB TARGET</span>
         </div>
       </section>
-
-      <CableboxDemo />
 
       <section className={styles.theatre}>
         <div className={styles.darkSectionHead}>
