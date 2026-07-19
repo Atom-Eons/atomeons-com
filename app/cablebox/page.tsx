@@ -166,19 +166,6 @@ export default function CableboxPage() {
             </article>
           ))}
         </div>
-        <figure className={styles.starProof}>
-          <Image
-            src="/cablebox-premiere/favorite-stars.webp"
-            alt="Real CableBox gold favorite stars fitted across multiple cabinet themes"
-            fill
-            unoptimized
-            sizes="100vw"
-          />
-          <figcaption>
-            <span>PHYSICAL FAVORITE SYSTEM / REAL PRODUCT PROOF</span>
-            <strong>Slap a star on it.</strong>
-          </figcaption>
-        </figure>
       </section>
 
       <section className={styles.gallery} id="themes">
