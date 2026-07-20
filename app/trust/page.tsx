@@ -15,6 +15,29 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://atomeons.com/trust" },
 };
 
+const proofLedger = [
+  {
+    label: "PRODUCT CLAIM",
+    value: "Objects exist",
+    body: "Verify through product routes, screenshots, public reader surfaces, release gates, and source history.",
+  },
+  {
+    label: "RESEARCH CLAIM",
+    value: "Status bounded",
+    body: "Verify through discovery pages, paper pages, PDFs, summaries, limits, and next-test language.",
+  },
+  {
+    label: "CONTACT CLAIM",
+    value: "Direct route",
+    body: "Verify through visible Gmail fail-safe links and subject lines; the static site does not claim a working form backend.",
+  },
+  {
+    label: "DEPLOY CLAIM",
+    value: "Versioned",
+    body: "Verify through receipts, GitHub commits, archive hashes, and the live-version boundary when hosting lags source.",
+  },
+];
+
 export default function TrustPage() {
   return (
     <RoutePage
@@ -78,6 +101,14 @@ export default function TrustPage() {
             },
           ]}
         />
+      </RouteSection>
+
+      <RouteSection
+        index="PROOF LEDGER / CLAIM TO ARTIFACT"
+        title="Every strong sentence needs a place to land."
+        body="The trust system is simple: if the site says a thing exists, it should point to the object, the source, the PDF, the receipt, the contact path, or the visible boundary that explains why it is not public yet."
+      >
+        <RouteFacts facts={proofLedger} />
       </RouteSection>
 
       <RouteSection
