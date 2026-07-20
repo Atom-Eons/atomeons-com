@@ -91,6 +91,42 @@ export default function ResearchPage() {
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>
+          <p className={styles.index}>RESEARCH MAP / SECOND FRONT DOOR</p>
+          <div>
+            <h2>Not academia. Not fantasy. A public experiment table.</h2>
+            <p>
+              The research side of AtomEons gives unusual ideas a clean stage:
+              what exists, what is measured, what is only a hypothesis, and what
+              needs the next test.
+            </p>
+          </div>
+        </div>
+        <div className={styles.factGrid}>
+          <div className={styles.fact}>
+            <span className={styles.index}>01</span>
+            <strong>Discoveries</strong>
+            <p>Named systems like AEyes, AtomSmasher, and AEMemory with propositions, evidence, and limits.</p>
+          </div>
+          <div className={styles.fact}>
+            <span className={styles.index}>02</span>
+            <strong>Working papers</strong>
+            <p>{PAPERS.length} public research objects with summaries, technical abstracts, and locally hosted PDFs.</p>
+          </div>
+          <div className={styles.fact}>
+            <span className={styles.index}>03</span>
+            <strong>Prototype truth</strong>
+            <p>Implemented pieces are named as implemented. Unproven claims stay labeled as architecture, hypothesis, or future test.</p>
+          </div>
+          <div className={styles.fact}>
+            <span className={styles.index}>04</span>
+            <strong>Open challenge</strong>
+            <p>The goal is not academic polish. The goal is to make the strange claim inspectable enough to attack, improve, or replicate.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHead}>
           <p className={styles.index}>DISCOVERIES / 001—003</p>
           <div>
             <h2>Things found by building.</h2>
