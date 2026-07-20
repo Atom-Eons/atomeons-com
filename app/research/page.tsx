@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   },
 };
 
+const featuredPapers = PAPERS.slice(0, 4);
+
 export default function ResearchPage() {
   return (
     <main className={styles.page} style={{ "--accent": "#2558dc" } as CSSProperties}>
@@ -122,6 +124,36 @@ export default function ResearchPage() {
             <strong>Open challenge</strong>
             <p>The goal is not academic polish. The goal is to make the strange claim inspectable enough to attack, improve, or replicate.</p>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <p className={styles.index}>PAPER RUNWAY / HIGH-SIGNAL OBJECTS</p>
+          <div>
+            <h2>The papers should feel like products.</h2>
+            <p>
+              Each research object gets a public doorway with plain-language stakes,
+              technical framing, status, and a hosted PDF path when available. The
+              point is not academic costume. The point is making the claim inspectable.
+            </p>
+          </div>
+        </div>
+        <div className={styles.paperRunway}>
+          {featuredPapers.map((paper, index) => (
+            <Link href={`/research/papers/${paper.slug}`} className={styles.paperRunwayCard} key={paper.slug}>
+              <div className={styles.paperRunwayTop}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <span>{paper.status}</span>
+              </div>
+              <h3>{paper.title}</h3>
+              <p>{paper.kid_summary}</p>
+              <div className={styles.paperRunwayMeta}>
+                <span>{paper.date}</span>
+                <span>{paper.keywords.slice(0, 2).join(" / ")}</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
