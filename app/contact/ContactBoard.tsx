@@ -50,8 +50,12 @@ const directChannels = [
 export function ContactBoard() {
   const [copied, setCopied] = useState("");
 
+  function subjectLine(address: string, subject: string) {
+    return `[${address}] ${subject}`;
+  }
+
   function mailtoHref(address: string, subject: string) {
-    return `mailto:${DELIVERY_ADDRESS}?subject=${encodeURIComponent(`[${address}] ${subject}`)}`;
+    return `mailto:${DELIVERY_ADDRESS}?subject=${encodeURIComponent(subjectLine(address, subject))}`;
   }
 
   async function copyAddress(address: string) {
@@ -105,6 +109,7 @@ export function ContactBoard() {
             </div>
             <h2>{channel.address}</h2>
             <small className={styles.deliveryLine}>delivers to {DELIVERY_ADDRESS}</small>
+            <code className={styles.subjectPreview}>{subjectLine(channel.address, channel.subject)}</code>
             <p>{channel.body}</p>
             <div className={styles.channelActions}>
               <a href={mailtoHref(channel.address, channel.subject)}>
@@ -124,6 +129,7 @@ export function ContactBoard() {
             <span>{label}</span>
             <a href={mailtoHref(address, subject)}>{address}</a>
             <small>to {DELIVERY_ADDRESS}</small>
+            <code>{subjectLine(address, subject)}</code>
             <button type="button" onClick={() => copyAddress(address)}>
               {copied === address ? "COPIED" : "COPY"}
             </button>
