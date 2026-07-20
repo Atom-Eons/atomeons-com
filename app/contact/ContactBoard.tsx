@@ -83,7 +83,7 @@ export function ContactBoard() {
         </div>
         <div className={styles.failSafeActions}>
           <a href="mailto:a.mccree@gmail.com?subject=%5Bdirect%5D%20AtomEons%20inquiry">
-            Email direct <span aria-hidden>â†—</span>
+            Email direct <span aria-hidden>↗</span>
           </a>
           <button type="button" onClick={() => copyAddress("direct")}>
             {copied === "direct" ? "Copied" : "Copy inbox"}

@@ -606,6 +606,129 @@
   letter-spacing: 0.14em;
 }
 
+.attentionEngine {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: clamp(34px, 5vw, 78px) clamp(24px, 5vw, 80px) 0;
+}
+
+.attentionHeader {
+  display: grid;
+  margin-bottom: 18px;
+  grid-template-columns: minmax(180px, 0.32fr) minmax(0, 0.78fr) minmax(260px, 0.48fr);
+  gap: 26px;
+  align-items: end;
+}
+
+.attentionHeader h2 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--ink) !important;
+  font-family: var(--font-inter), Inter, sans-serif !important;
+  font-size: clamp(38px, 4.8vw, 82px);
+  font-weight: 590 !important;
+  letter-spacing: -0.066em !important;
+  line-height: 0.9;
+}
+
+.attentionHeader > p:last-child {
+  margin: 0;
+  color: var(--muted) !important;
+  font-size: clamp(15px, 1.08vw, 17px);
+  letter-spacing: -0.018em;
+  line-height: 1.48 !important;
+}
+
+.attentionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.attentionCard {
+  --attention-accent: var(--ink);
+  position: relative;
+  min-height: 260px;
+  padding: 18px 18px 20px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--attention-accent) 48%, var(--line));
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 82% 8%, color-mix(in srgb, var(--attention-accent) 18%, transparent), transparent 9rem),
+    linear-gradient(180deg, #fff, color-mix(in srgb, var(--attention-accent) 5%, #fff));
+  color: var(--ink) !important;
+  text-decoration: none !important;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.attentionCard::before {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 54px;
+  height: 54px;
+  border: 1px solid color-mix(in srgb, var(--attention-accent) 70%, transparent);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent calc(50% - 1px), color-mix(in srgb, var(--attention-accent) 45%, transparent) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(transparent calc(50% - 1px), color-mix(in srgb, var(--attention-accent) 45%, transparent) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px));
+  content: "";
+  opacity: 0.72;
+  pointer-events: none;
+  transition: transform 220ms ease;
+}
+
+.attentionCard:hover,
+.attentionCard:focus-visible {
+  border-color: var(--attention-accent);
+  box-shadow: 0 20px 50px color-mix(in srgb, var(--attention-accent) 18%, transparent);
+  transform: translateY(-4px);
+}
+
+.attentionCard:hover::before,
+.attentionCard:focus-visible::before {
+  transform: rotate(28deg) scale(1.08);
+}
+
+.attentionCard:focus-visible {
+  outline: 2px solid var(--attention-accent);
+  outline-offset: 5px;
+}
+
+.attentionCard span {
+  display: block;
+  color: color-mix(in srgb, var(--attention-accent) 72%, var(--ink));
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.attentionCard strong {
+  display: block;
+  max-width: 11ch;
+  margin-top: 42px;
+  font-size: clamp(29px, 2.55vw, 47px);
+  font-weight: 650;
+  letter-spacing: -0.064em;
+  line-height: 0.93;
+}
+
+.attentionCard p {
+  max-width: 29ch;
+  margin: 22px 0 0;
+  color: var(--muted) !important;
+  font-size: 14px;
+  letter-spacing: -0.012em;
+  line-height: 1.42 !important;
+}
+
+.attentionBlue { --attention-accent: #2257df; }
+.attentionLinen { --attention-accent: #806a50; }
+.attentionOrange { --attention-accent: #f36b21; }
+.attentionRed { --attention-accent: #a52f2a; }
+
 .productsSection,
 .resourcesSection,
 .operatingSection,
@@ -2474,6 +2597,14 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .attentionHeader {
+    grid-template-columns: 1fr;
+  }
+
+  .attentionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .orbitStage {
     min-height: 820px;
   }
@@ -2500,6 +2631,26 @@
 
   .launchCard {
     min-height: 250px;
+  }
+
+  .attentionEngine {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .attentionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .attentionCard {
+    min-height: 238px;
+    border-radius: 14px;
+  }
+
+  .attentionCard strong {
+    max-width: 12ch;
+    margin-top: 34px;
+    font-size: 38px;
   }
 
   .orbitStage {
