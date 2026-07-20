@@ -114,7 +114,7 @@ const SURFACES = {
 } as const;
 
 export function generateStaticParams() {
-  const dedicatedRoutes = new Set(["about", "cablebox", "atom-alive"]);
+  const dedicatedRoutes = new Set(["about", "cablebox", "atom-alive", "i-am-ai"]);
   return Object.keys(SURFACES)
     .filter((slug) => !dedicatedRoutes.has(slug))
     .map((slug) => ({ slug }));
