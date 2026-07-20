@@ -117,9 +117,14 @@ export default function AetherHome() {
               aria-label="Meet Atom McCree, the human authority at the center of AtomEons"
             >
               <span aria-hidden />
-              <strong>ATOM</strong>
-              <small>HUMAN / FINAL AUTHORITY</small>
+              <strong>AE</strong>
+              <small>ATOM / HUMAN DIRECTION</small>
             </Link>
+            <div className={styles.coreSignalCard} aria-hidden>
+              <span>THE POINT</span>
+              <strong>Products are the proof.</strong>
+              <small>Every orbit opens a real public object.</small>
+            </div>
             <OrbitNode className={styles.nodeCable} href="/cablebox" label="CableBox" meta="launch candidate" color="#2257df" />
             <OrbitNode className={styles.nodeBookmaker} href="/bookmaker" label="Bookmaker" meta="shipped" color="#6d5742" />
             <OrbitNode className={styles.nodeOrange5} href="/orange5" label="Orange5" meta="building" color="#f36b21" />
