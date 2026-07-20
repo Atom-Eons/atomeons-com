@@ -101,6 +101,43 @@ export default function BookmakerPage() {
       </section>
 
       <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <p className={styles.index}>POSITIONING / BOOK FACTORY</p>
+          <div>
+            <h2>Not a writing helper. A book-finishing machine.</h2>
+            <p>
+              The human name is still Bookmaker because the promise is direct:
+              make the book. The product is not trying to be a clever document editor.
+              It exists to turn a private idea into a public object with a spine,
+              cover, voice, metadata, audio path, and release state.
+            </p>
+          </div>
+        </div>
+        <div className={styles.factGrid}>
+          <div className={styles.fact}>
+            <span className={styles.index}>INPUT</span>
+            <strong>One idea</strong>
+            <p>A rough concept, unfinished manuscript, voice, outline, or strange thesis that deserves a finished form.</p>
+          </div>
+          <div className={styles.fact}>
+            <span className={styles.index}>SYSTEM</span>
+            <strong>Editorial cockpit</strong>
+            <p>Structure, drafting, continuity, chapter logic, cover direction, metadata, audio planning, and release packaging.</p>
+          </div>
+          <div className={styles.fact}>
+            <span className={styles.index}>OUTPUT</span>
+            <strong>Public object</strong>
+            <p>A book that can be read, shared, heard, archived, challenged, and sold without living forever inside a chat window.</p>
+          </div>
+          <div className={styles.fact}>
+            <span className={styles.index}>BOUNDARY</span>
+            <strong>Creator owned</strong>
+            <p>The system helps finish the artifact. It does not become the author, publisher, gatekeeper, or owner of the work.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
         <div className={styles.feature}>
           <div>
             <p className={styles.eyebrow}>PROOF / I AM AI</p>
