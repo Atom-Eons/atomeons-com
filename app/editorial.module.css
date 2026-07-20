@@ -637,7 +637,10 @@
 }
 
 @media (max-width: 580px) {
-  .hero h1 { font-size: clamp(58px, 20vw, 92px); }
+  .hero h1 {
+    font-size: clamp(52px, 14vw, 74px);
+    overflow-wrap: anywhere;
+  }
   .routeInstrument { min-height: 280px; }
   .routeRail { grid-template-columns: 1fr; }
   .routeRail > span,
