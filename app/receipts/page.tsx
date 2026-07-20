@@ -12,6 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Receipts",
   description: "Public proof surfaces for the claims made by AtomEons.",
+  alternates: { canonical: "https://atomeons.com/receipts" },
 };
 
 export default function ReceiptsPage() {

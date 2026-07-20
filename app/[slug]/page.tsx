@@ -121,7 +121,34 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const surface = SURFACES[slug as keyof typeof SURFACES];
   if (!surface) return {};
-  return { title: surface.title, description: surface.line };
+  const url = `https://atomeons.com/${slug}`;
+  return {
+    title: surface.title,
+    description: surface.body,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${surface.title} · AtomEons`,
+      description: surface.body,
+      url,
+      siteName: "AtomEons",
+      type: "website",
+      images: [
+        {
+          url: surface.image,
+          width: 1536,
+          height: 1024,
+          alt: `${surface.title} by AtomEons`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${surface.title} · AtomEons`,
+      description: surface.body,
+      creator: "@AtomMccree",
+      images: [surface.image],
+    },
+  };
 }
 
 export default async function CanonicalSurface({ params }: { params: Promise<{ slug: string }> }) {

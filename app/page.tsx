@@ -97,15 +97,20 @@ export default function AetherHome() {
             </div>
             <div className={`${styles.orbitRing} ${styles.ringOne}`} aria-hidden />
             <div className={`${styles.orbitRing} ${styles.ringTwo}`} aria-hidden />
-            <div className={styles.artifactCore} aria-hidden>
-              <span />
-              <small>HUMAN<br />AUTHORITY</small>
-            </div>
-            <OrbitNode className={styles.nodeCable} label="CableBox" meta="launching" color="#2257df" />
-            <OrbitNode className={styles.nodeBookmaker} label="Bookmaker" meta="live" color="#6d5742" />
-            <OrbitNode className={styles.nodeOrange5} label="Orange5" meta="building" color="#f36b21" />
-            <OrbitNode className={styles.nodeOrange3} label="Research" meta="experimental" color="#2558dc" />
-            <OrbitNode className={styles.nodeIamAi} label="I AM AI" meta="published" color="#a52f2a" />
+            <Link
+              className={styles.artifactCore}
+              href="/about"
+              aria-label="Meet Atom McCree, the human authority at the center of AtomEons"
+            >
+              <span aria-hidden />
+              <strong>ATOM</strong>
+              <small>HUMAN / FINAL AUTHORITY</small>
+            </Link>
+            <OrbitNode className={styles.nodeCable} href="/cablebox" label="CableBox" meta="launch candidate" color="#2257df" />
+            <OrbitNode className={styles.nodeBookmaker} href="/bookmaker" label="Bookmaker" meta="shipped" color="#6d5742" />
+            <OrbitNode className={styles.nodeOrange5} href="/orange5" label="Orange5" meta="building" color="#f36b21" />
+            <OrbitNode className={styles.nodeOrange3} href="/research" label="Research" meta="experimental" color="#2558dc" />
+            <OrbitNode className={styles.nodeIamAi} href="/i-am-ai" label="I AM AI" meta="published" color="#a52f2a" />
             <div className={styles.artifactReadout}>
               <span>OBJECT STATUS / ALIVE</span>
               <span>ORIGIN / NAPLES, FL</span>
@@ -395,13 +400,25 @@ function Metric({ value, label }: { value: string; label: string }) {
   );
 }
 
-function OrbitNode({ className, label, meta, color }: { className: string; label: string; meta: string; color: string }) {
+function OrbitNode({
+  className,
+  href,
+  label,
+  meta,
+  color,
+}: {
+  className: string;
+  href: string;
+  label: string;
+  meta: string;
+  color: string;
+}) {
   return (
-    <div className={`${styles.orbitNode} ${className}`} style={{ "--node": color } as CSSProperties}>
+    <Link className={`${styles.orbitNode} ${className}`} href={href} style={{ "--node": color } as CSSProperties}>
       <span className={styles.nodeSignal} />
       <strong>{label}</strong>
       <small>{meta}</small>
-    </div>
+    </Link>
   );
 }
 

@@ -5,6 +5,13 @@ import { notFound } from "next/navigation";
 import { PAPERS, getPaper } from "../../../_data/research-papers";
 import styles from "../../../editorial.module.css";
 
+function compactMetadataText(value: string, maxLength: number) {
+  if (value.length <= maxLength) return value;
+  const clipped = value.slice(0, maxLength - 1);
+  const wordBoundary = clipped.lastIndexOf(" ");
+  return `${clipped.slice(0, wordBoundary > maxLength * 0.65 ? wordBoundary : clipped.length).trim()}…`;
+}
+
 export function generateStaticParams() {
   return PAPERS.map((paper) => ({ slug: paper.slug }));
 }
@@ -17,10 +24,35 @@ export async function generateMetadata({
   const { slug } = await params;
   const paper = getPaper(slug);
   if (!paper) return { title: "Paper not found" };
+  const url = `https://atomeons.com/research/papers/${paper.slug}`;
+  const conciseTitle = compactMetadataText(paper.title.split(" — ")[0], 58);
+  const conciseDescription = compactMetadataText(paper.kid_summary, 155);
   return {
-    title: `${paper.title} · AtomEons Research`,
-    description: paper.kid_summary,
-    alternates: { canonical: `https://atomeons.com/research/papers/${paper.slug}` },
+    title: conciseTitle,
+    description: conciseDescription,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${conciseTitle} · AtomEons Research`,
+      description: conciseDescription,
+      url,
+      siteName: "AtomEons",
+      type: "article",
+      images: [
+        {
+          url: "/aether-v2/research-radiance-field-v2.webp",
+          width: 1536,
+          height: 1024,
+          alt: "AtomEons independent experimental research",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${conciseTitle} · AtomEons`,
+      description: conciseDescription,
+      creator: "@AtomMccree",
+      images: ["/aether-v2/research-radiance-field-v2.webp"],
+    },
   };
 }
 

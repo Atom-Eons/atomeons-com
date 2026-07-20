@@ -5,7 +5,7 @@ import { DISCOVERIES } from "../../_data/discoveries";
 import styles from "../../editorial.module.css";
 
 export const metadata: Metadata = {
-  title: "Discoveries · AtomEons Research",
+  title: "Discoveries · Experimental Research",
   description: "Working inventions and frontier systems from AtomEons: AEyes, AtomSmasher, AEMemory, and what comes next.",
   alternates: { canonical: "https://atomeons.com/research/discoveries" },
 };

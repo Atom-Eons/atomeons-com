@@ -7,7 +7,7 @@ import { PAPERS } from "../_data/research-papers";
 import styles from "../editorial.module.css";
 
 export const metadata: Metadata = {
-  title: "Research · AtomEons",
+  title: "Research",
   description:
     "Independent frontier research from AtomEons: discoveries, working systems, speculative papers, and locally hosted open PDFs.",
   alternates: { canonical: "https://atomeons.com/research" },

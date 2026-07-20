@@ -10,6 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Agent gateway status",
   description: "Current agent access boundary for the static AtomEons production site.",
+  alternates: { canonical: "https://atomeons.com/api/agent-gateway" },
 };
 
 export default function AgentGatewayPage() {

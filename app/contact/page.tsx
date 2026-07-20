@@ -11,6 +11,7 @@ import { ContactBoard } from "./ContactBoard";
 export const metadata: Metadata = {
   title: "Contact AtomEons",
   description: "Direct contact routes for Atom McCree and AtomEons: collaboration, product support, press, research, privacy, and legal.",
+  alternates: { canonical: "https://atomeons.com/contact" },
 };
 
 export default function ContactPage() {
@@ -31,7 +32,7 @@ export default function ContactPage() {
       <RouteSection
         index="CHANNELS / LIVE"
         title="Pick the right frequency."
-        body="Every address below is active. If you choose the wrong one, the message still arrives."
+        body="Every address below is active. Direct routing and catch-all delivery were re-verified through Gmail on July 19, 2026."
       >
         <ContactBoard />
       </RouteSection>
@@ -44,8 +45,8 @@ export default function ContactPage() {
         <RouteFacts
           facts={[
             { label: "DESTINATION", value: "1 human inbox", body: "Atom McCree reads and routes the messages." },
-            { label: "PUBLIC ROUTES", value: "8 addresses", body: "Clear context for work, support, press, research, privacy, and legal." },
-            { label: "SAFETY NET", value: "Catch-all live", body: "Misspelled or future @atomeons.com addresses still reach the inbox." },
+            { label: "PUBLIC ROUTES", value: "8 + catch-all", body: "Every published address and future @atomeons.com address forwards to the same verified destination." },
+            { label: "DELIVERY TEST", value: "Inbox verified", body: "A direct route and an invented catch-all address both reached Gmail during the Version 19 launch audit." },
             { label: "TRACKING", value: "No web form", body: "The site does not collect your message in a database." },
           ]}
         />

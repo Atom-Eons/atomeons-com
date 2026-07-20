@@ -10,6 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Art",
   description: "Selected AtomEons works where AI is treated as creative material.",
+  alternates: { canonical: "https://atomeons.com/art" },
 };
 
 export default function ArtPage() {

@@ -17,10 +17,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const discovery = getDiscovery(slug);
   if (!discovery) return { title: "Discovery not found" };
+  const url = `https://atomeons.com/research/discoveries/${discovery.slug}`;
   return {
-    title: `${discovery.displayName} · AtomEons Research`,
+    title: discovery.displayName,
     description: discovery.proposition,
-    alternates: { canonical: `https://atomeons.com/research/discoveries/${discovery.slug}` },
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${discovery.displayName} · AtomEons`,
+      description: discovery.proposition,
+      url,
+      siteName: "AtomEons",
+      type: "article",
+      images: [
+        {
+          url: "/aether-v2/research-radiance-field-v2.webp",
+          width: 1536,
+          height: 1024,
+          alt: "AtomEons experimental research field",
+        },
+      ],
+    },
   };
 }
 

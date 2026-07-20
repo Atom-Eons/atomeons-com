@@ -9,6 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Timeline",
   description: "A product-state timeline for the current AtomEons public work.",
+  alternates: { canonical: "https://atomeons.com/timeline" },
 };
 
 export default function TimelinePage() {

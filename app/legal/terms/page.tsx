@@ -9,6 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Terms",
   description: "Plain-language terms for the AtomEons public website.",
+  alternates: { canonical: "https://atomeons.com/legal/terms" },
 };
 
 export default function TermsPage() {

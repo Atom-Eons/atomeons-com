@@ -10,6 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Cinema",
   description: "AtomEons moving-image and broadcast work led by Atom Alive: The AI Code Show.",
+  alternates: { canonical: "https://atomeons.com/cinema" },
 };
 
 export default function CinemaPage() {

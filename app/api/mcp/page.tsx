@@ -10,6 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "MCP status",
   description: "Current Model Context Protocol status and alternatives for AtomEons.",
+  alternates: { canonical: "https://atomeons.com/api/mcp" },
 };
 
 export default function McpPage() {
