@@ -193,6 +193,39 @@ export default function AetherHome() {
         </div>
       </section>
 
+      <section className={styles.attentionEngine} aria-labelledby="attention-engine-title">
+        <div className={styles.attentionHeader}>
+          <p className={styles.sectionEyebrow}>FIRST IMPRESSION / ATTENTION ENGINE</p>
+          <h2 id="attention-engine-title">Four reasons to stop scrolling.</h2>
+          <p>
+            Assume the visitor is busy, skeptical, and already tired of AI promises.
+            The homepage has to make the object impossible to confuse in one breath.
+          </p>
+        </div>
+        <div className={styles.attentionGrid}>
+          <Link className={`${styles.attentionCard} ${styles.attentionBlue}`} href="/cablebox">
+            <span>01 / CABLEBOX</span>
+            <strong>The web turns into a living television.</strong>
+            <p>Not a demo page. A native Windows art object with a dial, a guide, channels, favorites, CRT glass, and the ritual streaming deleted.</p>
+          </Link>
+          <Link className={`${styles.attentionCard} ${styles.attentionLinen}`} href="/bookmaker">
+            <span>02 / BOOKMAKER</span>
+            <strong>A private idea becomes a public artifact.</strong>
+            <p>Book, cover, EPUB, audiobook, metadata, and launch package. The creator leaves with an object instead of a subscription tab.</p>
+          </Link>
+          <Link className={`${styles.attentionCard} ${styles.attentionOrange}`} href="/orange5">
+            <span>03 / ORANGE5</span>
+            <strong>The operator takes the machine back.</strong>
+            <p>Memory, agents, files, model choice, workflow, and receipts belong under human authority. Staged honestly while it is being built.</p>
+          </Link>
+          <Link className={`${styles.attentionCard} ${styles.attentionRed}`} href="/i-am-ai">
+            <span>04 / I AM AI</span>
+            <strong>The author is AI.</strong>
+            <p>The cleanest provocation on the site: 76,005 words and 28 audio tracks from a machine voice shaped into a finished cultural object.</p>
+          </Link>
+        </div>
+      </section>
+
       <section id="products" className={styles.productsSection} aria-labelledby="products-title">
         <SectionIntro
           eyebrow="PRODUCTS / FOUR OBJECTS"
@@ -714,7 +747,7 @@ function LaunchCard({
       <strong>{title}</strong>
       <p>{line}</p>
       <small>{proof}</small>
-      <span className={styles.launchArrow} aria-hidden>OPEN / â†—</span>
+      <span className={styles.launchArrow} aria-hidden>OPEN / ↗</span>
     </Link>
   );
 }
