@@ -120,10 +120,59 @@
   line-height: 1.25 !important;
 }
 
+.heroSignalStack {
+  display: grid;
+  max-width: 760px;
+  margin-top: 26px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid rgba(17, 18, 15, 0.86);
+  background:
+    linear-gradient(135deg, rgba(216, 255, 62, 0.2), transparent 36%),
+    #fff;
+  box-shadow: 6px 6px 0 rgba(17, 18, 15, 0.1);
+}
+
+.heroSignalStack a {
+  display: grid;
+  min-height: 118px;
+  padding: 14px 15px;
+  align-content: space-between;
+  border-right: 1px solid rgba(17, 18, 15, 0.86);
+  color: var(--ink) !important;
+  text-decoration: none !important;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.heroSignalStack a:last-child {
+  border-right: 0;
+}
+
+.heroSignalStack a:hover,
+.heroSignalStack a:focus-visible {
+  background: var(--ink);
+  color: #fff !important;
+  transform: translate(-2px, -2px);
+}
+
+.heroSignalStack span {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.heroSignalStack strong {
+  max-width: 22ch;
+  font-size: clamp(13px, 1vw, 15px);
+  font-weight: 680;
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+}
+
 .heroActions,
 .finalActions {
   display: flex;
-  margin-top: 34px;
+  margin-top: 28px;
   align-items: center;
   flex-wrap: wrap;
   gap: 18px 26px;
@@ -1798,6 +1847,13 @@
   .heroTitle { font-size: clamp(62px, 19vw, 96px); line-height: .84; }
   .heroTitle span { -webkit-text-stroke-width: 0; }
   .heroDeck { font-size: 18px; }
+  .heroSignalStack { grid-template-columns: 1fr; }
+  .heroSignalStack a {
+    min-height: 78px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(17, 18, 15, 0.86);
+  }
+  .heroSignalStack a:last-child { border-bottom: 0; }
   .heroActions { align-items: flex-start; flex-direction: column; }
   .heroMetrics { grid-template-columns: 1fr 1fr; }
   .heroProofBand {
