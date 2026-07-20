@@ -16,6 +16,29 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://atomeons.com/press" },
 };
 
+const editorialFilter = [
+  {
+    label: "HEADLINE FRAME",
+    value: "Artist builds with AI",
+    body: "The clean story is not a chatbot startup. It is an artist-owned practice turning AI labor into public objects.",
+  },
+  {
+    label: "PROOF FRAME",
+    value: "Objects first",
+    body: "Start with CableBox, I AM AI, Bookmaker, Orange5, Atom Alive, and the research pages before describing the philosophy.",
+  },
+  {
+    label: "CONFLICT FRAME",
+    value: "Outsider pressure",
+    body: "The tension is real constraint versus ambitious output: one operator, no fake campus, no VC costume, visible receipts.",
+  },
+  {
+    label: "FACT FRAME",
+    value: "Copy carefully",
+    body: "Use direct Gmail contact, Naples location, mixed product states, and hosted papers; avoid invented staff, funding, or lab claims.",
+  },
+];
+
 export default function PressPage() {
   return (
     <RoutePage
@@ -52,6 +75,14 @@ export default function PressPage() {
             { label: "CAPITAL", value: "$0 VC", body: "No venture-capital mythology. The work is built under real constraints." },
           ]}
         />
+      </RouteSection>
+
+      <RouteSection
+        index="EDITORIAL FILTER / READ FIRST"
+        title="The best coverage starts with the object, not the hype."
+        body="AtomEons is easiest to misread if the story starts with generic AI language. Start with the public artifacts, then explain the unusual production method behind them."
+      >
+        <RouteFacts facts={editorialFilter} />
       </RouteSection>
 
       <RouteSection
