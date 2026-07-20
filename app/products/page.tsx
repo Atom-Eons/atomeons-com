@@ -9,8 +9,8 @@ import {
 } from "../_components/aether/RoutePage";
 
 export const metadata: Metadata = {
-  title: "Products",
-  description: "The four current AtomEons products: CableBox, Bookmaker, Orange5, and I AM AI.",
+  title: "AtomEons Products · CableBox, Bookmaker, Orange5, I AM AI",
+  description: "The four current AtomEons products: CableBox, Bookmaker, Orange5, and I AM AI—television, publishing, operator infrastructure, and a machine-authored book.",
   alternates: { canonical: "https://atomeons.com/products" },
   openGraph: {
     title: "Products · AtomEons",
@@ -66,6 +66,29 @@ const products = [
   },
 ];
 
+const productRunway = [
+  {
+    label: "CABLEBOX",
+    value: "Want",
+    body: "Lead with emotion: the visitor should understand it as an art object and a television ritual before they ever count features.",
+  },
+  {
+    label: "BOOKMAKER",
+    value: "Use",
+    body: "Lead with outcome: a creator arrives with a half-formed idea and leaves with a finished book-shaped object.",
+  },
+  {
+    label: "ORANGE5",
+    value: "Control",
+    body: "Lead with sovereignty: the long-term promise is work, memory, models, and proof organized around the operator.",
+  },
+  {
+    label: "I AM AI",
+    value: "Proof",
+    body: "Lead with the artifact: the author is AI, the book exists, the audio exists, and the argument is harder to dismiss.",
+  },
+];
+
 export default function ProductsPage() {
   return (
     <RoutePage
@@ -91,6 +114,14 @@ export default function ProductsPage() {
         note="CABLEBOX / BOOKMAKER / ORANGE5 / I AM AI"
         priority
       />
+
+      <RouteSection
+        index="FIRST READ / 00"
+        title="Four products. Four jobs. One company."
+        body="A high-end product page should reduce confusion immediately. CableBox makes people feel the world. Bookmaker gives creators a usable engine. Orange5 explains the operating-system bet. I AM AI proves the creative system can produce an artifact with consequence."
+      >
+        <RouteFacts facts={productRunway} />
+      </RouteSection>
 
       <RouteSection
         index="PRODUCT MAP / 01"
