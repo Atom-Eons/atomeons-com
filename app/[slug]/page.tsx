@@ -108,7 +108,7 @@ const SURFACES = {
       ["No invented institution", "No fake campus or venture mythology—just the work and the circumstances."],
       ["Products + show + research", "Useful objects, public creation, and experimental discoveries share one stage."],
     ],
-    primaryHref: "/#products",
+    primaryHref: "/products",
     primaryLabel: "Explore the work",
   },
 } as const;
@@ -231,7 +231,7 @@ export default async function CanonicalSurface({ params }: { params: Promise<{ s
         <p className={styles.eyebrow}>MADE WITH AI · DIRECTED BY AN ARTIST</p>
         <h2>The object keeps evolving.</h2>
         <div className={styles.actions}>
-          <Link href="/#products" className={styles.button}>All products</Link>
+          <Link href="/products" className={styles.button}>All products</Link>
           <Link href="/research" className={`${styles.button} ${styles.buttonGhost}`}>Experimental research ↗</Link>
         </div>
       </section>

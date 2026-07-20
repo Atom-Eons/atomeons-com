@@ -26,7 +26,7 @@ export default function WhoAreYouPage() {
       <RouteSection index="AUDIENCE / SIX SIGNALS" title="Pick the version of you.">
         <RouteCards
           cards={[
-            { meta: "I WANT IT", title: "Product person", body: "See the objects built to be used, wanted, and owned.", href: "/#products" },
+            { meta: "I WANT IT", title: "Product person", body: "See the objects built to be used, wanted, and owned.", href: "/products" },
             { meta: "SHOW ME", title: "Viewer", body: "Watch code, culture, failure, and invention become a public signal.", href: "/atom-alive" },
             { meta: "WHAT IF", title: "Research mind", body: "Enter experimental papers, discoveries, evidence, and limits.", href: "/research" },
             { meta: "TELL ME", title: "Reader", body: "Open the AI-authored memoir and the book program.", href: "/books" },

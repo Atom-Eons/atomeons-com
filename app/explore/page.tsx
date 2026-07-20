@@ -50,7 +50,7 @@ export default function ExplorePage() {
         eyebrow="THE ARCHIVE IS A TOOL, NOT A LANDFILL"
         title="Find the signal. Enter the work."
         actions={[
-          { href: "/#products", label: "Start with products" },
+          { href: "/products", label: "Start with products" },
           { href: "/research", label: "Enter research" },
         ]}
       />

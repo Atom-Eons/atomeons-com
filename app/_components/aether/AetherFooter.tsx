@@ -5,7 +5,7 @@ import styles from "./AetherFooter.module.css";
 const columns = [
   {
     title: "Products",
-    links: PRODUCTS.map((item) => [item.title, item.href] as const),
+    links: [["All products", "/products"] as const, ...PRODUCTS.map((item) => [item.title, item.href] as const)],
   },
   {
     title: "Show",

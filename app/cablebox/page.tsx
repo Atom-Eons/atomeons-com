@@ -378,7 +378,7 @@ export default function CableboxPage() {
         <h2>CABLEBOX</h2>
         <span>FUN · CABLE · ART · THE ACCIDENTS PUT BACK IN</span>
         <div>
-          <Link href="/#products">All products</Link>
+          <Link href="/products">All products</Link>
           <Link href="/press">Press room</Link>
           <a href="mailto:hello@atomeons.com?subject=%5BCableBox%5D%20release%20signal">Release signal</a>
         </div>
