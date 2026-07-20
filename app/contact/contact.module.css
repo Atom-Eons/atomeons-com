@@ -246,6 +246,25 @@
   text-transform: uppercase;
 }
 
+.subjectPreview {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 12px;
+  padding: 7px 9px;
+  border: 1px solid color-mix(in srgb, var(--tone) 34%, transparent);
+  background: color-mix(in srgb, var(--tone) 5%, #fff);
+  color: #33352f;
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
 .channel > p {
   position: relative;
   z-index: 1;
@@ -343,6 +362,18 @@
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
+}
+
+.directChannel code {
+  grid-column: 1 / -1;
+  padding-top: 4px;
+  color: #3f413b;
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: .06em;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 .directChannel button {
