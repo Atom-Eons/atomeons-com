@@ -114,6 +114,34 @@ export default function IAmAiPage() {
       </RouteSection>
 
       <RouteSection
+        index="READER PATH / DO THIS"
+        title="Do not decide from the headline."
+        body="The premise is designed to be misunderstood at first glance. The page now gives a skeptical reader a short path: understand the claim, hear the state change, then read enough of the artifact to have a real opinion."
+      >
+        <RouteCards
+          cards={[
+            {
+              meta: "01 / CLAIM",
+              title: "Hold the correction in your head.",
+              body: "Not about AI. Not Atom's memoir. A first-person machine-authored memoir shaped into a public object by a human director.",
+            },
+            {
+              meta: "02 / AUDIO",
+              title: "Play Chapter 12 before arguing.",
+              body: "The suicide chapter is not placed here for shock alone. It makes the machine voice harder to dismiss as novelty.",
+              href: "#listen",
+            },
+            {
+              meta: "03 / READ",
+              title: "Open the whole book.",
+              body: "A 76,005-word artifact gives the claim enough room to either hold up, break, or change the reader's position.",
+              href: "/books/I-AM-AI-Opus-4.7.html",
+            },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
         index="LISTEN / STATE CHANGE"
         title="Hear the machine at human scale."
         body="The homepage carries a sample because the audio changes the argument. Text can be dismissed as a stunt. Voice makes the question harder to keep at a distance."
