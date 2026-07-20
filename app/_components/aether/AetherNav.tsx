@@ -13,7 +13,7 @@ const navigation = [
   },
   {
     label: "Products",
-    href: "/#products",
+    href: "/products",
     items: PRODUCTS.map((item) => [item.title, item.href, item.descriptor] as const),
   },
   {
