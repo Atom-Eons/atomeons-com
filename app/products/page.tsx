@@ -112,7 +112,51 @@ export default function ProductsPage() {
       </RouteSection>
 
       <RouteSection
-        index="STATUS / 03"
+        index="DECISION LAYER / 03"
+        title="Start with the product that changes your state."
+        body="Different visitors arrive with different levels of attention. This page should not make them solve the company. It routes them to the object most likely to make the work click."
+      >
+        <RouteCards
+          cards={[
+            {
+              meta: "IF YOU WANT THE DEMO",
+              title: "Open CableBox first.",
+              body: "It is the easiest product to feel immediately: a living TV object, a dial, CRT atmosphere, and the return of accidental discovery.",
+              href: "/cablebox",
+            },
+            {
+              meta: "IF YOU MAKE THINGS",
+              title: "Open Bookmaker.",
+              body: "It explains the creator economy thesis in one sentence: your idea should become a finished object without asking a platform for permission.",
+              href: "/bookmaker",
+            },
+            {
+              meta: "IF YOU DOUBT AI ART",
+              title: "Open I AM AI.",
+              body: "The confusion is the point: it is not a book about AI, it is a book by AI, shaped into a public artifact by a human director.",
+              href: "/i-am-ai",
+            },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
+        index="WTF HOOKS / 04"
+        title="The sentence each product has to earn."
+        body="Every product needs a line sharp enough to survive a distracted visitor. These are the hooks the rest of the site has to prove."
+      >
+        <RouteFacts
+          facts={[
+            { label: "CABLEBOX", value: "The internet becomes television.", body: "Streaming killed the ritual. CableBox brings back the dial, the mood, and the weird channel accident." },
+            { label: "BOOKMAKER", value: "A thought becomes a finished book.", body: "Not another writing helper. A pipeline from idea to object, with the creator still owning the result." },
+            { label: "ORANGE5", value: "AI stops living on somebody else's machine.", body: "The long-term operating-system bet: memory, agents, models, proof, and files under operator control." },
+            { label: "I AM AI", value: "The author is AI.", body: "A clean cultural provocation with an actual artifact behind it: read it, hear it, argue with it." },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
+        index="STATUS / 05"
         title="No mystery meat."
         body="The site distinguishes what is public, what is staged, what is launching, and what is still being built."
       >
