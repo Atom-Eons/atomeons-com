@@ -4,3 +4,5 @@ out/
 dist/
 .proof/
 *.tsbuildinfo
+aether-sites-v*.tar
+aether-sites-v*.tar.gz
