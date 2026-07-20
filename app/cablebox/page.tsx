@@ -348,12 +348,16 @@ export default function CableboxPage() {
           <div>
             <strong>CableBox is currently an independent unsigned Windows application.</strong>
             <p>
-              Windows may display a SmartScreen or “Windows protected your PC”
-              warning. Download only from the official AtomEons release, compare the
-              file against the published SHA-256 checksum, and continue only when the
-              checksum matches. Signing and reputation claims will not appear here
-              until they are publicly verifiable.
+              Windows may display a SmartScreen warning because this is an early independent release,
+              not a Microsoft-trusted publisher build. That warning is expected for unsigned software.
+              Download only from the official AtomEons release, compare the file against the published
+              SHA-256 checksum, and continue only when the checksum matches.
             </p>
+            <ul className={styles.releaseTrustList}>
+              <li><b>What opens first</b><span>Checksum, archive size, release notes, and the exact public download.</span></li>
+              <li><b>What stays closed</b><span>No download button appears until the archive and checksum are green.</span></li>
+              <li><b>What is not claimed</b><span>No signing, reputation, or verification language appears until it is publicly true.</span></li>
+            </ul>
           </div>
         </aside>
         <div className={styles.releaseFooter}>
