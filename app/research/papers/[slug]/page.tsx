@@ -25,7 +25,13 @@ export async function generateMetadata({
   const paper = getPaper(slug);
   if (!paper) return { title: "Paper not found" };
   const url = `https://atomeons.com/research/papers/${paper.slug}`;
-  const conciseTitle = compactMetadataText(paper.title.split(" — ")[0], 58);
+  const primaryTitle = paper.title.split(" — ")[0];
+  const conciseTitle = compactMetadataText(
+    paper.title.includes("Extended Working Draft")
+      ? `${primaryTitle}: Extended Working Draft`
+      : primaryTitle,
+    58,
+  );
   const conciseDescription = compactMetadataText(paper.kid_summary, 155);
   return {
     title: conciseTitle,
