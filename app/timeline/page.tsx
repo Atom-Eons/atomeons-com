@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  RouteFacts,
   RouteFinal,
   RouteList,
   RoutePage,
@@ -11,6 +12,29 @@ export const metadata: Metadata = {
   description: "A product-state timeline for the current AtomEons public work.",
   alternates: { canonical: "https://atomeons.com/timeline" },
 };
+
+const stateKey = [
+  {
+    label: "PUBLISHED",
+    value: "Public artifact",
+    body: "The object can be opened, read, heard, inspected, or cited now.",
+  },
+  {
+    label: "AVAILABLE",
+    value: "Usable offer",
+    body: "The product has a public route and a clear utility promise, even while it continues to evolve.",
+  },
+  {
+    label: "CANDIDATE",
+    value: "Release gate",
+    body: "The launch story is public, but a download or install remains gated until checksum and operator approval are green.",
+  },
+  {
+    label: "BUILDING",
+    value: "Active system",
+    body: "The page describes architecture and direction without claiming a finished commercial release.",
+  },
+];
 
 export default function TimelinePage() {
   return (
@@ -35,6 +59,13 @@ export default function TimelinePage() {
             { index: "07", meta: "LIVE", title: "Aether", body: "The product-first white front door replaces the former production shell.", href: "/" },
           ]}
         />
+      </RouteSection>
+      <RouteSection
+        index="STATE KEY / READ BEFORE THE HYPE"
+        title="The timeline is a truth table, not a victory lap."
+        body="Each entry is labeled by its current proof state. That keeps the public story ambitious without pretending every object is equally finished."
+      >
+        <RouteFacts facts={stateKey} />
       </RouteSection>
       <RouteFinal
         eyebrow="THE NEXT ENTRY REQUIRES PROOF"
