@@ -80,6 +80,29 @@ export function AetherFooter() {
         <span>STATIC EDITION · NO TRACKING DATABASE · NO VC</span>
       </div>
 
+      <div className={styles.commandBoard} aria-label="Footer priority routes">
+        <Link href="/products">
+          <span>01 / PRODUCTS</span>
+          <strong>Start with the objects.</strong>
+          <small>CableBox, Bookmaker, Orange5, and I AM AI.</small>
+        </Link>
+        <Link href="/cablebox">
+          <span>02 / LAUNCH</span>
+          <strong>Tune into CableBox.</strong>
+          <small>The native Windows television object and current launch focus.</small>
+        </Link>
+        <Link href="/research">
+          <span>03 / RESEARCH</span>
+          <strong>Inspect the strange claims.</strong>
+          <small>Discoveries, papers, evidence, PDFs, and visible limits.</small>
+        </Link>
+        <Link href="/contact">
+          <span>04 / CONTACT</span>
+          <strong>Send the signal.</strong>
+          <small>Direct Gmail fail-safe for work, press, support, and corrections.</small>
+        </Link>
+      </div>
+
       <div className={styles.bottom}>
         <p>© 2026 AtomEons · Atom McCree + AI · Naples, FL</p>
         <nav aria-label="Footer utility links">

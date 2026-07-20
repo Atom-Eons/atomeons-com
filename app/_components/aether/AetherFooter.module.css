@@ -150,6 +150,74 @@
 .machineRail a { color: #11120f !important; text-decoration: none !important; }
 .machineRail a:hover { text-decoration: underline !important; text-underline-offset: 4px; }
 
+.commandBoard {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 1px;
+  border-bottom: 1px solid #11120f;
+  background: #11120f;
+}
+
+.commandBoard a {
+  position: relative;
+  display: flex;
+  min-height: 190px;
+  padding: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--psych-primary) 16%, transparent), transparent 9rem),
+    #fff;
+  color: #11120f !important;
+  text-decoration: none !important;
+}
+
+.commandBoard a::after {
+  content: "↗";
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  color: var(--psych-primary);
+  font-size: 22px;
+  transition: transform 160ms ease;
+}
+
+.commandBoard a:hover::after {
+  transform: translate(3px,-3px);
+}
+
+.commandBoard span,
+.commandBoard small {
+  font-family: var(--font-mono), monospace;
+  text-transform: uppercase;
+}
+
+.commandBoard span {
+  color: var(--psych-primary);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.commandBoard strong {
+  max-width: 12ch;
+  margin-top: 34px;
+  font-size: clamp(24px,2.3vw,38px);
+  font-weight: 650;
+  letter-spacing: -.055em;
+  line-height: .94;
+}
+
+.commandBoard small {
+  max-width: 26ch;
+  color: #62645f;
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: .11em;
+  line-height: 1.45;
+}
+
 .bottom {
   display: flex;
   width: 100%;
@@ -176,11 +244,14 @@
 
 @media (max-width: 1050px) {
   .top { grid-template-columns: 1fr; }
+  .commandBoard { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 
 @media (max-width: 720px) {
   .top { padding-top: 56px; }
   .columns { grid-template-columns: 1fr 1fr; gap: 48px 24px; }
+  .commandBoard { grid-template-columns: 1fr; }
+  .commandBoard a { min-height: 160px; }
   .bottom { padding-top: 22px; padding-bottom: 22px; align-items: flex-start; flex-direction: column; }
 }
 
@@ -190,4 +261,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .columns a span { transition: none; }
+  .commandBoard a::after { transition: none; }
 }
