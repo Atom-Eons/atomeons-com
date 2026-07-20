@@ -2,12 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { DISCOVERIES } from "../_data/discoveries";
-import { PAPERS } from "../_data/research-papers";
-import { SITE_INDEX } from "../_data/site-index";
 import styles from "./search.module.css";
 
-type SearchEntry = {
+export type SearchEntry = {
   title: string;
   href: string;
   description: string;
@@ -15,32 +12,6 @@ type SearchEntry = {
   keywords: string[];
   kind: "route" | "paper" | "discovery";
 };
-
-const searchEntries: SearchEntry[] = [
-  ...SITE_INDEX.map((entry) => ({ ...entry, kind: "route" as const })),
-  ...DISCOVERIES.map((discovery) => ({
-    title: discovery.displayName,
-    href: `/research/discoveries/${discovery.slug}`,
-    description: discovery.oneLine,
-    category: "Discoveries",
-    keywords: [
-      discovery.name,
-      discovery.category,
-      discovery.status,
-      discovery.proposition,
-      ...discovery.principles.flatMap((principle) => [principle.label, principle.value]),
-    ],
-    kind: "discovery" as const,
-  })),
-  ...PAPERS.map((paper) => ({
-    title: paper.title,
-    href: `/research/papers/${paper.slug}`,
-    description: paper.kid_summary,
-    category: "Papers",
-    keywords: [paper.authors, paper.status, paper.date, ...paper.keywords],
-    kind: "paper" as const,
-  })),
-];
 
 const categories = ["All", "Products", "Show", "Research", "Papers", "Discoveries", "Creations", "Company", "Machine"] as const;
 const queryChips = ["CableBox", "I AM AI", "radiance", "memory", "compression", "AI Code Show"] as const;
@@ -68,7 +39,7 @@ function scoreEntry(entry: SearchEntry, terms: string[]) {
   }, 0);
 }
 
-export function SearchClient() {
+export function SearchClient({ entries }: { entries: SearchEntry[] }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<(typeof categories)[number]>("All");
 
@@ -80,7 +51,7 @@ export function SearchClient() {
   const results = useMemo(() => {
     const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
 
-    return searchEntries
+    return entries
       .map((entry) => ({ entry, score: scoreEntry(entry, terms) }))
       .filter(({ entry, score }) => {
         const categoryMatch = category === "All" || entry.category === category;
@@ -88,7 +59,7 @@ export function SearchClient() {
       })
       .sort((a, b) => b.score - a.score || a.entry.title.localeCompare(b.entry.title))
       .map(({ entry }) => entry);
-  }, [category, query]);
+  }, [category, entries, query]);
 
   return (
     <div>
