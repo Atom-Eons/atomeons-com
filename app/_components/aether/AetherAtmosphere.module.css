@@ -13,11 +13,29 @@
 .spark,
 .trace,
 .cross,
+.gazeLens,
+.mote,
+.themeBadge,
 .burst {
   position: absolute;
   display: block;
-  opacity: 0;
   color: var(--psych-primary);
+}
+
+.gazeLens {
+  top: calc(var(--ae-cursor-y, 40vh) - 200px - 72px);
+  left: calc(var(--ae-cursor-x, 50vw) - 200px);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  opacity: .32;
+  background:
+    radial-gradient(circle, color-mix(in srgb, var(--psych-attention) 35%, transparent) 0 1px, transparent 1px 28px),
+    radial-gradient(circle, color-mix(in srgb, var(--psych-primary) 10%, transparent), transparent 62%);
+  background-size: 28px 28px, auto;
+  mask-image: radial-gradient(circle, black 0 16%, rgba(0,0,0,.62) 38%, transparent 72%);
+  transform: translate3d(0, 0, 0);
+  transition: top 420ms cubic-bezier(.2, .72, .2, 1), left 420ms cubic-bezier(.2, .72, .2, 1), opacity 500ms ease;
 }
 
 .spark {
@@ -46,6 +64,44 @@
   width: 11px;
   height: 11px;
   animation: crossVisit 31s steps(1, end) -21s infinite;
+}
+
+.mote {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow:
+    0 0 0 5px color-mix(in srgb, currentColor 8%, transparent),
+    0 0 22px color-mix(in srgb, currentColor 24%, transparent);
+  opacity: 0;
+}
+
+.moteA {
+  top: 24%;
+  left: 8%;
+  animation: moteWalk 43s cubic-bezier(.18,.72,.2,1) -17s infinite;
+}
+
+.moteB {
+  right: 14%;
+  bottom: 26%;
+  animation: moteWalk 51s cubic-bezier(.18,.72,.2,1) -31s infinite reverse;
+}
+
+.themeBadge {
+  right: 18px;
+  bottom: 58px;
+  padding: 7px 9px;
+  border: 1px solid color-mix(in srgb, currentColor 34%, transparent);
+  background: rgba(255, 255, 255, .62);
+  color: color-mix(in srgb, currentColor 76%, #11120f);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 7px;
+  font-weight: 780;
+  letter-spacing: .16em;
+  opacity: .66;
+  backdrop-filter: blur(10px);
 }
 
 .cross::before,
@@ -228,7 +284,31 @@
   }
 }
 
+@keyframes moteWalk {
+  0%, 54%, 100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(.6);
+  }
+  58% {
+    opacity: .28;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  64% {
+    opacity: .54;
+    transform: translate3d(26px, -18px, 0) scale(.88);
+  }
+  70% {
+    opacity: .2;
+    transform: translate3d(42px, 7px, 0) scale(.72);
+  }
+  75% {
+    opacity: 0;
+    transform: translate3d(60px, -2px, 0) scale(.52);
+  }
+}
+
 @media (max-width: 720px) {
+  .gazeLens,
   .trace {
     display: none;
   }
@@ -240,6 +320,11 @@
   .controls {
     right: 9px;
     bottom: 9px;
+  }
+
+  .themeBadge {
+    right: 9px;
+    bottom: 47px;
   }
 
   .controlsLabel {

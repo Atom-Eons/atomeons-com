@@ -59,6 +59,16 @@ const themeFrequencies: Record<AetherTheme, number> = {
   radiance: 330,
 };
 
+const themeLabels: Record<AetherTheme, string> = {
+  trust: "CLARITY FIELD",
+  forge: "FORGE HEAT",
+  evidence: "EVIDENCE GREEN",
+  signal: "BROADCAST RED",
+  story: "STORY WARMTH",
+  connection: "DIRECT ROUTE",
+  radiance: "RADIANCE ALERT",
+};
+
 export function AetherAtmosphere() {
   const pathname = usePathname();
   const [motionOn, setMotionOn] = useState(true);
@@ -138,6 +148,8 @@ export function AetherAtmosphere() {
         const y = (event.clientY / window.innerHeight - 0.5) * 6;
         document.documentElement.style.setProperty("--ae-gaze-x", `${x.toFixed(2)}px`);
         document.documentElement.style.setProperty("--ae-gaze-y", `${y.toFixed(2)}px`);
+        document.documentElement.style.setProperty("--ae-cursor-x", `${event.clientX.toFixed(0)}px`);
+        document.documentElement.style.setProperty("--ae-cursor-y", `${event.clientY.toFixed(0)}px`);
       });
     };
 
@@ -147,6 +159,8 @@ export function AetherAtmosphere() {
       window.removeEventListener("pointermove", handleGaze);
       document.documentElement.style.removeProperty("--ae-gaze-x");
       document.documentElement.style.removeProperty("--ae-gaze-y");
+      document.documentElement.style.removeProperty("--ae-cursor-x");
+      document.documentElement.style.removeProperty("--ae-cursor-y");
     };
   }, [motionOn]);
 
@@ -200,9 +214,13 @@ export function AetherAtmosphere() {
   return (
     <>
       <div className={styles.layer} aria-hidden="true">
+        <span className={styles.gazeLens} />
         <span className={styles.spark} />
         <span className={styles.trace} />
         <span className={styles.cross} />
+        <span className={`${styles.mote} ${styles.moteA}`} />
+        <span className={`${styles.mote} ${styles.moteB}`} />
+        <span className={styles.themeBadge}>{themeLabels[theme]}</span>
         {burst ? (
           <span
             className={styles.burst}
