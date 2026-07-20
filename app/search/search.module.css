@@ -33,6 +33,61 @@
   text-transform: uppercase;
 }
 
+.discoveryPanel {
+  display: grid;
+  margin: -24px 0 56px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, .9fr);
+  border: 1px solid #101010;
+  background: #fbfbf7;
+  box-shadow: 7px 7px 0 #d8ff3e;
+}
+
+.discoveryPanel > div {
+  min-width: 0;
+  padding: 18px;
+}
+
+.discoveryPanel > div + div {
+  border-left: 1px solid #101010;
+}
+
+.discoveryPanel > div > span {
+  display: block;
+  margin-bottom: 13px;
+  color: #66645f;
+  font: 800 8px/1.2 var(--font-mono, monospace);
+  letter-spacing: .16em;
+}
+
+.filterRow,
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filterRow button,
+.chipRow button {
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid #d9d7d0;
+  border-radius: 999px;
+  background: #fff;
+  color: #101010;
+  cursor: pointer;
+  font: 760 8px/1 var(--font-mono, monospace);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.filterRow button:hover,
+.chipRow button:hover,
+.filterRow button[aria-pressed="true"] {
+  border-color: #2558dc;
+  background: #2558dc;
+  color: #fff;
+}
+
 .results { border-top: 1px solid #d9d7d0; }
 .results > a {
   display: grid;
@@ -66,5 +121,10 @@
 @media (max-width: 640px) {
   .searchBox { grid-template-columns: 1fr; }
   .searchBox > span { padding: 0; }
+  .discoveryPanel { grid-template-columns: 1fr; }
+  .discoveryPanel > div + div {
+    border-left: 0;
+    border-top: 1px solid #101010;
+  }
   .results > a { grid-template-columns: 40px 1fr 20px; }
 }
