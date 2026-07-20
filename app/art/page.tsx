@@ -56,7 +56,7 @@ export default function ArtPage() {
         eyebrow="THE NEVER EXISTED IS THE MEDIUM"
         title="Make the impossible feel inevitable."
         actions={[
-          { href: "/#products", label: "See the products" },
+          { href: "/products", label: "See the products" },
           { href: "/about", label: "Meet the artist" },
         ]}
       />

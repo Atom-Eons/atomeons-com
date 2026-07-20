@@ -52,7 +52,7 @@ export default function CinemaPage() {
         title="No keynote voice. No corporate future-speak."
         actions={[
           { href: "https://www.youtube.com/@AICodeShow", label: "Open the channel" },
-          { href: "/#products", label: "See what gets built" },
+          { href: "/products", label: "See what gets built" },
         ]}
       />
     </RoutePage>
