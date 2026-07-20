@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  RouteFacts,
   RouteFinal,
   RouteList,
   RoutePage,
@@ -12,6 +13,12 @@ export const metadata: Metadata = {
   description: "The curated index of every current public AtomEons surface.",
   alternates: { canonical: "https://atomeons.com/explore" },
 };
+
+const coverageFacts = SITE_GROUPS.map((group) => ({
+  label: group.toUpperCase(),
+  value: String(SITE_INDEX.filter((entry) => entry.category === group).length),
+  body: `Current ${group.toLowerCase()} surfaces listed in the public Aether index.`,
+}));
 
 export default function ExplorePage() {
   return (
@@ -28,6 +35,14 @@ export default function ExplorePage() {
         { href: "/random", label: "Surprise me" },
       ]}
     >
+      <RouteSection
+        index="COVERAGE / CURRENT EDITION"
+        title="The public map is counted."
+        body="Explore is the completeness check for the focused site: every current product, show, research, creation, company, and machine-readable route gets a visible doorway."
+      >
+        <RouteFacts facts={coverageFacts} />
+      </RouteSection>
+
       {SITE_GROUPS.map((group) => (
         <RouteSection
           key={group}
