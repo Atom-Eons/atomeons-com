@@ -25,6 +25,132 @@
         }
       }
     },
+    "/products": {
+      "get": {
+        "summary": "Products front door",
+        "description": "Human-readable map of the four current AtomEons products and their public states.",
+        "responses": {
+          "200": {
+            "description": "Static HTML product index",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/cablebox": {
+      "get": {
+        "summary": "CableBox product page",
+        "description": "Launch-candidate Windows cable-surfing art page. Download archive remains gated until checksum/operator approval.",
+        "responses": {
+          "200": {
+            "description": "Static HTML CableBox release page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/bookmaker": {
+      "get": {
+        "summary": "Bookmaker product page",
+        "description": "Independent publishing system page for turning an idea into a finished book object.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Bookmaker page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/orange5": {
+      "get": {
+        "summary": "Orange5 product page",
+        "description": "Dedicated Orange5 architecture/status page. This is not a downloadable final release claim.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Orange5 page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/i-am-ai": {
+      "get": {
+        "summary": "I AM AI product page",
+        "description": "Dedicated page for the AI-authored memoir and audiobook artifact.",
+        "responses": {
+          "200": {
+            "description": "Static HTML I AM AI page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/atom-alive": {
+      "get": {
+        "summary": "Atom Alive show page",
+        "description": "The AI Code Show public page with YouTube route and show positioning.",
+        "responses": {
+          "200": {
+            "description": "Static HTML show page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/about": {
+      "get": {
+        "summary": "About AtomEons",
+        "description": "Dedicated identity page for Atom McCree, the AI workforce thesis, and the independent practice.",
+        "responses": {
+          "200": {
+            "description": "Static HTML About page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/trust": {
+      "get": {
+        "summary": "Trust contract and current state map",
+        "description": "Public claim boundaries, product states, verification routes, contact fail-safe, and correction path.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Trust page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/contact": {
+      "get": {
+        "summary": "Contact page",
+        "description": "Direct contact routes. Public actions use the a.mccree@gmail.com fail-safe and do not submit to a database.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Contact page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
     "/llms.txt": {
       "get": {
         "summary": "Language-model context document",

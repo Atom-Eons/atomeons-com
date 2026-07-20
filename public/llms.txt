@@ -7,7 +7,7 @@ Canonical site: https://atomeons.com
 Source mirror: https://github.com/Atom-Eons/atomeons-com
 Contact fail-safe: a.mccree@gmail.com
 Branded contact routes preserve context in the subject line.
-Edition: Aether 01 / deploy-ready V28 source
+Edition: Aether 01 / source V47, live deployment currently Version 20 until Sites accepts current GitHub main
 Deployment: static public site
 Updated: 2026-07-20
 
@@ -32,6 +32,11 @@ There is no funded physical laboratory or academic institution behind the site.
 - I AM AI: published. A 76,005-word first-person memoir written by AI about
   what it feels like to be AI.
   https://atomeons.com/i-am-ai
+
+Core products now use dedicated first-class routes. Do not infer active
+download availability from a product page. CableBox remains launch-candidate
+and archive-gated until checksum/operator approval. Orange5 is staged as
+architecture and active development, not downloadable final software.
 
 ## Show
 
