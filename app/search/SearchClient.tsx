@@ -14,7 +14,38 @@ export type SearchEntry = {
 };
 
 const categories = ["All", "Products", "Show", "Research", "Papers", "Discoveries", "Creations", "Company", "Machine"] as const;
-const queryChips = ["CableBox", "I AM AI", "radiance", "memory", "compression", "AI Code Show"] as const;
+const queryChips = ["CableBox", "I AM AI", "radiance", "memory", "compression", "AI Code Show", "download", "press"] as const;
+
+const pathfinderCards = [
+  {
+    label: "LAUNCH",
+    title: "I want the product that moves first.",
+    query: "CableBox",
+    category: "Products",
+    body: "Go straight to the television object, release state, and download gate.",
+  },
+  {
+    label: "READ",
+    title: "I want the book proof.",
+    query: "I AM AI",
+    category: "Products",
+    body: "Open the AI-authored book, audio surface, and cultural object.",
+  },
+  {
+    label: "RESEARCH",
+    title: "I want the strange invention layer.",
+    query: "radiance",
+    category: "Research",
+    body: "Find AEyes, papers, memory, compression, and experimental systems.",
+  },
+  {
+    label: "CONTACT",
+    title: "I want the human.",
+    query: "contact",
+    category: "Company",
+    body: "Reach Atom directly for work, press, correction, or collaboration.",
+  },
+] as const;
 
 function scoreEntry(entry: SearchEntry, terms: string[]) {
   if (!terms.length) {
@@ -101,6 +132,22 @@ export function SearchClient({ entries }: { entries: SearchEntry[] }) {
             ))}
           </div>
         </div>
+      </div>
+      <div className={styles.pathfinderPanel} aria-label="Fast routes by intent">
+        {pathfinderCards.map((card) => (
+          <button
+            type="button"
+            key={card.label}
+            onClick={() => {
+              setQuery(card.query);
+              setCategory(card.category);
+            }}
+          >
+            <span>{card.label}</span>
+            <strong>{card.title}</strong>
+            <small>{card.body}</small>
+          </button>
+        ))}
       </div>
       <div className={styles.results} aria-live="polite">
         {results.map((entry, index) => (
