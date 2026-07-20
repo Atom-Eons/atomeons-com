@@ -97,6 +97,32 @@ export default function AboutPage() {
       </RouteSection>
 
       <RouteSection
+        index="WHY IT WORKS / HUMAN TASTE"
+        title="The machines are fast. The taste is the bottleneck."
+        body="AtomEons is not interesting because AI can generate more output. It is interesting because a working artist is using the machine flood as raw material, then forcing it into objects with point of view."
+      >
+        <RouteCards
+          cards={[
+            {
+              meta: "ARTIST",
+              title: "Twenty-five years of taste pressure.",
+              body: "Hip hop, poetry, visual language, marketing, performance, and cultural reading give the work a human filter before the machine gets to scale it.",
+            },
+            {
+              meta: "OPERATOR",
+              title: "The point is direction, not prompting.",
+              body: "The work comes from choosing what deserves to exist, rejecting weak output, keeping receipts, and pushing the system until it becomes an object.",
+            },
+            {
+              meta: "CONSTRAINT",
+              title: "No money means no camouflage.",
+              body: "There is no budget to hide behind. The site has to show the product, the state, the proof, and the limits without decoration pretending to be substance.",
+            },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
         index="PRACTICE / FOUR LANES"
         title="What the practice makes."
         body="The site is organized around the work that can carry the company: products first, show second, research third, and the human story around it."
