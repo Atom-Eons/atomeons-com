@@ -131,6 +131,37 @@ export default function Orange5Page() {
       </RouteSection>
 
       <RouteSection
+        index="OPERATOR LOOP / DAILY USE"
+        title="The product is the loop, not the dashboard."
+        body="Orange5 becomes understandable when the visitor can imagine a day inside it: capture the work, route it to the right machine, execute with receipts, and carry the memory forward."
+      >
+        <RouteCards
+          cards={[
+            {
+              meta: "CAPTURE",
+              title: "Pull the real work into one cockpit.",
+              body: "Files, conversations, plans, research, receipts, product states, and operator intent should enter one working surface instead of living in scattered tabs.",
+            },
+            {
+              meta: "ROUTE",
+              title: "Send the job to the right intelligence.",
+              body: "Different models, agents, scripts, and tools should be chosen for the task instead of forcing every job through one generic chatbot window.",
+            },
+            {
+              meta: "PROVE",
+              title: "Leave a trail the operator can trust.",
+              body: "Completed work should produce evidence: changed files, checks, receipts, links, version state, and visible limits.",
+            },
+            {
+              meta: "REMEMBER",
+              title: "Carry the truth into the next session.",
+              body: "The system should not forget the project every morning. Durable memory turns prior work into operating context instead of transcript bloat.",
+            },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
         index="WHY IT MATTERS"
         title="The product bet is sovereignty."
         body="Most AI products rent you a window. Orange5 points in the opposite direction: your models where possible, your files, your memory, your receipts, your operating history."
