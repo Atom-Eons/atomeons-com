@@ -40,6 +40,29 @@ export const metadata: Metadata = {
   },
 };
 
+const channelContract = [
+  {
+    label: "COLD OPEN",
+    value: "Object first",
+    body: "Begin with the thing people can want before they understand the machinery.",
+  },
+  {
+    label: "BUILD PRESSURE",
+    value: "No smooth lie",
+    body: "Show friction, failures, taste calls, and the AI workforce under constraint.",
+  },
+  {
+    label: "PROOF SHOT",
+    value: "It runs",
+    body: "End each arc with a visible artifact, receipt, download gate, or honest unfinished state.",
+  },
+  {
+    label: "NEXT DOOR",
+    value: "Enter",
+    body: "Route the viewer back into the product, paper, book, or contact path that continues the story.",
+  },
+];
+
 export default function AtomAlivePage() {
   return (
     <RoutePage
@@ -65,6 +88,14 @@ export default function AtomAlivePage() {
         note="INDEPENDENT SIGNAL / YOUTUBE / NAPLES, FLORIDA"
         priority
       />
+
+      <RouteSection
+        index="CHANNEL CONTRACT / 00"
+        title="A show about making the impossible object visible."
+        body="The channel has one job: turn a skeptical, distracted viewer into someone who understands the object, feels the pressure of the build, and knows where to go next."
+      >
+        <RouteFacts facts={channelContract} />
+      </RouteSection>
 
       <RouteSection
         index="START HERE / EPISODE RUNWAY"
