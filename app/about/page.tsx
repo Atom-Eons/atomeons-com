@@ -39,6 +39,29 @@ export const metadata: Metadata = {
   },
 };
 
+const originPosition = [
+  {
+    label: "ORIGIN",
+    value: "Creative arts",
+    body: "The base material is 25 years of poetry, hip hop, marketing, visual taste, language, and survival under constraint.",
+  },
+  {
+    label: "SHIFT",
+    value: "AI as force multiplier",
+    body: "The machine is not the identity. It is the new studio, crew, archive, instrument, and pressure system.",
+  },
+  {
+    label: "STANCE",
+    value: "Outsider by design",
+    body: "AtomEons is built from the edge: no institution to flatter, no permission structure to wait for, no fake scale to maintain.",
+  },
+  {
+    label: "OUTPUT",
+    value: "Public objects",
+    body: "The proof has to leave the chat window: products, books, broadcasts, papers, downloads, receipts, and working routes.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <RoutePage
@@ -94,6 +117,14 @@ export default function AboutPage() {
             },
           ]}
         />
+      </RouteSection>
+
+      <RouteSection
+        index="ORIGIN / POSITION"
+        title="The constraint is part of the signal."
+        body="AtomEons does not need to cosplay as a campus, agency, or funded lab. The stronger story is harder to copy: a working artist using AI as leverage to force new objects into public view."
+      >
+        <RouteFacts facts={originPosition} />
       </RouteSection>
 
       <RouteSection
