@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...routes].map((route) => ({
     url: `${base}${route === "/" ? "" : route}`,
-    lastModified: new Date("2026-07-19"),
+    lastModified: new Date("2026-07-20"),
     changeFrequency: route === "/" ? "weekly" : "monthly",
     priority: route === "/" ? 1 : route.startsWith("/research/") ? 0.7 : 0.8,
   }));
