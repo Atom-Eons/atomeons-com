@@ -98,6 +98,35 @@ export default function PressPage() {
       </RouteSection>
 
       <RouteSection
+        index="COVERAGE KIT / SAFE ANGLES"
+        title="If you only have five minutes, use this map."
+        body="A strong story should be easy to tell without exaggeration. These are the safest coverage lanes, the proof pages to check, and the lines to avoid."
+      >
+        <RouteCards
+          cards={[
+            {
+              meta: "START HERE",
+              title: "One artist building public objects with AI.",
+              body: "Frame AtomEons as an independent creative practice: products, books, broadcasts, and experimental research directed by Atom McCree.",
+              href: "/about",
+            },
+            {
+              meta: "VERIFY",
+              title: "Check the objects, then the receipts.",
+              body: "Use product pages for current state, research pages for papers and limits, and receipts for build/deploy proof where available.",
+              href: "/receipts",
+            },
+            {
+              meta: "AVOID",
+              title: "Do not invent a lab, staff, funding, or signed release.",
+              body: "The honest story is stronger: Naples, Florida; one operator; no physical campus claim; mixed product states; direct Gmail contact.",
+              href: "/trust",
+            },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
         index="FACT CHECK / BOUNDARIES"
         title="What is true right now."
         body="Use this when checking a sentence before publication. The site should make the clean version easier than the exaggerated version."
