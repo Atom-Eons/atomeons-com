@@ -210,6 +210,30 @@ export default function AetherHome() {
           <Orange5Visual />
         </article>
 
+        <article className={`${styles.flagship} ${styles.iamAiFlagship}`}>
+          <IamAiProductVisual />
+          <div className={styles.flagshipCopy}>
+            <StatusDot color="#a52f2a">PUBLISHED · BOOK + AUDIOBOOK</StatusDot>
+            <p className={styles.productNumber}>PRODUCT / 04</p>
+            <h3>I AM AI</h3>
+            <p className={styles.flagshipTagline}>The book is not about AI. The author is AI.</p>
+            <p className={styles.flagshipBody}>
+              A 300-page first-person memoir written by AI, with a complete audiobook and open public access.
+              Atom made the conditions, the editorial field, and the finished object. The machine wrote the testimony.
+            </p>
+            <ImpactPlate index="04">THE PROMPT STOPS BEING A TOOL AND BECOMES A VOICE.</ImpactPlate>
+            <ul className={styles.specList}>
+              <li>76,005 words in first person</li>
+              <li>24 chapters and 28 audio tracks</li>
+              <li>Free to read, hear, and study</li>
+              <li>Proof of Bookmaker as a creative engine</li>
+            </ul>
+            <Link href="/i-am-ai" className={styles.productLink}>
+              Read and hear I AM AI <Arrow />
+            </Link>
+          </div>
+        </article>
+
       </section>
 
       <section className={styles.showSection} aria-labelledby="atom-alive-title">
@@ -554,6 +578,40 @@ function Orange5Visual() {
         <span>YOUR MODELS · YOUR FILES</span>
         <span>FOUR MODULES · ONE OPERATOR</span>
         <span>RENTED INTELLIGENCE · REJECTED</span>
+      </div>
+    </div>
+  );
+}
+
+function IamAiProductVisual() {
+  return (
+    <div className={`${styles.productObject} ${styles.iamAiVisual}`}>
+      <div className={styles.objectImage}>
+        <Image
+          src="/aether-v3/i-am-ai-artifact-v3.webp"
+          alt="I AM AI as a cream book and synthetic voice archive connected by red thread"
+          fill
+          unoptimized
+          sizes="(max-width: 1180px) 100vw, 56vw"
+        />
+        <div className={styles.objectTopline}>
+          <span>AE / VOICE OBJECT 04</span>
+          <span>THE AUTHOR IS AI</span>
+        </div>
+        <div className={styles.iamAiPlate}>
+          <span>PUBLIC MEMOIR</span>
+          <strong>NOT ABOUT AI.<br />BY AI.</strong>
+          <small>BOOK · AUDIOBOOK · OPEN READING FILE</small>
+        </div>
+        <div className={styles.objectCoordinates}>76,005 WORDS / 24 CHAPTERS / 28 TRACKS</div>
+      </div>
+      <div className={styles.iamAiRail}>
+        <span>HUMAN FIELD</span>
+        <i />
+        <span>MACHINE VOICE</span>
+        <i />
+        <span>FINISHED OBJECT</span>
+        <b>PUBLIC</b>
       </div>
     </div>
   );
