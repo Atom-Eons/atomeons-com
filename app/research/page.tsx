@@ -28,6 +28,29 @@ export const metadata: Metadata = {
 
 const featuredPapers = PAPERS.slice(0, 4);
 
+const researchProtocol = [
+  {
+    label: "CLAIM",
+    value: "Plain",
+    body: "Each research object has to state the strange idea in language a non-specialist can understand.",
+  },
+  {
+    label: "EVIDENCE",
+    value: "Visible",
+    body: "Implemented parts, measurements, source artifacts, and PDFs are surfaced instead of hidden behind prestige language.",
+  },
+  {
+    label: "STATUS",
+    value: "Labeled",
+    body: "Prototype, architecture, hypothesis, summarized paper, and indexed paper are kept separate so the visitor knows what is proven.",
+  },
+  {
+    label: "NEXT TEST",
+    value: "Open",
+    body: "The best research page should make the next attack, replication, or falsification path obvious.",
+  },
+];
+
 export default function ResearchPage() {
   return (
     <main className={styles.page} style={{ "--accent": "#2558dc" } as CSSProperties}>
@@ -124,6 +147,29 @@ export default function ResearchPage() {
             <strong>Open challenge</strong>
             <p>The goal is not academic polish. The goal is to make the strange claim inspectable enough to attack, improve, or replicate.</p>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <p className={styles.index}>HOW TO READ THIS / SKEPTIC MODE</p>
+          <div>
+            <h2>Treat every paper like a prototype with a fuse attached.</h2>
+            <p>
+              The research front door is built for people who are curious but not
+              credulous. If an idea is right, it should survive inspection. If it
+              is early, speculative, or wrong, the page should make that visible too.
+            </p>
+          </div>
+        </div>
+        <div className={styles.factGrid}>
+          {researchProtocol.map((item) => (
+            <div className={styles.fact} key={item.label}>
+              <span className={styles.index}>{item.label}</span>
+              <strong>{item.value}</strong>
+              <p>{item.body}</p>
+            </div>
+          ))}
         </div>
       </section>
 
