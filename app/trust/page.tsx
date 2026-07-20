@@ -48,7 +48,7 @@ export default function TrustPage() {
         title="Trust the trail, not the typography."
         actions={[
           { href: "/receipts", label: "Inspect receipts" },
-          { href: "mailto:support@atomeons.com?subject=AtomEons%20correction", label: "Send a correction" },
+          { href: "mailto:a.mccree@gmail.com?subject=%5Bsupport%40atomeons.com%5D%20AtomEons%20correction", label: "Send a correction" },
         ]}
       />
     </RoutePage>

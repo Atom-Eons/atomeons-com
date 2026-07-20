@@ -380,7 +380,7 @@ export default function CableboxPage() {
         <div>
           <Link href="/products">All products</Link>
           <Link href="/press">Press room</Link>
-          <a href="mailto:hello@atomeons.com?subject=%5BCableBox%5D%20release%20signal">Release signal</a>
+          <a href="mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20%5BCableBox%5D%20release%20signal">Release signal</a>
         </div>
       </section>
     </main>

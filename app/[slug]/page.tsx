@@ -24,7 +24,7 @@ const SURFACES = {
       ["Public Access everywhere", "Local voices and strange signals get a front-row channel again."],
       ["Ten CRT identities", "The interface can change physical character without losing the ritual."],
     ],
-    primaryHref: "mailto:hello@atomeons.com?subject=%5BCableBox%5D%20notify%20me%20on%20launch",
+    primaryHref: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20%5BCableBox%5D%20notify%20me%20on%20launch",
     primaryLabel: "Notify me at launch",
   },
   orange5: {
@@ -45,7 +45,7 @@ const SURFACES = {
       ["Bounded agent work", "Direct a workforce with visible scope and human final authority."],
       ["Receipt-backed operations", "Claims wait for proof; unfinished machinery stays labeled honestly."],
     ],
-    primaryHref: "mailto:hello@atomeons.com?subject=%5BOrange5%5D%20notify%20me%20on%20launch",
+    primaryHref: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20%5BOrange5%5D%20notify%20me%20on%20launch",
     primaryLabel: "Notify me at launch",
   },
   "i-am-ai": {

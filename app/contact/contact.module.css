@@ -149,6 +149,19 @@
   line-height: .95;
 }
 
+.deliveryLine {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--tone);
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  font-weight: 760;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
 .channel > p {
   position: relative;
   z-index: 1;
@@ -236,6 +249,16 @@
   font-size: 15px;
   font-weight: 650;
   text-decoration: none;
+}
+
+.directChannel small {
+  grid-column: 1 / -1;
+  color: #6a6b64;
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 
 .directChannel button {
