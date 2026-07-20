@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { AetherAtmosphere } from "./_components/aether/AetherAtmosphere";
 import { AetherFooter } from "./_components/aether/AetherFooter";
 import { AetherNav } from "./_components/aether/AetherNav";
@@ -42,6 +42,12 @@ export const metadata: Metadata = {
       { url: "/favicon.svg", type: "image/svg+xml" }
     ]
   },
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "AtomEons",
+    statusBarStyle: "default"
+  },
   openGraph: {
     title: "AtomEons · Things That Did Not Exist",
     description:
@@ -78,6 +84,17 @@ export const metadata: Metadata = {
       "max-video-preview": -1
     }
   }
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fcfcfa" },
+    { media: "(prefers-color-scheme: dark)", color: "#11120f" }
+  ],
+  colorScheme: "light"
 };
 
 const structuredData = {
