@@ -64,6 +64,20 @@ export default function AetherHome() {
               He directs a massive AI workforce. The finished products, books, broadcasts, and experiments are below.
             </p>
             <p className={styles.heroManifesto}>“I am an artist using AI to paint a new future.”</p>
+            <div className={styles.heroSignalStack} aria-label="What AtomEons is">
+              <Link href="/products">
+                <span>01 / PRODUCTS</span>
+                <strong>Software people can touch, install, read, hear, and use.</strong>
+              </Link>
+              <Link href="/atom-alive">
+                <span>02 / SHOW</span>
+                <strong>The AI Code Show turns the build process into culture.</strong>
+              </Link>
+              <Link href="/research">
+                <span>03 / RESEARCH</span>
+                <strong>Experimental discoveries are shown with evidence and limits.</strong>
+              </Link>
+            </div>
             <div className={styles.heroActions}>
               <a href="#products" className={styles.primaryButton}>
                 See what exists <Arrow />
@@ -118,12 +132,12 @@ export default function AetherHome() {
             >
               <span aria-hidden />
               <strong>AE</strong>
-              <small>ATOM / HUMAN DIRECTION</small>
+              <small>HUMAN DIRECTION / MACHINE FORCE / PUBLIC PROOF</small>
             </Link>
             <div className={styles.coreSignalCard} aria-hidden>
-              <span>THE POINT</span>
-              <strong>Products are the proof.</strong>
-              <small>Every orbit opens a real public object.</small>
+              <span>FIRST READ</span>
+              <strong>Not an AI website. An invention company in public.</strong>
+              <small>Products first. Show second. Research third. Receipts underneath.</small>
             </div>
             <OrbitNode className={styles.nodeCable} href="/cablebox" label="CableBox" meta="launch candidate" color="#2257df" />
             <OrbitNode className={styles.nodeBookmaker} href="/bookmaker" label="Bookmaker" meta="shipped" color="#6d5742" />
