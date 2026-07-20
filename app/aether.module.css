@@ -446,6 +446,166 @@
   content: "✳";
 }
 
+.launchBoard {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: clamp(54px, 7vw, 104px) clamp(24px, 5vw, 80px) 0;
+}
+
+.launchBoardHead {
+  display: grid;
+  margin-bottom: 24px;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr) minmax(260px, 0.42fr);
+  gap: 28px;
+  align-items: end;
+}
+
+.launchBoardHead h2 {
+  max-width: 11ch;
+  margin: 0;
+  color: var(--ink) !important;
+  font-family: var(--font-inter), Inter, sans-serif !important;
+  font-size: clamp(40px, 5vw, 86px);
+  font-weight: 580 !important;
+  letter-spacing: -0.066em !important;
+  line-height: 0.9;
+}
+
+.launchBoardHead > p:last-child {
+  margin: 0;
+  color: var(--muted) !important;
+  font-size: clamp(15px, 1.15vw, 18px);
+  letter-spacing: -0.018em;
+  line-height: 1.5 !important;
+}
+
+.launchGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  gap: 1px;
+  box-shadow: 10px 10px 0 var(--psych-attention);
+}
+
+.launchCard {
+  --launch-accent: var(--ink);
+  position: relative;
+  display: grid;
+  min-height: 310px;
+  padding: 18px;
+  grid-template-rows: auto auto 1fr auto auto;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--launch-accent) 10%, transparent), transparent 42%),
+    #fff;
+  color: var(--ink) !important;
+  text-decoration: none !important;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.launchCard::before {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid color-mix(in srgb, var(--launch-accent) 44%, transparent);
+  content: "";
+  pointer-events: none;
+}
+
+.launchCard:hover,
+.launchCard:focus-visible {
+  z-index: 2;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--launch-accent) 18%, transparent), transparent 45%),
+    #fff;
+  transform: translate(-3px, -3px);
+}
+
+.launchCard:focus-visible {
+  outline: 2px solid var(--launch-accent);
+  outline-offset: 5px;
+}
+
+.launchCard_blue { --launch-accent: #2257df; }
+.launchCard_linen { --launch-accent: #806a50; }
+.launchCard_orange { --launch-accent: #f36b21; }
+.launchCard_red { --launch-accent: #a52f2a; }
+
+.launchCode,
+.launchState,
+.launchCard small,
+.launchArrow {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+.launchCode {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--launch-accent);
+  color: var(--launch-accent);
+  font-size: 10px;
+  font-weight: 820;
+  letter-spacing: 0.12em;
+}
+
+.launchState {
+  justify-self: end;
+  margin-top: -42px;
+  padding: 8px 9px;
+  border: 1px solid color-mix(in srgb, var(--launch-accent) 42%, transparent);
+  background: rgba(255, 255, 255, 0.72);
+  color: color-mix(in srgb, var(--launch-accent) 72%, var(--ink));
+  font-size: 7px;
+  font-weight: 820;
+  letter-spacing: 0.14em;
+}
+
+.launchCard strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 54px;
+  font-size: clamp(28px, 2.8vw, 48px);
+  font-weight: 650;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+}
+
+.launchCard p {
+  position: relative;
+  z-index: 1;
+  max-width: 25ch;
+  margin: 18px 0 0;
+  color: var(--muted) !important;
+  font-size: clamp(14px, 1.05vw, 17px);
+  letter-spacing: -0.018em;
+  line-height: 1.36 !important;
+}
+
+.launchCard small {
+  margin-top: 30px;
+  padding-top: 13px;
+  border-top: 1px solid color-mix(in srgb, var(--launch-accent) 32%, var(--line));
+  color: color-mix(in srgb, var(--launch-accent) 58%, var(--muted));
+  font-size: 8px;
+  font-weight: 720;
+  letter-spacing: 0.1em;
+  line-height: 1.45;
+}
+
+.launchArrow {
+  margin-top: 20px;
+  color: var(--ink);
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+}
+
 .productsSection,
 .resourcesSection,
 .operatingSection,
@@ -2306,6 +2466,14 @@
 }
 
 @media (max-width: 1180px) {
+  .launchBoardHead {
+    grid-template-columns: 1fr;
+  }
+
+  .launchGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .orbitStage {
     min-height: 820px;
   }
@@ -2325,6 +2493,15 @@
 }
 
 @media (max-width: 760px) {
+  .launchGrid {
+    grid-template-columns: 1fr;
+    box-shadow: 6px 6px 0 var(--psych-attention);
+  }
+
+  .launchCard {
+    min-height: 250px;
+  }
+
   .orbitStage {
     min-height: 680px;
   }
