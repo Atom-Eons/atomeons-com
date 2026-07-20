@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {
   RouteCards,
+  RouteFacts,
   RouteFinal,
   RouteNote,
   RoutePage,
@@ -12,6 +13,29 @@ export const metadata: Metadata = {
   description: "Truthful machine-readable access to the current static AtomEons site.",
   alternates: { canonical: "https://atomeons.com/api" },
 };
+
+const capabilityMatrix = [
+  {
+    label: "LIVE",
+    value: "GET documents",
+    body: "Static pages, llms.txt, OpenAPI, route maps, paper pages, and public source links are safe to fetch.",
+  },
+  {
+    label: "STATIC",
+    value: "No account state",
+    body: "The production site does not require login, session storage, Supabase, Stripe, or a server database to read.",
+  },
+  {
+    label: "SLEEPING",
+    value: "MCP / gateway",
+    body: "Protocol and agent pages describe boundaries and alternatives; they are not live command transports.",
+  },
+  {
+    label: "FORBIDDEN",
+    value: "No public writes",
+    body: "No job dispatch, mutation endpoint, credential exchange, or hidden operator control is exposed here.",
+  },
+];
 
 export default function ApiPage() {
   return (
@@ -36,6 +60,13 @@ export default function ApiPage() {
             { meta: "STATUS", title: "MCP", body: "Protocol status and the best current alternatives for machine context.", href: "/api/mcp" },
           ]}
         />
+      </RouteSection>
+      <RouteSection
+        index="CAPABILITY MATRIX / DO NOT GUESS"
+        title="The machine contract is explicit."
+        body="Modern machine access should be useful without implying hidden authority. This matrix tells agents what can be fetched, what is static, what is sleeping, and what is not available on the public host."
+      >
+        <RouteFacts facts={capabilityMatrix} />
       </RouteSection>
       <RouteSection index="BOUNDARY / IMPORTANT" title="No phantom backend.">
         <RouteNote title="Current deployment truth.">
