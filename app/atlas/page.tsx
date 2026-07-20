@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  RouteCards,
   RouteFacts,
   RouteFinal,
   RouteList,
@@ -37,6 +38,40 @@ export default function AtlasPage() {
               group === "Company" ? "Identity, directory, proof, trust, and legal context." :
               "Static resources for crawlers, models, and developers.",
           }))}
+        />
+      </RouteSection>
+      <RouteSection
+        index="PRIORITY / ENTER HERE"
+        title="The map has a front edge."
+        body="A great site should not make the visitor solve the company from a pile of links. Atlas now marks the strongest first routes by visitor intent."
+      >
+        <RouteCards
+          cards={[
+            {
+              meta: "01 / PRODUCT",
+              title: "Start with what can be wanted.",
+              body: "Products carry the public company: CableBox, Bookmaker, Orange5, and I AM AI.",
+              href: "/products",
+            },
+            {
+              meta: "02 / SHOW",
+              title: "Watch the machine make things.",
+              body: "Atom Alive explains the process through build arcs, culture, failure, and proof.",
+              href: "/atom-alive",
+            },
+            {
+              meta: "03 / RESEARCH",
+              title: "Enter the strange claims with limits.",
+              body: "Discoveries and papers are staged with status, evidence, PDFs, and boundaries.",
+              href: "/research",
+            },
+            {
+              meta: "04 / TRUST",
+              title: "Check the facts before repeating them.",
+              body: "Trust, receipts, press, and contact keep the story useful without fake scale.",
+              href: "/trust",
+            },
+          ]}
         />
       </RouteSection>
       <RouteSection index="ROUTE MAP / ALL CURRENT DOORS" title="The complete index.">
