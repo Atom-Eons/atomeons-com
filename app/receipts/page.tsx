@@ -15,6 +15,29 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://atomeons.com/receipts" },
 };
 
+const verificationMethod = [
+  {
+    label: "COUNT",
+    value: "Numbers first",
+    body: "Use visible counts for products, papers, discoveries, words, chapters, tracks, and source commits.",
+  },
+  {
+    label: "OPEN",
+    value: "Artifact next",
+    body: "A serious claim should lead to a page, book, PDF, archive, source repo, timeline item, or contact path.",
+  },
+  {
+    label: "COMPARE",
+    value: "State matters",
+    body: "Published, available, candidate, building, experimental, and gated states are intentionally separated.",
+  },
+  {
+    label: "CHALLENGE",
+    value: "Correction wins",
+    body: "A specific correction with evidence should improve the public record faster than defensive marketing copy.",
+  },
+];
+
 export default function ReceiptsPage() {
   return (
     <RoutePage
@@ -56,6 +79,14 @@ export default function ReceiptsPage() {
             { index: "04", meta: "RELEASE", title: "Timeline", body: "Current product states and public milestones without projection theater.", href: "/timeline" },
           ]}
         />
+      </RouteSection>
+
+      <RouteSection
+        index="VERIFY / METHOD"
+        title="How to audit the site without trusting the site."
+        body="The receipts page should give a skeptical visitor a repeatable path: count what is claimed, open the artifact, compare the stated status, then challenge anything that fails inspection."
+      >
+        <RouteFacts facts={verificationMethod} />
       </RouteSection>
 
       <RouteFinal
