@@ -693,6 +693,11 @@
 .activeGuide { background: #fff; color: #173ea2; }
 .activeGuide small { color: #173ea2; }
 
+.cableFlagship {
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  background: #eef2fb;
+}
+
 .cableControls {
   display: grid;
   min-height: 92px;
