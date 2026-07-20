@@ -2025,17 +2025,22 @@
   top: 42%;
   left: 66%;
   display: grid;
-  width: 76px;
-  height: 76px;
+  width: 108px;
+  height: 108px;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.82);
   border-radius: 50%;
-  background: rgba(12, 23, 53, 0.42);
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.48), transparent 18%),
+    rgba(12, 23, 53, 0.58);
   color: #fff;
   text-decoration: none;
   transform: translate(-50%, -50%);
   backdrop-filter: blur(4px);
-  box-shadow: 0 0 0 12px rgba(34, 87, 223, 0.08), 0 0 44px rgba(34, 87, 223, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(17, 18, 15, 0.24),
+    0 0 0 16px rgba(34, 87, 223, 0.08),
+    0 0 60px rgba(34, 87, 223, 0.34);
   transition:
     background 220ms ease,
     box-shadow 220ms ease,
@@ -2044,7 +2049,7 @@
 
 .artifactCore > span {
   position: absolute;
-  inset: 9px;
+  inset: 11px;
   border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: 50%;
   box-shadow: inset 0 0 22px rgba(34, 87, 223, 0.34);
@@ -2061,30 +2066,31 @@
 }
 
 .artifactCore > span::before {
-  width: 38px;
+  width: 56px;
   height: 1px;
 }
 
 .artifactCore > span::after {
   width: 1px;
-  height: 38px;
+  height: 56px;
 }
 
 .artifactCore strong {
   position: relative;
   z-index: 1;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 10px;
+  font-family: var(--font-serif);
+  font-size: 34px;
   font-weight: 800;
-  letter-spacing: 0.16em;
-  text-indent: 0.16em;
+  letter-spacing: -0.13em;
+  line-height: 0.82;
+  transform: translateX(-2px);
 }
 
 .artifactCore small {
   position: absolute;
-  top: 88px;
-  width: 150px;
-  color: rgba(17, 18, 15, 0.76);
+  top: 124px;
+  width: 176px;
+  color: rgba(17, 18, 15, 0.82);
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 7px;
   font-weight: 750;
@@ -2103,6 +2109,52 @@
 .artifactCore:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 4px;
+}
+
+.coreSignalCard {
+  position: absolute;
+  z-index: 7;
+  top: calc(42% + 78px);
+  left: calc(66% + 86px);
+  display: grid;
+  width: min(235px, 31%);
+  padding: 14px 15px 13px;
+  border-left: 2px solid #2257df;
+  background: rgba(255, 255, 255, 0.86);
+  color: #11120f;
+  box-shadow: 0 18px 48px rgba(17, 18, 15, 0.11);
+  backdrop-filter: blur(10px);
+}
+
+.coreSignalCard span,
+.coreSignalCard small {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+.coreSignalCard span {
+  color: #2257df;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.coreSignalCard strong {
+  margin-top: 9px;
+  font-size: clamp(22px, 2.1vw, 34px);
+  font-weight: 650;
+  letter-spacing: -0.06em;
+  line-height: 0.94;
+}
+
+.coreSignalCard small {
+  max-width: 24ch;
+  margin-top: 16px;
+  color: rgba(17, 18, 15, 0.6);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.45;
 }
 
 .orbitNode {
@@ -2687,26 +2739,30 @@
   .artifactCore {
     top: 42%;
     left: 62%;
-    width: 62px;
-    height: 62px;
+    width: 84px;
+    height: 84px;
   }
 
   .artifactCore small {
-    top: 72px;
-    width: 132px;
+    top: 98px;
+    width: 150px;
     font-size: 6px;
   }
 
   .artifactCore strong {
-    font-size: 8px;
+    font-size: 26px;
   }
 
   .artifactCore > span::before {
-    width: 30px;
+    width: 44px;
   }
 
   .artifactCore > span::after {
-    height: 30px;
+    height: 44px;
+  }
+
+  .coreSignalCard {
+    display: none;
   }
 
   .orbitNode {
