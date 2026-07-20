@@ -78,6 +78,20 @@ export default function AetherHome() {
               <Metric value="24/7" label="AI workforce" />
               <Metric value="$0" label="venture capital" />
             </div>
+            <div className={styles.heroProofBand} aria-label="Current AtomEons proof state">
+              <Link href="/cablebox">
+                <span>CABLEBOX</span>
+                <strong>Launch candidate, native Windows, archive gated until checksum green.</strong>
+              </Link>
+              <Link href="/i-am-ai">
+                <span>I AM AI</span>
+                <strong>76,005 words, 24 chapters, 28 audio tracks. The author is AI.</strong>
+              </Link>
+              <Link href="/research">
+                <span>RESEARCH</span>
+                <strong>{DISCOVERIES.length} experimental discoveries staged with evidence and limits.</strong>
+              </Link>
+            </div>
           </div>
 
           <div className={styles.orbitStage} aria-label="AtomEons work constellation">

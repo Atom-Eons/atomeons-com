@@ -220,6 +220,54 @@
   text-transform: uppercase;
 }
 
+.heroProofBand {
+  display: grid;
+  max-width: 860px;
+  margin-top: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--ink);
+  background: #fff;
+  box-shadow: 8px 8px 0 var(--acid);
+}
+
+.heroProofBand a {
+  display: flex;
+  min-height: 112px;
+  padding: 15px 16px 17px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--ink);
+  color: var(--ink) !important;
+  text-decoration: none !important;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.heroProofBand a:last-child {
+  border-right: 0;
+}
+
+.heroProofBand a:hover,
+.heroProofBand a:focus-visible {
+  background: var(--ink);
+  color: #fff !important;
+  transform: translate(-2px, -2px);
+}
+
+.heroProofBand span {
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  font-weight: 780;
+  letter-spacing: 0.16em;
+}
+
+.heroProofBand strong {
+  max-width: 24ch;
+  font-size: clamp(13px, 1vw, 16px);
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+}
+
 .orbitStage {
   position: relative;
   min-height: 700px;
@@ -1469,6 +1517,18 @@
   .heroDeck { font-size: 18px; }
   .heroActions { align-items: flex-start; flex-direction: column; }
   .heroMetrics { grid-template-columns: 1fr 1fr; }
+  .heroProofBand {
+    grid-template-columns: 1fr;
+    box-shadow: 5px 5px 0 var(--acid);
+  }
+  .heroProofBand a {
+    min-height: 92px;
+    border-right: 0;
+    border-bottom: 1px solid var(--ink);
+  }
+  .heroProofBand a:last-child {
+    border-bottom: 0;
+  }
   .orbitStage { min-height: 620px; }
   .coreMark { width: 138px; height: 138px; }
   .coreAe { font-size: 44px; }
