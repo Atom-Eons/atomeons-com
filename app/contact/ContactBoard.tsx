@@ -72,6 +72,25 @@ export function ContactBoard() {
         <span>DIRECT GMAIL FAIL-SAFE</span>
       </div>
 
+      <section className={styles.failSafePanel} aria-labelledby="direct-inbox-title">
+        <div>
+          <span className={styles.failSafeKicker}>CONFIRMED DESTINATION</span>
+          <h2 id="direct-inbox-title">{DELIVERY_ADDRESS}</h2>
+          <p>
+            If a branded address ever fails, use this inbox. Every public contact route on this page opens a message
+            to this address and keeps the intended AtomEons channel in the subject line.
+          </p>
+        </div>
+        <div className={styles.failSafeActions}>
+          <a href="mailto:a.mccree@gmail.com?subject=%5Bdirect%5D%20AtomEons%20inquiry">
+            Email direct <span aria-hidden>â†—</span>
+          </a>
+          <button type="button" onClick={() => copyAddress("direct")}>
+            {copied === "direct" ? "Copied" : "Copy inbox"}
+          </button>
+        </div>
+      </section>
+
       <div className={styles.primaryGrid}>
         {primaryChannels.map((channel) => (
           <article className={styles.channel} data-tone={channel.tone} key={channel.address}>
