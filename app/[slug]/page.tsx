@@ -123,11 +123,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!surface) return {};
   const url = `https://atomeons.com/${slug}`;
   return {
-    title: surface.title,
+    title: slug === "about" ? "About" : surface.title,
     description: surface.body,
     alternates: { canonical: url },
     openGraph: {
-      title: `${surface.title} · AtomEons`,
+      title: slug === "about" ? "About AtomEons" : `${surface.title} · AtomEons`,
       description: surface.body,
       url,
       siteName: "AtomEons",
@@ -143,7 +143,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: `${surface.title} · AtomEons`,
+      title: slug === "about" ? "About AtomEons" : `${surface.title} · AtomEons`,
       description: surface.body,
       creator: "@AtomMccree",
       images: [surface.image],
