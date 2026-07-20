@@ -5,10 +5,11 @@
 
 Canonical site: https://atomeons.com
 Source mirror: https://github.com/Atom-Eons/atomeons-com
-Contact: hello@atomeons.com
-Edition: Aether 01
+Contact fail-safe: a.mccree@gmail.com
+Branded contact routes preserve context in the subject line.
+Edition: Aether 01 / deploy-ready V28 source
 Deployment: static public site
-Updated: 2026-07-17
+Updated: 2026-07-20
 
 ## Identity
 
@@ -19,6 +20,7 @@ There is no funded physical laboratory or academic institution behind the site.
 
 ## Product states
 
+- Product index: https://atomeons.com/products
 - CableBox: launch candidate. A native television object built around channel
   surfing, public access, ritual, and accidental discovery.
   https://atomeons.com/cablebox
@@ -62,6 +64,8 @@ affiliation, scientific consensus, or professional advice.
 
 - About: https://atomeons.com/about
 - Contact: https://atomeons.com/contact
+  Public mail actions route to a.mccree@gmail.com with the intended
+  @atomeons.com channel preserved in the subject line.
 - Press: https://atomeons.com/press
 - Receipts: https://atomeons.com/receipts
 - Timeline: https://atomeons.com/timeline
