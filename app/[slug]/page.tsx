@@ -114,7 +114,9 @@ const SURFACES = {
 } as const;
 
 export function generateStaticParams() {
-  return Object.keys(SURFACES).map((slug) => ({ slug }));
+  return Object.keys(SURFACES)
+    .filter((slug) => slug !== "about")
+    .map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
