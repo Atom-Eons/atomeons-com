@@ -137,6 +137,76 @@
         }
       }
     },
+    "/press": {
+      "get": {
+        "summary": "Press field kit",
+        "description": "Fast facts, story angles, copy-safe coverage frames, biography, and direct press contact.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Press page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/receipts": {
+      "get": {
+        "summary": "Receipts and verification room",
+        "description": "Public proof surfaces, current counts, verification method, and correction path.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Receipts page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/timeline": {
+      "get": {
+        "summary": "Timeline and state key",
+        "description": "Product-state timeline distinguishing published, available, candidate, building, experimental, and live surfaces.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Timeline page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/explore": {
+      "get": {
+        "summary": "Complete public route index",
+        "description": "Curated index of current public AtomEons surfaces grouped by Products, Show, Research, Creations, Company, and Machine.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Explore page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "summary": "Private browser-side search",
+        "description": "Static search route that runs in the browser against the shipped public index without sending queries to a third-party search provider.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Search page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
     "/contact": {
       "get": {
         "summary": "Contact page",
@@ -144,6 +214,75 @@
         "responses": {
           "200": {
             "description": "Static HTML Contact page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research": {
+      "get": {
+        "summary": "Experimental research front door",
+        "description": "Independent research overview with discoveries, papers, skeptic-mode reading protocol, and evidence boundaries.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Research page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries": {
+      "get": {
+        "summary": "Discoveries index",
+        "description": "Index of named experimental systems including AEyes, AtomSmasher, and AEMemory.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Discoveries page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries/{slug}": {
+      "get": {
+        "summary": "Discovery detail page",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["aeyes", "atomsmasher", "aememory"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Static HTML discovery page with proposition, evidence, and limits",
+            "content": {
+              "text/html": {}
+            }
+          },
+          "404": {
+            "description": "Discovery not found"
+          }
+        }
+      }
+    },
+    "/research/papers": {
+      "get": {
+        "summary": "Research paper library",
+        "description": "Index of current paper presentation pages with direct PDF routes when available.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Papers page",
             "content": {
               "text/html": {}
             }
