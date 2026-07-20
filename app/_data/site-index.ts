@@ -8,6 +8,7 @@ export type SiteEntry = {
 
 export const SITE_INDEX: SiteEntry[] = [
   { title: "Home", href: "/", description: "The Aether front door into AtomEons.", category: "Company", keywords: ["home", "aether", "atomeons"] },
+  { title: "Products", href: "/products", description: "The four current AtomEons products.", category: "Products", keywords: ["products", "cablebox", "bookmaker", "orange5", "i am ai"] },
   { title: "CableBox", href: "/cablebox", description: "Television with the accidents put back in.", category: "Products", keywords: ["television", "crt", "channels", "windows"] },
   { title: "Bookmaker", href: "/bookmaker", description: "Turn an idea into a finished book.", category: "Products", keywords: ["book", "publishing", "epub", "audiobook"] },
   { title: "Orange5", href: "/orange5", description: "A sovereign operating system for AI work.", category: "Products", keywords: ["agents", "memory", "local", "operator"] },
