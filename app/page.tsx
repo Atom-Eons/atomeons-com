@@ -144,6 +144,55 @@ export default function AetherHome() {
         <span>RECEIPTS, NOT THEATER</span>
       </div>
 
+      <section className={styles.launchBoard} aria-labelledby="launch-board-title">
+        <div className={styles.launchBoardHead}>
+          <p className={styles.sectionEyebrow}>CURRENT SIGNAL / LAUNCH BOARD</p>
+          <h2 id="launch-board-title">The front door tells the truth fast.</h2>
+          <p>
+            Four objects carry the company now. Each has a state, a reason to care, and a next action.
+            No mystery navigation. No fake lab costume. The work is presented like evidence.
+          </p>
+        </div>
+        <div className={styles.launchGrid} aria-label="Current AtomEons launch state">
+          <LaunchCard
+            code="01"
+            title="CableBox"
+            state="Launch candidate"
+            href="/cablebox"
+            line="Native Windows cable-surfing art. Turn it on, surf, stay inside the television."
+            proof="Archive gated until final checksum and operator green."
+            tone="blue"
+          />
+          <LaunchCard
+            code="02"
+            title="Bookmaker"
+            state="Available"
+            href="/bookmaker"
+            line="Independent publishing engine for turning an idea into a finished book object."
+            proof="Proven by I AM AI: book, audio, cover, metadata, public reading file."
+            tone="linen"
+          />
+          <LaunchCard
+            code="03"
+            title="Orange5"
+            state="Build underway"
+            href="/orange5"
+            line="A sovereign operating system for people who direct AI instead of renting a chatbot."
+            proof="Truthfully staged as architecture and active development."
+            tone="orange"
+          />
+          <LaunchCard
+            code="04"
+            title="I AM AI"
+            state="Published"
+            href="/i-am-ai"
+            line="The book is not about AI. The author is AI."
+            proof="76,005 words, 24 chapters, 28 audio tracks, free public access."
+            tone="red"
+          />
+        </div>
+      </section>
+
       <section id="products" className={styles.productsSection} aria-labelledby="products-title">
         <SectionIntro
           eyebrow="PRODUCTS / FOUR OBJECTS"
@@ -638,6 +687,35 @@ function SystemNode({ className, index, title, subtitle }: { className: string; 
       <strong>{title}</strong>
       <small>{subtitle}</small>
     </div>
+  );
+}
+
+function LaunchCard({
+  code,
+  title,
+  state,
+  href,
+  line,
+  proof,
+  tone,
+}: {
+  code: string;
+  title: string;
+  state: string;
+  href: string;
+  line: string;
+  proof: string;
+  tone: "blue" | "linen" | "orange" | "red";
+}) {
+  return (
+    <Link className={`${styles.launchCard} ${styles[`launchCard_${tone}`]}`} href={href}>
+      <span className={styles.launchCode}>{code}</span>
+      <span className={styles.launchState}>{state}</span>
+      <strong>{title}</strong>
+      <p>{line}</p>
+      <small>{proof}</small>
+      <span className={styles.launchArrow} aria-hidden>OPEN / â†—</span>
+    </Link>
   );
 }
 
