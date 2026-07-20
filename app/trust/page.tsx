@@ -10,6 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Trust",
   description: "The public trust contract for AtomEons claims, states, privacy, and corrections.",
+  alternates: { canonical: "https://atomeons.com/trust" },
 };
 
 export default function TrustPage() {

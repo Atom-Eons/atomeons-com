@@ -9,6 +9,7 @@ import { RandomClient } from "./RandomClient";
 export const metadata: Metadata = {
   title: "Random signal",
   description: "A working random doorway into the current AtomEons site.",
+  alternates: { canonical: "https://atomeons.com/random" },
 };
 
 export default function RandomPage() {

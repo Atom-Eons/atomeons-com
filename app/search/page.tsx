@@ -9,6 +9,7 @@ import { SearchClient } from "./SearchClient";
 export const metadata: Metadata = {
   title: "Search",
   description: "Search the current AtomEons public site.",
+  alternates: { canonical: "https://atomeons.com/search" },
 };
 
 export default function SearchPage() {

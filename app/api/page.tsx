@@ -10,6 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "For machines",
   description: "Truthful machine-readable access to the current static AtomEons site.",
+  alternates: { canonical: "https://atomeons.com/api" },
 };
 
 export default function ApiPage() {

@@ -15,6 +15,7 @@ import styles from "../editorial.module.css";
 export const metadata: Metadata = {
   title: "Press",
   description: "Press facts, story angles, biography, and direct contact for AtomEons and Atom McCree.",
+  alternates: { canonical: "https://atomeons.com/press" },
 };
 
 export default function PressPage() {

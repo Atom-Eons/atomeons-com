@@ -9,6 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Privacy",
   description: "Privacy statement for the static AtomEons public website.",
+  alternates: { canonical: "https://atomeons.com/legal/privacy" },
 };
 
 export default function PrivacyPage() {

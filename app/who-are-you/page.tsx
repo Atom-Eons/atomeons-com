@@ -9,6 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Who are you?",
   description: "A fast route into AtomEons based on what you came to find.",
+  alternates: { canonical: "https://atomeons.com/who-are-you" },
 };
 
 export default function WhoAreYouPage() {

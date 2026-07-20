@@ -9,6 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Original launcher",
   description: "The preserved handoff point for the pre-Aether AtomEons archive.",
+  alternates: { canonical: "https://atomeons.com/launcher" },
   robots: { index: false, follow: true },
 };
 

@@ -1679,29 +1679,77 @@
   border-radius: 50%;
   background: rgba(12, 23, 53, 0.42);
   color: #fff;
+  text-decoration: none;
   transform: translate(-50%, -50%);
   backdrop-filter: blur(4px);
   box-shadow: 0 0 0 12px rgba(34, 87, 223, 0.08), 0 0 44px rgba(34, 87, 223, 0.28);
+  transition:
+    background 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
 }
 
 .artifactCore > span {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  border: 1px solid #fff;
+  inset: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: 50%;
-  box-shadow: 0 0 18px #2257df;
+  box-shadow: inset 0 0 22px rgba(34, 87, 223, 0.34);
+}
+
+.artifactCore > span::before,
+.artifactCore > span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.48);
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.artifactCore > span::before {
+  width: 38px;
+  height: 1px;
+}
+
+.artifactCore > span::after {
+  width: 1px;
+  height: 38px;
+}
+
+.artifactCore strong {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-indent: 0.16em;
 }
 
 .artifactCore small {
   position: absolute;
   top: 88px;
+  width: 150px;
   color: rgba(17, 18, 15, 0.76);
-  font-size: 6px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 7px;
   font-weight: 750;
   letter-spacing: 0.14em;
   line-height: 1.45;
   text-align: center;
+}
+
+.artifactCore:hover,
+.artifactCore:focus-visible {
+  background: rgba(12, 23, 53, 0.72);
+  box-shadow: 0 0 0 12px rgba(34, 87, 223, 0.11), 0 0 58px rgba(34, 87, 223, 0.42);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.artifactCore:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
 }
 
 .orbitNode {
@@ -1712,6 +1760,24 @@
   border-radius: 0;
   background: rgba(255, 255, 255, 0.82);
   box-shadow: none;
+  color: #11120f;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.orbitNode:hover,
+.orbitNode:focus-visible {
+  border-color: var(--node);
+  background: rgba(255, 255, 255, 0.96);
+  transform: translateY(-3px);
+}
+
+.orbitNode:focus-visible {
+  outline: 2px solid var(--node);
+  outline-offset: 3px;
 }
 
 .nodeCable { top: 24%; left: 4%; }
@@ -2148,6 +2214,20 @@
 
   .artifactCore small {
     top: 72px;
+    width: 132px;
+    font-size: 6px;
+  }
+
+  .artifactCore strong {
+    font-size: 8px;
+  }
+
+  .artifactCore > span::before {
+    width: 30px;
+  }
+
+  .artifactCore > span::after {
+    height: 30px;
   }
 
   .orbitNode {

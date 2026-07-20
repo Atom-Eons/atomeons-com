@@ -10,6 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Books",
   description: "Published and forthcoming books from AtomEons.",
+  alternates: { canonical: "https://atomeons.com/books" },
 };
 
 export default function BooksPage() {

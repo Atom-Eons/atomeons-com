@@ -10,6 +10,7 @@ import { SITE_GROUPS, SITE_INDEX } from "../_data/site-index";
 export const metadata: Metadata = {
   title: "Explore",
   description: "The curated index of every current public AtomEons surface.",
+  alternates: { canonical: "https://atomeons.com/explore" },
 };
 
 export default function ExplorePage() {

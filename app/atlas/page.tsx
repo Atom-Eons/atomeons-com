@@ -11,6 +11,7 @@ import { SITE_GROUPS, SITE_INDEX } from "../_data/site-index";
 export const metadata: Metadata = {
   title: "Atlas",
   description: "The complete current map of the AtomEons Aether site.",
+  alternates: { canonical: "https://atomeons.com/atlas" },
 };
 
 export default function AtlasPage() {
