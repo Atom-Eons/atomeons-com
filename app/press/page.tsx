@@ -1,6 +1,4 @@
-import type { CSSProperties } from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PAPERS } from "../_data/research-papers";
 import {
   RouteCards,
@@ -66,6 +64,50 @@ export default function PressPage() {
             { meta: "PRODUCT", title: "The anti-streaming television", body: "CableBox restores channel surfing, ritual, public access, and accidental discovery.", href: "/cablebox" },
             { meta: "BOOK", title: "The author is AI", body: "I AM AI is a 76,005-word first-person memoir written by AI about being AI.", href: "/i-am-ai" },
             { meta: "PRACTICE", title: "One artist, many machines", body: "A creative practice using models as material, collaborators, instruments, and workforce.", href: "/about" },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
+        index="COPY BLOCKS / USE THESE"
+        title="Clean lines for coverage."
+        body="These are short, copy-safe descriptions that preserve the real positioning without turning AtomEons into a fake institution or generic AI startup."
+      >
+        <RouteCards
+          cards={[
+            {
+              meta: "ONE LINE",
+              title: "AtomEons makes things that did not exist, with AI.",
+              body: "A direct public description for headlines, captions, introductions, and event notes.",
+              href: "/about",
+            },
+            {
+              meta: "PRODUCT LINE",
+              title: "CableBox turns the internet back into television.",
+              body: "Native Windows cable-surfing art built around ritual, randomness, local media, CRT atmosphere, and discovery.",
+              href: "/cablebox",
+            },
+            {
+              meta: "BOOK LINE",
+              title: "I AM AI is not about AI. The author is AI.",
+              body: "A 76,005-word first-person AI memoir with a complete audiobook and public reading access.",
+              href: "/i-am-ai",
+            },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
+        index="FACT CHECK / BOUNDARIES"
+        title="What is true right now."
+        body="Use this when checking a sentence before publication. The site should make the clean version easier than the exaggerated version."
+      >
+        <RouteFacts
+          facts={[
+            { label: "LOCATION", value: "Naples, FL", body: "AtomEons is based in Naples, Florida. Do not describe a campus or formal lab." },
+            { label: "STRUCTURE", value: "Independent", body: "Artist-owned and self-directed, not venture-backed and not institution-funded." },
+            { label: "PRODUCT STATUS", value: "Mixed states", body: "CableBox is a launch candidate, Bookmaker is available, Orange5 is underway, I AM AI is published." },
+            { label: "CONTACT", value: "Direct Gmail", body: "Press mail reaches a.mccree@gmail.com with press context in the subject line." },
           ]}
         />
       </RouteSection>
