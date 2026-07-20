@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  RouteFacts,
   RouteFinal,
   RoutePage,
   RouteSection,
@@ -14,6 +15,29 @@ export const metadata: Metadata = {
   description: "Search the current AtomEons public site.",
   alternates: { canonical: "https://atomeons.com/search" },
 };
+
+const searchContract = [
+  {
+    label: "LOCAL",
+    value: "No query leak",
+    body: "The browser searches the public index already shipped with the page. No external search service is needed.",
+  },
+  {
+    label: "SCOPE",
+    value: "Focused edition",
+    body: "Results come from current Aether routes, products, discoveries, papers, books, proof, and machine-readable surfaces.",
+  },
+  {
+    label: "RANK",
+    value: "Intent first",
+    body: "Product, show, research, and proof routes are weighted to surface the strongest first click for a cold visitor.",
+  },
+  {
+    label: "FALLBACK",
+    value: "Route manually",
+    body: "If a phrase misses, the pathfinder cards still route by intent: launch, read, research, or contact.",
+  },
+];
 
 const searchEntries: SearchEntry[] = [
   ...SITE_INDEX.map((entry) => ({ ...entry, kind: "route" as const })),
@@ -54,6 +78,13 @@ export default function SearchPage() {
     >
       <RouteSection index="INDEX / LIVE" title="What are you looking for?">
         <SearchClient entries={searchEntries} />
+      </RouteSection>
+      <RouteSection
+        index="SEARCH CONTRACT / PRIVATE INDEX"
+        title="Findability is part of the design."
+        body="The search route is a trust surface: it should help a distracted visitor find the strongest current page without exposing the query, inventing results, or sending them back into the old sprawl."
+      >
+        <RouteFacts facts={searchContract} />
       </RouteSection>
       <RouteFinal
         eyebrow="DISCOVERY HAS TWO MODES"
