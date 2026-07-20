@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import {
   RouteCards,
+  RouteFacts,
   RouteFinal,
+  RouteList,
   RouteNote,
   RoutePage,
   RouteSection,
@@ -33,6 +35,86 @@ export default function TrustPage() {
             { meta: "04", title: "Keep authority human", body: "AI multiplies the work. Atom McCree retains creative direction and final responsibility." },
             { meta: "05", title: "Collect less", body: "The current static site does not need accounts, trackers, or a database to let you read it." },
             { meta: "06", title: "Correct the record", body: "A specific correction with evidence outranks clean marketing copy." },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
+        index="CURRENT STATE / FAST READ"
+        title="What is true in this edition."
+        body="This page is the anti-hype layer. It should make the current state easier to verify than to misunderstand."
+      >
+        <RouteFacts
+          facts={[
+            {
+              label: "AVAILABLE",
+              value: "Bookmaker",
+              body: "Presented as the creator publishing engine and proven by the I AM AI artifact path.",
+            },
+            {
+              label: "PUBLISHED",
+              value: "I AM AI",
+              body: "Dedicated product page, public reader, audiobook sample, and correction that the author is AI.",
+            },
+            {
+              label: "CANDIDATE",
+              value: "CableBox",
+              body: "Launch page is public; Windows archive remains gated until final checksum/operator green.",
+            },
+            {
+              label: "BUILDING",
+              value: "Orange5",
+              body: "Dedicated page is architecture/status only, not a downloadable final release claim.",
+            },
+            {
+              label: "EXPERIMENTAL",
+              value: "Research",
+              body: "Discoveries and papers are public, but claims stay bounded by evidence and limits.",
+            },
+            {
+              label: "CONTACT",
+              value: "Gmail fail-safe",
+              body: "Public contact routes deliver to a.mccree@gmail.com; no static form database is claimed.",
+            },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
+        index="VERIFY / OPEN DOORS"
+        title="Where to check the claim."
+        body="The fastest trust path is not persuasion. It is a link from the sentence to the artifact."
+      >
+        <RouteList
+          cards={[
+            {
+              index: "01",
+              meta: "SOURCE",
+              title: "GitHub mirror",
+              body: "Public source history for the current AtomEons site.",
+              href: "https://github.com/Atom-Eons/atomeons-com",
+            },
+            {
+              index: "02",
+              meta: "BOOK",
+              title: "I AM AI reader",
+              body: "The browser-readable AI-authored book artifact.",
+              href: "/books/I-AM-AI-Opus-4.7.html",
+            },
+            {
+              index: "03",
+              meta: "RESEARCH",
+              title: "Paper library",
+              body: "Dedicated summaries and local PDF downloads.",
+              href: "/research/papers",
+            },
+            {
+              index: "04",
+              meta: "CONTACT",
+              title: "Direct correction path",
+              body: "Use the Gmail fail-safe with evidence and the exact public URL.",
+              href: "mailto:a.mccree@gmail.com?subject=%5Bsupport%40atomeons.com%5D%20AtomEons%20trust%20correction",
+            },
           ]}
         />
       </RouteSection>
