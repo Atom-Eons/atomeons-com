@@ -67,6 +67,35 @@ export default function AtomAlivePage() {
       />
 
       <RouteSection
+        index="START HERE / EPISODE RUNWAY"
+        title="The show is the build becoming undeniable."
+        body="Atom Alive should give a cold viewer a simple path: see the strange object, understand the human taste behind it, then watch the AI workforce turn pressure into proof."
+      >
+        <RouteCards
+          cards={[
+            {
+              meta: "FIRST ARC",
+              title: "CableBox: the television object.",
+              body: "The strongest launch arc: visual, playable, nostalgic, weird, and concrete enough for non-technical viewers to feel immediately.",
+              href: "/cablebox",
+            },
+            {
+              meta: "SECOND ARC",
+              title: "Bookmaker and I AM AI.",
+              body: "The creator arc: an idea becomes a book, then a machine-authored book becomes the proof object for the whole publishing system.",
+              href: "/i-am-ai",
+            },
+            {
+              meta: "THIRD ARC",
+              title: "Research from the edge.",
+              body: "The experimental arc: AEyes, Radiance, memory, compression, and papers become public claims with limits instead of private lore.",
+              href: "/research",
+            },
+          ]}
+        />
+      </RouteSection>
+
+      <RouteSection
         index="FORMAT / FOUR BEATS"
         title="A build has to feel like a story."
         body="The audience does not need another screen recording. They need tension, stakes, taste, a living machine, and proof that something changed by the end."
