@@ -7,7 +7,7 @@ Canonical site: https://atomeons.com
 Source mirror: https://github.com/Atom-Eons/atomeons-com
 Contact fail-safe: a.mccree@gmail.com
 Branded contact routes preserve context in the subject line.
-Edition: Aether 01 / source V51, live deployment currently Version 20 until Sites accepts current GitHub main
+Edition: Aether 01 / source V52, live deployment currently Version 20 until Sites accepts current GitHub main
 Deployment: static public site
 Updated: 2026-07-20
 
