@@ -3,6 +3,8 @@
 import { useState } from "react";
 import styles from "./contact.module.css";
 
+const DELIVERY_ADDRESS = "a.mccree@gmail.com";
+
 const primaryChannels = [
   {
     index: "01",
@@ -48,13 +50,17 @@ const directChannels = [
 export function ContactBoard() {
   const [copied, setCopied] = useState("");
 
+  function mailtoHref(address: string, subject: string) {
+    return `mailto:${DELIVERY_ADDRESS}?subject=${encodeURIComponent(`[${address}] ${subject}`)}`;
+  }
+
   async function copyAddress(address: string) {
     try {
-      await navigator.clipboard.writeText(address);
+      await navigator.clipboard.writeText(DELIVERY_ADDRESS);
       setCopied(address);
       window.setTimeout(() => setCopied((current) => current === address ? "" : current), 1800);
     } catch {
-      window.location.href = `mailto:${address}`;
+      window.location.href = mailtoHref(address, "AtomEons inquiry");
     }
   }
 
@@ -63,7 +69,7 @@ export function ContactBoard() {
       <div className={styles.boardRail} aria-hidden>
         <span>CHOOSE A FREQUENCY</span>
         <i />
-        <span>ALL ROUTES / LIVE</span>
+        <span>DIRECT GMAIL FAIL-SAFE</span>
       </div>
 
       <div className={styles.primaryGrid}>
@@ -79,13 +85,14 @@ export function ContactBoard() {
               <i />
             </div>
             <h2>{channel.address}</h2>
+            <small className={styles.deliveryLine}>delivers to {DELIVERY_ADDRESS}</small>
             <p>{channel.body}</p>
             <div className={styles.channelActions}>
-              <a href={`mailto:${channel.address}?subject=${encodeURIComponent(channel.subject)}`}>
+              <a href={mailtoHref(channel.address, channel.subject)}>
                 Write now <span aria-hidden>↗</span>
               </a>
               <button type="button" onClick={() => copyAddress(channel.address)}>
-                {copied === channel.address ? "Copied" : "Copy address"}
+                {copied === channel.address ? "Copied" : "Copy direct"}
               </button>
             </div>
           </article>
@@ -96,7 +103,8 @@ export function ContactBoard() {
         {directChannels.map(([label, address, subject]) => (
           <article className={styles.directChannel} key={address}>
             <span>{label}</span>
-            <a href={`mailto:${address}?subject=${encodeURIComponent(subject)}`}>{address}</a>
+            <a href={mailtoHref(address, subject)}>{address}</a>
+            <small>to {DELIVERY_ADDRESS}</small>
             <button type="button" onClick={() => copyAddress(address)}>
               {copied === address ? "COPIED" : "COPY"}
             </button>

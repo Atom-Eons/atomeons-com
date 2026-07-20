@@ -31,7 +31,7 @@ export default function PrivacyPage() {
             { index: "03", title: "Email", body: "If you email AtomEons, the message and address are handled by the email provider and retained as needed to respond." },
             { index: "04", title: "External services", body: "YouTube, GitHub, X, Discord, and other outbound links apply their own privacy policies after you leave this site." },
             { index: "05", title: "Downloads", body: "Public PDFs, books, and files can be downloaded without an AtomEons account." },
-            { index: "06", title: "Questions", body: "Privacy questions or deletion requests for direct correspondence can be sent to privacy@atomeons.com." },
+            { index: "06", title: "Questions", body: "Privacy questions or deletion requests for direct correspondence can use the direct Gmail fail-safe with the privacy route in the subject line." },
           ]}
         />
       </RouteSection>
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         eyebrow="STATIC BY DESIGN"
         title="The easiest data to protect is data never collected."
         actions={[
-          { href: "mailto:privacy@atomeons.com?subject=AtomEons%20privacy", label: "Privacy question" },
+          { href: "mailto:a.mccree@gmail.com?subject=%5Bprivacy%40atomeons.com%5D%20AtomEons%20privacy", label: "Privacy question" },
           { href: "/trust", label: "Trust contract" },
         ]}
       />

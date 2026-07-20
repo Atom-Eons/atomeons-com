@@ -29,7 +29,7 @@ export default function PressPage() {
       asideBody="No communications department and no invented institution. Email reaches Atom McCree directly. Facts on this page are written to be copied, checked, and challenged."
       accent="#d60024"
       actions={[
-        { href: "mailto:press@atomeons.com?subject=Press%20inquiry%20-%20AtomEons", label: "Press contact", accent: true },
+        { href: "mailto:a.mccree@gmail.com?subject=%5Bpress%40atomeons.com%5D%20Press%20inquiry%20-%20AtomEons", label: "Press contact", accent: true },
         { href: "/receipts", label: "Check the receipts" },
       ]}
     >
@@ -87,7 +87,7 @@ export default function PressPage() {
               venture capital.
             </p>
             <p>
-              Contact: <a href="mailto:press@atomeons.com">press@atomeons.com</a>
+              Contact: <a href="mailto:a.mccree@gmail.com?subject=%5Bpress%40atomeons.com%5D%20Press%20inquiry%20-%20AtomEons">press@atomeons.com</a>
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function PressPage() {
         eyebrow="FACT CHECKS WELCOME"
         title="Write the strange story. Keep the facts straight."
         actions={[
-          { href: "mailto:press@atomeons.com?subject=Press%20inquiry%20-%20AtomEons", label: "Email Atom" },
+          { href: "mailto:a.mccree@gmail.com?subject=%5Bpress%40atomeons.com%5D%20Press%20inquiry%20-%20AtomEons", label: "Email Atom" },
           { href: "/timeline", label: "Open timeline" },
         ]}
       />

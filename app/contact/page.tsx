@@ -20,19 +20,19 @@ export default function ContactPage() {
       eyebrow="CONTACT / DIRECT SIGNAL"
       title="Send the signal."
       accentTitle="It reaches Atom."
-      lede="No intake maze and no imaginary department. Choose the address that fits the work. Every route reaches Atom McCree directly in Naples, Florida."
+      lede="No intake maze and no imaginary department. Choose the route that fits the work. The public buttons use a direct Gmail fail-safe to reach Atom McCree in Naples, Florida."
       asideTitle="One operator. Eight public doors."
-      asideBody="The addresses are different so the context arrives intact. The inbox is human. A useful subject line, a clear ask, and a real deadline make the fastest path."
+      asideBody="The branded routes keep the context clear. The inbox is human. A useful subject line, a clear ask, and a real deadline make the fastest path."
       accent="#ff5a1f"
       actions={[
-        { href: "mailto:hello@atomeons.com?subject=Hello%20AtomEons", label: "Email hello", accent: true },
-        { href: "mailto:press@atomeons.com?subject=Press%20inquiry%20-%20AtomEons", label: "Press route" },
+        { href: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20Hello%20AtomEons", label: "Email hello", accent: true },
+        { href: "mailto:a.mccree@gmail.com?subject=%5Bpress%40atomeons.com%5D%20Press%20inquiry%20-%20AtomEons", label: "Press route" },
       ]}
     >
       <RouteSection
         index="CHANNELS / LIVE"
         title="Pick the right frequency."
-        body="Every address below is active. Direct routing and catch-all delivery were re-verified through Gmail on July 19, 2026."
+        body="Every route below opens a direct message to Atom with the branded channel preserved in the subject line. That keeps delivery simple while domain forwarding is treated as infrastructure, not the single point of failure."
       >
         <ContactBoard />
       </RouteSection>
@@ -45,8 +45,8 @@ export default function ContactPage() {
         <RouteFacts
           facts={[
             { label: "DESTINATION", value: "1 human inbox", body: "Atom McCree reads and routes the messages." },
-            { label: "PUBLIC ROUTES", value: "8 + catch-all", body: "Every published address and future @atomeons.com address forwards to the same verified destination." },
-            { label: "DELIVERY TEST", value: "Inbox verified", body: "A direct route and an invented catch-all address both reached Gmail during the Version 19 launch audit." },
+            { label: "PUBLIC ROUTES", value: "8 contexts", body: "Each route names the subject context before it reaches the same destination." },
+            { label: "DELIVERY", value: "Gmail fail-safe", body: "Public buttons open a direct message to a.mccree@gmail.com until branded forwarding is independently tested again." },
             { label: "TRACKING", value: "No web form", body: "The site does not collect your message in a database." },
           ]}
         />
@@ -61,7 +61,7 @@ export default function ContactPage() {
         eyebrow="OPEN CHANNEL / NO GATEKEEPER"
         title="If the idea has voltage, send it."
         actions={[
-          { href: "mailto:hello@atomeons.com?subject=Build%20something%20with%20AtomEons", label: "Start a conversation", accent: true },
+          { href: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20Build%20something%20with%20AtomEons", label: "Start a conversation", accent: true },
           { href: "/about", label: "Know the practice" },
         ]}
       />
