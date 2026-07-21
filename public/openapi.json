@@ -25,6 +25,20 @@
         }
       }
     },
+    "/ae-brawl": {
+      "get": {
+        "summary": "AE Brawl V56 submission page",
+        "description": "OpenAI Build Week submission page for AE Brawl with fight-discovery UX, Lead MCP explanation, technical packet, About AtomEons packet, and Devpost checklist.",
+        "responses": {
+          "200": {
+            "description": "Static HTML AE Brawl submission page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
     "/products": {
       "get": {
         "summary": "Products front door",

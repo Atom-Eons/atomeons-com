@@ -7,6 +7,11 @@ import styles from "./AetherNav.module.css";
 
 const navigation = [
   {
+    label: "AE Brawl",
+    href: "/ae-brawl",
+    special: true,
+  },
+  {
     label: "Radiance",
     href: "/research/papers/radiance-luminance-alpha-wolf-eyes",
     special: true,

@@ -7,9 +7,9 @@ Canonical site: https://atomeons.com
 Source mirror: https://github.com/Atom-Eons/atomeons-com
 Contact fail-safe: a.mccree@gmail.com
 Branded contact routes preserve context in the subject line.
-Edition: Aether 01 / source V80, live deployment currently Version 20 until Sites accepts current GitHub main
+Edition: Aether 01 / source V85 with AE Brawl V56 source staged, live deployment currently Version 20 until Sites accepts current GitHub main
 Deployment: static public site
-Updated: 2026-07-20
+Updated: 2026-07-21
 
 ## Identity
 
@@ -59,6 +59,8 @@ affiliation, scientific consensus, or professional advice.
 
 ## Creations
 
+- AE Brawl V56 OpenAI Build Week submission page:
+  https://atomeons.com/ae-brawl
 - Books: https://atomeons.com/books
 - I AM AI full browser reader:
   https://atomeons.com/books/I-AM-AI-Opus-4.7.html
