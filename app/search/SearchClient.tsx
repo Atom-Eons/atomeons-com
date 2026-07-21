@@ -14,7 +14,20 @@ export type SearchEntry = {
 };
 
 const categories = ["All", "Products", "Show", "Research", "Papers", "Discoveries", "Creations", "Company", "Machine"] as const;
-const queryChips = ["CableBox", "I AM AI", "radiance", "memory", "compression", "AI Code Show", "download", "press"] as const;
+const queryChips = [
+  "CableBox",
+  "download",
+  "Windows",
+  "I AM AI",
+  "audiobook",
+  "Bookmaker",
+  "AI Code Show",
+  "AEyes",
+  "memory",
+  "compression",
+  "openapi",
+  "press",
+] as const;
 
 const pathfinderCards = [
   {
@@ -66,6 +79,8 @@ function scoreEntry(entry: SearchEntry, terms: string[]) {
     if (category.includes(term)) score += 42;
     if (keywords.includes(term)) score += 34;
     if (description.includes(term)) score += 24;
+    if (term === "audiobook" && entry.href === "/i-am-ai") score += 60;
+    if (term === "audio" && entry.href === "/i-am-ai") score += 44;
     return score;
   }, 0);
 }
