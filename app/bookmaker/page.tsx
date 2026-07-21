@@ -9,6 +9,29 @@ export const metadata: Metadata = {
   description:
     "Bookmaker is a publishing system that helps transform an idea into a structured, edited, designed, and exportable book.",
   alternates: { canonical: "https://atomeons.com/bookmaker" },
+  openGraph: {
+    title: "Bookmaker - Turn an idea into a finished book",
+    description:
+      "A publishing system for creators who want a finished book object, not another writing tab.",
+    url: "https://atomeons.com/bookmaker",
+    siteName: "AtomEons",
+    type: "website",
+    images: [
+      {
+        url: "/aether-v2/bookmaker-object-v2.webp",
+        width: 1536,
+        height: 1024,
+        alt: "Bookmaker product object for turning an idea into a finished book",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bookmaker - Turn an idea into a finished book",
+    description: "A creator engine for manuscript, cover, EPUB, audio, metadata, and launch package.",
+    creator: "@AtomMccree",
+    images: ["/aether-v2/bookmaker-object-v2.webp"],
+  },
 };
 
 const workflow = [

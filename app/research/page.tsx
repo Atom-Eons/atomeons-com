@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     title: "Experimental Research · AtomEons",
     description:
       "Independent research into machine perception, memory, compression, collective intelligence, and the systems hiding between fields.",
+    url: "https://atomeons.com/research",
+    siteName: "AtomEons",
+    type: "website",
     images: [
       {
         url: "/aether-v2/research-radiance-field-v2.webp",
@@ -23,6 +26,14 @@ export const metadata: Metadata = {
         alt: "Radiance-Luminance Theory and Alpha Wolf Eyes",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Experimental Research - AtomEons",
+    description:
+      "Independent research into machine perception, memory, compression, and experimental systems.",
+    creator: "@AtomMccree",
+    images: ["/aether-v2/research-radiance-field-v2.webp"],
   },
 };
 
