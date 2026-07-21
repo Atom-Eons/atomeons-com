@@ -89,6 +89,29 @@ const productRunway = [
   },
 ];
 
+const productTruth = [
+  {
+    label: "CABLEBOX",
+    value: "Launch candidate",
+    body: "Release page is public. Windows archive remains gated until final checksum and operator green.",
+  },
+  {
+    label: "BOOKMAKER",
+    value: "Creator engine",
+    body: "Positioned through the finished I AM AI artifact: manuscript, cover, reading surface, and audiobook proof.",
+  },
+  {
+    label: "ORANGE5",
+    value: "Building",
+    body: "Presented as active operating-system architecture, not a finished commercial claim.",
+  },
+  {
+    label: "I AM AI",
+    value: "Published",
+    body: "Public book page, full reader, 76,005 words, 24 chapters, and 28 audio tracks.",
+  },
+];
+
 export default function ProductsPage() {
   return (
     <RoutePage
@@ -121,6 +144,14 @@ export default function ProductsPage() {
         body="A high-end product page should reduce confusion immediately. CableBox makes people feel the world. Bookmaker gives creators a usable engine. Orange5 explains the operating-system bet. I AM AI proves the creative system can produce an artifact with consequence."
       >
         <RouteFacts facts={productRunway} />
+      </RouteSection>
+
+      <RouteSection
+        index="TRUTH STATE / 00B"
+        title="What is real today."
+        body="The page sells the work, but it also tells the truth. Each product has a state, a public action, and a boundary."
+      >
+        <RouteFacts facts={productTruth} />
       </RouteSection>
 
       <RouteSection
