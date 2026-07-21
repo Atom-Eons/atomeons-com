@@ -370,6 +370,174 @@
         }
       }
     },
+    "/books": {
+      "get": {
+        "summary": "Books and forthcoming titles",
+        "description": "Public books index including I AM AI and future book signals.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Books page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/art": {
+      "get": {
+        "summary": "Art and practice page",
+        "description": "Creative practice surface for AI as material, object, system, and expression.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Art page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/cinema": {
+      "get": {
+        "summary": "Cinema and broadcast page",
+        "description": "Moving-image, broadcast, and Atom Alive signal surface.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Cinema page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/atlas": {
+      "get": {
+        "summary": "Aether atlas",
+        "description": "One-page system map of the current Aether public surface.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Atlas page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/who-are-you": {
+      "get": {
+        "summary": "Visitor doorway guide",
+        "description": "Audience-based routing page for visitors who need the fastest right doorway.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Who Are You page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/random": {
+      "get": {
+        "summary": "Random doorway",
+        "description": "Static discovery route for visitors who want the archive to choose the next page.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Random page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/legal/terms": {
+      "get": {
+        "summary": "Website terms",
+        "description": "Plain-language static terms for the AtomEons website.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Terms page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/legal/privacy": {
+      "get": {
+        "summary": "Privacy statement",
+        "description": "Plain-language privacy statement for the static AtomEons site.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Privacy page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries/aeyes": {
+      "get": {
+        "summary": "AEyes discovery page",
+        "description": "Photonic and retinal-inspired machine-vision discovery page.",
+        "responses": {
+          "200": {
+            "description": "Static HTML AEyes discovery page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries/atomsmasher": {
+      "get": {
+        "summary": "AtomSmasher discovery page",
+        "description": "Compression-for-operational-intelligence discovery page.",
+        "responses": {
+          "200": {
+            "description": "Static HTML AtomSmasher discovery page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries/aememory": {
+      "get": {
+        "summary": "AEMemory discovery page",
+        "description": "Durable-memory architecture discovery page.",
+        "responses": {
+          "200": {
+            "description": "Static HTML AEMemory discovery page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/papers/radiance-luminance-alpha-wolf-eyes": {
+      "get": {
+        "summary": "Radiance-Luminance Theory paper page",
+        "description": "Featured research paper presentation page for radiance, luminance, and AEyes.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Radiance-Luminance paper page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
     "/research/papers/{slug}": {
       "get": {
         "summary": "Research paper presentation page",
