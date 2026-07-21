@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: "CableBox · Turn it on. Surf.",
     description: "A living vintage television for Windows. The channel dial is back.",
     url: "https://atomeons.com/cablebox",
+    siteName: "AtomEons",
     type: "website",
     images: [
       {
@@ -22,6 +23,13 @@ export const metadata: Metadata = {
         alt: "CableBox running as a cinematic red-and-black vintage television",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CableBox - Turn it on. Surf.",
+    description: "Native Windows cable-surfing art. A living vintage television with the dial back.",
+    creator: "@AtomMccree",
+    images: ["/cablebox-premiere/hero-active.webp"],
   },
 };
 

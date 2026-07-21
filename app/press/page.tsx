@@ -14,6 +14,29 @@ export const metadata: Metadata = {
   title: "Press",
   description: "Press facts, story angles, biography, and direct contact for AtomEons and Atom McCree.",
   alternates: { canonical: "https://atomeons.com/press" },
+  openGraph: {
+    title: "Press - AtomEons",
+    description:
+      "Press facts, story angles, biography, coverage boundaries, and direct contact for AtomEons.",
+    url: "https://atomeons.com/press",
+    siteName: "AtomEons",
+    type: "website",
+    images: [
+      {
+        url: "/aether-v2/hero-invention-field-v2.webp",
+        width: 1536,
+        height: 1024,
+        alt: "AtomEons invention field for press coverage",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Press - AtomEons",
+    description: "Fast facts, story angles, copy-safe framing, and direct press contact.",
+    creator: "@AtomMccree",
+    images: ["/aether-v2/hero-invention-field-v2.webp"],
+  },
 };
 
 const editorialFilter = [

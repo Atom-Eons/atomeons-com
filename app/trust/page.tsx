@@ -13,6 +13,29 @@ export const metadata: Metadata = {
   title: "Trust",
   description: "The public trust contract for AtomEons claims, states, privacy, and corrections.",
   alternates: { canonical: "https://atomeons.com/trust" },
+  openGraph: {
+    title: "Trust - AtomEons",
+    description:
+      "The public trust contract for AtomEons claims, product states, research boundaries, privacy, and corrections.",
+    url: "https://atomeons.com/trust",
+    siteName: "AtomEons",
+    type: "website",
+    images: [
+      {
+        url: "/aether-v2/hero-invention-field-v2.webp",
+        width: 1536,
+        height: 1024,
+        alt: "AtomEons public proof and trust field",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Trust - AtomEons",
+    description: "Visible state, bounded claims, direct contact, and correction paths.",
+    creator: "@AtomMccree",
+    images: ["/aether-v2/hero-invention-field-v2.webp"],
+  },
 };
 
 const proofLedger = [

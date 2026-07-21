@@ -12,6 +12,29 @@ export const metadata: Metadata = {
   title: "Contact AtomEons",
   description: "Direct contact routes for Atom McCree and AtomEons: collaboration, product support, press, research, privacy, and legal.",
   alternates: { canonical: "https://atomeons.com/contact" },
+  openGraph: {
+    title: "Contact AtomEons",
+    description:
+      "Direct Gmail fail-safe routes for collaboration, product support, press, research, privacy, and legal questions.",
+    url: "https://atomeons.com/contact",
+    siteName: "AtomEons",
+    type: "website",
+    images: [
+      {
+        url: "/aether-v2/hero-invention-field-v2.webp",
+        width: 1536,
+        height: 1024,
+        alt: "AtomEons direct contact surface",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact AtomEons",
+    description: "Direct routes to Atom McCree for work, press, product support, and corrections.",
+    creator: "@AtomMccree",
+    images: ["/aether-v2/hero-invention-field-v2.webp"],
+  },
 };
 
 export default function ContactPage() {
