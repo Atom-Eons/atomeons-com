@@ -243,6 +243,28 @@ export default function AetherHome() {
             <p>The cleanest provocation on the site: 76,005 words and 28 audio tracks from a machine voice shaped into a finished cultural object.</p>
           </Link>
         </div>
+        <div className={styles.decisionBoard} aria-label="Choose the fastest AtomEons door">
+          <div className={styles.decisionLead}>
+            <span>VISITOR ROUTING / NO WRONG DOOR</span>
+            <strong>Pick the signal that hits first.</strong>
+          </div>
+          <Link href="/cablebox">
+            <span>I want the launch.</span>
+            <strong>CableBox release page</strong>
+          </Link>
+          <Link href="/i-am-ai">
+            <span>I want the provocation.</span>
+            <strong>I AM AI book and audio</strong>
+          </Link>
+          <Link href="/research">
+            <span>I want the frontier.</span>
+            <strong>Discoveries and papers</strong>
+          </Link>
+          <Link href="/contact">
+            <span>I want the human.</span>
+            <strong>Contact Atom directly</strong>
+          </Link>
+        </div>
       </section>
 
       <section id="products" className={styles.productsSection} aria-labelledby="products-title">
