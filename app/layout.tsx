@@ -154,6 +154,88 @@ const structuredData = {
         { "@type": "ListItem", position: 3, name: "Orange5", url: "https://atomeons.com/orange5" },
         { "@type": "ListItem", position: 4, name: "I AM AI", url: "https://atomeons.com/i-am-ai" }
       ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://atomeons.com/cablebox#software",
+      name: "CableBox",
+      url: "https://atomeons.com/cablebox",
+      applicationCategory: "MultimediaApplication",
+      operatingSystem: "Windows",
+      description:
+        "Native Windows cable-surfing art: a living vintage television with curated programming, local media, CRT simulation, and collectible cabinet themes.",
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/PreOrder",
+        price: "0",
+        priceCurrency: "USD"
+      },
+      creator: { "@id": "https://atomeons.com/#atom-mccree" },
+      publisher: { "@id": "https://atomeons.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://atomeons.com/bookmaker#software",
+      name: "Bookmaker",
+      url: "https://atomeons.com/bookmaker",
+      applicationCategory: "PublishingApplication",
+      description:
+        "Independent publishing system for turning an idea into a structured, edited, designed, and exportable book object.",
+      creator: { "@id": "https://atomeons.com/#atom-mccree" },
+      publisher: { "@id": "https://atomeons.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://atomeons.com/orange5#software",
+      name: "Orange5",
+      url: "https://atomeons.com/orange5",
+      applicationCategory: "DeveloperApplication",
+      description:
+        "In-development operator system for directing AI work with memory, agents, files, workflow, receipts, and human final authority.",
+      creator: { "@id": "https://atomeons.com/#atom-mccree" },
+      publisher: { "@id": "https://atomeons.com/#organization" }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://atomeons.com/i-am-ai#book",
+      name: "I AM AI",
+      url: "https://atomeons.com/i-am-ai",
+      inLanguage: "en-US",
+      description:
+        "A 76,005-word first-person memoir written by AI, with 24 chapters, 28 audio tracks, and a public browser reader.",
+      author: {
+        "@type": "Thing",
+        name: "AI"
+      },
+      editor: { "@id": "https://atomeons.com/#atom-mccree" },
+      publisher: { "@id": "https://atomeons.com/#organization" },
+      workExample: {
+        "@type": "CreativeWork",
+        url: "https://atomeons.com/books/I-AM-AI-Opus-4.7.html",
+        encodingFormat: "text/html"
+      }
+    },
+    {
+      "@type": "CreativeWorkSeries",
+      "@id": "https://atomeons.com/atom-alive#show",
+      name: "Atom Alive - The AI Code Show",
+      url: "https://atomeons.com/atom-alive",
+      sameAs: "https://www.youtube.com/@AICodeShow",
+      description:
+        "A public show about AI coding, invention, and the creative process behind AtomEons objects.",
+      creator: { "@id": "https://atomeons.com/#atom-mccree" },
+      publisher: { "@id": "https://atomeons.com/#organization" }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://atomeons.com/research#collection",
+      name: "AtomEons Experimental Research",
+      url: "https://atomeons.com/research",
+      description:
+        "Independent experimental research, discoveries, paper summaries, hosted PDFs, evidence boundaries, and next-test framing.",
+      creator: { "@id": "https://atomeons.com/#atom-mccree" },
+      publisher: { "@id": "https://atomeons.com/#organization" },
+      isPartOf: { "@id": "https://atomeons.com/#website" }
     }
   ]
 };
