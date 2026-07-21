@@ -8,7 +8,7 @@ import styles from "./AetherNav.module.css";
 const navigation = [
   {
     label: "AE Brawl",
-    href: "/ae-brawl",
+    href: "/brawl",
     special: true,
   },
   {

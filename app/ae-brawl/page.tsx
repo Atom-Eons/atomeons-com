@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "AE Brawl V56 · OpenAI Build Week",
   description:
     "AE Brawl is an AtomEons Build Week submission page: cinematic fight-discovery UX, Lead MCP explanation, AE research notes, and Devpost-ready submission assets.",
-  alternates: { canonical: "https://atomeons.com/ae-brawl" },
+  alternates: { canonical: "https://atomeons.com/brawl" },
   openGraph: {
     title: "AE Brawl V56 · AtomEons",
     description:
       "A cinematic, human-readable fight-discovery experience built with Codex: Bruce Lee discipline, Double Dragon energy, and Lead MCP underneath.",
-    url: "https://atomeons.com/ae-brawl",
+    url: "https://atomeons.com/brawl",
     siteName: "AtomEons",
     type: "website",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const devpostChecklist = [
   ["Project title", "AE Brawl"],
   ["Category", "Apps for your life, or Developer Tools if Lead MCP is the primary judging frame."],
-  ["Working project URL", "Use the live route once deployed: https://atomeons.com/ae-brawl"],
+  ["Working project URL", "Use the live route once deployed: https://atomeons.com/brawl"],
   ["Code repository", "Public repo, or private repo shared with testing@devpost.com and build-week-event@openai.com."],
   ["README", "Setup, sample mode, safety boundaries, Codex/GPT-5.6 usage, and judge testing path."],
   ["Demo video", "Public YouTube video under 3 minutes showing the page/app working and explaining Codex + GPT-5.6."],

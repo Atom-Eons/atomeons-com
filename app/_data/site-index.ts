@@ -8,7 +8,7 @@ export type SiteEntry = {
 
 export const SITE_INDEX: SiteEntry[] = [
   { title: "Home", href: "/", description: "The Aether front door into AtomEons.", category: "Company", keywords: ["home", "aether", "atomeons"] },
-  { title: "AE Brawl", href: "/ae-brawl", description: "OpenAI Build Week V56 submission page for AE Brawl: fight-discovery UX, Lead MCP explanation, packets, and Devpost checklist.", category: "Creations", keywords: ["ae brawl", "brawl", "fight", "fightclub", "openai build week", "devpost", "lead mcp", "leadmpc", "bruce lee", "double dragon"] },
+  { title: "AE Brawl", href: "/brawl", description: "OpenAI Build Week V56 submission page for AE Brawl: fight-discovery UX, Lead MCP explanation, packets, and Devpost checklist.", category: "Creations", keywords: ["ae brawl", "brawl", "fight", "fightclub", "openai build week", "devpost", "lead mcp", "leadmpc", "bruce lee", "double dragon"] },
   { title: "Products", href: "/products", description: "The four current AtomEons products.", category: "Products", keywords: ["products", "cablebox", "bookmaker", "orange5", "i am ai"] },
   { title: "CableBox", href: "/cablebox", description: "Native Windows cable-surfing art with CRT glass, channels, guide, favorites, and release-download gate.", category: "Products", keywords: ["television", "tv", "crt", "channels", "windows", "native", "installer", "download", "release", "cable", "guide", "favorites"] },
   { title: "Bookmaker", href: "/bookmaker", description: "Turn an idea into a finished book object: manuscript, cover, EPUB, audiobook, metadata, and launch package.", category: "Products", keywords: ["book", "publishing", "epub", "audiobook", "author", "manuscript", "cover", "metadata", "launch", "publisher"] },

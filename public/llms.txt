@@ -60,7 +60,7 @@ affiliation, scientific consensus, or professional advice.
 ## Creations
 
 - AE Brawl V56 OpenAI Build Week submission page:
-  https://atomeons.com/ae-brawl
+  https://atomeons.com/brawl
 - Books: https://atomeons.com/books
 - I AM AI full browser reader:
   https://atomeons.com/books/I-AM-AI-Opus-4.7.html
