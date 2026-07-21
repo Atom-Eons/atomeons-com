@@ -55,7 +55,15 @@ export function ContactBoard() {
   }
 
   function mailtoHref(address: string, subject: string) {
-    return `mailto:${DELIVERY_ADDRESS}?subject=${encodeURIComponent(subjectLine(address, subject))}`;
+    const body = [
+      `AtomEons route: ${address}`,
+      `Direct destination: ${DELIVERY_ADDRESS}`,
+      "",
+      "Message:",
+      "",
+    ].join("\n");
+
+    return `mailto:${DELIVERY_ADDRESS}?subject=${encodeURIComponent(subjectLine(address, subject))}&body=${encodeURIComponent(body)}`;
   }
 
   async function copyAddress(address: string) {
@@ -86,7 +94,7 @@ export function ContactBoard() {
           </p>
         </div>
         <div className={styles.failSafeActions}>
-          <a href="mailto:a.mccree@gmail.com?subject=%5Bdirect%5D%20AtomEons%20inquiry">
+          <a href="mailto:a.mccree@gmail.com?subject=%5Bdirect%5D%20AtomEons%20inquiry&body=Direct%20destination%3A%20a.mccree%40gmail.com%0A%0AMessage%3A%0A">
             Email direct <span aria-hidden>↗</span>
           </a>
           <button type="button" onClick={() => copyAddress("direct")}>

@@ -25,8 +25,8 @@ export default function ContactPage() {
       asideBody="The branded routes keep the context clear. The inbox is human. A useful subject line, a clear ask, and a real deadline make the fastest path."
       accent="#ff5a1f"
       actions={[
-        { href: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20Hello%20AtomEons", label: "Email hello", accent: true },
-        { href: "mailto:a.mccree@gmail.com?subject=%5Bpress%40atomeons.com%5D%20Press%20inquiry%20-%20AtomEons", label: "Press route" },
+        { href: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20Hello%20AtomEons&body=AtomEons%20route%3A%20hello%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0A%0AMessage%3A%0A", label: "Email hello", accent: true },
+        { href: "mailto:a.mccree@gmail.com?subject=%5Bpress%40atomeons.com%5D%20Press%20inquiry%20-%20AtomEons&body=AtomEons%20route%3A%20press%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0A%0AMessage%3A%0A", label: "Press route" },
       ]}
     >
       <RouteSection
@@ -61,7 +61,7 @@ export default function ContactPage() {
         eyebrow="OPEN CHANNEL / NO GATEKEEPER"
         title="If the idea has voltage, send it."
         actions={[
-          { href: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20Build%20something%20with%20AtomEons", label: "Start a conversation", accent: true },
+          { href: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20Build%20something%20with%20AtomEons&body=AtomEons%20route%3A%20hello%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0A%0AMessage%3A%0A", label: "Start a conversation", accent: true },
           { href: "/about", label: "Know the practice" },
         ]}
       />
