@@ -52,7 +52,7 @@ export default function Orange5Page() {
       accent="#f36b21"
       actions={[
         {
-          href: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20%5BOrange5%5D%20notify%20me%20on%20launch",
+          href: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20%5BOrange5%5D%20notify%20me%20on%20launch&body=AtomEons%20route%3A%20hello%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0AProduct%3A%20Orange5%0A%0AMessage%3A%0A",
           label: "Notify me",
           accent: true,
         },

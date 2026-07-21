@@ -144,7 +144,7 @@ export default function TrustPage() {
               meta: "CONTACT",
               title: "Direct correction path",
               body: "Use the Gmail fail-safe with evidence and the exact public URL.",
-              href: "mailto:a.mccree@gmail.com?subject=%5Bsupport%40atomeons.com%5D%20AtomEons%20trust%20correction",
+              href: "mailto:a.mccree@gmail.com?subject=%5Bsupport%40atomeons.com%5D%20AtomEons%20trust%20correction&body=AtomEons%20route%3A%20support%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0A%0APublic%20URL%3A%0AEvidence%3A%0A%0AMessage%3A%0A",
             },
           ]}
         />
@@ -161,7 +161,7 @@ export default function TrustPage() {
         title="Trust the trail, not the typography."
         actions={[
           { href: "/receipts", label: "Inspect receipts" },
-          { href: "mailto:a.mccree@gmail.com?subject=%5Bsupport%40atomeons.com%5D%20AtomEons%20correction", label: "Send a correction" },
+          { href: "mailto:a.mccree@gmail.com?subject=%5Bsupport%40atomeons.com%5D%20AtomEons%20correction&body=AtomEons%20route%3A%20support%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0A%0APublic%20URL%3A%0AEvidence%3A%0A%0AMessage%3A%0A", label: "Send a correction" },
         ]}
       />
     </RoutePage>

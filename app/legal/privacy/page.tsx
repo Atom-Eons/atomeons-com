@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         eyebrow="STATIC BY DESIGN"
         title="The easiest data to protect is data never collected."
         actions={[
-          { href: "mailto:a.mccree@gmail.com?subject=%5Bprivacy%40atomeons.com%5D%20AtomEons%20privacy", label: "Privacy question" },
+          { href: "mailto:a.mccree@gmail.com?subject=%5Bprivacy%40atomeons.com%5D%20AtomEons%20privacy&body=AtomEons%20route%3A%20privacy%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0A%0AMessage%3A%0A", label: "Privacy question" },
           { href: "/trust", label: "Trust contract" },
         ]}
       />
