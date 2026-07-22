@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { WindowsDownloadTrust } from "../_components/WindowsDownloadTrust";
 import styles from "../editorial.module.css";
 
 export const metadata: Metadata = {
@@ -54,7 +55,7 @@ export default function BookmakerPage() {
             </p>
             <div className={styles.actions}>
               <a href="https://github.com/AtomEons/BookMaker" target="_blank" rel="noopener noreferrer" className={`${styles.button} ${styles.buttonAccent}`}>
-                Get Bookmaker ↗
+                Open Bookmaker source ↗
               </a>
               <Link href="/i-am-ai" className={`${styles.button} ${styles.buttonGhost}`}>
                 See a book it helped make
@@ -68,7 +69,7 @@ export default function BookmakerPage() {
               whole act of publishing: the idea, the architecture, the editorial
               decisions, the artifact, and the release.
             </p>
-            <p className={styles.status}>MAC + WINDOWS · AVAILABLE NOW</p>
+            <p className={styles.status}>MAC + WINDOWS SOURCE · VERIFIED BUILD PENDING</p>
           </aside>
         </div>
       </section>
@@ -91,7 +92,7 @@ export default function BookmakerPage() {
           <div className={styles.campaignFieldPlate}>
             <span>THE WHOLE ACT OF PUBLISHING</span>
             <strong>Give the idea a body.</strong>
-            <small>MAC + WINDOWS / AVAILABLE NOW</small>
+            <small>MAC + WINDOWS SOURCE / VERIFIED BUILD PENDING</small>
           </div>
           <div className={styles.campaignFieldAxis}><span>IDEA</span><i /><span>OBJECT</span></div>
         </div>
@@ -200,6 +201,13 @@ export default function BookmakerPage() {
           research product. The original monograph routes remain preserved in the archive.
         </div>
       </section>
+
+      <WindowsDownloadTrust
+        productName="Bookmaker"
+        releaseState="SOURCE AVAILABLE · VERIFIED BINARY PENDING"
+        sourceHref="https://github.com/AtomEons/BookMaker"
+        surface="paper"
+      />
 
       <section className={styles.footerCta}>
         <p className={styles.eyebrow}>THE BOOK DOES NOT HAVE TO STAY IN YOUR HEAD</p>
