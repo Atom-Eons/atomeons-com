@@ -45,7 +45,7 @@ const products = [
   },
   {
     index: "02",
-    meta: "SHIPPED / PUBLISHING SYSTEM",
+    meta: "SOURCE OPEN / BUILD VERIFYING",
     title: "Bookmaker",
     body: "An independent publishing machine for turning an idea into a finished book, cover, EPUB, audio object, and release package.",
     href: "/bookmaker",

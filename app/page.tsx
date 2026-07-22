@@ -140,7 +140,7 @@ export default function AetherHome() {
               <small>Products first. Show second. Research third. Receipts underneath.</small>
             </div>
             <OrbitNode className={styles.nodeCable} href="/cablebox" label="CableBox" meta="launch candidate" color="#2257df" />
-            <OrbitNode className={styles.nodeBookmaker} href="/bookmaker" label="Bookmaker" meta="shipped" color="#6d5742" />
+            <OrbitNode className={styles.nodeBookmaker} href="/bookmaker" label="Bookmaker" meta="source open" color="#6d5742" />
             <OrbitNode className={styles.nodeOrange5} href="/orange5" label="Orange5" meta="building" color="#f36b21" />
             <OrbitNode className={styles.nodeOrange3} href="/research" label="Research" meta="experimental" color="#2558dc" />
             <OrbitNode className={styles.nodeIamAi} href="/i-am-ai" label="I AM AI" meta="published" color="#a52f2a" />
@@ -302,7 +302,7 @@ export default function AetherHome() {
         <article className={`${styles.flagship} ${styles.bookmakerFlagship}`}>
           <BookmakerVisual />
           <div className={styles.flagshipCopy}>
-            <StatusDot color="#806a50">SHIPPED · MAC + WINDOWS</StatusDot>
+            <StatusDot color="#806a50">SOURCE OPEN · VERIFIED BUILDS PENDING</StatusDot>
             <p className={styles.productNumber}>PRODUCT / 02</p>
             <h3>Bookmaker</h3>
             <p className={styles.flagshipTagline}>Your idea deserves to become an object.</p>

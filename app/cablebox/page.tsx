@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { WindowsDownloadTrust } from "../_components/WindowsDownloadTrust";
 import { CableboxPremiere } from "./CableboxPremiere";
 import styles from "./cablebox.module.css";
 
@@ -351,23 +352,11 @@ export default function CableboxPage() {
             </div>
           </div>
         </div>
-        <aside className={styles.securityNotice}>
-          <span>WINDOWS SECURITY NOTICE / READ BEFORE INSTALLING</span>
-          <div>
-            <strong>CableBox is currently an independent unsigned Windows application.</strong>
-            <p>
-              Windows may display a SmartScreen warning because this is an early independent release,
-              not a Microsoft-trusted publisher build. That warning is expected for unsigned software.
-              Download only from the official AtomEons release, compare the file against the published
-              SHA-256 checksum, and continue only when the checksum matches.
-            </p>
-            <ul className={styles.releaseTrustList}>
-              <li><b>What opens first</b><span>Checksum, archive size, release notes, and the exact public download.</span></li>
-              <li><b>What stays closed</b><span>No download button appears until the archive and checksum are green.</span></li>
-              <li><b>What is not claimed</b><span>No signing, reputation, or verification language appears until it is publicly true.</span></li>
-            </ul>
-          </div>
-        </aside>
+        <WindowsDownloadTrust
+          productName="CableBox"
+          releaseState="FINAL ARCHIVE + CHECKSUM PENDING"
+          sourceHref="https://github.com/Atom-Eons/atomeons-com"
+        />
         <div className={styles.releaseFooter}>
           <div>
             <span>601.6 MB</span>

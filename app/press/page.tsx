@@ -189,7 +189,7 @@ export default function PressPage() {
           facts={[
             { label: "LOCATION", value: "Naples, FL", body: "AtomEons is based in Naples, Florida. Do not describe a campus or formal lab." },
             { label: "STRUCTURE", value: "Independent", body: "Artist-owned and self-directed, not venture-backed and not institution-funded." },
-            { label: "PRODUCT STATUS", value: "Mixed states", body: "CableBox is a launch candidate, Bookmaker is available, Orange5 is underway, I AM AI is published." },
+            { label: "PRODUCT STATUS", value: "Mixed states", body: "CableBox is a launch candidate, Bookmaker source is open while verified binaries are pending, Orange5 is underway, and I AM AI is published." },
             { label: "CONTACT", value: "Direct Gmail", body: "Press mail reaches a.mccree@gmail.com with press context in the subject line." },
           ]}
         />
