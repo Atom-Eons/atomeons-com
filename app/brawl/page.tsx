@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import AeBrawlPage from "../ae-brawl/page";
 
 export const metadata: Metadata = {
-  title: "AE Brawl — Build the fighter. Lead the machine.",
+  title: "AE BRAWL — Tonight Has A Door | Atom Eons",
   description:
-    "AE Brawl is Atom Eons' OpenAI Build Week project: a cinematic fight-discovery experience powered by Lead MCP and custom image generation.",
+    "A cinematic, accountless PWA for finding legitimate supervised combat-sport sessions tonight, powered by Google Places and the seven-tool LeadMCP referral protocol.",
   alternates: { canonical: "https://atomeons.com/brawl" },
 };
 
