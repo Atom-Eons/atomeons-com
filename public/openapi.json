@@ -1,0 +1,621 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AtomEons Aether Static Resources",
+    "version": "1.0.0",
+    "description": "A truthful description of stable public GET resources on the static Aether deployment. This is not a write API or agent control plane."
+  },
+  "servers": [
+    {
+      "url": "https://atomeons.com",
+      "description": "Canonical public site"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Aether front door",
+        "responses": {
+          "200": {
+            "description": "AtomEons public homepage",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/brawl": {
+      "get": {
+        "summary": "AE BRAWL Build Week feature",
+        "description": "Premium project feature for an accountless supervised same-night training PWA, its seven-tool LeadMCP referral protocol, fifteen-frame campaign, public proof, and PDF judge packets.",
+        "responses": {
+          "200": {
+            "description": "Static HTML AE BRAWL project feature",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "summary": "Products front door",
+        "description": "Human-readable map of the four current AtomEons products and their public states.",
+        "responses": {
+          "200": {
+            "description": "Static HTML product index",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/cablebox": {
+      "get": {
+        "summary": "CableBox product page",
+        "description": "Launch-candidate Windows cable-surfing art page. Download archive remains gated until checksum/operator approval.",
+        "responses": {
+          "200": {
+            "description": "Static HTML CableBox release page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/bookmaker": {
+      "get": {
+        "summary": "Bookmaker product page",
+        "description": "Independent publishing system page for turning an idea into a finished book object.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Bookmaker page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/orange5": {
+      "get": {
+        "summary": "Orange5 product page",
+        "description": "Dedicated Orange5 architecture/status page. This is not a downloadable final release claim.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Orange5 page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/i-am-ai": {
+      "get": {
+        "summary": "I AM AI product page",
+        "description": "Dedicated page for the AI-authored memoir and audiobook artifact.",
+        "responses": {
+          "200": {
+            "description": "Static HTML I AM AI page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/atom-alive": {
+      "get": {
+        "summary": "Atom Alive show page",
+        "description": "The AI Code Show public page with YouTube route and show positioning.",
+        "responses": {
+          "200": {
+            "description": "Static HTML show page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/about": {
+      "get": {
+        "summary": "About AtomEons",
+        "description": "Dedicated identity page for Atom McCree, the AI workforce thesis, and the independent practice.",
+        "responses": {
+          "200": {
+            "description": "Static HTML About page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/trust": {
+      "get": {
+        "summary": "Trust contract and current state map",
+        "description": "Public claim boundaries, product states, verification routes, contact fail-safe, and correction path.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Trust page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/press": {
+      "get": {
+        "summary": "Press field kit",
+        "description": "Fast facts, story angles, copy-safe coverage frames, biography, and direct press contact.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Press page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/receipts": {
+      "get": {
+        "summary": "Receipts and verification room",
+        "description": "Public proof surfaces, current counts, verification method, and correction path.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Receipts page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/timeline": {
+      "get": {
+        "summary": "Timeline and state key",
+        "description": "Product-state timeline distinguishing published, available, candidate, building, experimental, and live surfaces.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Timeline page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/explore": {
+      "get": {
+        "summary": "Complete public route index",
+        "description": "Curated index of current public AtomEons surfaces grouped by Products, Show, Research, Creations, Company, and Machine.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Explore page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "summary": "Private browser-side search",
+        "description": "Static search route that runs in the browser against the shipped public index without sending queries to a third-party search provider.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Search page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/contact": {
+      "get": {
+        "summary": "Contact page",
+        "description": "Direct contact routes. Public actions use the a.mccree@gmail.com fail-safe and do not submit to a database.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Contact page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research": {
+      "get": {
+        "summary": "Experimental research front door",
+        "description": "Independent research overview with discoveries, papers, skeptic-mode reading protocol, and evidence boundaries.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Research page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries": {
+      "get": {
+        "summary": "Discoveries index",
+        "description": "Index of named experimental systems including AEyes, AtomSmasher, and AEMemory.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Discoveries page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries/{slug}": {
+      "get": {
+        "summary": "Discovery detail page",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["aeyes", "atomsmasher", "aememory"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Static HTML discovery page with proposition, evidence, and limits",
+            "content": {
+              "text/html": {}
+            }
+          },
+          "404": {
+            "description": "Discovery not found"
+          }
+        }
+      }
+    },
+    "/research/papers": {
+      "get": {
+        "summary": "Research paper library",
+        "description": "Index of current paper presentation pages with direct PDF routes when available.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Papers page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "summary": "Language-model context document",
+        "responses": {
+          "200": {
+            "description": "Plain-text identity, route, state, and citation guidance",
+            "content": {
+              "text/plain": {}
+            }
+          }
+        }
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "summary": "This static resource contract",
+        "responses": {
+          "200": {
+            "description": "OpenAPI 3.1 document",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/sitemap.xml": {
+      "get": {
+        "summary": "Current public route sitemap",
+        "responses": {
+          "200": {
+            "description": "XML sitemap",
+            "content": {
+              "application/xml": {}
+            }
+          }
+        }
+      }
+    },
+    "/api": {
+      "get": {
+        "summary": "Human-readable machine access index",
+        "responses": {
+          "200": {
+            "description": "Static HTML capability and boundary documentation",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/mcp": {
+      "get": {
+        "summary": "MCP status documentation",
+        "description": "Documentation only. This is not an MCP transport endpoint.",
+        "responses": {
+          "200": {
+            "description": "Static HTML status page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/agent-gateway": {
+      "get": {
+        "summary": "Agent gateway status documentation",
+        "description": "Documentation only. This endpoint accepts no jobs or mutations.",
+        "responses": {
+          "200": {
+            "description": "Static HTML status page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/books": {
+      "get": {
+        "summary": "Books and forthcoming titles",
+        "description": "Public books index including I AM AI and future book signals.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Books page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/art": {
+      "get": {
+        "summary": "Art and practice page",
+        "description": "Creative practice surface for AI as material, object, system, and expression.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Art page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/cinema": {
+      "get": {
+        "summary": "Cinema and broadcast page",
+        "description": "Moving-image, broadcast, and Atom Alive signal surface.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Cinema page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/atlas": {
+      "get": {
+        "summary": "Aether atlas",
+        "description": "One-page system map of the current Aether public surface.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Atlas page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/who-are-you": {
+      "get": {
+        "summary": "Visitor doorway guide",
+        "description": "Audience-based routing page for visitors who need the fastest right doorway.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Who Are You page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/random": {
+      "get": {
+        "summary": "Random doorway",
+        "description": "Static discovery route for visitors who want the archive to choose the next page.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Random page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/legal/terms": {
+      "get": {
+        "summary": "Website terms",
+        "description": "Plain-language static terms for the AtomEons website.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Terms page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/legal/privacy": {
+      "get": {
+        "summary": "Privacy statement",
+        "description": "Plain-language privacy statement for the static AtomEons site.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Privacy page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries/aeyes": {
+      "get": {
+        "summary": "AEyes discovery page",
+        "description": "Photonic and retinal-inspired machine-vision discovery page.",
+        "responses": {
+          "200": {
+            "description": "Static HTML AEyes discovery page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries/atomsmasher": {
+      "get": {
+        "summary": "AtomSmasher discovery page",
+        "description": "Compression-for-operational-intelligence discovery page.",
+        "responses": {
+          "200": {
+            "description": "Static HTML AtomSmasher discovery page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/discoveries/aememory": {
+      "get": {
+        "summary": "AEMemory discovery page",
+        "description": "Durable-memory architecture discovery page.",
+        "responses": {
+          "200": {
+            "description": "Static HTML AEMemory discovery page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/papers/radiance-luminance-alpha-wolf-eyes": {
+      "get": {
+        "summary": "Radiance-Luminance Theory paper page",
+        "description": "Featured research paper presentation page for radiance, luminance, and AEyes.",
+        "responses": {
+          "200": {
+            "description": "Static HTML Radiance-Luminance paper page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/research/papers/{slug}": {
+      "get": {
+        "summary": "Research paper presentation page",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Static HTML summary with evidence boundary and PDF link",
+            "content": {
+              "text/html": {}
+            }
+          },
+          "404": {
+            "description": "Paper not found"
+          }
+        }
+      }
+    },
+    "/research/papers/{slug}.pdf": {
+      "get": {
+        "summary": "Locally hosted research paper PDF",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "PDF artifact",
+            "content": {
+              "application/pdf": {}
+            }
+          },
+          "404": {
+            "description": "Paper not found"
+          }
+        }
+      }
+    },
+    "/books/I-AM-AI-Opus-4.7.html": {
+      "get": {
+        "summary": "Complete I AM AI browser reader",
+        "responses": {
+          "200": {
+            "description": "Self-contained HTML book",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

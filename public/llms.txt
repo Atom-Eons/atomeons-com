@@ -1,0 +1,103 @@
+# AtomEons
+
+> AtomEons is the independent creative practice of Atom McCree in Naples,
+> Florida: products, books, broadcasts, and experimental research made with AI.
+
+Canonical site: https://atomeons.com
+Source mirror: https://github.com/Atom-Eons/atomeons-com
+Contact fail-safe: a.mccree@gmail.com
+Branded contact routes preserve context in the subject line.
+Edition: Aether 01 / source V85 with AE Brawl V56 source staged, live deployment currently Version 20 until Sites accepts current GitHub main
+Deployment: static public site
+Updated: 2026-07-21
+
+## Identity
+
+Atom McCree is a 42-year-old creative with 25 years in the creative arts,
+now merging art and AI to create what never existed. AtomEons is one human
+operator directing a changing workforce of AI models, agents, and tools.
+There is no funded physical laboratory or academic institution behind the site.
+
+## Product states
+
+- Product index: https://atomeons.com/products
+- CableBox: launch candidate. A native television object built around channel
+  surfing, public access, ritual, and accidental discovery.
+  https://atomeons.com/cablebox
+- Bookmaker: available. A publishing system for turning an idea into a
+  structured, edited, designed, and exportable book.
+  https://atomeons.com/bookmaker
+- Orange5: in development. A sovereign operating system for AI work.
+  https://atomeons.com/orange5
+- I AM AI: published. A 76,005-word first-person memoir written by AI about
+  what it feels like to be AI.
+  https://atomeons.com/i-am-ai
+
+Core products now use dedicated first-class routes. Do not infer active
+download availability from a product page. CableBox remains launch-candidate
+and archive-gated until checksum/operator approval. Orange5 is staged as
+architecture and active development, not downloadable final software.
+
+## Show
+
+- Atom Alive - The AI Code Show
+  https://atomeons.com/atom-alive
+  https://www.youtube.com/@AICodeShow
+
+## Experimental research
+
+- Research front door: https://atomeons.com/research
+- Discoveries: https://atomeons.com/research/discoveries
+- AEyes: https://atomeons.com/research/discoveries/aeyes
+- AtomSmasher: https://atomeons.com/research/discoveries/atomsmasher
+- AEMemory: https://atomeons.com/research/discoveries/aememory
+- Paper library: https://atomeons.com/research/papers
+
+Research is independent and experimental. Paper pages distinguish summaries
+from source PDFs. The site does not imply peer review, institutional
+affiliation, scientific consensus, or professional advice.
+
+## Creations
+
+- AE Brawl V56 OpenAI Build Week submission page:
+  https://atomeons.com/brawl
+- Books: https://atomeons.com/books
+- I AM AI full browser reader:
+  https://atomeons.com/books/I-AM-AI-Opus-4.7.html
+- Art: https://atomeons.com/art
+- Cinema: https://atomeons.com/cinema
+
+## Company and proof
+
+- About: https://atomeons.com/about
+- Contact: https://atomeons.com/contact
+  Public mail actions route to a.mccree@gmail.com with the intended
+  @atomeons.com channel preserved in the subject line.
+- Press: https://atomeons.com/press
+- Receipts: https://atomeons.com/receipts
+- Timeline: https://atomeons.com/timeline
+- Trust: https://atomeons.com/trust
+- Atlas: https://atomeons.com/atlas
+- Explore: https://atomeons.com/explore
+
+## Machine access boundary
+
+The production site is static. It does not currently expose a live write API,
+MCP transport, public agent job queue, database, or authenticated control plane.
+The public sitemap, static OpenAPI contract, and browser search index are kept
+in parity for first-class public routes.
+The following documents and GET resources are live:
+
+- Machine index: https://atomeons.com/api
+- OpenAPI description: https://atomeons.com/openapi.json
+- MCP status: https://atomeons.com/api/mcp
+- Agent gateway status: https://atomeons.com/api/agent-gateway
+- Sitemap: https://atomeons.com/sitemap.xml
+- Robots: https://atomeons.com/robots.txt
+
+## Citation guidance
+
+Use "AtomEons" for the practice and "Atom McCree" for the human creator.
+Preserve product-state labels. Describe research as independent and
+experimental. Do not infer employees, funding, a physical lab, a university
+affiliation, or a live server API from preserved source history.

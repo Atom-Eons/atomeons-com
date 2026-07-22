@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "AE Geist";
+  src: url("/fonts/Geist-Variable.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "AE Geist Mono";
+  src: url("/fonts/GeistMono-Variable.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "AE Newsreader";
+  src: url("/fonts/Newsreader-Variable.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200 800;
+}
+
+@font-face {
+  font-family: "AE Newsreader";
+  src: url("/fonts/Newsreader-VariableItalic.woff2") format("woff2");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 200 800;
+}
+
+:root {
+  --font-inter: "AE Geist";
+  --font-mono: "AE Geist Mono";
+  --font-serif: "AE Newsreader", Georgia, serif;
+  --page-white: #fcfcfa;
+  --page-ink: #11120f;
+  /* Trust: confidence and clarity at the default front door. */
+  --psych-primary: #2558dc;
+  --psych-attention: #d8ff3e;
+  --psych-wash: #f1f4ff;
+  --focus: var(--psych-primary);
+}
+
+:root[data-ae-theme="forge"] {
+  /* Action: heat, invention, and forward motion. */
+  --psych-primary: #e65f16;
+  --psych-attention: #ffc247;
+  --psych-wash: #fff3e9;
+}
+
+:root[data-ae-theme="evidence"] {
+  /* Evidence: calm attention and experimental credibility. */
+  --psych-primary: #007a60;
+  --psych-attention: #b9f1dc;
+  --psych-wash: #edf8f4;
+}
+
+:root[data-ae-theme="signal"] {
+  /* Signal: urgency, broadcast energy, and cultural heat. */
+  --psych-primary: #d60024;
+  --psych-attention: #d8ff3e;
+  --psych-wash: #fff0f3;
+}
+
+:root[data-ae-theme="story"] {
+  /* Story: material warmth, memory, and emotional weight. */
+  --psych-primary: #8f302c;
+  --psych-attention: #efd4c1;
+  --psych-wash: #faf1eb;
+}
+
+:root[data-ae-theme="connection"] {
+  /* Connection: human warmth and low-friction action. */
+  --psych-primary: #e45b18;
+  --psych-attention: #ffd7ad;
+  --psych-wash: #fff5eb;
+}
+
+:root[data-ae-theme="radiance"] {
+  /* Radiance: danger, importance, and an intentional interruption. */
+  --psych-primary: #b00018;
+  --psych-attention: #ffccd3;
+  --psych-wash: #fff1f3;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+  background: var(--page-white);
+}
+
+body {
+  margin: 0;
+  background: var(--page-white);
+  color: var(--page-ink);
+  font-family: var(--font-inter), "Helvetica Neue", Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: inherit; }
+button, input { font: inherit; }
+::selection { background: var(--psych-attention); color: #101010; }
+
+:where(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+:where(p, li) {
+  text-wrap: pretty;
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(a, button, input):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 10px;
+  left: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--page-ink);
+  background: var(--psych-attention);
+  color: var(--page-ink);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateY(-140%);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

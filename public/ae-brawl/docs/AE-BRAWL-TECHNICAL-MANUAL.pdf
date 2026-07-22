@@ -1,0 +1,365 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R /PageLayout /SinglePage >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R] /Count 11 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Title (AE BRAWL TECHNICAL MANUAL) /Author (Atom Eons) /Subject (AE BRAWL product architecture, LeadMCP protocol, privacy, safety, verification, and roadmap) /Creator (AE BRAWL dependency-free PDF factory) /Producer (Atom Eons) /CreationDate (D:20260721) >>
+endobj
+8 0 obj
+<< /Length 1350 >>
+stream
+0.067 0.063 0.059 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 0.00 19.00 792.00 re f
+0.125 0.118 0.106 rg 444.00 568.00 168.00 224.00 re f
+1.000 0.353 0.122 rg 468.00 750.00 118.00 14.00 re f
+1.000 0.353 0.122 RG 2.00 w 55.00 708.00 m 557.00 708.00 l S
+BT /F3 9.00 Tf 0.392 0.843 0.859 rg 1 0 0 1 55.00 731.00 Tm (AE BRAWL / SYSTEM EVIDENCE) Tj ET
+BT /F2 38.00 Tf 1.000 0.992 0.969 rg 1 0 0 1 55.00 624.00 Tm (AE BRAWL TECHNICAL) Tj ET
+BT /F2 38.00 Tf 1.000 0.992 0.969 rg 1 0 0 1 55.00 581.00 Tm (MANUAL) Tj ET
+BT /F1 14.00 Tf 0.871 0.839 0.792 rg 1 0 0 1 55.00 536.00 Tm (Architecture, protocol, privacy, safety, resilience,) Tj ET
+BT /F1 14.00 Tf 0.871 0.839 0.792 rg 1 0 0 1 55.00 515.00 Tm (verification, and the path from competition proof to) Tj ET
+BT /F1 14.00 Tf 0.871 0.839 0.792 rg 1 0 0 1 55.00 494.00 Tm (responsible production.) Tj ET
+0.125 0.118 0.106 rg 55.00 138.00 502.00 112.00 re f
+BT /F2 18.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 76.00 207.00 Tm (10 SECTIONS / ONE ACCOUNTABLE SYSTEM) Tj ET
+BT /F3 9.00 Tf 0.392 0.843 0.859 rg 1 0 0 1 76.00 180.00 Tm (COMPETITION EDITION / JULY 2026) Tj ET
+0.412 0.388 0.365 RG 0.80 w 55.00 78.00 m 557.00 78.00 l S
+BT /F2 9.00 Tf 1.000 0.992 0.969 rg 1 0 0 1 55.00 52.00 Tm (ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.871 0.839 0.792 rg 1 0 0 1 441.80 53.00 Tm (CREATE THE NEVER EXISTED) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 1685 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (01) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (1. PRODUCT THESIS) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (Local combat-sport capacity expires nightly. Search products flatten that capacity into) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 612.00 Tm (addresses, ratings, and maps. AE BRAWL instead treats a supervised trial session as a) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 596.50 Tm (time-bound experience: intent, signal, venue, consent, DoorPass, referral settlement, and) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 581.00 Tm (single redemption.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 551.50 Tm (The visitor creates no permanent account. The venue receives no hidden medical claims or) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 536.00 Tm (guarantee of readiness. The coach remains the final authority over participation and contact.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (02) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 1913 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (02) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (2. SYSTEM BOUNDARY) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (The browser owns presentation, ephemeral location, camera-local scouting, consent, and) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 612.00 Tm (session-only pass display. Google Places can supply likely legitimate venue candidates when a) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 596.50 Tm (restricted key is present. Keyless judge mode uses visibly fictional venues. LeadMCP owns) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 581.00 Tm (referral state, simulated settlement, receipt integrity, and replay rejection.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 551.50 Tm (Production integration would add a protected server boundary for verified venue inventory,) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 536.00 Tm (signed consent exchange, payment-provider settlement, email delivery, abuse prevention, and) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 520.50 Tm (data-retention controls. Those systems are not falsely represented as live in this build.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (03) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 2568 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (03) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (3. EXPERIENCE ARCHITECTURE) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (The core loop is:) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 599.00 Tm (01.) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 598.30 Tm (Cold open creates curiosity.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 579.00 Tm (02.) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 578.30 Tm (Signal tuning converts location search into play.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 559.00 Tm (03.) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 558.30 Tm (Venue doors expose expiring choices without a map.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 539.00 Tm (04.) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 538.30 Tm (The dossier makes safety and session details legible.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 519.00 Tm (05.) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 518.30 Tm (Consent interrupts momentum at the correct risk boundary.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 499.00 Tm (06.) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 498.30 Tm (DoorPass creates a tangible one-night reward.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 479.00 Tm (07.) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 478.30 Tm (LeadMCP proof reveals the machine transaction behind the magic.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 449.00 Tm (The reward cadence moves from atmosphere to choice, confidence, artifact, and proof. Judge) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 433.50 Tm (mode removes permission and credential friction while preserving every conceptual step.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (04) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 1996 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (04) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (4. LEADMCP PROTOCOL) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (LeadMCP is a zero-dependency Node.js MCP stdio server. It handles initialize, ping,) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 612.00 Tm (tools/list, tools/call, resources/list, and resources/read as newline-delimited JSON-RPC 2.0.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 582.50 Tm (The seven tools are fight_pass_issue, fight_pass_offer, fight_pass_accept_and_pay,) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 567.00 Tm (fight_pass_collect, fight_pass_redeem, fight_pass_status, and fight_pass_receipt.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 537.50 Tm (The immutable transition order is ISSUED -> OFFERED -> PAID -> COLLECTED -> REDEEMED.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 522.00 Tm (Each mutation validates the current state. Payment is represented by a unique simulated) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 506.50 Tm (transaction. Consent is represented only by a one-way token hash. The receipt returns a) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 491.00 Tm (verified SHA-256 event chain.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (05) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 2622 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (05) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (5. PRIVACY ARCHITECTURE) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (AE BRAWL follows data minimization:) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 599.00 Tm (-) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 598.30 Tm (Location remains in browser memory for the active search.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 579.00 Tm (-) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 578.30 Tm (Judge mode requires no credential.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 559.00 Tm (-) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 558.30 Tm (No email, phone, legal name, or biometric record is collected.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 539.00 Tm (-) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 538.30 Tm (Camera frames are neither uploaded nor persisted.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 519.00 Tm (-) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 518.30 Tm (DoorPass data lives in sessionStorage and disappears with the browser session.) Tj ET
+BT /F2 9.50 Tf 1.000 0.353 0.122 rg 1 0 0 1 103.00 499.00 Tm (-) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 498.30 Tm (LeadMCP stores identifiers, protocol state, amount, expiry, hashes, and venue ID-not raw) Tj ET
+BT /F1 10.20 Tf 0.067 0.063 0.059 rg 1 0 0 1 130.00 483.30 Tm (personal information.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 454.00 Tm (A production referral handoff would require explicit user consent, a published retention) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 438.50 Tm (schedule, venue agreements, access controls, deletion operations, and jurisdiction-specific) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 423.00 Tm (review.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (06) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 1817 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (06) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (6. SAFETY ARCHITECTURE) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (The app never promises a fight or sparring. It routes to supervised combat-sport trial) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 612.00 Tm (sessions. The safety checkpoint makes three conditions explicit: training is supervised,) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 596.50 Tm (injuries are disclosed, and contact requires venue approval. The manifesto prohibits) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 581.00 Tm (unsanctioned fighting and unauthorized filming.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 551.50 Tm (Live Google results are candidates, not guaranteed sessions. Product copy requires) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 536.00 Tm (confirmation with the venue. Generated artwork shows legitimate gyms, protective context, and) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 520.50 Tm (coaches; it avoids blood and injury.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (07) Tj ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Length 1717 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (07) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (7. GOOGLE PLACES ADAPTER) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (The production adapter loads Maps JavaScript API only when VITE_GOOGLE_MAPS_API_KEY) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 612.00 Tm (exists. It uses nearby gym candidates and filters names and addresses for combat-sport terms.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 596.50 Tm (A real deployment must restrict the browser key by HTTP referrer, monitor quota, confirm) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 581.00 Tm (current Places types, and provide venue verification and opt-out processes.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 551.50 Tm (No map is rendered. This is a deliberate product choice: the interface ranks expiring) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 536.00 Tm (experiences rather than asking the visitor to interpret pins.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (08) Tj ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 22 0 R >>
+endobj
+24 0 obj
+<< /Length 1778 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (08) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (8. PWA AND RESILIENCE) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (The manifest provides standalone installation, theme, icon, and shortcuts. The service worker) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 612.00 Tm (uses a small app-shell cache, network-first updates, same-origin runtime caching, and a) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 596.50 Tm (navigation fallback. The deterministic SVG layer makes essential art available even before) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 581.00 Tm (generated bitmaps load.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 551.50 Tm (Reduced-motion media queries eliminate nonessential animation. More-contrast preferences) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 536.00 Tm (strengthen boundaries and text. Keyboard focus is visible; touch targets are sized for mobile) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 520.50 Tm (use.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (09) Tj ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 24 0 R >>
+endobj
+26 0 obj
+<< /Length 1912 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (09) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (9. VERIFICATION) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (npm run verify runs five LeadMCP invariants, the complete demo, PDF generation, and the Vite) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 612.00 Tm (production build. Release verification additionally requires secret scanning, desktop/mobile) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 596.50 Tm (browser traversal, public HTTP checks, and inspection of published GitHub Actions.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 567.00 Tm (Thirteen tests cover tool count, complete lifecycle, real child-process stdio exchange,) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 551.50 Tm (request-ID replay, payment and redemption replay, expiration, invalid transitions without) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 536.00 Tm (mutation, absence of raw consent/PII, intact-chain verification, and tamper detection. They) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 520.50 Tm (do not claim production payment, venue inventory, email delivery, or legal clearance.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (10) Tj ET
+endstream
+endobj
+27 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 26 0 R >>
+endobj
+28 0 obj
+<< /Length 1984 >>
+stream
+0.957 0.937 0.902 rg 0.00 0.00 612.00 792.00 re f
+1.000 0.353 0.122 rg 0.00 778.00 612.00 14.00 re f
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 747.00 Tm (AE BRAWL / ATOM EONS) Tj ET
+BT /F3 8.00 Tf 0.412 0.388 0.365 rg 1 0 0 1 487.20 747.00 Tm (TECHNICAL MANUAL) Tj ET
+0.871 0.839 0.792 RG 1.00 w 48.00 733.00 m 564.00 733.00 l S
+BT /F2 28.00 Tf 1.000 0.353 0.122 rg 1 0 0 1 48.00 682.00 Tm (10) Tj ET
+BT /F2 20.00 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 684.00 Tm (10. COMMERCIAL MODEL AND ROADMAP) Tj ET
+1.000 0.353 0.122 RG 2.00 w 102.00 666.00 m 564.00 666.00 l S
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 627.50 Tm (The initial model charges legitimate venues for verified one-night referrals, not visitors) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 612.00 Tm (for a recurring membership. The user sees the one-night session price before consent. Future) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 596.50 Tm (work includes venue onboarding, signed availability, refundable settlement rules, confirmed) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 581.00 Tm (attendance, fraud controls, provider-neutral machine payments, and service categories beyond) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 565.50 Tm (combat sports.) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 536.00 Tm (The durable innovation is not a fighting directory. It is the combination of perishable local) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 520.50 Tm (capacity, zero-account intent, consent-scoped referral, machine settlement, and single-use) Tj ET
+BT /F1 10.50 Tf 0.067 0.063 0.059 rg 1 0 0 1 102.00 505.00 Tm (redemption expressed as an MCP protocol.) Tj ET
+0.871 0.839 0.792 RG 0.80 w 48.00 48.00 m 564.00 48.00 l S
+BT /F3 7.50 Tf 0.412 0.388 0.365 rg 1 0 0 1 48.00 29.50 Tm (BUILD WEEK 2026 / COMPETITION DEMONSTRATION) Tj ET
+BT /F2 9.00 Tf 0.851 0.278 0.094 rg 1 0 0 1 554.10 30.00 Tm (11) Tj ET
+endstream
+endobj
+29 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 28 0 R >>
+endobj
+xref
+0 30
+0000000000 65535 f 
+0000000015 00000 n 
+0000000088 00000 n 
+0000000216 00000 n 
+0000000313 00000 n 
+0000000415 00000 n 
+0000000510 00000 n 
+0000000615 00000 n 
+0000000891 00000 n 
+0000002293 00000 n 
+0000002449 00000 n 
+0000004187 00000 n 
+0000004345 00000 n 
+0000006311 00000 n 
+0000006469 00000 n 
+0000009090 00000 n 
+0000009248 00000 n 
+0000011297 00000 n 
+0000011455 00000 n 
+0000014130 00000 n 
+0000014288 00000 n 
+0000016158 00000 n 
+0000016316 00000 n 
+0000018086 00000 n 
+0000018244 00000 n 
+0000020075 00000 n 
+0000020233 00000 n 
+0000022198 00000 n 
+0000022356 00000 n 
+0000024393 00000 n 
+trailer
+<< /Size 30 /Root 1 0 R /Info 7 0 R >>
+startxref
+24551
+%%EOF
