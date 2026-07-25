@@ -139,7 +139,7 @@ export default function CableboxPage() {
         </div>
         <div className={styles.liveFrame}>
           <iframe
-            src="/cablebox-web/index.html"
+            src="https://atomeons.github.io/CableBox/"
             title="CableBox live browser edition"
             allow="autoplay; fullscreen"
             loading="eager"

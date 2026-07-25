@@ -20,7 +20,7 @@ export default function CableboxWebPage() {
       </nav>
       <iframe
         className={styles.experience}
-        src="/cablebox-web/index.html"
+        src="https://atomeons.github.io/CableBox/"
         title="CableBox live browser edition"
         allow="autoplay; fullscreen"
       />
