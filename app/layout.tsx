@@ -166,7 +166,7 @@ const structuredData = {
         "Native Windows cable-surfing art: a living vintage television with curated programming, local media, CRT simulation, and collectible cabinet themes.",
       offers: {
         "@type": "Offer",
-        availability: "https://schema.org/PreOrder",
+          availability: "https://schema.org/InStock",
         price: "0",
         priceCurrency: "USD"
       },
