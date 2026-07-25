@@ -262,7 +262,7 @@
 }
 
 .liveStage {
-  padding: clamp(72px, 8vw, 126px) 24px 24px;
+  padding: clamp(64px, 6vw, 96px) 24px 22px;
   background: #f2efe7;
   color: #0b0b0b;
 }
@@ -288,7 +288,7 @@
 .liveStageHead h2 {
   max-width: 12ch;
   margin: 0;
-  font-size: clamp(54px, 8vw, 138px);
+  font-size: clamp(52px, 6.4vw, 104px);
   letter-spacing: -.075em;
   line-height: .82;
 }
@@ -331,14 +331,14 @@
 }
 
 .liveFrame {
-  max-width: 1600px;
-  aspect-ratio: 16 / 10;
+  max-width: 1440px;
+  aspect-ratio: 16 / 9;
   margin: 0 auto;
   overflow: hidden;
-  border: 8px solid #0b0b0b;
-  border-radius: 24px;
+  border: 6px solid #0b0b0b;
+  border-radius: 18px;
   background: #000;
-  box-shadow: 14px 16px 0 var(--signal-red), 0 36px 90px rgba(0, 0, 0, .3);
+  box-shadow: 9px 10px 0 var(--signal-red), 0 28px 70px rgba(0, 0, 0, .24);
 }
 
 .liveFrame iframe {
@@ -349,7 +349,7 @@
 
 .liveStageFoot {
   display: flex;
-  max-width: 1600px;
+  max-width: 1440px;
   min-height: 54px;
   margin: 16px auto 0;
   align-items: center;
@@ -363,7 +363,7 @@
 
 .whiteIntro,
 .engineeringSection {
-  padding: 34px 24px 120px;
+  padding: 34px 24px 92px;
   background: var(--paper);
 }
 
@@ -376,7 +376,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
   gap: 9vw;
-  padding: 100px 0 110px;
+  padding: 78px 0 82px;
 }
 
 .introGrid h2,
@@ -944,7 +944,7 @@
 
 .theatre,
 .crtSection {
-  padding: 100px 24px 120px;
+  padding: 86px 24px 96px;
   background: var(--night);
   color: #fff;
 }
@@ -953,7 +953,7 @@
   display: grid;
   grid-template-columns: .34fr 1fr .5fr;
   gap: 40px;
-  padding-bottom: 48px;
+  padding-bottom: 38px;
   align-items: end;
   border-bottom: 1px solid rgba(255,255,255,.22);
 }
@@ -980,7 +980,7 @@
 
 .theatreCard {
   display: flex;
-  min-height: 480px;
+  min-height: 410px;
   padding: 24px;
   flex-direction: column;
   border-right: 1px solid rgba(255,255,255,.22);
@@ -990,7 +990,7 @@
 .cardNumber { color: var(--signal-red); font-size: 58px; font-weight: 820; letter-spacing: -.07em; }
 
 .theatreCard > p {
-  margin: 46px 0 18px;
+  margin: 34px 0 18px;
   font-family: var(--font-mono), monospace;
   font-size: 8px;
   font-weight: 700;
@@ -1066,7 +1066,7 @@
 }
 
 .gallery {
-  padding: 120px 24px;
+  padding: 96px 24px;
   background: #e8e8e2;
 }
 
@@ -1074,7 +1074,7 @@
   display: grid;
   grid-template-columns: 1.25fr .75fr;
   gap: 8vw;
-  margin-bottom: 80px;
+  margin-bottom: 58px;
   align-items: end;
 }
 
@@ -1135,7 +1135,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
-  margin-top: 64px;
+  margin-top: 48px;
   background: rgba(255,255,255,.22);
 }
 
@@ -1223,9 +1223,118 @@
   line-height: 1.65;
 }
 
+.technicalDoorway {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
+  background: var(--paper);
+  color: #12120f;
+}
+
+.technicalDoorwayCopy {
+  padding: clamp(76px, 8vw, 128px) 5vw;
+  border-right: 1px solid #b7b7ae;
+}
+
+.technicalDoorwayCopy > p {
+  margin: 0 0 22px;
+  color: var(--signal-red);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  font-weight: 820;
+  letter-spacing: .18em;
+}
+
+.technicalDoorwayCopy h2 {
+  max-width: 920px;
+  margin: 0;
+  font-size: clamp(50px, 7vw, 112px);
+  font-weight: 730;
+  letter-spacing: -.07em;
+  line-height: .86;
+}
+
+.technicalDoorwayCopy > span {
+  display: block;
+  max-width: 690px;
+  margin-top: 34px;
+  color: #55564f;
+  font-size: clamp(16px, 1.4vw, 21px);
+  line-height: 1.55;
+}
+
+.technicalDoorwayLink {
+  display: flex;
+  width: min(610px, 100%);
+  min-height: 82px;
+  margin-top: 46px;
+  padding: 0 22px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid #12120f;
+  background: #12120f;
+  color: #fff;
+  font-family: var(--font-mono), monospace;
+  text-decoration: none;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.technicalDoorwayLink span {
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .13em;
+}
+
+.technicalDoorwayLink small {
+  color: #a8a89f;
+  font-size: 8px;
+  letter-spacing: .12em;
+}
+
+.technicalDoorwayLink:hover {
+  background: var(--signal-red);
+  color: #fff;
+}
+
+.technicalDoorwayLink:hover small { color: #fff; }
+
+.technicalDoorwayProof {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: stretch;
+  background: #d7d6cf;
+  gap: 1px;
+}
+
+.technicalDoorwayProof > div {
+  display: flex;
+  min-height: 220px;
+  padding: 28px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #efeee8;
+}
+
+.technicalDoorwayProof strong {
+  color: var(--signal-red);
+  font-size: clamp(58px, 7vw, 104px);
+  font-weight: 790;
+  letter-spacing: -.08em;
+  line-height: .8;
+}
+
+.technicalDoorwayProof span {
+  max-width: 14ch;
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  font-weight: 780;
+  letter-spacing: .15em;
+  line-height: 1.5;
+}
+
 .museumSection {
   position: relative;
-  min-height: 92svh;
+  min-height: 82svh;
   background: #050505;
   color: #fff;
 }
@@ -1243,7 +1352,7 @@
   z-index: 1;
   display: flex;
   width: min(650px, 100%);
-  min-height: 92svh;
+  min-height: 82svh;
   padding: 9vw 24px;
   flex-direction: column;
   justify-content: center;
@@ -1274,7 +1383,7 @@
 .controlsSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 90svh;
+  min-height: 82svh;
   background: #efeee8;
 }
 
@@ -1320,7 +1429,7 @@
 
 .controlsArt {
   position: relative;
-  min-height: 90svh;
+  min-height: 82svh;
   margin: 0;
   background: #030303;
 }
@@ -1328,7 +1437,7 @@
 .controlsArt img { object-fit: contain; }
 
 .releaseSection {
-  padding: 100px 24px 24px;
+  padding: 86px 24px 24px;
   background: #080808;
   color: #fff;
 }
@@ -1358,7 +1467,7 @@
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 8vw;
-  padding: 80px 0 100px;
+  padding: 64px 0 78px;
 }
 
 .releaseGrid h2 {
@@ -1548,7 +1657,7 @@
 }
 
 .endCredits {
-  padding: 130px 24px;
+  padding: 104px 24px;
   background: var(--signal-red);
   color: #fff;
   text-align: center;
@@ -1620,6 +1729,8 @@
   .theatreCard { border-bottom: 1px solid rgba(255,255,255,.22); }
   .galleryHead { grid-template-columns: 1fr; }
   .engineeringGrid { grid-template-columns: 1fr 1fr; }
+  .technicalDoorway { grid-template-columns: 1fr; }
+  .technicalDoorwayCopy { border-right: 0; border-bottom: 1px solid #b7b7ae; }
   .controlsSection { grid-template-columns: 1fr; }
   .controlsArt { min-height: 70svh; }
   .releaseGrid { grid-template-columns: 1fr; }
@@ -1698,6 +1809,11 @@
   .crtWords { grid-template-columns: 1fr 1fr; }
   .engineeringGrid { grid-template-columns: 1fr; }
   .engineeringGrid article { min-height: 280px; }
+  .technicalDoorwayCopy { padding: 74px 14px; }
+  .technicalDoorwayCopy h2 { font-size: 49px; }
+  .technicalDoorwayLink { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; }
+  .technicalDoorwayProof > div { min-height: 158px; padding: 20px 14px; }
+  .technicalDoorwayProof strong { font-size: 58px; }
   .museumCopy { padding-left: 14px; padding-right: 14px; }
   .museumCopy h2 { font-size: 56px; }
   .controlsCopy { padding: 80px 14px; }
