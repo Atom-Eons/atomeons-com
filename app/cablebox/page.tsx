@@ -97,7 +97,7 @@ const engineering = [
   {
     index: "E",
     title: "Your television stays yours.",
-    body: "Local programming works offline, existing personal-media libraries survive installation, and included Homebrew and Cable channels arrive ready to surf.",
+    body: "Local programming works offline, existing personal-media libraries survive installation, and your own media joins the dial without a setup maze.",
   },
   {
     index: "F",
@@ -123,6 +123,34 @@ export default function CableboxPage() {
   return (
     <main className={styles.page}>
       <CableboxPremiere />
+
+      <section className={styles.liveStage} aria-labelledby="cablebox-live-title">
+        <div className={styles.liveStageHead}>
+          <div>
+            <p>LIVE NOW / BROWSER EDITION</p>
+            <h2 id="cablebox-live-title">The television is on.</h2>
+          </div>
+          <div className={styles.liveStageActions}>
+            <Link href="/cablebox/web">TRY CABLEBOX FULL SCREEN</Link>
+            <a href="https://github.com/AtomEons/CableBox/releases/download/CBX-FINAL-V1/CBX-FINAL-V1.zip">
+              DOWNLOAD FOR WINDOWS
+            </a>
+          </div>
+        </div>
+        <div className={styles.liveFrame}>
+          <iframe
+            src="https://atomeons.github.io/CableBox/"
+            title="CableBox live browser edition"
+            allow="autoplay; fullscreen"
+            loading="eager"
+          />
+        </div>
+        <div className={styles.liveStageFoot}>
+          <span>CLICK THE TELEVISION TO BEGIN</span>
+          <span>LEFT / RIGHT / R RANDOM / C CONTROLS</span>
+          <span>NO INSTALL REQUIRED</span>
+        </div>
+      </section>
 
       <section className={styles.whiteIntro} id="experience">
         <div className={styles.sectionStamp}>
@@ -322,55 +350,65 @@ export default function CableboxPage() {
       <section className={styles.releaseSection} id="download">
         <div className={styles.releaseSignal}>
           <span className={styles.onAirDot} />
-          FINAL ARCHIVE / IN ASSEMBLY
+          PUBLIC RELEASE / LIVE NOW
         </div>
         <div className={styles.releaseGrid}>
           <div>
-            <p>WINDOWS RELEASE CANDIDATE</p>
+            <p>FREE WINDOWS RELEASE / OPEN SOURCE</p>
             <h2>Turn it on.<br />Surf.</h2>
             <span className={styles.releaseLede}>
-              The application code is green. The curated 601.6 MB starter library is
-              being sealed into the final self-contained archive before the public
-              download opens.
+              The native, self-contained Windows edition is public now. Download one
+              ZIP, extract it, and run CableBox.exe. No account. No separate runtime.
             </span>
           </div>
           <div className={styles.releaseChecklist}>
             <div className={styles.complete}>
               <span>01</span>
-              <strong>Native application</strong>
-              <em>GREEN</em>
+              <strong>Self-contained Windows x64 build</strong>
+              <em>PUBLIC</em>
             </div>
-            <div className={styles.working}>
+            <div className={styles.complete}>
               <span>02</span>
-              <strong>Starter library + final archive</strong>
-              <em>ASSEMBLING</em>
+              <strong>Exact ZIP + SHA-256 checksum</strong>
+              <em>VERIFIED</em>
             </div>
-            <div>
+            <div className={styles.complete}>
               <span>03</span>
-              <strong>SHA-256 + public verification</strong>
-              <em>AWAITING GREEN</em>
+              <strong>Public GPL-3.0 source</strong>
+              <em>OPEN</em>
             </div>
           </div>
         </div>
         <WindowsDownloadTrust
           productName="CableBox"
-          releaseState="FINAL ARCHIVE + CHECKSUM PENDING"
-          sourceHref="https://github.com/Atom-Eons/atomeons-com"
+          releaseState="PUBLIC RELEASE / FREE / OPEN SOURCE"
+          sourceHref="https://github.com/AtomEons/CableBox"
+          downloadHref="https://github.com/AtomEons/CableBox/releases/download/CBX-FINAL-V1/CBX-FINAL-V1.zip"
+          filename="CBX-FINAL-V1.zip"
+          version="CBX-FINAL-V1"
+          sha256="BD072061367C05DC0CB62535890B5A7158DD2D23A64EE5027E07B4B6BCB00044"
+          buildDate="2026-07-25T02:20:45Z"
+          attestationHref="https://github.com/AtomEons/CableBox/releases/tag/CBX-FINAL-V1"
         />
         <div className={styles.releaseFooter}>
           <div>
-            <span>601.6 MB</span>
-            <small>CURATED STARTER LIBRARY</small>
+            <span>242.7 MB</span>
+            <small>EXACT WINDOWS ZIP</small>
           </div>
           <div>
-            <span>&lt; 1 GB</span>
-            <small>COMPLETE RELEASE TARGET</small>
+            <span>FREE</span>
+            <small>NO ACCOUNT / NO PAYWALL</small>
           </div>
           <div>
-            <span>WINDOWS</span>
-            <small>SELF-CONTAINED INSTALL</small>
+            <span>GPL-3.0</span>
+            <small>PUBLIC SOURCE</small>
           </div>
-          <span className={styles.pendingButton} aria-disabled="true">DOWNLOAD OPENS ON GREEN</span>
+          <a
+            className={styles.downloadButton}
+            href="https://github.com/AtomEons/CableBox/releases/download/CBX-FINAL-V1/CBX-FINAL-V1.zip"
+          >
+            DOWNLOAD CABLEBOX NOW
+          </a>
         </div>
       </section>
 

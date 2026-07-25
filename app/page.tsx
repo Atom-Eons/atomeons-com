@@ -95,7 +95,7 @@ export default function AetherHome() {
             <div className={styles.heroProofBand} aria-label="Current AtomEons proof state">
               <Link href="/cablebox">
                 <span>CABLEBOX</span>
-                <strong>Launch candidate, native Windows, archive gated until checksum green.</strong>
+                <strong>Free public Windows release. Live browser edition running now.</strong>
               </Link>
               <Link href="/i-am-ai">
                 <span>I AM AI</span>
@@ -139,7 +139,7 @@ export default function AetherHome() {
               <strong>Not an AI website. An invention company in public.</strong>
               <small>Products first. Show second. Research third. Receipts underneath.</small>
             </div>
-            <OrbitNode className={styles.nodeCable} href="/cablebox" label="CableBox" meta="launch candidate" color="#2257df" />
+            <OrbitNode className={styles.nodeCable} href="/cablebox" label="CableBox" meta="live now" color="#2257df" />
             <OrbitNode className={styles.nodeBookmaker} href="/bookmaker" label="Bookmaker" meta="source open" color="#6d5742" />
             <OrbitNode className={styles.nodeOrange5} href="/orange5" label="Orange5" meta="building" color="#f36b21" />
             <OrbitNode className={styles.nodeOrange3} href="/research" label="Research" meta="experimental" color="#2558dc" />
@@ -152,6 +152,32 @@ export default function AetherHome() {
             <p className={styles.orbitCaption}>Not a rendering of a company. A working artifact field built by one artist and an artificial workforce.</p>
           </div>
         </div>
+      </section>
+
+      <section className={styles.cableboxNow} aria-labelledby="cablebox-now-title">
+        <div className={styles.cableboxNowCopy}>
+          <span className={styles.cableboxNowSignal}><i /> LIVE NOW / BROWSER + WINDOWS</span>
+          <h2 id="cablebox-now-title">TRY<br />CABLEBOX.</h2>
+          <p>Channel surfing is back. Walk into the television now, or download the full native Windows art object free.</p>
+          <div className={styles.cableboxNowActions}>
+            <Link href="/cablebox/web">TRY CABLEBOX — LIVE IN BROWSER <Arrow /></Link>
+            <a href="https://github.com/AtomEons/CableBox/releases/download/CBX-FINAL-V1/CBX-FINAL-V1.zip">
+              DOWNLOAD CABLEBOX — WINDOWS / 242.7 MB <Arrow />
+            </a>
+          </div>
+          <small>FREE / OPEN SOURCE / NO ACCOUNT / GPL-3.0</small>
+        </div>
+        <Link className={styles.cableboxNowScreen} href="/cablebox/web" aria-label="Open the live CableBox browser edition">
+          <Image
+            src="/cablebox-premiere/hero-active.webp"
+            alt="CableBox running as a living vintage television"
+            fill
+            priority
+            unoptimized
+            sizes="(max-width: 920px) 100vw, 54vw"
+          />
+          <span>CLICK TO ENTER THE TELEVISION</span>
+        </Link>
       </section>
 
       <div className={styles.principleRail} aria-label="AtomEons principles">
@@ -176,10 +202,10 @@ export default function AetherHome() {
           <LaunchCard
             code="01"
             title="CableBox"
-            state="Launch candidate"
+            state="Live / free"
             href="/cablebox"
             line="Native Windows cable-surfing art. Turn it on, surf, stay inside the television."
-            proof="Archive gated until final checksum and operator green."
+            proof="Public Windows build, SHA-256 verification, GPL source, and a live browser edition."
             tone="blue"
           />
           <LaunchCard
@@ -277,7 +303,7 @@ export default function AetherHome() {
 
         <article className={`${styles.flagship} ${styles.cableFlagship}`}>
           <div className={styles.flagshipCopy}>
-            <StatusDot color="#2257df">LAUNCH CANDIDATE · WINDOWS</StatusDot>
+            <StatusDot color="#2257df">PUBLIC RELEASE · WINDOWS + WEB</StatusDot>
             <p className={styles.productNumber}>PRODUCT / 01</p>
             <h3>CableBox</h3>
             <p className={styles.flagshipTagline}>Television lost the plot. We found it.</p>
@@ -289,7 +315,7 @@ export default function AetherHome() {
             <ul className={styles.specList}>
               <li>Public Access from everywhere</li>
               <li>A real channel-surfing ritual</li>
-              <li>Ten collectible CRT identities</li>
+              <li>Thirty-two collectible CRT identities</li>
               <li>Free · native Windows object</li>
             </ul>
             <Link href="/cablebox" className={styles.productLink}>

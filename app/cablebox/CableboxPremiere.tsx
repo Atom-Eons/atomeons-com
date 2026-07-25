@@ -95,6 +95,15 @@ export function CableboxPremiere() {
         <p className={styles.kicker}>A LIVING TELEVISION BY ATOM EONS</p>
         <h1>CABLEBOX</h1>
         <p className={styles.heroLine}>Turn it on. Surf.</p>
+        <div className={styles.premiereActions}>
+          <a className={styles.premiereTry} href="/cablebox/web">TRY LIVE IN BROWSER</a>
+          <a
+            className={styles.premiereDownload}
+            href="https://github.com/AtomEons/CableBox/releases/download/CBX-FINAL-V1/CBX-FINAL-V1.zip"
+          >
+            DOWNLOAD WINDOWS / 242.7 MB
+          </a>
+        </div>
       </div>
 
       <div className={styles.signalHud} aria-live="polite">
