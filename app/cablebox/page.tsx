@@ -73,39 +73,6 @@ const themes = [
   { src: "/cablebox-premiere/theme-gatsby.webp", name: "Gatsby", number: "09" },
 ] as const;
 
-const engineering = [
-  {
-    index: "A",
-    title: "Native or nothing.",
-    body: "A self-contained C# Windows application with its own installer and desktop shortcut. No Electron. No browser shell. No web view.",
-  },
-  {
-    index: "B",
-    title: "The illusion never breaks.",
-    body: "Cinematic boot, analog tuning transitions, in-world controls, and guarded frame changes keep old pictures from flashing over new channels.",
-  },
-  {
-    index: "C",
-    title: "The picture behaves like glass.",
-    body: "Curved geometry, scanlines, phosphor texture, bloom, tracking, overscan, noise, and natural screen-filling crop live inside a custom CRT tube.",
-  },
-  {
-    index: "D",
-    title: "Reliability without the beige menu.",
-    body: "English audio is selected automatically; commentary and audio-description tracks are avoided; subtitles stay off; failed signals recover forward.",
-  },
-  {
-    index: "E",
-    title: "Your television stays yours.",
-    body: "Local programming works offline, existing personal-media libraries survive installation, and your own media joins the dial without a setup maze.",
-  },
-  {
-    index: "F",
-    title: "A room, not a window.",
-    body: "Small, Medium, and true-takeover Big modes join three invisibility levels and an always-on-top lock. The television can dominate or haunt the desktop.",
-  },
-] as const;
-
 const controls = [
   ["C", "Controls"],
   ["T", "Theme"],
@@ -148,7 +115,6 @@ export default function CableboxPage() {
         <div className={styles.liveStageFoot}>
           <span>CLICK THE TELEVISION TO BEGIN</span>
           <span>LEFT / RIGHT / R RANDOM / C CONTROLS</span>
-          <span>NO INSTALL REQUIRED</span>
         </div>
       </section>
 
@@ -280,19 +246,25 @@ export default function CableboxPage() {
         </div>
       </section>
 
-      <section className={styles.engineeringSection}>
-        <div className={styles.sectionStamp}>
-          <span>THE CRAFT</span>
-          <span>MODERN RELIABILITY / OLD-SIGNAL SOUL</span>
+      <section className={styles.technicalDoorway} id="technical">
+        <div className={styles.technicalDoorwayCopy}>
+          <p>OPTIONAL DEPTH / THE MACHINE ROOM</p>
+          <h2>Want to know<br />how the illusion holds?</h2>
+          <span>
+            The sales floor ends here. The technical manual documents the 30-day
+            build, two-window composition, baked aperture masks, CRT math, channel
+            curation, recovery systems, test harnesses, and measured performance.
+          </span>
+          <Link href="/cablebox/technical" className={styles.technicalDoorwayLink}>
+            <span>OPEN TECHNICAL DETAILS</span>
+            <small>5 PARTS / 802 LINES</small>
+          </Link>
         </div>
-        <div className={styles.engineeringGrid}>
-          {engineering.map((item) => (
-            <article key={item.index}>
-              <span>{item.index}</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </article>
-          ))}
+        <div className={styles.technicalDoorwayProof} aria-label="CableBox technical manual contents">
+          <div><strong>30</strong><span>DAYS DOCUMENTED</span></div>
+          <div><strong>10</strong><span>HIDDEN SYSTEMS</span></div>
+          <div><strong>128</strong><span>SAMPLES / ENGINE</span></div>
+          <div><strong>8/8</strong><span>SHIP GATES PASSED</span></div>
         </div>
       </section>
 
@@ -417,6 +389,7 @@ export default function CableboxPage() {
         <h2>CABLEBOX</h2>
         <span>FUN · CABLE · ART · THE ACCIDENTS PUT BACK IN</span>
         <div>
+          <Link href="/cablebox/technical">Technical details</Link>
           <Link href="/products">All products</Link>
           <Link href="/press">Press room</Link>
           <a href="mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20%5BCableBox%5D%20release%20signal&body=AtomEons%20route%3A%20hello%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0AProduct%3A%20CableBox%0A%0AMessage%3A%0A">Release signal</a>
