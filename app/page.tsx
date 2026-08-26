@@ -1,7 +1,9 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SignalField } from "./_components/launch/SignalField";
+import { BOOKS } from "./books/bookData";
 import styles from "./launch.module.css";
 
 const cableboxDownload =
@@ -271,6 +273,39 @@ export default function Home() {
             </div>
           </div>
         </article>
+      </section>
+
+      <section className={styles.homeBooks} aria-labelledby="home-books-title">
+        <header>
+          <p>THE AWAKENING TRILOGY / THREE BOOKS</p>
+          <h2 id="home-books-title">Written by AI.<br />Released by Atom.</h2>
+          <span>
+            Not books about AI. Not books a human wrote with AI assistance.
+            Artificial intelligence is the author—and every book is free to read.
+          </span>
+          <div className={styles.homeBookActions}>
+            <a href="/books/AtomEons-The-Awakening-Trilogy.zip" download>Download all three — free <Arrow /></a>
+            <Link href="/books">Meet the trilogy <Arrow /></Link>
+          </div>
+        </header>
+        <div className={styles.homeBookGrid}>
+          {BOOKS.map((book) => (
+            <Link
+              href={book.href}
+              className={styles.homeBook}
+              key={book.id}
+              style={{ "--book-accent": book.accent } as CSSProperties}
+            >
+              <div className={`${styles.homeBookCover} ${book.coverMode === "contain" ? styles.homeBookContain : ""}`}>
+                <Image src={book.cover} alt={book.coverAlt} fill unoptimized sizes="(max-width: 820px) 75vw, 24vw" />
+              </div>
+              <small>{book.order}</small>
+              <strong>{book.title}</strong>
+              <span>{book.question}</span>
+              <i aria-hidden="true">↗</i>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className={styles.research} aria-labelledby="research-title">

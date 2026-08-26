@@ -624,6 +624,37 @@
 .orangeCard .cardCopy > span { color: rgba(17,18,15,.64); }
 .orangeCard .cardActions a { border-color: #11120f; background: #11120f; color: #fff; }
 
+.homeBooks {
+  display: grid;
+  padding: clamp(90px,12vw,190px) clamp(22px,5vw,80px);
+  grid-template-columns: minmax(270px,.48fr) minmax(0,1.52fr);
+  gap: clamp(50px,8vw,140px);
+  border-top: 1px solid #11120f;
+  background: #fff;
+}
+.homeBooks > header { position: sticky; top: 118px; align-self: start; }
+.homeBooks > header > p { margin: 0; color: #2257df; font-family: var(--font-mono); font-size: 9px; font-weight: 850; letter-spacing: .16em; }
+.homeBooks > header h2 { margin: 25px 0 0; font-size: clamp(54px,6.7vw,106px); letter-spacing: -.078em; line-height: .82; }
+.homeBooks > header > span { display: block; max-width: 550px; margin-top: 34px; color: rgba(17,18,15,.64); font-family: var(--font-serif); font-size: clamp(19px,1.6vw,25px); line-height: 1.43; }
+.homeBookActions { display: flex; margin-top: 32px; flex-wrap: wrap; gap: 12px; }
+.homeBookActions a { display: inline-flex; min-height: 54px; padding: 0 20px; align-items: center; justify-content: space-between; gap: 34px; border: 1px solid #11120f; color: #11120f; font-size: 10px; font-weight: 800; text-decoration: none; text-transform: uppercase; transition: transform 220ms ease,box-shadow 220ms ease,background 220ms ease,color 220ms ease; }
+.homeBookActions a:first-child { background: #11120f; color: #fff; box-shadow: 7px 7px 0 #ff4f12; }
+.homeBookActions a:hover { background: #2257df; color: #fff; transform: translate(4px,4px); box-shadow: 2px 2px 0 #ff4f12; }
+.homeBookGrid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; align-items: start; }
+.homeBook { position: relative; display: flex; min-height: 610px; padding: 18px; overflow: hidden; flex-direction: column; border: 1px solid #11120f; color: #11120f; text-decoration: none; transition: transform 350ms cubic-bezier(.18,.82,.2,1),box-shadow 350ms ease,background 250ms ease,color 250ms ease; }
+.homeBook:nth-child(2) { margin-top: 72px; }
+.homeBook:nth-child(3) { margin-top: 144px; }
+.homeBook:hover { z-index: 2; background: var(--book-accent); color: #fff; box-shadow: 8px 8px 0 #11120f; transform: translate(-8px,-8px); }
+.homeBookCover { position: relative; width: 100%; aspect-ratio: 2 / 3; overflow: hidden; background: #f7f7f2; }
+.homeBookCover img { object-fit: cover; transition: transform 600ms cubic-bezier(.18,.82,.2,1); }
+.homeBookContain img { object-fit: contain; }
+.homeBook:hover img { transform: scale(1.025); }
+.homeBook > small { margin-top: 18px; color: var(--book-accent); font-family: var(--font-mono); font-size: 7px; font-weight: 850; letter-spacing: .12em; transition: color 250ms ease; }
+.homeBook:hover > small { color: #ffe72e; }
+.homeBook > strong { margin-top: 12px; font-size: clamp(24px,2.4vw,40px); letter-spacing: -.05em; line-height: .95; }
+.homeBook > span { margin-top: 16px; font-family: var(--font-serif); font-size: 18px; }
+.homeBook > i { margin-top: auto; align-self: end; font-size: 24px; font-style: normal; }
+
 .research { display: grid; padding: clamp(76px, 11vw, 170px) clamp(22px, 5vw, 80px); grid-template-columns: minmax(280px,.72fr) minmax(0,1.28fr); gap: clamp(50px, 9vw, 150px); background: #f7f7f2; }
 .research header { position: sticky; top: 120px; align-self: start; }
 .research header > p { color: #007a60; }
@@ -682,6 +713,8 @@
   .featureGrid { grid-template-columns: 1fr; }
   .featureGrid li { min-height: 300px; }
   .reality { grid-template-columns: 1fr; }
+  .homeBooks { grid-template-columns: 1fr; }
+  .homeBooks > header { position: static; }
   .thesis > div { grid-column: 1; }
   .objectCard, .orangeCard { min-height: 0; padding: 28px; grid-template-columns: 40px 1fr; }
   .orangeVisual { min-height: 430px; margin: -28px -28px 28px; grid-column: 1 / -1; }
@@ -727,6 +760,8 @@
   .cardCopy h3 { font-size: 60px; }
   .orangeCard .cardCopy h3 { font-size: 49px; }
   .cardFeatureList { grid-template-columns: 1fr; }
+  .homeBookGrid { grid-template-columns: 1fr; }
+  .homeBook,.homeBook:nth-child(2),.homeBook:nth-child(3) { min-height: 0; margin-top: 0; }
   .researchStack > a { grid-template-columns: 1fr; gap: 12px; }
   .researchStack small { grid-column: 1; }
   .humanLinks { display: grid; }
@@ -745,7 +780,10 @@
   .featureGrid li,
   .featureGrid li > i,
   .featureExit > a,
-  .realityDoors > a { transition: none; }
+  .realityDoors > a,
+  .homeBookActions a,
+  .homeBook,
+  .homeBookCover img { transition: none; }
   .heroObject { transform: none; }
 }
 

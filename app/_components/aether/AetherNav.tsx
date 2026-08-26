@@ -7,6 +7,7 @@ import styles from "./AetherNav.module.css";
 const navigation = [
   ["CableBox 2", "/cablebox"],
   ["Atomic Orange", "/orange5"],
+  ["Books", "/books"],
   ["Research", "/research"],
   ["Show", "/atom-alive"],
   ["About", "/about"],
