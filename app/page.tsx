@@ -6,13 +6,14 @@ import styles from "./launch.module.css";
 
 const cableboxDownload =
   "https://github.com/Atom-Eons/CableBox2/releases/download/v1.0.0/CableBox2-Windows-x64-1.0.0.zip";
+const cableboxSource = "https://github.com/Atom-Eons/CableBox2";
 
 const cableboxFeatures = [
   {
     number: "01",
-    title: "Surf. Don’t search.",
-    copy: "Move through a living dial instead of negotiating with another wall of thumbnails.",
-    note: "LESS CHOOSING / MORE FINDING",
+    title: "Turn the dial.",
+    copy: "Every turn reveals another channel. You are watching in seconds and discovering as you go.",
+    note: "ONE DIAL / A WORLD TO DISCOVER",
   },
   {
     number: "02",
@@ -22,38 +23,38 @@ const cableboxFeatures = [
   },
   {
     number: "03",
-    title: "Bring your own movies.",
-    copy: "Your local media joins the dial and keeps working offline. Your library stays yours.",
-    note: "PERSONAL / LOCAL / OFFLINE",
+    title: "Make it yours.",
+    copy: "Add your own movies and shows to the dial. Your personal library becomes part of CableBox.",
+    note: "YOUR MEDIA / YOUR TELEVISION",
   },
   {
     number: "04",
-    title: "Know what’s on.",
-    copy: "Open the cable guide for what is playing now and what is coming next—without leaving the television.",
-    note: "ONE GUIDE / ZERO HOMEWORK",
+    title: "See what’s next.",
+    copy: "Open the guide to see what is playing now and what is coming next, all inside the television.",
+    note: "NOW / NEXT / ALL IN ONE PLACE",
   },
   {
     number: "05",
-    title: "Keep the good stuff.",
-    copy: "Slap a gold star on a channel and it becomes a favorite you can find again.",
-    note: "FAVORITES FEEL PHYSICAL",
+    title: "Save what you love.",
+    copy: "Slap a gold star on a channel and it becomes a favorite you can return to anytime.",
+    note: "ONE GOLD STAR / SAVED",
   },
   {
     number: "06",
-    title: "A dead signal never wins.",
-    copy: "Automatic recovery moves past failed streams so the screen keeps living.",
-    note: "BUILT TO KEEP MOVING",
+    title: "Stay in the moment.",
+    copy: "If a stream stops, CableBox moves forward automatically and keeps the experience flowing.",
+    note: "ALWAYS READY FOR WHAT’S NEXT",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "AtomEons | Things that did not exist",
+  title: "AtomEons | Meet what’s next",
   description:
-    "Meet CableBox 2 and Atomic Orange: independent products made by Atom McCree and an AI workforce in Naples, Florida.",
+    "Meet CableBox 2 and Atomic Orange: new products that make technology feel natural, joyful, and human.",
   alternates: { canonical: "https://atomeons.com" },
   openGraph: {
-    title: "AtomEons | Things that did not exist",
-    description: "CableBox 2 is live. Atomic Orange is incoming. Try the future before anyone agrees on it.",
+    title: "AtomEons | Meet what’s next",
+    description: "CableBox 2 is live. Atomic Orange is on the way. Meet technology made to feel alive.",
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
@@ -61,8 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AtomEons | Things that did not exist",
-    description: "CableBox 2 is live. Atomic Orange is incoming.",
+    title: "AtomEons | Meet what’s next",
+    description: "CableBox 2 is live. Atomic Orange is on the way.",
     creator: "@AtomMccree",
     images: ["/og-v27.png"],
   },
@@ -79,28 +80,28 @@ export default function Home() {
           <span>OBJECT 01 / LIVE</span>
         </div>
         <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}><i /> CABLEBOX 2 IS LIVE</p>
+          <p className={styles.eyebrow}><i /> INTRODUCING CABLEBOX 2</p>
           <h1 id="home-title">
-            <span>Turn it on.</span>
-            <em>Get lost.</em>
+            <span>Meet the new</span>
+            <em>television.</em>
           </h1>
           <p className={styles.heroLede}>
-            Touch one button. A beautiful old television wakes up, starts playing,
-            and keeps surprising you. No setup ritual. No decision fatigue. Just the
-            pleasure of finding something you never asked for.
+            CableBox 2 is a television you open on your computer. It starts playing.
+            Turn the dial and discover what comes next. It is that simple—and it feels
+            a little like magic.
           </p>
           <div className={styles.heroActions}>
             <Link className={styles.primaryAction} href="/cablebox/web">
-              Try CableBox now <Arrow />
+              Turn it on <Arrow />
             </Link>
             <a className={styles.secondaryAction} href={cableboxDownload}>
-              Download for Windows <Arrow />
+              Get the Windows edition <Arrow />
             </a>
           </div>
           <ul className={styles.heroProof} aria-label="CableBox 2 quick facts">
-            <li><b>01</b><span>Starts in your browser</span></li>
-            <li><b>02</b><span>Touch ready</span></li>
-            <li><b>03</b><span>Free + open source</span></li>
+            <li><b>01</b><span>Open it</span></li>
+            <li><b>02</b><span>It starts playing</span></li>
+            <li><b>03</b><span>Turn the dial</span></li>
           </ul>
         </div>
 
@@ -127,7 +128,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.transmissionRail} aria-hidden="true">
-          <span>TELEVISION WITHOUT THE HOMEWORK</span>
+          <span>A NEW WAY TO WATCH</span>
           <i />
           <span>33 WORLDS / ONE DIAL</span>
           <i />
@@ -137,29 +138,30 @@ export default function Home() {
 
       <section className={styles.thesis} aria-labelledby="thesis-title">
         <p>THE COMPANY / IN ONE SENTENCE</p>
-        <h2 id="thesis-title">We make things people can feel before they know how to explain them.</h2>
+        <h2 id="thesis-title">We create new kinds of products and make them feel beautifully obvious.</h2>
         <div>
           <span>01</span>
           <p>
-            No venture costume. No fake laboratory. Atom McCree is an artist and inventor
-            directing an AI workforce from Naples, Florida. The work is the proof.
+            Atom McCree is an artist and inventor directing an AI workforce from Naples,
+            Florida. Together, we turn ambitious ideas into products people can see,
+            touch, and enjoy.
           </p>
         </div>
       </section>
 
       <section className={styles.featureManifest} aria-labelledby="features-title">
         <div className={styles.featureBand} aria-hidden="true">
-          <span>NO LOGIN</span><i />
-          <span>NO HOMEWORK</span><i />
-          <span>JUST TELEVISION</span><i />
+          <span>OPEN IT</span><i />
+          <span>START WATCHING</span><i />
+          <span>MAKE IT YOURS</span><i />
           <span>FREE / OPEN SOURCE</span>
         </div>
         <header className={styles.featureHeader}>
-          <p>THE HUMAN VERSION / WHAT YOU GET</p>
-          <h2 id="features-title">You do not need<br />a manual.</h2>
+          <p>SIX THINGS TO KNOW / THAT’S THE WHOLE IDEA</p>
+          <h2 id="features-title">Simple to use.<br />Alive underneath.</h2>
           <span>
-            CableBox is one simple feeling with serious machinery hidden underneath:
-            turn it on and television is fun again.
+            CableBox hides the machinery and gives you the good part: a television
+            that is ready, beautiful, surprising, and yours.
           </span>
         </header>
         <ul className={styles.featureGrid}>
@@ -176,15 +178,40 @@ export default function Home() {
           ))}
         </ul>
         <div className={styles.featureExit}>
-          <span>THAT’S IT. YOU’RE READY.</span>
+          <span>THAT’S IT. THE WORLD IS WAITING.</span>
           <Link href="/cablebox/web">Turn it on <Arrow /></Link>
+        </div>
+      </section>
+
+      <section className={styles.reality} aria-labelledby="reality-title">
+        <div className={styles.realityCopy}>
+          <p>THE MOMENT IT CLICKS / THIS IS LIVE</p>
+          <h2 id="reality-title">You can turn it on<br />right now.</h2>
+          <span>
+            The television is waiting in your browser. The complete Windows edition
+            is ready to download. The source is open for anyone to see.
+          </span>
+        </div>
+        <div className={styles.realityDoors}>
+          <Link href="/cablebox/web">
+            <b>01</b><span><small>INSTANT</small>Play in your browser</span><Arrow />
+          </Link>
+          <a href={cableboxDownload}>
+            <b>02</b><span><small>FULL EDITION</small>Download for Windows</span><Arrow />
+          </a>
+          <a href={cableboxSource}>
+            <b>03</b><span><small>OPEN SOURCE</small>See how it is made</span><Arrow />
+          </a>
+        </div>
+        <div className={styles.realitySeal} aria-hidden="true">
+          <span>LIVE</span><b>CBX II</b><small>BUILT IN NAPLES, FL<br />READY EVERYWHERE</small>
         </div>
       </section>
 
       <section className={styles.twoObjects} aria-labelledby="objects-title">
         <header className={styles.sectionHead}>
-          <p>THE FRONT LINE / TWO OBJECTS</p>
-          <h2 id="objects-title">One is on.<br />One is waking up.</h2>
+          <p>TWO PRODUCTS / ONE BELIEF</p>
+          <h2 id="objects-title">Technology should<br />feel more human.</h2>
         </header>
 
         <article className={`${styles.objectCard} ${styles.cableCard}`}>
@@ -192,14 +219,14 @@ export default function Home() {
           <div className={styles.cardCopy}>
             <p>AVAILABLE NOW / WINDOWS + WEB</p>
             <h3>CableBox 2</h3>
-            <strong>Television without the homework.</strong>
+            <strong>Television is fun again.</strong>
             <span>
-              Turn a knob and something good is already happening. The web edition is
-              the fastest way in; the Windows edition is the full art object.
+              Open it and something good is already happening. The web edition starts
+              in one click. The Windows edition turns your computer into the full art object.
             </span>
             <ul className={styles.cardFeatureList} aria-label="CableBox 2 editions">
               <li>Play instantly in a browser</li>
-              <li>Touch controls on phones</li>
+              <li>Works with your fingers on phones</li>
               <li>Full Windows art object</li>
               <li>Free and open source</li>
             </ul>
@@ -225,19 +252,19 @@ export default function Home() {
           </div>
           <div className={styles.cardNumber}>02</div>
           <div className={styles.cardCopy}>
-            <p>INCOMING / ATOMIC ORANGE</p>
-            <h3>Your AI should know what you&apos;re building.</h3>
-            <strong>A working relationship with memory—not another empty chat window.</strong>
+            <p>IN DEVELOPMENT / ATOMIC ORANGE</p>
+            <h3>An AI that remembers the whole project.</h3>
+            <strong>A creative partner with memory, judgment, and a clear view of the mission.</strong>
             <span>
-              Atomic Orange is the next AtomEons object: one place to direct the work,
-              keep the history, choose the intelligence, and stay human at the controls.
-              We will open it when the public build earns the claim.
+              Atomic Orange is an AI workspace that remembers what you are building,
+              organizes the work, and shows you what happened. One clear place to turn
+              an idea into something real.
             </span>
             <ul className={`${styles.cardFeatureList} ${styles.orangeFeatureList}`} aria-label="Atomic Orange goals">
               <li>Remembers the mission</li>
               <li>Routes the right work</li>
               <li>Shows the receipts</li>
-              <li>Keeps you in control</li>
+              <li>Puts you in control</li>
             </ul>
             <div className={styles.cardActions}>
               <Link href="/orange5">See the first signal <Arrow /></Link>
@@ -248,11 +275,11 @@ export default function Home() {
 
       <section className={styles.research} aria-labelledby="research-title">
         <header>
-          <p>THE REST IS RESEARCH</p>
-          <h2 id="research-title">Strange ideas.<br />Visible evidence.</h2>
+          <p>EXPERIMENTAL RESEARCH</p>
+          <h2 id="research-title">The ideas behind<br />what comes next.</h2>
           <span>
-            Books, papers, discoveries, earlier products, and experiments remain public.
-            They live in one quieter archive so the strongest work can breathe.
+            Books, papers, discoveries, and experiments share the thinking behind our
+            products—and open the door to the products still ahead.
           </span>
           <Link href="/research">Enter experimental research <Arrow /></Link>
         </header>
@@ -290,8 +317,8 @@ export default function Home() {
       </section>
 
       <section className={styles.lastCall}>
-        <p>THE FASTEST WAY TO UNDERSTAND US</p>
-        <h2>Don&apos;t read another claim.<br />Turn on the television.</h2>
+        <p>THE BEST WAY TO UNDERSTAND US</p>
+        <h2>The future makes sense<br />when you can touch it.</h2>
         <Link href="/cablebox/web">Try CableBox 2 <Arrow /></Link>
       </section>
     </main>
