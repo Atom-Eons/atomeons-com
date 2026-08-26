@@ -7,6 +7,45 @@ import styles from "./launch.module.css";
 const cableboxDownload =
   "https://github.com/Atom-Eons/CableBox2/releases/download/v1.0.0/CableBox2-Windows-x64-1.0.0.zip";
 
+const cableboxFeatures = [
+  {
+    number: "01",
+    title: "Surf. Don’t search.",
+    copy: "Move through a living dial instead of negotiating with another wall of thumbnails.",
+    note: "LESS CHOOSING / MORE FINDING",
+  },
+  {
+    number: "02",
+    title: "Change the whole room.",
+    copy: "Switch collectible television environments instantly. The cabinet is part of the show.",
+    note: "DOZENS OF TV WORLDS",
+  },
+  {
+    number: "03",
+    title: "Bring your own movies.",
+    copy: "Your local media joins the dial and keeps working offline. Your library stays yours.",
+    note: "PERSONAL / LOCAL / OFFLINE",
+  },
+  {
+    number: "04",
+    title: "Know what’s on.",
+    copy: "Open the cable guide for what is playing now and what is coming next—without leaving the television.",
+    note: "ONE GUIDE / ZERO HOMEWORK",
+  },
+  {
+    number: "05",
+    title: "Keep the good stuff.",
+    copy: "Slap a gold star on a channel and it becomes a favorite you can find again.",
+    note: "FAVORITES FEEL PHYSICAL",
+  },
+  {
+    number: "06",
+    title: "A dead signal never wins.",
+    copy: "Automatic recovery moves past failed streams so the screen keeps living.",
+    note: "BUILT TO KEEP MOVING",
+  },
+];
+
 export const metadata: Metadata = {
   title: "AtomEons | Things that did not exist",
   description:
@@ -46,9 +85,9 @@ export default function Home() {
             <em>Get lost.</em>
           </h1>
           <p className={styles.heroLede}>
-            CableBox 2 turns the internet back into television: a living vintage set,
-            a dial that changes every day, and the pleasure of finding something you
-            never asked for.
+            Touch one button. A beautiful old television wakes up, starts playing,
+            and keeps surprising you. No setup ritual. No decision fatigue. Just the
+            pleasure of finding something you never asked for.
           </p>
           <div className={styles.heroActions}>
             <Link className={styles.primaryAction} href="/cablebox/web">
@@ -58,7 +97,11 @@ export default function Home() {
               Download for Windows <Arrow />
             </a>
           </div>
-          <p className={styles.trustLine}>Free. Open source. No account. The web edition works with touch.</p>
+          <ul className={styles.heroProof} aria-label="CableBox 2 quick facts">
+            <li><b>01</b><span>Starts in your browser</span></li>
+            <li><b>02</b><span>Touch ready</span></li>
+            <li><b>03</b><span>Free + open source</span></li>
+          </ul>
         </div>
 
         <div className={styles.heroArtifact}>
@@ -104,6 +147,40 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={styles.featureManifest} aria-labelledby="features-title">
+        <div className={styles.featureBand} aria-hidden="true">
+          <span>NO LOGIN</span><i />
+          <span>NO HOMEWORK</span><i />
+          <span>JUST TELEVISION</span><i />
+          <span>FREE / OPEN SOURCE</span>
+        </div>
+        <header className={styles.featureHeader}>
+          <p>THE HUMAN VERSION / WHAT YOU GET</p>
+          <h2 id="features-title">You do not need<br />a manual.</h2>
+          <span>
+            CableBox is one simple feeling with serious machinery hidden underneath:
+            turn it on and television is fun again.
+          </span>
+        </header>
+        <ul className={styles.featureGrid}>
+          {cableboxFeatures.map((feature) => (
+            <li key={feature.number} data-ghost={feature.number}>
+              <b aria-hidden="true">{feature.number}</b>
+              <div>
+                <h3>{feature.title}</h3>
+                <p>{feature.copy}</p>
+                <small>{feature.note}</small>
+              </div>
+              <i aria-hidden="true" />
+            </li>
+          ))}
+        </ul>
+        <div className={styles.featureExit}>
+          <span>THAT’S IT. YOU’RE READY.</span>
+          <Link href="/cablebox/web">Turn it on <Arrow /></Link>
+        </div>
+      </section>
+
       <section className={styles.twoObjects} aria-labelledby="objects-title">
         <header className={styles.sectionHead}>
           <p>THE FRONT LINE / TWO OBJECTS</p>
@@ -117,10 +194,15 @@ export default function Home() {
             <h3>CableBox 2</h3>
             <strong>Television without the homework.</strong>
             <span>
-              Turn a knob. Change the room. Open the guide. Let the smarter show director
-              keep the picture moving when a signal fails. The web edition is the fastest way in;
-              the Windows edition is the full object.
+              Turn a knob and something good is already happening. The web edition is
+              the fastest way in; the Windows edition is the full art object.
             </span>
+            <ul className={styles.cardFeatureList} aria-label="CableBox 2 editions">
+              <li>Play instantly in a browser</li>
+              <li>Touch controls on phones</li>
+              <li>Full Windows art object</li>
+              <li>Free and open source</li>
+            </ul>
             <div className={styles.cardActions}>
               <Link href="/cablebox/web">Try it <Arrow /></Link>
               <Link href="/cablebox">Meet CableBox 2 <Arrow /></Link>
@@ -151,6 +233,12 @@ export default function Home() {
               keep the history, choose the intelligence, and stay human at the controls.
               We will open it when the public build earns the claim.
             </span>
+            <ul className={`${styles.cardFeatureList} ${styles.orangeFeatureList}`} aria-label="Atomic Orange goals">
+              <li>Remembers the mission</li>
+              <li>Routes the right work</li>
+              <li>Shows the receipts</li>
+              <li>Keeps you in control</li>
+            </ul>
             <div className={styles.cardActions}>
               <Link href="/orange5">See the first signal <Arrow /></Link>
             </div>
