@@ -3,12 +3,12 @@ import Link from "next/link";
 import styles from "./technical.module.css";
 
 export const metadata: Metadata = {
-  title: "CableBox Technical Details",
+  title: "CableBox 2 Technical Details",
   description:
-    "The documented architecture, algorithms, measurements, test harnesses, and 30-day build case study behind CableBox.",
+    "The documented architecture, algorithms, measurements, test harnesses, and build case study behind CableBox 2.",
   alternates: { canonical: "https://atomeons.com/cablebox/technical" },
   openGraph: {
-    title: "CableBox Technical Details",
+    title: "CableBox 2 Technical Details",
     description: "Five parts. Ten hidden systems. One measured television illusion.",
     url: "https://atomeons.com/cablebox/technical",
     siteName: "AtomEons",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 };
 
 const downloadHref =
-  "https://github.com/AtomEons/CableBox/releases/download/CBX-FINAL-V1/CBX-FINAL-V1.zip";
+  "https://github.com/Atom-Eons/CableBox2/releases/download/v1.0.0/CableBox2-Windows-x64-1.0.0.zip";
 const manualHref =
-  "https://github.com/AtomEons/CableBox/blob/main/docs/CABLEBOX-TECHNICAL-MANUAL.md";
+  "https://github.com/Atom-Eons/CableBox2/blob/main/docs/CBX2-INVENTIONS.md";
 
 const arcs = [
   ["01", "Days 1–6", "Cabinet + tube geometry", "The theme PNG alpha channel became the only screen shape."],
@@ -153,9 +153,9 @@ export default function CableboxTechnicalPage() {
     <main className={styles.page}>
       <header className={styles.hero}>
         <div className={styles.heroNav}>
-          <Link href="/cablebox">← CABLEBOX</Link>
-          <span>TECHNICAL MANUAL / CBX-FINAL-V1</span>
-          <a href={manualHref} target="_blank" rel="noreferrer">SOURCE MANUAL ↗</a>
+          <Link href="/cablebox">← CABLEBOX 2</Link>
+          <span>TECHNICAL RECORD / CABLEBOX 2</span>
+          <a href={manualHref} target="_blank" rel="noreferrer">SOURCE NOTES ↗</a>
         </div>
         <div className={styles.heroGrid}>
           <div>

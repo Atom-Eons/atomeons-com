@@ -1,0 +1,37 @@
+{
+ "source": "22-Study.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.2813509702682495,
+  0.5427413582801819,
+  0.763324499130249
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "22-Study.L0.jpg",
+   "alpha": "22-Study.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.1186
+  },
+  {
+   "file": "22-Study.L1.jpg",
+   "alpha": "22-Study.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.4441
+  },
+  {
+   "file": "22-Study.L2.jpg",
+   "alpha": "22-Study.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.6411
+  },
+  {
+   "file": "22-Study.L3.jpg",
+   "alpha": "22-Study.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.8857
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "source": "17-Motel99.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.2838466763496399,
+  0.6154493093490601,
+  0.7908058166503906
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "17-Motel99.L0.jpg",
+   "alpha": "17-Motel99.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.0473
+  },
+  {
+   "file": "17-Motel99.L1.jpg",
+   "alpha": "17-Motel99.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.5204
+  },
+  {
+   "file": "17-Motel99.L2.jpg",
+   "alpha": "17-Motel99.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.711
+  },
+  {
+   "file": "17-Motel99.L3.jpg",
+   "alpha": "17-Motel99.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.8707
+  }
+ ]
+}

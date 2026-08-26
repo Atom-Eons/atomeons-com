@@ -1,0 +1,37 @@
+{
+ "source": "04-Steel.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.21397438645362854,
+  0.565010666847229,
+  0.7899773120880127
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "04-Steel.L0.jpg",
+   "alpha": "04-Steel.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.0352
+  },
+  {
+   "file": "04-Steel.L1.jpg",
+   "alpha": "04-Steel.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.3908
+  },
+  {
+   "file": "04-Steel.L2.jpg",
+   "alpha": "04-Steel.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.7373
+  },
+  {
+   "file": "04-Steel.L3.jpg",
+   "alpha": "04-Steel.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.8426
+  }
+ ]
+}

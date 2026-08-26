@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#000000" />
+<title>CableBox</title>
+<style>
+  /* THE STACK, and the order is the whole design:
+   *
+   *   1  video A / video B     the two chains. One is the programme, one is protection.
+   *   2  crt canvas            the tube pass, over the picture, inside the aperture
+   *   3  guide                 ALSO inside the aperture, so the cabinet occludes it
+   *   4  cabinet               depth layers if the theme is baked, flat PNG if not
+   *   6  overlays              controls / museum, full-bleed
+   *
+   * The cabinet sits ON TOP of the picture, and its alpha carries a real hole where the screen is.
+   * That single fact is what makes everything else work: near-field objects in the artwork occlude
+   * the picture for free, with no per-object masking anywhere in the code.
+   */
+  html, body { margin: 0; padding: 0; background: #000; height: 100%; overflow: hidden;
+    font-family: 'Consolas','Menlo',monospace; color: #fff; user-select: none; cursor: crosshair;
+    -webkit-text-size-adjust: 100%; overscroll-behavior: none; }
+  #cabinet {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    aspect-ratio: 1536 / 1024;
+    height: 100vh; max-width: 100vw; max-height: 100vh;
+    border-radius: 22px; overflow: hidden; background: transparent;
+  }
+  #videoA, #videoB, #crt, #guide, #snow {
+    position: absolute;   /* left/top/width/height set from JS as % of cabinet, per theme */
+  }
+  #videoA, #videoB { object-fit: cover; background: #000; z-index: 1; }
+  /* The protect chain is DECODING, not displayed. It must stay in the layout tree — a
+     display:none video is throttled or unloaded by some browsers, which would defeat the entire
+     point of keeping a second chain warm. So it is present, sized, and simply transparent. */
+  #videoB { opacity: 0; pointer-events: none; }
+  #crt { pointer-events: none; z-index: 2; }
+  /* Snow sits ABOVE the picture but BELOW the cabinet, so the room still occludes it exactly as it
+     occludes the programme. It is only ever visible when there is no picture. */
+  #snow { pointer-events: none; z-index: 2; display: none; image-rendering: pixelated; }
+  #shell, #depth {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 4;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  #depth { display: none; }            /* shown only when the theme has a bake */
+  #depth.on { display: block; }
+  #shell.hidden { display: none; }
+
+  /* ---- the guide ------------------------------------------------------------
+   * Inside the aperture and UNDER the cabinet, so a lamp in the near depth band crosses in front
+   * of the listings exactly as it crosses in front of the picture. */
+  #guide { z-index: 3; display: none; flex-direction: column; overflow: hidden;
+    background: rgba(4,8,26,0.88); container-type: size; }
+  #guide.on { display: flex; }
+  .guide-ad {
+    flex: 0 0 46%; position: relative; padding: 4% 5%;
+    display: flex; flex-direction: column; justify-content: center;
+    /* Deep blue, because every cable guide that ever existed was deep blue, and the recognition
+       is doing real work: this should feel like something you already know. */
+    background: linear-gradient(160deg, #12246e 0%, #0a1440 60%, #060d2c 100%);
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,0.16);
+  }
+  .guide-ad-line { font: 800 clamp(13px, 3.4cqw, 34px)/1.06 inherit; letter-spacing: 0.055em;
+    color: #ffd98a; text-shadow: 0 2px 0 rgba(0,0,0,0.5); }
+  .guide-ad-sub { margin-top: 0.5em; font: 500 clamp(9px, 1.7cqw, 17px)/1.32 inherit;
+    letter-spacing: 0.03em; color: #cfe0ff; opacity: 0.92; }
+  .guide-clock { position: absolute; top: 6%; right: 5%;
+    font: 700 clamp(9px, 1.7cqw, 17px)/1 inherit; letter-spacing: 0.08em; color: #9fd4ff; }
+  .guide-list { flex: 1 1 auto; position: relative; overflow: hidden;
+    /* Rows arrive and leave rather than popping. */
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent); }
+  .guide-track { position: absolute; inset: 0 0 auto 0; will-change: transform; }
+  .guide-row { display: flex; align-items: baseline; gap: 0.7em;
+    height: var(--row-h, 22px); padding: 0 5%; overflow: hidden; white-space: nowrap;
+    font: 600 clamp(8px, 1.55cqw, 16px)/1 inherit; letter-spacing: 0.02em; color: #dfe8ff; }
+  .guide-row-on { color: #ffe9a8; background: rgba(255,255,255,0.07); }
+  .guide-num { flex: 0 0 3.2em; text-align: right; color: #7fb0ff; font-weight: 800; }
+  .guide-name { flex: 0 0 auto; max-width: 34%; overflow: hidden; text-overflow: ellipsis; }
+  /* The blurb gets whatever is left, and it is allowed to be long. Giving the name a fixed 40%
+     produced "The Dark Crystal — just star" in the native render: a guide that clips what is ON
+     has thrown away its only advantage over a numbered list. */
+  .guide-blurb { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis;
+    color: #9fb2d8; font-weight: 400; }
+
+  #ovl { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+    background: #000; z-index: 6; cursor: pointer; }
+
+  /* ---- the Controls card ----------------------------------------------------
+   * Drawn from the KEYS table in main.js rather than shipped as artwork. The PNG it replaces was
+   * CBX1's native card and it advertised four controls this build does not have while omitting
+   * three that it does. Type that is generated from the dispatch table cannot drift from it.
+   * Styled to sit in the same amber-on-black CRT world as the rest of the box. */
+  #ctl { position: absolute; inset: 0; z-index: 6; cursor: pointer; background: #050403;
+    display: grid; place-items: center; container-type: size; }
+  .ctl-card { border: 2px solid #c8811f; padding: 4.5cqh 6cqw; min-width: 46cqw;
+    box-shadow: 0 0 3cqh rgba(200,129,31,0.28) inset, 0 0 2cqh rgba(200,129,31,0.18); }
+  .ctl-title { font: 800 clamp(14px, 6cqh, 46px)/1 inherit; letter-spacing: 0.14em;
+    color: #efe7d2; text-align: center; text-shadow: 0 0 12px rgba(239,231,210,0.45); }
+  .ctl-sub { font: 700 clamp(10px, 3.6cqh, 26px)/1 inherit; letter-spacing: 0.30em;
+    color: #d9932a; text-align: center; margin: 0.5em 0 1.4em;
+    text-shadow: 0 0 10px rgba(217,147,42,0.5); }
+  .ctl-list { margin: 0; }
+  .ctl-row { display: flex; gap: 1.6em; align-items: baseline;
+    font: 600 clamp(8px, 3.1cqh, 22px)/1.62 inherit; letter-spacing: 0.08em; color: #e6dcc4; }
+  .ctl-row dt { flex: 0 0 5.5em; color: #efe7d2; text-shadow: 0 0 8px rgba(239,231,210,0.35); }
+  .ctl-row dd { margin: 0; color: #cbbfa4; }
+  .ctl-foot { margin-top: 1.6em; text-align: center; color: #8d7a56;
+    font: 600 clamp(7px, 2.3cqh, 15px)/1 inherit; letter-spacing: 0.16em; }
+
+  .knob-hit {
+    position: absolute; z-index: 7;
+    background: transparent; -webkit-tap-highlight-color: transparent;
+    border: 0; padding: 0; touch-action: manipulation; display: none;
+  }
+  #rotate-nag {
+    position: fixed; inset: 0; z-index: 100; background: #000; color: #f5f0d0;
+    display: none; place-items: center; text-align: center;
+    font: 600 16px/1.4 'Consolas','Menlo',monospace; padding: 24px;
+  }
+  #rotate-nag.on { display: grid; }
+  #rotate-nag svg { width: 96px; height: 96px; margin-bottom: 18px; opacity: 0.85; }
+  #rotate-nag p { max-width: 320px; letter-spacing: 0.05em; }
+
+  @media (pointer: coarse) and (orientation: landscape) {
+    #cabinet { height: 100vh; max-width: 100vw; border-radius: 0; }
+    .knob-hit { display: block; }
+  }
+  @media (pointer: coarse) and (orientation: portrait) {
+    #cabinet { visibility: hidden; }
+    #rotate-nag { display: grid; }
+  }
+</style>
+</head>
+<body>
+  <div id="cabinet">
+    <video id="videoA" playsinline autoplay muted></video>
+    <video id="videoB" playsinline autoplay muted></video>
+    <canvas id="crt"></canvas>
+    <canvas id="snow"></canvas>
+    <div id="guide"></div>
+    <div id="depth"></div>
+    <img id="shell" alt="" draggable="false" />
+    <button id="hit-theme" type="button" class="knob-hit" aria-label="Change television theme"></button>
+    <button id="hit-channel" type="button" class="knob-hit" aria-label="Change channel"></button>
+  </div>
+  <div id="rotate-nag">
+    <div>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="10" rx="2"/><path d="M12 4v2"/><path d="M9 4l3-2 3 2"/></svg>
+      <p>ROTATE PHONE<br/>SIDEWAYS TO WATCH</p>
+    </div>
+  </div>
+  <!-- hls.js vendored locally (v1.5.15, Apache-2.0). A CDN reference made playback depend on a
+       third-party host: if it was blocked, window.Hls was undefined and desktop Chrome fell
+       through to a native-HLS check it always fails, producing a silent black screen. -->
+  <script src="src/hls.min.js"></script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

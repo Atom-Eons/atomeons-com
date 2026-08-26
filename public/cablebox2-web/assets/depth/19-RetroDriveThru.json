@@ -1,0 +1,37 @@
+{
+ "source": "19-RetroDriveThru.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.2506648302078247,
+  0.5577610731124878,
+  0.7929419279098511
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "19-RetroDriveThru.L0.jpg",
+   "alpha": "19-RetroDriveThru.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.0754
+  },
+  {
+   "file": "19-RetroDriveThru.L1.jpg",
+   "alpha": "19-RetroDriveThru.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.4265
+  },
+  {
+   "file": "19-RetroDriveThru.L2.jpg",
+   "alpha": "19-RetroDriveThru.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.6898
+  },
+  {
+   "file": "19-RetroDriveThru.L3.jpg",
+   "alpha": "19-RetroDriveThru.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.8965
+  }
+ ]
+}

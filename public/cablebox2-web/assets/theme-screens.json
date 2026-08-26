@@ -1,0 +1,700 @@
+{
+  "_comment": "Per cabinet, 1536x1024 image space. x/y/w/h = screen aperture. starCx/starCy = favorite-star CENTER on the CABLEBOX unit. hotspots = per-theme click targets. eggs = per-theme SIGNATURE ambient effects (welcoming, subtle — not room-fills). Kinds: bloom | warm | flicker | swell | breathe | pulse | shimmer. Fires on both surf-roll and idle timer per-theme cadence.",
+
+  "themes": {
+    "RetroTvShell.png": {
+      "x": 272, "y": 272, "w": 831, "h": 567, "starCx": 883, "starCy": 126, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "ledDigit",    "rect": [825, 92, 55, 50], "kind": "pulse",   "r": 255, "g": 165, "b": 40 },
+        { "name": "brandTag",    "rect": [580, 92, 220, 45], "kind": "breathe", "r": 255, "g": 195, "b": 100 },
+        { "name": "warmWoodL",   "rect": [30, 480, 180, 320], "kind": "warm",  "r": 180, "g": 115, "b": 55 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 255, "g": 205, "b": 145 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 255, "g": 205, "b": 145 }
+      ]
+    },
+
+    "01-Orange.png": {
+      "x": 284, "y": 274, "w": 808, "h": 563, "starCx": 848, "starCy": 136, "tuned": true, "mask": "source",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "ledDigit",    "rect": [825, 92, 55, 50], "kind": "pulse",   "r": 255, "g": 165, "b": 40 },
+        { "name": "brandTag",    "rect": [580, 92, 220, 45], "kind": "breathe", "r": 255, "g": 175, "b": 80 },
+        { "name": "orangeGlow",  "rect": [40, 550, 200, 340], "kind": "warm",  "r": 230, "g": 130, "b": 55 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 255, "g": 175, "b": 80 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 255, "g": 175, "b": 80 }
+      ]
+    },
+
+    "02-Red.png": {
+      "x": 274, "y": 274, "w": 831, "h": 561, "starCx": 888, "starCy": 127, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "ledDigit",    "rect": [825, 92, 55, 50], "kind": "pulse",   "r": 255, "g": 60,  "b": 60 },
+        { "name": "crimsonWood", "rect": [40, 540, 200, 340], "kind": "breathe", "r": 200, "g": 55, "b": 55 },
+        { "name": "brandTag",    "rect": [580, 92, 220, 45], "kind": "breathe", "r": 230, "g": 90, "b": 80 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 255, "g": 60, "b": 60 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 255, "g": 60, "b": 60 }
+      ]
+    },
+
+    "03-Space.png": {
+      "x": 290, "y": 266, "w": 811, "h": 580, "starCx": 880, "starCy": 115, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "starL",       "rect": [110, 90, 30, 30], "kind": "shimmer",  "r": 200, "g": 220, "b": 255 },
+        { "name": "starR",       "rect": [1400, 130, 30, 30], "kind": "shimmer","r": 200, "g": 220, "b": 255 },
+        { "name": "starLower",   "rect": [80, 890, 25, 25], "kind": "shimmer",  "r": 200, "g": 220, "b": 255 },
+        { "name": "nebulaHint",  "rect": [200, 850, 400, 130], "kind": "breathe", "r": 130, "g": 90, "b": 200 },
+        { "name": "ledDigit",    "rect": [825, 92, 55, 50], "kind": "pulse",    "r": 180, "g": 200, "b": 255 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 65, "g": 125, "b": 255 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 65, "g": 125, "b": 255 }
+      ]
+    },
+
+    "04-Steel.png": {
+      "x": 259, "y": 252, "w": 852, "h": 600, "starCx": 845, "starCy": 100, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "steelSheenL", "rect": [40, 400, 130, 400], "kind": "shimmer", "r": 200, "g": 220, "b": 240 },
+        { "name": "steelSheenR", "rect": [1365, 400, 130, 400], "kind": "shimmer","r": 200, "g": 220, "b": 240 },
+        { "name": "ledDigit",    "rect": [825, 92, 55, 50], "kind": "pulse",     "r": 180, "g": 230, "b": 255 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 255, "g": 170, "b": 40 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 255, "g": 170, "b": 40 }
+      ]
+    },
+
+    "05-Teal.png": {
+      "x": 277, "y": 280, "w": 827, "h": 555, "starCx": 881, "starCy": 112, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "aquaShimmer", "rect": [40, 550, 180, 320], "kind": "shimmer", "r": 50, "g": 200, "b": 210 },
+        { "name": "ledDigit",    "rect": [825, 92, 55, 50], "kind": "pulse",     "r": 90, "g": 220, "b": 220 },
+        { "name": "brandTag",    "rect": [580, 92, 220, 45], "kind": "breathe",  "r": 90, "g": 200, "b": 200 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 40, "g": 225, "b": 205 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 40, "g": 225, "b": 205 }
+      ]
+    },
+
+    "06-Underwater.png": {
+      "x": 262, "y": 264, "w": 832, "h": 586, "starCx": 848, "starCy": 118, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "bubbleL",    "rect": [50, 700, 40, 40], "kind": "shimmer",  "r": 180, "g": 240, "b": 255 },
+        { "name": "bubbleLMid", "rect": [70, 550, 30, 30], "kind": "shimmer",  "r": 180, "g": 240, "b": 255 },
+        { "name": "bubbleR",    "rect": [1450, 680, 40, 40], "kind": "shimmer","r": 180, "g": 240, "b": 255 },
+        { "name": "bioLumBar",  "rect": [300, 900, 900, 60], "kind": "breathe", "r": 60, "g": 220, "b": 255 },
+        { "name": "deepBlue",   "rect": [0, 0, 1536, 180], "kind": "breathe", "r": 20, "g": 90, "b": 180 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 0, "g": 225, "b": 205 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 0, "g": 225, "b": 205 }
+      ]
+    },
+
+    "07-Patchouli.png": {
+      "x": 283, "y": 264, "w": 801, "h": 559, "starCx": 884, "starCy": 132, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "lavaLampL",   "rect": [55, 300, 90, 460], "kind": "breathe",  "r": 255, "g": 90, "b": 40 },
+        { "name": "lavaLampR",   "rect": [1385, 300, 90, 460], "kind": "breathe","r": 220, "g": 60, "b": 160 },
+        { "name": "incenseWisp", "rect": [1225, 380, 60, 240], "kind": "shimmer","r": 220, "g": 180, "b": 140 },
+        { "name": "hazeCanopy",  "rect": [0, 0, 1536, 180], "kind": "breathe",   "r": 160, "g": 80, "b": 200 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 235, "g": 55, "b": 235 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 235, "g": 55, "b": 235 }
+      ]
+    },
+
+    "08-Cowboy.png": {
+      "x": 289, "y": 265, "w": 820, "h": 580, "starCx": 882, "starCy": 120, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "campfire",    "rect": [90, 760, 160, 160], "kind": "flicker", "r": 255, "g": 120, "b": 40 },
+        { "name": "campfireGlow","rect": [50, 720, 240, 240], "kind": "breathe", "r": 255, "g": 140, "b": 60 },
+        { "name": "sunsetGold",  "rect": [0, 0, 1536, 180], "kind": "breathe",   "r": 255, "g": 165, "b": 80 },
+        { "name": "lanternR",    "rect": [1370, 460, 80, 140], "kind": "flicker","r": 255, "g": 200, "b": 100 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 225, "g": 165, "b": 60 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 225, "g": 165, "b": 60 }
+      ]
+    },
+
+    "09-Gatsby.png": {
+      "x": 305, "y": 268, "w": 800, "h": 577, "starCx": 890, "starCy": 116, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1160, 334, 108, 108],
+        "channelKnob":  [1160, 516, 108, 108],
+        "cableBoxKnob": [928,  66,  92,  92],
+        "crtSwitch":    [1286, 612, 36,  64],
+        "power":        [1248, 830, 70,  46],
+        "logo":         [460,  0,   610, 153]
+      },
+      "eggs": [
+        { "name": "chandelierL", "rect": [90, 110, 130, 140], "kind": "shimmer", "r": 255, "g": 220, "b": 150 },
+        { "name": "chandelierR", "rect": [1320, 110, 130, 140], "kind": "shimmer","r": 255, "g": 220, "b": 150 },
+        { "name": "champagne",   "rect": [100, 700, 120, 280], "kind": "shimmer","r": 240, "g": 220, "b": 160 },
+        { "name": "goldTrim",    "rect": [0, 950, 1536, 74], "kind": "breathe",  "r": 220, "g": 170, "b": 80 },
+        { "name": "speakerGrilleShimmer", "rect": [1160, 650, 150, 165], "kind": "shimmer", "r": 50, "g": 255, "b": 130 },
+        { "name": "brandPlateGlow", "rect": [1155, 255, 150, 60], "kind": "pulse", "r": 50, "g": 255, "b": 130 }
+      ]
+    },
+
+    "10-CableBroadcastStation.png": {
+      "x": 418, "y": 288, "w": 617, "h": 456, "starCx": 805, "starCy": 205, "tuned": true, "mask": "source-extra",
+      "fringe": { "depth": 3, "minBrightness": 120, "maxSaturation": 80 },
+      "hotspots": {
+        "muteKnob":     [1080, 350, 100, 100],
+        "channelKnob":  [1080, 490, 100, 100],
+        "cableBoxKnob": [960,  180, 55,  55],
+        "crtSwitch":    [1080, 610, 90,  90],
+        "power":        [1155, 720, 45,  40],
+        "logo":         [560,  155, 460, 90]
+      },
+      "eggs": [
+        { "name": "onAirSign",     "rect": [175, 40, 100, 130], "kind": "flicker", "r": 255, "g": 210, "b": 100 },
+        { "name": "ledBankRedA",   "rect": [615, 45, 75, 45], "kind": "pulse",     "r": 255, "g": 60, "b": 40 },
+        { "name": "ledBankGreenA", "rect": [700, 45, 75, 45], "kind": "pulse",     "r": 90, "g": 220, "b": 90 },
+        { "name": "onAirRedR",     "rect": [1240, 500, 130, 60], "kind": "flicker","r": 255, "g": 40, "b": 30 },
+        { "name": "timerRed",      "rect": [65, 205, 210, 45], "kind": "pulse",    "r": 255, "g": 40, "b": 30 },
+        { "name": "vuMeterL",      "rect": [1235, 610, 90, 90], "kind": "pulse",   "r": 240, "g": 200, "b": 100 },
+        { "name": "vuMeterR",      "rect": [1345, 610, 90, 90], "kind": "pulse",   "r": 240, "g": 200, "b": 100 },
+        { "name": "tapeReelL",     "rect": [30, 300, 165, 165], "kind": "breathe", "r": 220, "g": 150, "b": 80 },
+        { "name": "tapeReelR",     "rect": [200, 320, 130, 130], "kind": "breathe","r": 220, "g": 150, "b": 80 }
+      ]
+    },
+
+    "11-YourBedroom1999.png": {
+      "x": 438, "y": 294, "w": 534, "h": 389, "starCx": 757, "starCy": 188, "tuned": true, "mask": "source-extra",
+      "fringe": { "depth": 4, "minBrightness": 80, "maxSaturation": 16 },
+      "hotspots": {
+        "muteKnob":     [990, 305, 90, 90],
+        "channelKnob":  [990, 440, 90, 90],
+        "cableBoxKnob": [875, 175, 55, 55],
+        "crtSwitch":    [990, 560, 90, 75],
+        "power":        [990, 655, 90, 55],
+        "logo":         [510, 155, 400, 90]
+      },
+      "eggs": [
+        { "name": "lavaLamp",           "rect": [1410, 320, 100, 340], "kind": "breathe", "r": 240, "g": 60, "b": 60 },
+        { "name": "itUsedToBeFunNeon",  "rect": [180, 40, 260, 120], "kind": "flicker", "r": 255, "g": 60, "b": 180 },
+        { "name": "enjoyTvAgainNeon",   "rect": [610, 40, 310, 95], "kind": "flicker",  "r": 100, "g": 190, "b": 255 },
+        { "name": "videoKilledRadioStar","rect":[1105, 70, 100, 155], "kind": "flicker","r": 220, "g": 240, "b": 60 },
+        { "name": "mtvLamp",            "rect": [130, 180, 210, 300], "kind": "breathe","r": 255, "g": 190, "b": 100 },
+        { "name": "cityBokehR",         "rect": [1380, 190, 145, 400], "kind": "shimmer","r": 180, "g": 210, "b": 255 },
+        { "name": "digitalClock",       "rect": [1250, 395, 100, 45], "kind": "pulse",  "r": 80, "g": 255, "b": 120 },
+        { "name": "stayTunedButton",    "rect": [820, 780, 90, 60], "kind": "pulse",    "r": 255, "g": 100, "b": 180 }
+      ]
+    },
+
+    "12-LivingRoom1970s.png": {
+      "x": 317, "y": 252, "w": 774, "h": 489, "starCx": 858, "starCy": 142, "tuned": true, "mask": "warm-source",
+      "fringe": { "depth": 3, "minBrightness": 120, "maxSaturation": 90 },
+      "hotspots": {
+        "muteKnob":     [1120, 290, 90, 90],
+        "channelKnob":  [1120, 450, 90, 90],
+        "cableBoxKnob": [935, 115, 55, 55],
+        "crtSwitch":    [1180, 600, 55, 60],
+        "power":        [1180, 720, 65, 50],
+        "logo":         [590, 95, 400, 90]
+      },
+      "eggs": [
+        { "name": "tableLamp",       "rect": [40, 130, 150, 280], "kind": "breathe", "r": 255, "g": 190, "b": 110 },
+        { "name": "publicAccessSign","rect": [1260, 65, 250, 380], "kind": "breathe","r": 220, "g": 130, "b": 60 },
+        { "name": "familyPhoto",     "rect": [65, 545, 90, 105], "kind": "swell" },
+        { "name": "amberAshtray",    "rect": [235, 595, 70, 40], "kind": "warm",    "r": 230, "g": 130, "b": 50 },
+        { "name": "plantGreen",      "rect": [1210, 560, 130, 140], "kind": "swell" },
+        { "name": "landscapePainting","rect":[195, 30, 160, 130], "kind": "swell" }
+      ]
+    },
+
+    "13-NYCRain.png": {
+      "x": 481, "y": 296, "w": 577, "h": 374, "starCx": 875, "starCy": 158, "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1155, 285, 100, 110],
+        "channelKnob":  [1155, 440, 100, 115],
+        "cableBoxKnob": [940, 125, 55, 55],
+        "crtSwitch":    [1155, 630, 90, 75],
+        "power":        [1200, 700, 60, 45],
+        "logo":         [530, 95, 490, 105]
+      },
+      "eggs": [
+        { "name": "hotelNeon",     "rect": [85, 285, 65, 175], "kind": "flicker", "r": 255, "g": 40, "b": 40 },
+        { "name": "cityBokeh",     "rect": [10, 130, 340, 450], "kind": "shimmer","r": 180, "g": 210, "b": 255 },
+        { "name": "warmLampR",     "rect": [1275, 260, 165, 225], "kind": "breathe","r": 255, "g": 190, "b": 100 },
+        { "name": "rainShimmer",   "rect": [200, 20, 780, 220], "kind": "shimmer","r": 180, "g": 200, "b": 235 },
+        { "name": "greenPlant",    "rect": [225, 415, 115, 195], "kind": "swell" },
+        { "name": "detectivePoster","rect":[1320, 55, 125, 155], "kind": "swell" }
+      ]
+    },
+
+    "14-VHSShopHomage.png": {
+      "x": 289, "y": 221, "w": 831, "h": 545, "starCx": 803, "starCy": 80,  "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1200, 180, 130, 140],
+        "channelKnob":  [1200, 370, 130, 140],
+        "cableBoxKnob": [810, 25, 55, 65],
+        "crtSwitch":    [1230, 555, 80, 105],
+        "power":        [1230, 790, 75, 55],
+        "logo":         [420, 0, 500, 105]
+      },
+      "eggs": [
+        { "name": "videoRentalsNeon","rect": [20, 20, 220, 140], "kind": "flicker","r": 255, "g": 40, "b": 60 },
+        { "name": "openNeon",        "rect": [1365, 40, 160, 105], "kind": "flicker","r": 255, "g": 50, "b": 40 },
+        { "name": "blockbusterCard", "rect": [20, 895, 320, 115], "kind": "breathe","r": 60, "g": 130, "b": 220 },
+        { "name": "beKindRewind",    "rect": [790, 900, 210, 100], "kind": "swell" },
+        { "name": "gooniesVhs",      "rect": [1345, 195, 185, 120], "kind": "breathe","r": 210, "g": 150, "b": 80 },
+        { "name": "vhsBoxesLower",   "rect": [1345, 655, 185, 165], "kind": "warm", "r": 200, "g": 140, "b": 70 }
+      ]
+    },
+
+    "15-PublicAccess.png": {
+      "x": 344, "y": 340, "w": 762, "h": 467, "starCx": 830, "starCy": 220, "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1225, 340, 115, 120],
+        "channelKnob":  [1225, 525, 115, 110],
+        "cableBoxKnob": [870, 200, 55, 65],
+        "crtSwitch":    [1245, 680, 85, 90],
+        "power":        [1275, 855, 70, 40],
+        "logo":         [450, 175, 490, 110]
+      },
+      "eggs": [
+        { "name": "onAirNeon",       "rect": [125, 90, 175, 65], "kind": "flicker", "r": 255, "g": 30, "b": 30 },
+        { "name": "studioSpotL",     "rect": [400, 30, 130, 125], "kind": "breathe","r": 255, "g": 220, "b": 150 },
+        { "name": "studioSpotR",     "rect": [1265, 60, 165, 120], "kind": "breathe","r": 255, "g": 220, "b": 150 },
+        { "name": "supportLocalWeirdos","rect":[60, 320, 145, 155], "kind": "swell" },
+        { "name": "colorBarMonitor", "rect": [40, 505, 145, 105], "kind": "flicker","r": 100, "g": 220, "b": 220 },
+        { "name": "tapeStack",       "rect": [10, 655, 205, 220], "kind": "breathe","r": 240, "g": 200, "b": 120 },
+        { "name": "weAreCable",      "rect": [520, 15, 555, 165], "kind": "swell" },
+        { "name": "paFuelMug",       "rect": [1345, 580, 100, 165], "kind": "swell" }
+      ]
+    },
+
+    "16-Fireplace.png": {
+      "x": 450, "y": 203, "w": 610, "h": 362, "starCx": 830, "starCy": 75,  "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1130, 155, 100, 105],
+        "channelKnob":  [1130, 270, 100, 100],
+        "cableBoxKnob": [905, 45, 55, 55],
+        "crtSwitch":    [1130, 400, 100, 95],
+        "power":        [1170, 590, 65, 45],
+        "logo":         [590, 25, 400, 90]
+      },
+      "eggs": [
+        { "name": "fireEmberCore",   "rect": [65, 320, 190, 130], "kind": "flicker","r": 255, "g": 120, "b": 40 },
+        { "name": "fireEmberGlow",   "rect": [10, 260, 300, 240], "kind": "breathe","r": 255, "g": 140, "b": 60 },
+        { "name": "copperPendant",   "rect": [1315, 115, 115, 135], "kind": "breathe","r": 240, "g": 160, "b": 90 },
+        { "name": "vcrClock",        "rect": [605, 615, 205, 40], "kind": "pulse", "r": 80, "g": 255, "b": 120 },
+        { "name": "barLights",       "rect": [1345, 200, 185, 325], "kind": "breathe","r": 240, "g": 180, "b": 110 },
+        { "name": "popcornBowl",     "rect": [640, 745, 165, 85], "kind": "swell" },
+        { "name": "kubrickBooks",    "rect": [405, 615, 140, 55], "kind": "swell" }
+      ]
+    },
+
+    "17-Motel99.png": {
+      "x": 392, "y": 270, "w": 654, "h": 456, "starCx": 809, "starCy": 132, "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1155, 290, 100, 105],
+        "channelKnob":  [1155, 440, 100, 105],
+        "cableBoxKnob": [865, 115, 55, 55],
+        "crtSwitch":    [1170, 590, 80, 75],
+        "power":        [1200, 760, 65, 45],
+        "logo":         [500, 95, 410, 90]
+      },
+      "eggs": [
+        { "name": "motelSignVertical","rect": [15, 20, 130, 400], "kind": "flicker","r": 255, "g": 30, "b": 30 },
+        { "name": "motelVacancy",     "rect": [15, 380, 145, 175], "kind": "flicker","r": 255, "g": 40, "b": 40 },
+        { "name": "tableLampR",       "rect": [1385, 200, 145, 380], "kind": "breathe","r": 255, "g": 200, "b": 110 },
+        { "name": "digitalClock1AM",  "rect": [1260, 795, 185, 100], "kind": "pulse", "r": 255, "g": 50, "b": 50 },
+        { "name": "keyFob13",         "rect": [125, 810, 180, 200], "kind": "breathe","r": 220, "g": 190, "b": 130 },
+        { "name": "palmTreePainting", "rect": [1295, 175, 155, 220], "kind": "swell" },
+        { "name": "rotaryPhone",      "rect": [10, 610, 245, 320], "kind": "swell" }
+      ]
+    },
+
+    "18-WinterWonderland.png": {
+      "x": 369, "y": 272, "w": 698, "h": 487, "starCx": 835, "starCy": 122, "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1160, 265, 115, 115],
+        "channelKnob":  [1160, 430, 115, 120],
+        "cableBoxKnob": [865, 75, 55, 60],
+        "crtSwitch":    [1180, 595, 85, 105],
+        "power":        [1210, 790, 65, 40],
+        "logo":         [500, 50, 425, 105]
+      },
+      "eggs": [
+        { "name": "fireplaceCore",     "rect": [30, 430, 130, 240], "kind": "flicker","r": 255, "g": 130, "b": 50 },
+        { "name": "fireplaceGlow",     "rect": [0, 380, 190, 310], "kind": "breathe","r": 255, "g": 150, "b": 70 },
+        { "name": "lanternL",          "rect": [115, 85, 105, 175], "kind": "flicker","r": 255, "g": 210, "b": 130 },
+        { "name": "snowfall",          "rect": [1310, 20, 220, 460], "kind": "shimmer","r": 220, "g": 235, "b": 255 },
+        { "name": "distantCabinLight", "rect": [1400, 340, 50, 55], "kind": "pulse", "r": 255, "g": 200, "b": 130 },
+        { "name": "cozyBlanket",       "rect": [25, 810, 195, 200], "kind": "breathe","r": 200, "g": 150, "b": 105 }
+      ]
+    },
+
+    "19-RetroDriveThru.png": {
+      "x": 395, "y": 309, "w": 653, "h": 454, "starCx": 875, "starCy": 250, "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1105, 385, 100, 95],
+        "channelKnob":  [1105, 500, 100, 95],
+        "cableBoxKnob": [875, 195, 60, 55],
+        "crtSwitch":    [1105, 610, 90, 65],
+        "power":        [110, 675, 195, 80],
+        "logo":         [575, 190, 380, 60]
+      },
+      "eggs": [
+        { "name": "cactusNeon",       "rect": [150, 155, 130, 235], "kind": "flicker", "r": 100, "g": 255, "b": 130 },
+        { "name": "driveInNeon",      "rect": [140, 340, 175, 130], "kind": "flicker", "r": 255, "g": 60, "b": 50 },
+        { "name": "distantScreenGlow","rect": [1230, 195, 300, 175], "kind": "breathe", "r": 220, "g": 210, "b": 190 },
+        { "name": "carTaillights",    "rect": [1195, 400, 320, 130], "kind": "pulse", "r": 255, "g": 60, "b": 40 },
+        { "name": "projectorPowerLED","rect": [110, 670, 40, 30], "kind": "pulse", "r": 255, "g": 60, "b": 40 },
+        { "name": "microphoneSheen",  "rect": [1270, 490, 155, 300], "kind": "shimmer", "r": 220, "g": 220, "b": 225 },
+        { "name": "oldFanBlades",     "rect": [0, 385, 165, 275], "kind": "swell" }
+      ]
+    },
+
+    "20-RecordShop.png": {
+      "x": 405, "y": 322, "w": 628, "h": 435, "starCx": 808, "starCy": 194, "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1090, 305, 105, 105],
+        "channelKnob":  [1090, 450, 105, 105],
+        "cableBoxKnob": [870, 140, 55, 60],
+        "crtSwitch":    [1105, 595, 80, 90],
+        "power":        [1130, 790, 65, 40],
+        "logo":         [540, 115, 400, 105]
+      },
+      "eggs": [
+        { "name": "blueNotePoster", "rect": [1245, 25, 195, 200], "kind": "breathe","r": 90, "g": 180, "b": 240 },
+        { "name": "speakerWoofer",  "rect": [140, 240, 140, 220], "kind": "pulse", "r": 180, "g": 170, "b": 150 },
+        { "name": "candleFlicker",  "rect": [1250, 350, 90, 70], "kind": "shimmer","r": 255, "g": 200, "b": 110 },
+        { "name": "whiskeyGlass",   "rect": [1240, 810, 115, 180], "kind": "breathe","r": 220, "g": 140, "b": 60 },
+        { "name": "vinylRecords",   "rect": [65, 30, 400, 220], "kind": "breathe","r": 200, "g": 160, "b": 90 },
+        { "name": "pendantLamp",    "rect": [1390, 60, 80, 130], "kind": "breathe","r": 240, "g": 180, "b": 110 }
+      ]
+    },
+
+    "21-PizzaParlour.png": {
+      "x": 424, "y": 269, "w": 608, "h": 427, "starCx": 875, "starCy": 210, "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1110, 345, 100, 100],
+        "channelKnob":  [1110, 455, 100, 105],
+        "cableBoxKnob": [935, 200, 60, 55],
+        "crtSwitch":    [1110, 565, 90, 65],
+        "power":        [975, 755, 220, 130],
+        "logo":         [615, 195, 380, 55]
+      },
+      "eggs": [
+        { "name": "pizzaSliceNeon",  "rect": [90, 90, 195, 145], "kind": "flicker", "r": 255, "g": 165, "b": 40 },
+        { "name": "pizzaTextNeon",   "rect": [255, 75, 245, 105], "kind": "flicker", "r": 255, "g": 50, "b": 60 },
+        { "name": "gameOnNeon",      "rect": [1090, 55, 205, 130], "kind": "flicker", "r": 100, "g": 190, "b": 255 },
+        { "name": "highScoreLed",    "rect": [1195, 760, 200, 100], "kind": "pulse", "r": 255, "g": 40, "b": 40 },
+        { "name": "arcadeTurtleGlow","rect": [1145, 155, 235, 300], "kind": "pulse", "r": 255, "g": 200, "b": 100 },
+        { "name": "pepperoniPizza",  "rect": [10, 715, 470, 205], "kind": "warm", "r": 240, "g": 140, "b": 60 },
+        { "name": "arcadeButtonGlow","rect": [15, 260, 155, 300], "kind": "pulse", "r": 255, "g": 210, "b": 60 }
+      ]
+    },
+
+    "22-Study.png": {
+      "x": 423, "y": 280, "w": 595, "h": 428, "starCx": 855, "starCy": 210, "tuned": true, "mask": "source-wide",
+      "fringe": { "depth": 3, "minBrightness": 105, "maxSaturation": 32 },
+      "hotspots": {
+        "muteKnob":     [1075, 335, 90, 90],
+        "channelKnob":  [1075, 440, 90, 90],
+        "cableBoxKnob": [935, 200, 55, 55],
+        "crtSwitch":    [1075, 545, 75, 65],
+        "power":        [1080, 195, 55, 30],
+        "logo":         [605, 195, 380, 55]
+      },
+      "eggs": [
+        { "name": "bankersLampGlow",   "rect": [0, 260, 260, 380], "kind": "breathe", "r": 100, "g": 220, "b": 130 },
+        { "name": "moonWindow",        "rect": [55, 60, 435, 400], "kind": "breathe", "r": 210, "g": 220, "b": 245 },
+        { "name": "quietPosterGlow",   "rect": [1330, 70, 195, 285], "kind": "warm", "r": 220, "g": 190, "b": 110 },
+        { "name": "lateNightCableMug", "rect": [1155, 640, 220, 235], "kind": "breathe", "r": 220, "g": 180, "b": 130 },
+        { "name": "antiqueBookStack",  "rect": [0, 610, 380, 330], "kind": "warm", "r": 200, "g": 130, "b": 70 },
+        { "name": "broadcastLogNotes", "rect": [450, 795, 620, 160], "kind": "swell" }
+      ]
+    },
+
+    "23-HippyMagic.png": {
+      "x": 387, "y": 286, "w": 677, "h": 465, "starCx": 900, "starCy": 210, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1135, 340, 100, 105],
+        "channelKnob":  [1135, 460, 100, 105],
+        "cableBoxKnob": [1015, 195, 55, 55],
+        "crtSwitch":    [1140, 570, 90, 65],
+        "power":        [1145, 200, 40, 30],
+        "logo":         [560, 195, 425, 55]
+      },
+      "eggs": [
+        { "name": "smileyNeon",     "rect": [80, 55, 260, 220], "kind": "flicker", "r": 60, "g": 180, "b": 255 },
+        { "name": "lavaLampPink",   "rect": [0, 195, 145, 460], "kind": "breathe", "r": 255, "g": 90, "b": 190 },
+        { "name": "discoBallGlint", "rect": [880, 45, 195, 195], "kind": "shimmer", "r": 255, "g": 150, "b": 220 },
+        { "name": "redGlobeLamp",   "rect": [1280, 300, 100, 100], "kind": "breathe", "r": 255, "g": 90, "b": 90 },
+        { "name": "greenGlobeLamp", "rect": [1290, 400, 100, 100], "kind": "breathe", "r": 90, "g": 255, "b": 130 },
+        { "name": "mushroomLamp",   "rect": [1370, 600, 165, 220], "kind": "breathe", "r": 255, "g": 150, "b": 60 },
+        { "name": "magicBusRecord", "rect": [0, 705, 335, 315], "kind": "swell" }
+      ]
+    },
+
+    "24-MyBedroom1999.png": {
+      "x": 412, "y": 314, "w": 622, "h": 429, "starCx": 875, "starCy": 220, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1075, 350, 95, 95],
+        "channelKnob":  [1075, 460, 95, 95],
+        "cableBoxKnob": [940, 210, 55, 55],
+        "crtSwitch":    [1075, 565, 80, 65],
+        "power":        [1080, 210, 40, 30],
+        "logo":         [595, 210, 380, 55]
+      },
+      "eggs": [
+        { "name": "tvUsedToBeFunNeon","rect": [0, 65, 250, 240], "kind": "flicker", "r": 255, "g": 60, "b": 220 },
+        { "name": "eightBall",        "rect": [990, 195, 90, 90], "kind": "swell" },
+        { "name": "lavaLampPink",     "rect": [0, 335, 130, 355], "kind": "breathe", "r": 255, "g": 100, "b": 130 },
+        { "name": "deskLampGlow",     "rect": [1330, 235, 200, 330], "kind": "breathe", "r": 255, "g": 220, "b": 150 },
+        { "name": "publicAccessMiniTv","rect": [130, 340, 175, 175], "kind": "flicker", "r": 140, "g": 240, "b": 140 },
+        { "name": "luckyCatWave",     "rect": [1400, 715, 155, 235], "kind": "swell" },
+        { "name": "blastCupNeon",     "rect": [1240, 605, 185, 265], "kind": "warm", "r": 200, "g": 60, "b": 200 }
+      ]
+    },
+
+    "AtomicOrangeCableBox.png": {
+      "x": 445, "y": 329, "w": 507, "h": 404, "starCx": 820, "starCy": 150, "tuned": true, "mask": "source",
+      "hotspots": {
+        "muteKnob":     [1030, 390, 90, 90],
+        "channelKnob":  [1030, 545, 90, 90],
+        "cableBoxKnob": [995, 130, 80, 80],
+        "crtSwitch":    [1050, 700, 40, 40],
+        "power":        [1030, 700, 90, 40],
+        "logo":         [500,  80, 480, 130]
+      },
+      "eggs": [
+        { "name": "orangeLeaf",     "rect": [795, 200, 165, 130], "kind": "breathe","r": 120, "g": 200, "b": 100 },
+        { "name": "eatNeon",        "rect": [1265, 40, 200, 120], "kind": "flicker", "r": 255, "g": 70, "b": 60 },
+        { "name": "starburstClock", "rect": [30, 45, 170, 180], "kind": "breathe", "r": 240, "g": 160, "b": 90 },
+        { "name": "cocktailGlass",  "rect": [95, 570, 145, 270], "kind": "breathe", "r": 240, "g": 190, "b": 100 },
+        { "name": "orangeHalf",     "rect": [1265, 810, 175, 155], "kind": "breathe","r": 255, "g": 155, "b": 60 },
+        { "name": "atomicCoffeeSign","rect":[1220, 730, 300, 210], "kind": "swell" },
+        { "name": "chiliString",    "rect": [130, 240, 90, 210], "kind": "swell" },
+        { "name": "cactusView",     "rect": [270, 240, 220, 220], "kind": "swell" },
+        { "name": "knobChromeGleam", "rect": [1010, 375, 120, 270], "kind": "shimmer", "r": 255, "g": 190, "b": 110 },
+        { "name": "tunerPlateGlow",  "rect": [975, 115, 115, 105], "kind": "pulse", "r": 255, "g": 165, "b": 60 }
+      ]
+    },
+
+    "25-Cheetah.png": {
+      "x": 306, "y": 281, "w": 770, "h": 542, "starCx": 855, "starCy": 145, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1170, 330, 120, 120],
+        "channelKnob":  [1170, 490, 120, 120],
+        "cableBoxKnob": [980, 90, 65, 65],
+        "crtSwitch":    [1195, 655, 45, 45],
+        "power":        [1170, 655, 90, 45],
+        "logo":         [560, 75, 490, 140]
+      },
+      "eggs": [
+        { "name": "goldBezelSheen",  "rect": [190, 250, 130, 620], "kind": "shimmer", "r": 240, "g": 175, "b": 90 },
+        { "name": "tunerDigitGlow",  "rect": [905, 90, 65, 60], "kind": "pulse", "r": 255, "g": 165, "b": 40 },
+        { "name": "cheetahPrintGlow","rect": [0, 0, 1536, 250], "kind": "warm", "r": 210, "g": 140, "b": 50 },
+        { "name": "knobAccentGlow",  "rect": [1240, 335, 60, 60], "kind": "pulse", "r": 255, "g": 170, "b": 50 }
+      ]
+    },
+
+    "26-Zen.png": {
+      "x": 319, "y": 295, "w": 721, "h": 514, "starCx": 830, "starCy": 150, "tuned": true, "mask": "warm-source",
+      "hotspots": {
+        "muteKnob":     [1120, 315, 110, 105],
+        "channelKnob":  [1120, 465, 110, 105],
+        "cableBoxKnob": [935, 90, 60, 60],
+        "crtSwitch":    [1140, 640, 45, 45],
+        "power":        [1120, 640, 90, 45],
+        "logo":         [530, 75, 465, 140]
+      },
+      "eggs": [
+        { "name": "bonsaiLeaves",    "rect": [0, 0, 335, 320], "kind": "swell" },
+        { "name": "candleFlicker",   "rect": [1380, 855, 130, 130], "kind": "flicker", "r": 255, "g": 170, "b": 70 },
+        { "name": "bambooVaseKanji", "rect": [1290, 40, 245, 900], "kind": "warm", "r": 140, "g": 120, "b": 90 },
+        { "name": "shojiWindowGlow", "rect": [0, 30, 1200, 260], "kind": "breathe", "r": 230, "g": 210, "b": 175 },
+        { "name": "tunerDigitGlow",  "rect": [890, 90, 60, 60], "kind": "pulse", "r": 255, "g": 190, "b": 90 }
+      ]
+    },
+
+    "27-TrainCar.png": {
+      "x": 534, "y": 291, "w": 458, "h": 256, "starCx": 895, "starCy": 195, "tuned": true, "mask": "rect",
+      "hotspots": {
+        "muteKnob":     [1020, 355, 65, 65],
+        "channelKnob":  [1020, 435, 65, 65],
+        "cableBoxKnob": [980, 190, 50, 50],
+        "crtSwitch":    [1020, 505, 55, 50],
+        "power":        [1025, 195, 35, 25],
+        "logo":         [605, 195, 340, 55]
+      },
+      "eggs": [
+        { "name": "bedsideLampWarm",  "rect": [0, 335, 105, 235], "kind": "breathe", "r": 255, "g": 210, "b": 140 },
+        { "name": "nightLakeLights",  "rect": [40, 330, 300, 155], "kind": "shimmer", "r": 200, "g": 220, "b": 255 },
+        { "name": "deskLampGlow",     "rect": [1355, 620, 130, 220], "kind": "breathe", "r": 255, "g": 200, "b": 130 },
+        { "name": "freshRoseVase",    "rect": [1460, 745, 76, 165], "kind": "swell" },
+        { "name": "wallSconceGlow",   "rect": [1220, 300, 90, 130], "kind": "breathe", "r": 255, "g": 190, "b": 110 },
+        { "name": "ledgerBook",       "rect": [1245, 855, 235, 100], "kind": "swell" }
+      ]
+    },
+
+    "28-Treehouse.png": {
+      "x": 511, "y": 363, "w": 457, "h": 292, "starCx": 900, "starCy": 275, "tuned": true, "mask": "source-wide",
+      "hotspots": {
+        "muteKnob":     [1020, 400, 90, 90],
+        "channelKnob":  [1020, 555, 90, 65],
+        "cableBoxKnob": [935, 285, 55, 55],
+        "crtSwitch":    [1025, 635, 75, 70],
+        "power":        [1025, 285, 60, 40],
+        "logo":         [655, 285, 265, 55]
+      },
+      "eggs": [
+        { "name": "signpostCarvings", "rect": [10, 205, 195, 385], "kind": "swell" },
+        { "name": "solarPanelGlint",  "rect": [1145, 130, 210, 100], "kind": "shimmer", "r": 220, "g": 235, "b": 255 },
+        { "name": "stringLightCanopy","rect": [55, 45, 1425, 60], "kind": "breathe", "r": 255, "g": 210, "b": 140 },
+        { "name": "lanternFlicker",   "rect": [310, 590, 90, 130], "kind": "flicker", "r": 255, "g": 165, "b": 70 },
+        { "name": "islandLagoonShimmer","rect": [55, 355, 340, 245], "kind": "shimmer", "r": 150, "g": 220, "b": 220 },
+        { "name": "popcornBowl",      "rect": [680, 815, 165, 90], "kind": "swell" }
+      ]
+    },
+
+    "29-Miami.png": {
+      "x": 470, "y": 282, "w": 527, "h": 381, "starCx": 950, "starCy": 195, "tuned": true, "mask": "source",
+      "hotspots": {
+        "muteKnob":     [1055, 300, 90, 85],
+        "channelKnob":  [1055, 385, 90, 80],
+        "cableBoxKnob": [945, 195, 55, 55],
+        "crtSwitch":    [1050, 460, 90, 90],
+        "power":        [1055, 200, 40, 30],
+        "logo":         [630, 195, 300, 50]
+      },
+      "eggs": [
+        { "name": "neonBuildingPink", "rect": [1250, 350, 65, 150], "kind": "flicker", "r": 255, "g": 60, "b": 190 },
+        { "name": "sunsetSkyGlow",    "rect": [815, 75, 720, 270], "kind": "breathe", "r": 255, "g": 140, "b": 130 },
+        { "name": "poolsideLamp",     "rect": [90, 355, 115, 190], "kind": "breathe", "r": 255, "g": 210, "b": 150 },
+        { "name": "barCartSheen",     "rect": [95, 460, 285, 230], "kind": "shimmer", "r": 220, "g": 220, "b": 235 },
+        { "name": "miamiPosterGlow",  "rect": [310, 160, 215, 225], "kind": "swell" },
+        { "name": "cocktailGlass",    "rect": [370, 760, 105, 195], "kind": "swell" }
+      ]
+    },
+
+    "30-JapaneseForest.png": {
+      "x": 528, "y": 340, "w": 437, "h": 315, "starCx": 875, "starCy": 270, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1015, 355, 85, 85],
+        "channelKnob":  [1015, 460, 85, 80],
+        "cableBoxKnob": [910, 265, 55, 55],
+        "crtSwitch":    [1020, 545, 75, 70],
+        "power":        [1015, 265, 55, 40],
+        "logo":         [655, 265, 260, 45]
+      },
+      "eggs": [
+        { "name": "fireplaceFlame",   "rect": [10, 490, 200, 165], "kind": "flicker", "r": 255, "g": 130, "b": 40 },
+        { "name": "fireplaceEmberGlow","rect": [0, 435, 260, 250], "kind": "breathe", "r": 255, "g": 150, "b": 60 },
+        { "name": "candleFlicker",    "rect": [210, 765, 70, 90], "kind": "flicker", "r": 255, "g": 180, "b": 100 },
+        { "name": "floorLampWarm",    "rect": [1355, 340, 55, 320], "kind": "breathe", "r": 255, "g": 200, "b": 130 },
+        { "name": "mugSteam",         "rect": [325, 775, 100, 105], "kind": "swell" },
+        { "name": "foggyForestWindow","rect": [1010, 60, 500, 620], "kind": "breathe", "r": 190, "g": 205, "b": 210 }
+      ]
+    },
+
+    "31-Boho.png": {
+      "x": 461, "y": 265, "w": 545, "h": 374, "starCx": 940, "starCy": 175, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1050, 290, 95, 95],
+        "channelKnob":  [1050, 400, 95, 90],
+        "cableBoxKnob": [920, 175, 55, 55],
+        "crtSwitch":    [1050, 490, 80, 80],
+        "power":        [1050, 180, 55, 40],
+        "logo":         [640, 175, 275, 50]
+      },
+      "eggs": [
+        { "name": "fairyLightString", "rect": [420, 65, 640, 55], "kind": "breathe", "r": 255, "g": 205, "b": 130 },
+        { "name": "candleFlicker",    "rect": [1195, 795, 105, 130], "kind": "flicker", "r": 255, "g": 170, "b": 80 },
+        { "name": "pinkSaltLamp",     "rect": [1290, 440, 105, 130], "kind": "breathe", "r": 255, "g": 90, "b": 110 },
+        { "name": "sunsetOceanView",  "rect": [10, 240, 300, 330], "kind": "breathe", "r": 255, "g": 150, "b": 90 },
+        { "name": "macrameShadow",    "rect": [1370, 90, 165, 400], "kind": "swell" },
+        { "name": "hangingLampGlow",  "rect": [30, 60, 155, 235], "kind": "breathe", "r": 255, "g": 195, "b": 120 }
+      ]
+    },
+
+    "32-Paradise.png": {
+      "x": 533, "y": 323, "w": 508, "h": 368, "starCx": 1000, "starCy": 210, "tuned": true, "mask": "source-extra",
+      "hotspots": {
+        "muteKnob":     [1105, 330, 85, 85],
+        "channelKnob":  [1105, 420, 85, 90],
+        "cableBoxKnob": [960, 210, 55, 55],
+        "crtSwitch":    [1105, 515, 75, 75],
+        "power":        [1105, 215, 40, 30],
+        "logo":         [670, 210, 300, 45]
+      },
+      "eggs": [
+        { "name": "sunsetOceanGlow",  "rect": [10, 130, 420, 420], "kind": "breathe", "r": 255, "g": 140, "b": 70 },
+        { "name": "tikiLavaLamp",     "rect": [1330, 420, 90, 130], "kind": "breathe", "r": 255, "g": 90, "b": 60 },
+        { "name": "hibiscusFlower",   "rect": [345, 555, 155, 145], "kind": "swell" },
+        { "name": "lanternFlicker",   "rect": [255, 590, 90, 120], "kind": "flicker", "r": 255, "g": 165, "b": 70 },
+        { "name": "ceilingFanMotion", "rect": [325, 45, 300, 90], "kind": "swell" },
+        { "name": "tikiCarvingGlow",  "rect": [1245, 100, 220, 380], "kind": "warm", "r": 200, "g": 130, "b": 60 }
+      ]
+    }
+  }
+}

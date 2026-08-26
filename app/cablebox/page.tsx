@@ -2,398 +2,129 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WindowsDownloadTrust } from "../_components/WindowsDownloadTrust";
-import { CableboxPremiere } from "./CableboxPremiere";
-import styles from "./cablebox.module.css";
+import styles from "./cablebox2.module.css";
+
+const download = "https://github.com/Atom-Eons/CableBox2/releases/download/v1.0.0/CableBox2-Windows-x64-1.0.0.zip";
+const source = "https://github.com/Atom-Eons/CableBox2";
+const webEdition = "/cablebox2-web/index.html";
 
 export const metadata: Metadata = {
-  title: "CableBox · Turn it on. Surf.",
+  title: "CableBox 2 | Turn it on. Surf.",
   description:
-    "CableBox is native Windows cable-surfing art: a living vintage television with a changing dial, local media, CRT simulation, and collectible cabinet worlds.",
+    "CableBox 2 is free, open-source cable-surfing art for Windows and the web. Turn a knob, change the room, and find something you did not plan to watch.",
   alternates: { canonical: "https://atomeons.com/cablebox" },
   openGraph: {
-    title: "CableBox · Turn it on. Surf.",
-    description: "A living vintage television for Windows. The channel dial is back.",
+    title: "CableBox 2 | Turn it on. Surf.",
+    description: "Television without the homework. Free for Windows and the web.",
     url: "https://atomeons.com/cablebox",
     siteName: "AtomEons",
     type: "website",
-    images: [
-      {
-        url: "/cablebox-premiere/hero-active.webp",
-        width: 1920,
-        height: 1080,
-        alt: "CableBox running as a cinematic red-and-black vintage television",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "CableBox - Turn it on. Surf.",
-    description: "Native Windows cable-surfing art. A living vintage television with the dial back.",
-    creator: "@AtomMccree",
-    images: ["/cablebox-premiere/hero-active.webp"],
+    images: [{ url: "/cablebox-premiere/hero-active.webp", width: 1920, height: 1080, alt: "CableBox 2 running as a living vintage television" }],
   },
 };
 
-const theatreCards = [
-  {
-    number: "01",
-    label: "THE DIAL",
-    title: "Choice ends. Discovery begins.",
-    body: "A curated lineup changes daily: 19 rotating lottery channels, three fixed movie channels, three physical favorite slots, and two included local channels.",
-    signal: "LEFT / RIGHT TO SURF",
-  },
-  {
-    number: "02",
-    label: "THE ACCIDENT",
-    title: "R means anywhere.",
-    body: "Random Surf does not recommend. It throws the dial to a genuinely random channel and gives serendipity its job back.",
-    signal: "R / RANDOM SURF",
-  },
-  {
-    number: "03",
-    label: "THE GUIDE",
-    title: "Now. Next. Stay awhile.",
-    body: "A dedicated cable guide keeps current and upcoming programs inside the television. Its breaks come from a curated vintage commercial vault.",
-    signal: "CURRENT + UPCOMING",
-  },
-  {
-    number: "04",
-    label: "THE STAR",
-    title: "Favorites become physical.",
-    body: "Press F. A gold star slaps onto the television with its own motion and sound. Three favorite positions persist as part of the object.",
-    signal: "F / FAVORITE",
-  },
+const worlds = [
+  ["/cablebox-premiere/theme-space.webp", "Deep Space"],
+  ["/cablebox-premiere/theme-underwater.webp", "Underwater"],
+  ["/cablebox-premiere/theme-cowboy.webp", "Cowboy"],
+  ["/cablebox-premiere/theme-gatsby.webp", "Gatsby"],
 ] as const;
 
-const themes = [
-  { src: "/cablebox-premiere/theme-space.webp", name: "Deep Space", number: "03" },
-  { src: "/cablebox-premiere/theme-underwater.webp", name: "Underwater", number: "06" },
-  { src: "/cablebox-premiere/theme-patchouli.webp", name: "Patchouli", number: "07" },
-  { src: "/cablebox-premiere/theme-cowboy.webp", name: "Cowboy", number: "08" },
-  { src: "/cablebox-premiere/theme-gatsby.webp", name: "Gatsby", number: "09" },
-] as const;
-
-const controls = [
-  ["C", "Controls"],
-  ["T", "Theme"],
-  ["R", "Random Surf"],
-  ["F", "Favorite"],
-  ["L", "Lock"],
-  ["1 2 3", "Invisibility"],
-  ["S M B", "Size"],
-  ["X", "Museum"],
-  ["← →", "Channel"],
-  ["Q", "Quit"],
-] as const;
-
-export default function CableboxPage() {
+export default function CableBoxPage() {
   return (
     <main className={styles.page}>
-      <CableboxPremiere />
+      <section className={styles.hero} aria-labelledby="cablebox-title">
+        <div className={styles.heroCopy}>
+          <p><i /> PUBLIC RELEASE / 2.0</p>
+          <h1 id="cablebox-title">Television<br />without the<br /><em>homework.</em></h1>
+          <span>
+            CableBox 2 is a living vintage television. Turn a knob. Change the room.
+            Open the guide. Find something you never would have searched for.
+          </span>
+          <div className={styles.actions}>
+            <Link href="/cablebox/web">Try it now <b aria-hidden="true">↗</b></Link>
+            <a href={download}>Download Windows <b aria-hidden="true">↓</b></a>
+          </div>
+          <small>FREE / OPEN SOURCE / NO ACCOUNT / TOUCH READY</small>
+        </div>
+        <Link className={styles.heroScreen} href="/cablebox/web" aria-label="Try the live CableBox 2 web edition">
+          <Image src="/cablebox-premiere/hero-active.webp" alt="CableBox 2 running inside a vintage television" fill priority unoptimized sizes="(max-width: 900px) 100vw, 55vw" />
+          <span><i /> CLICK TO TURN ON</span>
+        </Link>
+      </section>
 
-      <section className={styles.liveStage} aria-labelledby="cablebox-live-title">
-        <div className={styles.liveStageHead}>
-          <div>
-            <p>LIVE NOW / BROWSER EDITION</p>
-            <h2 id="cablebox-live-title">The television is on.</h2>
-          </div>
-          <div className={styles.liveStageActions}>
-            <Link href="/cablebox/web">TRY CABLEBOX FULL SCREEN</Link>
-            <a href="https://github.com/AtomEons/CableBox/releases/download/CBX-FINAL-V1/CBX-FINAL-V1.zip">
-              DOWNLOAD FOR WINDOWS
-            </a>
-          </div>
+      <div className={styles.factRail} aria-label="CableBox 2 at a glance">
+        <span><b>33</b> television worlds</span>
+        <span><b>1</b> changing daily dial</span>
+        <span><b>2</b> physical touch knobs</span>
+        <span><b>0</b> setup maze</span>
+      </div>
+
+      <section className={styles.live} aria-labelledby="live-title">
+        <header>
+          <div><p>THE FASTEST WAY IN</p><h2 id="live-title">It is already on.</h2></div>
+          <div><span>Tap the television. Use the knobs on a phone or the arrow keys on a computer.</span><Link href="/cablebox/web">Open full screen ↗</Link></div>
+        </header>
+        <div className={styles.frame}>
+          <iframe src={webEdition} title="CableBox 2 live web edition" allow="autoplay; fullscreen" loading="eager" />
         </div>
-        <div className={styles.liveFrame}>
-          <iframe
-            src="https://atomeons.github.io/CableBox/"
-            title="CableBox live browser edition"
-            allow="autoplay; fullscreen"
-            loading="eager"
-          />
-        </div>
-        <div className={styles.liveStageFoot}>
-          <span>CLICK THE TELEVISION TO BEGIN</span>
-          <span>LEFT / RIGHT / R RANDOM / C CONTROLS</span>
+        <footer><span>WEB EDITION / TOUCH + KEYBOARD</span><span>THEME KNOB / CHANNEL KNOB / GUIDE</span></footer>
+      </section>
+
+      <section className={styles.reason} aria-labelledby="reason-title">
+        <div><p>WHY IT EXISTS</p><h2 id="reason-title">Streaming made television feel like office work.</h2></div>
+        <div className={styles.reasonCards}>
+          <article><span>01 / SURF</span><h3>Choice ends. Discovery begins.</h3><p>The daily dial is curated, shuffled, and ready before you can overthink it.</p></article>
+          <article><span>02 / STAY</span><h3>The show keeps moving.</h3><p>A smarter director moves past failed signals and avoids leaving you with a dead screen.</p></article>
+          <article><span>03 / TOUCH</span><h3>The television is the interface.</h3><p>Turn the physical knobs on a phone. Use arrows on a keyboard. No modern app chrome.</p></article>
         </div>
       </section>
 
-      <section className={styles.whiteIntro} id="experience">
-        <div className={styles.sectionStamp}>
-          <span>THE ANTI-STREAMING PREMIERE</span>
-          <span>OBJECT 01 / CABLEBOX</span>
-        </div>
-        <div className={styles.introGrid}>
-          <h2>
-            Television was never
-            <br />
-            supposed to feel like
-            <br />
-            <em>office work.</em>
-          </h2>
-          <div>
-            <p className={styles.introLede}>
-              CableBox is cable-surfing art: a living vintage television that folds
-              curated programming, local media, CRT simulation, and collectible
-              cabinet worlds into one uninterrupted ritual.
-            </p>
-            <p>
-              No rows of thumbnails. No setup maze. No decision fatigue. Turn it on,
-              catch what is already happening, and stay inside the television.
-            </p>
-          </div>
-        </div>
-        <div className={styles.marquee}>
-          <span>NATIVE WINDOWS</span>
-          <span>19 RANDOM CHANNELS</span>
-          <span>24+ CABINET WORLDS</span>
-          <span>LOCAL + OFFLINE</span>
-          <span>UNDER 1 GB TARGET</span>
-        </div>
-      </section>
-
-      <section className={styles.theatre}>
-        <div className={styles.darkSectionHead}>
-          <p>ACT I / THE RIDE</p>
-          <h2>Surfing is the interface.</h2>
-          <span>THE REMOTE HAS FOUR MOVES. THE DIAL HAS NO END.</span>
-        </div>
-        <div className={styles.theatreGrid}>
-          {theatreCards.map((card) => (
-            <article className={styles.theatreCard} key={card.number}>
-              <div className={styles.cardNumber}>{card.number}</div>
-              <p>{card.label}</p>
-              <h3>{card.title}</h3>
-              <span>{card.body}</span>
-              <footer>{card.signal}</footer>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className={styles.gallery} id="themes">
-        <div className={styles.galleryHead}>
-          <div>
-            <p>ACT II / COLLECTIBLE ENVIRONMENTS</p>
-            <h2>Change the room.<br />Keep the ritual.</h2>
-          </div>
-          <p>
-            Press T and the television changes physical character. Each cabinet has
-            individually fitted screen geometry and favorite placement. These are
-            real CableBox production themes—not website mockups.
-          </p>
-        </div>
-        <div className={styles.themeGrid}>
-          {themes.map((theme, index) => (
-            <figure className={`${styles.themeCard} ${index === 0 || index === 5 ? styles.themeWide : ""}`} key={theme.name}>
-              <Image
-                src={theme.src}
-                alt={`CableBox ${theme.name} collectible television environment`}
-                fill
-                unoptimized
-                sizes={index === 0 || index === 5 ? "(max-width: 760px) 100vw, 66vw" : "(max-width: 760px) 100vw, 33vw"}
-              />
-              <figcaption>
-                <span>CABINET {theme.number}</span>
-                <strong>{theme.name}</strong>
-              </figcaption>
+      <section className={styles.worlds} aria-labelledby="worlds-title">
+        <header><p>CHANGE THE ROOM</p><h2 id="worlds-title">One dial.<br />Thirty-three worlds.</h2><span>The television changes character without interrupting the ritual. Every cabinet is a real CableBox production world.</span></header>
+        <div>
+          {worlds.map(([src, name], index) => (
+            <figure key={name}>
+              <div><Image src={src} alt={`CableBox 2 ${name} television world`} fill unoptimized sizes="(max-width: 720px) 100vw, 50vw" /></div>
+              <figcaption><span>0{index + 1}</span><strong>{name}</strong></figcaption>
             </figure>
           ))}
         </div>
       </section>
 
-      <section className={styles.crtSection} id="crt">
-        <div className={styles.darkSectionHead}>
-          <p>ACT III / THE TUBE</p>
-          <h2>The picture has a body.</h2>
-          <span>NOT A FILTER. A FITTED TELEVISION SCREEN.</span>
-        </div>
-        <div className={styles.crtCompare}>
-          <figure>
-            <div className={styles.crtImage}>
-              <Image
-                src="/cablebox-premiere/crt-source.webp"
-                alt="Raw source frame before CableBox CRT rendering"
-                fill
-                unoptimized
-                sizes="50vw"
-              />
-            </div>
-            <figcaption><span>BEFORE</span><strong>Flat source</strong></figcaption>
-          </figure>
-          <figure>
-            <div className={styles.crtImage}>
-              <Image
-                src="/cablebox-premiere/crt-tube.webp"
-                alt="The same frame after CableBox curved-glass CRT rendering"
-                fill
-                unoptimized
-                sizes="50vw"
-              />
-            </div>
-            <figcaption><span>AFTER</span><strong>CableBox tube</strong></figcaption>
-          </figure>
-        </div>
-        <div className={styles.crtWords} aria-label="CableBox CRT effects">
-          <span>CURVED GLASS</span>
-          <span>SCANLINES</span>
-          <span>PHOSPHOR</span>
-          <span>BLOOM</span>
-          <span>TRACKING</span>
-          <span>OVERSCAN</span>
-          <span>ANALOG NOISE</span>
-          <span>RETRO PRESETS</span>
-        </div>
-      </section>
-
-      <section className={styles.technicalDoorway} id="technical">
-        <div className={styles.technicalDoorwayCopy}>
-          <p>OPTIONAL DEPTH / THE MACHINE ROOM</p>
-          <h2>Want to know<br />how the illusion holds?</h2>
-          <span>
-            The sales floor ends here. The technical manual documents the 30-day
-            build, two-window composition, baked aperture masks, CRT math, channel
-            curation, recovery systems, test harnesses, and measured performance.
-          </span>
-          <Link href="/cablebox/technical" className={styles.technicalDoorwayLink}>
-            <span>OPEN TECHNICAL DETAILS</span>
-            <small>5 PARTS / 802 LINES</small>
-          </Link>
-        </div>
-        <div className={styles.technicalDoorwayProof} aria-label="CableBox technical manual contents">
-          <div><strong>30</strong><span>DAYS DOCUMENTED</span></div>
-          <div><strong>10</strong><span>HIDDEN SYSTEMS</span></div>
-          <div><strong>128</strong><span>SAMPLES / ENGINE</span></div>
-          <div><strong>8/8</strong><span>SHIP GATES PASSED</span></div>
-        </div>
-      </section>
-
-      <section className={styles.museumSection} id="museum">
-        <Image
-          src="/cablebox-premiere/museum-exhibit.webp"
-          alt="CableBox Museum exhibition with two televisions, archival walls, and illuminated placards"
-          fill
-          unoptimized
-          loading="eager"
-          sizes="100vw"
-          className={styles.museumImage}
-        />
-        <div className={styles.museumShade} />
-        <div className={styles.museumCopy}>
-          <p>ACT IV / PRESS X</p>
-          <h2>The television<br />becomes the exhibit.</h2>
-          <span>
-            Museum mode turns CableBox into a narrated presentation while a silent
-            live television keeps moving beside it. The object explains the culture
-            it is trying to save.
-          </span>
-          <strong>X / CABLEBOX MUSEUM</strong>
-        </div>
-      </section>
-
-      <section className={styles.controlsSection} id="controls">
-        <div className={styles.controlsCopy}>
-          <p>THE ENTIRE REMOTE</p>
-          <h2>Ten moves.<br />No chrome.</h2>
-          <span>
-            Every control appears inside CableBox, in the same material language as
-            the television. Learn it once. Stop thinking about the software.
-          </span>
-          <div className={styles.controlGrid}>
-            {controls.map(([key, action]) => (
-              <div key={key}>
-                <kbd>{key}</kbd>
-                <span>{action}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <figure className={styles.controlsArt}>
-          <Image
-            src="/cablebox-premiere/controls-card.webp"
-            alt="The real in-world CableBox controls card"
-            fill
-            unoptimized
-            sizes="(max-width: 900px) 100vw, 50vw"
-          />
-        </figure>
-      </section>
-
-      <section className={styles.releaseSection} id="download">
-        <div className={styles.releaseSignal}>
-          <span className={styles.onAirDot} />
-          PUBLIC RELEASE / LIVE NOW
-        </div>
-        <div className={styles.releaseGrid}>
-          <div>
-            <p>FREE WINDOWS RELEASE / OPEN SOURCE</p>
-            <h2>Turn it on.<br />Surf.</h2>
-            <span className={styles.releaseLede}>
-              The native, self-contained Windows edition is public now. Download one
-              ZIP, extract it, and run CableBox.exe. No account. No separate runtime.
-            </span>
-          </div>
-          <div className={styles.releaseChecklist}>
-            <div className={styles.complete}>
-              <span>01</span>
-              <strong>Self-contained Windows x64 build</strong>
-              <em>PUBLIC</em>
-            </div>
-            <div className={styles.complete}>
-              <span>02</span>
-              <strong>Exact ZIP + SHA-256 checksum</strong>
-              <em>VERIFIED</em>
-            </div>
-            <div className={styles.complete}>
-              <span>03</span>
-              <strong>Public GPL-3.0 source</strong>
-              <em>OPEN</em>
-            </div>
-          </div>
+      <section className={styles.download} id="download" aria-labelledby="download-title">
+        <div className={styles.downloadLead}>
+          <p>THE FULL WINDOWS OBJECT</p>
+          <h2 id="download-title">Take the television home.</h2>
+          <span>One ZIP. Extract it. Open CableBox2.exe. No installer maze and no separate .NET setup.</span>
+          <a href={download}>Download CableBox 2 <b>422.5 MiB ↓</b></a>
+          <small>WINDOWS X64 / VERSION 1.0.0 / GPL-3.0</small>
         </div>
         <WindowsDownloadTrust
-          productName="CableBox"
+          productName="CableBox 2"
           releaseState="PUBLIC RELEASE / FREE / OPEN SOURCE"
-          sourceHref="https://github.com/AtomEons/CableBox"
-          downloadHref="https://github.com/AtomEons/CableBox/releases/download/CBX-FINAL-V1/CBX-FINAL-V1.zip"
-          filename="CBX-FINAL-V1.zip"
-          version="CBX-FINAL-V1"
-          sha256="BD072061367C05DC0CB62535890B5A7158DD2D23A64EE5027E07B4B6BCB00044"
-          buildDate="2026-07-25T02:20:45Z"
-          attestationHref="https://github.com/AtomEons/CableBox/releases/tag/CBX-FINAL-V1"
+          sourceHref={source}
+          downloadHref={download}
+          filename="CableBox2-Windows-x64-1.0.0.zip"
+          version="1.0.0"
+          sha256="145FC8796C4E63F956A1588B39A581FAA2E3F443227FE40B6D3F3AD12B5FA384"
+          buildDate="2026-08-25"
+          attestationHref="https://github.com/Atom-Eons/CableBox2/releases/tag/v1.0.0"
         />
-        <div className={styles.releaseFooter}>
-          <div>
-            <span>242.7 MB</span>
-            <small>EXACT WINDOWS ZIP</small>
-          </div>
-          <div>
-            <span>FREE</span>
-            <small>NO ACCOUNT / NO PAYWALL</small>
-          </div>
-          <div>
-            <span>GPL-3.0</span>
-            <small>PUBLIC SOURCE</small>
-          </div>
-          <a
-            className={styles.downloadButton}
-            href="https://github.com/AtomEons/CableBox/releases/download/CBX-FINAL-V1/CBX-FINAL-V1.zip"
-          >
-            DOWNLOAD CABLEBOX NOW
-          </a>
+      </section>
+
+      <section className={styles.open}>
+        <div><p>OPEN SOURCE / PUBLIC PROOF</p><h2>Look under the cabinet.</h2></div>
+        <div>
+          <p>The source, release notes, exact checksum, contribution guide, and issue tracker are public in one organization-owned repository.</p>
+          <a href={source}>Open CableBox 2 on GitHub ↗</a>
+          <Link href="/cablebox/technical">Read the optional technical details ↗</Link>
         </div>
       </section>
 
-      <section className={styles.endCredits}>
-        <p>AN ATOM EONS TELEVISION OBJECT</p>
-        <h2>CABLEBOX</h2>
-        <span>FUN · CABLE · ART · THE ACCIDENTS PUT BACK IN</span>
-        <div>
-          <Link href="/cablebox/technical">Technical details</Link>
-          <Link href="/products">All products</Link>
-          <Link href="/press">Press room</Link>
-          <a href="mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20%5BCableBox%5D%20release%20signal&body=AtomEons%20route%3A%20hello%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0AProduct%3A%20CableBox%0A%0AMessage%3A%0A">Release signal</a>
-        </div>
+      <section className={styles.lastCall}>
+        <p>TURN IT ON. SURF.</p>
+        <div><Link href="/cablebox/web">Try the web edition ↗</Link><a href={download}>Download Windows ↓</a></div>
       </section>
     </main>
   );

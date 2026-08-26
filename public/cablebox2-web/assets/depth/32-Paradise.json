@@ -1,0 +1,37 @@
+{
+ "source": "32-Paradise.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.25599396228790283,
+  0.5072505474090576,
+  0.7795056700706482
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "32-Paradise.L0.jpg",
+   "alpha": "32-Paradise.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.1253
+  },
+  {
+   "file": "32-Paradise.L1.jpg",
+   "alpha": "32-Paradise.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.3862
+  },
+  {
+   "file": "32-Paradise.L2.jpg",
+   "alpha": "32-Paradise.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.6273
+  },
+  {
+   "file": "32-Paradise.L3.jpg",
+   "alpha": "32-Paradise.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.9307
+  }
+ ]
+}

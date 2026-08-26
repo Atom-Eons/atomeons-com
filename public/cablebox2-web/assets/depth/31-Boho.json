@@ -1,0 +1,37 @@
+{
+ "source": "31-Boho.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.23911690711975098,
+  0.4579228162765503,
+  0.7582648992538452
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "31-Boho.L0.jpg",
+   "alpha": "31-Boho.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.1321
+  },
+  {
+   "file": "31-Boho.L1.jpg",
+   "alpha": "31-Boho.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.3459
+  },
+  {
+   "file": "31-Boho.L2.jpg",
+   "alpha": "31-Boho.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.5696
+  },
+  {
+   "file": "31-Boho.L3.jpg",
+   "alpha": "31-Boho.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.9463
+  }
+ ]
+}

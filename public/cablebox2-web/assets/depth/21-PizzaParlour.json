@@ -1,0 +1,37 @@
+{
+ "source": "21-PizzaParlour.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.27531659603118896,
+  0.548531174659729,
+  0.7637912034988403
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "21-PizzaParlour.L0.jpg",
+   "alpha": "21-PizzaParlour.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.078
+  },
+  {
+   "file": "21-PizzaParlour.L1.jpg",
+   "alpha": "21-PizzaParlour.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.4743
+  },
+  {
+   "file": "21-PizzaParlour.L2.jpg",
+   "alpha": "21-PizzaParlour.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.6244
+  },
+  {
+   "file": "21-PizzaParlour.L3.jpg",
+   "alpha": "21-PizzaParlour.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.9028
+  }
+ ]
+}

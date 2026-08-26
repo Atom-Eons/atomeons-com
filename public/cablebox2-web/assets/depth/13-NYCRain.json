@@ -1,0 +1,37 @@
+{
+ "source": "13-NYCRain.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.18191109597682953,
+  0.48358353972435,
+  0.8182539343833923
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "13-NYCRain.L0.jpg",
+   "alpha": "13-NYCRain.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.0828
+  },
+  {
+   "file": "13-NYCRain.L1.jpg",
+   "alpha": "13-NYCRain.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.2809
+  },
+  {
+   "file": "13-NYCRain.L2.jpg",
+   "alpha": "13-NYCRain.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.6862
+  },
+  {
+   "file": "13-NYCRain.L3.jpg",
+   "alpha": "13-NYCRain.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.95
+  }
+ ]
+}

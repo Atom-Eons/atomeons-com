@@ -1,0 +1,37 @@
+{
+ "source": "09-Gatsby.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.1984594464302063,
+  0.5372563600540161,
+  0.7528252005577087
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "09-Gatsby.L0.jpg",
+   "alpha": "09-Gatsby.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.0376
+  },
+  {
+   "file": "09-Gatsby.L1.jpg",
+   "alpha": "09-Gatsby.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.3592
+  },
+  {
+   "file": "09-Gatsby.L2.jpg",
+   "alpha": "09-Gatsby.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.7154
+  },
+  {
+   "file": "09-Gatsby.L3.jpg",
+   "alpha": "09-Gatsby.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.7903
+  }
+ ]
+}

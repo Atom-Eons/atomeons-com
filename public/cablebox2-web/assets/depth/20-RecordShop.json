@@ -1,0 +1,37 @@
+{
+ "source": "20-RecordShop.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.14427027106285095,
+  0.4644225537776947,
+  0.7887581586837769
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "20-RecordShop.L0.jpg",
+   "alpha": "20-RecordShop.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.0371
+  },
+  {
+   "file": "20-RecordShop.L1.jpg",
+   "alpha": "20-RecordShop.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.2515
+  },
+  {
+   "file": "20-RecordShop.L2.jpg",
+   "alpha": "20-RecordShop.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.6774
+  },
+  {
+   "file": "20-RecordShop.L3.jpg",
+   "alpha": "20-RecordShop.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.8999
+  }
+ ]
+}

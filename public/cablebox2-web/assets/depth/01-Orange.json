@@ -1,0 +1,37 @@
+{
+ "source": "01-Orange.png",
+ "width": 1536,
+ "height": 1024,
+ "cuts": [
+  0.19762755930423737,
+  0.5055205225944519,
+  0.7190449237823486
+ ],
+ "parallaxPx": 9.0,
+ "layers": [
+  {
+   "file": "01-Orange.L0.jpg",
+   "alpha": "01-Orange.L0.a.png",
+   "band": 0,
+   "meanDepth": 0.0412
+  },
+  {
+   "file": "01-Orange.L1.jpg",
+   "alpha": "01-Orange.L1.a.png",
+   "band": 1,
+   "meanDepth": 0.3555
+  },
+  {
+   "file": "01-Orange.L2.jpg",
+   "alpha": "01-Orange.L2.a.png",
+   "band": 2,
+   "meanDepth": 0.6572
+  },
+  {
+   "file": "01-Orange.L3.jpg",
+   "alpha": "01-Orange.L3.a.png",
+   "band": 3,
+   "meanDepth": 0.7813
+  }
+ ]
+}
