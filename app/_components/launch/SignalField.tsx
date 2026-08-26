@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import styles from "./SignalField.module.css";
 
-const PARTICLE_COUNT = 44000;
+const DESKTOP_PARTICLE_COUNT = 44000;
+const MOBILE_PARTICLE_COUNT = 12000;
 
 const vertexShader = /* glsl */ `
   uniform float uTime;
@@ -63,17 +64,17 @@ const fragmentShader = /* glsl */ `
   }
 `;
 
-function buildArtifactGeometry() {
+function buildArtifactGeometry(particleCount: number) {
   const geometry = new THREE.BufferGeometry();
-  const positions = new Float32Array(PARTICLE_COUNT * 3);
-  const seeds = new Float32Array(PARTICLE_COUNT);
-  const sizes = new Float32Array(PARTICLE_COUNT);
-  const accents = new Float32Array(PARTICLE_COUNT);
+  const positions = new Float32Array(particleCount * 3);
+  const seeds = new Float32Array(particleCount);
+  const sizes = new Float32Array(particleCount);
+  const accents = new Float32Array(particleCount);
 
-  for (let i = 0; i < PARTICLE_COUNT; i += 1) {
+  for (let i = 0; i < particleCount; i += 1) {
     const seed = (i * 0.61803398875) % 1;
     const ribbon = i % 7;
-    const t = (i / PARTICLE_COUNT) * Math.PI * 18 + ribbon * 0.19;
+    const t = (i / particleCount) * Math.PI * 18 + ribbon * 0.19;
     const knot = t * 0.333;
     const radius = 1.52 + Math.cos(knot * 3) * 0.38;
     const coreX = radius * Math.cos(knot * 2);
@@ -108,13 +109,14 @@ export function SignalField() {
     if (!canvas || !field) return;
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const compact = window.matchMedia("(max-width: 820px)").matches;
     let renderer: THREE.WebGLRenderer;
     try {
       renderer = new THREE.WebGLRenderer({
         canvas,
         alpha: false,
         antialias: false,
-        powerPreference: "high-performance",
+        powerPreference: compact ? "low-power" : "high-performance",
       });
     } catch {
       field.dataset.fallback = "true";
@@ -122,7 +124,7 @@ export function SignalField() {
     }
 
     renderer.setClearColor(0xf7f7f2, 1);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, compact ? 1 : 1.5));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
 
     const scene = new THREE.Scene();
@@ -135,7 +137,7 @@ export function SignalField() {
     group.scale.setScalar(1.72);
     scene.add(group);
 
-    const geometry = buildArtifactGeometry();
+    const geometry = buildArtifactGeometry(compact ? MOBILE_PARTICLE_COUNT : DESKTOP_PARTICLE_COUNT);
     const uniforms = {
       uTime: { value: 0 },
       uPointer: { value: new THREE.Vector2(0, 0) },
@@ -247,8 +249,8 @@ export function SignalField() {
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
       const mobile = width < 820;
-      group.position.set(mobile ? 0 : 0.08, mobile ? -0.9 : -0.02, 0);
-      group.scale.setScalar(mobile ? 1.08 : 1.72);
+      group.position.set(mobile ? 0.62 : 0.08, mobile ? -0.62 : -0.02, 0);
+      group.scale.setScalar(mobile ? 0.96 : 1.72);
     };
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(field);
@@ -256,7 +258,12 @@ export function SignalField() {
     onScroll();
 
     let frame = 0;
+    let visible = true;
     const render = (now = 0) => {
+      if (!visible) {
+        frame = 0;
+        return;
+      }
       const t = now * 0.001;
       pointer.lerp(targetPointer, reduceMotion ? 1 : 0.045);
       pulseVelocity *= 0.935;
@@ -288,8 +295,22 @@ export function SignalField() {
     };
     render();
 
+    const visibilityObserver = new IntersectionObserver(([entry]) => {
+      const nextVisible = entry.isIntersecting && !document.hidden;
+      if (nextVisible === visible) return;
+      visible = nextVisible;
+      if (!visible) {
+        cancelAnimationFrame(frame);
+        frame = 0;
+      } else if (!reduceMotion && frame === 0) {
+        frame = requestAnimationFrame(render);
+      }
+    }, { rootMargin: "120px" });
+    visibilityObserver.observe(field);
+
     return () => {
       cancelAnimationFrame(frame);
+      visibilityObserver.disconnect();
       resizeObserver.disconnect();
       window.removeEventListener("pointermove", onPointer);
       window.removeEventListener("pointerleave", onPointerLeave);

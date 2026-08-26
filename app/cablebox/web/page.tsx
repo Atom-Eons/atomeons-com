@@ -24,7 +24,7 @@ export default function CableboxWebPage() {
         title="CableBox 2 live browser edition"
         allow="autoplay; fullscreen"
       />
-      <p className={styles.hint}>CLICK THE TELEVISION / USE LEFT + RIGHT / R RANDOM / C CONTROLS</p>
+      <p className={styles.hint}>TAP THE KNOBS / SWIPE CHANNELS / ROTATE FOR THE BIG SCREEN</p>
     </main>
   );
 }

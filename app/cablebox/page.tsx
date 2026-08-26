@@ -66,7 +66,7 @@ export default function CableBoxPage() {
           <div><span>Tap the television. Use the knobs on a phone or the arrow keys on a computer.</span><Link href="/cablebox/web">Open full screen ↗</Link></div>
         </header>
         <div className={styles.frame}>
-          <iframe src={webEdition} title="CableBox 2 live web edition" allow="autoplay; fullscreen" loading="eager" />
+          <iframe src={webEdition} title="CableBox 2 live web edition" allow="autoplay; fullscreen" loading="lazy" />
         </div>
         <footer><span>WEB EDITION / TOUCH + KEYBOARD</span><span>THEME KNOB / CHANNEL KNOB / GUIDE</span></footer>
       </section>

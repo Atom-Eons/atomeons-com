@@ -56,10 +56,10 @@
 .field[data-fallback="true"] .fallback { opacity: 1; }
 
 @media (max-width: 900px) {
-  .field canvas { opacity: .72; }
+  .field canvas { opacity: .56; }
   .haze {
     background:
-      linear-gradient(180deg, rgba(247,247,242,.98) 0 32%, rgba(247,247,242,.68) 42%, transparent 59%);
+      linear-gradient(180deg, rgba(247,247,242,.94) 0 24%, rgba(247,247,242,.62) 43%, rgba(247,247,242,.1) 72%, transparent 88%);
   }
   .legend { display: none; }
   .fallback { top: 30%; right: -36%; width: 120vw; }
