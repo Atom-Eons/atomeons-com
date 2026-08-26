@@ -1,194 +1,80 @@
 import type { Metadata } from "next";
-import {
-  RouteCampaign,
-  RouteCards,
-  RouteFacts,
-  RouteFinal,
-  RouteNote,
-  RoutePage,
-  RouteSection,
-} from "../_components/aether/RoutePage";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./orange.module.css";
 
 export const metadata: Metadata = {
-  title: "Orange5",
+  title: "Atomic Orange | Incoming",
   description:
-    "Orange5 is the AtomEons sovereign AI operating-system path: memory, agents, model choice, workflow, receipts, and operator authority.",
+    "Atomic Orange is the incoming AtomEons operator surface: one place to direct AI work, keep the history, and remain human at the controls.",
   alternates: { canonical: "https://atomeons.com/orange5" },
   openGraph: {
-    title: "Orange5 · Stop renting your second brain",
-    description:
-      "A staged AI operator system for people who direct AI work instead of renting a chatbot.",
+    title: "Atomic Orange | Your AI should remember what you are building",
+    description: "A working relationship with memory—not another empty chat window.",
     url: "https://atomeons.com/orange5",
     siteName: "AtomEons",
     type: "website",
-    images: [
-      {
-        url: "/aether-v2/orange5-object-v2.webp",
-        width: 1536,
-        height: 1024,
-        alt: "Orange5 sovereign AI operator object",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Orange5 · Stop renting your second brain",
-    description:
-      "Memory, agents, model choice, workflow, receipts, and operator authority.",
-    creator: "@AtomMccree",
-    images: ["/aether-v2/orange5-object-v2.webp"],
+    images: [{ url: "/aether-v2/orange5-object-v2.webp", width: 1536, height: 1024, alt: "Atomic Orange operator object" }],
   },
 };
 
-export default function Orange5Page() {
+export default function AtomicOrangePage() {
   return (
-    <RoutePage
-      eyebrow="PRODUCT / 03 / IN DEVELOPMENT"
-      title="Stop renting"
-      accentTitle="your second brain."
-      lede="Orange5 is the AtomEons infrastructure path: a sovereign operating system for people who direct AI work with memory, agents, model choice, workflow, receipts, and human final authority."
-      asideTitle="This is the control layer."
-      asideBody="Orange5 is staged honestly as architecture and active development. The promise is not another chatbot skin. The promise is operator control over the work, the files, the memory, and the proof."
-      accent="#f36b21"
-      actions={[
-        {
-          href: "mailto:a.mccree@gmail.com?subject=%5Bhello%40atomeons.com%5D%20%5BOrange5%5D%20notify%20me%20on%20launch&body=AtomEons%20route%3A%20hello%40atomeons.com%0ADirect%20destination%3A%20a.mccree%40gmail.com%0AProduct%3A%20Orange5%0A%0AMessage%3A%0A",
-          label: "Notify me",
-          accent: true,
-        },
-        { href: "/research/discoveries/aememory", label: "Open AEMemory" },
-      ]}
-    >
-      <RouteCampaign
-        image="/aether-v2/orange5-object-v2.webp"
-        imageAlt="A white and safety-orange sovereign AI operator console with physical controls"
-        object="ORANGE5 / OPERATOR OBJECT 03"
-        measure="MEMORY / AGENTS / PROOF / CONTROL"
-        label="LOCAL-FIRST / BUILD UNDERWAY"
-        title="Your machine. Your mind."
-        note="SOVEREIGN AI OPERATING SYSTEM PATH"
-        priority
-      />
+    <main className={styles.page}>
+      <section className={styles.hero} aria-labelledby="orange-title">
+        <div className={styles.copy}>
+          <p><i /> INCOMING / OBJECT 02</p>
+          <h1 id="orange-title">Your AI should remember what you&apos;re building.</h1>
+          <span>
+            Atomic Orange is one place to direct the work, keep the history, choose
+            the intelligence, and stay human at the controls.
+          </span>
+          <a href="mailto:a.mccree@gmail.com?subject=Atomic%20Orange%20launch%20signal">Get the launch signal <b aria-hidden="true">↗</b></a>
+          <small>NO FAKE DOWNLOAD / WE OPEN IT WHEN THE PUBLIC BUILD EARNS THE CLAIM</small>
+        </div>
+        <div className={styles.object}>
+          <Image src="/aether-v2/orange5-object-v2.webp" alt="White and safety-orange Atomic Orange operator console" fill priority unoptimized sizes="(max-width: 900px) 100vw, 52vw" />
+          <span>ATOMIC ORANGE / FIRST SIGNAL</span>
+        </div>
+      </section>
 
-      <RouteSection
-        index="POSITION / CLEAR"
-        title="AI should not become a stranger every time the window closes."
-        body="Orange5 exists to turn scattered AI sessions into an operator-controlled work system. The long-term product is continuity: memory, agents, files, decisions, proof, and model choice organized around the person doing the work."
-      >
-        <RouteFacts
-          facts={[
-            {
-              label: "STATE",
-              value: "Build underway",
-              body: "Presented as active architecture and implementation, not a finished commercial release.",
-            },
-            {
-              label: "CENTER",
-              value: "Operator authority",
-              body: "The human sets direction, scope, permissions, and final judgment.",
-            },
-            {
-              label: "THESIS",
-              value: "Own the work",
-              body: "Useful AI should preserve files, decisions, context, receipts, and memory instead of scattering them across rented windows.",
-            },
-            {
-              label: "BOUNDARY",
-              value: "No fake launch",
-              body: "The site names the ambition without pretending every module is already finished.",
-            },
-          ]}
-        />
-      </RouteSection>
+      <section className={styles.problem} aria-labelledby="problem-title">
+        <p>THE PROBLEM</p>
+        <h2 id="problem-title">Every empty chat window asks you to become a stranger again.</h2>
+        <div>
+          <span>01</span>
+          <p>You repeat the project. You hunt for the file. You reconstruct the decision. You teach the machine who you are, then the window closes.</p>
+        </div>
+      </section>
 
-      <RouteSection
-        index="SYSTEM / MODULES"
-        title="Four things have to become one machine."
-        body="Orange5 is strongest when it is presented as a system, not a feature pile. These are the core module promises the product has to keep earning."
-      >
-        <RouteCards
-          cards={[
-            {
-              meta: "MEMORY",
-              title: "AEMemory",
-              body: "A durable memory architecture so the system can remember the work without drowning in the transcript.",
-              href: "/research/discoveries/aememory",
-            },
-            {
-              meta: "AGENTS",
-              title: "Directed workforce",
-              body: "Bounded agent work with visible scope, status, evidence, and human final authority.",
-              href: "/receipts",
-            },
-            {
-              meta: "MODELS",
-              title: "Interchangeable intelligence",
-              body: "The operator should be able to route work across models and tools without surrendering the whole operating system.",
-              href: "/api",
-            },
-          ]}
-        />
-      </RouteSection>
+      <section className={styles.promise} aria-labelledby="promise-title">
+        <header><p>THE PROMISE / IN HUMAN TERMS</p><h2 id="promise-title">Less re-explaining.<br />More making.</h2></header>
+        <div className={styles.grid}>
+          <article><span>REMEMBER</span><h3>Pick up where you left off.</h3><p>The history of the work should return as useful context, not a mountain of transcript.</p></article>
+          <article><span>DIRECT</span><h3>Run a studio, not a chat.</h3><p>Give different jobs to different kinds of intelligence while you keep the direction.</p></article>
+          <article><span>SEE</span><h3>Know what actually happened.</h3><p>Files, changes, checks, links, and proof stay visible when the work says it is done.</p></article>
+          <article><span>OWN</span><h3>Keep the person in the machine.</h3><p>Your files, your history, your judgment, and your final say remain at the center.</p></article>
+        </div>
+      </section>
 
-      <RouteSection
-        index="OPERATOR LOOP / DAILY USE"
-        title="The product is the loop, not the dashboard."
-        body="Orange5 becomes understandable when the visitor can imagine a day inside it: capture the work, route it to the right machine, execute with receipts, and carry the memory forward."
-      >
-        <RouteCards
-          cards={[
-            {
-              meta: "CAPTURE",
-              title: "Pull the real work into one cockpit.",
-              body: "Files, conversations, plans, research, receipts, product states, and operator intent should enter one working surface instead of living in scattered tabs.",
-            },
-            {
-              meta: "ROUTE",
-              title: "Send the job to the right intelligence.",
-              body: "Different models, agents, scripts, and tools should be chosen for the task instead of forcing every job through one generic chatbot window.",
-            },
-            {
-              meta: "PROVE",
-              title: "Leave a trail the operator can trust.",
-              body: "Completed work should produce evidence: changed files, checks, receipts, links, version state, and visible limits.",
-            },
-            {
-              meta: "REMEMBER",
-              title: "Carry the truth into the next session.",
-              body: "The system should not forget the project every morning. Durable memory turns prior work into operating context instead of transcript bloat.",
-            },
-          ]}
-        />
-      </RouteSection>
+      <section className={styles.status}>
+        <div><p>CURRENT PUBLIC STATE</p><h2>It is working.<br />It is not yours yet.</h2></div>
+        <div><p>Atomic Orange is actively used inside AtomEons. The public product, documentation, source boundary, and download have not yet been handed off as a verified release.</p><strong>That distinction matters.</strong><span>When it is ready, this page will become the front door—not a promise pretending to be a product.</span></div>
+      </section>
 
-      <RouteSection
-        index="WHY IT MATTERS"
-        title="The product bet is sovereignty."
-        body="Most AI products rent you a window. Orange5 points in the opposite direction: your models where possible, your files, your memory, your receipts, your operating history."
-      >
-        <RouteFacts
-          facts={[
-            { label: "FILES", value: "Stay yours", body: "The work starts with the operator's actual local context and artifacts." },
-            { label: "MEMORY", value: "Carries forward", body: "Durable state should reduce the need to re-explain the same world every session." },
-            { label: "PROOF", value: "Visible", body: "Receipts separate completed work from claims, plans, and guesses." },
-            { label: "CONTROL", value: "Human", body: "AI multiplies capability without replacing final responsibility." },
-          ]}
-        />
-        <RouteNote title="Current public status">
-          Orange5 is not presented as downloadable final software on this site.
-          It is the staged infrastructure path behind the broader AtomEons work.
-        </RouteNote>
-      </RouteSection>
+      <section className={styles.research}>
+        <p>THE IDEAS UNDERNEATH</p>
+        <div>
+          <Link href="/research/discoveries/aememory"><span>01</span><strong>AEMemory</strong><small>Continuity without transcript overload.</small><b>↗</b></Link>
+          <Link href="/receipts"><span>02</span><strong>Receipts</strong><small>Proof that the work actually happened.</small><b>↗</b></Link>
+          <Link href="/research"><span>03</span><strong>Research</strong><small>The wider experimental field.</small><b>↗</b></Link>
+        </div>
+      </section>
 
-      <RouteFinal
-        eyebrow="INFRASTRUCTURE PATH / STILL BUILDING"
-        title="The future should remember who is operating it."
-        actions={[
-          { href: "/products", label: "Back to products", accent: true },
-          { href: "/research/discoveries/aememory", label: "Study AEMemory" },
-          { href: "/contact", label: "Ask about Orange5" },
-        ]}
-      />
-    </RoutePage>
+      <section className={styles.final}>
+        <h2>Your machine.<br />Your mind.<br />Still you.</h2>
+        <a href="mailto:a.mccree@gmail.com?subject=Atomic%20Orange%20launch%20signal">Get the signal ↗</a>
+      </section>
+    </main>
   );
 }
