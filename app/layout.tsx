@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     siteName: "AtomEons",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/og.png", width: 1734, height: 907, alt: "AtomEons — things that did not exist" }],
+    images: [{ url: "/og-v27.png", width: 1727, height: 911, alt: "AtomEons — things that did not exist" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AtomEons | Things that did not exist",
     description: "CableBox 2 is live. Atomic Orange is incoming.",
     creator: "@AtomMccree",
-    images: ["/og.png"],
+    images: ["/og-v27.png"],
   },
   robots: {
     index: true,

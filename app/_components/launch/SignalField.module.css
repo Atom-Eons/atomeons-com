@@ -1,35 +1,71 @@
 .field {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
+  touch-action: pan-y;
 }
 
-.field canvas { width: 100%; height: 100%; opacity: .88; }
+.field canvas {
+  width: 100%;
+  height: 100%;
+  opacity: .96;
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.haze {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(247,247,242,.92) 0 24%, rgba(247,247,242,.48) 39%, transparent 58%);
+}
+
+.legend {
+  position: absolute;
+  right: clamp(20px, 3vw, 46px);
+  bottom: 24px;
+  display: flex;
+  gap: 14px;
+  color: rgba(17,18,15,.45);
+  font-family: var(--font-mono), monospace;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.legend span::before { margin-right: 5px; color: #ff4f12; content: "/"; }
 
 .fallback {
   position: absolute;
-  top: 12%;
-  right: 2%;
-  width: min(42vw, 620px);
-  aspect-ratio: 1;
-  border: 1px solid rgba(17,18,15,.16);
+  top: 6%;
+  right: -4%;
+  width: min(61vw, 900px);
+  aspect-ratio: 1.2;
+  border: 1px solid rgba(17,18,15,.18);
   border-radius: 50%;
   background:
-    radial-gradient(circle at 32% 68%, #ff4f12 0 2.5%, transparent 2.7%),
-    radial-gradient(circle at 61% 42%, rgba(17,18,15,.12), transparent 34%);
+    radial-gradient(circle at 28% 68%, #ff4f12 0 2.5%, transparent 2.7%),
+    radial-gradient(circle at 62% 35%, #2257df 0 1.4%, transparent 1.6%),
+    repeating-radial-gradient(ellipse at center, transparent 0 20px, rgba(17,18,15,.11) 21px 22px, transparent 23px 34px);
   opacity: 0;
+  transform: rotate(-8deg);
 }
 
 .field[data-fallback="true"] canvas { display: none; }
 .field[data-fallback="true"] .fallback { opacity: 1; }
 
 @media (max-width: 900px) {
-  .field { opacity: .54; }
-  .fallback { top: 4%; right: -24%; width: 90vw; }
+  .field canvas { opacity: .72; }
+  .haze {
+    background:
+      linear-gradient(180deg, rgba(247,247,242,.98) 0 32%, rgba(247,247,242,.68) 42%, transparent 59%);
+  }
+  .legend { display: none; }
+  .fallback { top: 30%; right: -36%; width: 120vw; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .field { opacity: .42; }
+  .field canvas { opacity: .58; }
+  .legend { display: none; }
 }

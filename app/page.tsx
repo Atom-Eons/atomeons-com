@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
-    images: [{ url: "/og.png", width: 1734, height: 907, alt: "AtomEons — things that did not exist" }],
+    images: [{ url: "/og-v27.png", width: 1727, height: 911, alt: "AtomEons — things that did not exist" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AtomEons | Things that did not exist",
     description: "CableBox 2 is live. Atomic Orange is incoming.",
     creator: "@AtomMccree",
-    images: ["/og.png"],
+    images: ["/og-v27.png"],
   },
 };
 
@@ -61,19 +61,35 @@ export default function Home() {
           <p className={styles.trustLine}>Free. Open source. No account. The web edition works with touch.</p>
         </div>
 
-        <Link className={styles.heroObject} href="/cablebox/web" aria-label="Open the CableBox 2 web edition">
-          <Image
-            src="/cablebox-premiere/hero-active.webp"
-            alt="CableBox 2 running inside a cinematic vintage television"
-            fill
-            priority
-            unoptimized
-            sizes="(max-width: 900px) 100vw, 52vw"
-          />
-          <span className={styles.objectGlow} aria-hidden="true" />
-          <span className={styles.playPill}><i /> LIVE WEB EDITION</span>
-          <span className={styles.objectNote}>CLICK THE TELEVISION</span>
-        </Link>
+        <div className={styles.heroArtifact}>
+          <div className={styles.artifactCoordinates} aria-hidden="true">
+            <span>26.1423° N</span><span>81.7948° W</span>
+          </div>
+          <Link className={styles.heroObject} href="/cablebox/web" aria-label="Open the CableBox 2 web edition">
+            <Image
+              src="/cablebox-premiere/hero-active.webp"
+              alt="CableBox 2 running inside a cinematic vintage television"
+              fill
+              priority
+              unoptimized
+              sizes="(max-width: 900px) 100vw, 52vw"
+            />
+            <span className={styles.objectScan} aria-hidden="true" />
+            <span className={styles.objectGlow} aria-hidden="true" />
+            <span className={styles.playPill}><i /> LIVE WEB EDITION</span>
+            <span className={styles.objectNote}>ENTER THE SIGNAL ↗</span>
+          </Link>
+          <div className={styles.artifactReadout} aria-hidden="true">
+            <span>OBJECT 01</span><b>CBX / II</b><small>ANALOG SOUL<br />DIGITAL NERVE</small>
+          </div>
+        </div>
+        <div className={styles.transmissionRail} aria-hidden="true">
+          <span>TELEVISION WITHOUT THE HOMEWORK</span>
+          <i />
+          <span>33 WORLDS / ONE DIAL</span>
+          <i />
+          <span>THE SIGNAL IS ALIVE</span>
+        </div>
       </section>
 
       <section className={styles.thesis} aria-labelledby="thesis-title">
