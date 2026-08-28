@@ -7,7 +7,7 @@ export type SiteEntry = {
 };
 
 export const SITE_INDEX: SiteEntry[] = [
-  { title: "Home", href: "/", description: "The Aether front door into AtomEons.", category: "Company", keywords: ["home", "aether", "atomeons"] },
+  { title: "The Orange AI Computer", href: "/", description: "The Orange AI Computer from Atom Eons: local-first intelligence with memory, orchestration, tools, agents, and proof.", category: "Products", keywords: ["home", "orange", "ai computer", "memory", "agents", "atomeons"] },
   { title: "AE BRAWL", href: "/brawl", description: "OpenAI Build Week project: an accountless supervised same-night training PWA with the seven-tool LeadMCP referral protocol.", category: "Creations", keywords: ["ae brawl", "brawl", "supervised training", "openai build week", "devpost", "lead mcp", "leadmcp", "doorpass", "agent commerce"] },
   { title: "Products", href: "/products", description: "The four current AtomEons products.", category: "Products", keywords: ["products", "cablebox", "bookmaker", "orange5", "i am ai"] },
   { title: "CableBox", href: "/cablebox", description: "Native Windows cable-surfing art with CRT glass, channels, guide, favorites, and release-download gate.", category: "Products", keywords: ["television", "tv", "crt", "channels", "windows", "native", "installer", "download", "release", "cable", "guide", "favorites"] },

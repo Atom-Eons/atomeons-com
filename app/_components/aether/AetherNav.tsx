@@ -5,13 +5,15 @@ import Link from "next/link";
 import styles from "./AetherNav.module.css";
 
 const navigation = [
+  ["Orange AI Computer", "https://github.com/AtomEons/Orange-AI-Computer"],
   ["CableBox 2", "/cablebox"],
-  ["Atomic Orange", "/orange5"],
   ["Books", "/books"],
   ["Research", "/research"],
   ["Show", "/atom-alive"],
   ["About", "/about"],
 ] as const;
+
+const orangeDownload = "https://github.com/AtomEons/Orange-AI-Computer/releases/latest";
 
 export function AetherNav() {
   const [open, setOpen] = useState(false);
@@ -36,7 +38,7 @@ export function AetherNav() {
         </nav>
 
         <div className={styles.actions}>
-          <Link href="/cablebox/web" className={styles.tryButton}>Try CableBox <span aria-hidden="true">↗</span></Link>
+          <Link href={orangeDownload} className={styles.tryButton}>Download Orange <span aria-hidden="true">↗</span></Link>
           <button
             className={styles.menuButton}
             aria-expanded={open}
@@ -56,8 +58,8 @@ export function AetherNav() {
               <small>0{index + 1}</small><span>{label}</span><b aria-hidden="true">↗</b>
             </Link>
           ))}
-          <Link className={styles.mobileTry} href="/cablebox/web" onClick={() => setOpen(false)}>
-            Turn on CableBox 2 <b aria-hidden="true">↗</b>
+          <Link className={styles.mobileTry} href={orangeDownload} onClick={() => setOpen(false)}>
+            Download the AI Computer <b aria-hidden="true">↗</b>
           </Link>
         </nav>
       ) : null}

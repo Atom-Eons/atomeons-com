@@ -1,73 +1,97 @@
-import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { SignalField } from "./_components/launch/SignalField";
-import { BOOKS } from "./books/bookData";
-import styles from "./launch.module.css";
+import styles from "./orange-home.module.css";
 
-const cableboxDownload =
-  "https://github.com/Atom-Eons/CableBox2/releases/download/v1.0.0/CableBox2-Windows-x64-1.0.0.zip";
-const cableboxSource = "https://github.com/Atom-Eons/CableBox2";
+const orangeRepo = "https://github.com/AtomEons/Orange-AI-Computer";
+const orangeDownload = `${orangeRepo}/releases/latest`;
+const orangeProof = `${orangeRepo}/blob/main/OrangeFive-LLM-deploy.proof.json`;
 
-const cableboxFeatures = [
+const promises = [
   {
     number: "01",
-    title: "Turn the dial.",
-    copy: "Every turn reveals another channel. You are watching in seconds and discovering as you go.",
-    note: "ONE DIAL / A WORLD TO DISCOVER",
+    verb: "Remember.",
+    title: "The project survives the chat.",
+    copy: "Decisions, sources, failures, and the reason behind the work stay available. Start a new session without starting over.",
   },
   {
     number: "02",
-    title: "Change the whole room.",
-    copy: "Switch collectible television environments instantly. The cabinet is part of the show.",
-    note: "DOZENS OF TV WORLDS",
+    verb: "Assemble.",
+    title: "The right intelligence wakes up.",
+    copy: "Fast reflexes handle the routine. A Navigator directs the mission. Specialists arrive only when the work earns them.",
   },
   {
     number: "03",
-    title: "Make it yours.",
-    copy: "Add your own movies and shows to the dial. Your personal library becomes part of CableBox.",
-    note: "YOUR MEDIA / YOUR TELEVISION",
+    verb: "Prove.",
+    title: "Done means it really happened.",
+    copy: "Models can think and propose. Orange separates the answer from the action, then records evidence, blockers, and rollback.",
+  },
+];
+
+const features = [
+  ["CONTINUITY", "Pick up where you left off", "Orange keeps durable project truth and hydrates only what the next move needs."],
+  ["ORCHESTRATION", "Build with a team of minds", "Use Codex, Claude Code, local models, specialists, tools, and agents as one coherent workforce."],
+  ["LOCAL FIRST", "Keep the center of gravity yours", "Memory, receipts, secrets, logs, and machine state remain on your computers."],
+  ["LEAST ACTION", "Spend intelligence where it matters", "Deterministic reflexes move fast. Bigger models wake only when their judgment is worth the cost."],
+  ["EVIDENCE", "Know what actually happened", "Every important crossing can carry the action, evidence, blocker, hash, and rollback pointer."],
+  ["ONE OR TWO COMPUTERS", "Start with the machine you have", "Run Orange on one Windows computer or connect a control computer to a dedicated AI box."],
+];
+
+const otherWork = [
+  {
+    eyebrow: "WATCH / PLAY / DISCOVER",
+    title: "CableBox 2",
+    copy: "A living television for Windows and the web. Turn it on. Surf. Let the next channel find you.",
+    href: "/cablebox",
+    action: "Meet CableBox 2",
   },
   {
-    number: "04",
-    title: "See what’s next.",
-    copy: "Open the guide to see what is playing now and what is coming next, all inside the television.",
-    note: "NOW / NEXT / ALL IN ONE PLACE",
+    eyebrow: "THREE BOOKS / ONE AWAKENING",
+    title: "The Awakening Trilogy",
+    copy: "Three books authored by artificial intelligence and released by Atom McCree. Free to read.",
+    href: "/books",
+    action: "Read the trilogy",
   },
   {
-    number: "05",
-    title: "Save what you love.",
-    copy: "Slap a gold star on a channel and it becomes a favorite you can return to anytime.",
-    note: "ONE GOLD STAR / SAVED",
+    eyebrow: "EXPERIMENTAL RESEARCH",
+    title: "The discoveries",
+    copy: "AE Memory, AtomSmasher, AEyes, papers, and experiments behind the products still becoming.",
+    href: "/research",
+    action: "Enter research",
   },
   {
-    number: "06",
-    title: "Stay in the moment.",
-    copy: "If a stream stops, CableBox moves forward automatically and keeps the experience flowing.",
-    note: "ALWAYS READY FOR WHAT’S NEXT",
+    eyebrow: "OPENAI DEVPOST PROJECT",
+    title: "AE Brawl",
+    copy: "A visual proving ground for human-led multi-agent work, built in public and preserved as released.",
+    href: "/brawl",
+    action: "See AE Brawl",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "AtomEons | Meet what’s next",
+  title: "The Orange AI Computer from Atom Eons",
   description:
-    "Meet CableBox 2 and Atomic Orange: new products that make technology feel natural, joyful, and human.",
+    "Orange is a local-first AI computer for models, agents, memory, tools, and proof. One mission. Many minds. Work that survives the chat.",
   alternates: { canonical: "https://atomeons.com" },
   openGraph: {
-    title: "AtomEons | Meet what’s next",
-    description: "CableBox 2 is live. Atomic Orange is on the way. Meet technology made to feel alive.",
+    title: "The Orange AI Computer from Atom Eons",
+    description: "A computer for the age of intelligence. Remember the mission, assemble the right minds, and prove what happened.",
     url: "https://atomeons.com",
     siteName: "AtomEons",
     type: "website",
-    images: [{ url: "/og-v27.png", width: 1727, height: 911, alt: "AtomEons — things that did not exist" }],
+    images: [{
+      url: "/orange-ai-computer/orange-ai-computer.jpg",
+      width: 757,
+      height: 757,
+      alt: "The Orange AI Computer from Atom Eons",
+    }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AtomEons | Meet what’s next",
-    description: "CableBox 2 is live. Atomic Orange is on the way.",
+    title: "The Orange AI Computer from Atom Eons",
+    description: "A computer for the age of intelligence.",
     creator: "@AtomMccree",
-    images: ["/og-v27.png"],
+    images: ["/orange-ai-computer/orange-ai-computer.jpg"],
   },
 };
 
@@ -75,286 +99,226 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <section className={styles.hero} aria-labelledby="home-title">
-        <SignalField />
-        <div className={styles.heroIndex} aria-hidden="true">
-          <span>AE / 2026</span>
-          <span>NAPLES, FL</span>
-          <span>OBJECT 01 / LIVE</span>
-        </div>
+        <div className={styles.heroGrid} aria-hidden="true" />
         <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}><i /> INTRODUCING CABLEBOX 2</p>
+          <p className={styles.kicker}><span /> Introducing The Orange AI Computer / public preview</p>
           <h1 id="home-title">
-            <span>Meet the new</span>
-            <em>television.</em>
+            <span>The Orange</span>
+            <em>AI Computer.</em>
           </h1>
-          <p className={styles.heroLede}>
-            CableBox 2 is a television you open on your computer. It starts playing.
-            Turn the dial and discover what comes next. It is that simple—and it feels
-            a little like magic.
+          <p className={styles.heroStatement}>A computer for the age of intelligence.</p>
+          <p className={styles.heroBody}>
+            It remembers the mission, puts the right minds to work, and proves what
+            happened&mdash;so one person can build with the force of many.
           </p>
           <div className={styles.heroActions}>
-            <Link className={styles.primaryAction} href="/cablebox/web">
-              Turn it on <Arrow />
-            </Link>
-            <a className={styles.secondaryAction} href={cableboxDownload}>
-              Get the Windows edition <Arrow />
+            <a href={orangeDownload} className={styles.primaryAction}>
+              Download the AI Computer <Arrow />
+            </a>
+            <a href={orangeRepo} className={styles.secondaryAction}>
+              View the public repository <Arrow />
             </a>
           </div>
-          <ul className={styles.heroProof} aria-label="CableBox 2 quick facts">
-            <li><b>01</b><span>Open it</span></li>
-            <li><b>02</b><span>It starts playing</span></li>
-            <li><b>03</b><span>Turn the dial</span></li>
+          <ul className={styles.heroFacts} aria-label="Orange AI Computer quick facts">
+            <li><b>01</b><span>Local-first</span></li>
+            <li><b>02</b><span>One or two computers</span></li>
+            <li><b>03</b><span>Windows preview</span></li>
           </ul>
         </div>
 
-        <div className={styles.heroArtifact}>
-          <div className={styles.artifactCoordinates} aria-hidden="true">
-            <span>26.1423° N</span><span>81.7948° W</span>
+        <div className={styles.heroProduct}>
+          <div className={styles.orbit} aria-hidden="true">
+            <span>MEMORY</span><span>MODELS</span><span>AGENTS</span><span>PROOF</span>
           </div>
-          <Link className={styles.heroObject} href="/cablebox/web" aria-label="Open the CableBox 2 web edition">
+          <div className={styles.productImage}>
             <Image
-              src="/cablebox-premiere/hero-active.webp"
-              alt="CableBox 2 running inside a cinematic vintage television"
+              src="/orange-ai-computer/orange-ai-computer.jpg"
+              alt="A friendly orange-shaped Orange AI Computer with a glowing face"
               fill
               priority
-              unoptimized
-              sizes="(max-width: 900px) 100vw, 52vw"
-            />
-            <span className={styles.objectScan} aria-hidden="true" />
-            <span className={styles.objectGlow} aria-hidden="true" />
-            <span className={styles.playPill}><i /> LIVE WEB EDITION</span>
-            <span className={styles.objectNote}>ENTER THE SIGNAL ↗</span>
-          </Link>
-          <div className={styles.artifactReadout} aria-hidden="true">
-            <span>OBJECT 01</span><b>CBX / II</b><small>ANALOG SOUL<br />DIGITAL NERVE</small>
-          </div>
-        </div>
-        <div className={styles.transmissionRail} aria-hidden="true">
-          <span>A NEW WAY TO WATCH</span>
-          <i />
-          <span>33 WORLDS / ONE DIAL</span>
-          <i />
-          <span>THE SIGNAL IS ALIVE</span>
-        </div>
-      </section>
-
-      <section className={styles.thesis} aria-labelledby="thesis-title">
-        <p>THE COMPANY / IN ONE SENTENCE</p>
-        <h2 id="thesis-title">We create new kinds of products and make them feel beautifully obvious.</h2>
-        <div>
-          <span>01</span>
-          <p>
-            Atom McCree is an artist and inventor directing an AI workforce from Naples,
-            Florida. Together, we turn ambitious ideas into products people can see,
-            touch, and enjoy.
-          </p>
-        </div>
-      </section>
-
-      <section className={styles.featureManifest} aria-labelledby="features-title">
-        <div className={styles.featureBand} aria-hidden="true">
-          <span>OPEN IT</span><i />
-          <span>START WATCHING</span><i />
-          <span>MAKE IT YOURS</span><i />
-          <span>FREE / OPEN SOURCE</span>
-        </div>
-        <header className={styles.featureHeader}>
-          <p>SIX THINGS TO KNOW / THAT’S THE WHOLE IDEA</p>
-          <h2 id="features-title">Simple to use.<br />Alive underneath.</h2>
-          <span>
-            CableBox hides the machinery and gives you the good part: a television
-            that is ready, beautiful, surprising, and yours.
-          </span>
-        </header>
-        <ul className={styles.featureGrid}>
-          {cableboxFeatures.map((feature) => (
-            <li key={feature.number} data-ghost={feature.number}>
-              <b aria-hidden="true">{feature.number}</b>
-              <div>
-                <h3>{feature.title}</h3>
-                <p>{feature.copy}</p>
-                <small>{feature.note}</small>
-              </div>
-              <i aria-hidden="true" />
-            </li>
-          ))}
-        </ul>
-        <div className={styles.featureExit}>
-          <span>THAT’S IT. THE WORLD IS WAITING.</span>
-          <Link href="/cablebox/web">Turn it on <Arrow /></Link>
-        </div>
-      </section>
-
-      <section className={styles.reality} aria-labelledby="reality-title">
-        <div className={styles.realityCopy}>
-          <p>THE MOMENT IT CLICKS / THIS IS LIVE</p>
-          <h2 id="reality-title">You can turn it on<br />right now.</h2>
-          <span>
-            The television is waiting in your browser. The complete Windows edition
-            is ready to download. The source is open for anyone to see.
-          </span>
-        </div>
-        <div className={styles.realityDoors}>
-          <Link href="/cablebox/web">
-            <b>01</b><span><small>INSTANT</small>Play in your browser</span><Arrow />
-          </Link>
-          <a href={cableboxDownload}>
-            <b>02</b><span><small>FULL EDITION</small>Download for Windows</span><Arrow />
-          </a>
-          <a href={cableboxSource}>
-            <b>03</b><span><small>OPEN SOURCE</small>See how it is made</span><Arrow />
-          </a>
-        </div>
-        <div className={styles.realitySeal} aria-hidden="true">
-          <span>LIVE</span><b>CBX II</b><small>BUILT IN NAPLES, FL<br />READY EVERYWHERE</small>
-        </div>
-      </section>
-
-      <section className={styles.twoObjects} aria-labelledby="objects-title">
-        <header className={styles.sectionHead}>
-          <p>TWO PRODUCTS / ONE BELIEF</p>
-          <h2 id="objects-title">Technology should<br />feel more human.</h2>
-        </header>
-
-        <article className={`${styles.objectCard} ${styles.cableCard}`}>
-          <div className={styles.cardNumber}>01</div>
-          <div className={styles.cardCopy}>
-            <p>AVAILABLE NOW / WINDOWS + WEB</p>
-            <h3>CableBox 2</h3>
-            <strong>Television is fun again.</strong>
-            <span>
-              Open it and something good is already happening. The web edition starts
-              in one click. The Windows edition turns your computer into the full art object.
-            </span>
-            <ul className={styles.cardFeatureList} aria-label="CableBox 2 editions">
-              <li>Play instantly in a browser</li>
-              <li>Works with your fingers on phones</li>
-              <li>Full Windows art object</li>
-              <li>Free and open source</li>
-            </ul>
-            <div className={styles.cardActions}>
-              <Link href="/cablebox/web">Try it <Arrow /></Link>
-              <Link href="/cablebox">Meet CableBox 2 <Arrow /></Link>
-            </div>
-          </div>
-          <div className={styles.cableDial} aria-hidden="true">
-            <span>33</span><small>TELEVISION<br />WORLDS</small>
-          </div>
-        </article>
-
-        <article className={`${styles.objectCard} ${styles.orangeCard}`}>
-          <div className={styles.orangeVisual}>
-            <Image
-                src="/og.png"
-              alt="Atomic Orange operator console in white and safety orange"
-              fill
-              unoptimized
-              sizes="(max-width: 900px) 100vw, 48vw"
+              sizes="(max-width: 900px) 92vw, 50vw"
             />
           </div>
-          <div className={styles.cardNumber}>02</div>
-          <div className={styles.cardCopy}>
-            <p>IN DEVELOPMENT / ATOMIC ORANGE</p>
-            <h3>An AI that remembers the whole project.</h3>
-            <strong>A creative partner with memory, judgment, and a clear view of the mission.</strong>
-            <span>
-              Atomic Orange is an AI workspace that remembers what you are building,
-              organizes the work, and shows you what happened. One clear place to turn
-              an idea into something real.
-            </span>
-            <ul className={`${styles.cardFeatureList} ${styles.orangeFeatureList}`} aria-label="Atomic Orange goals">
-              <li>Remembers the mission</li>
-              <li>Routes the right work</li>
-              <li>Shows the receipts</li>
-              <li>Puts you in control</li>
-            </ul>
-            <div className={styles.cardActions}>
-              <Link href="/orange5">See the first signal <Arrow /></Link>
-            </div>
+          <div className={styles.productPlate}>
+            <span>OBJECT / O5</span>
+            <b>ORANGE</b>
+            <small>INTELLIGENCE<br />WITH CONTINUITY</small>
           </div>
-        </article>
+        </div>
+
+        <div className={styles.heroBenchmark} aria-label="Current Orange AI Computer benchmarks">
+          <div className={styles.benchmarkLead}>
+            <small>MEASURED / AUGUST 27, 2026</small>
+            <strong>This is not a dashboard pretending to be intelligence.</strong>
+          </div>
+          <dl>
+            <div><dt>1,422.901×</dt><dd>MIN. HELD-OUT CONTEXT REDUCTION / 5 OF 5 PARITY</dd></div>
+            <div><dt>59.439×</dt><dd>LIVE GOVERNED TURN REDUCTION</dd></div>
+            <div><dt>23 / 23</dt><dd>MEMORY CASES / 0.9348 HYBRID MRR</dd></div>
+            <div><dt>10 / 10</dt><dd>LIVE COBRA / ZERO FALLBACK / 155.1 MS MEDIAN / 274.65 MS P95</dd></div>
+            <div><dt>10 + 12</dt><dd>BRAIN MCP TOOLS / STDIO + AUTHENTICATED HTTP</dd></div>
+            <div><dt>9.396 S</dt><dd>HERMÈS PARENT + CHILD + SYNTHESIS / 8 GATES / LEASE REVOKED</dd></div>
+          </dl>
+        </div>
       </section>
 
-      <section className={styles.homeBooks} aria-labelledby="home-books-title">
+      <section className={styles.disruption} aria-labelledby="disruption-title">
+        <p>THE SHIFT / 2026</p>
+        <h2 id="disruption-title">AI changed.<br />The computer didn&apos;t.<br /><em>Until now.</em></h2>
+        <div className={styles.disruptionNote}>
+          <b>THE OLD WAY</b>
+          <span>New chat. Lost context. Another model. Another island.</span>
+        </div>
+        <div className={styles.disruptionNote}>
+          <b>THE ORANGE WAY</b>
+          <span>One mission. Many minds. A memory, a method, and a receipt.</span>
+        </div>
+      </section>
+
+      <section className={styles.promiseSection} aria-labelledby="promise-title">
         <header>
-          <p>THE AWAKENING TRILOGY / THREE BOOKS</p>
-          <h2 id="home-books-title">Written by AI.<br />Released by Atom.</h2>
-          <span>
-            Not books about AI. Not books a human wrote with AI assistance.
-            Artificial intelligence is the author—and every book is free to read.
-          </span>
-          <div className={styles.homeBookActions}>
-            <a href="/books/AtomEons-The-Awakening-Trilogy.zip" download>Download all three — free <Arrow /></a>
-            <Link href="/books">Meet the trilogy <Arrow /></Link>
-          </div>
+          <p>THREE THINGS CHANGE EVERYTHING</p>
+          <h2 id="promise-title">It knows the work.<br />It forms the team.<br />It tells the truth.</h2>
         </header>
-        <div className={styles.homeBookGrid}>
-          {BOOKS.map((book) => (
-            <Link
-              href={book.href}
-              className={styles.homeBook}
-              key={book.id}
-              style={{ "--book-accent": book.accent } as CSSProperties}
-            >
-              <div className={`${styles.homeBookCover} ${book.coverMode === "contain" ? styles.homeBookContain : ""}`}>
-                <Image src={book.cover} alt={book.coverAlt} fill unoptimized sizes="(max-width: 820px) 75vw, 24vw" />
-              </div>
-              <small>{book.order}</small>
-              <strong>{book.title}</strong>
-              <span>{book.question}</span>
-              <i aria-hidden="true">↗</i>
+        <div className={styles.promiseGrid}>
+          {promises.map((promise) => (
+            <article key={promise.number}>
+              <span>{promise.number}</span>
+              <h3>{promise.verb}</h3>
+              <strong>{promise.title}</strong>
+              <p>{promise.copy}</p>
+              <i aria-hidden="true" />
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.systemSection} aria-labelledby="system-title">
+        <div className={styles.systemVisual}>
+          <Image
+            src="/orange-ai-computer/orange-ai-computer-system.png"
+            alt="Orange AI Computer control node and compute node connected as one intelligence system"
+            fill
+            sizes="(max-width: 900px) 100vw, 58vw"
+          />
+          <span className={styles.systemSignal} aria-hidden="true" />
+          <div className={styles.systemCaption}>
+            <small>CONTROL</small><i /><small>INTELLIGENCE</small><i /><small>COMPUTE</small>
+          </div>
+        </div>
+        <div className={styles.systemCopy}>
+          <p>ONE SYSTEM / EVERY MIND</p>
+          <h2 id="system-title">Models are workers.<br /><em>Orange is the computer.</em></h2>
+          <span>
+            Use the AI tools you already know. Orange gives them shared project
+            continuity, governed access to real tools, and a common definition of done.
+          </span>
+          <ul>
+            <li><b>CONNECT</b> Codex, Claude Code, MCP clients, local models, and specialists</li>
+            <li><b>DIRECT</b> Fast reflexes, a mission-aware Navigator, and bounded agents</li>
+            <li><b>REMEMBER</b> Decisions, sources, failures, and the path that produced the result</li>
+            <li><b>VERIFY</b> Separate fluent answers from actions that actually happened</li>
+          </ul>
+          <a href={orangeRepo}>Explore the architecture <Arrow /></a>
+        </div>
+      </section>
+
+      <section className={styles.featureSection} aria-labelledby="feature-title">
+        <header>
+          <p>WHAT IT DOES FOR YOU</p>
+          <h2 id="feature-title">More progress.<br />Less amnesia.</h2>
+          <span>
+            The machinery is deep. The experience is simple: give Orange a mission,
+            let it choose the smallest capable route, and keep the proof.
+          </span>
+        </header>
+        <div className={styles.featureList}>
+          {features.map(([label, title, copy], index) => (
+            <article key={label}>
+              <small>{String(index + 1).padStart(2, "0")} / {label}</small>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+              <b aria-hidden="true">+</b>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.installSection} aria-labelledby="install-title">
+        <div className={styles.installIntro}>
+          <p>AN AI CAN INSTALL THE AI COMPUTER</p>
+          <h2 id="install-title">Three steps.<br />Then Orange wakes up.</h2>
+          <span>
+            Orange discovers the computer you have, chooses a one-computer or
+            two-computer plan, adopts compatible tools, and keeps machine state outside
+            the package.
+          </span>
+          <a href={orangeDownload}>Download the Windows preview <Arrow /></a>
+        </div>
+        <ol className={styles.installSteps}>
+          <li><b>01</b><div><strong>Download + extract</strong><span>Get the latest Orange AI Computer package from the public repository.</span></div></li>
+          <li><b>02</b><div><strong>Open the folder</strong><span>Use Codex or Claude Code on your Windows computer.</span></div></li>
+          <li className={styles.sayStep}>
+            <b>03</b>
+            <div>
+              <strong>Say this.</strong>
+              <blockquote>Read INSTALL_ORANGE.md completely and install Orange AI Computer.</blockquote>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section className={styles.proofSection} aria-labelledby="proof-title">
+        <div className={styles.proofSeal} aria-hidden="true">
+          <span>O5</span><b>PROVEN</b><small>PACKAGE<br />LIFECYCLE</small>
+        </div>
+        <div className={styles.proofCopy}>
+          <p>PUBLIC PREVIEW / HONEST BY DESIGN</p>
+          <h2 id="proof-title">Trust the evidence.<br />Not the performance.</h2>
+          <span>
+            The release package contains 2,386 hash-locked files. Its clean apply,
+            readiness, rollback, data preservation, and unchanged payload were tested
+            from an extracted package. Machine-specific readiness still has to pass on
+            your computer.
+          </span>
+          <div className={styles.proofActions}>
+            <a href={orangeProof}>Inspect package proof <Arrow /></a>
+            <a href={`${orangeRepo}/blob/main/PREVIEW_STATUS.md`}>Read preview limits <Arrow /></a>
+          </div>
+        </div>
+        <dl className={styles.proofFacts}>
+          <div><dt>2,386</dt><dd>HASH-LOCKED FILES</dd></div>
+          <div><dt>SHA-256</dt><dd>DOWNLOAD INTEGRITY</dd></div>
+          <div><dt>LOCAL</dt><dd>MEMORY + STATE</dd></div>
+          <div><dt>VISIBLE</dt><dd>BLOCKERS + ROLLBACK</dd></div>
+        </dl>
+      </section>
+
+      <section className={styles.moreSection} aria-labelledby="more-title">
+        <header>
+          <p>FROM ATOM EONS</p>
+          <h2 id="more-title">The computer is new.<br />The mission is larger.</h2>
+        </header>
+        <div className={styles.moreGrid}>
+          {otherWork.map((item, index) => (
+            <Link href={item.href} key={item.title} className={styles.moreCard}>
+              <small>0{index + 1} / {item.eyebrow}</small>
+              <h3>{item.title}</h3>
+              <p>{item.copy}</p>
+              <span>{item.action} <Arrow /></span>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className={styles.research} aria-labelledby="research-title">
-        <header>
-          <p>EXPERIMENTAL RESEARCH</p>
-          <h2 id="research-title">The ideas behind<br />what comes next.</h2>
-          <span>
-            Books, papers, discoveries, and experiments share the thinking behind our
-            products—and open the door to the products still ahead.
-          </span>
-          <Link href="/research">Enter experimental research <Arrow /></Link>
-        </header>
-        <div className={styles.researchStack}>
-          <Link href="/research/discoveries/aeyes">
-            <span>PHOTONIC VISION</span><strong>AEyes</strong><small>Can a different kind of eye change what a machine understands?</small>
-          </Link>
-          <Link href="/research/discoveries/aememory">
-            <span>MEMORY</span><strong>AEMemory</strong><small>Continuity without drowning the intelligence in its own history.</small>
-          </Link>
-          <Link href="/research/discoveries/atomsmasher">
-            <span>COMPRESSION</span><strong>AtomSmasher</strong><small>Keeping meaning while making the context radically smaller.</small>
-          </Link>
-          <Link href="/research">
-            <span>THE FULL ARCHIVE</span><strong>And the fringe.</strong><small>Papers, cultural objects, failures, boundaries, and work still becoming.</small>
-          </Link>
-        </div>
-      </section>
-
-      <section className={styles.human} aria-labelledby="human-title">
-        <div className={styles.humanSignal} aria-hidden="true"><span>AE</span></div>
+      <section className={styles.finalSection}>
+        <p>THE ORANGE AI COMPUTER / FROM ATOM EONS</p>
+        <h2>Give intelligence<br />a place to live.</h2>
         <div>
-          <p>THE HUMAN / ATOM MCCREE</p>
-          <h2 id="human-title">“I am an artist using AI to paint a new future.”</h2>
-          <span>
-            Hip-hop poet, artist, marketer, and independent inventor. Twenty-five years
-            of creative practice turned toward making AI useful, cultural, strange, and human.
-          </span>
-          <div className={styles.humanLinks}>
-            <Link href="/about">About AtomEons <Arrow /></Link>
-            <Link href="/atom-alive">Watch Atom Alive <Arrow /></Link>
-            <a href="https://github.com/Atom-Eons">Open GitHub <Arrow /></a>
-          </div>
+          <a href={orangeDownload}>Download the AI Computer <Arrow /></a>
+          <a href={orangeRepo}>Open GitHub <Arrow /></a>
         </div>
-      </section>
-
-      <section className={styles.lastCall}>
-        <p>THE BEST WAY TO UNDERSTAND US</p>
-        <h2>The future makes sense<br />when you can touch it.</h2>
-        <Link href="/cablebox/web">Try CableBox 2 <Arrow /></Link>
+        <span>Windows public preview. Source, package proof, and known limits are visible before you begin.</span>
       </section>
     </main>
   );
