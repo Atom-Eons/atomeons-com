@@ -59,13 +59,6 @@ const otherWork = [
     href: "/research",
     action: "Enter research",
   },
-  {
-    eyebrow: "OPENAI DEVPOST PROJECT",
-    title: "AE Brawl",
-    copy: "A visual proving ground for human-led multi-agent work, built in public and preserved as released.",
-    href: "/brawl",
-    action: "See AE Brawl",
-  },
 ];
 
 export const metadata: Metadata = {
