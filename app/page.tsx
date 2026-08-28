@@ -129,6 +129,7 @@ export default function Home() {
               alt="A friendly orange-shaped Orange AI Computer with a glowing face"
               fill
               priority
+              unoptimized
               sizes="(max-width: 900px) 92vw, 50vw"
             />
           </div>
@@ -192,6 +193,7 @@ export default function Home() {
             src="/orange-ai-computer/orange-ai-computer-system.png"
             alt="Orange AI Computer control node and compute node connected as one intelligence system"
             fill
+            unoptimized
             sizes="(max-width: 900px) 100vw, 58vw"
           />
           <span className={styles.systemSignal} aria-hidden="true" />

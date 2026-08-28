@@ -269,7 +269,7 @@
 .systemSection { display: grid; min-height: 850px; grid-template-columns: minmax(0, 1.1fr) minmax(390px, .9fr); background: #050505; color: #fff; }
 .systemVisual { position: relative; min-height: 740px; overflow: hidden; }
 .systemVisual::after { position: absolute; inset: 0; background: linear-gradient(90deg, transparent 72%, #050505 100%), linear-gradient(0deg, rgba(0,0,0,.55), transparent 40%); content: ""; }
-.systemVisual img { object-fit: cover; object-position: center; }
+.systemVisual img { object-fit: contain; object-position: center; }
 .systemSignal { position: absolute; z-index: 3; top: 50%; left: 50%; width: 20px; aspect-ratio: 1; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 10px rgba(255,79,11,.1), 0 0 60px 25px rgba(255,79,11,.38); animation: pulse 2s ease-in-out infinite; }
 .systemCaption { position: absolute; z-index: 4; right: 5%; bottom: 25px; left: 5%; display: flex; align-items: center; gap: 14px; color: rgba(255,255,255,.72); font-family: var(--font-mono); }
 .systemCaption small { font-size: 7px; font-weight: 800; letter-spacing: .14em; }
